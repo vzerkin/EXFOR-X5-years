@@ -1,9 +1,9 @@
-  {"ENTRY":"F0004", "updated":20140405, "TransID":"F054", "TransDate":20140624, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
+  {"ENTRY":"F0004", "updated":20150908, "TransID":"F059", "TransDate":20160215, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
    ,"y1":1975,"a1":"H.Liskien+","r1":"J,AND,15,57,1975"
    ,"ref":"Jour: Atomic Data and Nuclear Data Tables, Vol.15, p.57 (1975)"
    ,"title":"Neutron production cross sections and energies for the reactions Li-7(p,n)Be-7 and Li-7(p,n)Be-7*."
    ,"x4subents":[
-   {"SUBENT":"F0004001", "isub":1, "compiled":20140405, "TransID":"F054", "TransDate":20140624
+   {"SUBENT":"F0004001", "isub":1, "compiled":20150908, "TransID":"F059", "TransDate":20160215
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -69,29 +69,36 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: Subents 14, 15 added."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20150908A", "date":"20150908", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION in sub 002-003 was corrected,"
+		,"E-LVL=0 was added."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"F0004002", "isub":2, "compiled":19990407, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"F0004002", "isub":2, "compiled":20150908, "TransID":"F059", "TransDate":20160215
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-7(P,N)4-BE-7,,DA,,LEG/RS0,EVAL"
-	    ,"c4reac":"(P,N),DA,,LEG/RS0"
+	,"x4code":{"code":"3-LI-7(P,N)4-BE-7,PAR,DA,,LEG/RS0,EVAL"
+	    ,"c4reac":"(P,N)PAR,DA,,LEG/RS0"
 	    ,"combi":"a"
 	    ,"MF":154
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"3-LI-7(P,N)4-BE-7,,DA,,LEG/RS0,EVAL"
+	    {"code":"3-LI-7(P,N)4-BE-7,PAR,DA,,LEG/RS0,EVAL"
 		,"Reac":"P,N"
 		,"SF1":"3-LI-7","Targ":{"code":"3-LI-7","nam":"Li-7","ZA":3007}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"N"
 		,"SF4":"4-BE-7","Prod":{"code":"4-BE-7","nam":"Be-7","ZA":4007}
+		,"SF5":"PAR"
 		,"SF6":"DA"
 		,"SF8":"LEG/RS0"
 		,"SF9":"EVAL","sf9Hlp":"Evaluated data"
-		,"SF58":",DA,,LEG/RS0","Quant":"DA","BasicUnits":"NO-DIM","QuantHlp":"Leg.coef. (d/dA)/(d/dA,0deg)=Sum(a(L)*P(L))"
+		,"SF58":"PAR,DA,,LEG/RS0","Quant":"DAP","BasicUnits":"NO-DIM","QuantHlp":"Leg.coef. fit to partial (d/dA)/(d/dA,0deg)"
 	    }]}
 	}
       ]
@@ -106,16 +113,29 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" TABLE 1"]
+	,"x4freetext":[" Table 1"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"COREL,F0004003"
 		,"flag":"COREL", "help":"Data correlated with another data set"
 		,"subent":"F0004003"
 		}]
+	,"x4freetext":[" 0 deg cross section is given."]
 	}
       ]
     }
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"E-LVL", "units":"MEV", "pointer":" "
+	,"headerHelp":"Level energy", "pFlag":"1000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ]
+      ,"datacols":[
+	 ["E-LVL"     ]
+	,["MEV"       ]
+	,[" "         ]]
+      ,"data":[
+	 [0]]}
     ,"DATA":{"ncols":3, "nrows":206
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -341,14 +361,14 @@
 	,[7,3,0.17]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"F0004002", "Pointer":" "
- ,"Subent":"F0004002", "compiled":19990407
+ ,"Subent":"F0004002", "compiled":20150908
  ,"year1":1975, "author1ini":"H.", "author1":"Liskien"
- ,"zTarg1":3, "targ1":"Li-7", "proj1":"p", "emis1":"N", "MF":154, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2  5     ", "getYFormulaStr":"y=DATA(EN,nCoef)"
- ,"ReactionType":"FL", "quant":"DA", "quantExpan":"Leg.coef. (d/dA)/(d/dA,0deg)=Sum(a(L)*P(L))"
- ,"reacode":"3-LI-7(P,N)4-BE-7,,DA,,LEG/RS0,EVAL"
+ ,"zTarg1":3, "targ1":"Li-7", "proj1":"p", "emis1":"N", "MF":154, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 23 5     ", "getYFormulaStr":"y=DATA(EN,LVL,nCoef)"
+ ,"ReactionType":"FLP", "quant":"DAP", "quantExpan":"Leg.coef. fit to partial (d/dA)/(d/dA,0deg)"
+ ,"reacode":"3-LI-7(P,N)4-BE-7,PAR,DA,,LEG/RS0,EVAL"
  ,"compNotes":[]
- ,"wx4data":3
+ ,"wx4data":4
  ,"lx4data":206
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":true
@@ -423,9 +443,15 @@
 	,6.4e+6,6.4e+6,6.5e+6,6.5e+6,6.5e+6,6.5e+6,6.6e+6,6.6e+6,6.6e+6,6.6e+6
 	,6.7e+6,6.7e+6,6.7e+6,6.7e+6,6.8e+6,6.8e+6,6.8e+6,6.8e+6,6.9e+6,6.9e+6
 	,6.9e+6,6.9e+6,7.0e+6,7.0e+6,7.0e+6,7.0e+6]}
-  ,{"ivar":2, "cvar":"x2", "fam":"nCoef", "ifComm":false, "ifCM":true
+  ,{"ivar":2, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
+    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"52", "rank":2.1
+    ,"expansion":"Secondary energy: level energy"
+    ,"com0":0
+    ,"com1":0}
+  ,{"ivar":3, "cvar":"x3", "fam":"nCoef", "ifComm":false, "ifCM":true
     ,"header":"NUMBER-CM", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"75", "rank":2.1
+    ,"what":"X3.Value", "dataType":"75", "rank":3.1
     ,"expansion":"Number: coefficient number"
     ,"dat0":[0,1,2,0,1,2,0,1,2,0
 	,1,2,0,1,2,0,1,2,0,1
@@ -450,7 +476,7 @@
 	,2,3,0,1,2,3]
    ,"dat1eq":true}
   ]
- ,"wc5data":3
+ ,"wc5data":4
  ,"lc5data":206
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":true, "units":"NO-DIM"
@@ -503,10 +529,35 @@
 	,6.7e+6,6.7e+6,6.7e+6,6.7e+6,6.8e+6,6.8e+6,6.8e+6,6.8e+6,6.9e+6,6.9e+6
 	,6.9e+6,6.9e+6,7.0e+6,7.0e+6,7.0e+6,7.0e+6]
    }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"nCoef", "ifCM":true, "units":"NO-DIM"
-      ,"header":"nCoef", "dataType":"75", "rank":2.0
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
+      ,"header":"LVL", "dataType":"52", "rank":2.0
+      ,"expansion":"Secondary energy: level energy"
+      ,"x2":[0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"nCoef", "ifCM":true, "units":"NO-DIM"
+      ,"header":"nCoef", "dataType":"75", "rank":3.0
       ,"expansion":"Number: coefficient number"
-      ,"x2":[0,1,2,0,1,2,0,1,2,0
+      ,"x3":[0,1,2,0,1,2,0,1,2,0
 	,1,2,0,1,2,0,1,2,0,1
 	,2,0,1,2,0,1,2,0,1,2
 	,0,1,2,0,1,2,0,1,2,0
@@ -532,50 +583,61 @@
 }
    ]
    }
-  ,{"SUBENT":"F0004003", "isub":3, "compiled":19990407, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"F0004003", "isub":3, "compiled":20150908, "TransID":"F059", "TransDate":20160215
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-7(P,N)4-BE-7,,DA,,,EVAL"
-	    ,"c4reac":"(P,N),DA"
+	,"x4code":{"code":"3-LI-7(P,N)4-BE-7,PAR,DA,,,EVAL"
+	    ,"c4reac":"(P,N)PAR,DA"
 	    ,"combi":"a"
 	    ,"MF":4
-	    ,"MT":50
+	    ,"MT":51
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"3-LI-7(P,N)4-BE-7,,DA,,,EVAL"
+	    {"code":"3-LI-7(P,N)4-BE-7,PAR,DA,,,EVAL"
 		,"Reac":"P,N"
 		,"SF1":"3-LI-7","Targ":{"code":"3-LI-7","nam":"Li-7","ZA":3007}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"N"
 		,"SF4":"4-BE-7","Prod":{"code":"4-BE-7","nam":"Be-7","ZA":4007}
+		,"SF5":"PAR"
 		,"SF6":"DA"
 		,"SF9":"EVAL","sf9Hlp":"Evaluated data"
-		,"SF58":",DA","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Differential c/s with respect to angle"
+		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
 	    }]}
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
+	,"x4codes":[{"code":"COREL,F0004002"
+		,"flag":"COREL", "help":"Data correlated with another data set"
+		,"subent":"F0004002"
+		}]
+	,"x4freetext":[" Legendre coefficients are given."]
+	}
+	,{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" TABLE 1"]
+	,"x4freetext":[" Table 1."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"ANG", "units":"ADEG", "pointer":" "
-	,"headerHelp":"Angle, laboratory system", "pFlag":"1000000"
+       {"icol":0, "header":"ANG-CM", "units":"ADEG", "pointer":" "
+	,"headerHelp":"Angle, c.m. system", "pFlag":"1000001"
 	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
+      ,{"icol":1, "header":"E-LVL", "units":"MEV", "pointer":" "
+	,"headerHelp":"Level energy", "pFlag":"1000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["ANG"       ]
-	,["ADEG"      ]
-	,[" "         ]]
+	 ["ANG-CM"    ,"E-LVL"     ]
+	,["ADEG"      ,"MEV"       ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [0]]}
+	 [0,0]]}
     ,"DATA":{"ncols":2, "nrows":57
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -649,14 +711,14 @@
 	,[7,12.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"F0004003", "Pointer":" "
- ,"Subent":"F0004003", "compiled":19990407
+ ,"Subent":"F0004003", "compiled":20150908
  ,"year1":1975, "author1ini":"H.", "author1":"Liskien"
- ,"zTarg1":3, "targ1":"Li-7", "proj1":"p", "emis1":"N", "MF":4, "MT":50, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
- ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
- ,"reacode":"3-LI-7(P,N)4-BE-7,,DA,,,EVAL"
+ ,"zTarg1":3, "targ1":"Li-7", "proj1":"p", "emis1":"N", "MF":4, "MT":51, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
+ ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
+ ,"reacode":"3-LI-7(P,N)4-BE-7,PAR,DA,,,EVAL"
  ,"compNotes":["Conversion from C.M. to Lab: successful"]
- ,"wx4data":3
+ ,"wx4data":4
  ,"lx4data":57
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":true
@@ -691,14 +753,20 @@
 	,4.4e+6,4.5e+6,4.6e+6,4.7e+6,4.8e+6,4.9e+6,5.0e+6,5.1e+6,5.2e+6,5.3e+6
 	,5.4e+6,5.5e+6,5.6e+6,5.7e+6,5.8e+6,5.9e+6,6.0e+6,6.1e+6,6.2e+6,6.3e+6
 	,6.4e+6,6.5e+6,6.6e+6,6.7e+6,6.8e+6,6.9e+6,7.0e+6]}
-  ,{"ivar":2, "cvar":"x2", "fam":"ANG", "ifComm":true , "ifCM":false
-    ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
-    ,"what":"X2.Value", "dataType":"61", "rank":2.1
+  ,{"ivar":2, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
+    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"52", "rank":2.1
+    ,"expansion":"Secondary energy: level energy"
+    ,"com0":0
+    ,"com1":0}
+  ,{"ivar":3, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":true
+    ,"header":"ANG-CM", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
     ,"expansion":"Angle: angle"
     ,"com0":0
     ,"com1":0}
   ]
- ,"wc5data":3
+ ,"wc5data":4
  ,"lc5data":57
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
@@ -721,10 +789,20 @@
 	,5.4e+6,5.5e+6,5.6e+6,5.7e+6,5.8e+6,5.9e+6,6.0e+6,6.1e+6,6.2e+6,6.3e+6
 	,6.4e+6,6.5e+6,6.6e+6,6.7e+6,6.8e+6,6.9e+6,7.0e+6]
    }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
-      ,"header":"ANG", "dataType":"61", "rank":2.0
-      ,"expansion":"Angle: angle"
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
+      ,"header":"LVL", "dataType":"52", "rank":2.0
+      ,"expansion":"Secondary energy: level energy"
       ,"x2":[0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
+      ,"expansion":"Angle: angle"
+      ,"x3":[0,0,0,0,0,0,0,0,0,0
 	,0,0,0,0,0,0,0,0,0,0
 	,0,0,0,0,0,0,0,0,0,0
 	,0,0,0,0,0,0,0,0,0,0
