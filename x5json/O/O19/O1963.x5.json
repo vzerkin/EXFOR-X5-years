@@ -1,9 +1,9 @@
-  {"ENTRY":"O1963", "updated":20120625, "TransID":"O048", "TransDate":20120918, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O1963", "updated":20151120, "TransID":"O056", "TransDate":20160516, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1988,"a1":"W.Ratynski+","r1":"J,PR/C,37,595,1988"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.37, p.595 (1988)"
    ,"title":"Neutron capture cross section of Au-197: A standard for stellar nucleosynthesis"
    ,"x4subents":[
-   {"SUBENT":"O1963001", "isub":1, "compiled":20120625, "TransID":"O048", "TransDate":20120918
+   {"SUBENT":"O1963001", "isub":1, "compiled":20151120, "TransID":"O056", "TransDate":20160516
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -51,8 +51,12 @@
      ,"COMMENT":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["*By authors*.Quasi-maxwellian neutron energy spectrum"
-		," with temperature kT=25.0+/-0.5 keV"]
+	,"x4freetext":["*By authors*.Quasi-Maxwellian neutron energy spectrum"
+		," with temperature kT=25.0+/-0.5 keV"
+		," By Franz Kaeppler (2016-02-22): The uncertainty of"
+		," the proton energy was less than 1 keV (verified via"
+		," threshold energy of 7Li(p,n)7Be reaction) while the"
+		," energy spread was about 2 keV."]
 	}
       ]
      ,"METHOD":[
@@ -109,22 +113,30 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" On. STATUS=COREL moved to REL-REF"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20151120A", "date":"20151120", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Data units corrected in Subents 002.2."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"EN-RSL", "units":"KEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy resolution (Unspecified)", "pFlag":"9220000"
+	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN"        ]
-	,["KEV"       ]
-	,[" "         ]]
+	 ["EN"        ,"EN-RSL"    ]
+	,["KEV"       ,"KEV"       ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [1912]]}
+	 [1912,2]]}
    }
-  ,{"SUBENT":"O1963002", "isub":2, "compiled":20120625, "TransID":"O048", "TransDate":20120918
+  ,{"SUBENT":"O1963002", "isub":2, "compiled":20151120, "TransID":"O056", "TransDate":20160516
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
@@ -143,7 +155,7 @@
 		,"SF8":"TT/RAW"
 		,"SF58":",MLT/DE,,TT","Quant":"TTD","BasicUnits":"PRD/IN/MEV","QuantHlp":"Particle multiplicity f.thick target d/dE"
 	    }]}
-	,"x4freetext":["for yield"]
+	,"x4freetext":["  for yield"]
 	}
 	,{"x4pointer":"2"
 	,"x4code":{"code":"3-LI-7(P,N)4-BE-7,,MLT/DE,,TT/NPD/RAW"
@@ -180,6 +192,12 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. Units and normalized yield corrected"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20151120A", "date":"20151120", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD:Data units corrected: 1/INC/KEV -> 1/KEV"
+		,"in REACTION 2."]
+	}
       ]
     }
     ,"DATA":{"ncols":4, "nrows":30
@@ -193,13 +211,13 @@
       ,{"icol":2, "header":"DATA", "units":"ARB-UNITS", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA", "units":"1/INC/KEV", "pointer":"2"
+      ,{"icol":3, "header":"DATA", "units":"1/KEV", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"per incident projectile per keV","familyCode":"1/E","convFc":0.001,"basicUnits":"1/EV"}
+	,"unitsHelp":"per keV","familyCode":"1/E","convFc":0.001,"basicUnits":"1/EV"}
       ]
       ,"datacols":[
 	 ["E-MIN"     ,"E-MAX"     ,"DATA"      ,"DATA"      ]
-	,["KEV"       ,"KEV"       ,"ARB-UNITS" ,"1/INC/KEV" ]
+	,["KEV"       ,"KEV"       ,"ARB-UNITS" ,"1/KEV"     ]
 	,[" "         ," "         ,"1"         ,"2"         ]]
       ,"data":[
 	 [0.5,1.5,30,0.00276]
@@ -234,14 +252,14 @@
 	,[112.758,117.976,0.4,4.0E-5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O19630021", "Pointer":"1"
- ,"Subent":"O1963002", "compiled":20120625
+ ,"Subent":"O1963002", "compiled":20151120
  ,"year1":1988, "author1ini":"W.", "author1":"Ratynski"
  ,"zTarg1":3, "targ1":"Li-7", "proj1":"p", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=y(x1,x2)"
  ,"ReactionType":"TDE", "quant":"TTD", "quantExpan":"Particle multiplicity f.thick target d/dE"
  ,"reacode":"3-LI-7(P,N)4-BE-7,,MLT/DE,,TT/RAW"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":30
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -258,7 +276,13 @@
     ,"expansion":"Incident energy: energy"
     ,"com0":1912
     ,"com1":1.912e+6}
-  ,{"ivar":2, "cvar":"zzz", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-RSL", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
+    ,"expansion":"Incident energy: energy /Error/"
+    ,"com0":2
+    ,"com1":2000}
+  ,{"ivar":3, "cvar":"zzz", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E-MAX", "units":"KEV", "basicUnits":"EV"
     ,"what":"ZZZ", "dataType":"51", "rank":777.0
     ,"expansion":"Secondary energy: particle energy"
@@ -268,7 +292,7 @@
     ,"dat1":[1500,2500,3500,4500,5500,6500,7500,8000,13023,18026
 	,23002,27964,33083,38067,43068,48183,53175,58363,62941,68080
 	,73002,78479,83572,87926,92680,97832,1.03425e+5,1.0794e+5,1.12758e+5,1.17976e+5]}
-  ,{"ivar":3, "cvar":"zzz", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"zzz", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E-MIN", "units":"KEV", "basicUnits":"EV"
     ,"what":"ZZZ", "dataType":"51", "rank":777.1
     ,"expansion":"Secondary energy: particle energy"
@@ -295,22 +319,24 @@
       ,"x1":[1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6
 	,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6
 	,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6]
-   }
+      ,"dx1":[2000,2000,2000,2000,2000,2000,2000,2000,2000,2000
+	,2000,2000,2000,2000,2000,2000,2000,2000,2000,2000
+	,2000,2000,2000,2000,2000,2000,2000,2000,2000,2000]   }
  }
 }
 ,{"iDataset":1, "DatasetID":"O19630022", "Pointer":"2"
- ,"Subent":"O1963002", "compiled":20120625
+ ,"Subent":"O1963002", "compiled":20151120
  ,"year1":1988, "author1ini":"W.", "author1":"Ratynski"
  ,"zTarg1":3, "targ1":"Li-7", "proj1":"p", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=y(x1,x2)"
  ,"ReactionType":"TDE", "quant":"TTD", "quantExpan":"Particle multipl.f.thick target d/dE prob.dist."
  ,"reacode":"3-LI-7(P,N)4-BE-7,,MLT/DE,,TT/NPD/RAW"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":30
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"1/INC/KEV", "basicUnits":"1/EV"
+    ,"header":"DATA", "units":"1/KEV", "basicUnits":"1/EV"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[0.00276,0.00404,0.00524,0.00616,0.00689,0.00769,0.00756,0.00822,0.01087,0.01276
@@ -325,7 +351,13 @@
     ,"expansion":"Incident energy: energy"
     ,"com0":1912
     ,"com1":1.912e+6}
-  ,{"ivar":2, "cvar":"zzz", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-RSL", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
+    ,"expansion":"Incident energy: energy /Error/"
+    ,"com0":2
+    ,"com1":2000}
+  ,{"ivar":3, "cvar":"zzz", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E-MAX", "units":"KEV", "basicUnits":"EV"
     ,"what":"ZZZ", "dataType":"51", "rank":777.0
     ,"expansion":"Secondary energy: particle energy"
@@ -335,7 +367,7 @@
     ,"dat1":[1500,2500,3500,4500,5500,6500,7500,8000,13023,18026
 	,23002,27964,33083,38067,43068,48183,53175,58363,62941,68080
 	,73002,78479,83572,87926,92680,97832,1.03425e+5,1.0794e+5,1.12758e+5,1.17976e+5]}
-  ,{"ivar":3, "cvar":"zzz", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"zzz", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E-MIN", "units":"KEV", "basicUnits":"EV"
     ,"what":"ZZZ", "dataType":"51", "rank":777.1
     ,"expansion":"Secondary energy: particle energy"
@@ -362,7 +394,9 @@
       ,"x1":[1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6
 	,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6
 	,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6,1.912e+6]
-   }
+      ,"dx1":[2000,2000,2000,2000,2000,2000,2000,2000,2000,2000
+	,2000,2000,2000,2000,2000,2000,2000,2000,2000,2000
+	,2000,2000,2000,2000,2000,2000,2000,2000,2000,2000]   }
  }
 }
    ]
