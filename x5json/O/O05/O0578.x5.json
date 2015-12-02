@@ -1,9 +1,9 @@
-  {"ENTRY":"O0578", "updated":20140121, "TransID":"O052", "TransDate":20140623, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O0578", "updated":20151203, "TransID":"O056", "TransDate":20160516, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1977,"a1":"J.L.Galinier+","r1":"J,JIN,39,1497,1977"
    ,"ref":"Jour: Journal of Inorganic and Nuclear Chemistry, Vol.39, p.1497 (1977)"
    ,"title":"Nuclear charge distribution in the region of asymmetric fission of U-238 by protons of energy 20-85 MeV."
    ,"x4subents":[
-   {"SUBENT":"O0578001", "isub":1, "compiled":20140121, "TransID":"O052", "TransDate":20140623
+   {"SUBENT":"O0578001", "isub":1, "compiled":20151203, "TransID":"O056", "TransDate":20160516
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -93,7 +93,7 @@
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"ACTIV", "dict":"METHOD", "idict":21,"hlp":"Activation"}]
-	,"x4freetext":[" Duration of the irradiation varied from 5"
+	,"x4freetext":[" Duration of the irradiation varied from"
 		,"5 to 30 minutes with a beam current of the order of"
 		,"1 muA."]
 	}
@@ -146,6 +146,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: REACTION code corrected in Subent 18-22"
 		,"ERR-ANALYS corrected in Subents 2-22. Minor corrections"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20151203A", "date":"20151203", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: DECAY-DATA corrected in Subent 006."]
 	}
       ]
     }
@@ -1040,7 +1045,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O0578006", "isub":6, "compiled":20140121, "TransID":"O052", "TransDate":20140623
+  ,{"SUBENT":"O0578006", "isub":6, "compiled":20151203, "TransID":"O056", "TransDate":20160516
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1063,22 +1068,19 @@
 	    }]}
 	}
       ]
-     ,"RAD-DET":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::60-ND-151,DG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"60-ND-151", "t12":12.4, "t12units":"HR", "t12sec":44640.0
+	,"x4codes":[{"Nucl":"60-ND-151", "t12":12.4, "t12units":"MIN", "t12sec":744.0
 	, "Radiations":[ {"Type":"DG", "Energy":[117.0], "Intensity":0.4}]}]
 	}
       ]
      ,"COMMENT":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["- By Compiler - According to ENSDF, half-Life of"
-		,"Nd-151=12.4 min, but not 12.4 hours."
+	,"x4freetext":["- By Compiler - According to ENSDF and text in the"
+		,"article on p.1498 (left col.), half-Life of"
+		,"Nd-151=12.4 min, but not 12.4 hours as it is pointed"
+		,"in Tbl.1 (JIN,39,1497,1977)."
 		,"Probably, Table of decay properties in original paper"
 		,"contains a misprint."]
 	}
@@ -1132,6 +1134,14 @@
 	,"x4freetext":[".The number of determinations."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20151203A", "date":"20151203", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: 12.4HR -> 12.4MIN in DECAY-DATA (see"
+		," COMMENT)."]
+	}
+      ]
     }
     ,"DATA":{"ncols":5, "nrows":13
       ,"x4headers":[
@@ -1171,14 +1181,14 @@
 	,[85,3.2,0.6,141,2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O0578006", "Pointer":" "
- ,"Subent":"O0578006", "compiled":20140121
+ ,"Subent":"O0578006", "compiled":20151203
  ,"year1":1977, "author1ini":"J.L.", "author1":"Galinier"
  ,"zTarg1":92, "targ1":"U-0", "proj1":"p", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
  ,"reacode":"92-U-0(P,F)60-ND-151,CUM,SIG"
  ,"compNotes":[]
- ,"DECAY-DATA":{"Nuclide":"60-ND-151","HalfLife":"12.4HR","HalfLife1":"12.44M"
+ ,"DECAY-DATA":{"Nuclide":"60-ND-151","HalfLife":"12.4MIN","HalfLife1":"12.44M"
 	,"RadiationType":"DG","Ene":117.0,"Ene1":116.8,"Abu":0.4,"Abu1":0.39
 	,"FcCorrDECAY_DATA":1.0256411
 	,"reaction":"92-U-0(P,F)60-ND-151,CUM,SIG"}
@@ -1190,7 +1200,7 @@
 	," dy=dy/y;                      #to rel. uncertainties"
 	,"  #[1]#---Reaction decay-data"
 	,"  #[1]#REACTION   (92-U-0(P,F)60-ND-151,CUM,SIG)"
-	,"  #[1]#DECAY-DATA (60-ND-151,12.4HR,DG,117.0,0.40) #Ix_old=0.4"
+	,"  #[1]#DECAY-DATA (60-ND-151,12.4MIN,DG,117.0,0.40) #Ix_old=0.4"
 	,"   a1=0.4/0.39;                #[1]#DECAY-DATA: correction to new 116.8 keV gamma-yield per decay Nd-151 Ix_new=0.39"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0256411"
 	,"  #[2]#---Monitor decay-data"
