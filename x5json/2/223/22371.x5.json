@@ -1,9 +1,9 @@
-  {"ENTRY":"22371", "updated":20121217, "TransID":"2234", "TransDate":20130718, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"22371", "updated":20151215, "TransID":"2246", "TransDate":20160523, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1996,"a1":"H.Beer+","r1":"J,PR/C,54,2014,1996"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.54, Issue.4, p.2014 (1996)"
    ,"title":"Measurement of neutron capture on Ca-48 at thermal and thermonuclear energies"
    ,"x4subents":[
-   {"SUBENT":"22371001", "isub":1, "compiled":20121217, "TransID":"2234", "TransDate":20130718
+   {"SUBENT":"22371001", "isub":1, "compiled":20151215, "TransID":"2246", "TransDate":20160523
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -111,9 +111,14 @@
 	,{"x4pointer":" "
 	,"x4code":{"code":"20121217A", "date":"20121217", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" SD: Updated to lower case."
-		," Corrected according last EXFOR rules and Dict."
-		," Col.En renamed; Value for En was corrected in Subent 4"]
+	,"x4freetext":[" SD: Updated to lower case. Corrected"
+		," according last EXFOR rules and Dict. Col.En renamed;"
+		," Value for En was corrected in Subent 004."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20151215A", "date":"20151215", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: DECAY-DATA corrected in Subent 003."]
 	}
       ]
     }
@@ -349,7 +354,7 @@
 }
    ]
    }
-  ,{"SUBENT":"22371003", "isub":3, "compiled":20121217, "TransID":"2234", "TransDate":20130718
+  ,{"SUBENT":"22371003", "isub":3, "compiled":20151215, "TransID":"2246", "TransDate":20160523
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -393,7 +398,7 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"20-CA-49", "t12":8.716, "t12units":"SEC", "t12sec":8.716
+	,"x4codes":[{"Nucl":"20-CA-49", "t12":8.716, "t12units":"MIN", "t12sec":522.96
 	, "Radiations":[ {"Type":"DG", "Energy":[3084.4], "Intensity":0.921}]}]
 	}
       ]
@@ -427,13 +432,13 @@
 		," Ca-40 content is 20.42%, Ca-42 content is 0.24%,"
 		," Ca-43 content is 0.060%, Ca-44 content is 1.48%,"
 		," Ca-46 content is 0.01%"
-		,".metallic gold foil"]
+		," Metallic gold foil"]
 	}
       ]
-     ,"COMMENT":[
+     ,"ANALYSIS":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[".Cross-sections were obtained by averaging of several"
+	,"x4freetext":[" Cross-sections were obtained by averaging of several"
 		," sets of measurements with different sample weights"
 		," given below"
 		," En+-En-ERR mass of Au mass of   Sigma   ERR-S  ERR-T"
@@ -513,6 +518,12 @@
 	,"x4freetext":[" SD: EN-ERR -> EN-RSL; EN -> EN-MEAN;"
 		,"  ERR-T -> ERR-SYS."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20151215A", "date":"20151215", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: HL=8.716sec -> 8.716min in DECAY-DATA"
+		,"following presentation in the Phys.Rev.C54(1996)2014."]
+	}
       ]
     }
     ,"COMMON":{"ncols":5, "nrows":1
@@ -564,7 +575,7 @@
 	,[218,23,3.04E-4,3.1E-5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22371003", "Pointer":" "
- ,"Subent":"22371003", "compiled":20121217
+ ,"Subent":"22371003", "compiled":20151215
  ,"year1":1996, "author1ini":"H.", "author1":"Beer"
  ,"zTarg1":20, "targ1":"Ca-48", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -573,7 +584,7 @@
  ,"compNotes":["ERR-ANALYS:(ERR-4,2.,7.)      ADDED AS COMMON:ERR-4,PER-CENT=2.0%"
 	,"ERR-ANALYS:(ERR-6,,0.5)       ADDED AS COMMON:ERR-6,PER-CENT=0.25%"
 	,"ERR-ANALYS:(MONIT-ERR,1.5,3.) ADDED AS COMMON:MONIT-ERR,PER-CENT=1.5%"]
- ,"DECAY-DATA":{"Nuclide":"20-CA-49","HalfLife":"8.716SEC","HalfLife1":"8.718M"
+ ,"DECAY-DATA":{"Nuclide":"20-CA-49","HalfLife":"8.716MIN","HalfLife1":"8.718M"
 	,"RadiationType":"DG","Ene":3084.4,"Ene1":3084.4,"Abu":0.921,"Abu1":0.9072
 	,"FcCorrDECAY_DATA":1.0152117
 	,"reaction":"20-CA-48(N,G)20-CA-49,,SIG"}
@@ -585,7 +596,7 @@
 	," dy=dy/y;                      #to rel. uncertainties"
 	,"  #[1]#---Reaction decay-data"
 	,"  #[1]#REACTION   (20-CA-48(N,G)20-CA-49,,SIG)"
-	,"  #[1]#DECAY-DATA (20-CA-49,8.716SEC,DG,3084.4,0.921) #Ix_old=0.921"
+	,"  #[1]#DECAY-DATA (20-CA-49,8.716MIN,DG,3084.4,0.921) #Ix_old=0.921"
 	,"   a1=0.921/0.9072;            #[1]#DECAY-DATA: correction to new 3084.4 keV gamma-yield per decay Ca-49 Ix_new=0.9072"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0152117"
 	,"  #[2]#---Monitor decay-data"
