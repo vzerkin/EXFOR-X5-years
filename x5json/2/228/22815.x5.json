@@ -1,9 +1,9 @@
-  {"ENTRY":"22815", "updated":20130102, "TransID":"2234", "TransDate":20130718, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"22815", "updated":20151216, "TransID":"2246", "TransDate":20160523, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":2002,"a1":"R.Reifarth+","r1":"J,PR/C,66,054605,2002"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.66, Issue.5, p.054605 (2002)"
    ,"title":"Neutron activation measurements on natural tellurium"
    ,"x4subents":[
-   {"SUBENT":"22815001", "isub":1, "compiled":20130102, "TransID":"2234", "TransDate":20130718
+   {"SUBENT":"22815001", "isub":1, "compiled":20151216, "TransID":"2246", "TransDate":20160523
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -57,7 +57,8 @@
      ,"DECAY-MON":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"79-AU-198"
-	, "Radiations":[ {"Type":"DG", "Energy":[412.0]}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[412.0], "Intensity":0.9558}]}]
+	,"x4freetext":[" +-0.0012"]
 	}
       ]
      ,"SAMPLE":[
@@ -116,6 +117,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: EN-MEAN -> KT and values were corrected"
 		," in Subents 5-7."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20151216A", "date":"20151216", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: DECAY-DATA corrected in Subent 004."]
 	}
       ]
     }
@@ -758,7 +764,7 @@
 }
    ]
    }
-  ,{"SUBENT":"22815004", "isub":4, "compiled":20040103, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"22815004", "isub":4, "compiled":20151216, "TransID":"2246", "TransDate":20160523
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -779,8 +785,8 @@
 		,"SF8":"SPA"
 		,"SF58":",SIG/RAT","Quant":"CS","BasicUnits":"NO-DIM","QuantHlp":"Cross section ratio"
 	    }]}
-	,"x4freetext":["   SUM OF"
-		,"  THERMAL AND EPITHERMAL CROSS SECTIONS"]
+	,"x4freetext":["   Sum of"
+		,"  thermal and epithermal cross sections"]
 	}
       ]
      ,"FACILITY":[
@@ -831,8 +837,8 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":",C.NORDBORG+,C,91JUELIC,,782,199105"
-		,"author1":"C.NORDBORG+","stdFileName":"C,91JUELIC,,782,1991"
+	,"x4codes":[{"code":",C.Nordborg+,C,91JUELIC,,782,199105"
+		,"author1":"C.Nordborg+","stdFileName":"C,91JUELIC,,782,1991"
 		,"year":1991,"typ":"C","ref":"C,91JUELIC"
 		,"shortRef":"Conf: Conf.on Nucl.Data for Sci.and Technol.,Juelich 1991, p.782 (1991)"}]
 	}
@@ -845,14 +851,14 @@
 		,"                                    0.259+-0.005"]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"Nucl":"52-TE-131-G", "t12":33.25, "t12units":"HR", "t12sec":119700.0
+	,"x4codes":[{"Nucl":"52-TE-131-G", "t12":25.0, "t12units":"MIN", "t12sec":1500.0
 	, "Radiations":[ {"Type":"DG", "Energy":[149.7], "Intensity":0.689}]}]
 	}
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[".Monitor samples were used for thermal neutron flux"
+	,"x4freetext":[" Monitor samples were used for thermal neutron flux"
 		," determination and thermal-to-epithermal neutrons"
 		," ratio. Sc-45 metallic sample, weight 1.69 milligram"
 		,"        Co-59 metallic sample, weight 0.0286 milligram"]
@@ -860,8 +866,18 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".From table 3 of main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" From table 3 of PR/C,66,(5),054605,2002"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20151216A", "date":"20151216", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: hl=33.25hr -> 25.0min for Te-131g"
+		,"following table 3 in the PR/C,66,(5),054605,2002."]
 	}
       ]
     }
@@ -927,19 +943,19 @@
       ,{"icol":3, "header":"ERR-S", "units":"PER-CENT", "pointer":" "
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
-      ,{"icol":4, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
+      ,{"icol":4, "header":"ERR-SYS", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"Total systematic uncertainty", "pFlag":"0009550"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["EN-MEAN"   ,"DATA"      ,"ERR-T"     ,"ERR-S"     ,"ERR-1"     ]
+	 ["EN-MEAN"   ,"DATA"      ,"ERR-T"     ,"ERR-S"     ,"ERR-SYS"   ]
 	,["MILLI-EV"  ,"NO-DIM"    ,"NO-DIM"    ,"PER-CENT"  ,"PER-CENT"  ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
 	 [22,0.067,0.005,3.2,7.3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22815004", "Pointer":" "
- ,"Subent":"22815004", "compiled":20040103
+ ,"Subent":"22815004", "compiled":20151216
  ,"year1":2002, "author1ini":"R.", "author1":"Reifarth"
  ,"zTarg1":52, "targ1":"Te-130", "proj1":"n", "emis1":"G", "MF":203, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -968,7 +984,7 @@
     ,"dat0":[3.2]
    ,"dat1eq":true}
   ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"header":"ERR-SYS", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"dat0":[7.3]
