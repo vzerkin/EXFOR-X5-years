@@ -1,9 +1,9 @@
-  {"ENTRY":"30597", "updated":20120518, "TransID":"3155", "TransDate":20120618, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"30597", "updated":20160210, "TransID":"3173", "TransDate":20160408, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":1981,"a1":"Liu Zu-Hua+","r1":"J,CNP,3,(3),281,1981"
    ,"ref":"Jour: Chinese J.of Nuclear Physics (Beijing)., Vol.3, Issue.3, p.281 (1981)"
    ,"title":"-The dependence of the average prompt neutron emission on alpha-particle energy in ternary fission of Cf-252.-"
    ,"x4subents":[
-   {"SUBENT":"30597001", "isub":1, "compiled":20120518, "TransID":"3155", "TransDate":20120618
+   {"SUBENT":"30597001", "isub":1, "compiled":20160210, "TransID":"3173", "TransDate":20160408
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -115,42 +115,50 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" VS. INC-SOURCE deleted."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160210A", "date":"20160210", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. REACTION, units corrected."]
+	}
       ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"MONIT", "units":"NO-DIM", "pointer":" "
+       {"icol":0, "header":"MONIT", "units":"PRT/FIS", "pointer":" "
 	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"MONIT-ERR", "units":"NO-DIM", "pointer":" "
+	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"MONIT-ERR", "units":"PRT/FIS", "pointer":" "
 	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
 	 ["MONIT"     ,"MONIT-ERR" ]
-	,["NO-DIM"    ,"NO-DIM"    ]
+	,["PRT/FIS"   ,"PRT/FIS"   ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [3.033,0.02]]}
    }
-  ,{"SUBENT":"30597002", "isub":2, "compiled":20090506, "TransID":"3137", "TransDate":20090724
+  ,{"SUBENT":"30597002", "isub":2, "compiled":20160210, "TransID":"3173", "TransDate":20160408
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"98-CF-252(0,F),PR/TER,NU/DE,A"
-	    ,"c4reac":"(0,F)PR/TER,NU/DE,A"
+	,"x4code":{"code":"98-CF-252(0,F)2-HE-4,PR/TER,NU,,MSC"
+	    ,"c4reac":"(0,F)PR/TER,NU,,MSC"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"98-CF-252(0,F),PR/TER,NU/DE,A"
+	    {"code":"98-CF-252(0,F)2-HE-4,PR/TER,NU,,MSC"
 		,"Reac":"0,F"
 		,"SF1":"98-CF-252","Targ":{"code":"98-CF-252","nam":"Cf-252","ZA":98252}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF5":"PR/TER"
-		,"SF6":"NU/DE"
-		,"SF7":"A"
-		,"SF58":"PR/TER,NU/DE,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"NU"
+		,"SF8":"MSC"
+		,"SF58":"PR/TER,NU","Quant":"NU","BasicUnits":"PART/FIS","QuantHlp":"Prompt nu-bar for ternary fission"
 	    }]}
+	,"x4freetext":["  multiplicity at a given alpha energy"]
 	}
       ]
      ,"COMMENT":[
@@ -161,6 +169,11 @@
 		,"can be approximately represented by a straight line"
 		,"with the following slope,"
 		,"         d-nu(prompt)/d-E(a) = -0.041 +- 0.003  /(MeV)."]
+	}
+      ]
+     ,"EN-SEC":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::E,A"}
 	}
       ]
      ,"ERR-ANALYS":[
@@ -176,16 +189,16 @@
        {"icol":0, "header":"E", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"PC/FIS/MEV", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"PRT/FIS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"particl. per 100 fissions per MeV","familyCode":"FYDE","convFc":1.0E-8,"basicUnits":"PC/FIS/MEV"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"PC/FIS/MEV", "pointer":" "
+	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":2, "header":"DATA-ERR", "units":"PRT/FIS", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"particl. per 100 fissions per MeV","familyCode":"FYDE","convFc":1.0E-8,"basicUnits":"PC/FIS/MEV"}
+	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
 	 ["E"         ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"PC/FIS/MEV","PC/FIS/MEV"]
+	,["MEV"       ,"PRT/FIS"   ,"PRT/FIS"   ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [10.59,3.246,0.066]
@@ -236,13 +249,85 @@
 	,[23.4,2.67,0.385]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30597002", "Pointer":" "
- ,"Subent":"30597002", "compiled":20090506
-,"year1":1981, "author1ini":"", "author1":"Liu Zu-Hua"
-, "zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"98-CF-252(0,F),PR/TER,NU/DE,A"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"30597002", "compiled":20160210
+ ,"year1":1981, "author1ini":"", "author1":"Liu Zu-Hua"
+ ,"zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"NU", "quant":"NU", "quantExpan":"Prompt nu-bar for ternary fission"
+ ,"reacode":"98-CF-252(0,F)2-HE-4,PR/TER,NU,,MSC"
+ ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,PART/FIS  TO:PER-CENT=0.66%"]
+ ,"wx4data":5
+ ,"lx4data":46
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRT/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[3.246,3.229,3.198,3.153,3.167,3.095,3.174,3.151,3.084,3.095
+	,3.146,3.04,3.106,3.095,3.039,3.069,3.031,3.131,3.042,2.993
+	,2.988,2.965,2.956,3.014,2.967,2.973,2.941,2.988,2.967,2.911
+	,2.935,2.909,2.888,2.963,2.864,2.909,2.817,2.634,2.867,2.685
+	,2.796,2.77,2.854,2.634,2.698,2.67]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRT/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.066,0.065,0.063,0.064,0.062,0.062,0.061,0.06,0.059,0.056
+	,0.058,0.054,0.057,0.055,0.054,0.055,0.053,0.053,0.052,0.052
+	,0.051,0.052,0.051,0.053,0.052,0.052,0.051,0.055,0.054,0.055
+	,0.057,0.06,0.066,0.07,0.074,0.084,0.085,0.104,0.114,0.121
+	,0.155,0.155,0.211,0.215,0.359,0.385]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"MONIT-ERR", "units":"PRT/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.02
+    ,"com1":0.02}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"MONIT", "units":"PRT/FIS", "basicUnits":"PART/FIS"
+    ,"what":"ZZZ", "dataType":"11", "rank":777.0
+    ,"expansion":"Assumed values: monitor"
+    ,"com0":3.033
+    ,"com1":3.033}
+  ,{"ivar":4, "cvar":"zzz", "fam":"E2", "ifComm":false, "ifCM":false
+    ,"header":"E", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"51", "rank":777.1
+    ,"expansion":"Secondary energy: particle energy"
+    ,"dat0":[10.59,10.85,11.1,11.38,11.61,11.92,12.2,12.48,12.75,13.05
+	,13.33,13.61,13.89,14.16,14.45,14.74,15.01,15.3,15.57,15.86
+	,16.14,16.43,16.72,17,17.29,17.58,17.86,18.15,18.43,18.72
+	,19.01,19.31,19.6,19.88,20.17,20.48,20.77,21.06,21.35,21.64
+	,21.93,22.22,22.51,22.81,23.1,23.4]
+    ,"dat1":[1.059e+7,1.085e+7,1.11e+7,1.138e+7,1.161e+7,1.192e+7,1.22e+7,1.248e+7,1.275e+7,1.305e+7
+	,1.333e+7,1.361e+7,1.389e+7,1.416e+7,1.445e+7,1.474e+7,1.501e+7,1.53e+7,1.557e+7,1.586e+7
+	,1.614e+7,1.643e+7,1.672e+7,1.7e+7,1.729e+7,1.758e+7,1.786e+7,1.815e+7,1.843e+7,1.872e+7
+	,1.901e+7,1.931e+7,1.96e+7,1.988e+7,2.017e+7,2.048e+7,2.077e+7,2.106e+7,2.135e+7,2.164e+7
+	,2.193e+7,2.222e+7,2.251e+7,2.281e+7,2.31e+7,2.34e+7]}
+  ]
+ ,"wc5data":1
+ ,"lc5data":46
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[3.246,3.229,3.198,3.153,3.167,3.095,3.174,3.151,3.084,3.095
+	,3.146,3.04,3.106,3.095,3.039,3.069,3.031,3.131,3.042,2.993
+	,2.988,2.965,2.956,3.014,2.967,2.973,2.941,2.988,2.967,2.911
+	,2.935,2.909,2.888,2.963,2.864,2.909,2.817,2.634,2.867,2.685
+	,2.796,2.77,2.854,2.634,2.698,2.67]
+      ,"dy":[0.066,0.065,0.063,0.064,0.062,0.062,0.061,0.06,0.059,0.056
+	,0.058,0.054,0.057,0.055,0.054,0.055,0.053,0.053,0.052,0.052
+	,0.051,0.052,0.051,0.053,0.052,0.052,0.051,0.055,0.054,0.055
+	,0.057,0.06,0.066,0.07,0.074,0.084,0.085,0.104,0.114,0.121
+	,0.155,0.155,0.211,0.215,0.359,0.385]
+      ,"dysys":[0.0214236,0.0213114,0.0211068,0.0208098,0.0209022,0.020427,0.0209484,0.0207966,0.0203544,0.020427
+	,0.0207636,0.020064,0.0204996,0.020427,0.0200574,0.0202554,0.0200046,0.0206646,0.0200772,0.0197538
+	,0.0197208,0.019569,0.0195096,0.0198924,0.0195822,0.0196218,0.0194106,0.0197208,0.0195822,0.0192126
+	,0.019371,0.0191994,0.0190608,0.0195558,0.0189024,0.0191994,0.0185922,0.0173844,0.0189222,0.017721
+	,0.0184536,0.018282,0.0188364,0.0173844,0.0178068,0.017622]   }
+ }
 }
    ]
    }
