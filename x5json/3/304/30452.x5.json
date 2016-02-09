@@ -1,9 +1,9 @@
-  {"ENTRY":"30452", "updated":20150723, "TransID":"3172", "TransDate":20150925, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"30452", "updated":20160210, "TransID":"3173", "TransDate":20160408, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":1978,"a1":"I.Garlea+","r1":"J,RRP,23,409,1978"
    ,"ref":"Jour: Revue Roumaine de Physique, Vol.23, p.409 (1978)"
    ,"title":"Measuring of a few integral data in the Sigma Sigma neutron field"
    ,"x4subents":[
-   {"SUBENT":"30452001", "isub":1, "compiled":20150723, "TransID":"3172", "TransDate":20150925
+   {"SUBENT":"30452001", "isub":1, "compiled":20160210, "TransID":"3173", "TransDate":20160408
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -95,6 +95,11 @@
 	,"x4code":{"code":"20150723U", "date":"20150723", "act":"U", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" On. COMMENT added"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160210A", "date":"20160210", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. Cross section ratio added in 011-016."]
 	}
       ]
     }
@@ -1118,10 +1123,10 @@
 }
    ]
    }
-  ,{"SUBENT":"30452011", "isub":11, "compiled":20090311, "TransID":"3135", "TransDate":20090720
+  ,{"SUBENT":"30452011", "isub":11, "compiled":20160210, "TransID":"3173", "TransDate":20160408
     ,"BIB":{
       "REACTION":[
-	{"x4pointer":" "
+	{"x4pointer":"1"
 	,"x4code":{"code":"94-PU-239(N,F),,SIG,,SPA"
 	    ,"c4reac":"(N,F),SIG,,SPA"
 	    ,"combi":"a"
@@ -1139,11 +1144,37 @@
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
+	,{"x4pointer":"2"
+	,"x4code":{"code":"(94-PU-239(N,F),,SIG,,SPA)/(92-U-235(N,F),,SIG,,SPA)"
+	    ,"c4reac":"((N,F),SIG,,SPA)/((N,F),SIG,,SPA)"
+	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section]"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"94-PU-239(N,F),,SIG,,SPA"
+		,"Reac":"N,F"
+		,"SF1":"94-PU-239","Targ":{"code":"94-PU-239","nam":"Pu-239","ZA":94239}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF6":"SIG"
+		,"SF8":"SPA"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }
+	    ,{"code":"92-U-235(N,F),,SIG,,SPA"
+		,"Reac":"N,F"
+		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF6":"SIG"
+		,"SF8":"SPA"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }]}
+	}
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["99.88% (Pu-239),0.12% (Pu-240).  53.13 micro-g/cm2."]
+	,"x4code":{"Nucl":"94-PU-239","ENR":0.9988}
+	,"x4freetext":[" 99.88% (Pu-239),0.12% (Pu-240)."
+		,"                        53.13 micro-g/cm2."]
 	}
       ]
      ,"METHOD":[
@@ -1162,7 +1193,7 @@
 	}
       ]
      ,"MONITOR":[
-	{"x4pointer":" "
+	{"x4pointer":"1"
 	,"x4code":{"code":"92-U-238(N,F),,SIG,,SPA"
 		,"reaction":"92-U-238(N,F),,SIG,,SPA"}
 	,"x4freetext":[" Monitors were two fission chambers,4mm diameter,"
@@ -1180,7 +1211,8 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table III of"
-		,"                               IAEA-208,vol.II,p.309."]
+		,"                               IAEA-208,vol.II,p.309."
+		," Cross section ratio from Table 4 of J,RRP,23,409,1978"]
 	}
       ]
      ,"CORRECTION":[
@@ -1204,28 +1236,41 @@
 		,".error related to correction application."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160210A", "date":"20160210", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. Cross section ratio added."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":3, "nrows":1
+    ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"MB", "pointer":" "
+       {"icol":0, "header":"DATA", "units":"MB", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":1, "header":"ERR-T", "units":"MB", "pointer":" "
+      ,{"icol":1, "header":"ERR-T", "units":"MB", "pointer":"1"
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"ERR-S", "units":"PER-CENT", "pointer":" "
+      ,{"icol":2, "header":"ERR-S", "units":"PER-CENT", "pointer":"1"
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
+	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+      ,{"icol":3, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":4, "header":"ERR-T", "units":"PER-CENT", "pointer":"2"
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"ERR-T"     ,"ERR-S"     ]
-	,["MB"        ,"MB"        ,"PER-CENT"  ]
-	,[" "         ," "         ," "         ]]
+	 ["DATA"      ,"ERR-T"     ,"ERR-S"     ,"DATA"      ,"ERR-T"     ]
+	,["MB"        ,"MB"        ,"PER-CENT"  ,"NO-DIM"    ,"PER-CENT"  ]
+	,["1"         ,"1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [1780,62,0.5]]}
+	 [1780,62,0.5,1.177,2.5]]}
   ,"datasets":[
-{"iDataset":0, "DatasetID":"30452011", "Pointer":" "
- ,"Subent":"30452011", "compiled":20090311
+{"iDataset":0, "DatasetID":"304520111", "Pointer":"1"
+ ,"Subent":"30452011", "compiled":20160210
  ,"year1":1978, "author1ini":"I.", "author1":"Garlea"
  ,"zTarg1":94, "targ1":"Pu-239", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -1276,12 +1321,57 @@
    }
  }
 }
+,{"iDataset":1, "DatasetID":"304520112", "Pointer":"2"
+ ,"Subent":"30452011", "compiled":20160210
+ ,"year1":1978, "author1ini":"I.", "author1":"Garlea"
+ ,"zTarg1":94, "targ1":"Pu-239", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section]"
+ ,"reacode":"(94-PU-239(N,F),,SIG,,SPA)/(92-U-235(N,F),,SIG,,SPA)"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[1.177]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"ERR-T", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[2.5]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":450
+    ,"com1":4.5e+5}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.177]
+      ,"dy":[0.029425]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[4.5e+5]
+   }
+ }
+}
    ]
    }
-  ,{"SUBENT":"30452012", "isub":12, "compiled":20090311, "TransID":"3135", "TransDate":20090720
+  ,{"SUBENT":"30452012", "isub":12, "compiled":20160210, "TransID":"3173", "TransDate":20160408
     ,"BIB":{
       "REACTION":[
-	{"x4pointer":" "
+	{"x4pointer":"1"
 	,"x4code":{"code":"93-NP-237(N,F),,SIG,,SPA"
 	    ,"c4reac":"(N,F),SIG,,SPA"
 	    ,"combi":"a"
@@ -1292,6 +1382,31 @@
 	    {"code":"93-NP-237(N,F),,SIG,,SPA"
 		,"Reac":"N,F"
 		,"SF1":"93-NP-237","Targ":{"code":"93-NP-237","nam":"Np-237","ZA":93237}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF6":"SIG"
+		,"SF8":"SPA"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }]}
+	}
+	,{"x4pointer":"2"
+	,"x4code":{"code":"(93-NP-237(N,F),,SIG,,SPA)/(92-U-235(N,F),,SIG,,SPA)"
+	    ,"c4reac":"((N,F),SIG,,SPA)/((N,F),SIG,,SPA)"
+	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section]"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"93-NP-237(N,F),,SIG,,SPA"
+		,"Reac":"N,F"
+		,"SF1":"93-NP-237","Targ":{"code":"93-NP-237","nam":"Np-237","ZA":93237}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF6":"SIG"
+		,"SF8":"SPA"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }
+	    ,{"code":"92-U-235(N,F),,SIG,,SPA"
+		,"Reac":"N,F"
+		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF6":"SIG"
@@ -1322,7 +1437,7 @@
 	}
       ]
      ,"MONITOR":[
-	{"x4pointer":" "
+	{"x4pointer":"1"
 	,"x4code":{"code":"92-U-238(N,F),,SIG,,SPA"
 		,"reaction":"92-U-238(N,F),,SIG,,SPA"}
 	,"x4freetext":[" Monitors were two fission chambers,4mm diameter,"
@@ -1340,7 +1455,8 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table III of"
-		,"                               IAEA-208,vol.II,p.309."]
+		,"                               IAEA-208,vol.II,p.309."
+		," Cross section ratio from Table 4 of J,RRP,23,409,1978"]
 	}
       ]
      ,"CORRECTION":[
@@ -1364,28 +1480,41 @@
 		,".error related to correction application."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160210A", "date":"20160210", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. Cross section ratio added."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":3, "nrows":1
+    ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"MB", "pointer":" "
+       {"icol":0, "header":"DATA", "units":"MB", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":1, "header":"ERR-T", "units":"MB", "pointer":" "
+      ,{"icol":1, "header":"ERR-T", "units":"MB", "pointer":"1"
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"ERR-S", "units":"PER-CENT", "pointer":" "
+      ,{"icol":2, "header":"ERR-S", "units":"PER-CENT", "pointer":"1"
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
+	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+      ,{"icol":3, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":4, "header":"ERR-T", "units":"PER-CENT", "pointer":"2"
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"ERR-T"     ,"ERR-S"     ]
-	,["MB"        ,"MB"        ,"PER-CENT"  ]
-	,[" "         ," "         ," "         ]]
+	 ["DATA"      ,"ERR-T"     ,"ERR-S"     ,"DATA"      ,"ERR-T"     ]
+	,["MB"        ,"MB"        ,"PER-CENT"  ,"NO-DIM"    ,"PER-CENT"  ]
+	,["1"         ,"1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [603,22,0.5]]}
+	 [603,22,0.5,0.399,3]]}
   ,"datasets":[
-{"iDataset":0, "DatasetID":"30452012", "Pointer":" "
- ,"Subent":"30452012", "compiled":20090311
+{"iDataset":0, "DatasetID":"304520121", "Pointer":"1"
+ ,"Subent":"30452012", "compiled":20160210
  ,"year1":1978, "author1ini":"I.", "author1":"Garlea"
  ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -1436,12 +1565,57 @@
    }
  }
 }
+,{"iDataset":1, "DatasetID":"304520122", "Pointer":"2"
+ ,"Subent":"30452012", "compiled":20160210
+ ,"year1":1978, "author1ini":"I.", "author1":"Garlea"
+ ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section]"
+ ,"reacode":"(93-NP-237(N,F),,SIG,,SPA)/(92-U-235(N,F),,SIG,,SPA)"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.399]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"ERR-T", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[3]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":450
+    ,"com1":4.5e+5}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.399]
+      ,"dy":[0.01197]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[4.5e+5]
+   }
+ }
+}
    ]
    }
-  ,{"SUBENT":"30452013", "isub":13, "compiled":20090311, "TransID":"3135", "TransDate":20090720
+  ,{"SUBENT":"30452013", "isub":13, "compiled":20160210, "TransID":"3173", "TransDate":20160408
     ,"BIB":{
       "REACTION":[
-	{"x4pointer":" "
+	{"x4pointer":"1"
 	,"x4code":{"code":"92-U-238(N,F),,SIG,,SPA"
 	    ,"c4reac":"(N,F),SIG,,SPA"
 	    ,"combi":"a"
@@ -1459,11 +1633,36 @@
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
+	,{"x4pointer":"2"
+	,"x4code":{"code":"(92-U-238(N,F),,SIG,,SPA)/(92-U-235(N,F),,SIG,,SPA)"
+	    ,"c4reac":"((N,F),SIG,,SPA)/((N,F),SIG,,SPA)"
+	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section]"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"92-U-238(N,F),,SIG,,SPA"
+		,"Reac":"N,F"
+		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF6":"SIG"
+		,"SF8":"SPA"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }
+	    ,{"code":"92-U-235(N,F),,SIG,,SPA"
+		,"Reac":"N,F"
+		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF6":"SIG"
+		,"SF8":"SPA"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }]}
+	}
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["About 100% (U-238), 200ppm(U-235) and 400ppm(U-235)."
+	,"x4code":{"Nucl":"92-U-238","ENR":1.0}
+	,"x4freetext":[" About 100% (U-238), 200ppm(U-235)"
 		,"two depleted U-238 samples, 47.30  and 39.50micro-g/cm2"]
 	}
       ]
@@ -1483,7 +1682,7 @@
 	}
       ]
      ,"MONITOR":[
-	{"x4pointer":" "
+	{"x4pointer":"1"
 	,"x4code":{"code":"92-U-238(N,F),,SIG,,SPA"
 		,"reaction":"92-U-238(N,F),,SIG,,SPA"}
 	,"x4freetext":[" Monitors were two fission chambers,4mm diameter,"
@@ -1501,7 +1700,8 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table III of"
-		,"                               IAEA-208,vol.II,p.309."]
+		,"                               IAEA-208,vol.II,p.309."
+		," Cross section ratio from Table 4 of J,RRP,23,409,1978"]
 	}
       ]
      ,"CORRECTION":[
@@ -1525,28 +1725,41 @@
 		,".error related to correction application."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160210A", "date":"20160210", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. Cross section ratio added."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":3, "nrows":1
+    ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"MB", "pointer":" "
+       {"icol":0, "header":"DATA", "units":"MB", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":1, "header":"ERR-T", "units":"MB", "pointer":" "
+      ,{"icol":1, "header":"ERR-T", "units":"MB", "pointer":"1"
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"ERR-S", "units":"PER-CENT", "pointer":" "
+      ,{"icol":2, "header":"ERR-S", "units":"PER-CENT", "pointer":"1"
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
+	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+      ,{"icol":3, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":4, "header":"ERR-T", "units":"PER-CENT", "pointer":"2"
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"ERR-T"     ,"ERR-S"     ]
-	,["MB"        ,"MB"        ,"PER-CENT"  ]
-	,[" "         ," "         ," "         ]]
+	 ["DATA"      ,"ERR-T"     ,"ERR-S"     ,"DATA"      ,"ERR-T"     ]
+	,["MB"        ,"MB"        ,"PER-CENT"  ,"NO-DIM"    ,"PER-CENT"  ]
+	,["1"         ,"1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [83.46,3.3,0.5]]}
+	 [83.46,3.3,0.5,0.0552,2.5]]}
   ,"datasets":[
-{"iDataset":0, "DatasetID":"30452013", "Pointer":" "
- ,"Subent":"30452013", "compiled":20090311
+{"iDataset":0, "DatasetID":"304520131", "Pointer":"1"
+ ,"Subent":"30452013", "compiled":20160210
  ,"year1":1978, "author1ini":"I.", "author1":"Garlea"
  ,"zTarg1":92, "targ1":"U-238", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -1597,12 +1810,57 @@
    }
  }
 }
+,{"iDataset":1, "DatasetID":"304520132", "Pointer":"2"
+ ,"Subent":"30452013", "compiled":20160210
+ ,"year1":1978, "author1ini":"I.", "author1":"Garlea"
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section]"
+ ,"reacode":"(92-U-238(N,F),,SIG,,SPA)/(92-U-235(N,F),,SIG,,SPA)"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.0552]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"ERR-T", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[2.5]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":450
+    ,"com1":4.5e+5}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.0552]
+      ,"dy":[0.00138]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[4.5e+5]
+   }
+ }
+}
    ]
    }
-  ,{"SUBENT":"30452014", "isub":14, "compiled":20090311, "TransID":"3135", "TransDate":20090720
+  ,{"SUBENT":"30452014", "isub":14, "compiled":20160210, "TransID":"3173", "TransDate":20160408
     ,"BIB":{
       "REACTION":[
-	{"x4pointer":" "
+	{"x4pointer":"1"
 	,"x4code":{"code":"92-U-233(N,F),,SIG,,SPA"
 	    ,"c4reac":"(N,F),SIG,,SPA"
 	    ,"combi":"a"
@@ -1620,12 +1878,37 @@
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
+	,{"x4pointer":"2"
+	,"x4code":{"code":"(92-U-233(N,F),,SIG,,SPA)/(92-U-235(N,F),,SIG,,SPA)"
+	    ,"c4reac":"((N,F),SIG,,SPA)/((N,F),SIG,,SPA)"
+	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section]"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"92-U-233(N,F),,SIG,,SPA"
+		,"Reac":"N,F"
+		,"SF1":"92-U-233","Targ":{"code":"92-U-233","nam":"U-233","ZA":92233}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF6":"SIG"
+		,"SF8":"SPA"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }
+	    ,{"code":"92-U-235(N,F),,SIG,,SPA"
+		,"Reac":"N,F"
+		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF6":"SIG"
+		,"SF8":"SPA"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }]}
+	}
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["99.44% (U-233),0.522% (U-234),0.016% (U-235),"
-		,"0.018% (U-238).  135.70 micro-g/cm2."]
+	,"x4code":{"Nucl":"92-U-233","ENR":0.9944}
+	,"x4freetext":[" 99.44% (U-233),0.522% (U-234),"
+		,"0.016% (U-235), 0.018% (U-238).  135.70 micro-g/cm2."]
 	}
       ]
      ,"METHOD":[
@@ -1644,7 +1927,7 @@
 	}
       ]
      ,"MONITOR":[
-	{"x4pointer":" "
+	{"x4pointer":"1"
 	,"x4code":{"code":"92-U-238(N,F),,SIG,,SPA"
 		,"reaction":"92-U-238(N,F),,SIG,,SPA"}
 	,"x4freetext":[" Monitors were two fission chambers,4mm diameter,"
@@ -1662,7 +1945,8 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table III of"
-		,"                               IAEA-208,vol.II,p.309."]
+		,"                               IAEA-208,vol.II,p.309."
+		," Cross section ratio from Table 4 of J,RRP,23,409,1978"]
 	}
       ]
      ,"CORRECTION":[
@@ -1686,28 +1970,41 @@
 		,".error related to correction application."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160210A", "date":"20160210", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. Cross section ratio added."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":3, "nrows":1
+    ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"MB", "pointer":" "
+       {"icol":0, "header":"DATA", "units":"MB", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":1, "header":"ERR-T", "units":"MB", "pointer":" "
+      ,{"icol":1, "header":"ERR-T", "units":"MB", "pointer":"1"
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"ERR-S", "units":"PER-CENT", "pointer":" "
+      ,{"icol":2, "header":"ERR-S", "units":"PER-CENT", "pointer":"1"
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
+	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+      ,{"icol":3, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":4, "header":"ERR-T", "units":"PER-CENT", "pointer":"2"
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"ERR-T"     ,"ERR-S"     ]
-	,["MB"        ,"MB"        ,"PER-CENT"  ]
-	,[" "         ," "         ," "         ]]
+	 ["DATA"      ,"ERR-T"     ,"ERR-S"     ,"DATA"      ,"ERR-T"     ]
+	,["MB"        ,"MB"        ,"PER-CENT"  ,"NO-DIM"    ,"PER-CENT"  ]
+	,["1"         ,"1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [2325,93,0.5]]}
+	 [2325,93,0.5,1.538,2.5]]}
   ,"datasets":[
-{"iDataset":0, "DatasetID":"30452014", "Pointer":" "
- ,"Subent":"30452014", "compiled":20090311
+{"iDataset":0, "DatasetID":"304520141", "Pointer":"1"
+ ,"Subent":"30452014", "compiled":20160210
  ,"year1":1978, "author1ini":"I.", "author1":"Garlea"
  ,"zTarg1":92, "targ1":"U-233", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -1758,12 +2055,57 @@
    }
  }
 }
+,{"iDataset":1, "DatasetID":"304520142", "Pointer":"2"
+ ,"Subent":"30452014", "compiled":20160210
+ ,"year1":1978, "author1ini":"I.", "author1":"Garlea"
+ ,"zTarg1":92, "targ1":"U-233", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section]"
+ ,"reacode":"(92-U-233(N,F),,SIG,,SPA)/(92-U-235(N,F),,SIG,,SPA)"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[1.538]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"ERR-T", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[2.5]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":450
+    ,"com1":4.5e+5}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.538]
+      ,"dy":[0.03845]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[4.5e+5]
+   }
+ }
+}
    ]
    }
-  ,{"SUBENT":"30452015", "isub":15, "compiled":20090311, "TransID":"3135", "TransDate":20090720
+  ,{"SUBENT":"30452015", "isub":15, "compiled":20160210, "TransID":"3173", "TransDate":20160408
     ,"BIB":{
       "REACTION":[
-	{"x4pointer":" "
+	{"x4pointer":"1"
 	,"x4code":{"code":"94-PU-241(N,F),,SIG,,SPA"
 	    ,"c4reac":"(N,F),SIG,,SPA"
 	    ,"combi":"a"
@@ -1781,11 +2123,37 @@
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
+	,{"x4pointer":"2"
+	,"x4code":{"code":"(94-PU-241(N,F),,SIG,,SPA)/(92-U-235(N,F),,SIG,,SPA)"
+	    ,"c4reac":"((N,F),SIG,,SPA)/((N,F),SIG,,SPA)"
+	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section]"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"94-PU-241(N,F),,SIG,,SPA"
+		,"Reac":"N,F"
+		,"SF1":"94-PU-241","Targ":{"code":"94-PU-241","nam":"Pu-241","ZA":94241}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF6":"SIG"
+		,"SF8":"SPA"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }
+	    ,{"code":"92-U-235(N,F),,SIG,,SPA"
+		,"Reac":"N,F"
+		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF6":"SIG"
+		,"SF8":"SPA"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }]}
+	}
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["98.55% (Pu-241).  104.30 micro-g/cm2."]
+	,"x4code":{"Nucl":"94-PU-241","ENR":0.9855}
+	,"x4freetext":[" 98.55% (Pu-241)."
+		,"                       104.30 micro-g/cm2."]
 	}
       ]
      ,"METHOD":[
@@ -1804,7 +2172,7 @@
 	}
       ]
      ,"MONITOR":[
-	{"x4pointer":" "
+	{"x4pointer":"1"
 	,"x4code":{"code":"92-U-238(N,F),,SIG,,SPA"
 		,"reaction":"92-U-238(N,F),,SIG,,SPA"}
 	,"x4freetext":[" Monitors were two fission chambers,4mm diameter,"
@@ -1822,7 +2190,8 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table III of"
-		,"                               IAEA-208,vol.II,p.309."]
+		,"                               IAEA-208,vol.II,p.309."
+		," Cross section ratio from Table 4 of J,RRP,23,409,1978"]
 	}
       ]
      ,"CORRECTION":[
@@ -1846,28 +2215,41 @@
 		,".error related to correction application."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160210A", "date":"20160210", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. Cross section ratio added."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":3, "nrows":1
+    ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"MB", "pointer":" "
+       {"icol":0, "header":"DATA", "units":"MB", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":1, "header":"ERR-T", "units":"MB", "pointer":" "
+      ,{"icol":1, "header":"ERR-T", "units":"MB", "pointer":"1"
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"ERR-S", "units":"PER-CENT", "pointer":" "
+      ,{"icol":2, "header":"ERR-S", "units":"PER-CENT", "pointer":"1"
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
+	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+      ,{"icol":3, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":4, "header":"ERR-T", "units":"PER-CENT", "pointer":"2"
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"ERR-T"     ,"ERR-S"     ]
-	,["MB"        ,"MB"        ,"PER-CENT"  ]
-	,[" "         ," "         ," "         ]]
+	 ["DATA"      ,"ERR-T"     ,"ERR-S"     ,"DATA"      ,"ERR-T"     ]
+	,["MB"        ,"MB"        ,"PER-CENT"  ,"NO-DIM"    ,"PER-CENT"  ]
+	,["1"         ,"1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [2026,81,0.5]]}
+	 [2026,81,0.5,1.34,2.5]]}
   ,"datasets":[
-{"iDataset":0, "DatasetID":"30452015", "Pointer":" "
- ,"Subent":"30452015", "compiled":20090311
+{"iDataset":0, "DatasetID":"304520151", "Pointer":"1"
+ ,"Subent":"30452015", "compiled":20160210
  ,"year1":1978, "author1ini":"I.", "author1":"Garlea"
  ,"zTarg1":94, "targ1":"Pu-241", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -1918,12 +2300,57 @@
    }
  }
 }
+,{"iDataset":1, "DatasetID":"304520152", "Pointer":"2"
+ ,"Subent":"30452015", "compiled":20160210
+ ,"year1":1978, "author1ini":"I.", "author1":"Garlea"
+ ,"zTarg1":94, "targ1":"Pu-241", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section]"
+ ,"reacode":"(94-PU-241(N,F),,SIG,,SPA)/(92-U-235(N,F),,SIG,,SPA)"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[1.34]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"ERR-T", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[2.5]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":450
+    ,"com1":4.5e+5}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.34]
+      ,"dy":[0.0335]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[4.5e+5]
+   }
+ }
+}
    ]
    }
-  ,{"SUBENT":"30452016", "isub":16, "compiled":20090311, "TransID":"3135", "TransDate":20090720
+  ,{"SUBENT":"30452016", "isub":16, "compiled":20160210, "TransID":"3173", "TransDate":20160408
     ,"BIB":{
       "REACTION":[
-	{"x4pointer":" "
+	{"x4pointer":"1"
 	,"x4code":{"code":"90-TH-232(N,F),,SIG,,SPA"
 	    ,"c4reac":"(N,F),SIG,,SPA"
 	    ,"combi":"a"
@@ -1941,12 +2368,37 @@
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
+	,{"x4pointer":"2"
+	,"x4code":{"code":"(90-TH-232(N,F),,SIG,,SPA)/(92-U-235(N,F),,SIG,,SPA)"
+	    ,"c4reac":"((N,F),SIG,,SPA)/((N,F),SIG,,SPA)"
+	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section]"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"90-TH-232(N,F),,SIG,,SPA"
+		,"Reac":"N,F"
+		,"SF1":"90-TH-232","Targ":{"code":"90-TH-232","nam":"Th-232","ZA":90232}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF6":"SIG"
+		,"SF8":"SPA"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }
+	    ,{"code":"92-U-235(N,F),,SIG,,SPA"
+		,"Reac":"N,F"
+		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF6":"SIG"
+		,"SF8":"SPA"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }]}
+	}
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["About 100%(Th-232),less than 0.16%(natural U)."
-		,"130.35 micro-g/cm2."]
+	,"x4code":{"Nucl":"90-TH-232","ENR":1.0}
+	,"x4freetext":[" About 100%(Th-232),"
+		,"less than 0.16%(natural U) 130.35 micro-g/cm2"]
 	}
       ]
      ,"METHOD":[
@@ -1965,7 +2417,7 @@
 	}
       ]
      ,"MONITOR":[
-	{"x4pointer":" "
+	{"x4pointer":"1"
 	,"x4code":{"code":"92-U-238(N,F),,SIG,,SPA"
 		,"reaction":"92-U-238(N,F),,SIG,,SPA"}
 	,"x4freetext":[" Monitors were two fission chambers,4mm diameter,"
@@ -1983,7 +2435,8 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table III of"
-		,"                             IAEA-208,vol.II,p.309."]
+		,"                             IAEA-208,vol.II,p.309."
+		," Cross section ratio from Table 4 of J,RRP,23,409,1978"]
 	}
       ]
      ,"CORRECTION":[
@@ -2007,28 +2460,41 @@
 		,".error related to correction application."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160210A", "date":"20160210", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. Cross section ratio added."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":3, "nrows":1
+    ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"MB", "pointer":" "
+       {"icol":0, "header":"DATA", "units":"MB", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":1, "header":"ERR-T", "units":"MB", "pointer":" "
+      ,{"icol":1, "header":"ERR-T", "units":"MB", "pointer":"1"
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"ERR-S", "units":"PER-CENT", "pointer":" "
+      ,{"icol":2, "header":"ERR-S", "units":"PER-CENT", "pointer":"1"
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
+	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+      ,{"icol":3, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":4, "header":"ERR-T", "units":"PER-CENT", "pointer":"2"
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"ERR-T"     ,"ERR-S"     ]
-	,["MB"        ,"MB"        ,"PER-CENT"  ]
-	,[" "         ," "         ," "         ]]
+	 ["DATA"      ,"ERR-T"     ,"ERR-S"     ,"DATA"      ,"ERR-T"     ]
+	,["MB"        ,"MB"        ,"PER-CENT"  ,"NO-DIM"    ,"PER-CENT"  ]
+	,["1"         ,"1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [19.8,1.2,0.5]]}
+	 [19.8,1.2,0.5,0.0131,7]]}
   ,"datasets":[
-{"iDataset":0, "DatasetID":"30452016", "Pointer":" "
- ,"Subent":"30452016", "compiled":20090311
+{"iDataset":0, "DatasetID":"304520161", "Pointer":"1"
+ ,"Subent":"30452016", "compiled":20160210
  ,"year1":1978, "author1ini":"I.", "author1":"Garlea"
  ,"zTarg1":90, "targ1":"Th-232", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -2072,6 +2538,51 @@
       ,"y":[0.0198]
       ,"dy":[0.0012]
       ,"dystat":[9.9e-5]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[4.5e+5]
+   }
+ }
+}
+,{"iDataset":1, "DatasetID":"304520162", "Pointer":"2"
+ ,"Subent":"30452016", "compiled":20160210
+ ,"year1":1978, "author1ini":"I.", "author1":"Garlea"
+ ,"zTarg1":90, "targ1":"Th-232", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section]"
+ ,"reacode":"(90-TH-232(N,F),,SIG,,SPA)/(92-U-235(N,F),,SIG,,SPA)"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.0131]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"ERR-T", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[7]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":450
+    ,"com1":4.5e+5}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.0131]
+      ,"dy":[9.17e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
