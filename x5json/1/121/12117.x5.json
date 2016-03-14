@@ -1,9 +1,9 @@
-  {"ENTRY":"12117", "updated":20061127, "TransID":"1341", "TransDate":20070213, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"12117", "updated":20160315, "TransID":"1416", "TransDate":20160615, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1965,"a1":"K.Takahashi+","r1":"J,PR,137,B763,1965"
    ,"ref":"Jour: Physical Review, Vol.137, p.B763 (1965)"
    ,"title":"Decay of the Isomer Eu152(m2)(96min)."
    ,"x4subents":[
-   {"SUBENT":"12117001", "isub":1, "compiled":20061127, "TransID":"1341", "TransDate":20070213
+   {"SUBENT":"12117001", "isub":1, "compiled":20160315, "TransID":"1416", "TransDate":20160615
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -44,14 +44,15 @@
       ]
      ,"METHOD":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"ACTIV", "dict":"METHOD", "idict":21,"hlp":"Activation"}]
+	,"x4codes":[{"code":"ACTIV", "dict":"METHOD", "idict":21,"hlp":"Activation"}
+	    ,{"code":"COINC", "dict":"METHOD", "idict":21,"hlp":"Coincidence"}]
 	}
       ]
-     ,"STATUS":[
+     ,"DETECTOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"SCSRS"
-		,"flag":"SCSRS", "help":"Data converted from SCISRS file"
-		}]
+	,"x4codes":[{"code":"NAICR", "dict":"DETECTOR", "idict":22,"hlp":"Sodium-Iodide crystal"}]
+	,"x4freetext":[" NaI and anthracene crystal detectors used"
+		," for electron-electron and electron-gamma coincidences"]
 	}
       ]
      ,"HISTORY":[
@@ -76,114 +77,18 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" DR Reference corrected to follow APS format"]
 	}
-      ]
-    }
-   }
-  ,{"SUBENT":"12117002", "isub":2, "compiled":20050518, "TransID":"0000", "TransDate":20050926
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"63-EU-151(N,G)63-EU-152-M,,SIG,,SPA"
-	    ,"c4reac":"(N,G),SIG,,SPA"
-	    ,"combi":"a"
-	    ,"MF":3
-	    ,"MT":102
-	    ,"Units":"B"
-	    ,"reacs": [
-	    {"code":"63-EU-151(N,G)63-EU-152-M,,SIG,,SPA"
-		,"Reac":"N,G"
-		,"SF1":"63-EU-151","Targ":{"code":"63-EU-151","nam":"Eu-151","ZA":63151}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"G"
-		,"SF4":"63-EU-152-M","Prod":{"code":"63-EU-152-M","nam":"Eu-152-m","ZA":63152,"ProdM":"M"}
-		,"SF6":"SIG"
-		,"SF8":"SPA"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }]}
-	}
-      ]
-     ,"DECAY-DATA":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"63-EU-152-M", "t12":96.0, "t12units":"MIN", "t12sec":5760.0
-	, "Radiations":[]}]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"DEP,12117003"
-		,"flag":"DEP", "help":"Dependent data"
-		,"subent":"12117003"
-		}]
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160220A", "date":"20160220", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Sub.2 deleted (no original exp.data),"
+		," STATUS updated, several keywords added"]
 	}
       ]
     }
-    ,"DATA":{"ncols":3, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN-DUMMY", "units":"MEV", "pointer":" "
-	,"headerHelp":"Dummy incident proj. energy, for broad spectrum", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"B", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"B", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ]
-      ,"datacols":[
-	 ["EN-DUMMY"  ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"B"         ,"B"         ]
-	,[" "         ," "         ," "         ]]
-      ,"data":[
-	 [2.53E-8,1.7,0.7]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"12117002", "Pointer":" "
- ,"Subent":"12117002", "compiled":20050518
- ,"year1":1965, "author1ini":"K.", "author1":"Takahashi"
- ,"zTarg1":63, "targ1":"Eu-151", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"63-EU-151(N,G)63-EU-152-M,,SIG,,SPA"
- ,"compNotes":[]
- ,"wx4data":3
- ,"lx4data":1
- ,"x4data":[
-   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"B", "basicUnits":"B"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
-    ,"dat0":[1.7]
-   ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
-    ,"expansion":"Data: data /Error/"
-    ,"dat0":[0.7]
-   ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":false, "ifCM":false
-    ,"header":"EN-DUMMY", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"43", "rank":1.1
-    ,"expansion":"Incident energy: spectrum energy"
-    ,"dat0":[2.53e-8]
-    ,"dat1":[0.0253]}
-  ]
- ,"wc5data":2
- ,"lc5data":1
- ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
-      ,"header":"DATA", "dataType":"21", "rank":0.0
-      ,"expansion":"Data: data"
-      ,"y":[1.7]
-      ,"dy":[0.7]   }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
-      ,"header":"SpE", "dataType":"43", "rank":1.0
-      ,"expansion":"Incident energy: spectrum energy"
-      ,"x1":[0.0253]
    }
- }
-}
-   ]
+  ,{"SUBENT":"12117002", "isub":2, "compiled":20160315, "TransID":"1416", "TransDate":20160615, "nosubent":true 
    }
-  ,{"SUBENT":"12117003", "isub":3, "compiled":20050518, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"12117003", "isub":3, "compiled":20160315, "TransID":"1416", "TransDate":20160615
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -206,6 +111,11 @@
 	    }]}
 	}
       ]
+     ,"PART-DET":[
+	{"x4pointer":" "
+	,"x4codes":["ICE","DG"]
+	}
+      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"63-EU-152-M1", "t12":9.2, "t12units":"HR", "t12sec":33120.0
@@ -216,11 +126,31 @@
 	, "Radiations":[]}]
 	}
       ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on source of uncertainty"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from p. B769 of Phys.Rev.137,B763,1965"]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"19840801A", "date":"19840801", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" BIB correction."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160220A", "date":"20160220", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" STATUS, PART-DET, ERR-ANALYS added"]
 	}
       ]
     }
@@ -244,7 +174,7 @@
 	 [2.53E-8,820,150]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"12117003", "Pointer":" "
- ,"Subent":"12117003", "compiled":20050518
+ ,"Subent":"12117003", "compiled":20160315
  ,"year1":1965, "author1ini":"K.", "author1":"Takahashi"
  ,"zTarg1":63, "targ1":"Eu-151", "proj1":"n", "emis1":"G", "MF":203, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
