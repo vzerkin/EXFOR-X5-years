@@ -1,9 +1,9 @@
-  {"ENTRY":"10304", "updated":20020823, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10304", "updated":20160315, "TransID":"1416", "TransDate":20160615, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1972,"a1":"J.A.Grundl+","r1":"J,ANS,15,945,1972"
    ,"ref":"Jour: Transactions of the American Nuclear Society, Vol.15, p.945 (1972)"
    ,"title":"Measurement of 235U and 238U Fission Cross Sections for 252Cf Spontaneous Fission Neutrons."
    ,"x4subents":[
-   {"SUBENT":"10304001", "isub":1, "compiled":20020823, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"10304001", "isub":1, "compiled":20160315, "TransID":"1416", "TransDate":20160615
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -68,6 +68,12 @@
 		}]
 	,"x4freetext":[" Approved by author"]
 	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text (p946) of Trans.Am.Nucl.Sci.15(1972)945"]
+	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
@@ -85,41 +91,54 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Updated to new date formats, lower case."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160211A", "date":"20160211", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Changed EN-DUMMY to KT-DUMMY,"
+		," REACTION SF8 corr. in subs.2-4"]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"EN-DUMMY", "units":"MEV", "pointer":" "
-	,"headerHelp":"Dummy incident proj. energy, for broad spectrum", "pFlag":"1000000"
+       {"icol":0, "header":"KT-DUMMY", "units":"MEV", "pointer":" "
+	,"headerHelp":"Dummy spectrum temperature", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN-DUMMY"  ]
+	 ["KT-DUMMY"  ]
 	,["MEV"       ]
 	,[" "         ]]
       ,"data":[
-	 [2.1]]}
+	 [1.42]]}
    }
-  ,{"SUBENT":"10304002", "isub":2, "compiled":20020823, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10304002", "isub":2, "compiled":20160315, "TransID":"1416", "TransDate":20160615
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-235(N,F),,SIG,,SPA"
-	    ,"c4reac":"(N,F),SIG,,SPA"
+	,"x4code":{"code":"92-U-235(N,F),,SIG,,FIS"
+	    ,"c4reac":"(N,F),SIG,,FIS"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":18
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"92-U-235(N,F),,SIG,,SPA"
+	    {"code":"92-U-235(N,F),,SIG,,FIS"
 		,"Reac":"N,F"
 		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF6":"SIG"
-		,"SF8":"SPA"
+		,"SF8":"FIS"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160211A", "date":"20160211", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. SF8 changed from SPA to FIS"]
 	}
       ]
     }
@@ -140,12 +159,12 @@
 	 [1207,52]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10304002", "Pointer":" "
- ,"Subent":"10304002", "compiled":20020823
+ ,"Subent":"10304002", "compiled":20160315
  ,"year1":1972, "author1ini":"J.A.", "author1":"Grundl"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpT)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"92-U-235(N,F),,SIG,,SPA"
+ ,"reacode":"92-U-235(N,F),,SIG,,FIS"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":1
@@ -162,12 +181,12 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[52]
     ,"dat1":[0.052]}
-  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
-    ,"header":"EN-DUMMY", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"43", "rank":1.1
-    ,"expansion":"Incident energy: spectrum energy"
-    ,"com0":2.1
-    ,"com1":2.1e+6}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpT", "ifComm":true , "ifCM":false
+    ,"header":"KT-DUMMY", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"44", "rank":1.1
+    ,"expansion":"Incident energy: spectrum temperature"
+    ,"com0":1.42
+    ,"com1":1.42e+6}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -177,35 +196,42 @@
       ,"expansion":"Data: data"
       ,"y":[1.207]
       ,"dy":[0.052]   }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
-      ,"header":"SpE", "dataType":"43", "rank":1.0
-      ,"expansion":"Incident energy: spectrum energy"
-      ,"x1":[2.1e+6]
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpT", "ifCM":false, "units":"EV"
+      ,"header":"SpT", "dataType":"44", "rank":1.0
+      ,"expansion":"Incident energy: spectrum temperature"
+      ,"x1":[1.42e+6]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"10304003", "isub":3, "compiled":20020823, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10304003", "isub":3, "compiled":20160315, "TransID":"1416", "TransDate":20160615
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-238(N,F),,SIG,,SPA"
-	    ,"c4reac":"(N,F),SIG,,SPA"
+	,"x4code":{"code":"92-U-238(N,F),,SIG,,FIS"
+	    ,"c4reac":"(N,F),SIG,,FIS"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":18
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"92-U-238(N,F),,SIG,,SPA"
+	    {"code":"92-U-238(N,F),,SIG,,FIS"
 		,"Reac":"N,F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF6":"SIG"
-		,"SF8":"SPA"
+		,"SF8":"FIS"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160211A", "date":"20160211", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. SF8 changed from SPA to FIS"]
 	}
       ]
     }
@@ -226,12 +252,12 @@
 	 [324,14]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10304003", "Pointer":" "
- ,"Subent":"10304003", "compiled":20020823
+ ,"Subent":"10304003", "compiled":20160315
  ,"year1":1972, "author1ini":"J.A.", "author1":"Grundl"
  ,"zTarg1":92, "targ1":"U-238", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpT)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"92-U-238(N,F),,SIG,,SPA"
+ ,"reacode":"92-U-238(N,F),,SIG,,FIS"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":1
@@ -248,12 +274,12 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[14]
     ,"dat1":[0.014]}
-  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
-    ,"header":"EN-DUMMY", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"43", "rank":1.1
-    ,"expansion":"Incident energy: spectrum energy"
-    ,"com0":2.1
-    ,"com1":2.1e+6}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpT", "ifComm":true , "ifCM":false
+    ,"header":"KT-DUMMY", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"44", "rank":1.1
+    ,"expansion":"Incident energy: spectrum temperature"
+    ,"com0":1.42
+    ,"com1":1.42e+6}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -263,42 +289,49 @@
       ,"expansion":"Data: data"
       ,"y":[0.324]
       ,"dy":[0.014]   }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
-      ,"header":"SpE", "dataType":"43", "rank":1.0
-      ,"expansion":"Incident energy: spectrum energy"
-      ,"x1":[2.1e+6]
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpT", "ifCM":false, "units":"EV"
+      ,"header":"SpT", "dataType":"44", "rank":1.0
+      ,"expansion":"Incident energy: spectrum temperature"
+      ,"x1":[1.42e+6]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"10304004", "isub":4, "compiled":20020823, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10304004", "isub":4, "compiled":20160315, "TransID":"1416", "TransDate":20160615
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(92-U-235(N,F),,SIG,,SPA)/(92-U-238(N,F),,SIG,,SPA)"
-	    ,"c4reac":"((N,F),SIG,,SPA)/((N,F),SIG,,SPA)"
+	,"x4code":{"code":"(92-U-235(N,F),,SIG,,FIS)/(92-U-238(N,F),,SIG,,FIS)"
+	    ,"c4reac":"((N,F),SIG,,FIS)/((N,F),SIG,,FIS)"
 	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"92-U-235(N,F),,SIG,,SPA"
+	    {"code":"92-U-235(N,F),,SIG,,FIS"
 		,"Reac":"N,F"
 		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF6":"SIG"
-		,"SF8":"SPA"
+		,"SF8":"FIS"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }
-	    ,{"code":"92-U-238(N,F),,SIG,,SPA"
+	    ,{"code":"92-U-238(N,F),,SIG,,FIS"
 		,"Reac":"N,F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF6":"SIG"
-		,"SF8":"SPA"
+		,"SF8":"FIS"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160211A", "date":"20160211", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. SF8 changed from SPA to FIS"]
 	}
       ]
     }
@@ -319,12 +352,12 @@
 	 [3.726,0.086]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10304004", "Pointer":" "
- ,"Subent":"10304004", "compiled":20020823
+ ,"Subent":"10304004", "compiled":20160315
  ,"year1":1972, "author1ini":"J.A.", "author1":"Grundl"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpT)"
  ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section]"
- ,"reacode":"(92-U-235(N,F),,SIG,,SPA)/(92-U-238(N,F),,SIG,,SPA)"
+ ,"reacode":"(92-U-235(N,F),,SIG,,FIS)/(92-U-238(N,F),,SIG,,FIS)"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":1
@@ -341,12 +374,12 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.086]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
-    ,"header":"EN-DUMMY", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"43", "rank":1.1
-    ,"expansion":"Incident energy: spectrum energy"
-    ,"com0":2.1
-    ,"com1":2.1e+6}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpT", "ifComm":true , "ifCM":false
+    ,"header":"KT-DUMMY", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"44", "rank":1.1
+    ,"expansion":"Incident energy: spectrum temperature"
+    ,"com0":1.42
+    ,"com1":1.42e+6}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -356,10 +389,10 @@
       ,"expansion":"Data: data"
       ,"y":[3.726]
       ,"dy":[0.086]   }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
-      ,"header":"SpE", "dataType":"43", "rank":1.0
-      ,"expansion":"Incident energy: spectrum energy"
-      ,"x1":[2.1e+6]
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpT", "ifCM":false, "units":"EV"
+      ,"header":"SpT", "dataType":"44", "rank":1.0
+      ,"expansion":"Incident energy: spectrum temperature"
+      ,"x1":[1.42e+6]
    }
  }
 }
