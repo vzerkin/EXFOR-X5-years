@@ -1,9 +1,9 @@
-  {"ENTRY":"14099", "updated":20140822, "TransID":"1403", "TransDate":20150123, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14099", "updated":20160315, "TransID":"1416", "TransDate":20160615, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1952,"a1":"B.E.Watt","r1":"J,PR,87,1037,1952","doi1":"10.1103/PhysRev.87.1037"
    ,"ref":"Jour: Physical Review, Vol.87, p.1037 (1952)"
    ,"title":"Energy spectrum of neutrons from thermal fission of U235"
    ,"x4subents":[
-   {"SUBENT":"14099001", "isub":1, "compiled":20140822, "TransID":"1403", "TransDate":20150123
+   {"SUBENT":"14099001", "isub":1, "compiled":20160315, "TransID":"1416", "TransDate":20160615
     ,"BIB":{
       "AUTHOR":[
 	{"x4pointer":" "
@@ -98,6 +98,11 @@
 		,"Deleted second subentry, 2 MeV neutrons were not"
 		,"measured in this paper."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160315A", "date":"20160315", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. ASSUM replaced by MONIT in sub.3"]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
@@ -115,7 +120,7 @@
    }
   ,{"SUBENT":"14099002", "isub":2, "compiled":20140825, "TransID":"1403", "TransDate":20150123, "nosubent":true 
    }
-  ,{"SUBENT":"14099003", "isub":3, "compiled":20140822, "TransID":"1403", "TransDate":20150123
+  ,{"SUBENT":"14099003", "isub":3, "compiled":20160315, "TransID":"1416", "TransDate":20160615
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -138,9 +143,10 @@
 	    }]}
 	}
       ]
-     ,"ASSUMED":[
+     ,"MONITOR":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::ASSUM,1-H-1(N,EL)1-H-1,,SIG"}
+	,"x4code":{"code":"1-H-1(N,EL)1-H-1,,SIG"
+		,"reaction":"1-H-1(N,EL)1-H-1,,SIG"}
 	}
       ]
      ,"STATUS":[
@@ -157,6 +163,11 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" BP"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160315A", "date":"20160315", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ASSUMED replaced by MONITOR"]
+	}
       ]
     }
     ,"DATA":{"ncols":4, "nrows":14
@@ -170,12 +181,12 @@
       ,{"icol":2, "header":"DATA-ERR", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"ASSUM", "units":"B", "pointer":" "
-	,"headerHelp":"Assumed value, defined under ASSUMED.", "pFlag":"0000000"
+      ,{"icol":3, "header":"MONIT", "units":"B", "pointer":" "
+	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["E"         ,"DATA"      ,"DATA-ERR"  ,"ASSUM"     ]
+	 ["E"         ,"DATA"      ,"DATA-ERR"  ,"MONIT"     ]
 	,["MEV"       ,"ARB-UNITS" ,"ARB-UNITS" ,"B"         ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -195,7 +206,7 @@
 	,[17.22,10,30,0.54]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14099003", "Pointer":" "
- ,"Subent":"14099003", "compiled":20140822
+ ,"Subent":"14099003", "compiled":20160315
  ,"year1":1952, "author1ini":"B.E.", "author1":"Watt"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":5, "MT":18, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
@@ -234,9 +245,9 @@
     ,"dat1":[3.3e+6,4.46e+6,5.68e+6,6.86e+6,7.86e+6,8.97e+6,1.004e+7,1.104e+7,1.216e+7,1.317e+7
 	,1.429e+7,1.5e+7,1.605e+7,1.722e+7]}
   ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
-    ,"header":"ASSUM", "units":"B", "basicUnits":"B"
-    ,"what":"ZZZ", "dataType":"15", "rank":777.0
-    ,"expansion":"Assumed values: assumed"
+    ,"header":"MONIT", "units":"B", "basicUnits":"B"
+    ,"what":"ZZZ", "dataType":"11", "rank":777.0
+    ,"expansion":"Assumed values: monitor"
     ,"dat0":[2.18,1.75,1.48,1.29,1.15,1.03,0.93,0.85,0.78,0.72
 	,0.67,0.64,0.59,0.54]
    ,"dat1eq":true}
