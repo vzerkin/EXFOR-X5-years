@@ -1,9 +1,9 @@
-  {"ENTRY":"14134", "updated":20140917, "TransID":"1403", "TransDate":20150123, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14134", "updated":20160315, "TransID":"1416", "TransDate":20160615, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1952,"a1":"N.Nereson","r1":"J,PR,85,600,1952","doi1":"10.1103/PhysRev.85.600"
    ,"ref":"Jour: Physical Review, Vol.85, Issue.4, p.600 (1952)"
    ,"title":"Fission Neutron Spectrum of 235U"
    ,"x4subents":[
-   {"SUBENT":"14134001", "isub":1, "compiled":20140917, "TransID":"1403", "TransDate":20150123
+   {"SUBENT":"14134001", "isub":1, "compiled":20160315, "TransID":"1416", "TransDate":20160615
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -121,6 +121,11 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" BP"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160315A", "date":"20160315", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. ASSUM replaced by MONIT in sub.2"]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
@@ -136,7 +141,7 @@
       ,"data":[
 	 [0.0253]]}
    }
-  ,{"SUBENT":"14134002", "isub":2, "compiled":20140917, "TransID":"1403", "TransDate":20150123
+  ,{"SUBENT":"14134002", "isub":2, "compiled":20160315, "TransID":"1416", "TransDate":20160615
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -159,9 +164,10 @@
 	,"x4freetext":[" Neutron flux in relative units"]
 	}
       ]
-     ,"ASSUMED":[
+     ,"MONITOR":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::ASSUM,1-H-1(N,EL)1-H-1,,SIG"}
+	,"x4code":{"code":"1-H-1(N,EL)1-H-1,,SIG"
+		,"reaction":"1-H-1(N,EL)1-H-1,,SIG"}
 	}
       ]
      ,"FLAG":[
@@ -180,6 +186,13 @@
 	,"x4freetext":[" Table I, page 602."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160315A", "date":"20160315", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ASSUMED replaced by MONITOR"]
+	}
+      ]
     }
     ,"DATA":{"ncols":5, "nrows":19
       ,"x4headers":[
@@ -192,15 +205,15 @@
       ,{"icol":2, "header":"DATA-ERR", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"ASSUM", "units":"B", "pointer":" "
-	,"headerHelp":"Assumed value, defined under ASSUMED.", "pFlag":"0000000"
+      ,{"icol":3, "header":"MONIT", "units":"B", "pointer":" "
+	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ,{"icol":4, "header":"FLAG", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Flag, defined under FLAG.", "pFlag":"0000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E"         ,"DATA"      ,"DATA-ERR"  ,"ASSUM"     ,"FLAG"      ]
+	 ["E"         ,"DATA"      ,"DATA-ERR"  ,"MONIT"     ,"FLAG"      ]
 	,["MEV"       ,"ARB-UNITS" ,"ARB-UNITS" ,"B"         ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -225,7 +238,7 @@
 	,[7.02,0.45,0.5,1.28,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14134002", "Pointer":" "
- ,"Subent":"14134002", "compiled":20140917
+ ,"Subent":"14134002", "compiled":20160315
  ,"year1":1952, "author1ini":"N.", "author1":"Nereson"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":5, "MT":18, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
@@ -271,9 +284,9 @@
 	,null,null,null,null,null,null,null,null,null]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
-    ,"header":"ASSUM", "units":"B", "basicUnits":"B"
-    ,"what":"ZZZ", "dataType":"15", "rank":777.1
-    ,"expansion":"Assumed values: assumed"
+    ,"header":"MONIT", "units":"B", "basicUnits":"B"
+    ,"what":"ZZZ", "dataType":"11", "rank":777.1
+    ,"expansion":"Assumed values: monitor"
     ,"dat0":[7.15,6.25,5.85,5.35,4.9,4.45,4,3.6,3.2,2.8
 	,2.45,2.18,1.98,1.78,1.63,1.52,1.42,1.33,1.28]
    ,"dat1eq":true}
