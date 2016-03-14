@@ -1,9 +1,9 @@
-  {"ENTRY":"13096", "updated":20061127, "TransID":"1341", "TransDate":20070213, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"13096", "updated":20160315, "TransID":"1416", "TransDate":20160615, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1964,"a1":"D.E.Troutner+","r1":"J,PR,134,B1027,1964"
    ,"ref":"Jour: Physical Review, Vol.134, p.B1027 (1964)"
    ,"title":"Independent fission yield of Sb127"
    ,"x4subents":[
-   {"SUBENT":"13096001", "isub":1, "compiled":20061127, "TransID":"1341", "TransDate":20070213
+   {"SUBENT":"13096001", "isub":1, "compiled":20160315, "TransID":"1416", "TransDate":20160615
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -40,23 +40,43 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Uranium 93% 235U"]
+	,"x4code":{"Nucl":"92-U-235","ENR":0.93}
+	,"x4freetext":[" Uranium 93% 235U, 1 ml solution"
+		," of 100 mu-g U in HNO3 in polyetylene capsule"]
+	}
+      ]
+     ,"METHOD":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}]
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"PROPC", "dict":"DETECTOR", "idict":22,"hlp":"Proportional counter"}]
+	,"x4freetext":[" Flow-type proportional counter"]
+	}
+      ]
+     ,"DECAY-DATA":[
+	{"x4pointer":" "
+	,"x4codes":[{"Nucl":"51-SB-127", "t12":93.0, "t12units":"HR", "t12sec":334800.0
+	, "Radiations":[ {"Type":"B-"}]}]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data uncertainties include standard deviations and"
-		," uncertainties in half-lives and time intervals"]
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" Data uncertainties include standard"
+		," deviations and uncertainties in half-lives and time"
+		," intervals"]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"RIDER"
-		,"flag":"RIDER", "help":"Data converted from file of B.F.Rider"
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Reference 64TRO1"]
+	,"x4freetext":[" Phys.Rev.134,B1027,1964, p.B1029"]
 	}
       ]
      ,"HISTORY":[
@@ -69,6 +89,13 @@
 	,"x4code":{"code":"20061127A", "date":"20061127", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" DR Reference corrected to follow APS format"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160312A", "date":"20160312", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Added information to METHOD, DETECTOR,"
+		," SAMPLE, DECAY-DATA, STATUS."
+		," Corrected isomer assignment in sub.3."]
 	}
       ]
     }
@@ -199,7 +226,7 @@
 }
    ]
    }
-  ,{"SUBENT":"13096003", "isub":3, "compiled":19890518, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"13096003", "isub":3, "compiled":20160315, "TransID":"1416", "TransDate":20160615
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -234,12 +261,20 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Flag":"1", "Nucl":"50-SN-127-G", "t12":4.4, "t12units":"MIN", "t12sec":264.0
-	, "Radiations":[]}]
+	,"x4codes":[{"Flag":"1", "Nucl":"50-SN-127-M", "t12":4.4, "t12units":"MIN", "t12sec":264.0
+	, "Radiations":[ {"Type":"B-"}]}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"Flag":"2", "Nucl":"50-SN-127-M", "t12":2.15, "t12units":"HR", "t12sec":7740.0
-	, "Radiations":[]}]
+	,"x4codes":[{"Flag":"2", "Nucl":"50-SN-127-G", "t12":2.15, "t12units":"HR", "t12sec":7740.0
+	, "Radiations":[ {"Type":"B-"}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160312A", "date":"20160312", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected isomer assignments in DECAY-DATA"
+		," and data table"]
 	}
       ]
     }
@@ -269,11 +304,11 @@
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [50,127,0,0.404,0.024,1]
-	,[50,127,1,0.539,0.021,2]]}
+	 [50,127,1,0.404,0.024,1]
+	,[50,127,0,0.539,0.021,2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"13096003", "Pointer":" "
- ,"Subent":"13096003", "compiled":19890518
+ ,"Subent":"13096003", "compiled":20160315
  ,"year1":1964, "author1ini":"D.E.", "author1":"Troutner"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
@@ -317,7 +352,7 @@
     ,"header":"ISOMER", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"93", "rank":2.1
     ,"expansion":"Isotope/particle identification: isomer"
-    ,"dat0":[0,1]
+    ,"dat0":[1,0]
    ,"dat1eq":true}
   ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"DECAY-FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -342,7 +377,7 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[50127,50127.1]
+      ,"x2":[50127.1,50127]
    }
  }
 }
