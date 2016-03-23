@@ -1,9 +1,9 @@
-  {"ENTRY":"D5004", "updated":20150306, "TransID":"D098", "TransDate":20150429, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
+  {"ENTRY":"D5004", "updated":20160324, "TransID":"D103", "TransDate":20160429, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
    ,"y1":1986,"a1":"I.D.Fedorets+","r1":"J,IZV,50,2016,1986"
    ,"ref":"Jour: Izv. Rossiiskoi Akademii Nauk, Ser.Fiz., Vol.50, p.2016 (1986)"
    ,"title":"Excited states of 49V in (p,ng) reactions"
    ,"x4subents":[
-   {"SUBENT":"D5004001", "isub":1, "compiled":20150306, "TransID":"D098", "TransDate":20150429
+   {"SUBENT":"D5004001", "isub":1, "compiled":20160324, "TransID":"D103", "TransDate":20160429
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -114,6 +114,11 @@
 		,"and in REACTION SF3: G+N -> N."
 		,"Subentry 008 was added (numerical data from"
 		,"C,86KHARKO,,296,1986)"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160323A", "date":"20160323", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. B->MICRO-B in 008."]
 	}
       ]
     }
@@ -997,7 +1002,7 @@
 }
    ]
    }
-  ,{"SUBENT":"D5004008", "isub":8, "compiled":20150306, "TransID":"D098", "TransDate":20150429
+  ,{"SUBENT":"D5004008", "isub":8, "compiled":20160324, "TransID":"D103", "TransDate":20160429
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1036,22 +1041,29 @@
 		,"gamma transition."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160323A", "date":"20160323", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. B->MICRO-B"]
+	}
+      ]
     }
     ,"DATA":{"ncols":3, "nrows":22
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"B", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MICRO-B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"B", "pointer":" "
+	,"unitsHelp":"microbarns","familyCode":"B","convFc":1.0E-6,"basicUnits":"B"}
+      ,{"icol":2, "header":"DATA-ERR", "units":"MICRO-B", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+	,"unitsHelp":"microbarns","familyCode":"B","convFc":1.0E-6,"basicUnits":"B"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
-	,["KEV"       ,"B"         ,"B"         ]
+	,["KEV"       ,"MICRO-B"   ,"MICRO-B"   ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [836,8.3,1.1]
@@ -1078,7 +1090,7 @@
 	,[2578,185.1,12.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D5004008", "Pointer":" "
- ,"Subent":"D5004008", "compiled":20150306
+ ,"Subent":"D5004008", "compiled":20160324
  ,"year1":1986, "author1ini":"I.D.", "author1":"Fedorets"
  ,"zTarg1":22, "targ1":"Ti-49", "proj1":"p", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1089,21 +1101,25 @@
  ,"lx4data":22
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"B", "basicUnits":"B"
+    ,"header":"DATA", "units":"MICRO-B", "basicUnits":"B"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[8.3,19.1,66.3,106.5,118.4,140.1,137.5,199.8,397.7,407.7
 	,152.1,138.5,153.1,167.5,143.9,92.4,90.2,125.2,140.1,177.5
 	,198.7,185.1]
-   ,"dat1eq":true}
+    ,"dat1":[8.3e-6,1.91e-5,6.63e-5,1.065e-4,1.184e-4,1.401e-4,1.375e-4,1.998e-4,3.977e-4,4.077e-4
+	,1.521e-4,1.385e-4,1.531e-4,1.675e-4,1.439e-4,9.24e-5,9.02e-5,1.252e-4,1.401e-4,1.775e-4
+	,1.987e-4,1.851e-4]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MICRO-B", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.1,2.5,3.5,5.1,6.2,5.9,5.1,14.2,21.1,20.1
 	,5.5,5.7,7.1,7.3,7.2,6.2,5.1,7.5,8.1,7.7
 	,11.3,12.5]
-   ,"dat1eq":true}
+    ,"dat1":[1.1e-6,2.5e-6,3.5e-6,5.1e-6,6.2e-6,5.9e-6,5.1e-6,1.42e-5,2.11e-5,2.01e-5
+	,5.5e-6,5.7e-6,7.1e-6,7.3e-6,7.2e-6,6.2e-6,5.1e-6,7.5e-6,8.1e-6,7.7e-6
+	,1.13e-5,1.25e-5]}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -1121,12 +1137,12 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[8.3,19.1,66.3,106.5,118.4,140.1,137.5,199.8,397.7,407.7
-	,152.1,138.5,153.1,167.5,143.9,92.4,90.2,125.2,140.1,177.5
-	,198.7,185.1]
-      ,"dy":[1.1,2.5,3.5,5.1,6.2,5.9,5.1,14.2,21.1,20.1
-	,5.5,5.7,7.1,7.3,7.2,6.2,5.1,7.5,8.1,7.7
-	,11.3,12.5]   }
+      ,"y":[8.3e-6,1.91e-5,6.63e-5,1.065e-4,1.184e-4,1.401e-4,1.375e-4,1.998e-4,3.977e-4,4.077e-4
+	,1.521e-4,1.385e-4,1.531e-4,1.675e-4,1.439e-4,9.24e-5,9.02e-5,1.252e-4,1.401e-4,1.775e-4
+	,1.987e-4,1.851e-4]
+      ,"dy":[1.1e-6,2.5e-6,3.5e-6,5.1e-6,6.2e-6,5.9e-6,5.1e-6,1.42e-5,2.11e-5,2.01e-5
+	,5.5e-6,5.7e-6,7.1e-6,7.3e-6,7.2e-6,6.2e-6,5.1e-6,7.5e-6,8.1e-6,7.7e-6
+	,1.13e-5,1.25e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
