@@ -1,9 +1,9 @@
-  {"ENTRY":"T0038", "updated":19990702, "TransID":"0000", "TransDate":20050926, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
+  {"ENTRY":"T0038", "updated":20160328, "TransID":"C156", "TransDate":20160526, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
    ,"y1":1982,"a1":"M.T.Collins+","r1":"J,PR/C,26,332,1982"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.26, p.332 (1982)"
    ,"title":"Corrections to the 11B(p,gamma0)12C cross section and its implications"
    ,"x4subents":[
-   {"SUBENT":"T0038001", "isub":1, "compiled":19990702, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"T0038001", "isub":1, "compiled":20160328, "TransID":"C156", "TransDate":20160526
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -20,11 +20,11 @@
       ]
      ,"AUTHOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"ini":"M.T.","nam":"COLLINS"}
-	    ,{"ini":"S.","nam":"MANGLOS"}
-	    ,{"ini":"N.R.","nam":"ROBERSON"}
-	    ,{"ini":"A.M.","nam":"SANDORFI"}
-	    ,{"ini":"H.R.","nam":"WELLER"}]
+	,"x4codes":[{"ini":"M.T.","nam":"Collins"}
+	    ,{"ini":"S.","nam":"Manglos"}
+	    ,{"ini":"N.R.","nam":"Roberson"}
+	    ,{"ini":"A.M.","nam":"Sandorfi"}
+	    ,{"ini":"H.R.","nam":"Weller"}]
 	}
       ]
      ,"TITLE":[
@@ -36,9 +36,9 @@
       ]
      ,"MONITOR":[
 	{"x4pointer":" "
-	,"x4code":{"code":"6-C-12(P,G)7-N-13,PAR,DA,,,EXP"
-		,"reaction":"6-C-12(P,G)7-N-13,PAR,DA,,,EXP"}
-	,"x4freetext":[" For efficiency of"
+	,"x4code":{"code":"6-C-12(P,G)7-N-13,PAR,DA"
+		,"reaction":"6-C-12(P,G)7-N-13,PAR,DA"}
+	,"x4freetext":[" For efficiency of the"
 		," detector system."]
 	}
       ]
@@ -54,10 +54,16 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" Converted from F0213 by VNIIEF (SD)."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160325A", "date":"20160325", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Error headings and SAMPLE coding"
+		," updated. Numerical data correction in sub.2."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"T0038002", "isub":2, "compiled":19990604, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"T0038002", "isub":2, "compiled":20160328, "TransID":"C156", "TransDate":20160526
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -87,10 +93,10 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Target of 11B, 98.6% isotopically enriched,"
-		," evaporated onto a Ta backing, sample thickness"
-		," 716+-30 microg/cm**2."]
+	,"x4code":{"Nucl":"5-B-11","ENR":0.986}
+	,"x4freetext":[" Target of 11B, 98.6% isotopically"
+		," enriched, evaporated onto a Ta backing, sample"
+		," thickness 716+-30 microg/cm**2."]
 	}
       ]
      ,"DETECTOR":[
@@ -101,19 +107,9 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"EN-ERR"
-	     ,"headerHelp":"Uncertainty in incident projectile energy"}
-	,"x4freetext":[" Digitizing error"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR1"
-	     ,"headerHelp":"1st data uncertainty, defined under ERR-ANALYS"}
+	,"x4code":{"header":"DATA-ERR", "max":"10."
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Upper limit of overall uncertainty."]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR2"
-	     ,"headerHelp":"2nd data uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" Digitizing error"]
 	}
       ]
      ,"STATUS":[
@@ -124,11 +120,18 @@
 	,"x4freetext":[" Scanned from Fig. 5a"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160325A", "date":"20160325", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. DATA value at 6.96 MeV corrected"]
+	}
+      ]
     }
-    ,"COMMON":{"ncols":5, "nrows":1
+    ,"COMMON":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"EN-ERR", "units":"MEV", "pointer":" "
-	,"headerHelp":"Uncertainty in incident projectile energy", "pFlag":"9110000"
+       {"icol":0, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
+	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"ANG", "units":"ADEG", "pointer":" "
 	,"headerHelp":"Angle, laboratory system", "pFlag":"1000000"
@@ -136,19 +139,16 @@
       ,{"icol":2, "header":"E-LVL", "units":"MEV", "pointer":" "
 	,"headerHelp":"Level energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":3, "header":"DATA-ERR1", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"1st data uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
-      ,{"icol":4, "header":"DATA-ERR2", "units":"MU-B/SR", "pointer":" "
-	,"headerHelp":"2nd data uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
+      ,{"icol":3, "header":"ERR-DIG", "units":"MU-B/SR", "pointer":" "
+	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
 	,"unitsHelp":"microbarns per steradian","familyCode":"DA","convFc":1.0E-6,"basicUnits":"B/SR"}
       ]
       ,"datacols":[
-	 ["EN-ERR"    ,"ANG"       ,"E-LVL"     ,"DATA-ERR1" ,"DATA-ERR2" ]
-	,["MEV"       ,"ADEG"      ,"MEV"       ,"PER-CENT"  ,"MU-B/SR"   ]
-	,[" "         ," "         ," "         ," "         ," "         ]]
+	 ["EN-ERR-DIG","ANG"       ,"E-LVL"     ,"ERR-DIG"   ]
+	,["MEV"       ,"ADEG"      ,"MEV"       ,"MU-B/SR"   ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [0.04,90,0,10,0.06]]}
+	 [0.04,90,0,0.06]]}
     ,"DATA":{"ncols":2, "nrows":7
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -165,20 +165,23 @@
       ,"data":[
 	 [4.99,4.25]
 	,[5.98,7.72]
-	,[6.96,0.115]
+	,[6.96,11.5]
 	,[8.02,9.49]
 	,[9.98,3.88]
 	,[12,1.92]
 	,[14,1.03]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"T0038002", "Pointer":" "
- ,"Subent":"T0038002", "compiled":19990604
+ ,"Subent":"T0038002", "compiled":20160328
  ,"year1":1982, "author1ini":"M.T.", "author1":"Collins"
  ,"zTarg1":5, "targ1":"B-11", "proj1":"p", "emis1":"G", "MF":4, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
  ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
  ,"reacode":"5-B-11(P,G)6-C-12,PAR,DA"
- ,"compNotes":[]
+ ,"compNotes":["ERR-ANALYS:(DATA-ERR,,10.)    ADDED AS COMMON:DATA-ERR,PER-CENT=5.0%"
+	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"
+	,"Ignored column:ERR-DIG,B/SR (digitizing error)"
+	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
  ,"wx4data":7
  ,"lx4data":7
  ,"x4data":[
@@ -186,16 +189,16 @@
     ,"header":"DATA", "units":"MU-B/SR", "basicUnits":"B/SR"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[4.25,7.72,0.115,9.49,3.88,1.92,1.03]
-    ,"dat1":[4.25e-6,7.72e-6,1.15e-7,9.49e-6,3.88e-6,1.92e-6,1.03e-6]}
+    ,"dat0":[4.25,7.72,11.5,9.49,3.88,1.92,1.03]
+    ,"dat1":[4.25e-6,7.72e-6,1.15e-5,9.49e-6,3.88e-6,1.92e-6,1.03e-6]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR1", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"com0":10
-    ,"com1":10}
+    ,"com0":5
+    ,"com1":5}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR2", "units":"MU-B/SR", "basicUnits":"B/SR"
+    ,"header":"ERR-DIG", "units":"MU-B/SR", "basicUnits":"B/SR"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":0.06
@@ -207,8 +210,8 @@
     ,"dat0":[4.99,5.98,6.96,8.02,9.98,12,14]
     ,"dat1":[4.99e+6,5.98e+6,6.96e+6,8.02e+6,9.98e+6,1.2e+7,1.4e+7]}
   ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
+    ,"header":"EN-ERR-DIG", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.pErr+-", "dataType":"41", "rank":1.955
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.04
     ,"com1":4.0e+4}
@@ -231,14 +234,14 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[4.25e-6,7.72e-6,1.15e-7,9.49e-6,3.88e-6,1.92e-6,1.03e-6]
-      ,"dy":[4.29214e-7,7.74328e-7,6.10921e-8,9.50895e-7,3.92612e-7,2.01157e-7,1.19202e-7]
-      ,"dysys":[4.29214e-7,7.74328e-7,6.10921e-8,9.50895e-7,3.92612e-7,2.01157e-7,1.19202e-7]   }
+      ,"y":[4.25e-6,7.72e-6,1.15e-5,9.49e-6,3.88e-6,1.92e-6,1.03e-6]
+      ,"dy":[2.125e-7,3.86e-7,5.75e-7,4.745e-7,1.94e-7,9.6e-8,5.15e-8]
+      ,"dysys":[2.125e-7,3.86e-7,5.75e-7,4.745e-7,1.94e-7,9.6e-8,5.15e-8]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[4.99e+6,5.98e+6,6.96e+6,8.02e+6,9.98e+6,1.2e+7,1.4e+7]
-      ,"dx1":[4.0e+4,4.0e+4,4.0e+4,4.0e+4,4.0e+4,4.0e+4,4.0e+4]   }
+   }
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
       ,"header":"LVL", "dataType":"52", "rank":2.0
       ,"expansion":"Secondary energy: level energy"
@@ -253,7 +256,7 @@
 }
    ]
    }
-  ,{"SUBENT":"T0038003", "isub":3, "compiled":19990604, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"T0038003", "isub":3, "compiled":20160328, "TransID":"C156", "TransDate":20160526
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -283,10 +286,10 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Targets prepared by evaporating 98.05% enriched 11B"
-		," to provide self--supporting foils of thickness"
-		," 480+-30 microg/cm**2."]
+	,"x4code":{"Nucl":"5-B-11","ENR":0.9805}
+	,"x4freetext":[" Targets prepared by evaporating"
+		," 98.05% enriched 11B to provide self--supporting foils"
+		," of thickness 480+-30 microg/cm**2."]
 	}
       ]
      ,"DETECTOR":[
@@ -298,19 +301,9 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"EN-ERR"
-	     ,"headerHelp":"Uncertainty in incident projectile energy"}
-	,"x4freetext":[" Digitizing error"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR1"
-	     ,"headerHelp":"1st data uncertainty, defined under ERR-ANALYS"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Overall uncertainty."]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR2"
-	     ,"headerHelp":"2nd data uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" Digitizing error"]
 	}
       ]
      ,"STATUS":[
@@ -324,8 +317,8 @@
     }
     ,"COMMON":{"ncols":5, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"EN-ERR", "units":"MEV", "pointer":" "
-	,"headerHelp":"Uncertainty in incident projectile energy", "pFlag":"9110000"
+       {"icol":0, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
+	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"ANG", "units":"ADEG", "pointer":" "
 	,"headerHelp":"Angle, laboratory system", "pFlag":"1000000"
@@ -333,15 +326,15 @@
       ,{"icol":2, "header":"E-LVL", "units":"MEV", "pointer":" "
 	,"headerHelp":"Level energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":3, "header":"DATA-ERR1", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"1st data uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
+      ,{"icol":3, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
-      ,{"icol":4, "header":"DATA-ERR2", "units":"MU-B/SR", "pointer":" "
-	,"headerHelp":"2nd data uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
+      ,{"icol":4, "header":"ERR-DIG", "units":"MU-B/SR", "pointer":" "
+	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
 	,"unitsHelp":"microbarns per steradian","familyCode":"DA","convFc":1.0E-6,"basicUnits":"B/SR"}
       ]
       ,"datacols":[
-	 ["EN-ERR"    ,"ANG"       ,"E-LVL"     ,"DATA-ERR1" ,"DATA-ERR2" ]
+	 ["EN-ERR-DIG","ANG"       ,"E-LVL"     ,"DATA-ERR"  ,"ERR-DIG"   ]
 	,["MEV"       ,"ADEG"      ,"MEV"       ,"PER-CENT"  ,"MU-B/SR"   ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -371,13 +364,15 @@
 	,[14,1.38]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"T0038003", "Pointer":" "
- ,"Subent":"T0038003", "compiled":19990604
+ ,"Subent":"T0038003", "compiled":20160328
  ,"year1":1982, "author1ini":"M.T.", "author1":"Collins"
  ,"zTarg1":5, "targ1":"B-11", "proj1":"p", "emis1":"G", "MF":4, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
  ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
  ,"reacode":"5-B-11(P,G)6-C-12,PAR,DA"
- ,"compNotes":[]
+ ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"
+	,"Ignored column:ERR-DIG,B/SR (digitizing error)"
+	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
  ,"wx4data":7
  ,"lx4data":9
  ,"x4data":[
@@ -388,13 +383,13 @@
     ,"dat0":[13.2,10.7,8.51,5.13,4.15,3.88,3.53,1.92,1.38]
     ,"dat1":[1.32e-5,1.07e-5,8.51e-6,5.13e-6,4.15e-6,3.88e-6,3.53e-6,1.92e-6,1.38e-6]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR1", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"com0":10
     ,"com1":10}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR2", "units":"MU-B/SR", "basicUnits":"B/SR"
+    ,"header":"ERR-DIG", "units":"MU-B/SR", "basicUnits":"B/SR"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":0.06
@@ -406,8 +401,8 @@
     ,"dat0":[7.18,7.95,8.44,8.92,9.42,9.98,11,12,14]
     ,"dat1":[7.18e+6,7.95e+6,8.44e+6,8.92e+6,9.42e+6,9.98e+6,1.1e+7,1.2e+7,1.4e+7]}
   ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
+    ,"header":"EN-ERR-DIG", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.pErr+-", "dataType":"41", "rank":1.955
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.04
     ,"com1":4.0e+4}
@@ -431,13 +426,13 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[1.32e-5,1.07e-5,8.51e-6,5.13e-6,4.15e-6,3.88e-6,3.53e-6,1.92e-6,1.38e-6]
-      ,"dy":[1.32136e-6,1.07168e-6,8.53113e-7,5.16497e-7,4.19315e-7,3.92612e-7,3.58063e-7,2.01157e-7,1.50479e-7]
-      ,"dysys":[1.32136e-6,1.07168e-6,8.53113e-7,5.16497e-7,4.19315e-7,3.92612e-7,3.58063e-7,2.01157e-7,1.50479e-7]   }
+      ,"dy":[1.32e-6,1.07e-6,8.51e-7,5.13e-7,4.15e-7,3.88e-7,3.53e-7,1.92e-7,1.38e-7]
+      ,"dysys":[1.32e-6,1.07e-6,8.51e-7,5.13e-7,4.15e-7,3.88e-7,3.53e-7,1.92e-7,1.38e-7]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[7.18e+6,7.95e+6,8.44e+6,8.92e+6,9.42e+6,9.98e+6,1.1e+7,1.2e+7,1.4e+7]
-      ,"dx1":[4.0e+4,4.0e+4,4.0e+4,4.0e+4,4.0e+4,4.0e+4,4.0e+4,4.0e+4,4.0e+4]   }
+   }
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
       ,"header":"LVL", "dataType":"52", "rank":2.0
       ,"expansion":"Secondary energy: level energy"
@@ -452,7 +447,7 @@
 }
    ]
    }
-  ,{"SUBENT":"T0038004", "isub":4, "compiled":19990604, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"T0038004", "isub":4, "compiled":20160328, "TransID":"C156", "TransDate":20160526
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -480,19 +475,16 @@
 	,"x4code":null
 	,"x4freetext":["The total cross section was constructed from the"
 		,"proposed result in SUBENT 002 and the a2 and a4 angular"
-		,"distribution coefficients of (ALLAS+,J,NP,58,122,1964)."]
+		,"distribution coefficients of Allas et al.,NP 58,122"]
 	}
       ]
-     ,"ERR-ANALYS":[
+     ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4code":{"header":"EN-ERR"
-	     ,"headerHelp":"Uncertainty in incident projectile energy"}
-	,"x4freetext":[" Digitizing error"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
-	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" Digitizing error"]
+	,"x4codes":[{"code":"R,F0344001,R.G.Allas+,J,NP,58,122,1964"
+		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
+		,"subent":"F0344001","author1":"R.G.Allas+","stdFileName":"J,NP,58,122,1964"
+		,"year":1964,"typ":"J","ref":"J,NP","vol":"58","p":"122"
+		,"shortRef":"Jour: Nuclear Physics, Vol.58, p.122 (1964)"}]
 	}
       ]
      ,"STATUS":[
@@ -512,18 +504,18 @@
     }
     ,"COMMON":{"ncols":3, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"EN-ERR", "units":"MEV", "pointer":" "
-	,"headerHelp":"Uncertainty in incident projectile energy", "pFlag":"9110000"
+       {"icol":0, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
+	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"E-LVL", "units":"MEV", "pointer":" "
 	,"headerHelp":"Level energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"ERR-DIG", "units":"MB", "pointer":" "
+	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN-ERR"    ,"E-LVL"     ,"DATA-ERR"  ]
+	 ["EN-ERR-DIG","E-LVL"     ,"ERR-DIG"   ]
 	,["MEV"       ,"MEV"       ,"MB"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -644,13 +636,14 @@
 	,[13.83,9]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"T0038004", "Pointer":" "
- ,"Subent":"T0038004", "compiled":19990604
+ ,"Subent":"T0038004", "compiled":20160328
  ,"year1":1982, "author1ini":"M.T.", "author1":"Collins"
  ,"zTarg1":5, "targ1":"B-11", "proj1":"p", "emis1":"G", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
  ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
  ,"reacode":"5-B-11(P,G)6-C-12,PAR,SIG,,,CALC"
- ,"compNotes":["Revised column:DATA-ERR,MB to ERR-SYS,MB"]
+ ,"compNotes":["Ignored column:ERR-DIG,B (digitizing error)"
+	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
  ,"wx4data":5
  ,"lx4data":100
  ,"x4data":[
@@ -679,8 +672,8 @@
 	,1.8e-5,1.8e-5,1.8e-5,1.8e-5,1.8e-5,1.8e-5,1.8e-5,1.8e-5,1.8e-5,1.7e-5
 	,1.7e-5,1.7e-5,1.6e-5,1.5e-5,1.4e-5,1.3e-5,1.2e-5,1.1e-5,1.0e-5,9.0e-6]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"header":"ERR-DIG", "units":"MB", "basicUnits":"B"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":0.001
     ,"com1":1.0e-6}
@@ -709,8 +702,8 @@
 	,1.196e+7,1.205e+7,1.215e+7,1.225e+7,1.235e+7,1.245e+7,1.255e+7,1.265e+7,1.275e+7,1.285e+7
 	,1.294e+7,1.304e+7,1.314e+7,1.324e+7,1.334e+7,1.344e+7,1.354e+7,1.364e+7,1.373e+7,1.383e+7]}
   ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
+    ,"header":"EN-ERR-DIG", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.pErr+-", "dataType":"41", "rank":1.955
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.05
     ,"com1":5.0e+4}
@@ -737,26 +730,7 @@
 	,3.3e-5,3.0e-5,2.9e-5,2.9e-5,2.8e-5,2.7e-5,2.6e-5,2.4e-5,2.2e-5,2.0e-5
 	,1.8e-5,1.8e-5,1.8e-5,1.8e-5,1.8e-5,1.8e-5,1.8e-5,1.8e-5,1.8e-5,1.7e-5
 	,1.7e-5,1.7e-5,1.6e-5,1.5e-5,1.4e-5,1.3e-5,1.2e-5,1.1e-5,1.0e-5,9.0e-6]
-      ,"dy":[1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6]
-      ,"dysys":[1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6
-	,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6,1.0e-6]   }
+   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -770,16 +744,7 @@
 	,1.097e+7,1.107e+7,1.117e+7,1.126e+7,1.136e+7,1.146e+7,1.156e+7,1.166e+7,1.176e+7,1.186e+7
 	,1.196e+7,1.205e+7,1.215e+7,1.225e+7,1.235e+7,1.245e+7,1.255e+7,1.265e+7,1.275e+7,1.285e+7
 	,1.294e+7,1.304e+7,1.314e+7,1.324e+7,1.334e+7,1.344e+7,1.354e+7,1.364e+7,1.373e+7,1.383e+7]
-      ,"dx1":[5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4
-	,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4
-	,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4
-	,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4
-	,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4
-	,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4
-	,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4
-	,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4
-	,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4
-	,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4,5.0e+4]   }
+   }
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
       ,"header":"LVL", "dataType":"52", "rank":2.0
       ,"expansion":"Secondary energy: level energy"
@@ -798,7 +763,7 @@
 }
    ]
    }
-  ,{"SUBENT":"T0038005", "isub":5, "compiled":19990604, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"T0038005", "isub":5, "compiled":20160328, "TransID":"C156", "TransDate":20160526
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -828,10 +793,10 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["11B target (98.6% isotopically enriched) evaporated"
-		," onto a Ta backing, sample thickness 716+-30"
-		," microg/cm**2."]
+	,"x4code":{"Nucl":"5-B-11","ENR":0.986}
+	,"x4freetext":[" Target of 11B, 98.6% isotopically"
+		," enriched, evaporated onto a Ta backing, sample"
+		," thickness 716+-30 microg/cm**2."]
 	}
       ]
      ,"DETECTOR":[
@@ -842,19 +807,9 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"EN-ERR"
-	     ,"headerHelp":"Uncertainty in incident projectile energy"}
-	,"x4freetext":[" Digitizing error"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR1"
-	     ,"headerHelp":"1st data uncertainty, defined under ERR-ANALYS"}
+	,"x4code":{"header":"DATA-ERR", "max":"10."
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Upper limit of overall uncertainty."]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR2"
-	     ,"headerHelp":"2nd data uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" Digitizing error"]
 	}
       ]
      ,"STATUS":[
@@ -866,10 +821,10 @@
 	}
       ]
     }
-    ,"COMMON":{"ncols":5, "nrows":1
+    ,"COMMON":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"EN-ERR", "units":"MEV", "pointer":" "
-	,"headerHelp":"Uncertainty in incident projectile energy", "pFlag":"9110000"
+       {"icol":0, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
+	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"ANG", "units":"ADEG", "pointer":" "
 	,"headerHelp":"Angle, laboratory system", "pFlag":"1000000"
@@ -877,19 +832,16 @@
       ,{"icol":2, "header":"E-LVL", "units":"MEV", "pointer":" "
 	,"headerHelp":"Level energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":3, "header":"DATA-ERR1", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"1st data uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
-      ,{"icol":4, "header":"DATA-ERR2", "units":"MU-B/SR", "pointer":" "
-	,"headerHelp":"2nd data uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
+      ,{"icol":3, "header":"ERR-DIG", "units":"MU-B/SR", "pointer":" "
+	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
 	,"unitsHelp":"microbarns per steradian","familyCode":"DA","convFc":1.0E-6,"basicUnits":"B/SR"}
       ]
       ,"datacols":[
-	 ["EN-ERR"    ,"ANG"       ,"E-LVL"     ,"DATA-ERR1" ,"DATA-ERR2" ]
-	,["MEV"       ,"ADEG"      ,"MEV"       ,"PER-CENT"  ,"MU-B/SR"   ]
-	,[" "         ," "         ," "         ," "         ," "         ]]
+	 ["EN-ERR-DIG","ANG"       ,"E-LVL"     ,"ERR-DIG"   ]
+	,["MEV"       ,"ADEG"      ,"MEV"       ,"MU-B/SR"   ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [0.02,90,4.44,10,0.07]]}
+	 [0.02,90,4.44,0.07]]}
     ,"DATA":{"ncols":2, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -914,13 +866,16 @@
 	,[13.98,2.33]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"T0038005", "Pointer":" "
- ,"Subent":"T0038005", "compiled":19990604
+ ,"Subent":"T0038005", "compiled":20160328
  ,"year1":1982, "author1ini":"M.T.", "author1":"Collins"
  ,"zTarg1":5, "targ1":"B-11", "proj1":"p", "emis1":"G", "MF":4, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
  ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
  ,"reacode":"5-B-11(P,G)6-C-12,PAR,DA"
- ,"compNotes":[]
+ ,"compNotes":["ERR-ANALYS:(DATA-ERR,,10.)    ADDED AS COMMON:DATA-ERR,PER-CENT=5.0%"
+	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"
+	,"Ignored column:ERR-DIG,B/SR (digitizing error)"
+	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
  ,"wx4data":7
  ,"lx4data":8
  ,"x4data":[
@@ -931,13 +886,13 @@
     ,"dat0":[2.83,2.09,3.04,2.67,3.87,5.04,4.65,2.33]
     ,"dat1":[2.83e-6,2.09e-6,3.04e-6,2.67e-6,3.87e-6,5.04e-6,4.65e-6,2.33e-6]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR1", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"com0":10
-    ,"com1":10}
+    ,"com0":5
+    ,"com1":5}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR2", "units":"MU-B/SR", "basicUnits":"B/SR"
+    ,"header":"ERR-DIG", "units":"MU-B/SR", "basicUnits":"B/SR"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":0.07
@@ -949,8 +904,8 @@
     ,"dat0":[4.91,5.98,6.88,7.24,7.96,9.93,12.02,13.98]
     ,"dat1":[4.91e+6,5.98e+6,6.88e+6,7.24e+6,7.96e+6,9.93e+6,1.202e+7,1.398e+7]}
   ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
+    ,"header":"EN-ERR-DIG", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.pErr+-", "dataType":"41", "rank":1.955
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.02
     ,"com1":2.0e+4}
@@ -974,13 +929,13 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[2.83e-6,2.09e-6,3.04e-6,2.67e-6,3.87e-6,5.04e-6,4.65e-6,2.33e-6]
-      ,"dy":[2.91529e-7,2.20411e-7,3.11955e-7,2.76024e-7,3.9328e-7,5.08838e-7,4.70239e-7,2.43288e-7]
-      ,"dysys":[2.91529e-7,2.20411e-7,3.11955e-7,2.76024e-7,3.9328e-7,5.08838e-7,4.70239e-7,2.43288e-7]   }
+      ,"dy":[1.415e-7,1.045e-7,1.52e-7,1.335e-7,1.935e-7,2.52e-7,2.325e-7,1.165e-7]
+      ,"dysys":[1.415e-7,1.045e-7,1.52e-7,1.335e-7,1.935e-7,2.52e-7,2.325e-7,1.165e-7]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[4.91e+6,5.98e+6,6.88e+6,7.24e+6,7.96e+6,9.93e+6,1.202e+7,1.398e+7]
-      ,"dx1":[2.0e+4,2.0e+4,2.0e+4,2.0e+4,2.0e+4,2.0e+4,2.0e+4,2.0e+4]   }
+   }
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
       ,"header":"LVL", "dataType":"52", "rank":2.0
       ,"expansion":"Secondary energy: level energy"
@@ -995,7 +950,7 @@
 }
    ]
    }
-  ,{"SUBENT":"T0038006", "isub":6, "compiled":19990604, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"T0038006", "isub":6, "compiled":20160328, "TransID":"C156", "TransDate":20160526
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1025,10 +980,10 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Targets prepared by evaporating 98.05% enriched 11B"
-		," to provide self--supporting foils of thickness"
-		," 480+-30 microg/cm**2."]
+	,"x4code":{"Nucl":"5-B-11","ENR":0.9805}
+	,"x4freetext":[" Targets prepared by evaporating"
+		," 98.05% enriched 11B to provide self--supporting foils"
+		," of thickness 480+-30 microg/cm**2."]
 	}
       ]
      ,"DETECTOR":[
@@ -1040,19 +995,9 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"EN-ERR"
-	     ,"headerHelp":"Uncertainty in incident projectile energy"}
-	,"x4freetext":[" Digitizing error"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR1"
-	     ,"headerHelp":"1st data uncertainty, defined under ERR-ANALYS"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Overall uncertainty."]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR2"
-	     ,"headerHelp":"2nd data uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" Digitizing error."]
 	}
       ]
      ,"STATUS":[
@@ -1066,8 +1011,8 @@
     }
     ,"COMMON":{"ncols":5, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"EN-ERR", "units":"MEV", "pointer":" "
-	,"headerHelp":"Uncertainty in incident projectile energy", "pFlag":"9110000"
+       {"icol":0, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
+	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"ANG", "units":"ADEG", "pointer":" "
 	,"headerHelp":"Angle, laboratory system", "pFlag":"1000000"
@@ -1075,15 +1020,15 @@
       ,{"icol":2, "header":"E-LVL", "units":"MEV", "pointer":" "
 	,"headerHelp":"Level energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":3, "header":"DATA-ERR1", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"1st data uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
+      ,{"icol":3, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
-      ,{"icol":4, "header":"DATA-ERR2", "units":"MU-B/SR", "pointer":" "
-	,"headerHelp":"2nd data uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
+      ,{"icol":4, "header":"ERR-DIG", "units":"MU-B/SR", "pointer":" "
+	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
 	,"unitsHelp":"microbarns per steradian","familyCode":"DA","convFc":1.0E-6,"basicUnits":"B/SR"}
       ]
       ,"datacols":[
-	 ["EN-ERR"    ,"ANG"       ,"E-LVL"     ,"DATA-ERR1" ,"DATA-ERR2" ]
+	 ["EN-ERR-DIG","ANG"       ,"E-LVL"     ,"DATA-ERR"  ,"ERR-DIG"   ]
 	,["MEV"       ,"ADEG"      ,"MEV"       ,"PER-CENT"  ,"MU-B/SR"   ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1113,13 +1058,15 @@
 	,[13.99,3.05]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"T0038006", "Pointer":" "
- ,"Subent":"T0038006", "compiled":19990604
+ ,"Subent":"T0038006", "compiled":20160328
  ,"year1":1982, "author1ini":"M.T.", "author1":"Collins"
  ,"zTarg1":5, "targ1":"B-11", "proj1":"p", "emis1":"G", "MF":4, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
  ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
  ,"reacode":"5-B-11(P,G)6-C-12,PAR,DA"
- ,"compNotes":[]
+ ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"
+	,"Ignored column:ERR-DIG,B/SR (digitizing error)"
+	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
  ,"wx4data":7
  ,"lx4data":9
  ,"x4data":[
@@ -1130,13 +1077,13 @@
     ,"dat0":[3.88,5.92,5.79,4.82,4.45,7.22,6.24,5.86,3.05]
     ,"dat1":[3.88e-6,5.92e-6,5.79e-6,4.82e-6,4.45e-6,7.22e-6,6.24e-6,5.86e-6,3.05e-6]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR1", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"com0":10
     ,"com1":10}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR2", "units":"MU-B/SR", "basicUnits":"B/SR"
+    ,"header":"ERR-DIG", "units":"MU-B/SR", "basicUnits":"B/SR"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":0.07
@@ -1148,8 +1095,8 @@
     ,"dat0":[7.18,7.85,8.44,8.92,9.51,9.82,10.95,11.91,13.99]
     ,"dat1":[7.18e+6,7.85e+6,8.44e+6,8.92e+6,9.51e+6,9.82e+6,1.095e+7,1.191e+7,1.399e+7]}
   ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
+    ,"header":"EN-ERR-DIG", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.pErr+-", "dataType":"41", "rank":1.955
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.02
     ,"com1":2.0e+4}
@@ -1173,13 +1120,13 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[3.88e-6,5.92e-6,5.79e-6,4.82e-6,4.45e-6,7.22e-6,6.24e-6,5.86e-6,3.05e-6]
-      ,"dy":[3.94264e-7,5.96124e-7,5.83216e-7,4.87056e-7,4.50472e-7,7.25385e-7,6.27914e-7,5.90166e-7,3.1293e-7]
-      ,"dysys":[3.94264e-7,5.96124e-7,5.83216e-7,4.87056e-7,4.50472e-7,7.25385e-7,6.27914e-7,5.90166e-7,3.1293e-7]   }
+      ,"dy":[3.88e-7,5.92e-7,5.79e-7,4.82e-7,4.45e-7,7.22e-7,6.24e-7,5.86e-7,3.05e-7]
+      ,"dysys":[3.88e-7,5.92e-7,5.79e-7,4.82e-7,4.45e-7,7.22e-7,6.24e-7,5.86e-7,3.05e-7]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[7.18e+6,7.85e+6,8.44e+6,8.92e+6,9.51e+6,9.82e+6,1.095e+7,1.191e+7,1.399e+7]
-      ,"dx1":[2.0e+4,2.0e+4,2.0e+4,2.0e+4,2.0e+4,2.0e+4,2.0e+4,2.0e+4,2.0e+4]   }
+   }
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
       ,"header":"LVL", "dataType":"52", "rank":2.0
       ,"expansion":"Secondary energy: level energy"
