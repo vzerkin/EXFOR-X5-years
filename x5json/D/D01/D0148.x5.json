@@ -1,9 +1,9 @@
-  {"ENTRY":"D0148", "updated":20040717, "TransID":"0000", "TransDate":20050926, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"D0148", "updated":20160518, "TransID":"D104", "TransDate":20160629, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":1975,"a1":"D.Comar+","r1":"J,RRL,23,131,1975"
    ,"ref":"Jour: Radiochemical and Radioanalytical Letters, Vol.23, p.131 (1975)"
    ,"title":"Preparation of carrier-free radioactive thallium for medical use"
    ,"x4subents":[
-   {"SUBENT":"D0148001", "isub":1, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"D0148001", "isub":1, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -60,26 +60,45 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" SD"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. In all subents. SF8: DT->(PHY)."
+		,"            Decay data corrected in 005,009,015."]
+	}
       ]
     }
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"TIME-IRRD", "units":"HR", "pointer":" "
+	,"headerHelp":"Irradiation time", "pFlag":"0000000"
+	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
+      ]
+      ,"datacols":[
+	 ["TIME-IRRD" ]
+	,["HR"        ]
+	,[" "         ]]
+      ,"data":[
+	 [1]]}
    }
-  ,{"SUBENT":"D0148002", "isub":2, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148002", "isub":2, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(D,X)81-TL-199,,TTY,,DT"
-	    ,"c4reac":"(D,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(D,X)81-TL-199,,TTY,,EOB"
+	    ,"c4reac":"(D,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(D,X)81-TL-199,,TTY,,DT"
+	    {"code":"80-HG-0(D,X)81-TL-199,,TTY,,EOB"
 		,"Reac":"D,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-199","Prod":{"code":"81-TL-199","nam":"Tl-199","ZA":81199}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -107,10 +126,17 @@
 	,"x4freetext":["The irradiated substances consisted of red mercury"
 		,"oxide containing less than 1 ppm iron, and"
 		,"high-purity (99.999%) metallic mercury. The red oxide"
-		,"was deposited on a scored aluminium plate (groovs"
+		,"was deposited on a scored aluminium plate (grooves"
 		,"1mm wide, 1 mm deep and 0.5 mm apart). About 2 g of"
 		,"powder are packed onto a surface of 40 cm2 then"
-		,"covered with a 10mu-m thick aluminium film."]
+		,"covered with a 10 u-m thick aluminium film."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."]
 	}
       ]
     }
@@ -119,45 +145,82 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [15,410]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148002", "Pointer":" "
- ,"Subent":"D0148002", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"d", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(D,X)81-TL-199,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148002", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"d", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"80-HG-0(D,X)81-TL-199,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[410]
+    ,"dat1":[15.17]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[15]
+    ,"dat1":[1.5e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[15.17]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.5e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D0148003", "isub":3, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148003", "isub":3, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(D,X)81-TL-200,,TTY,,DT"
-	    ,"c4reac":"(D,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(D,X)81-TL-200,,TTY,,EOB"
+	    ,"c4reac":"(D,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(D,X)81-TL-200,,TTY,,DT"
+	    {"code":"80-HG-0(D,X)81-TL-200,,TTY,,EOB"
 		,"Reac":"D,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-200","Prod":{"code":"81-TL-200","nam":"Tl-200","ZA":81200}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -185,10 +248,17 @@
 	,"x4freetext":["The irradiated substances consisted of red mercury"
 		,"oxide containing less than 1 ppm iron, and"
 		,"high-purity (99.999%) metallic mercury. The red oxide"
-		,"was deposited on a scored aluminium plate (groovs"
+		,"was deposited on a scored aluminium plate (grooves"
 		,"1mm wide, 1 mm deep and 0.5 mm apart). About 2 g of"
 		,"powder are packed onto a surface of 40 cm2 then"
-		,"covered with a 10mu-m thick aluminium film."]
+		,"covered with a 10 u-m thick aluminium film."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."]
 	}
       ]
     }
@@ -197,45 +267,82 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [15,233]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148003", "Pointer":" "
- ,"Subent":"D0148003", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"d", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(D,X)81-TL-200,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148003", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"d", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"80-HG-0(D,X)81-TL-200,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[233]
+    ,"dat1":[8.621]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[15]
+    ,"dat1":[1.5e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[8.621]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.5e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D0148004", "isub":4, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148004", "isub":4, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(D,X)81-TL-201,,TTY,,DT"
-	    ,"c4reac":"(D,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(D,X)81-TL-201,,TTY,,EOB"
+	    ,"c4reac":"(D,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(D,X)81-TL-201,,TTY,,DT"
+	    {"code":"80-HG-0(D,X)81-TL-201,,TTY,,EOB"
 		,"Reac":"D,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-201","Prod":{"code":"81-TL-201","nam":"Tl-201","ZA":81201}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -263,10 +370,17 @@
 	,"x4freetext":["The irradiated substances consisted of red mercury"
 		,"oxide containing less than 1 ppm iron, and"
 		,"high-purity (99.999%) metallic mercury. The red oxide"
-		,"was deposited on a scored aluminium plate (groovs"
+		,"was deposited on a scored aluminium plate (grooves"
 		,"1mm wide, 1 mm deep and 0.5 mm apart). About 2 g of"
 		,"powder are packed onto a surface of 40 cm2 then"
-		,"covered with a 10mu-m thick aluminium film."]
+		,"covered with a 10 u-m thick aluminium film."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."]
 	}
       ]
     }
@@ -275,51 +389,88 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [15,84]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148004", "Pointer":" "
- ,"Subent":"D0148004", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"d", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(D,X)81-TL-201,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148004", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"d", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"80-HG-0(D,X)81-TL-201,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[84]
+    ,"dat1":[3.108]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[15]
+    ,"dat1":[1.5e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[3.108]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.5e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D0148005", "isub":5, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148005", "isub":5, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(D,X)81-TL-202,,TTY,,DT"
-	    ,"c4reac":"(D,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(D,X)81-TL-202,,TTY,,EOB"
+	    ,"c4reac":"(D,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(D,X)81-TL-202,,TTY,,DT"
+	    {"code":"80-HG-0(D,X)81-TL-202,,TTY,,EOB"
 		,"Reac":"D,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-202","Prod":{"code":"81-TL-202","nam":"Tl-202","ZA":81202}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"81-TL-201", "t12":12.0, "t12units":"D", "t12sec":1036800.0
+	,"x4codes":[{"Nucl":"81-TL-202", "t12":12.0, "t12units":"D", "t12sec":1036800.0
 	, "Radiations":[]}]
 	}
       ]
@@ -341,10 +492,18 @@
 	,"x4freetext":["The irradiated substances consisted of red mercury"
 		,"oxide containing less than 1 ppm iron, and"
 		,"high-purity (99.999%) metallic mercury. The red oxide"
-		,"was deposited on a scored aluminium plate (groovs"
+		,"was deposited on a scored aluminium plate (grooves"
 		,"1mm wide, 1 mm deep and 0.5 mm apart). About 2 g of"
 		,"powder are packed onto a surface of 40 cm2 then"
-		,"covered with a 10mu-m thick aluminium film."]
+		,"covered with a 10 u-m thick aluminium film."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."
+		,"      Decay data 81-TL-201->81-TL-202"]
 	}
       ]
     }
@@ -353,45 +512,82 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [15,21]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148005", "Pointer":" "
- ,"Subent":"D0148005", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"d", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(D,X)81-TL-202,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148005", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"d", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"80-HG-0(D,X)81-TL-202,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[21]
+    ,"dat1":[0.777]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[15]
+    ,"dat1":[1.5e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.777]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.5e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D0148006", "isub":6, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148006", "isub":6, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(P,X)81-TL-199,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(P,X)81-TL-199,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(P,X)81-TL-199,,TTY,,DT"
+	    {"code":"80-HG-0(P,X)81-TL-199,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-199","Prod":{"code":"81-TL-199","nam":"Tl-199","ZA":81199}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -419,10 +615,17 @@
 	,"x4freetext":["The irradiated substances consisted of red mercury"
 		,"oxide containing less than 1 ppm iron, and"
 		,"high-purity (99.999%) metallic mercury. The red oxide"
-		,"was deposited on a scored aluminium plate (groovs"
+		,"was deposited on a scored aluminium plate (grooves"
 		,"1mm wide, 1 mm deep and 0.5 mm apart). About 2 g of"
 		,"powder are packed onto a surface of 40 cm2 then"
-		,"covered with a 10mu-m thick aluminium film."]
+		,"covered with a 10 u-m thick aluminium film."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."]
 	}
       ]
     }
@@ -431,46 +634,83 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [14,250]
 	,[50,2600]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148006", "Pointer":" "
- ,"Subent":"D0148006", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(P,X)81-TL-199,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148006", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"80-HG-0(P,X)81-TL-199,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":2
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[250,2600]
+    ,"dat1":[9.25,96.2]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[14,50]
+    ,"dat1":[1.4e+7,5.0e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":2
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[9.25,96.2]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.4e+7,5.0e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D0148007", "isub":7, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148007", "isub":7, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(P,X)81-TL-200,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(P,X)81-TL-200,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(P,X)81-TL-200,,TTY,,DT"
+	    {"code":"80-HG-0(P,X)81-TL-200,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-200","Prod":{"code":"81-TL-200","nam":"Tl-200","ZA":81200}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -498,10 +738,17 @@
 	,"x4freetext":["The irradiated substances consisted of red mercury"
 		,"oxide containing less than 1 ppm iron, and"
 		,"high-purity (99.999%) metallic mercury. The red oxide"
-		,"was deposited on a scored aluminium plate (groovs"
+		,"was deposited on a scored aluminium plate (grooves"
 		,"1mm wide, 1 mm deep and 0.5 mm apart). About 2 g of"
 		,"powder are packed onto a surface of 40 cm2 then"
-		,"covered with a 10mu-m thick aluminium film."]
+		,"covered with a 10 u-m thick aluminium film."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."]
 	}
       ]
     }
@@ -510,46 +757,83 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [14,60]
 	,[50,730]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148007", "Pointer":" "
- ,"Subent":"D0148007", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(P,X)81-TL-200,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148007", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"80-HG-0(P,X)81-TL-200,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":2
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[60,730]
+    ,"dat1":[2.22,27.01]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[14,50]
+    ,"dat1":[1.4e+7,5.0e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":2
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[2.22,27.01]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.4e+7,5.0e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D0148008", "isub":8, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148008", "isub":8, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(P,X)81-TL-201,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(P,X)81-TL-201,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(P,X)81-TL-201,,TTY,,DT"
+	    {"code":"80-HG-0(P,X)81-TL-201,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-201","Prod":{"code":"81-TL-201","nam":"Tl-201","ZA":81201}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -577,10 +861,17 @@
 	,"x4freetext":["The irradiated substances consisted of red mercury"
 		,"oxide containing less than 1 ppm iron, and"
 		,"high-purity (99.999%) metallic mercury. The red oxide"
-		,"was deposited on a scored aluminium plate (groovs"
+		,"was deposited on a scored aluminium plate (grooves"
 		,"1mm wide, 1 mm deep and 0.5 mm apart). About 2 g of"
 		,"powder are packed onto a surface of 40 cm2 then"
-		,"covered with a 10mu-m thick aluminium film."]
+		,"covered with a 10 u-m thick aluminium film."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."]
 	}
       ]
     }
@@ -589,52 +880,89 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [14,45]
 	,[50,123]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148008", "Pointer":" "
- ,"Subent":"D0148008", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(P,X)81-TL-201,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148008", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"80-HG-0(P,X)81-TL-201,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":2
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[45,123]
+    ,"dat1":[1.665,4.551]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[14,50]
+    ,"dat1":[1.4e+7,5.0e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":2
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.665,4.551]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.4e+7,5.0e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D0148009", "isub":9, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148009", "isub":9, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(P,X)81-TL-202,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(P,X)81-TL-202,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(P,X)81-TL-202,,TTY,,DT"
+	    {"code":"80-HG-0(P,X)81-TL-202,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-202","Prod":{"code":"81-TL-202","nam":"Tl-202","ZA":81202}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"81-TL-201", "t12":12.0, "t12units":"D", "t12sec":1036800.0
+	,"x4codes":[{"Nucl":"81-TL-202", "t12":12.0, "t12units":"D", "t12sec":1036800.0
 	, "Radiations":[]}]
 	}
       ]
@@ -659,7 +987,15 @@
 		,"was deposited on a scored aluminium plate (groovs"
 		,"1mm wide, 1 mm deep and 0.5 mm apart). About 2 g of"
 		,"powder are packed onto a surface of 40 cm2 then"
-		,"covered with a 10mu-m thick aluminium film."]
+		,"covered with a 10 u-m thick aluminium film."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."
+		,"      Decay data 81-TL-201->81-TL-202"]
 	}
       ]
     }
@@ -668,45 +1004,82 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [50,7.6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148009", "Pointer":" "
- ,"Subent":"D0148009", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(P,X)81-TL-202,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148009", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"80-HG-0(P,X)81-TL-202,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[7.6]
+    ,"dat1":[0.2812]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[50]
+    ,"dat1":[5.0e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.2812]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[5.0e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D0148010", "isub":10, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148010", "isub":10, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(P,X)81-TL-198-M,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(P,X)81-TL-198-M,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(P,X)81-TL-198-M,,TTY,,DT"
+	    {"code":"80-HG-0(P,X)81-TL-198-M,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-198-M","Prod":{"code":"81-TL-198-M","nam":"Tl-198-m","ZA":81198,"ProdM":"M"}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -732,10 +1105,17 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["The mercury metal is placed in a titanium cell of"
-		,"a depth of 3 mm and area of 20cm2, a 20 mu-m titanium"
+		,"a depth of 3 mm and area of 20cm2, a 20 u-m titanium"
 		,"film and a 0.1 mm aliminium film covering the face"
 		,"directed towards the charged particle beam. The purpose"
 		,"of the latter film is to stiffen the former."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."]
 	}
       ]
     }
@@ -744,13 +1124,13 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [14,600]
@@ -758,39 +1138,77 @@
 	,[20,2380]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148010", "Pointer":" "
- ,"Subent":"D0148010", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(P,X)81-TL-198-M,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148010", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"80-HG-0(P,X)81-TL-198-M,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":3
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[600,1400,2380]
+    ,"dat1":[22.2,51.8,88.06]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[14,16,20]
+    ,"dat1":[1.4e+7,1.6e+7,2.0e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":3
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[22.2,51.8,88.06]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.4e+7,1.6e+7,2.0e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D0148011", "isub":11, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148011", "isub":11, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(P,X)81-TL-198,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(P,X)81-TL-198-G,M+,TTY,,EOB"
+	    ,"c4reac":"(P,X)M+,TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(P,X)81-TL-198,,TTY,,DT"
+	    {"code":"80-HG-0(P,X)81-TL-198-G,M+,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"81-TL-198","Prod":{"code":"81-TL-198","nam":"Tl-198","ZA":81198}
+		,"SF4":"81-TL-198-G","Prod":{"code":"81-TL-198-G","nam":"Tl-198-g","ZA":81198,"ProdM":"G"}
+		,"SF5":"M+"
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":"M+,TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"EOB thick target yield, incl.isomeric transition"
 	    }]}
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"81-TL-198", "t12":5.34, "t12units":"HR", "t12sec":19224.0
+	,"x4codes":[{"Nucl":"81-TL-198-G", "t12":5.34, "t12units":"HR", "t12sec":19224.0
 	, "Radiations":[]}]
 	}
       ]
@@ -810,10 +1228,17 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["The mercury metal is placed in a titanium cell of"
-		,"a depth of 3 mm and area of 20cm2, a 20 mu-m titanium"
+		,"a depth of 3 mm and area of 20cm2, a 20 u-m titanium"
 		,"film and a 0.1 mm aliminium film covering the face"
 		,"directed towards the charged particle beam. The purpose"
 		,"of the latter film is to stiffen the former."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."]
 	}
       ]
     }
@@ -822,13 +1247,13 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [14,370]
@@ -836,33 +1261,70 @@
 	,[20,870]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148011", "Pointer":" "
- ,"Subent":"D0148011", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(P,X)81-TL-198,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148011", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"EOB thick target yield, incl.isomeric transition"
+ ,"reacode":"80-HG-0(P,X)81-TL-198-G,M+,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":3
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[370,470,870]
+    ,"dat1":[13.69,17.39,32.19]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[14,16,20]
+    ,"dat1":[1.4e+7,1.6e+7,2.0e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":3
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[13.69,17.39,32.19]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.4e+7,1.6e+7,2.0e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D0148012", "isub":12, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148012", "isub":12, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(P,X)81-TL-199,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(P,X)81-TL-199,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(P,X)81-TL-199,,TTY,,DT"
+	    {"code":"80-HG-0(P,X)81-TL-199,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-199","Prod":{"code":"81-TL-199","nam":"Tl-199","ZA":81199}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -888,10 +1350,17 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["The mercury metal is placed in a titanium cell of"
-		,"a depth of 3 mm and area of 20cm2, a 20 mu-m titanium"
+		,"a depth of 3 mm and area of 20cm2, a 20 u-m titanium"
 		,"film and a 0.1 mm aliminium film covering the face"
 		,"directed towards the charged particle beam. The purpose"
 		,"of the latter film is to stiffen the former."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."]
 	}
       ]
     }
@@ -900,13 +1369,13 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [14,700]
@@ -914,33 +1383,70 @@
 	,[20,2200]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148012", "Pointer":" "
- ,"Subent":"D0148012", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(P,X)81-TL-199,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148012", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"80-HG-0(P,X)81-TL-199,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":3
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[700,1870,2200]
+    ,"dat1":[25.9,69.19,81.4]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[14,16,20]
+    ,"dat1":[1.4e+7,1.6e+7,2.0e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":3
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[25.9,69.19,81.4]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.4e+7,1.6e+7,2.0e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D0148013", "isub":13, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148013", "isub":13, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(P,X)81-TL-200,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(P,X)81-TL-200,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(P,X)81-TL-200,,TTY,,DT"
+	    {"code":"80-HG-0(P,X)81-TL-200,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-200","Prod":{"code":"81-TL-200","nam":"Tl-200","ZA":81200}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -966,10 +1472,17 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["The mercury metal is placed in a titanium cell of"
-		,"a depth of 3 mm and area of 20cm2, a 20 mu-m titanium"
+		,"a depth of 3 mm and area of 20cm2, a 20 u-m titanium"
 		,"film and a 0.1 mm aliminium film covering the face"
 		,"directed towards the charged particle beam. The purpose"
 		,"of the latter film is to stiffen the former."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."]
 	}
       ]
     }
@@ -978,13 +1491,13 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [14,180]
@@ -992,33 +1505,70 @@
 	,[20,350]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148013", "Pointer":" "
- ,"Subent":"D0148013", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(P,X)81-TL-200,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148013", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"80-HG-0(P,X)81-TL-200,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":3
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[180,350,350]
+    ,"dat1":[6.66,12.95,12.95]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[14,16,20]
+    ,"dat1":[1.4e+7,1.6e+7,2.0e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":3
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[6.66,12.95,12.95]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.4e+7,1.6e+7,2.0e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D0148014", "isub":14, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148014", "isub":14, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(P,X)81-TL-201,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(P,X)81-TL-201,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(P,X)81-TL-201,,TTY,,DT"
+	    {"code":"80-HG-0(P,X)81-TL-201,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-201","Prod":{"code":"81-TL-201","nam":"Tl-201","ZA":81201}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -1044,10 +1594,17 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["The mercury metal is placed in a titanium cell of"
-		,"a depth of 3 mm and area of 20cm2, a 20 mu-m titanium"
+		,"a depth of 3 mm and area of 20cm2, a 20 u-m titanium"
 		,"film and a 0.1 mm aliminium film covering the face"
 		,"directed towards the charged particle beam. The purpose"
 		,"of the latter film is to stiffen the former."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."]
 	}
       ]
     }
@@ -1056,13 +1613,13 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [14,160]
@@ -1070,39 +1627,76 @@
 	,[20,290]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148014", "Pointer":" "
- ,"Subent":"D0148014", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(P,X)81-TL-201,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148014", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"80-HG-0(P,X)81-TL-201,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":3
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[160,270,290]
+    ,"dat1":[5.92,9.99,10.73]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[14,16,20]
+    ,"dat1":[1.4e+7,1.6e+7,2.0e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":3
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[5.92,9.99,10.73]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.4e+7,1.6e+7,2.0e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D0148015", "isub":15, "compiled":20040717, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0148015", "isub":15, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"80-HG-0(P,X)81-TL-202,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
+	,"x4code":{"code":"80-HG-0(P,X)81-TL-202,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"80-HG-0(P,X)81-TL-202,,TTY,,DT"
+	    {"code":"80-HG-0(P,X)81-TL-202,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"80-HG-0","Targ":{"code":"80-HG-0","nam":"Hg-0","ZA":80000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-202","Prod":{"code":"81-TL-202","nam":"Tl-202","ZA":81202}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"81-TL-201", "t12":12.0, "t12units":"D", "t12sec":1036800.0
+	,"x4codes":[{"Nucl":"81-TL-202", "t12":12.0, "t12units":"D", "t12sec":1036800.0
 	, "Radiations":[]}]
 	}
       ]
@@ -1122,10 +1716,18 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["The mercury metal is placed in a titanium cell of"
-		,"a depth of 3 mm and area of 20cm2, a 20 mu-m titanium"
+		,"a depth of 3 mm and area of 20cm2, a 20 u-m titanium"
 		,"film and a 0.1 mm aliminium film covering the face"
 		,"directed towards the charged particle beam. The purpose"
 		,"of the latter film is to stiffen the former."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160518A", "date":"20160518", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8: DT->EOB."
+		,"      Decay data 81-TL-201->81-TL-202"]
 	}
       ]
     }
@@ -1134,13 +1736,13 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [14,4.2]
@@ -1148,13 +1750,49 @@
 	,[20,6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0148015", "Pointer":" "
- ,"Subent":"D0148015", "compiled":20040717
-,"year1":1975, "author1ini":"D.", "author1":"Comar"
-, "zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"80-HG-0(P,X)81-TL-202,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0148015", "compiled":20160518
+ ,"year1":1975, "author1ini":"D.", "author1":"Comar"
+ ,"zTarg1":80, "targ1":"Hg-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"80-HG-0(P,X)81-TL-202,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":3
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[4.2,7.6,6]
+    ,"dat1":[0.1554,0.2812,0.222]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[14,16,20]
+    ,"dat1":[1.4e+7,1.6e+7,2.0e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":3
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.1554,0.2812,0.222]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.4e+7,1.6e+7,2.0e+7]
+   }
+ }
 }
    ]
    }
