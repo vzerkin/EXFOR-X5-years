@@ -1,9 +1,9 @@
-  {"ENTRY":"41013", "updated":20080122, "TransID":"4142", "TransDate":20080312, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
+  {"ENTRY":"41013", "updated":20160604, "TransID":"4176", "TransDate":20180119, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
    ,"y1":1988,"a1":"I.D.Alkhazov+","r1":"C,88MITO,,145,1988"
    ,"ref":"Conf: Conf.on Nucl.Data For Sci.and Technol.,Mito 1988, p.145 (1988)"
    ,"title":"New results of absolute cross-section measurements for the heavy nuclide fission induced by fast neutrons"
    ,"x4subents":[
-   {"SUBENT":"41013001", "isub":1, "compiled":20080122, "TransID":"4142", "TransDate":20080312
+   {"SUBENT":"41013001", "isub":1, "compiled":20160604, "TransID":"4176", "TransDate":20180119
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -38,7 +38,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"C,88MITO,,145,198805","stdFileName":"C,88MITO,,145,1988"
+	,"x4codes":[{"code":"C,88MITO,,145,1988","stdFileName":"C,88MITO,,145,1988"
 		,"year":1988,"typ":"C","ref":"C,88MITO"
 		,"shortRef":"Conf: Conf.on Nucl.Data For Sci.and Technol.,Mito 1988, p.145 (1988)"}]
 	,"x4freetext":[" Data are given and also retro-"
@@ -48,14 +48,16 @@
 	,"x4codes":[{"code":"R,INDC(GDR)-037,1985","stdFileName":"R,INDC(GDR)-037,1985"
 		,"year":1985,"typ":"R","ref":"R,INDC(GDR)-","no":"037"
 		,"shortRef":"Rept: Germ.Dem.Rep.report to the I.N.D.C., No.037 (1985)"}]
-	,"x4freetext":[" Experimental details"]
+	,"x4freetext":[" Experim.details"
+		," and data for U-235 measured at Dresden ."
+		," First author C.M.Herbach"]
 	}
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"CCW", "dict":"FACILITY", "idict":18,"hlp":"Cockcroft-Walton accelerator"}
 	    ,{"code":"4RUSRI", "dict":"INSTITUTE", "idict":3,"hlp":"Khlopin Radievij Inst., St.Petersburg, Russia"}]
-	,"x4freetext":[" Cockroft-Walton accelerator"]
+	,"x4freetext":["  Cockroft-Walton accelerator"]
 	}
       ]
      ,"METHOD":[
@@ -102,10 +104,23 @@
 	,"x4freetext":[" M.M. Misprint in ERR-T of Subent.003 was"
 		,"             corrected. Lower-upper case correction."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160604U", "date":"20160604", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: Small correction in Subent 002."
+		,"Ref.INDC(GDR)-037 moved to REL-REF."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170710U", "date":"20170710", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" M.M. Previous correction of SD was"
+		,"checked at CJD. SPSDD was added in Subents 003,004 ."
+		," INDC(GDR)-037 moved to REFERENCE ."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"41013002", "isub":2, "compiled":20080122, "TransID":"4142", "TransDate":20080312
+  ,{"SUBENT":"41013002", "isub":2, "compiled":20160604, "TransID":"4176", "TransDate":20180119
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -128,6 +143,12 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text, page 145 of C,88MITO,,145,1988"]
+	}
+	,{"x4pointer":" "
 	,"x4codes":[{"code":"PRELM"
 		,"flag":"PRELM", "help":"Preliminary data"
 		}]
@@ -148,14 +169,22 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[" (ERR-T) Total error is given"]
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" Total error is given"]
 	}
       ]
      ,"INC-SOURCE":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"D-D", "dict":"INC-SOURCE", "idict":19,"hlp":"2H(d,n)"}]
 	,"x4freetext":["  C-D2 target, thickness 0.4 milligram/cm2"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160604U", "date":"20160604", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: ERR-T -> DATA-ERR."]
 	}
       ]
     }
@@ -167,19 +196,19 @@
       ,{"icol":1, "header":"DATA", "units":"B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":2, "header":"ERR-T", "units":"B", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":2, "header":"DATA-ERR", "units":"B", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"B"         ,"B"         ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [5,0.542,0.011]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41013002", "Pointer":" "
- ,"Subent":"41013002", "compiled":20080122
+ ,"Subent":"41013002", "compiled":20160604
  ,"year1":1988, "author1ini":"I.D.", "author1":"Alkhazov"
  ,"zTarg1":92, "targ1":"U-238", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -196,7 +225,7 @@
     ,"dat0":[0.542]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"B", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.011]
@@ -225,7 +254,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41013003", "isub":3, "compiled":20080122, "TransID":"4142", "TransDate":20080312
+  ,{"SUBENT":"41013003", "isub":3, "compiled":20160604, "TransID":"4176", "TransDate":20180119
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -273,7 +302,14 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 5 of 1st reference."]
+	,"x4freetext":[" Table 5 of C,88MITO,,145,1988"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"SPSDD,41013004"
+		,"flag":"SPSDD", "help":"Data superseded or withdrawn"
+		,"subent":"41013004"
+		}]
+	,"x4freetext":[" Data after additional correction."]
 	}
       ]
      ,"CORRECTION":[
@@ -362,8 +398,8 @@
      ,"COMMENT":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[" Error which are given in the data table are  errors of"
-		,"  correction in the Tables 5 of reference 1"]
+	,"x4freetext":[" Error which are given in the data table are errors of"
+		,"  correction in the Tables 5 of C,88MITO,,145,1988"]
 	}
       ]
     }
@@ -433,7 +469,7 @@
 	,[18.8,1.999,2.25,1.01,0.72,0.72,0.21,0.16,0.78,1.35,0.4,0.12,2.82,1.67,1.73,5.62,0.44]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41013003", "Pointer":" "
- ,"Subent":"41013003", "compiled":20080122
+ ,"Subent":"41013003", "compiled":20160604
  ,"year1":1988, "author1ini":"I.D.", "author1":"Alkhazov"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -565,7 +601,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41013004", "isub":4, "compiled":20080122, "TransID":"4142", "TransDate":20080312
+  ,{"SUBENT":"41013004", "isub":4, "compiled":20160604, "TransID":"4176", "TransDate":20180119
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -595,7 +631,7 @@
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["  Data which are taken from the reference one are"
+	,"x4freetext":["  Data which are taken from C,88MITO,,145,1988 are"
 		,"  marked as new ones"]
 	}
 	,{"x4pointer":" "
@@ -608,7 +644,21 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 5 of 1st reference."]
+	,"x4freetext":[" Table 5 of C,88MITO,,145,1988"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"SPSDD,22304002"
+		,"flag":"SPSDD", "help":"Data superseded or withdrawn"
+		,"subent":"22304002"
+		}]
+	,"x4freetext":[" Data at 4.45, 8.46, 18.8 keV"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"SPSDD,22304006"
+		,"flag":"SPSDD", "help":"Data superseded or withdrawn"
+		,"subent":"22304006"
+		}]
+	,"x4freetext":[" Data at 2.6 , 14.7 keV"]
 	}
       ]
      ,"CORRECTION":[
@@ -681,7 +731,7 @@
 	,[18.8,2.065,2.37,1.02,0.69,3.33]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41013004", "Pointer":" "
- ,"Subent":"41013004", "compiled":20080122
+ ,"Subent":"41013004", "compiled":20160604
  ,"year1":1988, "author1ini":"I.D.", "author1":"Alkhazov"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
