@@ -1,9 +1,9 @@
-  {"ENTRY":"10356", "updated":20021120, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10356", "updated":20160608, "TransID":"1418", "TransDate":20160824, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1973,"a1":"G.N.Salaita+","r1":"J,ANS,16,59,1973"
    ,"ref":"Jour: Transactions of the American Nuclear Society, Vol.16, p.59 (1973)"
    ,"title":"Production Cross Sections of Isomers in As, Y, In, and Hf with 14.8-MeV Neutrons"
    ,"x4subents":[
-   {"SUBENT":"10356001", "isub":1, "compiled":20021120, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"10356001", "isub":1, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -35,6 +35,18 @@
 		," Hf with 14.8-MeV Neutrons"]
 	}
       ]
+     ,"FACILITY":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"VDG", "dict":"FACILITY", "idict":18,"hlp":"Van de Graaff"}
+	    ,{"code":"1USASMU", "dict":"INSTITUTE", "idict":3,"hlp":"Southern Methodist University, Dallas, TX, United States of America"}]
+	,"x4freetext":[" 400 KV Van de Graaff"]
+	}
+      ]
+     ,"INC-SOURCE":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"D-T", "dict":"INC-SOURCE", "idict":19,"hlp":"3H(d,n)"}]
+	}
+      ]
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"ACTIV", "dict":"METHOD", "idict":21,"hlp":"Activation"}]
@@ -55,7 +67,9 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" No information on source of uncertainties."]
+	,"x4freetext":[" Total uncertainty, including systematic and"
+		," statistical error in determining gamma ray yield, and"
+		," error in neutron flux."]
 	}
       ]
      ,"STATUS":[
@@ -64,6 +78,12 @@
 		,"flag":"APRVD", "help":"Approved by author"
 		}]
 	,"x4freetext":[" Approved by author"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 1, Trans.Am.Nucl.Soc.16,59,1973"]
 	}
       ]
      ,"HISTORY":[
@@ -91,6 +111,13 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Converted to new date formats, lower case."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160503A", "date":"20160503", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Added information on FACILITY, STATUS,"
+		,"  INC-SOURCE, ERR-ANALYS, SAMPLE. Corrected reactions"
+		,"  in subs.5,6."]
+	}
       ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
@@ -109,31 +136,38 @@
       ,"data":[
 	 [14.8,0.3]]}
    }
-  ,{"SUBENT":"10356002", "isub":2, "compiled":20021120, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10356002", "isub":2, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"33-AS-75(N,INL)33-AS-75-M,,SIG"
+	,"x4code":{"code":"33-AS-75(N,INL)33-AS-75-L,,SIG"
 	    ,"c4reac":"(N,INL),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":4
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"33-AS-75(N,INL)33-AS-75-M,,SIG"
+	    {"code":"33-AS-75(N,INL)33-AS-75-L,,SIG"
 		,"Reac":"N,INL"
 		,"SF1":"33-AS-75","Targ":{"code":"33-AS-75","nam":"As-75","ZA":33075}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"INL","procHlp":"Inelastic scattering"
-		,"SF4":"33-AS-75-M","Prod":{"code":"33-AS-75-M","nam":"As-75-m","ZA":33075,"ProdM":"M"}
+		,"SF4":"33-AS-75-L","Prod":{"code":"33-AS-75-L","nam":"As-75-l","ZA":33075,"ProdM":"?"}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["High-purity powder in thin-walled plexiglass container,"
+		," 99.5% As"]
+	}
+      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"33-AS-75-M", "t12":17.5, "t12units":"MSEC", "t12sec":0.0175
+	,"x4codes":[{"Nucl":"33-AS-75-L", "t12":17.5, "t12units":"MSEC", "t12sec":0.0175
 	, "Radiations":[ {"Type":"DG", "Energy":[280.4]}
 			,{"Type":"DG", "Energy":[304.8]}]}]
 	}
@@ -163,12 +197,12 @@
 	 [161,13]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10356002", "Pointer":" "
- ,"Subent":"10356002", "compiled":20021120
+ ,"Subent":"10356002", "compiled":20160608
  ,"year1":1973, "author1ini":"G.N.", "author1":"Salaita"
  ,"zTarg1":33, "targ1":"As-75", "proj1":"n", "emis1":"INL", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"33-AS-75(N,INL)33-AS-75-M,,SIG"
+ ,"reacode":"33-AS-75(N,INL)33-AS-75-L,,SIG"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":1
@@ -277,32 +311,46 @@
       ]
     }
    }
-  ,{"SUBENT":"10356005", "isub":5, "compiled":20021120, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10356005", "isub":5, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"49-IN-115(N,2N)49-IN-114-M,,SIG"
+	,"x4code":{"code":"49-IN-115(N,2N)49-IN-114-L,,SIG"
 	    ,"c4reac":"(N,2N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":16
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"49-IN-115(N,2N)49-IN-114-M,,SIG"
+	    {"code":"49-IN-115(N,2N)49-IN-114-L,,SIG"
 		,"Reac":"N,2N"
 		,"SF1":"49-IN-115","Targ":{"code":"49-IN-115","nam":"In-115","ZA":49115}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"2N"
-		,"SF4":"49-IN-114-M","Prod":{"code":"49-IN-114-M","nam":"In-114-m","ZA":49114,"ProdM":"M"}
+		,"SF4":"49-IN-114-L","Prod":{"code":"49-IN-114-L","nam":"In-114-l","ZA":49114,"ProdM":"?"}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["High-purity powder in thin-walled plexiglass container,"
+		," 99.99% In"]
+	}
+      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"49-IN-114-M", "t12":42.5, "t12units":"MSEC", "t12sec":0.0425
+	,"x4codes":[{"Nucl":"49-IN-114-L", "t12":42.55, "t12units":"MSEC", "t12sec":0.04255
 	, "Radiations":[ {"Type":"DG", "Energy":[311.7]}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160503A", "date":"20160503", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Changed isomer code to L, corrected T1/2."]
 	}
       ]
     }
@@ -323,12 +371,12 @@
 	 [703,56]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10356005", "Pointer":" "
- ,"Subent":"10356005", "compiled":20021120
+ ,"Subent":"10356005", "compiled":20160608
  ,"year1":1973, "author1ini":"G.N.", "author1":"Salaita"
  ,"zTarg1":49, "targ1":"In-115", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"49-IN-115(N,2N)49-IN-114-M,,SIG"
+ ,"reacode":"49-IN-115(N,2N)49-IN-114-L,,SIG"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":1
@@ -375,39 +423,38 @@
 }
    ]
    }
-  ,{"SUBENT":"10356006", "isub":6, "compiled":20021120, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10356006", "isub":6, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(72-HF-179(N,2N)72-HF-178-M1,,SIG)+\n(72-HF-178(N,INL)72-HF-178-M1,,SIG)"
-	    ,"c4reac":"((N,2N),SIG)+((N,INL),SIG)"
-	    ,"combi":"a","combiQuant":"Cross section"
-	    ,"MF":503
+	,"x4code":{"code":"72-HF-0(N,X)72-HF-178-M1,,SIG"
+	    ,"c4reac":"(N,X),SIG"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"72-HF-179(N,2N)72-HF-178-M1,,SIG"
-		,"Reac":"N,2N"
-		,"SF1":"72-HF-179","Targ":{"code":"72-HF-179","nam":"Hf-179","ZA":72179}
+	    {"code":"72-HF-0(N,X)72-HF-178-M1,,SIG"
+		,"Reac":"N,X"
+		,"SF1":"72-HF-0","Targ":{"code":"72-HF-0","nam":"Hf-0","ZA":72000}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"2N"
-		,"SF4":"72-HF-178-M1","Prod":{"code":"72-HF-178-M1","nam":"Hf-178-m1","ZA":72178,"ProdM":"M"}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"72-HF-178(N,INL)72-HF-178-M1,,SIG"
-		,"Reac":"N,INL"
-		,"SF1":"72-HF-178","Targ":{"code":"72-HF-178","nam":"Hf-178","ZA":72178}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"INL","procHlp":"Inelastic scattering"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"72-HF-178-M1","Prod":{"code":"72-HF-178-M1","nam":"Hf-178-m1","ZA":72178,"ProdM":"M"}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["High-purity powder in thin-walled plexiglass container,"
+		," 99% HfO2"]
+	}
+      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"72-HF-178-M", "t12":4.0, "t12units":"SEC", "t12sec":4.0
+	,"x4codes":[{"Nucl":"72-HF-178-M1", "t12":4.0, "t12units":"SEC", "t12sec":4.0
 	, "Radiations":[ {"Type":"DG", "Energy":[325.8]}
 			,{"Type":"DG", "Energy":[426.5]}]}]
 	}
@@ -422,6 +469,11 @@
 	,"x4code":{"code":"19860501A", "date":"19860501", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Reaction corrected."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160503A", "date":"20160503", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[". Corrected REACTION to elemental cs."]
 	}
       ]
     }
@@ -442,12 +494,12 @@
 	 [1452,116]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10356006", "Pointer":" "
- ,"Subent":"10356006", "compiled":20021120
+ ,"Subent":"10356006", "compiled":20160608
  ,"year1":1973, "author1ini":"G.N.", "author1":"Salaita"
- ,"zTarg1":72, "targ1":"Hf-179", "proj1":"n", "emis1":"2N", "MF":503, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":72, "targ1":"Hf-0", "proj1":"n", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(72-HF-179(N,2N)72-HF-178-M1,,SIG)+(72-HF-178(N,INL)72-HF-178-M1,,SIG)"
+ ,"reacode":"72-HF-0(N,X)72-HF-178-M1,,SIG"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":1
