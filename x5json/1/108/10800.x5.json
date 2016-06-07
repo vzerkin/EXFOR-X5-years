@@ -1,9 +1,9 @@
-  {"ENTRY":"10800", "updated":20101023, "TransID":"1368", "TransDate":20110111, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10800", "updated":20160608, "TransID":"1418", "TransDate":20160824, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1971,"a1":"T.L.Houk+","r1":"J,PRL,26,1581,1971"
    ,"ref":"Jour: Physical Review Letters, Vol.26, p.1581 (1971)"
    ,"title":"Cross Section of Slow Neutrons on Parahydrogen"
    ,"x4subents":[
-   {"SUBENT":"10800001", "isub":1, "compiled":20101023, "TransID":"1368", "TransDate":20110111
+   {"SUBENT":"10800001", "isub":1, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -74,18 +74,23 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" No information on source of uncertainty."
-		,"Errors in background determination - 0.1%,"
-		,"Errors due to wrong energy neutrons - <0.1%,"
-		,"Pulse height change error - <2.0e-04."]
+	,"x4freetext":[" No complete information on sources of"
+		," uncertainty."]
 	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Data taken from tables in reference."]
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-1"
+	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" Errors in background determination - 0.1%,"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-2", "max":"0.1"
+	     ,"headerHelp":"2nd partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":["Errors due to wrong energy neutrons <0.1%,"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-3", "max":"0.02"
+	     ,"headerHelp":"3rd partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" Pulse height change error - <2.0e-04."]
 	}
       ]
      ,"HISTORY":[
@@ -99,21 +104,39 @@
 	,"x4freetext":[" VM:Updated to new date formats,lower case."
 		,"            BIB update."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160517A", "date":"20160517", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTIONs corrected, ERR-ANALYS and"
+		," STATUS updated."]
+	}
       ]
     }
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
+	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+      ]
+      ,"datacols":[
+	 ["ERR-1"     ]
+	,["PER-CENT"  ]
+	,[" "         ]]
+      ,"data":[
+	 [0.1]]}
    }
-  ,{"SUBENT":"10800002", "isub":2, "compiled":20101023, "TransID":"1368", "TransDate":20110111
+  ,{"SUBENT":"10800002", "isub":2, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"1-H-1(N,THS)1-H-1,COH,AMP,,FCT"
-	    ,"c4reac":"(N,THS)COH,AMP,,FCT"
+	,"x4code":{"code":"1-H-1(N,THS)1-H-1,COH,AMP,,MSC"
+	    ,"c4reac":"(N,THS)COH,AMP,,MSC"
 	    ,"combi":"a"
 	    ,"MF":7
 	    ,"MT":2
 	    ,"Units":"M"
 	    ,"reacs": [
-	    {"code":"1-H-1(N,THS)1-H-1,COH,AMP,,FCT"
+	    {"code":"1-H-1(N,THS)1-H-1,COH,AMP,,MSC"
 		,"Reac":"N,THS"
 		,"SF1":"1-H-1","Targ":{"code":"1-H-1","nam":"H-1","ZA":1001}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -121,10 +144,18 @@
 		,"SF4":"1-H-1","Prod":{"code":"1-H-1","nam":"H-1","ZA":1001}
 		,"SF5":"COH"
 		,"SF6":"AMP"
-		,"SF8":"FCT"
+		,"SF8":"MSC"
 		,"SF58":"COH,AMP","Quant":"L","BasicUnits":"M","QuantHlp":"Coherent scattering length"
 	    }]}
 	,"x4freetext":[" Parahydrogen"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 3, Phys.Rev.Lett.26,1581,1971"]
 	}
       ]
      ,"HISTORY":[
@@ -137,6 +168,11 @@
 	,"x4code":{"code":"19910903A", "date":"19910903", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Reaction corrected"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160517A", "date":"20160517", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Reaction SF8 corrected"]
 	}
       ]
     }
@@ -160,14 +196,15 @@
 	 [0.0253,-3.707,0.008]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10800002", "Pointer":" "
- ,"Subent":"10800002", "compiled":20101023
+ ,"Subent":"10800002", "compiled":20160608
  ,"year1":1971, "author1ini":"T.L.", "author1":"Houk"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"n", "emis1":"THS", "MF":7, "MT":2, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"L", "quant":"L", "quantExpan":"Coherent scattering length"
- ,"reacode":"1-H-1(N,THS)1-H-1,COH,AMP,,FCT"
- ,"compNotes":[]
- ,"wx4data":3
+ ,"reacode":"1-H-1(N,THS)1-H-1,COH,AMP,,MSC"
+ ,"compNotes":["ERR-ANALYS:(ERR-2,,0.1)       ADDED AS COMMON:ERR-2,PER-CENT=0.05%"
+	,"ERR-ANALYS:(ERR-3,,0.02)      ADDED AS COMMON:ERR-3,PER-CENT=0.01%"]
+ ,"wx4data":6
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -182,7 +219,25 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.008]
     ,"dat1":[8.0e-18]}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.1
+    ,"com1":0.1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.05
+    ,"com1":0.05}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.01
+    ,"com1":0.01}
+  ,{"ivar":5, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -196,7 +251,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[-3.707e-15]
-      ,"dy":[8.0e-18]   }
+      ,"dy":[8.0e-18]
+      ,"dysys":[4.1611e-18]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -206,27 +262,35 @@
 }
    ]
    }
-  ,{"SUBENT":"10800003", "isub":3, "compiled":20101023, "TransID":"1368", "TransDate":20110111
+  ,{"SUBENT":"10800003", "isub":3, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"1-H-1(N,TOT),,SIG,,FCT"
-	    ,"c4reac":"(N,TOT),SIG,,FCT"
+	,"x4code":{"code":"1-H-1(N,TOT),,SIG,,MSC"
+	    ,"c4reac":"(N,TOT),SIG,,MSC"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":1
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"1-H-1(N,TOT),,SIG,,FCT"
+	    {"code":"1-H-1(N,TOT),,SIG,,MSC"
 		,"Reac":"N,TOT"
 		,"SF1":"1-H-1","Targ":{"code":"1-H-1","nam":"H-1","ZA":1001}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"TOT","procHlp":"Total"
 		,"SF6":"SIG"
-		,"SF8":"FCT"
+		,"SF8":"MSC"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	,"x4freetext":[" Parahydrogen"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 1, Phys.Rev.Lett.26,1581,1971"]
 	}
       ]
      ,"HISTORY":[
@@ -239,6 +303,11 @@
 	,"x4code":{"code":"19910903A", "date":"19910903", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Reaction corrected"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160517A", "date":"20160517", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Reaction SF8 corrected"]
 	}
       ]
     }
@@ -264,14 +333,15 @@
 	,[0.005,4.365,0.016]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10800003", "Pointer":" "
- ,"Subent":"10800003", "compiled":20101023
+ ,"Subent":"10800003", "compiled":20160608
  ,"year1":1971, "author1ini":"T.L.", "author1":"Houk"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"n", "emis1":"TOT", "MF":3, "MT":1, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"1-H-1(N,TOT),,SIG,,FCT"
- ,"compNotes":[]
- ,"wx4data":3
+ ,"reacode":"1-H-1(N,TOT),,SIG,,MSC"
+ ,"compNotes":["ERR-ANALYS:(ERR-2,,0.1)       ADDED AS COMMON:ERR-2,PER-CENT=0.05%"
+	,"ERR-ANALYS:(ERR-3,,0.02)      ADDED AS COMMON:ERR-3,PER-CENT=0.01%"]
+ ,"wx4data":6
  ,"lx4data":3
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -286,7 +356,25 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.031,0.05,0.016]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.1
+    ,"com1":0.1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.05
+    ,"com1":0.05}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.01
+    ,"com1":0.01}
+  ,{"ivar":5, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -300,7 +388,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[4.663,4.469,4.365]
-      ,"dy":[0.031,0.05,0.016]   }
+      ,"dy":[0.031,0.05,0.016]
+      ,"dysys":[0.0052342,0.00501644,0.0048997]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
