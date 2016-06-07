@@ -1,9 +1,9 @@
-  {"ENTRY":"14041", "updated":20050916, "TransID":"1337", "TransDate":20060111, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14041", "updated":20160608, "TransID":"1418", "TransDate":20160824, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2004,"a1":"N.Fotiades+","r1":"C,2004SANTA,1,898,2004"
    ,"ref":"Conf: Conf.on Nucl.Data for Sci.and Techn., Santa Fe 2004, Vol.1, p.898 (2004)"
    ,"title":"Cross sections for gamma-ray production in the 191Ir(n,xng) reactions"
    ,"x4subents":[
-   {"SUBENT":"14041001", "isub":1, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+   {"SUBENT":"14041001", "isub":1, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -59,10 +59,18 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Thin walled polystyrene capsule, 2.3 cm in diameter"
-		," containing 2.0 grams of Ir metal powder, 98.2 %"
-		," enriched in 191Ir"]
+	,"x4code":{"Nucl":"77-IR-191","ENR":0.982}
+	,"x4freetext":[" Thin walled polystyrene capsule,"
+		,"2.3 cm in diameter containing 2.0 grams of Ir metal"
+		,"powder, 98.2 % enriched in 191Ir"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data received on table from N. Fotiades"]
 	}
       ]
      ,"HISTORY":[
@@ -71,21 +79,26 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION corrected in all subentries"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"14041002", "isub":2, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041002", "isub":2, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(N,INL)77-IR-191-M,PAR,SIG"
-	    ,"c4reac":"(N,INL)PAR,SIG"
+	,"x4code":{"code":"77-IR-191(N,INL)77-IR-191-M,PAR,SIG,G"
+	    ,"c4reac":"(N,INL)PAR,SIG,G"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":51
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-191(N,INL)77-IR-191-M,PAR,SIG"
+	    {"code":"77-IR-191(N,INL)77-IR-191-M,PAR,SIG,G"
 		,"Reac":"N,INL"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -93,7 +106,8 @@
 		,"SF4":"77-IR-191-M","Prod":{"code":"77-IR-191-M","nam":"Ir-191-m","ZA":77191,"ProdM":"M"}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
@@ -105,15 +119,17 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["  Total uncertainty"]
 	}
       ]
-     ,"STATUS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data received on table from N. Fotiades"]
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -152,12 +168,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -218,12 +234,12 @@
 	,[77.38,4.34,25.6204,1.14081]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041002", "Pointer":" "
- ,"Subent":"14041002", "compiled":20050916
+ ,"Subent":"14041002", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
- ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"INL", "MF":3, "MT":51, "nExpectedArgs":2
+ ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"INL", "MF":3, "MT":9000, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-191(N,INL)77-IR-191-M,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-191(N,INL)77-IR-191-M,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":9
  ,"lx4data":55
@@ -245,7 +261,7 @@
 	,0.124966,0.109357,0.107159,0.102128,0.0915508,0.0876267,0.0778745,0.0617326,0.0615731,0.0627594
 	,0.0559963,0.0494171,0.0387784,0.026917,0.0256204]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.23044,1.58265,1.46126,1.37315,1.39034,1.49867,1.53131,1.91615,1.95008,1.9714
@@ -370,17 +386,18 @@
 }
    ]
    }
-  ,{"SUBENT":"14041003", "isub":3, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041003", "isub":3, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(N,3N)77-IR-189,PAR,SIG"
-	    ,"c4reac":"(N,3N)PAR,SIG"
+	,"x4code":{"code":"77-IR-191(N,3N)77-IR-189,PAR,SIG,G"
+	    ,"c4reac":"(N,3N)PAR,SIG,G"
 	    ,"combi":"a"
-	    ,"MF":3
+	    ,"MF":13
+	    ,"MT":17
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-191(N,3N)77-IR-189,PAR,SIG"
+	    {"code":"77-IR-191(N,3N)77-IR-189,PAR,SIG,G"
 		,"Reac":"N,3N"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -388,7 +405,8 @@
 		,"SF4":"77-IR-189","Prod":{"code":"77-IR-189","nam":"Ir-189","ZA":77189}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
@@ -400,15 +418,17 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
-     ,"STATUS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data received on table from N. Fotiades"]
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -447,12 +467,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -479,12 +499,12 @@
 	,[246.33,48.23,10.0865,1.27874]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041003", "Pointer":" "
- ,"Subent":"14041003", "compiled":20050916
+ ,"Subent":"14041003", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
- ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"3N", "MF":3, "MT":0, "nExpectedArgs":2
+ ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"3N", "MF":13, "MT":17, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-191(N,3N)77-IR-189,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-191(N,3N)77-IR-189,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":9
  ,"lx4data":21
@@ -500,7 +520,7 @@
 	,0.139044,0.0966831,0.0733948,0.0614272,0.0497462,0.0386377,0.0394135,0.0278811,0.0151986,0.011184
 	,0.0100865]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.68054,1.69338,1.36728,2.42912,3.89103,4.47775,4.70596,4.79602,4.6631,3.81162
@@ -592,18 +612,18 @@
 }
    ]
    }
-  ,{"SUBENT":"14041004", "isub":4, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041004", "isub":4, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(N,INL)77-IR-191,PAR,SIG"
-	    ,"c4reac":"(N,INL)PAR,SIG"
+	,"x4code":{"code":"77-IR-191(N,INL)77-IR-191,PAR,SIG,G"
+	    ,"c4reac":"(N,INL)PAR,SIG,G"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":51
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-191(N,INL)77-IR-191,PAR,SIG"
+	    {"code":"77-IR-191(N,INL)77-IR-191,PAR,SIG,G"
 		,"Reac":"N,INL"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -611,14 +631,15 @@
 		,"SF4":"77-IR-191","Prod":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
@@ -639,10 +660,12 @@
 		,"              686.4 keV"]
 	}
       ]
-     ,"STATUS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data received on table from N. Fotiades"]
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -693,12 +716,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -763,12 +786,12 @@
 	,[246.33,48.23,23.5119,1.20716]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041004", "Pointer":" "
- ,"Subent":"14041004", "compiled":20050916
+ ,"Subent":"14041004", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
- ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"INL", "MF":3, "MT":51, "nExpectedArgs":2
+ ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"INL", "MF":3, "MT":9000, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-191(N,INL)77-IR-191,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-191(N,INL)77-IR-191,PAR,SIG,G"
  ,"compNotes":["LVL: SELECT SMALLEST AND LARGEST VALUES"]
  ,"wx4data":13
  ,"lx4data":59
@@ -790,7 +813,7 @@
 	,0.251736,0.225532,0.205239,0.201134,0.171897,0.190394,0.160256,0.145272,0.135689,0.129416
 	,0.0964947,0.0993065,0.0842582,0.0748052,0.0669111,0.0467804,0.0369785,0.0283125,0.0235119]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[13.3019,11.8658,11.0646,10.2588,9.51873,9.0956,8.48451,10.7296,10.2825,9.84744
@@ -939,17 +962,18 @@
 }
    ]
    }
-  ,{"SUBENT":"14041005", "isub":5, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041005", "isub":5, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(N,3N)77-IR-189,PAR,SIG"
-	    ,"c4reac":"(N,3N)PAR,SIG"
+	,"x4code":{"code":"77-IR-191(N,3N)77-IR-189,PAR,SIG,G"
+	    ,"c4reac":"(N,3N)PAR,SIG,G"
 	    ,"combi":"a"
-	    ,"MF":3
+	    ,"MF":13
+	    ,"MT":17
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-191(N,3N)77-IR-189,PAR,SIG"
+	    {"code":"77-IR-191(N,3N)77-IR-189,PAR,SIG,G"
 		,"Reac":"N,3N"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -957,14 +981,15 @@
 		,"SF4":"77-IR-189","Prod":{"code":"77-IR-189","nam":"Ir-189","ZA":77189}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
@@ -981,10 +1006,12 @@
 		,"              317.7 keV"]
 	}
       ]
-     ,"STATUS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data received on table from N. Fotiades"]
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -1023,12 +1050,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1062,12 +1089,12 @@
 	,[246.33,48.23,9.90552,1.46909]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041005", "Pointer":" "
- ,"Subent":"14041005", "compiled":20050916
+ ,"Subent":"14041005", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
- ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"3N", "MF":3, "MT":0, "nExpectedArgs":2
+ ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"3N", "MF":13, "MT":17, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-191(N,3N)77-IR-189,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-191(N,3N)77-IR-189,PAR,SIG,G"
  ,"compNotes":["LVL: SELECT SMALLEST AND LARGEST VALUES"]
  ,"wx4data":9
  ,"lx4data":28
@@ -1083,7 +1110,7 @@
 	,0.131936,0.316684,0.495985,0.546521,0.594362,0.538729,0.338164,0.193526,0.145457,0.117299
 	,0.115348,0.107325,0.0898078,0.0762934,0.0390343,0.0279159,0.0207517,0.00990552]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[2.72302,0.81384,0.85104,0.886065,5.44474,5.81348,6.10847,6.32102,6.55988,6.81115
@@ -1175,18 +1202,18 @@
 }
    ]
    }
-  ,{"SUBENT":"14041006", "isub":6, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041006", "isub":6, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-193(N,INL)77-IR-193-M,PAR,SIG"
-	    ,"c4reac":"(N,INL)PAR,SIG"
+	,"x4code":{"code":"77-IR-193(N,INL)77-IR-193-M,PAR,SIG,G"
+	    ,"c4reac":"(N,INL)PAR,SIG,G"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":51
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-193(N,INL)77-IR-193-M,PAR,SIG"
+	    {"code":"77-IR-193(N,INL)77-IR-193-M,PAR,SIG,G"
 		,"Reac":"N,INL"
 		,"SF1":"77-IR-193","Targ":{"code":"77-IR-193","nam":"Ir-193","ZA":77193}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -1194,7 +1221,8 @@
 		,"SF4":"77-IR-193-M","Prod":{"code":"77-IR-193-M","nam":"Ir-193-m","ZA":77193,"ProdM":"M"}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
@@ -1206,15 +1234,17 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["  Total uncertainty"]
 	}
       ]
-     ,"STATUS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data received on table from N. Fotiades"]
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -1253,12 +1283,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1318,12 +1348,12 @@
 	,[69.29,5.96,23.8054,2.7859]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041006", "Pointer":" "
- ,"Subent":"14041006", "compiled":20050916
+ ,"Subent":"14041006", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
- ,"zTarg1":77, "targ1":"Ir-193", "proj1":"n", "emis1":"INL", "MF":3, "MT":51, "nExpectedArgs":2
+ ,"zTarg1":77, "targ1":"Ir-193", "proj1":"n", "emis1":"INL", "MF":3, "MT":9000, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-193(N,INL)77-IR-193-M,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-193(N,INL)77-IR-193-M,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":9
  ,"lx4data":54
@@ -1345,7 +1375,7 @@
 	,0.0903758,0.0741374,0.0846998,0.0900366,0.0866631,0.0658835,0.0687657,0.0469579,0.0464559,0.0379673
 	,0.0339804,0.0349799,0.0283196,0.0238054]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[6.12721,6.2789,8.10408,9.47469,11.1278,13.2896,15.0004,15.0523,17.2943,19.4162
@@ -1470,17 +1500,18 @@
 }
    ]
    }
-  ,{"SUBENT":"14041007", "isub":7, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041007", "isub":7, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-193(N,3N)77-IR-191-M,PAR,SIG"
-	    ,"c4reac":"(N,3N)PAR,SIG"
+	,"x4code":{"code":"77-IR-193(N,3N)77-IR-191-M,PAR,SIG,G"
+	    ,"c4reac":"(N,3N)PAR,SIG,G"
 	    ,"combi":"a"
-	    ,"MF":3
+	    ,"MF":13
+	    ,"MT":17
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-193(N,3N)77-IR-191-M,PAR,SIG"
+	    {"code":"77-IR-193(N,3N)77-IR-191-M,PAR,SIG,G"
 		,"Reac":"N,3N"
 		,"SF1":"77-IR-193","Targ":{"code":"77-IR-193","nam":"Ir-193","ZA":77193}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -1488,7 +1519,8 @@
 		,"SF4":"77-IR-191-M","Prod":{"code":"77-IR-191-M","nam":"Ir-191-m","ZA":77191,"ProdM":"M"}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
@@ -1500,15 +1532,17 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
-     ,"STATUS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data received on table from N. Fotiades"]
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -1547,12 +1581,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1576,12 +1610,12 @@
 	,[69.29,5.96,68.6742,4.4617]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041007", "Pointer":" "
- ,"Subent":"14041007", "compiled":20050916
+ ,"Subent":"14041007", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
- ,"zTarg1":77, "targ1":"Ir-193", "proj1":"n", "emis1":"3N", "MF":3, "MT":0, "nExpectedArgs":2
+ ,"zTarg1":77, "targ1":"Ir-193", "proj1":"n", "emis1":"3N", "MF":13, "MT":17, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-193(N,3N)77-IR-191-M,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-193(N,3N)77-IR-191-M,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":9
  ,"lx4data":18
@@ -1595,7 +1629,7 @@
     ,"dat1":[3.476e-4,0.0020717,0.0125487,0.0171236,0.0300914,0.121678,0.358901,0.600586,0.723139,0.752195
 	,0.624516,0.341805,0.20236,0.134994,0.107633,0.0940348,0.082982,0.0686742]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.7877,2.6018,7.43011,6.98202,8.1825,8.64502,13.8848,20.908,25.4531,27.1927
@@ -1676,18 +1710,18 @@
 }
    ]
    }
-  ,{"SUBENT":"14041008", "isub":8, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041008", "isub":8, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-193(N,INL)77-IR-193,PAR,SIG"
-	    ,"c4reac":"(N,INL)PAR,SIG"
+	,"x4code":{"code":"77-IR-193(N,INL)77-IR-193,PAR,SIG,G"
+	    ,"c4reac":"(N,INL)PAR,SIG,G"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":51
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-193(N,INL)77-IR-193,PAR,SIG"
+	    {"code":"77-IR-193(N,INL)77-IR-193,PAR,SIG,G"
 		,"Reac":"N,INL"
 		,"SF1":"77-IR-193","Targ":{"code":"77-IR-193","nam":"Ir-193","ZA":77193}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -1695,14 +1729,15 @@
 		,"SF4":"77-IR-193","Prod":{"code":"77-IR-193","nam":"Ir-193","ZA":77193}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
@@ -1725,10 +1760,12 @@
 		,"              559.3 keV"]
 	}
       ]
-     ,"STATUS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data received on table from N. Fotiades"]
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -1785,12 +1822,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1850,12 +1887,12 @@
 	,[69.29,5.96,97.363,8.05908]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041008", "Pointer":" "
- ,"Subent":"14041008", "compiled":20050916
+ ,"Subent":"14041008", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
- ,"zTarg1":77, "targ1":"Ir-193", "proj1":"n", "emis1":"INL", "MF":3, "MT":51, "nExpectedArgs":2
+ ,"zTarg1":77, "targ1":"Ir-193", "proj1":"n", "emis1":"INL", "MF":3, "MT":9000, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-193(N,INL)77-IR-193,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-193(N,INL)77-IR-193,PAR,SIG,G"
  ,"compNotes":["LVL: SELECT SMALLEST AND LARGEST VALUES"]
  ,"wx4data":15
  ,"lx4data":54
@@ -1877,7 +1914,7 @@
 	,0.211519,0.156643,0.155848,0.154418,0.151502,0.118097,0.14313,0.114544,0.127184,0.145336
 	,0.128114,0.12112,0.109572,0.097363]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[9.28682,8.79989,8.6915,8.29098,7.99481,7.76608,7.39191,9.35232,9.15949,9.13889
@@ -2038,17 +2075,18 @@
 }
    ]
    }
-  ,{"SUBENT":"14041009", "isub":9, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041009", "isub":9, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-193(N,3N)77-IR-191,PAR,SIG"
-	    ,"c4reac":"(N,3N)PAR,SIG"
+	,"x4code":{"code":"77-IR-193(N,3N)77-IR-191,PAR,SIG,G"
+	    ,"c4reac":"(N,3N)PAR,SIG,G"
 	    ,"combi":"a"
-	    ,"MF":3
+	    ,"MF":13
+	    ,"MT":17
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-193(N,3N)77-IR-191,PAR,SIG"
+	    {"code":"77-IR-193(N,3N)77-IR-191,PAR,SIG,G"
 		,"Reac":"N,3N"
 		,"SF1":"77-IR-193","Targ":{"code":"77-IR-193","nam":"Ir-193","ZA":77193}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -2056,14 +2094,15 @@
 		,"SF4":"77-IR-191","Prod":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
@@ -2080,10 +2119,12 @@
 		,"              351.2 keV"]
 	}
       ]
-     ,"STATUS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data received on table from N. Fotiades"]
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -2122,12 +2163,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -2155,12 +2196,12 @@
 	,[69.29,5.96,29.627,3.8516]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041009", "Pointer":" "
- ,"Subent":"14041009", "compiled":20050916
+ ,"Subent":"14041009", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
- ,"zTarg1":77, "targ1":"Ir-193", "proj1":"n", "emis1":"3N", "MF":3, "MT":0, "nExpectedArgs":2
+ ,"zTarg1":77, "targ1":"Ir-193", "proj1":"n", "emis1":"3N", "MF":13, "MT":17, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-193(N,3N)77-IR-191,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-193(N,3N)77-IR-191,PAR,SIG,G"
  ,"compNotes":["LVL: SELECT SMALLEST AND LARGEST VALUES"]
  ,"wx4data":9
  ,"lx4data":22
@@ -2176,7 +2217,7 @@
 	,0.283413,0.331765,0.400588,0.517481,0.343664,0.190018,0.0819018,0.0937544,0.0694092,0.129728
 	,0.0558176,0.029627]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.8929,2.5443,6.10528,6.46778,2.6803,6.62651,7.01778,2.9157,46.2776,7.81081
@@ -2268,18 +2309,18 @@
 }
    ]
    }
-  ,{"SUBENT":"14041010", "isub":10, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041010", "isub":10, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(N,INL)77-IR-191,PAR,SIG"
-	    ,"c4reac":"(N,INL)PAR,SIG"
+	,"x4code":{"code":"77-IR-191(N,INL)77-IR-191,PAR,SIG,G"
+	    ,"c4reac":"(N,INL)PAR,SIG,G"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":51
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-191(N,INL)77-IR-191,PAR,SIG"
+	    {"code":"77-IR-191(N,INL)77-IR-191,PAR,SIG,G"
 		,"Reac":"N,INL"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -2287,14 +2328,15 @@
 		,"SF4":"77-IR-191","Prod":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
@@ -2303,10 +2345,12 @@
 	,"x4code":{"code":"orig::E,G"}
 	}
       ]
-     ,"STATUS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data received on table from N. Fotiades"]
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -2336,12 +2380,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -2405,12 +2449,12 @@
 	,[102.689,13.2793,5.53544,0.646474]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041010", "Pointer":" "
- ,"Subent":"14041010", "compiled":20050916
+ ,"Subent":"14041010", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
- ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"INL", "MF":3, "MT":51, "nExpectedArgs":2
+ ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"INL", "MF":3, "MT":9000, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-191(N,INL)77-IR-191,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-191(N,INL)77-IR-191,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":58
@@ -2432,7 +2476,7 @@
 	,0.0397253,0.0288711,0.0286299,0.0226047,0.0227218,0.0234637,0.0189884,0.0193415,0.0162934,0.0131399
 	,0.0140885,0.0142791,0.0184895,0.0160171,0.0104492,0.00833741,0.00819732,0.00553544]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.731702,0.630093,0.543957,0.45158,0.430252,0.381674,0.401891,0.413371,0.439517,0.550115
@@ -2539,17 +2583,18 @@
 }
    ]
    }
-  ,{"SUBENT":"14041011", "isub":11, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041011", "isub":11, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(N,2N)77-IR-190,PAR,SIG"
-	    ,"c4reac":"(N,2N)PAR,SIG"
+	,"x4code":{"code":"77-IR-191(N,2N)77-IR-190,PAR,SIG,G"
+	    ,"c4reac":"(N,2N)PAR,SIG,G"
 	    ,"combi":"a"
-	    ,"MF":3
+	    ,"MF":13
+	    ,"MT":16
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-191(N,2N)77-IR-190,PAR,SIG"
+	    {"code":"77-IR-191(N,2N)77-IR-190,PAR,SIG,G"
 		,"Reac":"N,2N"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -2557,14 +2602,15 @@
 		,"SF4":"77-IR-190","Prod":{"code":"77-IR-190","nam":"Ir-190","ZA":77190}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
@@ -2573,10 +2619,12 @@
 	,"x4code":{"code":"orig::E,G"}
 	}
       ]
-     ,"STATUS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data received on table from N. Fotiades"]
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -2606,12 +2654,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -2632,12 +2680,12 @@
 	,[26.526,1.467,0.913861,3.60169]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041011", "Pointer":" "
- ,"Subent":"14041011", "compiled":20050916
+ ,"Subent":"14041011", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
- ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"2N", "MF":3, "MT":0, "nExpectedArgs":2
+ ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"2N", "MF":13, "MT":16, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-191(N,2N)77-IR-190,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-191(N,2N)77-IR-190,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":15
@@ -2651,7 +2699,7 @@
     ,"dat1":[3.25668e-4,0.00112937,0.00367167,0.0110196,0.00707873,0.0208814,0.0168294,0.0160351,0.0139054,0.0154808
 	,0.0118083,0.0234672,0.00782454,0.00369443,9.13861e-4]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[3.08427,3.10576,3.06929,3.20451,3.46242,3.80883,3.93549,4.08384,4.10208,4.22204
@@ -2714,17 +2762,18 @@
 }
    ]
    }
-  ,{"SUBENT":"14041012", "isub":12, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041012", "isub":12, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(N,3N)77-IR-189,PAR,SIG"
-	    ,"c4reac":"(N,3N)PAR,SIG"
+	,"x4code":{"code":"77-IR-191(N,3N)77-IR-189,PAR,SIG,G"
+	    ,"c4reac":"(N,3N)PAR,SIG,G"
 	    ,"combi":"a"
-	    ,"MF":3
+	    ,"MF":13
+	    ,"MT":17
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-191(N,3N)77-IR-189,PAR,SIG"
+	    {"code":"77-IR-191(N,3N)77-IR-189,PAR,SIG,G"
 		,"Reac":"N,3N"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -2732,14 +2781,15 @@
 		,"SF4":"77-IR-189","Prod":{"code":"77-IR-189","nam":"Ir-189","ZA":77189}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
@@ -2748,10 +2798,12 @@
 	,"x4code":{"code":"orig::E,G"}
 	}
       ]
-     ,"STATUS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data received on table from N. Fotiades"]
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -2778,12 +2830,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -2809,12 +2861,12 @@
 	,[77.376,4.345,17.301,3.20388]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041012", "Pointer":" "
- ,"Subent":"14041012", "compiled":20050916
+ ,"Subent":"14041012", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
- ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"3N", "MF":3, "MT":0, "nExpectedArgs":2
+ ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"3N", "MF":13, "MT":17, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-191(N,3N)77-IR-189,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-191(N,3N)77-IR-189,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":5
  ,"lx4data":20
@@ -2828,7 +2880,7 @@
     ,"dat1":[0.00371098,0.00608335,0.0180375,0.0205977,0.0180085,0.0459496,0.0634382,0.0871634,0.0934585,0.0867232
 	,0.0831034,0.0626131,0.0449984,0.0220098,0.0141345,0.0178959,0.0244461,0.0240666,0.0211981,0.017301]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[5.3603,5.60309,6.0125,6.22221,6.45821,6.70389,6.66101,7.38673,7.30144,6.75765
@@ -2885,18 +2937,18 @@
 }
    ]
    }
-  ,{"SUBENT":"14041013", "isub":13, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041013", "isub":13, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(N,4N)77-IR-188,PAR,SIG"
-	    ,"c4reac":"(N,4N)PAR,SIG"
+	,"x4code":{"code":"77-IR-191(N,4N)77-IR-188,PAR,SIG,G"
+	    ,"c4reac":"(N,4N)PAR,SIG,G"
 	    ,"combi":"a"
-	    ,"MF":3
+	    ,"MF":13
 	    ,"MT":37
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-191(N,4N)77-IR-188,PAR,SIG"
+	    {"code":"77-IR-191(N,4N)77-IR-188,PAR,SIG,G"
 		,"Reac":"N,4N"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -2904,14 +2956,15 @@
 		,"SF4":"77-IR-188","Prod":{"code":"77-IR-188","nam":"Ir-188","ZA":77188}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
@@ -2924,6 +2977,14 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Data received on table from N. Fotiades"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -2953,12 +3014,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -2980,12 +3041,12 @@
 	,[246.331,48.225,6.75578,0.630683]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041013", "Pointer":" "
- ,"Subent":"14041013", "compiled":20050916
+ ,"Subent":"14041013", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
- ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"4N", "MF":3, "MT":37, "nExpectedArgs":2
+ ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"4N", "MF":13, "MT":37, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-191(N,4N)77-IR-188,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-191(N,4N)77-IR-188,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":16
@@ -2999,7 +3060,7 @@
     ,"dat1":[0.0114844,0.00955223,0.014511,0.0557579,0.102261,0.116791,0.0750188,0.037531,0.0262056,0.018696
 	,0.0155153,0.0139496,0.0131929,0.0104934,0.0093198,0.00675578]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.09375,1.04206,1.09304,1.37932,1.51234,1.48779,1.21652,0.938276,0.790423,0.700224
@@ -3062,17 +3123,17 @@
 }
    ]
    }
-  ,{"SUBENT":"14041014", "isub":14, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041014", "isub":14, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(N,5N)77-IR-187,PAR,SIG"
-	    ,"c4reac":"(N,5N)PAR,SIG"
+	,"x4code":{"code":"77-IR-191(N,5N)77-IR-187,PAR,SIG,G"
+	    ,"c4reac":"(N,5N)PAR,SIG,G"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-191(N,5N)77-IR-187,PAR,SIG"
+	    {"code":"77-IR-191(N,5N)77-IR-187,PAR,SIG,G"
 		,"Reac":"N,5N"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -3080,14 +3141,15 @@
 		,"SF4":"77-IR-187","Prod":{"code":"77-IR-187","nam":"Ir-187","ZA":77187}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
@@ -3100,6 +3162,14 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Data received on table from N. Fotiades"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -3129,12 +3199,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -3156,12 +3226,12 @@
 	,[246.331,48.225,6.35391,0.47444]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041014", "Pointer":" "
- ,"Subent":"14041014", "compiled":20050916
+ ,"Subent":"14041014", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
  ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"5N", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-191(N,5N)77-IR-187,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-191(N,5N)77-IR-187,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":16
@@ -3175,7 +3245,7 @@
     ,"dat1":[0.00216878,0.00429329,0.00326101,0.004039,0.00754698,0.0107095,0.0463617,0.0875053,0.0721448,0.0343831
 	,0.0233148,0.0165345,0.0132259,0.0118883,0.00993293,0.00635391]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.0121,1.01478,1.01642,1.03323,0.949619,0.940349,1.13911,1.30235,1.16142,0.865476
@@ -3238,17 +3308,17 @@
 }
    ]
    }
-  ,{"SUBENT":"14041015", "isub":15, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041015", "isub":15, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(N,6N)77-IR-186,PAR,SIG"
-	    ,"c4reac":"(N,6N)PAR,SIG"
+	,"x4code":{"code":"77-IR-191(N,6N)77-IR-186,PAR,SIG,G"
+	    ,"c4reac":"(N,6N)PAR,SIG,G"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-191(N,6N)77-IR-186,PAR,SIG"
+	    {"code":"77-IR-191(N,6N)77-IR-186,PAR,SIG,G"
 		,"Reac":"N,6N"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -3256,14 +3326,15 @@
 		,"SF4":"77-IR-186","Prod":{"code":"77-IR-186","nam":"Ir-186","ZA":77186}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
@@ -3276,6 +3347,14 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Data received on table from N. Fotiades"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -3305,12 +3384,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -3328,12 +3407,12 @@
 	,[246.331,48.225,3.12872,0.469075]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041015", "Pointer":" "
- ,"Subent":"14041015", "compiled":20050916
+ ,"Subent":"14041015", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
  ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"6N", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-191(N,6N)77-IR-186,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-191(N,6N)77-IR-186,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":12
@@ -3347,7 +3426,7 @@
     ,"dat1":[0.00222515,0.00326432,0.00195737,0.00348759,0.0207576,0.0313414,0.0129127,0.0107506,0.00743801,0.00514792
 	,0.0038924,0.00312872]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.741712,0.734472,0.667285,0.629704,0.6937,0.675994,2.68698,0.587265,0.675337,0.493142
@@ -3410,17 +3489,17 @@
 }
    ]
    }
-  ,{"SUBENT":"14041016", "isub":16, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041016", "isub":16, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(N,7N)77-IR-185,PAR,SIG"
-	    ,"c4reac":"(N,7N)PAR,SIG"
+	,"x4code":{"code":"77-IR-191(N,7N)77-IR-185,PAR,SIG,G"
+	    ,"c4reac":"(N,7N)PAR,SIG,G"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-191(N,7N)77-IR-185,PAR,SIG"
+	    {"code":"77-IR-191(N,7N)77-IR-185,PAR,SIG,G"
 		,"Reac":"N,7N"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -3428,14 +3507,15 @@
 		,"SF4":"77-IR-185","Prod":{"code":"77-IR-185","nam":"Ir-185","ZA":77185}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
@@ -3448,6 +3528,14 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Data received on table from N. Fotiades"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -3477,12 +3565,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -3500,12 +3588,12 @@
 	,[246.331,48.225,7.64896,0.578089]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041016", "Pointer":" "
- ,"Subent":"14041016", "compiled":20050916
+ ,"Subent":"14041016", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
  ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"7N", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-191(N,7N)77-IR-185,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-191(N,7N)77-IR-185,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":12
@@ -3519,7 +3607,7 @@
     ,"dat1":[0.00387552,0.00549432,0.003858,0.00165823,0.00487133,0.0410237,0.0792311,0.0483524,0.0276207,0.0170466
 	,0.0105457,0.00764896]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.846378,0.791554,0.76145,0.663291,0.608916,0.841511,1.29876,1.0203,0.76532,0.553581
@@ -3582,17 +3670,17 @@
 }
    ]
    }
-  ,{"SUBENT":"14041017", "isub":17, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041017", "isub":17, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(N,8N)77-IR-184,PAR,SIG"
-	    ,"c4reac":"(N,8N)PAR,SIG"
+	,"x4code":{"code":"77-IR-191(N,8N)77-IR-184,PAR,SIG,G"
+	    ,"c4reac":"(N,8N)PAR,SIG,G"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-191(N,8N)77-IR-184,PAR,SIG"
+	    {"code":"77-IR-191(N,8N)77-IR-184,PAR,SIG,G"
 		,"Reac":"N,8N"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -3600,14 +3688,15 @@
 		,"SF4":"77-IR-184","Prod":{"code":"77-IR-184","nam":"Ir-184","ZA":77184}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
@@ -3620,6 +3709,14 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Data received on table from N. Fotiades"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -3649,12 +3746,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -3668,12 +3765,12 @@
 	,[246.331,48.225,5.89911,2.63724]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041017", "Pointer":" "
- ,"Subent":"14041017", "compiled":20050916
+ ,"Subent":"14041017", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
  ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"8N", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-191(N,8N)77-IR-184,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-191(N,8N)77-IR-184,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":8
@@ -3685,7 +3782,7 @@
     ,"dat0":[8.01796,14.5245,27.5592,33.6594,26.1856,16.016,8.41951,5.89911]
     ,"dat1":[0.00801796,0.0145245,0.0275592,0.0336594,0.0261856,0.016016,0.00841951,0.00589911]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[3.7417,3.48587,3.25503,3.05282,3.30763,3.08456,3.36781,2.63724]
@@ -3737,17 +3834,17 @@
 }
    ]
    }
-  ,{"SUBENT":"14041018", "isub":18, "compiled":20050916, "TransID":"1337", "TransDate":20060111
+  ,{"SUBENT":"14041018", "isub":18, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(N,9N)77-IR-183,PAR,SIG"
-	    ,"c4reac":"(N,9N)PAR,SIG"
+	,"x4code":{"code":"77-IR-191(N,9N)77-IR-183,PAR,SIG,G"
+	    ,"c4reac":"(N,9N)PAR,SIG,G"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"77-IR-191(N,9N)77-IR-183,PAR,SIG"
+	    {"code":"77-IR-191(N,9N)77-IR-183,PAR,SIG,G"
 		,"Reac":"N,9N"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -3755,14 +3852,15 @@
 		,"SF4":"77-IR-183","Prod":{"code":"77-IR-183","nam":"Ir-183","ZA":77183}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["   Total uncertainty"]
 	}
       ]
@@ -3775,6 +3873,14 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Data received on table from N. Fotiades"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160606A", "date":"20160606", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added G to SF7, changed error heading to"
+		," DATA-ERR"]
 	}
       ]
     }
@@ -3804,12 +3910,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -3823,12 +3929,12 @@
 	,[246.331,48.225,11.8517,0.547156]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14041018", "Pointer":" "
- ,"Subent":"14041018", "compiled":20050916
+ ,"Subent":"14041018", "compiled":20160608
  ,"year1":2004, "author1ini":"N.", "author1":"Fotiades"
  ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"9N", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"77-IR-191(N,9N)77-IR-183,PAR,SIG"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"77-IR-191(N,9N)77-IR-183,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":8
@@ -3840,7 +3946,7 @@
     ,"dat0":[2.35069,3.10264,4.8908,26.0614,34.421,21.9417,15.119,11.8517]
     ,"dat1":[0.00235069,0.00310264,0.0048908,0.0260614,0.034421,0.0219417,0.015119,0.0118517]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.595404,0.560296,0.527377,0.656769,0.692806,0.562058,0.483126,0.547156]
