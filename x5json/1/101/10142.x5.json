@@ -1,9 +1,9 @@
-  {"ENTRY":"10142", "updated":20001211, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10142", "updated":20160608, "TransID":"1418", "TransDate":20160824, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1971,"a1":"H.A.Grench+","r1":"J,NP/A,166,670,1971"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.166, p.670 (1971)"
-   ,"title":"Search for 72.5 sec ``metastable aluminum state``"
+   ,"title":"Search for 72.5 sec Al-30m"
    ,"x4subents":[
-   {"SUBENT":"10142001", "isub":1, "compiled":20001211, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"10142001", "isub":1, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -19,20 +19,21 @@
       ]
      ,"AUTHOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"ini":"H.A.","nam":"GRENCH"}
-	    ,{"ini":"A.D.","nam":"JONES"}
-	    ,{"ini":"R.W.","nam":"NIGHTINGALE"}]
+	,"x4codes":[{"ini":"H.A.","nam":"Grench"}
+	    ,{"ini":"A.D.W.","nam":"Jones"}
+	    ,{"ini":"R.W.","nam":"Nightingale"}]
 	}
       ]
      ,"TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Search for 72.5 sec ``metastable aluminum state``"]
+	,"x4freetext":["Search for 72.5 sec Al-30m"]
 	}
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"VDG", "dict":"FACILITY", "idict":18,"hlp":"Van de Graaff"}]
+	,"x4codes":[{"code":"VDG", "dict":"FACILITY", "idict":18,"hlp":"Van de Graaff"}
+	    ,{"code":"1USALMS", "dict":"INSTITUTE", "idict":3,"hlp":"Lockheed Missiles and Space Div., Palo Alto, CA, United States of America"}]
 	,"x4freetext":[" Lockheed 3.5 mV Van de Graaff."]
 	}
       ]
@@ -44,8 +45,9 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["45-mg silicon-dioxide sample,enriched to 95.55% 30Si."]
+	,"x4code":{"Nucl":"14-SI-30","ENR":0.9555}
+	,"x4freetext":[" 45-mg SiO2 sample, enriched to"
+		," 95.55% 30Si."]
 	}
       ]
      ,"METHOD":[
@@ -80,8 +82,7 @@
 	,"x4codes":[{"code":"APRVD"
 		,"flag":"APRVD", "help":"Approved by author"
 		}]
-	,"x4freetext":[" Approved by author."
-		," Data taken from reference."]
+	,"x4freetext":[" Approved by author."]
 	}
       ]
      ,"HISTORY":[
@@ -114,28 +115,32 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Converted to new date formats."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160503A", "date":"20160503", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Isomer code in sub.2 corrected"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"10142002", "isub":2, "compiled":20001211, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10142002", "isub":2, "compiled":20160608, "TransID":"1418", "TransDate":20160824
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"14-SI-30(N,P)13-AL-30,,SIG,,FCT"
-	    ,"c4reac":"(N,P),SIG,,FCT"
+	,"x4code":{"code":"14-SI-30(N,P)13-AL-30-M,,SIG"
+	    ,"c4reac":"(N,P),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":103
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"14-SI-30(N,P)13-AL-30,,SIG,,FCT"
+	    {"code":"14-SI-30(N,P)13-AL-30-M,,SIG"
 		,"Reac":"N,P"
 		,"SF1":"14-SI-30","Targ":{"code":"14-SI-30","nam":"Si-30","ZA":14030}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"P"
-		,"SF4":"13-AL-30","Prod":{"code":"13-AL-30","nam":"Al-30","ZA":13030}
+		,"SF4":"13-AL-30-M","Prod":{"code":"13-AL-30-M","nam":"Al-30-m","ZA":13030,"ProdM":"M"}
 		,"SF6":"SIG"
-		,"SF8":"FCT"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	,"x4freetext":["Activation of proposed 72.5-sec metastable state."]
@@ -143,9 +148,17 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"13-AL-30", "t12":72.5, "t12units":"SEC", "t12sec":72.5
+	,"x4codes":[{"Nucl":"13-AL-30-M", "t12":72.5, "t12units":"SEC", "t12sec":72.5
 	, "Radiations":[ {"Type":"B"}]}]
-	,"x4freetext":[" proposed state"]
+	,"x4freetext":[" Proposed state (not confirmed)"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text on p.672."]
 	}
       ]
      ,"HISTORY":[
@@ -158,6 +171,11 @@
 	,"x4code":{"code":"19910903A", "date":"19910903", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" REACTION corrected"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160503A", "date":"20160503", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SF8=FCT deleted, isomer code L introduced."]
 	}
       ]
     }
@@ -178,12 +196,12 @@
 	 [15,0.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10142002", "Pointer":" "
- ,"Subent":"10142002", "compiled":20001211
+ ,"Subent":"10142002", "compiled":20160608
  ,"year1":1971, "author1ini":"H.A.", "author1":"Grench"
  ,"zTarg1":14, "targ1":"Si-30", "proj1":"n", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"14-SI-30(N,P)13-AL-30,,SIG,,FCT"
+ ,"reacode":"14-SI-30(N,P)13-AL-30-M,,SIG"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":2
  ,"lx4data":1
