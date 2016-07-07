@@ -1,9 +1,9 @@
-  {"ENTRY":"30803", "updated":20090910, "TransID":"3141", "TransDate":20091223, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
-   ,"y1":1984,"a1":"M.Herman+","r1":"W,MARCINKOWSKI,1984"
+  {"ENTRY":"30803", "updated":20160708, "TransID":"3174", "TransDate":20160905, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+   ,"y1":1984,"a1":"M.Herman+","r1":"W,Marcinkowski,1984"
    ,"ref":"Priv.Comm: Marcinkowski (1984)"
    ,"title":"Measurements of (n,2n) cross sections on Zr-90, Mo-94 and Au-197 at 14.7 MeV"
    ,"x4subents":[
-   {"SUBENT":"30803001", "isub":1, "compiled":20090910, "TransID":"3141", "TransDate":20091223
+   {"SUBENT":"30803001", "isub":1, "compiled":20160708, "TransID":"3174", "TransDate":20160905
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -25,7 +25,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"W,MARCINKOWSKI,19840224","stdFileName":"W,MARCINKOWSKI,1984"
+	,"x4codes":[{"code":"W,Marcinkowski,19840224","stdFileName":"W,Marcinkowski,1984"
 		,"year":1984,"typ":"W","ref":"W","vol":"Marcinkowski"
 		,"shortRef":"Priv.Comm: Marcinkowski (1984)"}]
 	,"x4freetext":[" In connection with IAEA"
@@ -86,6 +86,13 @@
 		," subtracted"]
 	}
       ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on source of uncertainty."]
+	}
+      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
@@ -127,35 +134,48 @@
 	,"x4freetext":[" SD:Updated to new date formats,lower case."
 		,"  OS. Monitor values added"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160624A", "date":"20160624", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. REACTION, DECAY-DATA corrected in 002."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"30803002", "isub":2, "compiled":20090910, "TransID":"3141", "TransDate":20091223
+  ,{"SUBENT":"30803002", "isub":2, "compiled":20160708, "TransID":"3174", "TransDate":20160905
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-90(N,2N)40-ZR-89-G,,SIG"
-	    ,"c4reac":"(N,2N),SIG"
+	,"x4code":{"code":"40-ZR-90(N,2N)40-ZR-89-G,M+,SIG"
+	    ,"c4reac":"(N,2N)M+,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":16
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(N,2N)40-ZR-89-G,,SIG"
+	    {"code":"40-ZR-90(N,2N)40-ZR-89-G,M+,SIG"
 		,"Reac":"N,2N"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"2N"
 		,"SF4":"40-ZR-89-G","Prod":{"code":"40-ZR-89-G","nam":"Zr-89-g","ZA":40089,"ProdM":"G"}
+		,"SF5":"M+"
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"M+,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section, incl. form. via isomeric trans."
 	    }]}
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"40-ZR-89-M", "t12":78.4, "t12units":"HR", "t12sec":282240.0
+	,"x4codes":[{"Nucl":"40-ZR-89-G", "t12":78.4, "t12units":"HR", "t12sec":282240.0
 	, "Radiations":[ {"Type":"DG", "Energy":[910.0], "Intensity":0.998}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160624A", "date":"20160624", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF4-SF5 and DECAY-DATA corrected"
+		,"                (Memo CP-D/888)."]
 	}
       ]
     }
@@ -185,21 +205,30 @@
 	 [14.5,0.3,715.3,42.3,107]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30803002", "Pointer":" "
- ,"Subent":"30803002", "compiled":20090910
+ ,"Subent":"30803002", "compiled":20160708
  ,"year1":1984, "author1ini":"M.", "author1":"Herman"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"n", "emis1":"2N", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"40-ZR-90(N,2N)40-ZR-89-G,,SIG"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section, incl. form. via isomeric trans."
+ ,"reacode":"40-ZR-90(N,2N)40-ZR-89-G,M+,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"40-ZR-89-G","HalfLife":"78.4HR","HalfLife1":"78.41HR"
+	,"RadiationType":"DG","Ene":910.0,"Ene1":909.15,"Abu":0.998,"Abu1":0.9904
+	,"FcCorrDECAY_DATA":1.0076736
+	,"reaction":"40-ZR-90(N,2N)40-ZR-89-G,M+,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
-	," #[0]#Reaction: 40-ZR-90(N,2N)40-ZR-89-G,,SIG"
+	," #[0]#Reaction: 40-ZR-90(N,2N)40-ZR-89-G,M+,SIG"
 	," #[0]#Monitor:  26-FE-56(N,P)25-MN-56,,SIG"
 	," #[0]#En=1.45E7"
 	," a0=[MONIT];                   #[0]#old monitor point 0.107"
 	," a1=recom$fe56np[EN];          #[0]#new monitor point [14.5MeV]"
 	," dy=dy/y;                      #to rel. uncertainties"
 	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (40-ZR-90(N,2N)40-ZR-89-G,M+,SIG)"
+	,"  #[1]#DECAY-DATA (40-ZR-89-G,78.4HR,DG,910.,0.998) #Ix_old=0.998"
+	,"   a1=0.998/0.9904;            #[1]#DECAY-DATA: correction to new 909.15 keV gamma-yield per decay Zr-89-g Ix_new=0.9904"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0076736"
 	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":5
  ,"lx4data":1
