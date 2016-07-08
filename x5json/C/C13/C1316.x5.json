@@ -1,9 +1,9 @@
-  {"ENTRY":"C1316", "updated":20050815, "TransID":"C075", "TransDate":20051018, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
-   ,"y1":2005,"a1":"C.Iliadis+","r1":"J,NP/A,758,73,2005"
-   ,"ref":"Jour: Nuclear Physics, Section A, Vol.758, p.73 (2005)"
+  {"ENTRY":"C1316", "updated":20160709, "TransID":"C159", "TransDate":20160920, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+   ,"y1":2005,"a1":"C.Iliadis+","r1":"J,NP/A,758,73c,2005"
+   ,"ref":"Jour: Nuclear Physics, Section A, Vol.758, p.73c (2005)"
    ,"title":"Nuclear Astrophysics: Direct measurements with stable beams"
    ,"x4subents":[
-   {"SUBENT":"C1316001", "isub":1, "compiled":20050815, "TransID":"C075", "TransDate":20051018
+   {"SUBENT":"C1316001", "isub":1, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -13,9 +13,9 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,NP/A,758,73,2005","stdFileName":"J,NP_A,758,73,2005"
-		,"year":2005,"typ":"J","ref":"J,NP/A","vol":"758","p":"73"
-		,"shortRef":"Jour: Nuclear Physics, Section A, Vol.758, p.73 (2005)"}]
+	,"x4codes":[{"code":"J,NP/A,758,73c,2005","stdFileName":"J,NP_A,758,73c,2005"
+		,"year":2005,"typ":"J","ref":"J,NP/A","vol":"758","p":"73c"
+		,"shortRef":"Jour: Nuclear Physics, Section A, Vol.758, p.73c (2005)"}]
 	}
       ]
      ,"AUTHOR":[
@@ -48,12 +48,15 @@
       ]
      ,"DETECTOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"GE-IN", "dict":"DETECTOR", "idict":22,"hlp":"Germanium intrinsic detector"}]
+	,"x4codes":[{"code":"HPGE", "dict":"DETECTOR", "idict":22,"hlp":"Hyperpure Germanium detector"}]
 	,"x4freetext":[" Large-volume HPGe detector is placed at an"
 		," angle of 0 degree (with respect to the beam direction)"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"NAICR", "dict":"DETECTOR", "idict":22,"hlp":"Sodium-Iodide crystal"}]
+	,"x4freetext":[" Large NaI(Tl) annulus sourrounding both target"
+		," and HPGe detector acting as veto against cosmic muons"
+		," and other background"]
 	}
       ]
      ,"SAMPLE":[
@@ -71,10 +74,16 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160628A", "date":"20160628", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Units and heading corrected in sub.2,"
+		," DETECTOR updated"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C1316002", "isub":2, "compiled":20050815, "TransID":"C075", "TransDate":20051018
+  ,{"SUBENT":"C1316002", "isub":2, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -97,11 +106,6 @@
 	    }]}
 	}
       ]
-     ,"EN-SEC":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::E-EXC,9-F-18"}
-	}
-      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
@@ -114,18 +118,26 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[" Data taken from Fig. 1"]
+	,"x4freetext":[" Data taken from Fig.1, Nucl.Phys.A758,73c,2005"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160628A", "date":"20160628", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" EN units corrected to KEV. E-EXC changed"
+		," to E-LVL."]
 	}
       ]
     }
     ,"DATA":{"ncols":5, "nrows":20
       ,"x4headers":[
-       {"icol":0, "header":"E-EXC", "units":"MEV", "pointer":" "
-	,"headerHelp":"Excitation energy", "pFlag":"1000000"
+       {"icol":0, "header":"E-LVL", "units":"MEV", "pointer":" "
+	,"headerHelp":"Level energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN", "units":"MEV", "pointer":" "
+      ,{"icol":1, "header":"EN", "units":"KEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
@@ -137,8 +149,8 @@
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E-EXC"     ,"EN"        ,"DATA"      ,"DATA-MAX"  ,"DATA-ERR"  ]
-	,["MEV"       ,"MEV"       ,"ARB-UNITS" ,"ARB-UNITS" ,"ARB-UNITS" ]
+	 ["E-LVL"     ,"EN"        ,"DATA"      ,"DATA-MAX"  ,"DATA-ERR"  ]
+	,["MEV"       ,"KEV"       ,"ARB-UNITS" ,"ARB-UNITS" ,"ARB-UNITS" ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
 	 [1.081,182,null,7.95,null]
@@ -163,10 +175,10 @@
 	,[1.121,534,141,null,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1316002", "Pointer":" "
- ,"Subent":"C1316002", "compiled":20050815
+ ,"Subent":"C1316002", "compiled":20160709
  ,"year1":2005, "author1ini":"C.", "author1":"Iliadis"
  ,"zTarg1":8, "targ1":"O-17", "proj1":"p", "emis1":"G", "MF":603, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,EXC)"
+ ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
  ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
  ,"reacode":"8-O-17(P,G)9-F-18,PAR,SIG,,REL"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
@@ -195,17 +207,17 @@
 	,28.3,28.3,37.8,37.8,42.5,42.5,33,18.9,null,null]
    ,"dat1eq":true}
   ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"header":"EN", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[182,191,193,196,198,199,200,208,213,515
 	,517,518,520,522,524,526,528,531,532,534]
-    ,"dat1":[1.82e+8,1.91e+8,1.93e+8,1.96e+8,1.98e+8,1.99e+8,2.0e+8,2.08e+8,2.13e+8,5.15e+8
-	,5.17e+8,5.18e+8,5.2e+8,5.22e+8,5.24e+8,5.26e+8,5.28e+8,5.31e+8,5.32e+8,5.34e+8]}
-  ,{"ivar":4, "cvar":"x2", "fam":"EXC", "ifComm":false, "ifCM":false
-    ,"header":"E-EXC", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"53", "rank":2.1
-    ,"expansion":"Secondary energy: excitation energy"
+    ,"dat1":[1.82e+5,1.91e+5,1.93e+5,1.96e+5,1.98e+5,1.99e+5,2.0e+5,2.08e+5,2.13e+5,5.15e+5
+	,5.17e+5,5.18e+5,5.2e+5,5.22e+5,5.24e+5,5.26e+5,5.28e+5,5.31e+5,5.32e+5,5.34e+5]}
+  ,{"ivar":4, "cvar":"x2", "fam":"LVL", "ifComm":false, "ifCM":false
+    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"52", "rank":2.1
+    ,"expansion":"Secondary energy: level energy"
     ,"dat0":[1.081,1.081,1.081,1.081,1.081,1.081,1.081,1.081,1.081,1.121
 	,1.121,1.121,1.121,1.121,1.121,1.121,1.121,1.121,1.121,1.121]
     ,"dat1":[1.081e+6,1.081e+6,1.081e+6,1.081e+6,1.081e+6,1.081e+6,1.081e+6,1.081e+6,1.081e+6,1.121e+6
@@ -224,12 +236,12 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[1.82e+8,1.91e+8,1.93e+8,1.96e+8,1.98e+8,1.99e+8,2.0e+8,2.08e+8,2.13e+8,5.15e+8
-	,5.17e+8,5.18e+8,5.2e+8,5.22e+8,5.24e+8,5.26e+8,5.28e+8,5.31e+8,5.32e+8,5.34e+8]
+      ,"x1":[1.82e+5,1.91e+5,1.93e+5,1.96e+5,1.98e+5,1.99e+5,2.0e+5,2.08e+5,2.13e+5,5.15e+5
+	,5.17e+5,5.18e+5,5.2e+5,5.22e+5,5.24e+5,5.26e+5,5.28e+5,5.31e+5,5.32e+5,5.34e+5]
    }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"EXC", "ifCM":false, "units":"EV"
-      ,"header":"EXC", "dataType":"53", "rank":2.0
-      ,"expansion":"Secondary energy: excitation energy"
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
+      ,"header":"LVL", "dataType":"52", "rank":2.0
+      ,"expansion":"Secondary energy: level energy"
       ,"x2":[1.081e+6,1.081e+6,1.081e+6,1.081e+6,1.081e+6,1.081e+6,1.081e+6,1.081e+6,1.081e+6,1.121e+6
 	,1.121e+6,1.121e+6,1.121e+6,1.121e+6,1.121e+6,1.121e+6,1.121e+6,1.121e+6,1.121e+6,1.121e+6]
    }
