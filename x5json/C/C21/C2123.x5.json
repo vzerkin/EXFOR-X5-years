@@ -1,9 +1,9 @@
-  {"ENTRY":"C2123", "updated":20140807, "TransID":"C145", "TransDate":20150112, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C2123", "updated":20160709, "TransID":"C159", "TransDate":20160920, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2014,"a1":"S.J.Quinn+","r1":"J,NIM/A,757,62,2014"
    ,"ref":"Jour: Nucl. Instrum. Methods in Physics Res., Sect.A, Vol.757, p.62 (2014)"
    ,"title":"First application of the gamma-summing technique in inverse kinematics"
    ,"x4subents":[
-   {"SUBENT":"C2123001", "isub":1, "compiled":20140807, "TransID":"C145", "TransDate":20150112
+   {"SUBENT":"C2123001", "isub":1, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -68,7 +68,7 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Titanium hydride foil. Thicknes of the Ti foil was"
+	,"x4freetext":["Titanium hydride foil. Thickness of the Ti foil was"
 		,"measured by Rutherford Back Scattering, number of"
 		,"hydrogen nuclei was determined using ERD experiment."
 		,"The total measured thickness of the titanium hydride"
@@ -117,10 +117,15 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" Compiled by S.H."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160628A", "date":"20160628", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Units in subs. 2, 4 corrected"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C2123002", "isub":2, "compiled":20140807, "TransID":"C145", "TransDate":20150112
+  ,{"SUBENT":"C2123002", "isub":2, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -149,12 +154,31 @@
 		,"   Waiting for data from author"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160628A", "date":"20160628", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Energy units corrected to KEV"]
+	}
+      ]
     }
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"THICKNESS", "units":"ATOMS/B", "pointer":" "
+	,"headerHelp":"Sample thickness", "pFlag":"1000000"
+	,"unitsHelp":"atoms/barn","familyCode":"THK","convFc":1.0,"basicUnits":"ATOMS/B"}
+      ]
+      ,"datacols":[
+	 ["THICKNESS" ]
+	,["ATOMS/B"   ]
+	,[" "         ]]
+      ,"data":[
+	 [3.58E-6]]}
     ,"DATA":{"ncols":3, "nrows":30
       ,"x4headers":[
-       {"icol":0, "header":"EN-CM", "units":"MEV", "pointer":" "
+       {"icol":0, "header":"EN-CM", "units":"KEV", "pointer":" "
 	,"headerHelp":"Sum of projectile and target energies in c.m.s.", "pFlag":"1000001"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"PRT/INC", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"particles per incident projectile","familyCode":"YLD","convFc":1.0,"basicUnits":"GAM/PART"}
@@ -164,7 +188,7 @@
       ]
       ,"datacols":[
 	 ["EN-CM"     ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"PRT/INC"   ,"PRT/INC"   ]
+	,["KEV"       ,"PRT/INC"   ,"PRT/INC"   ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [944.5,6.35E-11,5.61E-12]
@@ -199,15 +223,15 @@
 	,[1079.8,2.07E-10,1.68E-11]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C2123002", "Pointer":" "
- ,"Subent":"C2123002", "compiled":20140807
+ ,"Subent":"C2123002", "compiled":20160709
  ,"year1":2014, "author1ini":"S.J.", "author1":"Quinn"
- ,"zTarg1":1, "targ1":"H-1", "proj1":"Al-27", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"zTarg1":1, "targ1":"H-1", "proj1":"Al-27", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(EN,THS)"
  ,"ReactionType":"MLT", "quant":"MLT", "quantExpan":"Multiplicity of outgoing particle"
  ,"reacode":"1-H-1(13-AL-27,G)14-SI-28,,MLT"
  ,"compNotes":["Ignored column:DATA-ERR,GAM/PART  expected units:PRD/REAC,PER-CENT"
 	,"CONVERTED INC-ENERGY C.M. TO LAB: EN_LAB=EN_CM*27.771915"]
- ,"wx4data":3
+ ,"wx4data":4
  ,"lx4data":30
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -227,17 +251,23 @@
 	,2.84e-11,1.95e-11,1.55e-11,1.51e-11,1.37e-11,1.37e-11,1.73e-11,1.82e-11,1.95e-11,1.68e-11]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":true
-    ,"header":"EN-CM", "units":"MEV", "basicUnits":"EV"
+    ,"header":"EN-CM", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[944.5,944.7,946.8,948.7,948.7,950.6,950.6,956.3,958.3,960.3
 	,962.1,964,969.9,975.7,987.3,998.7,1008.5,1018.1,1027.8,1037.4
 	,1047,1056.7,1062.4,1068.2,1070.3,1072.2,1074.1,1076.1,1077.9,1079.8]
-    ,"dat1":[2.62306e+10,2.62361e+10,2.62945e+10,2.63472e+10,2.63472e+10,2.64e+10,2.64e+10,2.65583e+10,2.66138e+10,2.66694e+10
-	,2.67194e+10,2.67721e+10,2.6936e+10,2.70971e+10,2.74192e+10,2.77358e+10,2.8008e+10,2.82746e+10,2.8544e+10,2.88106e+10
-	,2.90772e+10,2.93466e+10,2.95049e+10,2.9666e+10,2.97243e+10,2.9777e+10,2.98298e+10,2.98854e+10,2.99353e+10,2.99881e+10]}
+    ,"dat1":[2.62306e+7,2.62361e+7,2.62945e+7,2.63472e+7,2.63472e+7,2.64e+7,2.64e+7,2.65583e+7,2.66138e+7,2.66694e+7
+	,2.67194e+7,2.67721e+7,2.6936e+7,2.70971e+7,2.74192e+7,2.77358e+7,2.8008e+7,2.82746e+7,2.8544e+7,2.88106e+7
+	,2.90772e+7,2.93466e+7,2.95049e+7,2.9666e+7,2.97243e+7,2.9777e+7,2.98298e+7,2.98854e+7,2.99353e+7,2.99881e+7]}
+  ,{"ivar":3, "cvar":"x2", "fam":"THS", "ifComm":true , "ifCM":false
+    ,"header":"THICKNESS", "units":"ATOMS/B", "basicUnits":"ATOMS/B"
+    ,"what":"X2.Value", "dataType":"83", "rank":2.1
+    ,"expansion":"Other variable: sample thickness"
+    ,"com0":3.58e-6
+    ,"com1":3.58e-6}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":30
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PRD/REAC"
@@ -250,9 +280,16 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":true, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[2.62306e+10,2.62361e+10,2.62945e+10,2.63472e+10,2.63472e+10,2.64e+10,2.64e+10,2.65583e+10,2.66138e+10,2.66694e+10
-	,2.67194e+10,2.67721e+10,2.6936e+10,2.70971e+10,2.74192e+10,2.77358e+10,2.8008e+10,2.82746e+10,2.8544e+10,2.88106e+10
-	,2.90772e+10,2.93466e+10,2.95049e+10,2.9666e+10,2.97243e+10,2.9777e+10,2.98298e+10,2.98854e+10,2.99353e+10,2.99881e+10]
+      ,"x1":[2.62306e+7,2.62361e+7,2.62945e+7,2.63472e+7,2.63472e+7,2.64e+7,2.64e+7,2.65583e+7,2.66138e+7,2.66694e+7
+	,2.67194e+7,2.67721e+7,2.6936e+7,2.70971e+7,2.74192e+7,2.77358e+7,2.8008e+7,2.82746e+7,2.8544e+7,2.88106e+7
+	,2.90772e+7,2.93466e+7,2.95049e+7,2.9666e+7,2.97243e+7,2.9777e+7,2.98298e+7,2.98854e+7,2.99353e+7,2.99881e+7]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"THS", "ifCM":false, "units":"ATOMS/B"
+      ,"header":"THS", "dataType":"83", "rank":2.0
+      ,"expansion":"Other variable: sample thickness"
+      ,"x2":[3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6
+	,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6
+	,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6]
    }
  }
 }
@@ -354,7 +391,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C2123004", "isub":4, "compiled":20140807, "TransID":"C145", "TransDate":20150112
+  ,{"SUBENT":"C2123004", "isub":4, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -383,12 +420,31 @@
 		,"   Waiting for data from author"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160628A", "date":"20160628", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Energy units corrected to KEV"]
+	}
+      ]
     }
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"THICKNESS", "units":"ATOMS/B", "pointer":" "
+	,"headerHelp":"Sample thickness", "pFlag":"1000000"
+	,"unitsHelp":"atoms/barn","familyCode":"THK","convFc":1.0,"basicUnits":"ATOMS/B"}
+      ]
+      ,"datacols":[
+	 ["THICKNESS" ]
+	,["ATOMS/B"   ]
+	,[" "         ]]
+      ,"data":[
+	 [3.58E-6]]}
     ,"DATA":{"ncols":3, "nrows":24
       ,"x4headers":[
-       {"icol":0, "header":"EN-CM", "units":"MEV", "pointer":" "
+       {"icol":0, "header":"EN-CM", "units":"KEV", "pointer":" "
 	,"headerHelp":"Sum of projectile and target energies in c.m.s.", "pFlag":"1000001"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"PRT/INC", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"particles per incident projectile","familyCode":"YLD","convFc":1.0,"basicUnits":"GAM/PART"}
@@ -398,7 +454,7 @@
       ]
       ,"datacols":[
 	 ["EN-CM"     ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"PRT/INC"   ,"PRT/INC"   ]
+	,["KEV"       ,"PRT/INC"   ,"PRT/INC"   ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [1391,8.38E-13,2.04E-13]
@@ -427,15 +483,15 @@
 	,[1531.8,2.1E-13,2.04E-13]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C2123004", "Pointer":" "
- ,"Subent":"C2123004", "compiled":20140807
+ ,"Subent":"C2123004", "compiled":20160709
  ,"year1":2014, "author1ini":"S.J.", "author1":"Quinn"
- ,"zTarg1":1, "targ1":"H-1", "proj1":"Ni-58", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"zTarg1":1, "targ1":"H-1", "proj1":"Ni-58", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(EN,THS)"
  ,"ReactionType":"MLT", "quant":"MLT", "quantExpan":"Multiplicity of outgoing particle"
  ,"reacode":"1-H-1(28-NI-58,G)29-CU-59,,MLT"
  ,"compNotes":["Ignored column:DATA-ERR,GAM/PART  expected units:PRD/REAC,PER-CENT"
 	,"CONVERTED INC-ENERGY C.M. TO LAB: EN_LAB=EN_CM*58.48523"]
- ,"wx4data":3
+ ,"wx4data":4
  ,"lx4data":24
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -455,17 +511,23 @@
 	,3.16e-13,2.65e-13,2.35e-13,2.04e-13]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":true
-    ,"header":"EN-CM", "units":"MEV", "basicUnits":"EV"
+    ,"header":"EN-CM", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[1391,1395.5,1400.1,1402.7,1404.7,1407.3,1407.4,1409.2,1411.9,1412.9
 	,1416.3,1423.5,1432.6,1441.6,1450.5,1459.5,1468.6,1477.6,1486.5,1495.5
 	,1504.6,1513.7,1522.7,1531.8]
-    ,"dat1":[8.1353e+10,8.16161e+10,8.18852e+10,8.20372e+10,8.21542e+10,8.23063e+10,8.23121e+10,8.24174e+10,8.25753e+10,8.26338e+10
-	,8.28326e+10,8.32537e+10,8.37859e+10,8.43123e+10,8.48328e+10,8.53592e+10,8.58914e+10,8.64178e+10,8.69383e+10,8.74647e+10
-	,8.79969e+10,8.85291e+10,8.90555e+10,8.95877e+10]}
+    ,"dat1":[8.1353e+7,8.16161e+7,8.18852e+7,8.20372e+7,8.21542e+7,8.23063e+7,8.23121e+7,8.24174e+7,8.25753e+7,8.26338e+7
+	,8.28326e+7,8.32537e+7,8.37859e+7,8.43123e+7,8.48328e+7,8.53592e+7,8.58914e+7,8.64178e+7,8.69383e+7,8.74647e+7
+	,8.79969e+7,8.85291e+7,8.90555e+7,8.95877e+7]}
+  ,{"ivar":3, "cvar":"x2", "fam":"THS", "ifComm":true , "ifCM":false
+    ,"header":"THICKNESS", "units":"ATOMS/B", "basicUnits":"ATOMS/B"
+    ,"what":"X2.Value", "dataType":"83", "rank":2.1
+    ,"expansion":"Other variable: sample thickness"
+    ,"com0":3.58e-6
+    ,"com1":3.58e-6}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":24
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PRD/REAC"
@@ -478,9 +540,16 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":true, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[8.1353e+10,8.16161e+10,8.18852e+10,8.20372e+10,8.21542e+10,8.23063e+10,8.23121e+10,8.24174e+10,8.25753e+10,8.26338e+10
-	,8.28326e+10,8.32537e+10,8.37859e+10,8.43123e+10,8.48328e+10,8.53592e+10,8.58914e+10,8.64178e+10,8.69383e+10,8.74647e+10
-	,8.79969e+10,8.85291e+10,8.90555e+10,8.95877e+10]
+      ,"x1":[8.1353e+7,8.16161e+7,8.18852e+7,8.20372e+7,8.21542e+7,8.23063e+7,8.23121e+7,8.24174e+7,8.25753e+7,8.26338e+7
+	,8.28326e+7,8.32537e+7,8.37859e+7,8.43123e+7,8.48328e+7,8.53592e+7,8.58914e+7,8.64178e+7,8.69383e+7,8.74647e+7
+	,8.79969e+7,8.85291e+7,8.90555e+7,8.95877e+7]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"THS", "ifCM":false, "units":"ATOMS/B"
+      ,"header":"THS", "dataType":"83", "rank":2.0
+      ,"expansion":"Other variable: sample thickness"
+      ,"x2":[3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6
+	,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6,3.58e-6
+	,3.58e-6,3.58e-6,3.58e-6,3.58e-6]
    }
  }
 }
