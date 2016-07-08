@@ -1,9 +1,9 @@
-  {"ENTRY":"C1546", "updated":20070420, "TransID":"C080", "TransDate":20070716, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C1546", "updated":20160709, "TransID":"C159", "TransDate":20160920, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1990,"a1":"W.R.Webber+","r1":"J,PR/C,41,533,1990"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.41, p.533 (1990)"
    ,"title":"Individual charge changing fragmentation cross sections of relativistic nuclei in hydrogen, helium, and carbon targets"
    ,"x4subents":[
-   {"SUBENT":"C1546001", "isub":1, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+   {"SUBENT":"C1546001", "isub":1, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -34,8 +34,9 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"ACCEL", "dict":"FACILITY", "idict":18,"hlp":"Accelerator"}
-	    ,{"code":"1USAUNH", "dict":"INSTITUTE", "idict":3,"hlp":"University of New Hampshire, Durham, NH, United States of America"}]
+	,"x4codes":[{"code":"SYNCH", "dict":"FACILITY", "idict":18,"hlp":"Synchrotron"}
+	    ,{"code":"1USABRK", "dict":"INSTITUTE", "idict":3,"hlp":"Lawrence Berkeley National Laboratory, Berkeley, CA, United States of America"}]
+	,"x4freetext":[" Bevatron at Lawrence Berkeley Lab."]
 	}
       ]
      ,"INC-SPECT":[
@@ -44,25 +45,54 @@
 	,"x4freetext":["Different beams at several hundreds of MeV/nucleon"]
 	}
       ]
-     ,"SAMPLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Many samples (see below)"]
-	}
-      ]
      ,"DETECTOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"SCIN", "dict":"DETECTOR", "idict":22,"hlp":"Scintillation detector"}]
+	,"x4codes":[{"code":"TELES", "dict":"DETECTOR", "idict":22,"hlp":"Counter telescope"}
+	    ,{"code":"SCIN", "dict":"DETECTOR", "idict":22,"hlp":"Scintillation detector"}
+	    ,{"code":"CEREN", "dict":"DETECTOR", "idict":22,"hlp":"Cerenkov detector"}]
 	,"x4freetext":[" Three CaF2 scintillators,"
-		," Cherenkov radiator"]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"TELES", "dict":"DETECTOR", "idict":22,"hlp":"Counter telescope"}]
+		," Cerenkov counter"]
 	}
       ]
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"EDE", "dict":"METHOD", "idict":21,"hlp":"Particle identification by `E/Delta E` measurement"}]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["The following systematic errors contribute to the total"
+		,"uncertainty:"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-1", "max":"1.2"
+	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" Target correction"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-2", "max":"1.5"
+	     ,"headerHelp":"2nd partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" Correction for interactions in the"
+		," telescope"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-3", "max":"3."
+	     ,"headerHelp":"3rd partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" Secondary fragmentation in the target."
+		," Smaller (below 1%) for small Delta-Z (target/beam)"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-4", "max":"5."
+	     ,"headerHelp":"4th partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" Only for Delta-Z between 0.5 and 0.6:"
+		," \"background\" correction"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-5", "max":"3."
+	     ,"headerHelp":"5th partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" Selection criteria and renormalization"
+		," effect"]
 	}
       ]
      ,"HISTORY":[
@@ -71,10 +101,16 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160705A", "date":"20160705", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION in sub.28 corrected."
+		," ERR-ANALYS updated, FACILITY corrected."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C1546002", "isub":2, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546002", "isub":2, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -100,6 +136,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -141,14 +182,20 @@
 	,[3,561,30.3,3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546002", "Pointer":" "
- ,"Subent":"C1546002", "compiled":20070420
+ ,"Subent":"C1546002", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"B-11", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(5-B-11,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*11"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*11"]
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -163,13 +210,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.5,1.5,1.5,1.5,3,3,3,3]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[326,403,418,561,326,403,418,561]
     ,"dat1":[3.586e+9,4.433e+9,4.598e+9,6.171e+9,3.586e+9,4.433e+9,4.598e+9,6.171e+9]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -183,7 +266,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.1059,0.106,0.1112,0.1087,0.0301,0.0296,0.0321,0.0303]
-      ,"dy":[0.0015885,0.00159,0.001668,0.0016305,9.03e-4,8.88e-4,9.63e-4,9.09e-4]   }
+      ,"dy":[0.0015885,0.00159,0.001668,0.0016305,9.03e-4,8.88e-4,9.63e-4,9.09e-4]
+      ,"dysys":[0.00361808,0.00362149,0.00379915,0.00371374,0.00102837,0.00101129,0.0010967,0.0010352]
+      ,"dystat":[7.413e-4,7.42e-4,7.784e-4,7.609e-4,2.107e-4,2.072e-4,2.247e-4,2.121e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -198,7 +283,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546003", "isub":3, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546003", "isub":3, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -224,6 +309,13 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"1.", "max":"3.3"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error."
+		," For hydrogen target, the statistical error is about"
+		," 1.5 times the value for other targets (0.7-2.2%)"]
 	}
       ]
      ,"STATUS":[
@@ -265,14 +357,20 @@
 	,[3,561,14.1,5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546003", "Pointer":" "
- ,"Subent":"C1546003", "compiled":20070420
+ ,"Subent":"C1546003", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"B-11", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"1-H-1(5-B-11,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*11"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,1.,3.3)     ADDED AS COMMON:ERR-S,PER-CENT=1.0%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*11"]
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -287,13 +385,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[5,5,5,5,5,5,5,5]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[326,403,418,561,326,403,418,561]
     ,"dat1":[3.586e+9,4.433e+9,4.598e+9,6.171e+9,3.586e+9,4.433e+9,4.598e+9,6.171e+9]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -307,7 +441,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.0401,0.0431,0.0452,0.0533,0.0146,0.0132,0.0147,0.0141]
-      ,"dy":[0.002005,0.002155,0.00226,0.002665,7.3e-4,6.6e-4,7.35e-4,7.05e-4]   }
+      ,"dy":[0.002005,0.002155,0.00226,0.002665,7.3e-4,6.6e-4,7.35e-4,7.05e-4]
+      ,"dysys":[0.00137002,0.00147251,0.00154426,0.001821,4.9881e-4,4.50979e-4,5.02226e-4,4.81727e-4]
+      ,"dystat":[4.01e-4,4.31e-4,4.52e-4,5.33e-4,1.46e-4,1.32e-4,1.47e-4,1.41e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -322,7 +458,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546004", "isub":4, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546004", "isub":4, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -348,6 +484,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -383,14 +524,20 @@
 	,[3,561,20.9,3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546004", "Pointer":" "
- ,"Subent":"C1546004", "compiled":20070420
+ ,"Subent":"C1546004", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":2, "targ1":"He-4", "proj1":"B-11", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"2-HE-4(5-B-11,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*11"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*11"]
+ ,"wx4data":10
  ,"lx4data":2
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -405,13 +552,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.5,3]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[561,561]
     ,"dat1":[6.171e+9,6.171e+9]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -425,7 +608,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.0752,0.0209]
-      ,"dy":[0.001128,6.27e-4]   }
+      ,"dy":[0.001128,6.27e-4]
+      ,"dysys":[0.00256921,7.14049e-4]
+      ,"dystat":[5.264e-4,1.463e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -440,7 +625,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546005", "isub":5, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546005", "isub":5, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -466,6 +651,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -507,14 +697,20 @@
 	,[4,1572,35.6,3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546005", "Pointer":" "
- ,"Subent":"C1546005", "compiled":20070420
+ ,"Subent":"C1546005", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(6-C-12,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*12"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*12"]
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -529,13 +725,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.5,1.5,1.5,1.5,3,3,3,3]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[693,915,1016,1572,693,915,1016,1572]
     ,"dat1":[8.316e+9,1.098e+10,1.2192e+10,1.8864e+10,8.316e+9,1.098e+10,1.2192e+10,1.8864e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -549,7 +781,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.1101,0.1094,0.1132,0.1039,0.0349,0.0336,0.0368,0.0356]
-      ,"dy":[0.0016515,0.001641,0.001698,0.0015585,0.001047,0.001008,0.001104,0.001068]   }
+      ,"dy":[0.0016515,0.001641,0.001698,0.0015585,0.001047,0.001008,0.001104,0.001068]
+      ,"dysys":[0.00376157,0.00373766,0.00386748,0.00354975,0.00119236,0.00114795,0.00125727,0.00121628]
+      ,"dystat":[7.707e-4,7.658e-4,7.924e-4,7.273e-4,2.443e-4,2.352e-4,2.576e-4,2.492e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -564,7 +798,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546006", "isub":6, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546006", "isub":6, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -590,6 +824,13 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"1.", "max":"3.3"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error."
+		," For hydrogen target, the statistical error is about"
+		," 1.5 times the value for other targets (0.7-2.2%)"]
 	}
       ]
      ,"STATUS":[
@@ -631,14 +872,20 @@
 	,[4,1572,17.4,5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546006", "Pointer":" "
- ,"Subent":"C1546006", "compiled":20070420
+ ,"Subent":"C1546006", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"1-H-1(6-C-12,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*12"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,1.,3.3)     ADDED AS COMMON:ERR-S,PER-CENT=1.0%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*12"]
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -653,13 +900,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[5,5,5,5,5,5,5,5]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[693,915,1016,1572,693,915,1016,1572]
     ,"dat1":[8.316e+9,1.098e+10,1.2192e+10,1.8864e+10,8.316e+9,1.098e+10,1.2192e+10,1.8864e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -673,7 +956,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.0488,0.0512,0.0498,0.0509,0.0146,0.0149,0.0162,0.0174]
-      ,"dy":[0.00244,0.00256,0.00249,0.002545,7.3e-4,7.45e-4,8.1e-4,8.7e-4]   }
+      ,"dy":[0.00244,0.00256,0.00249,0.002545,7.3e-4,7.45e-4,8.1e-4,8.7e-4]
+      ,"dysys":[0.00166725,0.00174925,0.00170142,0.001739,4.9881e-4,5.09059e-4,5.53474e-4,5.94472e-4]
+      ,"dystat":[4.88e-4,5.12e-4,4.98e-4,5.09e-4,1.46e-4,1.49e-4,1.62e-4,1.74e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -688,7 +973,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546007", "isub":7, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546007", "isub":7, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -714,6 +999,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -748,14 +1038,20 @@
 	 [5,1572,69.6,1.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546007", "Pointer":" "
- ,"Subent":"C1546007", "compiled":20070420
+ ,"Subent":"C1546007", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":2, "targ1":"He-4", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"2-HE-4(6-C-12,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*12"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*12"]
+ ,"wx4data":10
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -770,13 +1066,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.5]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[1572]
     ,"dat1":[1.8864e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -790,7 +1122,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.0696]
-      ,"dy":[0.001044]   }
+      ,"dy":[0.001044]
+      ,"dysys":[0.00237789]
+      ,"dystat":[4.872e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -805,7 +1139,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546008", "isub":8, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546008", "isub":8, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -831,6 +1165,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -871,14 +1210,20 @@
 	,[3,441,13.6,5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546008", "Pointer":" "
- ,"Subent":"C1546008", "compiled":20070420
+ ,"Subent":"C1546008", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"N-14", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(7-N-14,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*14"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*14"]
+ ,"wx4data":10
  ,"lx4data":7
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -893,13 +1238,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.5,1.5,3,1.5,3,3,5]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[516,441,516,441,516,441,441]
     ,"dat1":[7.224e+9,6.174e+9,7.224e+9,6.174e+9,7.224e+9,6.174e+9,6.174e+9]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -913,7 +1294,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.1692,0.1629,0.0631,0.1602,0.0279,0.0607,0.0136]
-      ,"dy":[0.002538,0.0024435,0.001893,0.002403,8.37e-4,0.001821,6.8e-4]   }
+      ,"dy":[0.002538,0.0024435,0.001893,0.002403,8.37e-4,0.001821,6.8e-4]
+      ,"dysys":[0.00578072,0.00556548,0.00215581,0.00547324,9.53205e-4,0.00207382,4.64645e-4]
+      ,"dystat":[0.0011844,0.0011403,4.417e-4,0.0011214,1.953e-4,4.249e-4,9.52e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -928,7 +1311,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546009", "isub":9, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546009", "isub":9, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -954,6 +1337,13 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"1.", "max":"3.3"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error."
+		," For hydrogen target, the statistical error is about"
+		," 1.5 times the value for other targets (0.7-2.2%)"]
 	}
       ]
      ,"STATUS":[
@@ -994,14 +1384,20 @@
 	,[3,441,7,10]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546009", "Pointer":" "
- ,"Subent":"C1546009", "compiled":20070420
+ ,"Subent":"C1546009", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"N-14", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"1-H-1(7-N-14,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*14"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,1.,3.3)     ADDED AS COMMON:ERR-S,PER-CENT=1.0%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*14"]
+ ,"wx4data":10
  ,"lx4data":7
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1016,13 +1412,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[5,5,5,5,3,3,10]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[516,441,516,441,516,441,441]
     ,"dat1":[7.224e+9,6.174e+9,7.224e+9,6.174e+9,7.224e+9,6.174e+9,6.174e+9]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -1036,7 +1468,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.075,0.0745,0.0272,0.0645,0.0135,0.0248,0.007]
-      ,"dy":[0.00375,0.003725,0.00136,0.003225,4.05e-4,7.44e-4,7.0e-4]   }
+      ,"dy":[0.00375,0.003725,0.00136,0.003225,4.05e-4,7.44e-4,7.0e-4]
+      ,"dysys":[0.00256238,0.0025453,9.29289e-4,0.00220365,4.61228e-4,8.47293e-4,2.39155e-4]
+      ,"dystat":[7.5e-4,7.45e-4,2.72e-4,6.45e-4,1.35e-4,2.48e-4,7.0e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1051,7 +1485,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546010", "isub":10, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546010", "isub":10, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1077,6 +1511,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -1113,14 +1552,20 @@
 	,[4,516,24.7,3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546010", "Pointer":" "
- ,"Subent":"C1546010", "compiled":20070420
+ ,"Subent":"C1546010", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":2, "targ1":"He-4", "proj1":"N-14", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"2-HE-4(7-N-14,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*14"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*14"]
+ ,"wx4data":10
  ,"lx4data":3
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1135,13 +1580,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.5,3,3]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[516,516,516]
     ,"dat1":[7.224e+9,7.224e+9,7.224e+9]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -1155,7 +1636,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.1164,0.0462,0.0247]
-      ,"dy":[0.001746,0.001386,7.41e-4]   }
+      ,"dy":[0.001746,0.001386,7.41e-4]
+      ,"dysys":[0.00397681,0.00157842,8.43877e-4]
+      ,"dystat":[8.148e-4,3.234e-4,1.729e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1170,7 +1653,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546011", "isub":11, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546011", "isub":11, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1196,6 +1679,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -1245,14 +1733,20 @@
 	,[4,1563,18.2,5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546011", "Pointer":" "
- ,"Subent":"C1546011", "compiled":20070420
+ ,"Subent":"C1546011", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"O-16", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(8-O-16,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*16"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*16"]
+ ,"wx4data":10
  ,"lx4data":16
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1270,7 +1764,43 @@
     ,"dat0":[1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,3,3
 	,3,3,5,5,5,5]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -1278,7 +1808,7 @@
 	,903,1563,491,669,903,1563]
     ,"dat1":[7.856e+9,1.0704e+10,1.4448e+10,2.5008e+10,7.856e+9,1.0704e+10,1.4448e+10,2.5008e+10,7.856e+9,1.0704e+10
 	,1.4448e+10,2.5008e+10,7.856e+9,1.0704e+10,1.4448e+10,2.5008e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -1295,7 +1825,11 @@
       ,"y":[0.1464,0.1585,0.1544,0.1253,0.1462,0.1596,0.1529,0.1232,0.0547,0.0565
 	,0.0524,0.0466,0.0134,0.0173,0.0203,0.0182]
       ,"dy":[0.002196,0.0023775,0.002316,0.0018795,0.002193,0.002394,0.0022935,0.001848,0.001641,0.001695
-	,0.001572,0.001398,6.7e-4,8.65e-4,0.001015,9.1e-4]   }
+	,0.001572,0.001398,6.7e-4,8.65e-4,0.001015,9.1e-4]
+      ,"dysys":[0.00500176,0.00541516,0.00527508,0.00428088,0.00499493,0.00545274,0.00522383,0.00420913,0.00186883,0.00193032
+	,0.00179025,0.00159209,4.57812e-4,5.91055e-4,6.9355e-4,6.21804e-4]
+      ,"dystat":[0.0010248,0.0011095,0.0010808,8.771e-4,0.0010234,0.0011172,0.0010703,8.624e-4,3.829e-4,3.955e-4
+	,3.668e-4,3.262e-4,9.38e-5,1.211e-4,1.421e-4,1.274e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1312,7 +1846,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546012", "isub":12, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546012", "isub":12, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1338,6 +1872,13 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"1.", "max":"3.3"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error."
+		," For hydrogen target, the statistical error is about"
+		," 1.5 times the value for other targets (0.7-2.2%)"]
 	}
       ]
      ,"STATUS":[
@@ -1387,14 +1928,20 @@
 	,[4,1563,12.8,10]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546012", "Pointer":" "
- ,"Subent":"C1546012", "compiled":20070420
+ ,"Subent":"C1546012", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"O-16", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"1-H-1(8-O-16,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*16"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,1.,3.3)     ADDED AS COMMON:ERR-S,PER-CENT=1.0%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*16"]
+ ,"wx4data":10
  ,"lx4data":16
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1412,7 +1959,43 @@
     ,"dat0":[5,5,5,5,5,5,5,5,5,5
 	,5,5,10,10,10,10]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -1420,7 +2003,7 @@
 	,903,1563,491,669,903,1563]
     ,"dat1":[7.856e+9,1.0704e+10,1.4448e+10,2.5008e+10,7.856e+9,1.0704e+10,1.4448e+10,2.5008e+10,7.856e+9,1.0704e+10
 	,1.4448e+10,2.5008e+10,7.856e+9,1.0704e+10,1.4448e+10,2.5008e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -1437,7 +2020,11 @@
       ,"y":[0.071,0.0706,0.0686,0.0649,0.0667,0.0648,0.0617,0.0648,0.0238,0.0251
 	,0.0228,0.0264,0.0086,0.0092,0.0105,0.0128]
       ,"dy":[0.00355,0.00353,0.00343,0.003245,0.003335,0.00324,0.003085,0.00324,0.00119,0.001255
-	,0.00114,0.00132,8.6e-4,9.2e-4,0.00105,0.00128]   }
+	,0.00114,0.00132,8.6e-4,9.2e-4,0.00105,0.00128]
+      ,"dysys":[0.00242572,0.00241205,0.00234372,0.00221731,0.00227881,0.00221389,0.00210798,0.00221389,8.13128e-4,8.57543e-4
+	,7.78963e-4,9.01957e-4,2.93819e-4,3.14318e-4,3.58733e-4,4.37313e-4]
+      ,"dystat":[7.1e-4,7.06e-4,6.86e-4,6.49e-4,6.67e-4,6.48e-4,6.17e-4,6.48e-4,2.38e-4,2.51e-4
+	,2.28e-4,2.64e-4,8.6e-5,9.2e-5,1.05e-4,1.28e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1454,7 +2041,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546013", "isub":13, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546013", "isub":13, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1480,6 +2067,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -1519,14 +2111,20 @@
 	,[5,1563,4.01,3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546013", "Pointer":" "
- ,"Subent":"C1546013", "compiled":20070420
+ ,"Subent":"C1546013", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":2, "targ1":"He-4", "proj1":"O-16", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"2-HE-4(8-O-16,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*16"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*16"]
+ ,"wx4data":10
  ,"lx4data":6
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1541,13 +2139,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.5,1.5,1.5,1.5,3,3]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[491,1563,491,1563,491,1563]
     ,"dat1":[7.856e+9,2.5008e+10,7.856e+9,2.5008e+10,7.856e+9,2.5008e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -1561,7 +2195,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.0903,0.0803,0.0983,0.0895,0.0454,0.00401]
-      ,"dy":[0.0013545,0.0012045,0.0014745,0.0013425,0.001362,1.203e-4]   }
+      ,"dy":[0.0013545,0.0012045,0.0014745,0.0013425,0.001362,1.203e-4]
+      ,"dysys":[0.0030851,0.00274345,0.00335842,0.00305777,0.00155109,1.37002e-4]
+      ,"dystat":[6.321e-4,5.621e-4,6.881e-4,6.265e-4,3.178e-4,2.807e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1576,7 +2212,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546014", "isub":14, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546014", "isub":14, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1602,6 +2238,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -1655,14 +2296,20 @@
 	,[5,1057,57.2,5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546014", "Pointer":" "
- ,"Subent":"C1546014", "compiled":20070420
+ ,"Subent":"C1546014", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"Ne-20", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(10-NE-20,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*20"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*20"]
+ ,"wx4data":10
  ,"lx4data":20
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1680,7 +2327,43 @@
     ,"dat0":[1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,3,3
 	,3,3,3,3,3,3,5,5,5,5]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -1688,7 +2371,7 @@
 	,608,1057,468,599,608,1057,468,599,608,1057]
     ,"dat1":[9.36e+9,1.198e+10,1.216e+10,2.114e+10,9.36e+9,1.198e+10,1.216e+10,2.114e+10,9.36e+9,1.198e+10
 	,1.216e+10,2.114e+10,9.36e+9,1.198e+10,1.216e+10,2.114e+10,9.36e+9,1.198e+10,1.216e+10,2.114e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -1705,7 +2388,11 @@
       ,"y":[0.1063,0.0916,0.0969,0.0876,0.181,0.1506,0.1595,0.1401,0.1345,0.1111
 	,0.1188,0.103,0.1351,0.1259,0.1202,0.1198,0.0537,0.0526,0.0536,0.0572]
       ,"dy":[0.0015945,0.001374,0.0014535,0.001314,0.002715,0.002259,0.0023925,0.0021015,0.004035,0.003333
-	,0.003564,0.00309,0.004053,0.003777,0.003606,0.003594,0.002685,0.00263,0.00268,0.00286]   }
+	,0.003564,0.00309,0.004053,0.003777,0.003606,0.003594,0.002685,0.00263,0.00268,0.00286]
+      ,"dysys":[0.00363174,0.00312952,0.00331059,0.00299286,0.00618387,0.00514526,0.00544932,0.00478652,0.0045952,0.00379574
+	,0.00405881,0.003519,0.0046157,0.00430138,0.00410664,0.00409297,0.00183466,0.00179708,0.00183125,0.00195424]
+      ,"dystat":[7.441e-4,6.412e-4,6.783e-4,6.132e-4,0.001267,0.0010542,0.0011165,9.807e-4,9.415e-4,7.777e-4
+	,8.316e-4,7.21e-4,9.457e-4,8.813e-4,8.414e-4,8.386e-4,3.759e-4,3.682e-4,3.752e-4,4.004e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1722,7 +2409,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546015", "isub":15, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546015", "isub":15, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1748,6 +2435,13 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"1.", "max":"3.3"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error."
+		," For hydrogen target, the statistical error is about"
+		," 1.5 times the value for other targets (0.7-2.2%)"]
 	}
       ]
      ,"STATUS":[
@@ -1801,14 +2495,20 @@
 	,[5,1057,22.1,10]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546015", "Pointer":" "
- ,"Subent":"C1546015", "compiled":20070420
+ ,"Subent":"C1546015", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"Ne-20", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"1-H-1(10-NE-20,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*20"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,1.,3.3)     ADDED AS COMMON:ERR-S,PER-CENT=1.0%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*20"]
+ ,"wx4data":10
  ,"lx4data":20
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1826,7 +2526,43 @@
     ,"dat0":[5,5,5,5,5,5,5,5,5,5
 	,5,5,5,5,5,5,10,10,10,10]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -1834,7 +2570,7 @@
 	,608,1057,468,599,608,1057,468,599,608,1057]
     ,"dat1":[9.36e+9,1.198e+10,1.216e+10,2.114e+10,9.36e+9,1.198e+10,1.216e+10,2.114e+10,9.36e+9,1.198e+10
 	,1.216e+10,2.114e+10,9.36e+9,1.198e+10,1.216e+10,2.114e+10,9.36e+9,1.198e+10,1.216e+10,2.114e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -1851,7 +2587,11 @@
       ,"y":[0.0446,0.0487,0.0448,0.0471,0.0816,0.0746,0.0677,0.0763,0.0612,0.0601
 	,0.0623,0.0567,0.0566,0.0591,0.0565,0.0624,0.0131,0.0143,0.0176,0.0221]
       ,"dy":[0.00223,0.002435,0.00224,0.002355,0.00408,0.00373,0.003385,0.003815,0.00306,0.003005
-	,0.003115,0.002835,0.00283,0.002955,0.002825,0.00312,0.00131,0.00143,0.00176,0.00221]   }
+	,0.003115,0.002835,0.00283,0.002955,0.002825,0.00312,0.00131,0.00143,0.00176,0.00221]
+      ,"dysys":[0.00152376,0.00166384,0.00153059,0.00160917,0.00278787,0.00254871,0.00231297,0.00260679,0.0020909,0.00205332
+	,0.00212848,0.00193716,0.00193374,0.00201915,0.00193032,0.0021319,4.47562e-4,4.8856e-4,6.01305e-4,7.55047e-4]
+      ,"dystat":[4.46e-4,4.87e-4,4.48e-4,4.71e-4,8.16e-4,7.46e-4,6.77e-4,7.63e-4,6.12e-4,6.01e-4
+	,6.23e-4,5.67e-4,5.66e-4,5.91e-4,5.65e-4,6.24e-4,1.31e-4,1.43e-4,1.76e-4,2.21e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1868,7 +2608,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546016", "isub":16, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546016", "isub":16, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1894,6 +2634,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -1932,14 +2677,20 @@
 	,[6,461,101.2,3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546016", "Pointer":" "
- ,"Subent":"C1546016", "compiled":20070420
+ ,"Subent":"C1546016", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"Na-23", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(11-NA-23,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*23"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*23"]
+ ,"wx4data":10
  ,"lx4data":5
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1954,13 +2705,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[3,3,3,3,3]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[461,461,461,461,461]
     ,"dat1":[1.0603e+10,1.0603e+10,1.0603e+10,1.0603e+10,1.0603e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -1974,7 +2761,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.1323,0.0621,0.1061,0.0893,0.1012]
-      ,"dy":[0.003969,0.001863,0.003183,0.002679,0.003036]   }
+      ,"dy":[0.003969,0.001863,0.003183,0.002679,0.003036]
+      ,"dysys":[0.00452004,0.00212165,0.00362491,0.00305094,0.0034575]
+      ,"dystat":[9.261e-4,4.347e-4,7.427e-4,6.251e-4,7.084e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1989,7 +2778,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546017", "isub":17, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546017", "isub":17, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2015,6 +2804,13 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"1.", "max":"3.3"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error."
+		," For hydrogen target, the statistical error is about"
+		," 1.5 times the value for other targets (0.7-2.2%)"]
 	}
       ]
      ,"STATUS":[
@@ -2053,14 +2849,20 @@
 	,[6,461,47.8,5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546017", "Pointer":" "
- ,"Subent":"C1546017", "compiled":20070420
+ ,"Subent":"C1546017", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"Na-23", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"1-H-1(11-NA-23,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*23"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,1.,3.3)     ADDED AS COMMON:ERR-S,PER-CENT=1.0%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*23"]
+ ,"wx4data":10
  ,"lx4data":5
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2075,13 +2877,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[5,5,5,5,5]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[461,461,461,461,461]
     ,"dat1":[1.0603e+10,1.0603e+10,1.0603e+10,1.0603e+10,1.0603e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -2095,7 +2933,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.0809,0.0357,0.0618,0.0407,0.0478]
-      ,"dy":[0.004045,0.001785,0.00309,0.002035,0.00239]   }
+      ,"dy":[0.004045,0.001785,0.00309,0.002035,0.00239]
+      ,"dysys":[0.00276395,0.00121969,0.0021114,0.00139052,0.00163309]
+      ,"dystat":[8.09e-4,3.57e-4,6.18e-4,4.07e-4,4.78e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -2110,7 +2950,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546018", "isub":18, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546018", "isub":18, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2136,6 +2976,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -2197,14 +3042,20 @@
 	,[5,1455,48.6,5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546018", "Pointer":" "
- ,"Subent":"C1546018", "compiled":20070420
+ ,"Subent":"C1546018", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"Mg-24", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(12-MG-24,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*24"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*24"]
+ ,"wx4data":10
  ,"lx4data":28
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2225,7 +3076,43 @@
 	,3,3,1.5,1.5,1.5,1.5,3,3,3,3
 	,3,3,3,3,5,5,10,5]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -2235,7 +3122,7 @@
     ,"dat1":[7.416e+9,1.1544e+10,1.7736e+10,3.492e+10,7.416e+9,1.1544e+10,1.7736e+10,3.492e+10,7.416e+9,1.1544e+10
 	,1.7736e+10,3.492e+10,7.416e+9,1.1544e+10,1.7736e+10,3.492e+10,7.416e+9,1.1544e+10,1.7736e+10,3.492e+10
 	,7.416e+9,1.1544e+10,1.7736e+10,3.492e+10,7.416e+9,1.1544e+10,1.7736e+10,3.492e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -2255,7 +3142,13 @@
 	,0.1143,0.1204,0.1086,0.1066,0.0698,0.0481,0.0456,0.0486]
       ,"dy":[0.002217,0.0018645,0.0017415,0.001746,0.001995,0.001665,0.001533,0.0015225,0.001743,0.001689
 	,0.001461,0.00144,0.002049,0.0017955,0.0015525,0.0015975,0.002694,0.002682,0.002277,0.002214
-	,0.003429,0.003612,0.003258,0.003198,0.00349,0.002405,0.00456,0.00243]   }
+	,0.003429,0.003612,0.003258,0.003198,0.00349,0.002405,0.00456,0.00243]
+      ,"dysys":[0.00504959,0.00424671,0.00396656,0.00397681,0.00454395,0.00379232,0.00349167,0.00346775,0.00198499,0.00192349
+	,0.00166384,0.00163992,0.00466694,0.00408956,0.00353608,0.00363858,0.00306802,0.00305435,0.00259313,0.00252138
+	,0.00390506,0.00411347,0.00371032,0.00364199,0.00238472,0.00164334,0.00155793,0.00166042]
+      ,"dystat":[0.0010346,8.701e-4,8.127e-4,8.148e-4,9.31e-4,7.77e-4,7.154e-4,7.105e-4,4.067e-4,3.941e-4
+	,3.409e-4,3.36e-4,9.562e-4,8.379e-4,7.245e-4,7.455e-4,6.286e-4,6.258e-4,5.313e-4,5.166e-4
+	,8.001e-4,8.428e-4,7.602e-4,7.462e-4,4.886e-4,3.367e-4,3.192e-4,3.402e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -2274,7 +3167,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546019", "isub":19, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546019", "isub":19, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2300,6 +3193,13 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"1.", "max":"3.3"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error."
+		," For hydrogen target, the statistical error is about"
+		," 1.5 times the value for other targets (0.7-2.2%)"]
 	}
       ]
      ,"STATUS":[
@@ -2361,14 +3261,20 @@
 	,[5,1455,24.9,10]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546019", "Pointer":" "
- ,"Subent":"C1546019", "compiled":20070420
+ ,"Subent":"C1546019", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"Mg-24", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"1-H-1(12-MG-24,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*24"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,1.,3.3)     ADDED AS COMMON:ERR-S,PER-CENT=1.0%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*24"]
+ ,"wx4data":10
  ,"lx4data":28
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2389,7 +3295,43 @@
 	,5,5,5,5,5,5,5,5,5,5
 	,5,5,5,5,10,10,10,10]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -2399,7 +3341,7 @@
     ,"dat1":[7.416e+9,1.1544e+10,1.7736e+10,3.492e+10,7.416e+9,1.1544e+10,1.7736e+10,3.492e+10,7.416e+9,1.1544e+10
 	,1.7736e+10,3.492e+10,7.416e+9,1.1544e+10,1.7736e+10,3.492e+10,7.416e+9,1.1544e+10,1.7736e+10,3.492e+10
 	,7.416e+9,1.1544e+10,1.7736e+10,3.492e+10,7.416e+9,1.1544e+10,1.7736e+10,3.492e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -2419,7 +3361,13 @@
 	,0.0381,0.0404,0.0432,0.0466,0.0115,0.0133,0.0158,0.0249]
       ,"dy":[0.004025,0.00427,0.00411,0.004035,0.00324,0.003205,0.00316,0.003135,0.00116,0.00142
 	,0.001455,0.001585,0.00292,0.00298,0.00293,0.003005,0.001685,0.00178,0.00185,0.002055
-	,0.001905,0.00202,0.00216,0.00233,0.00115,0.00133,0.00158,0.00249]   }
+	,0.001905,0.00202,0.00216,0.00233,0.00115,0.00133,0.00158,0.00249]
+      ,"dysys":[0.00275029,0.00291769,0.00280837,0.00275712,0.00221389,0.00218998,0.00215923,0.00214215,7.92629e-4,9.70287e-4
+	,9.94203e-4,0.00108303,0.00199524,0.00203624,0.00200207,0.00205332,0.00115136,0.00121628,0.00126411,0.00140418
+	,0.00130169,0.00138027,0.00147593,0.00159209,3.92898e-4,4.54395e-4,5.39808e-4,8.5071e-4]
+      ,"dystat":[8.05e-4,8.54e-4,8.22e-4,8.07e-4,6.48e-4,6.41e-4,6.32e-4,6.27e-4,2.32e-4,2.84e-4
+	,2.91e-4,3.17e-4,5.84e-4,5.96e-4,5.86e-4,6.01e-4,3.37e-4,3.56e-4,3.7e-4,4.11e-4
+	,3.81e-4,4.04e-4,4.32e-4,4.66e-4,1.15e-4,1.33e-4,1.58e-4,2.49e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -2438,7 +3386,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546020", "isub":20, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546020", "isub":20, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2464,6 +3412,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -2514,14 +3467,20 @@
 	,[5,37.6,10]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546020", "Pointer":" "
- ,"Subent":"C1546020", "compiled":20070420
+ ,"Subent":"C1546020", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"Al-27", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(13-AL-27,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*27"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*27"]
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2536,13 +3495,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.5,1.5,1.5,1.5,3,3,5,10]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"com0":582
     ,"com1":1.5714e+10}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -2556,7 +3551,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.1821,0.0956,0.0894,0.0376,0.0815,0.0602,0.0741,0.0376]
-      ,"dy":[0.0027315,0.001434,0.001341,5.64e-4,0.002445,0.001806,0.003705,0.00376]   }
+      ,"dy":[0.0027315,0.001434,0.001341,5.64e-4,0.002445,0.001806,0.003705,0.00376]
+      ,"dysys":[0.00622145,0.00326618,0.00305435,0.00128461,0.00278445,0.00205674,0.00253163,0.00128461]
+      ,"dystat":[0.0012747,6.692e-4,6.258e-4,2.632e-4,5.705e-4,4.214e-4,5.187e-4,2.632e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -2571,7 +3568,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546021", "isub":21, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546021", "isub":21, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2597,6 +3594,13 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"1.", "max":"3.3"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error."
+		," For hydrogen target, the statistical error is about"
+		," 1.5 times the value for other targets (0.7-2.2%)"]
 	}
       ]
      ,"STATUS":[
@@ -2647,14 +3651,20 @@
 	,[5,8.8,20]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546021", "Pointer":" "
- ,"Subent":"C1546021", "compiled":20070420
+ ,"Subent":"C1546021", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"Al-27", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"1-H-1(13-AL-27,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*27"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,1.,3.3)     ADDED AS COMMON:ERR-S,PER-CENT=1.0%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*27"]
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2669,13 +3679,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[5,5,5,10,5,10,10,20]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"com0":582
     ,"com1":1.5714e+10}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -2689,7 +3735,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.1121,0.0513,0.0501,0.0169,0.0443,0.0242,0.0295,0.0088]
-      ,"dy":[0.005605,0.002565,0.002505,0.00169,0.002215,0.00242,0.00295,0.00176]   }
+      ,"dy":[0.005605,0.002565,0.002505,0.00169,0.002215,0.00242,0.00295,0.00176]
+      ,"dysys":[0.0038299,0.00175267,0.00171167,5.77389e-4,0.00151351,8.26794e-4,0.00100787,3.00652e-4]
+      ,"dystat":[0.001121,5.13e-4,5.01e-4,1.69e-4,4.43e-4,2.42e-4,2.95e-4,8.8e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -2704,7 +3752,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546022", "isub":22, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546022", "isub":22, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2730,6 +3778,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -2779,14 +3832,20 @@
 	,[6,66.1,5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546022", "Pointer":" "
- ,"Subent":"C1546022", "compiled":20070420
+ ,"Subent":"C1546022", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":2, "targ1":"He-4", "proj1":"Al-27", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"2-HE-4(13-AL-27,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*27"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*27"]
+ ,"wx4data":10
  ,"lx4data":7
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2801,13 +3860,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.5,1.5,1.5,5,10,10,5]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"com0":582
     ,"com1":1.5714e+10}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -2821,7 +3916,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.1203,0.0719,0.0717,0.0336,0.0586,0.0462,0.0661]
-      ,"dy":[0.0018045,0.0010785,0.0010755,0.00168,0.00586,0.00462,0.003305]   }
+      ,"dy":[0.0018045,0.0010785,0.0010755,0.00168,0.00586,0.00462,0.003305]
+      ,"dysys":[0.00411006,0.00245647,0.00244963,0.00114795,0.00200207,0.00157842,0.00225831]
+      ,"dystat":[8.421e-4,5.033e-4,5.019e-4,2.352e-4,4.102e-4,3.234e-4,4.627e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -2836,7 +3933,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546023", "isub":23, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546023", "isub":23, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2862,6 +3959,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -2919,14 +4021,20 @@
 	,[6,1296,71.2,5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546023", "Pointer":" "
- ,"Subent":"C1546023", "compiled":20070420
+ ,"Subent":"C1546023", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"Si-28", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(14-SI-28,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*28"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*28"]
+ ,"wx4data":10
  ,"lx4data":24
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2947,7 +4055,43 @@
 	,3,3,5,5,5,3,3,3,5,5
 	,5,5,5,5]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -2957,7 +4101,7 @@
     ,"dat1":[1.4084e+10,2.156e+10,3.6288e+10,1.4084e+10,2.156e+10,3.6288e+10,1.4084e+10,2.156e+10,3.6288e+10,1.4084e+10
 	,2.156e+10,3.6288e+10,1.4084e+10,2.156e+10,3.6288e+10,1.4084e+10,2.156e+10,3.6288e+10,1.4084e+10,2.156e+10
 	,3.6288e+10,1.4084e+10,2.156e+10,3.6288e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -2977,7 +4121,13 @@
 	,0.0439,0.0725,0.0742,0.0712]
       ,"dy":[0.001953,0.002361,0.0024015,0.0021135,0.0024405,0.002463,0.002052,0.001932,0.001569,0.002166
 	,0.001875,0.001584,0.00156,0.00151,0.00126,0.002049,0.001959,0.001602,0.002015,0.002415
-	,0.002195,0.003625,0.00371,0.00356]   }
+	,0.002195,0.003625,0.00371,0.00356]
+      ,"dysys":[0.00444829,0.00537758,0.00546982,0.00481385,0.00555865,0.0056099,0.00233689,0.00220023,0.00178683,0.00246672
+	,0.00213532,0.00180391,0.00106595,0.00103178,8.60959e-4,0.00233347,0.00223098,0.00182441,0.00137685,0.00165017
+	,0.00149985,0.00247697,0.00253505,0.00243255]
+      ,"dystat":[9.114e-4,0.0011018,0.0011207,9.863e-4,0.0011389,0.0011494,4.788e-4,4.508e-4,3.661e-4,5.054e-4
+	,4.375e-4,3.696e-4,2.184e-4,2.114e-4,1.764e-4,4.781e-4,4.571e-4,3.738e-4,2.821e-4,3.381e-4
+	,3.073e-4,5.075e-4,5.194e-4,4.984e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -2996,7 +4146,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546024", "isub":24, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546024", "isub":24, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3022,6 +4172,13 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"1.", "max":"3.3"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error."
+		," For hydrogen target, the statistical error is about"
+		," 1.5 times the value for other targets (0.7-2.2%)"]
 	}
       ]
      ,"STATUS":[
@@ -3079,14 +4236,20 @@
 	,[6,1296,31.5,10]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546024", "Pointer":" "
- ,"Subent":"C1546024", "compiled":20070420
+ ,"Subent":"C1546024", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"Si-28", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"1-H-1(14-SI-28,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*28"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,1.,3.3)     ADDED AS COMMON:ERR-S,PER-CENT=1.0%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*28"]
+ ,"wx4data":10
  ,"lx4data":24
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -3107,7 +4270,43 @@
 	,5,5,10,10,10,5,5,5,10,10
 	,10,10,10,10]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -3117,7 +4316,7 @@
     ,"dat1":[1.4084e+10,2.156e+10,3.6288e+10,1.4084e+10,2.156e+10,3.6288e+10,1.4084e+10,2.156e+10,3.6288e+10,1.4084e+10
 	,2.156e+10,3.6288e+10,1.4084e+10,2.156e+10,3.6288e+10,1.4084e+10,2.156e+10,3.6288e+10,1.4084e+10,2.156e+10
 	,3.6288e+10,1.4084e+10,2.156e+10,3.6288e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -3137,7 +4336,13 @@
 	,0.0202,0.0228,0.0245,0.0315]
       ,"dy":[0.00433,0.004145,0.003885,0.004175,0.0038,0.003755,0.001865,0.001825,0.001885,0.0018
 	,0.00179,0.00195,0.00156,0.00158,0.00178,0.001775,0.00173,0.001815,0.00161,0.0018
-	,0.00202,0.00228,0.00245,0.00315]   }
+	,0.00202,0.00228,0.00245,0.00315]
+      ,"dysys":[0.00295869,0.00283228,0.00265462,0.00285278,0.00259654,0.00256579,0.00127436,0.00124702,0.00128802,0.00122994
+	,0.00122311,0.00133244,5.32975e-4,5.39808e-4,6.08138e-4,0.00121286,0.00118211,0.00124019,5.50057e-4,6.14971e-4
+	,6.90134e-4,7.78963e-4,8.37044e-4,0.0010762]
+      ,"dystat":[8.66e-4,8.29e-4,7.77e-4,8.35e-4,7.6e-4,7.51e-4,3.73e-4,3.65e-4,3.77e-4,3.6e-4
+	,3.58e-4,3.9e-4,1.56e-4,1.58e-4,1.78e-4,3.55e-4,3.46e-4,3.63e-4,1.61e-4,1.8e-4
+	,2.02e-4,2.28e-4,2.45e-4,3.15e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -3156,7 +4361,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546025", "isub":25, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546025", "isub":25, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3182,6 +4387,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -3235,14 +4445,20 @@
 	,[6,1149,78.3,5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546025", "Pointer":" "
- ,"Subent":"C1546025", "compiled":20070420
+ ,"Subent":"C1546025", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"S-32", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(16-S-32,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*32"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*32"]
+ ,"wx4data":10
  ,"lx4data":20
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -3260,7 +4476,43 @@
     ,"dat0":[1.5,1.5,1.5,1.5,3,3,3,3,5,5
 	,3,3,5,5,3,5,3,3,5,5]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -3268,7 +4520,7 @@
 	,649,1149,649,1149,649,1149,649,1149,649,1149]
     ,"dat1":[2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10
 	,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -3285,7 +4537,11 @@
       ,"y":[0.1272,0.1213,0.1521,0.1509,0.0888,0.0839,0.1038,0.1013,0.0581,0.0553
 	,0.0603,0.0582,0.0263,0.0207,0.0653,0.0563,0.0631,0.0527,0.0719,0.0783]
       ,"dy":[0.001908,0.0018195,0.0022815,0.0022635,0.002664,0.002517,0.003114,0.003039,0.002905,0.002765
-	,0.001809,0.001746,0.001315,0.001035,0.001959,0.002815,0.001893,0.001581,0.003595,0.003915]   }
+	,0.001809,0.001746,0.001315,0.001035,0.001959,0.002815,0.001893,0.001581,0.003595,0.003915]
+      ,"dysys":[0.00434579,0.00414422,0.0051965,0.00515551,0.00303386,0.00286645,0.00354633,0.00346092,0.00198499,0.00188933
+	,0.00206015,0.00198841,8.98541e-4,7.07216e-4,0.00223098,0.00192349,0.00215581,0.0018005,0.00245647,0.00267512]
+      ,"dystat":[8.904e-4,8.491e-4,0.0010647,0.0010563,6.216e-4,5.873e-4,7.266e-4,7.091e-4,4.067e-4,3.871e-4
+	,4.221e-4,4.074e-4,1.841e-4,1.449e-4,4.571e-4,3.941e-4,4.417e-4,3.689e-4,5.033e-4,5.481e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -3302,7 +4558,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546026", "isub":26, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546026", "isub":26, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3328,6 +4584,13 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"1.", "max":"3.3"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error."
+		," For hydrogen target, the statistical error is about"
+		," 1.5 times the value for other targets (0.7-2.2%)"]
 	}
       ]
      ,"STATUS":[
@@ -3381,14 +4644,20 @@
 	,[6,1149,33.3,10]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546026", "Pointer":" "
- ,"Subent":"C1546026", "compiled":20070420
+ ,"Subent":"C1546026", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"S-32", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"1-H-1(16-S-32,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*32"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,1.,3.3)     ADDED AS COMMON:ERR-S,PER-CENT=1.0%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*32"]
+ ,"wx4data":10
  ,"lx4data":20
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -3406,7 +4675,43 @@
     ,"dat0":[5,5,5,5,5,5,5,5,10,10
 	,5,5,10,10,5,5,5,5,10,10]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -3414,7 +4719,7 @@
 	,649,1149,649,1149,649,1149,649,1149,649,1149]
     ,"dat1":[2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10
 	,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10,2.0768e+10,3.6768e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -3431,7 +4736,11 @@
       ,"y":[0.0796,0.0712,0.1038,0.0858,0.0531,0.046,0.0697,0.0567,0.0336,0.0296
 	,0.0295,0.0285,0.0139,0.0132,0.0228,0.0337,0.0163,0.0192,0.0216,0.0333]
       ,"dy":[0.00398,0.00356,0.00519,0.00429,0.002655,0.0023,0.003485,0.002835,0.00336,0.00296
-	,0.001475,0.001425,0.00139,0.00132,0.00114,0.001685,8.15e-4,9.6e-4,0.00216,0.00333]   }
+	,0.001475,0.001425,0.00139,0.00132,0.00114,0.001685,8.15e-4,9.6e-4,0.00216,0.00333]
+      ,"dysys":[0.00271954,0.00243255,0.00354633,0.00293136,0.00181416,0.00157159,0.0023813,0.00193716,0.00114795,0.00101129
+	,0.00100787,9.73704e-4,4.74894e-4,4.50979e-4,7.78963e-4,0.00115136,5.5689e-4,6.55969e-4,7.37965e-4,0.0011377]
+      ,"dystat":[7.96e-4,7.12e-4,0.001038,8.58e-4,5.31e-4,4.6e-4,6.97e-4,5.67e-4,3.36e-4,2.96e-4
+	,2.95e-4,2.85e-4,1.39e-4,1.32e-4,2.28e-4,3.37e-4,1.63e-4,1.92e-4,2.16e-4,3.33e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -3448,7 +4757,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546027", "isub":27, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546027", "isub":27, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3474,6 +4783,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -3527,14 +4841,20 @@
 	,[8,792,47.5,10]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546027", "Pointer":" "
- ,"Subent":"C1546027", "compiled":20070420
+ ,"Subent":"C1546027", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"Ar-40", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(18-AR-40,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*40"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*40"]
+ ,"wx4data":10
  ,"lx4data":20
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -3552,7 +4872,43 @@
     ,"dat0":[1.5,1.5,1.5,1.5,3,3,3,3,5,5
 	,3,3,5,5,5,5,10,10,10,10]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -3560,7 +4916,7 @@
 	,521,792,521,792,521,792,521,792,521,792]
     ,"dat1":[2.084e+10,3.168e+10,2.084e+10,3.168e+10,2.084e+10,3.168e+10,2.084e+10,3.168e+10,2.084e+10,3.168e+10
 	,2.084e+10,3.168e+10,2.084e+10,3.168e+10,2.084e+10,3.168e+10,2.084e+10,3.168e+10,2.084e+10,3.168e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -3577,7 +4933,11 @@
       ,"y":[0.1807,0.1867,0.1218,0.1247,0.0933,0.0879,0.0971,0.0931,0.0693,0.062
 	,0.0656,0.0588,0.0446,0.0441,0.0375,0.0407,0.0317,0.0251,0.0506,0.0475]
       ,"dy":[0.0027105,0.0028005,0.001827,0.0018705,0.002799,0.002637,0.002913,0.002793,0.003465,0.0031
-	,0.001968,0.001764,0.00223,0.002205,0.001875,0.002035,0.00317,0.00251,0.00506,0.00475]   }
+	,0.001968,0.001764,0.00223,0.002205,0.001875,0.002035,0.00317,0.00251,0.00506,0.00475]
+      ,"dysys":[0.00617362,0.00637861,0.0041613,0.00426038,0.0031876,0.00300311,0.00331743,0.00318077,0.00236764,0.00211823
+	,0.00224123,0.0020089,0.00152376,0.00150668,0.00128119,0.00139052,0.00108303,8.57543e-4,0.00172875,0.00162284]
+      ,"dystat":[0.0012649,0.0013069,8.526e-4,8.729e-4,6.531e-4,6.153e-4,6.797e-4,6.517e-4,4.851e-4,4.34e-4
+	,4.592e-4,4.116e-4,3.122e-4,3.087e-4,2.625e-4,2.849e-4,2.219e-4,1.757e-4,3.542e-4,3.325e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -3594,19 +4954,19 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546028", "isub":28, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546028", "isub":28, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"6-C-12(18-AR-40,X)ELEM,,SIG"
+	,"x4code":{"code":"1-H-1(18-AR-40,X)ELEM,,SIG"
 	    ,"c4reac":"(18-AR-40,X)ELEM,,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"6-C-12(18-AR-40,X)ELEM,,SIG"
+	    {"code":"1-H-1(18-AR-40,X)ELEM,,SIG"
 		,"Reac":"18-AR-40,X"
-		,"SF1":"6-C-12","Targ":{"code":"6-C-12","nam":"C-12","ZA":6012}
+		,"SF1":"1-H-1","Targ":{"code":"1-H-1","nam":"H-1","ZA":1001}
 		,"SF2":"18-AR-40","Proj":{"code":"18-AR-40","nam":"Ar-40","ZA":18040}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"ELEM","Prod":{"code":"ELEM","nam":"elem"}
@@ -3621,6 +4981,13 @@
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"1.", "max":"3.3"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error."
+		," For hydrogen target, the statistical error is about"
+		," 1.5 times the value for other targets (0.7-2.2%)"]
+	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
@@ -3628,6 +4995,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 2"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160705A", "date":"20160705", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SF1 (target) corrected to H-1."]
 	}
       ]
     }
@@ -3673,14 +5047,20 @@
 	,[8,792,10.3,20]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546028", "Pointer":" "
- ,"Subent":"C1546028", "compiled":20070420
+ ,"Subent":"C1546028", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
- ,"zTarg1":6, "targ1":"C-12", "proj1":"Ar-40", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
+ ,"zTarg1":1, "targ1":"H-1", "proj1":"Ar-40", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"6-C-12(18-AR-40,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*40"]
- ,"wx4data":4
+ ,"reacode":"1-H-1(18-AR-40,X)ELEM,,SIG"
+ ,"compNotes":["ERR-ANALYS:(ERR-S,1.,3.3)     ADDED AS COMMON:ERR-S,PER-CENT=1.0%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*40"]
+ ,"wx4data":10
  ,"lx4data":20
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -3698,7 +5078,43 @@
     ,"dat0":[5,5,5,5,5,5,5,5,10,10
 	,5,5,10,10,10,10,20,20,20,20]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -3706,7 +5122,7 @@
 	,521,792,521,792,521,792,521,792,521,792]
     ,"dat1":[2.084e+10,3.168e+10,2.084e+10,3.168e+10,2.084e+10,3.168e+10,2.084e+10,3.168e+10,2.084e+10,3.168e+10
 	,2.084e+10,3.168e+10,2.084e+10,3.168e+10,2.084e+10,3.168e+10,2.084e+10,3.168e+10,2.084e+10,3.168e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -3723,7 +5139,11 @@
       ,"y":[0.1345,0.1246,0.1043,0.0876,0.074,0.0656,0.0756,0.0736,0.0466,0.0456
 	,0.0378,0.0417,0.0203,0.0221,0.0102,0.0156,0.0056,0.0122,0.0061,0.0103]
       ,"dy":[0.006725,0.00623,0.005215,0.00438,0.0037,0.00328,0.00378,0.00368,0.00466,0.00456
-	,0.00189,0.002085,0.00203,0.00221,0.00102,0.00156,0.00112,0.00244,0.00122,0.00206]   }
+	,0.00189,0.002085,0.00203,0.00221,0.00102,0.00156,0.00112,0.00244,0.00122,0.00206]
+      ,"dysys":[0.0045952,0.00425696,0.00356341,0.00299286,0.00252821,0.00224123,0.00258288,0.00251455,0.00159209,0.00155793
+	,0.00129144,0.00142468,6.9355e-4,7.55047e-4,3.48483e-4,5.32975e-4,1.91324e-4,4.16814e-4,2.08407e-4,3.519e-4]
+      ,"dystat":[0.001345,0.001246,0.001043,8.76e-4,7.4e-4,6.56e-4,7.56e-4,7.36e-4,4.66e-4,4.56e-4
+	,3.78e-4,4.17e-4,2.03e-4,2.21e-4,1.02e-4,1.56e-4,5.6e-5,1.22e-4,6.1e-5,1.03e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -3740,7 +5160,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546029", "isub":29, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546029", "isub":29, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3766,6 +5186,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -3809,14 +5234,20 @@
 	,[10,672,35.4,10]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546029", "Pointer":" "
- ,"Subent":"C1546029", "compiled":20070420
+ ,"Subent":"C1546029", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"Ca-40", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(20-CA-40,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*40"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*40"]
+ ,"wx4data":10
  ,"lx4data":10
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -3831,13 +5262,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.5,1.5,3,3,5,3,5,5,10,10]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[672,672,672,672,672,672,672,672,672,672]
     ,"dat1":[2.688e+10,2.688e+10,2.688e+10,2.688e+10,2.688e+10,2.688e+10,2.688e+10,2.688e+10,2.688e+10,2.688e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -3851,7 +5318,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.1046,0.1404,0.0793,0.1128,0.0577,0.1057,0.0538,0.0683,0.0379,0.0354]
-      ,"dy":[0.001569,0.002106,0.002379,0.003384,0.002885,0.003171,0.00269,0.003415,0.00379,0.00354]   }
+      ,"dy":[0.001569,0.002106,0.002379,0.003384,0.002885,0.003171,0.00269,0.003415,0.00379,0.00354]
+      ,"dysys":[0.00357366,0.00479677,0.00270929,0.00385382,0.00197132,0.00361124,0.00183808,0.00233347,0.00129486,0.00120944]
+      ,"dystat":[7.322e-4,9.828e-4,5.551e-4,7.896e-4,4.039e-4,7.399e-4,3.766e-4,4.781e-4,2.653e-4,2.478e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -3866,7 +5335,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546030", "isub":30, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546030", "isub":30, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3892,6 +5361,13 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"1.", "max":"3.3"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error."
+		," For hydrogen target, the statistical error is about"
+		," 1.5 times the value for other targets (0.7-2.2%)"]
 	}
       ]
      ,"STATUS":[
@@ -3935,14 +5411,20 @@
 	,[10,672,12.6,20]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546030", "Pointer":" "
- ,"Subent":"C1546030", "compiled":20070420
+ ,"Subent":"C1546030", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"Ca-40", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"1-H-1(20-CA-40,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*40"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,1.,3.3)     ADDED AS COMMON:ERR-S,PER-CENT=1.0%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*40"]
+ ,"wx4data":10
  ,"lx4data":10
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -3957,13 +5439,49 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[5,5,5,5,10,5,10,10,20,20]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[672,672,672,672,672,672,672,672,672,672]
     ,"dat1":[2.688e+10,2.688e+10,2.688e+10,2.688e+10,2.688e+10,2.688e+10,2.688e+10,2.688e+10,2.688e+10,2.688e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -3977,7 +5495,9 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.0671,0.0927,0.0554,0.0788,0.044,0.0685,0.0314,0.0329,0.0164,0.0126]
-      ,"dy":[0.003355,0.004635,0.00277,0.00394,0.0044,0.003425,0.00314,0.00329,0.00328,0.00252]   }
+      ,"dy":[0.003355,0.004635,0.00277,0.00394,0.0044,0.003425,0.00314,0.00329,0.00328,0.00252]
+      ,"dysys":[0.00229247,0.0031671,0.00189274,0.00269221,0.00150326,0.00234031,0.00107278,0.00112403,5.60307e-4,4.3048e-4]
+      ,"dystat":[6.71e-4,9.27e-4,5.54e-4,7.88e-4,4.4e-4,6.85e-4,3.14e-4,3.29e-4,1.64e-4,1.26e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -3992,7 +5512,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546031", "isub":31, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546031", "isub":31, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4018,6 +5538,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -4177,14 +5702,20 @@
 	,[12,1615,28.9,10]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546031", "Pointer":" "
- ,"Subent":"C1546031", "compiled":20070420
+ ,"Subent":"C1546031", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"Fe-56", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(26-FE-56,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*56"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*56"]
+ ,"wx4data":10
  ,"lx4data":126
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -4235,7 +5766,43 @@
 	,10,10,10,10,10,10,10,10,10,10
 	,10,10,10,10,10,10]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -4265,7 +5832,7 @@
 	,2.4304e+10,2.912e+10,3.7072e+10,4.0544e+10,5.2864e+10,6.0816e+10,7.8904e+10,8.4672e+10,9.044e+10,2.4304e+10
 	,2.912e+10,3.7072e+10,4.0544e+10,5.2864e+10,6.0816e+10,7.8904e+10,8.4672e+10,9.044e+10,6.0816e+10,7.8904e+10
 	,8.4672e+10,9.044e+10,6.0816e+10,7.8904e+10,8.4672e+10,9.044e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -4315,7 +5882,33 @@
 	,0.00212,0.002215,0.002085,0.00229,0.00198,0.002195,0.00203,0.002115,0.001985,0.0018
 	,0.002489,0.00295,0.0032,0.00293,0.00298,0.00285,0.00346,0.00311,0.00281,0.00457
 	,0.00486,0.00483,0.00443,0.00437,0.00441,0.00423,0.00409,0.00383,0.00272,0.00284
-	,0.00285,0.00257,0.00359,0.00336,0.00342,0.00289]   }
+	,0.00285,0.00257,0.00359,0.00336,0.00342,0.00289]
+      ,"dysys":[0.00834652,0.00764614,0.00704483,0.00654602,0.00568848,0.00607454,0.00538783,0.00554157,0.00547324,0.00514526
+	,0.00624195,0.0059823,0.00558257,0.00557574,0.0044722,0.00445512,0.0038709,0.00364883,0.0034985,0.00340625
+	,0.00413739,0.00396656,0.00393581,0.00390506,0.0031261,0.00296211,0.00266146,0.00251113,0.00271612,0.00255213
+	,0.00378207,0.00396314,0.00383673,0.00359758,0.00299627,0.00291428,0.00261021,0.0024838,0.00270929,0.00251796
+	,0.00304752,0.00272637,0.00262046,0.00235397,0.00225831,0.00227881,0.00192691,0.001821,0.00195082,0.00186199
+	,0.00271954,0.0025248,0.00243597,0.00237789,0.00211823,0.00205674,0.00197474,0.00194399,0.00190299,0.00187224
+	,0.00176292,0.00178683,0.00176975,0.00170142,0.00155109,0.00140418,0.00139052,0.00139393,0.00141102,0.00131194
+	,0.00151693,0.00164676,0.00180391,0.00180733,0.00163309,0.00148276,0.00143835,0.00137685,0.00134952,0.00125044
+	,0.0013051,0.00134952,0.0013871,0.0014281,0.00121286,0.00128461,0.00120944,0.00121969,0.00114795,0.00115136
+	,0.0014486,0.00151351,0.00142468,0.00156476,0.00135294,0.00149985,0.0013871,0.00144518,0.00135635,0.00122994
+	,8.50368e-4,0.00100787,0.00109328,0.00100104,0.00101812,9.73704e-4,0.00118211,0.00106253,9.60038e-4,0.00156134
+	,0.00166042,0.00165017,0.00151351,0.00149301,0.00150668,0.00144518,0.00139735,0.00130852,9.29289e-4,9.70287e-4
+	,9.73704e-4,8.78042e-4,0.00122653,0.00114795,0.00116844,9.8737e-4]
+      ,"dystat":[0.0017101,0.0015666,0.0014434,0.0013412,0.0011655,0.0012446,0.0011039,0.0011354,0.0011214,0.0010542
+	,0.0012789,0.0012257,0.0011438,0.0011424,9.163e-4,9.128e-4,7.931e-4,7.476e-4,7.168e-4,6.979e-4
+	,8.477e-4,8.127e-4,8.064e-4,8.001e-4,6.405e-4,6.069e-4,5.453e-4,5.145e-4,5.565e-4,5.229e-4
+	,7.749e-4,8.12e-4,7.861e-4,7.371e-4,6.139e-4,5.971e-4,5.348e-4,5.089e-4,5.551e-4,5.159e-4
+	,6.244e-4,5.586e-4,5.369e-4,4.823e-4,4.627e-4,4.669e-4,3.948e-4,3.731e-4,3.997e-4,3.815e-4
+	,5.572e-4,5.173e-4,4.991e-4,4.872e-4,4.34e-4,4.214e-4,4.046e-4,3.983e-4,3.899e-4,3.836e-4
+	,3.612e-4,3.661e-4,3.626e-4,3.486e-4,3.178e-4,2.877e-4,2.849e-4,2.856e-4,2.891e-4,2.688e-4
+	,3.108e-4,3.374e-4,3.696e-4,3.703e-4,3.346e-4,3.038e-4,2.947e-4,2.821e-4,2.765e-4,2.562e-4
+	,2.674e-4,2.765e-4,2.842e-4,2.926e-4,2.485e-4,2.632e-4,2.478e-4,2.499e-4,2.352e-4,2.359e-4
+	,2.968e-4,3.101e-4,2.919e-4,3.206e-4,2.772e-4,3.073e-4,2.842e-4,2.961e-4,2.779e-4,2.52e-4
+	,1.7423e-4,2.065e-4,2.24e-4,2.051e-4,2.086e-4,1.995e-4,2.422e-4,2.177e-4,1.967e-4,3.199e-4
+	,3.402e-4,3.381e-4,3.101e-4,3.059e-4,3.087e-4,2.961e-4,2.863e-4,2.681e-4,1.904e-4,1.988e-4
+	,1.995e-4,1.799e-4,2.513e-4,2.352e-4,2.394e-4,2.023e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -4354,7 +5947,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546032", "isub":32, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546032", "isub":32, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4380,6 +5973,13 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"1.", "max":"3.3"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error."
+		," For hydrogen target, the statistical error is about"
+		," 1.5 times the value for other targets (0.7-2.2%)"]
 	}
       ]
      ,"STATUS":[
@@ -4539,14 +6139,20 @@
 	,[12,1615,12.2,20]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546032", "Pointer":" "
- ,"Subent":"C1546032", "compiled":20070420
+ ,"Subent":"C1546032", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"Fe-56", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"1-H-1(26-FE-56,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*56"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,1.,3.3)     ADDED AS COMMON:ERR-S,PER-CENT=1.0%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*56"]
+ ,"wx4data":10
  ,"lx4data":126
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -4597,7 +6203,43 @@
 	,20,20,20,20,20,20,20,20,20,20
 	,20,20,20,20,20,20]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -4627,7 +6269,7 @@
 	,2.4304e+10,2.912e+10,3.7072e+10,4.0544e+10,5.2864e+10,6.0816e+10,7.8904e+10,8.4672e+10,9.044e+10,2.4304e+10
 	,2.912e+10,3.7072e+10,4.0544e+10,5.2864e+10,6.0816e+10,7.8904e+10,8.4672e+10,9.044e+10,6.0816e+10,7.8904e+10
 	,8.4672e+10,9.044e+10,6.0816e+10,7.8904e+10,8.4672e+10,9.044e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -4677,7 +6319,33 @@
 	,0.00136,0.0016,0.00175,0.00183,0.00185,0.00296,0.00274,0.00262,0.00268,0.00271
 	,8.0e-4,0.00116,0.00168,0.00176,0.00284,0.003,0.00322,0.00352,0.00366,0.00138
 	,0.00176,0.00202,0.00238,0.00392,0.0039,0.00378,0.00512,0.00464,0.00256,0.00268
-	,0.003,0.00262,0.00136,0.00218,0.00284,0.00244]   }
+	,0.003,0.00262,0.00136,0.00218,0.00284,0.00244]
+      ,"dysys":[0.00534,0.00478994,0.00487194,0.00447562,0.00420913,0.00392898,0.00376157,0.0038094,0.00375132,0.00373766
+	,0.00483435,0.00438337,0.00413739,0.00372399,0.00334817,0.00331401,0.00295869,0.00302702,0.00630003,0.00269221
+	,0.0028972,0.00307144,0.00304752,0.00264779,0.00252138,0.0025043,0.00226856,0.00218656,0.00217631,0.00207382
+	,0.00296553,0.00290403,0.00295869,0.00250088,0.00252138,0.00241547,0.00239497,0.0021114,0.00211823,0.0020294
+	,0.00176975,0.00198841,0.00204307,0.0020294,0.00190983,0.00188591,0.0017595,0.00161942,0.00150668,0.00161601
+	,0.00143835,0.00158184,0.00188249,0.00179025,0.0017595,0.00192349,0.0017595,0.00169459,0.00149985,0.00166725
+	,6.42303e-4,7.27715e-4,9.1904e-4,0.00100445,0.00103178,0.00128461,0.00122311,0.0010967,0.00113428,0.00108303
+	,4.23647e-4,6.69635e-4,8.13128e-4,9.29289e-4,9.32706e-4,0.00129827,0.00114453,0.00104887,0.00112745,0.00104887
+	,1.43493e-4,2.32322e-4,5.32975e-4,5.87639e-4,6.3547e-4,7.7213e-4,7.65297e-4,7.27715e-4,8.02878e-4,7.48214e-4
+	,2.32322e-4,2.7332e-4,5.97888e-4,6.2522e-4,6.32053e-4,0.00101129,9.36122e-4,8.95124e-4,9.15623e-4,9.25873e-4
+	,1.3666e-4,1.98157e-4,2.86986e-4,3.00652e-4,4.85144e-4,5.12476e-4,5.50057e-4,6.01305e-4,6.2522e-4,2.35739e-4
+	,3.00652e-4,3.45067e-4,4.06564e-4,6.69635e-4,6.66218e-4,6.45719e-4,8.74625e-4,7.92629e-4,4.37313e-4,4.57812e-4
+	,5.12476e-4,4.47562e-4,2.32322e-4,3.72399e-4,4.85144e-4,4.16814e-4]
+      ,"dystat":[0.001563,0.001402,0.001426,0.00131,0.001232,0.00115,0.001101,0.001115,0.001098,0.001094
+	,0.001415,0.001283,0.001211,0.00109,9.8e-4,9.7e-4,8.66e-4,8.86e-4,0.001844,7.88e-4
+	,8.48e-4,8.99e-4,8.92e-4,7.75e-4,7.38e-4,7.33e-4,6.64e-4,6.4e-4,6.37e-4,6.07e-4
+	,8.68e-4,8.5e-4,8.66e-4,7.32e-4,7.38e-4,7.07e-4,7.01e-4,6.18e-4,6.2e-4,5.94e-4
+	,5.18e-4,5.82e-4,5.98e-4,5.94e-4,5.59e-4,5.52e-4,5.15e-4,4.74e-4,4.41e-4,4.73e-4
+	,4.21e-4,4.63e-4,5.51e-4,5.24e-4,5.15e-4,5.63e-4,5.15e-4,4.96e-4,4.39e-4,4.88e-4
+	,1.88e-4,2.13e-4,2.69e-4,2.94e-4,3.02e-4,3.76e-4,3.58e-4,3.21e-4,3.32e-4,3.17e-4
+	,1.24e-4,1.96e-4,2.38e-4,2.72e-4,2.73e-4,3.8e-4,3.35e-4,3.07e-4,3.3e-4,3.07e-4
+	,4.2e-5,6.8e-5,1.56e-4,1.72e-4,1.86e-4,2.26e-4,2.24e-4,2.13e-4,2.35e-4,2.19e-4
+	,6.8e-5,8.0e-5,1.75e-4,1.83e-4,1.85e-4,2.96e-4,2.74e-4,2.62e-4,2.68e-4,2.71e-4
+	,4.0e-5,5.8e-5,8.4e-5,8.8e-5,1.42e-4,1.5e-4,1.61e-4,1.76e-4,1.83e-4,6.9e-5
+	,8.8e-5,1.01e-4,1.19e-4,1.96e-4,1.95e-4,1.89e-4,2.56e-4,2.32e-4,1.28e-4,1.34e-4
+	,1.5e-4,1.31e-4,6.8e-5,1.09e-4,1.42e-4,1.22e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -4716,7 +6384,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C1546033", "isub":33, "compiled":20070420, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1546033", "isub":33, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4742,6 +6410,11 @@
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Total uncertainty."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S", "min":"0.7", "max":"2.2"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
 	}
       ]
      ,"STATUS":[
@@ -4813,14 +6486,20 @@
 	,[12,1512,32.1,10]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1546033", "Pointer":" "
- ,"Subent":"C1546033", "compiled":20070420
+ ,"Subent":"C1546033", "compiled":20160709
  ,"year1":1990, "author1ini":"W.R.", "author1":"Webber"
  ,"zTarg1":2, "targ1":"He-4", "proj1":"Fe-56", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"2-HE-4(26-FE-56,X)ELEM,,SIG"
- ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*56"]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.2)    ADDED AS COMMON:ERR-S,PER-CENT=0.7%"
+	,"ERR-ANALYS:(ERR-1,,1.2)       ADDED AS COMMON:ERR-1,PER-CENT=0.6%"
+	,"ERR-ANALYS:(ERR-2,,1.5)       ADDED AS COMMON:ERR-2,PER-CENT=0.75%"
+	,"ERR-ANALYS:(ERR-3,,3.)        ADDED AS COMMON:ERR-3,PER-CENT=1.5%"
+	,"ERR-ANALYS:(ERR-4,,5.)        ADDED AS COMMON:ERR-4,PER-CENT=2.5%"
+	,"ERR-ANALYS:(ERR-5,,3.)        ADDED AS COMMON:ERR-5,PER-CENT=1.5%"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*56"]
+ ,"wx4data":10
  ,"lx4data":38
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -4844,7 +6523,43 @@
 	,5,5,5,5,5,5,5,5,5,5
 	,10,10,10,10,10,10,10,10]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.7
+    ,"com1":0.7}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.6
+    ,"com1":0.6}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.75
+    ,"com1":0.75}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2.5
+    ,"com1":2.5}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -4856,7 +6571,7 @@
 	,4.0544e+10,8.4672e+10,2.4304e+10,4.0544e+10,8.4672e+10,2.4304e+10,4.0544e+10,8.4672e+10,2.4304e+10,4.0544e+10
 	,8.4672e+10,2.4304e+10,4.0544e+10,8.4672e+10,2.4304e+10,4.0544e+10,8.4672e+10,2.4304e+10,4.0544e+10,8.4672e+10
 	,2.4304e+10,4.0544e+10,8.4672e+10,2.4304e+10,4.0544e+10,8.4672e+10,8.4672e+10,8.4672e+10]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
@@ -4879,7 +6594,15 @@
       ,"dy":[0.0024075,0.0020385,0.001941,0.0019635,0.0016365,0.0014175,0.002775,0.002322,0.001995,0.002721
 	,0.002247,0.001911,0.002034,0.001719,0.001521,0.002049,0.001725,0.001497,0.00235,0.00222
 	,0.00199,0.002145,0.002105,0.00194,0.00161,0.001655,0.00158,0.00188,0.001895,0.00175
-	,0.00227,0.00244,0.00257,0.00391,0.00406,0.00413,0.00284,0.00321]   }
+	,0.00227,0.00244,0.00257,0.00391,0.00406,0.00413,0.00284,0.00321]
+      ,"dysys":[0.00548349,0.00464303,0.00442096,0.0044722,0.00372741,0.0032286,0.00316027,0.00264437,0.00227198,0.00309877
+	,0.00255896,0.00217631,0.00231639,0.00195766,0.00173217,0.00233347,0.00196449,0.00170484,0.00160576,0.00151693
+	,0.00135977,0.00146568,0.00143835,0.0013256,0.00110011,0.00113086,0.00107962,0.00128461,0.00129486,0.00119578
+	,7.75547e-4,8.33627e-4,8.78042e-4,0.00133585,0.0013871,0.00141102,9.70287e-4,0.0010967]
+      ,"dystat":[0.0011235,9.513e-4,9.058e-4,9.163e-4,7.637e-4,6.615e-4,6.475e-4,5.418e-4,4.655e-4,6.349e-4
+	,5.243e-4,4.459e-4,4.746e-4,4.011e-4,3.549e-4,4.781e-4,4.025e-4,3.493e-4,3.29e-4,3.108e-4
+	,2.786e-4,3.003e-4,2.947e-4,2.716e-4,2.254e-4,2.317e-4,2.212e-4,2.632e-4,2.653e-4,2.45e-4
+	,1.589e-4,1.708e-4,1.799e-4,2.737e-4,2.842e-4,2.891e-4,1.988e-4,2.247e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
