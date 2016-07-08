@@ -1,9 +1,9 @@
-  {"ENTRY":"C1159", "updated":20100813, "TransID":"C103", "TransDate":20101129, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C1159", "updated":20160709, "TransID":"C159", "TransDate":20160920, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1993,"a1":"H.I.West+","r1":"R,UCRL-ID-115738,5-1,1993"
    ,"ref":"Prog: U.C., Lawrence Rad.Lab. (Berkeley and Livermore), No.115738, p.5-1 (1993)"
    ,"title":"Measurements of the excitation functions of the isobaric chain 87Y, 87mY, 87gY, and 87mSr Some excitation functions of proton and deuteron induced reactions on 89Y"
    ,"x4subents":[
-   {"SUBENT":"C1159001", "isub":1, "compiled":20100813, "TransID":"C103", "TransDate":20101129
+   {"SUBENT":"C1159001", "isub":1, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -78,6 +78,11 @@
 	,"x4freetext":["S.H. Corrected reactions in subs.3,6,7"
 		,"                Decay data added in subs.2-7"
 		,"                Added subs 8-13"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160705A", "date":"20160705", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Corrections in sub.8"]
 	}
       ]
     }
@@ -1309,32 +1314,32 @@
 }
    ]
    }
-  ,{"SUBENT":"C1159008", "isub":8, "compiled":20100813, "TransID":"C103", "TransDate":20101129
+  ,{"SUBENT":"C1159008", "isub":8, "compiled":20160709, "TransID":"C159", "TransDate":20160920
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"39-Y-89(D,2N)40-ZR-89-G,,SIG"
-	    ,"c4reac":"(D,2N),SIG"
+	,"x4code":{"code":"39-Y-89(D,2N)40-ZR-89-G,M+,SIG"
+	    ,"c4reac":"(D,2N)M+,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":16
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"39-Y-89(D,2N)40-ZR-89-G,,SIG"
+	    {"code":"39-Y-89(D,2N)40-ZR-89-G,M+,SIG"
 		,"Reac":"D,2N"
 		,"SF1":"39-Y-89","Targ":{"code":"39-Y-89","nam":"Y-89","ZA":39089}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"2N"
 		,"SF4":"40-ZR-89-G","Prod":{"code":"40-ZR-89-G","nam":"Zr-89-g","ZA":40089,"ProdM":"G"}
+		,"SF5":"M+"
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"M+,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section, incl. form. via isomeric trans."
 	    }]}
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"40-ZR-89-G", "t12":1.676, "t12units":"HR", "t12sec":6033.6
-	, "Radiations":[ {"Type":"DG", "Energy":[1227.0], "Intensity":0.0336}]}]
+	,"x4codes":[{"Nucl":"40-ZR-89-G", "t12":3.268, "t12units":"D", "t12sec":282355.2
+	, "Radiations":[ {"Type":"DG", "Energy":[909.0], "Intensity":0.9901}]}]
 	}
       ]
      ,"STATUS":[
@@ -1357,11 +1362,25 @@
 	,"x4freetext":[" Systematic uncertainty"]
 	}
       ]
+     ,"FLAG":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"1."}]
+	,"x4freetext":[" Comment by compiler (remark by O.Lebeda):"
+		," Value 231.4 at 27.57 MeV could by typo in Table 2 of"
+		," article. Correct value might be 331.4."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20100813C", "date":"20100813", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" SH"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160705A", "date":"20160705", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added M+ to SF5, corrected DECAY-DATA,"
+		," added FLAG."]
 	}
       ]
     }
@@ -1377,7 +1396,7 @@
 	,[" "         ]]
       ,"data":[
 	 [3]]}
-    ,"DATA":{"ncols":3, "nrows":32
+    ,"DATA":{"ncols":4, "nrows":32
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
@@ -1388,54 +1407,57 @@
       ,{"icol":2, "header":"ERR-T", "units":"MB", "pointer":" "
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ,{"icol":3, "header":"FLAG", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Flag, defined under FLAG.", "pFlag":"0000000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"ERR-T"     ]
-	,["MEV"       ,"MB"        ,"MB"        ]
-	,[" "         ," "         ," "         ]]
+	 ["EN"        ,"DATA"      ,"ERR-T"     ,"FLAG"      ]
+	,["MEV"       ,"MB"        ,"MB"        ,"NO-DIM"    ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [2.9,0.0077,6.5E-4]
-	,[4.44,0.0109,7.7E-4]
-	,[5.69,0.00863,9.5E-4]
-	,[6.62,15.9,0.5]
-	,[6.67,19.9,0.6]
-	,[7.27,77.3,2.3]
-	,[8.08,190.1,5.8]
-	,[8.4,248.7,7.5]
-	,[9.38,400.2,12]
-	,[9.89,478.8,14]
-	,[10.49,555,17]
-	,[11.37,664.5,21]
-	,[13.08,800.2,25]
-	,[14.64,921.9,29]
-	,[15.97,982.1,31]
-	,[16.29,952,41]
-	,[16.67,944.5,41]
-	,[17.5,951.5,41]
-	,[18.14,976.4,43]
-	,[19.84,907.9,39]
-	,[21.1,780.8,34]
-	,[22.78,611,27]
-	,[24.36,478.8,15]
-	,[25.74,399.8,14]
-	,[27.57,231.4,8.1]
-	,[29.29,262.8,8.2]
-	,[31.13,225,8.2]
-	,[32.77,197,6.3]
-	,[34.23,180,5.6]
-	,[35.99,160.9,5.3]
-	,[37.73,145.6,5.9]
-	,[39.41,133.6,4.5]]}
+	 [2.9,0.0077,6.5E-4,null]
+	,[4.44,0.0109,7.7E-4,null]
+	,[5.69,0.00863,9.5E-4,null]
+	,[6.62,15.9,0.5,null]
+	,[6.67,19.9,0.6,null]
+	,[7.27,77.3,2.3,null]
+	,[8.08,190.1,5.8,null]
+	,[8.4,248.7,7.5,null]
+	,[9.38,400.2,12,null]
+	,[9.89,478.8,14,null]
+	,[10.49,555,17,null]
+	,[11.37,664.5,21,null]
+	,[13.08,800.2,25,null]
+	,[14.64,921.9,29,null]
+	,[15.97,982.1,31,null]
+	,[16.29,952,41,null]
+	,[16.67,944.5,41,null]
+	,[17.5,951.5,41,null]
+	,[18.14,976.4,43,null]
+	,[19.84,907.9,39,null]
+	,[21.1,780.8,34,null]
+	,[22.78,611,27,null]
+	,[24.36,478.8,15,null]
+	,[25.74,399.8,14,null]
+	,[27.57,231.4,8.1,1]
+	,[29.29,262.8,8.2,null]
+	,[31.13,225,8.2,null]
+	,[32.77,197,6.3,null]
+	,[34.23,180,5.6,null]
+	,[35.99,160.9,5.3,null]
+	,[37.73,145.6,5.9,null]
+	,[39.41,133.6,4.5,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1159008", "Pointer":" "
- ,"Subent":"C1159008", "compiled":20100813
+ ,"Subent":"C1159008", "compiled":20160709
  ,"year1":1993, "author1ini":"H.I.", "author1":"West"
- ,"zTarg1":39, "targ1":"Y-89", "proj1":"d", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
+ ,"zTarg1":39, "targ1":"Y-89", "proj1":"d", "emis1":"2N", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"39-Y-89(D,2N)40-ZR-89-G,,SIG"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section, incl. form. via isomeric trans."
+ ,"reacode":"39-Y-89(D,2N)40-ZR-89-G,M+,SIG"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":32
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1480,6 +1502,15 @@
 	,1.049e+7,1.137e+7,1.308e+7,1.464e+7,1.597e+7,1.629e+7,1.667e+7,1.75e+7,1.814e+7,1.984e+7
 	,2.11e+7,2.278e+7,2.436e+7,2.574e+7,2.757e+7,2.929e+7,3.113e+7,3.277e+7,3.423e+7,3.599e+7
 	,3.773e+7,3.941e+7]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"ZZZ", "dataType":"01", "rank":777.0
+    ,"expansion":"Flags, etc.: flag"
+    ,"dat0":[null,null,null,null,null,null,null,null,null,null
+	,null,null,null,null,null,null,null,null,null,null
+	,null,null,null,null,1,null,null,null,null,null
+	,null,null]
+   ,"dat1eq":true}
   ]
  ,"wc5data":2
  ,"lc5data":32
