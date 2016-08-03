@@ -1,9 +1,9 @@
-  {"ENTRY":"13672", "updated":20021204, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"13672", "updated":20160804, "TransID":"1421", "TransDate":20161113, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1998,"a1":"D.Loaiza+","r1":"J,NSE,128,270,1998"
    ,"ref":"Jour: Nuclear Science and Engineering, Vol.128, p.270 (1998)"
    ,"title":"Measurement of Absolute Delayed Neutron Yield and Group Constants for the Fast Fission of 235U and 237Np"
    ,"x4subents":[
-   {"SUBENT":"13672001", "isub":1, "compiled":20021204, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"13672001", "isub":1, "compiled":20160804, "TransID":"1421", "TransDate":20161113
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -39,7 +39,8 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"REAC", "dict":"FACILITY", "idict":18,"hlp":"Reactor"}]
+	,"x4codes":[{"code":"CRASS", "dict":"FACILITY", "idict":18,"hlp":"Critical assembly"}
+	    ,{"code":"1USALAS", "dict":"INSTITUTE", "idict":3,"hlp":"Los Alamos National Laboratory, NM, United States of America"}]
 	,"x4freetext":[" Godiva IV burst assembly"]
 	}
       ]
@@ -91,8 +92,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from Nucl.Sci.Eng."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Nucl.Sci.Eng., Tables I and II."]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"APRVD"
@@ -123,6 +126,13 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Obsolete data heading replaced."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160728A", "date":"20160728", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. STATUS updated, SAMPLE updated in"
+		," subs.2 and 3,  monitor decay information in subs.3,5"
+		," corrected"]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
@@ -138,7 +148,7 @@
       ,"data":[
 	 [1.4]]}
    }
-  ,{"SUBENT":"13672002", "isub":2, "compiled":20021204, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"13672002", "isub":2, "compiled":20160804, "TransID":"1421", "TransDate":20161113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -163,8 +173,9 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["3-gram metal sample, 93% enriched 235U."]
+	,"x4code":{"Nucl":"92-U-235","ENR":0.93}
+	,"x4freetext":[" 3-gram metal sample, 93% enriched"
+		," 235U."]
 	}
       ]
      ,"CORRECTION":[
@@ -191,7 +202,7 @@
 	 [0.0163,8.0E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"13672002", "Pointer":" "
- ,"Subent":"13672002", "compiled":20021204
+ ,"Subent":"13672002", "compiled":20160804
  ,"year1":1998, "author1ini":"D.", "author1":"Loaiza"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":1, "MT":455, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -237,7 +248,7 @@
 }
    ]
    }
-  ,{"SUBENT":"13672003", "isub":3, "compiled":20021204, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"13672003", "isub":3, "compiled":20160804, "TransID":"1421", "TransDate":20161113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
@@ -287,26 +298,30 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["3-gram metal sample, 93% enriched 235U."]
+	,"x4code":{"Nucl":"92-U-235","ENR":0.93}
+	,"x4freetext":[" 3-gram metal sample, 93% enriched"
+		," 235U."]
 	}
       ]
      ,"MONITOR":[
 	{"x4pointer":"2"
 	,"x4code":{"code":"92-U-235(N,F)57-LA-140,CUM,FY"
 		,"reaction":"92-U-235(N,F)57-LA-140,CUM,FY"}
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":"2"
-	,"x4codes":[{"Nucl":"57-LA-140", "t12":12.9, "t12units":"D", "t12sec":1114560.0
-	, "Radiations":[ {"Type":"DG", "Energy":[1596.0]}]}]
+	,"x4freetext":[" La-140 in equilibrium with 140Ba (12.9 d) after"
+		," 13 days"]
 	}
       ]
      ,"CORRECTION":[
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Corrected for sample impurities."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160728A", "date":"20160728", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" DECAY-MON replaced by free text"]
 	}
       ]
     }
@@ -341,7 +356,7 @@
 	,[3.83,0.1138,0.0235,0.001,3.83E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"136720031", "Pointer":"1"
- ,"Subent":"13672003", "compiled":20021204
+ ,"Subent":"13672003", "compiled":20160804
  ,"year1":1998, "author1ini":"D.", "author1":"Loaiza"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(SpE,DCON)"
@@ -403,7 +418,7 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"136720032", "Pointer":"2"
- ,"Subent":"13672003", "compiled":20021204
+ ,"Subent":"13672003", "compiled":20160804
  ,"year1":1998, "author1ini":"D.", "author1":"Loaiza"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(SpE,DCON)"
@@ -553,7 +568,7 @@
 }
    ]
    }
-  ,{"SUBENT":"13672005", "isub":5, "compiled":20021204, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"13672005", "isub":5, "compiled":20160804, "TransID":"1421", "TransDate":20161113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
@@ -611,12 +626,15 @@
 	{"x4pointer":"2"
 	,"x4code":{"code":"92-U-235(N,F)57-LA-140,CUM,FY"
 		,"reaction":"92-U-235(N,F)57-LA-140,CUM,FY"}
+	,"x4freetext":[" La-140 in equilibrium with 140Ba (12.9 d) after"
+		," 13 days"]
 	}
       ]
-     ,"DECAY-MON":[
-	{"x4pointer":"2"
-	,"x4codes":[{"Nucl":"57-LA-140", "t12":12.9, "t12units":"D", "t12sec":1114560.0
-	, "Radiations":[ {"Type":"DG", "Energy":[1596.0]}]}]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160728A", "date":"20160728", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" DECAY-MON replaced by free text"]
 	}
       ]
     }
@@ -651,7 +669,7 @@
 	,[3.2,0.13,0.045,0.006,5.67E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"136720051", "Pointer":"1"
- ,"Subent":"13672005", "compiled":20021204
+ ,"Subent":"13672005", "compiled":20160804
  ,"year1":1998, "author1ini":"D.", "author1":"Loaiza"
  ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(SpE,DCON)"
@@ -713,7 +731,7 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"136720052", "Pointer":"2"
- ,"Subent":"13672005", "compiled":20021204
+ ,"Subent":"13672005", "compiled":20160804
  ,"year1":1998, "author1ini":"D.", "author1":"Loaiza"
  ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(SpE,DCON)"
