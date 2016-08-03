@@ -1,9 +1,9 @@
-  {"ENTRY":"14126", "updated":20070209, "TransID":"1343", "TransDate":20070713, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14126", "updated":20160804, "TransID":"1421", "TransDate":20161113, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1953,"a1":"A.E.Francis+","r1":"J,PR,89,1232,1953"
    ,"ref":"Jour: Physical Review, Vol.89, p.1232 (1953)"
    ,"title":"Inelastic Scattering of Neutrons by Cd111"
    ,"x4subents":[
-   {"SUBENT":"14126001", "isub":1, "compiled":20070209, "TransID":"1343", "TransDate":20070713
+   {"SUBENT":"14126001", "isub":1, "compiled":20160804, "TransID":"1421", "TransDate":20161113
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -37,9 +37,9 @@
 	,"x4freetext":[" Rockfeller elctrostatic generator"]
 	}
       ]
-     ,"INC-SPECT":[
+     ,"INC-SOURCE":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::P-LI7"}
+	,"x4codes":[{"code":"P-LI7", "dict":"INC-SOURCE", "idict":19,"hlp":"7Li(p,n)"}]
 	}
       ]
      ,"DETECTOR":[
@@ -62,10 +62,16 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160731A", "date":"20160731", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. INC-SPECT changed to INC-SOURCE,"
+		," EN-RSL, data point and DECAY-DATA added in sub.2"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"14126002", "isub":2, "compiled":20070209, "TransID":"1343", "TransDate":20070713
+  ,{"SUBENT":"14126002", "isub":2, "compiled":20160804, "TransID":"1421", "TransDate":20161113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -87,72 +93,126 @@
 	    }]}
 	}
       ]
+     ,"DECAY-DATA":[
+	{"x4pointer":" "
+	,"x4codes":[{"Nucl":"48-CD-111-M", "t12":49.0, "t12units":"MIN", "t12sec":2940.0
+	, "Radiations":[]}]
+	}
+      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["No information given"]
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on source of uncetainty"]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from the report"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from text of article (p.1236)"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160731A", "date":"20160731", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" DECAY-DATA, EN-RSL-HW and data point at"
+		," 1270 keV added, STATUS updated"]
 	}
       ]
     }
-    ,"DATA":{"ncols":2, "nrows":1
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"EN-RSL-HW", "units":"KEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy resolution (Half width)", "pFlag":"9330000"
+	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
+      ]
+      ,"datacols":[
+	 ["EN-RSL-HW" ]
+	,["KEV"       ]
+	,[" "         ]]
+      ,"data":[
+	 [40]]}
+    ,"DATA":{"ncols":4, "nrows":2
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA-APRX", "units":"MB", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ,{"icol":3, "header":"DATA-APRX", "units":"MB", "pointer":" "
 	,"headerHelp":"Approximate value of quantity specif. under REACTION", "pFlag":"0004000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA-APRX" ]
-	,["KEV"       ,"MB"        ]
-	,[" "         ," "         ]]
+	 ["EN"        ,"DATA"      ,"DATA-ERR"  ,"DATA-APRX" ]
+	,["KEV"       ,"MB"        ,"MB"        ,"MB"        ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [720,10]]}
+	 [720,null,null,10]
+	,[1270,210,70,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14126002", "Pointer":" "
- ,"Subent":"14126002", "compiled":20070209
+ ,"Subent":"14126002", "compiled":20160804
  ,"year1":1953, "author1ini":"A.E.", "author1":"Francis"
  ,"zTarg1":48, "targ1":"Cd-111", "proj1":"n", "emis1":"INL", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"48-CD-111(N,INL)48-CD-111-M,,SIG"
  ,"compNotes":["OPERATION...  Value=Aprx  Aprx:DATA-APRX"]
- ,"wx4data":2
- ,"lx4data":1
+ ,"wx4data":5
+ ,"lx4data":2
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MB", "basicUnits":"B"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[null,210]
+    ,"dat1":[null,0.21]}
+  ,{"ivar":1, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
     ,"header":"DATA-APRX", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Aprx", "dataType":"21", "rank":0.4
     ,"expansion":"Data: data"
-    ,"dat0":[10]
-    ,"dat1":[0.01]}
-  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"dat0":[10,null]
+    ,"dat1":[0.01,null]}
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[null,70]
+    ,"dat1":[null,0.07]}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
-    ,"dat0":[720]
-    ,"dat1":[7.2e+5]}
+    ,"dat0":[720,1270]
+    ,"dat1":[7.2e+5,1.27e+6]}
+  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-RSL-HW", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X1.hRes+-", "dataType":"41", "rank":1.933
+    ,"expansion":"Incident energy: energy /Error/"
+    ,"com0":40
+    ,"com1":4.0e+4}
   ]
  ,"wc5data":2
- ,"lc5data":1
+ ,"lc5data":2
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[0.01]
-   }
+      ,"y":[0.01,0.21]
+      ,"dy":[null,0.07]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[7.2e+5]
-   }
+      ,"x1":[7.2e+5,1.27e+6]
+      ,"dx1":[8.0e+4,8.0e+4]   }
  }
 }
    ]
