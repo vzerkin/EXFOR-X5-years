@@ -1,9 +1,9 @@
-  {"ENTRY":"13967", "updated":20050224, "TransID":"1332", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"13967", "updated":20160804, "TransID":"1421", "TransDate":20161113, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1992,"a1":"B.Fazekas+","r1":"J,NP/A,548,249,1992"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.548, p.249 (1992)"
    ,"title":"Level scheme and mixed-symmetry states of 134Ba from in-beam (n,n`gamma) measurements"
    ,"x4subents":[
-   {"SUBENT":"13967001", "isub":1, "compiled":20050224, "TransID":"1332", "TransDate":20050926
+   {"SUBENT":"13967001", "isub":1, "compiled":20160804, "TransID":"1421", "TransDate":20161113
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -43,15 +43,16 @@
 	    ,{"code":"1USAKTY", "dict":"INSTITUTE", "idict":3,"hlp":"University of Kentucky, Lexington, KY, United States of America"}]
 	}
       ]
-     ,"INC-SPECT":[
+     ,"INC-SOURCE":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::P-T"}
+	,"x4codes":[{"code":"P-T", "dict":"INC-SOURCE", "idict":19,"hlp":"3H(p,n)"}]
 	}
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["21.7 g of BaCO3 powder enriched to 83 % in 134Ba"]
+	,"x4code":{"Nucl":"56-BA-134","ENR":0.83}
+	,"x4freetext":[" 21.7 g of BaCO3 powder enriched"
+		," to 83 % in 134Ba"]
 	}
       ]
      ,"DETECTOR":[
@@ -66,10 +67,16 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160729U", "date":"20160729", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" OS. INC-SPECT changed to INC-SOURCE,"
+		," SAMPLE and STATUS coding updated."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"13967002", "isub":2, "compiled":20050224, "TransID":"1332", "TransDate":20050926
+  ,{"SUBENT":"13967002", "isub":2, "compiled":20160804, "TransID":"1421", "TransDate":20161113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -101,8 +108,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from Table 3 of the journal article"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table 3 of the journal article"]
 	}
       ]
     }
@@ -192,7 +201,7 @@
 	,[3,2.9176,4,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"13967002", "Pointer":" "
- ,"Subent":"13967002", "compiled":20050224
+ ,"Subent":"13967002", "compiled":20160804
  ,"year1":1992, "author1ini":"B.", "author1":"Fazekas"
  ,"zTarg1":56, "targ1":"Ba-134", "proj1":"n", "emis1":"INL", "MF":3, "MT":51, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,EXC)"
