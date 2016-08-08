@@ -1,9 +1,9 @@
-  {"ENTRY":"C0271", "updated":20080701, "TransID":"C087", "TransDate":20080904, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C0271", "updated":20160809, "TransID":"C161", "TransDate":20161016, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1971,"a1":"R.L.Brodzinski+","r1":"J,PR/C,4,1250,1971"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.4, p.1250 (1971)"
    ,"title":"High-Energy Proton Spallation of Titanium"
    ,"x4subents":[
-   {"SUBENT":"C0271001", "isub":1, "compiled":20080701, "TransID":"C087", "TransDate":20080904
+   {"SUBENT":"C0271001", "isub":1, "compiled":20160809, "TransID":"C161", "TransDate":20161016
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -45,9 +45,10 @@
 		,"  by proportional counter."]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}]
-	,"x4freetext":[" Space Radiation Effects Lab, 319-, 433-,"
-		," 584-MeV protons. Beam current monitored by"
+	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}
+	    ,{"code":"1USASRE", "dict":"INSTITUTE", "idict":3,"hlp":"Space Radiation Effects Lab., Newport News, VA, United States of America"}]
+	,"x4freetext":[" Space Radiation Effects Lab, 319-,"
+		," 433-, 584-MeV protons. Beam current monitored by"
 		,"  proportional counter."]
 	}
       ]
@@ -72,8 +73,8 @@
       ]
      ,"MONITOR":[
 	{"x4pointer":" "
-	,"x4code":{"code":"13-AL-27(P,N+3P)11-NA-24,,SIG"
-		,"reaction":"13-AL-27(P,N+3P)11-NA-24,,SIG"}
+	,"x4code":{"code":"13-AL-27(P,X)11-NA-24,,SIG"
+		,"reaction":"13-AL-27(P,X)11-NA-24,,SIG"}
 	}
       ]
      ,"ERR-ANALYS":[
@@ -87,8 +88,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from table in reference."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table II in reference."]
 	}
       ]
      ,"HISTORY":[
@@ -105,6 +108,12 @@
 	,"x4code":{"code":"20080701A", "date":"20080701", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Updated to new date formats."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160804U", "date":"20160804", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" OS. DECAY-DATA in sub.5 corrected,"
+		," FACILITY, STATUS, MONITOR updated"]
 	}
       ]
     }
@@ -220,6 +229,14 @@
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"22-TI-0(P,X)23-V-48,,SIG"
  ,"compNotes":[]
+ ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
+	," #[0]#Reaction: 22-TI-0(P,X)23-V-48,,SIG"
+	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
+	," m0: [EN,MONIT];               #[0]#old monitor(energy)"
+	," m1: recom$al27px;             #[0]#new monitor(energy)"
+	," dy=dy/y;                      #to rel. uncertainties"
+	," y=y/m0*m1;                    #[0]#renormalizing CS"
+	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":4
  ,"lx4data":7
  ,"x4data":[
@@ -262,6 +279,11 @@
       ,"x1":[1.5e+7,3.0e+7,4.5e+7,1.18e+8,3.19e+8,4.33e+8,5.84e+8]
    }
  }
+ ,"c5mon":{"m0ref":"[EN,MONIT]/al27px", "m1ref":"recom/al27px"
+      ,"enNorm":[1.5e+7,3.0e+7,4.5e+7,1.18e+8,3.19e+8,4.33e+8,5.84e+8]
+      ,"m0":[null,null,null,0.0109,0.0113,0.011,0.0108]
+      ,"m1":[null,1.8e-4,0.00319,null,null,null,null]
+      ,"dm1":[null,6.0e-5,2.1e-4,null,null,null,null] }
 }
 ,{"iDataset":1, "DatasetID":"C02710022", "Pointer":"2"
  ,"Subent":"C0271002", "compiled":20080701
@@ -430,8 +452,13 @@
 	,"RadiationType":"DG","Ene":1040.0,"Ene1":1037.522,"Abu":1.0,"Abu1":0.976
 	,"FcCorrDECAY_DATA":1.0245901
 	,"reaction":"22-TI-0(P,X)21-SC-48,,SIG"}
- ,"autoCorrNotes":["#Reaction: 22-TI-0(P,X)21-SC-48,,SIG"
+ ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
+	," #[0]#Reaction: 22-TI-0(P,X)21-SC-48,,SIG"
+	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
+	," m0: [EN,MONIT];               #[0]#old monitor(energy)"
+	," m1: recom$al27px;             #[0]#new monitor(energy)"
 	," dy=dy/y;                      #to rel. uncertainties"
+	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	,"  #[1]#---Reaction decay-data"
 	,"  #[1]#REACTION   (22-TI-0(P,X)21-SC-48,,SIG)"
 	,"  #[1]#DECAY-DATA (21-SC-48,1.83D,DG,1040.,1.0) #Ix_old=1.0"
@@ -486,6 +513,11 @@
       ,"x1":[1.5e+7,3.0e+7,4.5e+7,1.18e+8,3.19e+8,4.33e+8,5.84e+8]
    }
  }
+ ,"c5mon":{"m0ref":"[EN,MONIT]/al27px", "m1ref":"recom/al27px"
+      ,"enNorm":[1.5e+7,3.0e+7,4.5e+7,1.18e+8,3.19e+8,4.33e+8,5.84e+8]
+      ,"m0":[null,null,null,0.0109,0.0113,0.011,0.0108]
+      ,"m1":[null,1.8e-4,0.00319,null,null,null,null]
+      ,"dm1":[null,6.0e-5,2.1e-4,null,null,null,null] }
 }
 ,{"iDataset":1, "DatasetID":"C02710032", "Pointer":"2"
  ,"Subent":"C0271003", "compiled":19961009
@@ -617,8 +649,13 @@
 	,"RadiationType":"DG","Ene":160.0,"Ene1":159.381,"Abu":0.73,"Abu1":0.683
 	,"FcCorrDECAY_DATA":1.068814
 	,"reaction":"22-TI-0(P,X)21-SC-47,,SIG"}
- ,"autoCorrNotes":["#Reaction: 22-TI-0(P,X)21-SC-47,,SIG"
+ ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
+	," #[0]#Reaction: 22-TI-0(P,X)21-SC-47,,SIG"
+	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
+	," m0: [EN,MONIT];               #[0]#old monitor(energy)"
+	," m1: recom$al27px;             #[0]#new monitor(energy)"
 	," dy=dy/y;                      #to rel. uncertainties"
+	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	,"  #[1]#---Reaction decay-data"
 	,"  #[1]#REACTION   (22-TI-0(P,X)21-SC-47,,SIG)"
 	,"  #[1]#DECAY-DATA (21-SC-47,3.43D,DG,160.,0.73) #Ix_old=0.73"
@@ -667,10 +704,15 @@
       ,"x1":[1.5e+7,3.0e+7,4.5e+7,1.18e+8,3.19e+8,4.33e+8,5.84e+8]
    }
  }
+ ,"c5mon":{"m0ref":"[EN,MONIT]/al27px", "m1ref":"recom/al27px"
+      ,"enNorm":[1.5e+7,3.0e+7,4.5e+7,1.18e+8,3.19e+8,4.33e+8,5.84e+8]
+      ,"m0":[null,null,null,0.0109,0.0113,0.011,0.0108]
+      ,"m1":[null,1.8e-4,0.00319,null,null,null,null]
+      ,"dm1":[null,6.0e-5,2.1e-4,null,null,null,null] }
 }
    ]
    }
-  ,{"SUBENT":"C0271005", "isub":5, "compiled":19961009, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0271005", "isub":5, "compiled":20160809, "TransID":"C161", "TransDate":20161016
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
@@ -721,13 +763,20 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"21-SC-46-M", "t12":83.9, "t12units":"D", "t12sec":7248960.0
+	,"x4codes":[{"Nucl":"21-SC-46-G", "t12":83.9, "t12units":"D", "t12sec":7248960.0
 	, "Radiations":[ {"Type":"DG", "Energy":[1120.0], "Intensity":1.0}
 			,{"Type":"DG", "Energy":[889.0], "Intensity":1.0}]}]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"Nucl":"21-SC-47", "t12":3.43, "t12units":"D", "t12sec":296352.0
 	, "Radiations":[ {"Type":"DG", "Energy":[160.0], "Intensity":0.73}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160804U", "date":"20160804", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" Isomer code in DECAY-DATA corrected"]
 	}
       ]
     }
@@ -765,13 +814,21 @@
 	,[584,17.5,5.6,1.004,0.023,10.8]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C02710051", "Pointer":"1"
- ,"Subent":"C0271005", "compiled":19961009
+ ,"Subent":"C0271005", "compiled":20160809
  ,"year1":1971, "author1ini":"R.L.", "author1":"Brodzinski"
  ,"zTarg1":22, "targ1":"Ti-0", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"22-TI-0(P,X)21-SC-46,,SIG"
  ,"compNotes":[]
+ ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
+	," #[0]#Reaction: 22-TI-0(P,X)21-SC-46,,SIG"
+	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
+	," m0: [EN,MONIT];               #[0]#old monitor(energy)"
+	," m1: recom$al27px;             #[0]#new monitor(energy)"
+	," dy=dy/y;                      #to rel. uncertainties"
+	," y=y/m0*m1;                    #[0]#renormalizing CS"
+	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":4
  ,"lx4data":6
  ,"x4data":[
@@ -814,9 +871,14 @@
       ,"x1":[3.0e+7,4.5e+7,1.18e+8,3.19e+8,4.33e+8,5.84e+8]
    }
  }
+ ,"c5mon":{"m0ref":"[EN,MONIT]/al27px", "m1ref":"recom/al27px"
+      ,"enNorm":[3.0e+7,4.5e+7,1.18e+8,3.19e+8,4.33e+8,5.84e+8]
+      ,"m0":[null,null,0.0109,0.0113,0.011,0.0108]
+      ,"m1":[1.8e-4,0.00319,null,null,null,null]
+      ,"dm1":[6.0e-5,2.1e-4,null,null,null,null] }
 }
 ,{"iDataset":1, "DatasetID":"C02710052", "Pointer":"2"
- ,"Subent":"C0271005", "compiled":19961009
+ ,"Subent":"C0271005", "compiled":20160809
  ,"year1":1971, "author1ini":"R.L.", "author1":"Brodzinski"
  ,"zTarg1":22, "targ1":"Ti-0", "proj1":"p", "emis1":"X", "MF":203, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -972,6 +1034,14 @@
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"22-TI-0(P,X)21-SC-44-M,,SIG"
  ,"compNotes":[]
+ ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
+	," #[0]#Reaction: 22-TI-0(P,X)21-SC-44-M,,SIG"
+	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
+	," m0: [EN,MONIT];               #[0]#old monitor(energy)"
+	," m1: recom$al27px;             #[0]#new monitor(energy)"
+	," dy=dy/y;                      #to rel. uncertainties"
+	," y=y/m0*m1;                    #[0]#renormalizing CS"
+	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":4
  ,"lx4data":6
  ,"x4data":[
@@ -1014,6 +1084,11 @@
       ,"x1":[3.0e+7,4.5e+7,1.18e+8,3.19e+8,4.33e+8,5.84e+8]
    }
  }
+ ,"c5mon":{"m0ref":"[EN,MONIT]/al27px", "m1ref":"recom/al27px"
+      ,"enNorm":[3.0e+7,4.5e+7,1.18e+8,3.19e+8,4.33e+8,5.84e+8]
+      ,"m0":[null,null,0.0109,0.0113,0.011,0.0108]
+      ,"m1":[1.8e-4,0.00319,null,null,null,null]
+      ,"dm1":[6.0e-5,2.1e-4,null,null,null,null] }
 }
 ,{"iDataset":1, "DatasetID":"C02710062", "Pointer":"2"
  ,"Subent":"C0271006", "compiled":19961009
@@ -1172,6 +1247,14 @@
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"22-TI-0(P,X)22-TI-44,,SIG"
  ,"compNotes":[]
+ ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
+	," #[0]#Reaction: 22-TI-0(P,X)22-TI-44,,SIG"
+	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
+	," m0: [EN,MONIT];               #[0]#old monitor(energy)"
+	," m1: recom$al27px;             #[0]#new monitor(energy)"
+	," dy=dy/y;                      #to rel. uncertainties"
+	," y=y/m0*m1;                    #[0]#renormalizing CS"
+	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":4
  ,"lx4data":5
  ,"x4data":[
@@ -1214,6 +1297,11 @@
       ,"x1":[3.0e+7,4.5e+7,3.19e+8,4.33e+8,5.84e+8]
    }
  }
+ ,"c5mon":{"m0ref":"[EN,MONIT]/al27px", "m1ref":"recom/al27px"
+      ,"enNorm":[3.0e+7,4.5e+7,3.19e+8,4.33e+8,5.84e+8]
+      ,"m0":[null,null,0.0113,0.011,0.0108]
+      ,"m1":[1.8e-4,0.00319,null,null,null]
+      ,"dm1":[6.0e-5,2.1e-4,null,null,null] }
 }
 ,{"iDataset":1, "DatasetID":"C02710072", "Pointer":"2"
  ,"Subent":"C0271007", "compiled":19961009
@@ -1373,6 +1461,14 @@
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"22-TI-0(P,X)19-K-43,,SIG"
  ,"compNotes":[]
+ ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
+	," #[0]#Reaction: 22-TI-0(P,X)19-K-43,,SIG"
+	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
+	," m0: [EN,MONIT];               #[0]#old monitor(energy)"
+	," m1: recom$al27px;             #[0]#new monitor(energy)"
+	," dy=dy/y;                      #to rel. uncertainties"
+	," y=y/m0*m1;                    #[0]#renormalizing CS"
+	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":4
  ,"lx4data":5
  ,"x4data":[
@@ -1415,6 +1511,11 @@
       ,"x1":[4.5e+7,1.18e+8,3.19e+8,4.33e+8,5.84e+8]
    }
  }
+ ,"c5mon":{"m0ref":"[EN,MONIT]/al27px", "m1ref":"recom/al27px"
+      ,"enNorm":[4.5e+7,1.18e+8,3.19e+8,4.33e+8,5.84e+8]
+      ,"m0":[null,0.0109,0.0113,0.011,0.0108]
+      ,"m1":[0.00319,null,null,null,null]
+      ,"dm1":[2.1e-4,null,null,null,null] }
 }
 ,{"iDataset":1, "DatasetID":"C02710082", "Pointer":"2"
  ,"Subent":"C0271008", "compiled":19961009
@@ -1574,8 +1675,13 @@
 	,"RadiationType":"DG","Ene":1524.0,"Ene1":1524.6,"Abu":0.18,"Abu1":0.1808
 	,"FcCorrDECAY_DATA":0.99557525
 	,"reaction":"22-TI-0(P,X)19-K-42,,SIG"}
- ,"autoCorrNotes":["#Reaction: 22-TI-0(P,X)19-K-42,,SIG"
+ ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
+	," #[0]#Reaction: 22-TI-0(P,X)19-K-42,,SIG"
+	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
+	," m0: [EN,MONIT];               #[0]#old monitor(energy)"
+	," m1: recom$al27px;             #[0]#new monitor(energy)"
 	," dy=dy/y;                      #to rel. uncertainties"
+	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	,"  #[1]#---Reaction decay-data"
 	,"  #[1]#REACTION   (22-TI-0(P,X)19-K-42,,SIG)"
 	,"  #[1]#DECAY-DATA (19-K-42,12.36HR,DG,1524.,0.18) #Ix_old=0.18"
@@ -1624,6 +1730,9 @@
       ,"x1":[1.18e+8,3.19e+8,4.33e+8,5.84e+8]
    }
  }
+ ,"c5mon":{"m0ref":"[EN,MONIT]/al27px", "m1ref":"recom/al27px"
+      ,"enNorm":[1.18e+8,3.19e+8,4.33e+8,5.84e+8]
+      ,"m0":[0.0109,0.0113,0.011,0.0108] }
 }
 ,{"iDataset":1, "DatasetID":"C02710092", "Pointer":"2"
  ,"Subent":"C0271009", "compiled":19961009
@@ -1777,6 +1886,14 @@
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"22-TI-0(P,X)12-MG-28,,SIG"
  ,"compNotes":[]
+ ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
+	," #[0]#Reaction: 22-TI-0(P,X)12-MG-28,,SIG"
+	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
+	," m0: [EN,MONIT];               #[0]#old monitor(energy)"
+	," m1: recom$al27px;             #[0]#new monitor(energy)"
+	," dy=dy/y;                      #to rel. uncertainties"
+	," y=y/m0*m1;                    #[0]#renormalizing CS"
+	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":4
  ,"lx4data":2
  ,"x4data":[
@@ -1819,6 +1936,9 @@
       ,"x1":[3.19e+8,5.84e+8]
    }
  }
+ ,"c5mon":{"m0ref":"[EN,MONIT]/al27px", "m1ref":"recom/al27px"
+      ,"enNorm":[3.19e+8,5.84e+8]
+      ,"m0":[0.0113,0.0108] }
 }
 ,{"iDataset":1, "DatasetID":"C02710102", "Pointer":"2"
  ,"Subent":"C0271010", "compiled":19961009
@@ -1973,6 +2093,14 @@
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"22-TI-0(P,X)11-NA-24,,SIG"
  ,"compNotes":[]
+ ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
+	," #[0]#Reaction: 22-TI-0(P,X)11-NA-24,,SIG"
+	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
+	," m0: [EN,MONIT];               #[0]#old monitor(energy)"
+	," m1: recom$al27px;             #[0]#new monitor(energy)"
+	," dy=dy/y;                      #to rel. uncertainties"
+	," y=y/m0*m1;                    #[0]#renormalizing CS"
+	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":4
  ,"lx4data":3
  ,"x4data":[
@@ -2015,6 +2143,9 @@
       ,"x1":[3.19e+8,4.33e+8,5.84e+8]
    }
  }
+ ,"c5mon":{"m0ref":"[EN,MONIT]/al27px", "m1ref":"recom/al27px"
+      ,"enNorm":[3.19e+8,4.33e+8,5.84e+8]
+      ,"m0":[0.0113,0.011,0.0108] }
 }
 ,{"iDataset":1, "DatasetID":"C02710112", "Pointer":"2"
  ,"Subent":"C0271011", "compiled":19961009
@@ -2173,6 +2304,14 @@
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"22-TI-0(P,X)11-NA-22,,SIG"
  ,"compNotes":[]
+ ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
+	," #[0]#Reaction: 22-TI-0(P,X)11-NA-22,,SIG"
+	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
+	," m0: [EN,MONIT];               #[0]#old monitor(energy)"
+	," m1: recom$al27px;             #[0]#new monitor(energy)"
+	," dy=dy/y;                      #to rel. uncertainties"
+	," y=y/m0*m1;                    #[0]#renormalizing CS"
+	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":4
  ,"lx4data":3
  ,"x4data":[
@@ -2215,6 +2354,9 @@
       ,"x1":[3.19e+8,4.33e+8,5.84e+8]
    }
  }
+ ,"c5mon":{"m0ref":"[EN,MONIT]/al27px", "m1ref":"recom/al27px"
+      ,"enNorm":[3.19e+8,4.33e+8,5.84e+8]
+      ,"m0":[0.0113,0.011,0.0108] }
 }
 ,{"iDataset":1, "DatasetID":"C02710122", "Pointer":"2"
  ,"Subent":"C0271012", "compiled":19961009
@@ -2371,8 +2513,14 @@
 	,"RadiationType":"DG","Ene":477.0,"Ene1":477.6035,"Abu":0.103,"Abu1":0.1044
 	,"FcCorrDECAY_DATA":0.98659
 	,"reaction":"22-TI-0(P,X)4-BE-7,,SIG"}
- ,"autoCorrNotes":["#Reaction: 22-TI-0(P,X)4-BE-7,,SIG"
+ ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
+	," #[0]#Reaction: 22-TI-0(P,X)4-BE-7,,SIG"
+	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
+	," #[0]#En=5.84E8"
+	," a0=[MONIT];                   #[0]#old monitor point 0.0108"
+	," a1=recom$al27px[EN];          #[0]#new monitor point [584.0MeV]"
 	," dy=dy/y;                      #to rel. uncertainties"
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
 	,"  #[1]#---Reaction decay-data"
 	,"  #[1]#REACTION   (22-TI-0(P,X)4-BE-7,,SIG)"
 	,"  #[1]#DECAY-DATA (4-BE-7,53.D,DG,477.,0.103) #Ix_old=0.103"
@@ -2421,6 +2569,9 @@
       ,"x1":[5.84e+8]
    }
  }
+ ,"c5mon":{"m0ref":"[MONIT]/al27px", "m1ref":"recom/al27px"
+      ,"enNorm":[5.84e+8]
+      ,"m0":[0.0108] }
 }
 ,{"iDataset":1, "DatasetID":"C02710132", "Pointer":"2"
  ,"Subent":"C0271013", "compiled":19961009
@@ -2472,7 +2623,7 @@
       ,"x1":[5.84e+8]
    }
  }
- ,"c5mon":{"m0ref":"[EN,MONIT]/al27px", "m1ref":"recom/ti0px"
+ ,"c5mon":{"m0ref":"[MONIT]/al27px", "m1ref":"recom/ti0px"
       ,"enNorm":[5.84e+8] }
 }
    ]
@@ -2577,8 +2728,14 @@
 	,"RadiationType":"DG","Ene":1297.0,"Ene1":1297.09,"Abu":0.74,"Abu1":0.67
 	,"FcCorrDECAY_DATA":1.1044776
 	,"reaction":"22-TI-0(P,X)20-CA-47,,SIG"}
- ,"autoCorrNotes":["#Reaction: 22-TI-0(P,X)20-CA-47,,SIG"
+ ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
+	," #[0]#Reaction: 22-TI-0(P,X)20-CA-47,,SIG"
+	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
+	," #[0]#En=3.19E8"
+	," a0=[MONIT];                   #[0]#old monitor point 0.0113"
+	," a1=recom$al27px[EN];          #[0]#new monitor point [319.0MeV]"
 	," dy=dy/y;                      #to rel. uncertainties"
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
 	,"  #[1]#---Reaction decay-data"
 	,"  #[1]#REACTION   (22-TI-0(P,X)20-CA-47,,SIG)"
 	,"  #[1]#DECAY-DATA (20-CA-47,4.535D,DG,1297.,0.74) #Ix_old=0.74"
@@ -2627,6 +2784,9 @@
       ,"x1":[3.19e+8]
    }
  }
+ ,"c5mon":{"m0ref":"[MONIT]/al27px", "m1ref":"recom/al27px"
+      ,"enNorm":[3.19e+8]
+      ,"m0":[0.0113] }
 }
 ,{"iDataset":1, "DatasetID":"C02710142", "Pointer":"2"
  ,"Subent":"C0271014", "compiled":19961009
@@ -2678,7 +2838,7 @@
       ,"x1":[3.19e+8]
    }
  }
- ,"c5mon":{"m0ref":"[EN,MONIT]/al27px", "m1ref":"recom/ti0px"
+ ,"c5mon":{"m0ref":"[MONIT]/al27px", "m1ref":"recom/ti0px"
       ,"enNorm":[3.19e+8] }
 }
    ]
