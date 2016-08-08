@@ -1,9 +1,9 @@
-  {"ENTRY":"C0972", "updated":20040423, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C0972", "updated":20160809, "TransID":"C161", "TransDate":20161016, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2000,"a1":"A.Fessler+","r1":"J,NIM/A,450,353,2000"
    ,"ref":"Jour: Nucl. Instrum. Methods in Physics Res., Sect.A, Vol.450, p.353 (2000)"
    ,"title":"Thick target yields and angular distributions for the 19F(p,alpha gamma)16O source reaction at incident proton energies between 1.5 and 4.0 MeV"
    ,"x4subents":[
-   {"SUBENT":"C0972001", "isub":1, "compiled":20040423, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"C0972001", "isub":1, "compiled":20160809, "TransID":"C161", "TransDate":20161016
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -59,8 +59,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from tables in reference."
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from tables in reference."
 		,"No reply from B.J.Micklich to author proof."]
 	}
       ]
@@ -70,32 +72,46 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" VM"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160805A", "date":"20160805", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION code in sub.2 updated."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C0972002", "isub":2, "compiled":20040324, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0972002", "isub":2, "compiled":20160809, "TransID":"C161", "TransDate":20161016
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"9-F-19(P,A)8-O-16,,TTY/MLT/DA,G"
-	    ,"c4reac":"(P,A),TTY/MLT/DA,G"
+	,"x4code":{"code":"9-F-19(P,A)8-O-16,,MLT/DA,G,TT"
+	    ,"c4reac":"(P,A),MLT/DA,G,TT"
 	    ,"combi":"a"
+	    ,"Units":"PRD/INC/SR"
 	    ,"reacs": [
-	    {"code":"9-F-19(P,A)8-O-16,,TTY/MLT/DA,G"
+	    {"code":"9-F-19(P,A)8-O-16,,MLT/DA,G,TT"
 		,"Reac":"P,A"
 		,"SF1":"9-F-19","Targ":{"code":"9-F-19","nam":"F-19","ZA":9019}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"A"
 		,"SF4":"8-O-16","Prod":{"code":"8-O-16","nam":"O-16","ZA":8016}
-		,"SF6":"TTY/MLT/DA"
+		,"SF6":"MLT/DA"
 		,"SF7":"G"
-		,"SF58":",TTY/MLT/DA,G","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"TT"
+		,"SF58":",MLT/DA,G,TT","Quant":"TTD","BasicUnits":"PRD/INC/SR","QuantHlp":"Gamma multiplicity for thick target d/dA"
 	    }]}
 	}
       ]
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"BCINT", "dict":"METHOD", "idict":21,"hlp":"Beam current integrated"}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160805A", "date":"20160805", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION code updated"]
 	}
       ]
     }
@@ -139,13 +155,60 @@
 	,[4,1.316E7,569000]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0972002", "Pointer":" "
- ,"Subent":"C0972002", "compiled":20040324
-,"year1":2000, "author1ini":"A.", "author1":"Fessler"
-, "zTarg1":9, "targ1":"F-19", "proj1":"p", "emis1":"A", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"9-F-19(P,A)8-O-16,,TTY/MLT/DA,G"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"C0972002", "compiled":20160809
+ ,"year1":2000, "author1ini":"A.", "author1":"Fessler"
+ ,"zTarg1":9, "targ1":"F-19", "proj1":"p", "emis1":"A", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
+ ,"ReactionType":"TDA", "quant":"TTD", "quantExpan":"Gamma multiplicity for thick target d/dA"
+ ,"reacode":"9-F-19(P,A)8-O-16,,MLT/DA,G,TT"
+ ,"compNotes":["Ignored column:DATA-ERR,PRT/MUC/SR  expected units:PRD/INC/SR,PER-CENT"]
+ ,"wx4data":4
+ ,"lx4data":9
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRT/MUC/SR", "basicUnits":"PRT/MUC/SR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[3.184e+5,3.883e+5,6.345e+5,2.242e+6,5.438e+6,7.741e+6,9.191e+6,1.244e+7,1.316e+7]
+    ,"dat1":[1.14624e+9,1.39788e+9,2.2842e+9,8.0712e+9,1.95768e+10,2.78676e+10,3.30876e+10,4.4784e+10,4.7376e+10]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRT/MUC/SR", "basicUnits":"PRT/MUC/SR"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[19700,20400,30700,1.03e+5,2.42e+5,3.42e+5,4.05e+5,5.34e+5,5.69e+5]
+    ,"dat1":[7.092e+7,7.344e+7,1.1052e+8,3.708e+8,8.712e+8,1.2312e+9,1.458e+9,1.9224e+9,2.0484e+9]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[1.5,1.75,2,2.25,2.5,2.75,3,3.5,4]
+    ,"dat1":[1.5e+6,1.75e+6,2.0e+6,2.25e+6,2.5e+6,2.75e+6,3.0e+6,3.5e+6,4.0e+6]}
+  ,{"ivar":3, "cvar":"x2", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X2.Value", "dataType":"61", "rank":2.1
+    ,"expansion":"Angle: angle"
+    ,"com0":90
+    ,"com1":90}
+  ]
+ ,"wc5data":3
+ ,"lc5data":9
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PRD/INC/SR"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.14624e+9,1.39788e+9,2.2842e+9,8.0712e+9,1.95768e+10,2.78676e+10,3.30876e+10,4.4784e+10,4.7376e+10]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.5e+6,1.75e+6,2.0e+6,2.25e+6,2.5e+6,2.75e+6,3.0e+6,3.5e+6,4.0e+6]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":2.0
+      ,"expansion":"Angle: angle"
+      ,"x2":[90,90,90,90,90,90,90,90,90]
+   }
+ }
 }
    ]
    }
