@@ -1,9 +1,9 @@
-  {"ENTRY":"P0009", "updated":20111112, "TransID":"P004", "TransDate":20111212, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"P0009", "updated":20160809, "TransID":"C161", "TransDate":20161016, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1961,"a1":"A.M.Morozov","r1":"J,ZET,40,101,1961"
    ,"ref":"Jour: Zhurnal Eksperimental'noi i Teoret. Fiziki, Vol.40, p.101 (1961)"
    ,"title":"Short-lived isomers of Ga, Ge, and As produced by 19.2-MeV protons"
    ,"x4subents":[
-   {"SUBENT":"P0009001", "isub":1, "compiled":20111112, "TransID":"P004", "TransDate":20111212
+   {"SUBENT":"P0009001", "isub":1, "compiled":20160809, "TransID":"C161", "TransDate":20161016
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -53,6 +53,13 @@
 	,"x4codes":[{"code":"BCINT", "dict":"METHOD", "idict":21,"hlp":"Beam current integrated"}]
 	}
       ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on sources of uncertainties"]
+	}
+      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"CPX"
@@ -84,28 +91,34 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" SD: Ref. corrected."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160806A", "date":"20160806", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION and DECAY-DATA corrected"
+		," in subs. 2,3."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"P0009002", "isub":2, "compiled":20000808, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"P0009002", "isub":2, "compiled":20160809, "TransID":"C161", "TransDate":20161016
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"31-GA-71(P,N)32-GE-71,PAR,SIG"
-	    ,"c4reac":"(P,N)PAR,SIG"
+	,"x4code":{"code":"31-GA-71(P,N)32-GE-71-L,,SIG"
+	    ,"c4reac":"(P,N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":4
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"31-GA-71(P,N)32-GE-71,PAR,SIG"
+	    {"code":"31-GA-71(P,N)32-GE-71-L,,SIG"
 		,"Reac":"P,N"
 		,"SF1":"31-GA-71","Targ":{"code":"31-GA-71","nam":"Ga-71","ZA":31071}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"N"
-		,"SF4":"32-GE-71","Prod":{"code":"32-GE-71","nam":"Ge-71","ZA":32071}
-		,"SF5":"PAR"
+		,"SF4":"32-GE-71-L","Prod":{"code":"32-GE-71-L","nam":"Ge-71-l","ZA":32071,"ProdM":"?"}
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
@@ -117,8 +130,9 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"32-GE-71", "t12":0.0194, "t12units":"SEC", "t12sec":0.0194
+	,"x4codes":[{"Nucl":"32-GE-71-L", "t12":19.4, "t12units":"MSEC", "t12sec":0.0194
 	, "Radiations":[ {"Type":"DG", "Energy":[0.18]}]}]
+	,"x4freetext":[" Measured by authors"]
 	}
       ]
      ,"FLAG":[
@@ -138,23 +152,26 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Reaction corrected, runs marked."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160806A", "date":"20160806", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION and DECAY-DATA corrected,"
+		," deleted E from and added ERR-HL to COMMON"]
+	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
+    ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"E", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"E-ERR", "units":"MEV", "pointer":" "
-	,"headerHelp":"Outgoing particle energy error", "pFlag":"9110000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+       {"icol":0, "header":"ERR-HL", "units":"MSEC", "pointer":" "
+	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
+	,"unitsHelp":"milliseconds","familyCode":"TIME","convFc":0.001,"basicUnits":"SEC"}
       ]
       ,"datacols":[
-	 ["E"         ,"E-ERR"     ]
-	,["MEV"       ,"MEV"       ]
-	,[" "         ," "         ]]
+	 ["ERR-HL"    ]
+	,["MSEC"      ]
+	,[" "         ]]
       ,"data":[
-	 [0.18,0.01]]}
+	 [0.4]]}
     ,"DATA":{"ncols":4, "nrows":19
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -196,14 +213,14 @@
 	,[19.2,50,6,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"P0009002", "Pointer":" "
- ,"Subent":"P0009002", "compiled":20000808
+ ,"Subent":"P0009002", "compiled":20160809
  ,"year1":1961, "author1ini":"A.M.", "author1":"Morozov"
- ,"zTarg1":31, "targ1":"Ga-71", "proj1":"p", "emis1":"N", "MF":3, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"31-GA-71(P,N)32-GE-71,PAR,SIG"
+ ,"zTarg1":31, "targ1":"Ga-71", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
+ ,"reacode":"31-GA-71(P,N)32-GE-71-L,,SIG"
  ,"compNotes":[]
- ,"wx4data":6
+ ,"wx4data":5
  ,"lx4data":19
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -230,27 +247,21 @@
 	,10.9,11.8,11.9,13.8,13.8,15.8,15.8,17.4,19.2]
     ,"dat1":[3.0e+6,4.0e+6,4.9e+6,6.8e+6,6.9e+6,7.6e+6,7.7e+6,8.7e+6,8.7e+6,9.7e+6
 	,1.09e+7,1.18e+7,1.19e+7,1.38e+7,1.38e+7,1.58e+7,1.58e+7,1.74e+7,1.92e+7]}
-  ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":true , "ifCM":false
-    ,"header":"E", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"51", "rank":2.1
-    ,"expansion":"Secondary energy: particle energy"
-    ,"com0":0.18
-    ,"com1":1.8e+5}
-  ,{"ivar":4, "cvar":"dx2", "fam":"E2", "ifComm":true , "ifCM":false
-    ,"header":"E-ERR", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Err+-", "dataType":"51", "rank":2.911
-    ,"expansion":"Secondary energy: particle energy /Error/"
-    ,"com0":0.01
-    ,"com1":1.0e+4}
-  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"ZZZ", "dataType":"01", "rank":777.0
     ,"expansion":"Flags, etc.: flag"
     ,"dat0":[null,2,null,2,null,null,2,null,2,2
 	,null,null,2,null,null,null,2,2,null]
    ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
+    ,"header":"ERR-HL", "units":"MSEC", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"87", "rank":777.1
+    ,"expansion":"Other variable: decay constant"
+    ,"com0":0.4
+    ,"com1":4.0e-4}
   ]
- ,"wc5data":3
+ ,"wc5data":2
  ,"lc5data":19
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
@@ -266,34 +277,27 @@
       ,"x1":[3.0e+6,4.0e+6,4.9e+6,6.8e+6,6.9e+6,7.6e+6,7.7e+6,8.7e+6,8.7e+6,9.7e+6
 	,1.09e+7,1.18e+7,1.19e+7,1.38e+7,1.38e+7,1.58e+7,1.58e+7,1.74e+7,1.92e+7]
    }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"E2", "ifCM":false, "units":"EV"
-      ,"header":"E2", "dataType":"51", "rank":2.0
-      ,"expansion":"Secondary energy: particle energy"
-      ,"x2":[1.8e+5,1.8e+5,1.8e+5,1.8e+5,1.8e+5,1.8e+5,1.8e+5,1.8e+5,1.8e+5,1.8e+5
-	,1.8e+5,1.8e+5,1.8e+5,1.8e+5,1.8e+5,1.8e+5,1.8e+5,1.8e+5,1.8e+5]
-      ,"dx2":[1.0e+4,1.0e+4,1.0e+4,1.0e+4,1.0e+4,1.0e+4,1.0e+4,1.0e+4,1.0e+4,1.0e+4
-	,1.0e+4,1.0e+4,1.0e+4,1.0e+4,1.0e+4,1.0e+4,1.0e+4,1.0e+4,1.0e+4]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"P0009003", "isub":3, "compiled":20000808, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"P0009003", "isub":3, "compiled":20160809, "TransID":"C161", "TransDate":20161016
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"32-GE-76(P,2N)33-AS-75-M,,SIG"
+	,"x4code":{"code":"32-GE-76(P,2N)33-AS-75-L,,SIG"
 	    ,"c4reac":"(P,2N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":16
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"32-GE-76(P,2N)33-AS-75-M,,SIG"
+	    {"code":"32-GE-76(P,2N)33-AS-75-L,,SIG"
 		,"Reac":"P,2N"
 		,"SF1":"32-GE-76","Targ":{"code":"32-GE-76","nam":"Ge-76","ZA":32076}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"2N"
-		,"SF4":"33-AS-75-M","Prod":{"code":"33-AS-75-M","nam":"As-75-m","ZA":33075,"ProdM":"M"}
+		,"SF4":"33-AS-75-L","Prod":{"code":"33-AS-75-L","nam":"As-75-l","ZA":33075,"ProdM":"?"}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
@@ -307,8 +311,9 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"33-AS-75-M", "t12":0.0163, "t12units":"SEC", "t12sec":0.0163
+	,"x4codes":[{"Nucl":"33-AS-75-L", "t12":15.6, "t12units":"MSEC", "t12sec":0.0156000005
 	, "Radiations":[ {"Type":"DG", "Energy":[0.29]}]}]
+	,"x4freetext":[" Measured by authors"]
 	}
       ]
      ,"FLAG":[
@@ -323,8 +328,27 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected by NNDC"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160806A", "date":"20160806", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Isomer code changed to L in REACTION and"
+		," DECAY-DATA, half-life corrected according to article,"
+		," ERR-HL added to COMMON."]
+	}
       ]
     }
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"ERR-HL", "units":"MSEC", "pointer":" "
+	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
+	,"unitsHelp":"milliseconds","familyCode":"TIME","convFc":0.001,"basicUnits":"SEC"}
+      ]
+      ,"datacols":[
+	 ["ERR-HL"    ]
+	,["MSEC"      ]
+	,[" "         ]]
+      ,"data":[
+	 [0.4]]}
     ,"DATA":{"ncols":4, "nrows":23
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -370,14 +394,14 @@
 	,[19.2,635,60,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"P0009003", "Pointer":" "
- ,"Subent":"P0009003", "compiled":20000808
+ ,"Subent":"P0009003", "compiled":20160809
  ,"year1":1961, "author1ini":"A.M.", "author1":"Morozov"
  ,"zTarg1":32, "targ1":"Ge-76", "proj1":"p", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"32-GE-76(P,2N)33-AS-75-M,,SIG"
+ ,"reacode":"32-GE-76(P,2N)33-AS-75-L,,SIG"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":23
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -418,6 +442,12 @@
 	,null,null,null,2,null,null,null,null,null,null
 	,null,null,null]
    ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
+    ,"header":"ERR-HL", "units":"MSEC", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"87", "rank":777.1
+    ,"expansion":"Other variable: decay constant"
+    ,"com0":0.4
+    ,"com1":4.0e-4}
   ]
  ,"wc5data":2
  ,"lc5data":23
