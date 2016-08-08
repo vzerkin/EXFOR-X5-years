@@ -1,9 +1,9 @@
-  {"ENTRY":"C0051", "updated":20040310, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C0051", "updated":20160809, "TransID":"C161", "TransDate":20161016, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1958,"a1":"R.L.Macklin+","r1":"J,PR,109,105,1958"
    ,"ref":"Jour: Physical Review, Vol.109, p.105 (1958)"
    ,"title":"Study of the T(p,n)He3 and Li7(p,n)Be7 Reactions"
    ,"x4subents":[
-   {"SUBENT":"C0051001", "isub":1, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"C0051001", "isub":1, "compiled":20160809, "TransID":"C161", "TransDate":20161016
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -20,7 +20,8 @@
 	,"x4codes":[{"code":"J,BAP,3,365(G14),195808","stdFileName":"J,BAP,3,365(G14),1958"
 		,"year":1958,"typ":"J","ref":"J,BAP","vol":"3","p":"365(G14)"
 		,"shortRef":"Jour: Bulletin of the American Physical Society Ser.II, Vol.3, p.365(G14) (1958)"}]
-	,"x4freetext":[" Error in measurement."]
+	,"x4freetext":[" Renormalization factor 1.27"
+		," for T(t,n)3He given"]
 	}
       ]
      ,"AUTHOR":[
@@ -63,6 +64,12 @@
 	,"x4code":{"code":"20040310A", "date":"20040310", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Converted to new date formats."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160804A", "date":"20160804", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Reference text modified,"
+		," STATUS in sub.3 updated"]
 	}
       ]
     }
@@ -230,7 +237,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0051003", "isub":3, "compiled":19960701, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0051003", "isub":3, "compiled":20160809, "TransID":"C161", "TransDate":20161016
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -281,8 +288,23 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from provate communication, Macklin"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from private communication, Macklin"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"OUTDT,C0051006"
+		,"flag":"OUTDT", "help":"Normalization out-of-date"
+		,"subent":"C0051006"
+		}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160804A", "date":"20160804", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" STATUS OUTDT added"]
 	}
       ]
     }
@@ -329,7 +351,7 @@
 	,[2.098,345.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0051003", "Pointer":" "
- ,"Subent":"C0051003", "compiled":19960701
+ ,"Subent":"C0051003", "compiled":20160809
  ,"year1":1958, "author1ini":"R.L.", "author1":"Macklin"
  ,"zTarg1":1, "targ1":"H-3", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -384,70 +406,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0051004", "isub":4, "compiled":19960621, "TransID":"0000", "TransDate":20050926
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-7(P,N)4-BE-7,,SIG"
-	    ,"c4reac":"(P,N),SIG"
-	    ,"combi":"a"
-	    ,"MF":3
-	    ,"MT":4
-	    ,"Units":"B"
-	    ,"reacs": [
-	    {"code":"3-LI-7(P,N)4-BE-7,,SIG"
-		,"Reac":"P,N"
-		,"SF1":"3-LI-7","Targ":{"code":"3-LI-7","nam":"Li-7","ZA":3007}
-		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"N"
-		,"SF4":"4-BE-7","Prod":{"code":"4-BE-7","nam":"Be-7","ZA":4007}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }]}
-	}
-      ]
-     ,"SAMPLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Air-cooled LiF targets on Pt and Al backings."]
-	}
-      ]
-     ,"ANALYSIS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"INTAD", "dict":"ANALYSIS", "idict":23,"hlp":"Integration of angular distribution"}]
-	}
-      ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":""}
-	,"x4freetext":["Absolute calibration obtained by comparison of the"
-		," thick LiF targets near 2MeV."]
-	}
-      ]
-     ,"CORRECTION":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Corrected for:"
-		,". change in detector efficiency with energy,"
-		,". solid angle subtended in the c.m. system,"
-		,". velocity dependence of 7Li(p,n) cross section."]
-	}
-      ]
-     ,"ERR-ANALYS":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["No information."]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"UNOBT"
-		,"flag":"UNOBT", "help":"Data unobtainable from author"
-		}]
-	,"x4freetext":[" Data not available."]
-	}
-      ]
-    }
+  ,{"SUBENT":"C0051004", "isub":4, "compiled":20160316, "TransID":"C157", "TransDate":20160727, "nosubent":true 
    }
   ,{"SUBENT":"C0051005", "isub":5, "compiled":19960701, "TransID":"0000", "TransDate":20050926
     ,"BIB":{
