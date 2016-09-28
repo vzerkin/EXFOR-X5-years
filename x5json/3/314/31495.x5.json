@@ -1,9 +1,9 @@
-  {"ENTRY":"31495", "updated":20150508, "TransID":"3170", "TransDate":20150706, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"31495", "updated":20160929, "TransID":"3175", "TransDate":20161115, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":1998,"a1":"R.Doczi+","r1":"J,NSE,129,164,1998"
    ,"ref":"Jour: Nuclear Science and Engineering, Vol.129, p.164 (1998)"
    ,"title":"Excitation functions of some (n,p) and (n,alpha) reactions from threshold to 16 MeV"
    ,"x4subents":[
-   {"SUBENT":"31495001", "isub":1, "compiled":20150508, "TransID":"3170", "TransDate":20150706
+   {"SUBENT":"31495001", "isub":1, "compiled":20160929, "TransID":"3175", "TransDate":20161115
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -35,7 +35,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,NSE,129,164,199806","stdFileName":"J,NSE,129,164,1998"
+	,"x4codes":[{"code":"J,NSE,129,164,1998","stdFileName":"J,NSE,129,164,1998"
 		,"year":1998,"typ":"J","ref":"J,NSE","vol":"129","p":"164"
 		,"shortRef":"Jour: Nuclear Science and Engineering, Vol.129, p.164 (1998)"}]
 	}
@@ -122,6 +122,11 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" VS. REL-REF added to the article and the"
 		,"  Entry with incident neutron flux energy distribution"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160922U", "date":"20160922", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. DECAY-DATA corrected in 010."]
 	}
       ]
     }
@@ -1179,7 +1184,7 @@
 }
    ]
    }
-  ,{"SUBENT":"31495010", "isub":10, "compiled":20020307, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"31495010", "isub":10, "compiled":20160929, "TransID":"3175", "TransDate":20161115
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1218,15 +1223,24 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"39-Y-90-M", "t12":49.71, "t12units":"MIN", "t12sec":2982.6
+	,"x4codes":[{"Nucl":"39-Y-91-M", "t12":49.71, "t12units":"MIN", "t12sec":2982.6
 	, "Radiations":[ {"Type":"DG", "Energy":[555.56], "Intensity":0.949}]}]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data are taken from table 3 of Nuclear Science and"
-		,"Engineering, vol. 129, pp. 164-174 (1998)."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data are taken from table 3 of Nuclear Science"
+		,"and Engineering, vol. 129, pp. 164-174 (1998)."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160922U", "date":"20160922", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. DECAY-DATA corrected."]
 	}
       ]
     }
@@ -1256,13 +1270,25 @@
 	,[12.53,0.25,11,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"31495010", "Pointer":" "
- ,"Subent":"31495010", "compiled":20020307
+ ,"Subent":"31495010", "compiled":20160929
  ,"year1":1998, "author1ini":"R.", "author1":"Doczi"
  ,"zTarg1":40, "targ1":"Zr-91", "proj1":"n", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"40-ZR-91(N,P)39-Y-91-M,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"39-Y-91-M","HalfLife":"49.71MIN","HalfLife1":"49.71M"
+	,"RadiationType":"DG","Ene":555.56,"Ene1":555.57,"Abu":0.949,"Abu1":0.95
+	,"FcCorrDECAY_DATA":0.9989474
+	,"reaction":"40-ZR-91(N,P)39-Y-91-M,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 40-ZR-91(N,P)39-Y-91-M,,SIG"
+	," dy=dy/y;                      #to rel. uncertainties"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (40-ZR-91(N,P)39-Y-91-M,,SIG)"
+	,"  #[1]#DECAY-DATA (39-Y-91-M,49.71MIN,DG,555.56,.9490) #Ix_old=0.949"
+	,"   a1=0.949/0.95;              #[1]#DECAY-DATA: correction to new 555.57 keV gamma-yield per decay Y-91-m Ix_new=0.95"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.9989474"
+	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":4
  ,"lx4data":4
  ,"x4data":[
