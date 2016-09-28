@@ -1,9 +1,9 @@
-  {"ENTRY":"31596", "updated":20101216, "TransID":"3148", "TransDate":20110323, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"31596", "updated":20160929, "TransID":"3175", "TransDate":20161115, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":2007,"a1":"W.G.Kang+","r1":"J,PR/C,76,067602,2007"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.76, p.067602 (2007)"
    ,"title":"Measurement on the thermal neutron capture cross section of 180W"
    ,"x4subents":[
-   {"SUBENT":"31596001", "isub":1, "compiled":20101216, "TransID":"3148", "TransDate":20110323
+   {"SUBENT":"31596001", "isub":1, "compiled":20160929, "TransID":"3175", "TransDate":20161115
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -67,16 +67,18 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"74-W-180", "t12":121.2, "t12units":"D", "t12sec":1.047168E7
+	,"x4codes":[{"Nucl":"74-W-181", "t12":121.2, "t12units":"D", "t12sec":1.047168E7
 	, "Radiations":[ {"Type":"DG", "Energy":[136.3], "Intensity":3.11E-4}
 			,{"Type":"DG", "Energy":[152.3], "Intensity":8.3E-4}]}]
 	}
-	,{"x4pointer":" "
-	,"x4codes":[{"Nucl":"74-W-184", "t12":75.1, "t12units":"D", "t12sec":6488640.0
+      ]
+     ,"DECAY-MON":[
+	{"x4pointer":" "
+	,"x4codes":[{"Nucl":"74-W-185-G", "t12":75.1, "t12units":"D", "t12sec":6488640.0
 	, "Radiations":[ {"Type":"DG", "Energy":[125.4], "Intensity":1.92E-4}]}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"Nucl":"74-W-186", "t12":0.988, "t12units":"D", "t12sec":85363.2
+	,"x4codes":[{"Nucl":"74-W-187", "t12":0.988, "t12units":"D", "t12sec":85363.2
 	, "Radiations":[ {"Type":"DG", "Energy":[551.5], "Intensity":0.0508}
 			,{"Type":"DG", "Energy":[618.4], "Intensity":0.0628}
 			,{"Type":"DG", "Energy":[685.8], "Intensity":0.273}
@@ -134,7 +136,15 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
-	,"x4freetext":[" Total error"]
+	,"x4freetext":[" Total error obtained from the following"
+		," partial uncertainties:"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-1"
+	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" Gamma ray detector efficiency (4%)"
+		,"  - Counting statistics"
+		,"  - Gamma ray intensity"]
 	}
       ]
      ,"HISTORY":[
@@ -159,9 +169,15 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. INSTITUTE corrected, Preprint deleted."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160923A", "date":"20160923", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. DECAY-DATA corrected. DECAY-MON added."
+		,"            ERR-ANALYS modified."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":5, "nrows":1
+    ,"COMMON":{"ncols":6, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"EV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
@@ -178,13 +194,16 @@
       ,{"icol":4, "header":"MONIT2-ERR", "units":"B", "pointer":" "
 	,"headerHelp":"Error in 2nd normalization value", "pFlag":"0000000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":5, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
+	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["EN"        ,"MONIT1"    ,"MONIT1-ERR","MONIT2"    ,"MONIT2-ERR"]
-	,["EV"        ,"B"         ,"B"         ,"B"         ,"B"         ]
-	,[" "         ," "         ," "         ," "         ," "         ]]
+	 ["EN"        ,"MONIT1"    ,"MONIT1-ERR","MONIT2"    ,"MONIT2-ERR","ERR-1"     ]
+	,["EV"        ,"B"         ,"B"         ,"B"         ,"B"         ,"PER-CENT"  ]
+	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [0.0253,39.5,2.3,1.76,0.09]]}
+	 [0.0253,39.5,2.3,1.76,0.09,4]]}
    }
   ,{"SUBENT":"31596002", "isub":2, "compiled":20080114, "TransID":"3127", "TransDate":20080710
     ,"BIB":{
@@ -241,7 +260,7 @@
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"74-W-180(N,G)74-W-181,,SIG"
  ,"compNotes":[]
- ,"wx4data":7
+ ,"wx4data":8
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -256,31 +275,37 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.7]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":4
+    ,"com1":4}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"com0":0.0253
     ,"com1":0.0253}
-  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT1", "units":"B", "basicUnits":"B"
     ,"what":"ZZZ", "dataType":"11", "rank":777.0
     ,"expansion":"Assumed values: monitor"
     ,"com0":39.5
     ,"com1":39.5}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT1-ERR", "units":"B", "basicUnits":"B"
     ,"what":"ZZZ", "dataType":"11", "rank":777.1
     ,"expansion":"Assumed values: monitor"
     ,"com0":2.3
     ,"com1":2.3}
-  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT2", "units":"B", "basicUnits":"B"
     ,"what":"ZZZ", "dataType":"11", "rank":777.2
     ,"expansion":"Assumed values: monitor"
     ,"com0":1.76
     ,"com1":1.76}
-  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+  ,{"ivar":7, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT2-ERR", "units":"B", "basicUnits":"B"
     ,"what":"ZZZ", "dataType":"11", "rank":777.3
     ,"expansion":"Assumed values: monitor"
@@ -294,7 +319,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[22.6]
-      ,"dy":[1.7]   }
+      ,"dy":[1.7]
+      ,"dysys":[0.904]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
