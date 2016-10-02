@@ -1,9 +1,9 @@
-  {"ENTRY":"D0253", "updated":20041109, "TransID":"0000", "TransDate":20050926, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"D0253", "updated":20161003, "TransID":"D106", "TransDate":20161118, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":2003,"a1":"A.M.Mukhamedzhanov+","r1":"J,PR/C,67,065804,2003"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.67, p.065804 (2003)"
    ,"title":"Asymptotic normalization coefficients for 14N+p->15O and the astrophysical S factor for 14N(p,g)15O"
    ,"x4subents":[
-   {"SUBENT":"D0253001", "isub":1, "compiled":20041109, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"D0253001", "isub":1, "compiled":20161003, "TransID":"D106", "TransDate":20161118
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -42,6 +42,13 @@
 		,"year":2003,"typ":"J","ref":"J,PR/C","vol":"67","p":"065804"
 		,"shortRef":"Jour: Physical Review, Part C, Nuclear Physics, Vol.67, p.065804 (2003)"}]
 	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"J,NP/A,718,147C,2003","stdFileName":"J,NP_A,718,147C,2003"
+		,"year":2003,"typ":"J","ref":"J,NP/A","vol":"718","p":"147C"
+		,"shortRef":"Jour: Nuclear Physics, Section A, Vol.718, p.147C (2003)"}]
+	,"x4freetext":[" Data for 13C(n,gamma) and"
+		," 14N(n,gamma) S factor on graphs."]
+	}
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
@@ -55,7 +62,7 @@
 	,"x4code":null
 	,"x4freetext":["A melamine (C3H6N6) target. The initial thickness of"
 		,"the target was measured to be 260+-68 mg/cm2 by"
-		,"scanning with wellcollimated alpha-particle sources of"
+		,"scanning with well collimated alpha-particle sources of"
 		,"241Am, 238Pu, and 244Cm."]
 	}
       ]
@@ -105,6 +112,11 @@
 	,"x4code":{"code":"20041109C", "date":"20041109", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" SD"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20160720A", "date":"20160720", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. Ref. NP/A,718,147c,2003 added."]
 	}
       ]
     }
@@ -744,18 +756,18 @@
 }
    ]
    }
-  ,{"SUBENT":"D0253004", "isub":4, "compiled":20041109, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D0253004", "isub":4, "compiled":20160518, "TransID":"D104", "TransDate":20160629
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"7-N-14(P,G)8-O-15,,SIG,,SFC"
+	,"x4code":{"code":"7-N-14(P,G)8-O-15,,SIG,,SFC,DERIV"
 	    ,"c4reac":"(P,G),SIG,,SFC"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":102
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"7-N-14(P,G)8-O-15,,SIG,,SFC"
+	    {"code":"7-N-14(P,G)8-O-15,,SIG,,SFC,DERIV"
 		,"Reac":"P,G"
 		,"SF1":"7-N-14","Targ":{"code":"7-N-14","nam":"N-14","ZA":7014}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
@@ -763,23 +775,45 @@
 		,"SF4":"8-O-15","Prod":{"code":"8-O-15","nam":"O-15","ZA":8015}
 		,"SF6":"SIG"
 		,"SF8":"SFC"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG,,SFC","Quant":"CS","BasicUnits":"B*EV","QuantHlp":"S-factor"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"ANC", "dict":"ANALYSIS", "idict":23,"hlp":"Asymptotic normalization constant"}]
+	,"x4freetext":[" derived through ANC"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table III of Phys.Rev.C67(2003)065804."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20160509A", "date":"20160509", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. EN unit MeV->keV."]
 	}
       ]
     }
     ,"DATA":{"ncols":2, "nrows":14
       ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
+       {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"B*KEV", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns * keV","familyCode":"B*E","convFc":1000.0,"basicUnits":"B*EV"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"B*KEV"     ]
+	,["KEV"       ,"B*KEV"     ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [1,1.73]
@@ -798,12 +832,12 @@
 	,[243,20.34]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0253004", "Pointer":" "
- ,"Subent":"D0253004", "compiled":20041109
+ ,"Subent":"D0253004", "compiled":20160518
  ,"year1":2003, "author1ini":"A.M.", "author1":"Mukhamedzhanov"
  ,"zTarg1":7, "targ1":"N-14", "proj1":"p", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS+", "quant":"CS", "quantExpan":"S-factor"
- ,"reacode":"7-N-14(P,G)8-O-15,,SIG,,SFC"
+ ,"reacode":"7-N-14(P,G)8-O-15,,SIG,,SFC,DERIV"
  ,"compNotes":["OPERATION...DATA  CONVERTED S-FACTORS TO BARNS"]
  ,"wx4data":2
  ,"lx4data":14
@@ -814,16 +848,16 @@
     ,"expansion":"Data: data"
     ,"dat0":[1.73,1.74,1.75,1.77,1.83,1.89,1.99,2.16,2.47,3.15
 	,3.82,6.07,10.29,20.34]
-    ,"dat1":[1.77172e-6,1.7469e-5,1.4034e-5,1.18065e-5,9.78704e-6,8.94936e-6,8.46615e-6,8.35177e-6,8.76038e-6,1.03259e-5
-	,1.20681e-5,1.81915e-5,2.98221e-5,5.74389e-5]}
+    ,"dat1":[0,2.28346e-19,1.17259e-15,1.04511e-13,5.53455e-12,3.2356e-11,1.29439e-10,4.08257e-10,1.12148e-9,2.98477e-9
+	,5.0143e-9,1.244e-8,2.76751e-8,6.71255e-8]}
   ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"header":"EN", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[1,30,50,70,100,120,140,160,180,200
 	,210,225,235,243]
-    ,"dat1":[1.0e+6,3.0e+7,5.0e+7,7.0e+7,1.0e+8,1.2e+8,1.4e+8,1.6e+8,1.8e+8,2.0e+8
-	,2.1e+8,2.25e+8,2.35e+8,2.43e+8]}
+    ,"dat1":[1000,3.0e+4,5.0e+4,7.0e+4,1.0e+5,1.2e+5,1.4e+5,1.6e+5,1.8e+5,2.0e+5
+	,2.1e+5,2.25e+5,2.35e+5,2.43e+5]}
   ]
  ,"wc5data":2
  ,"lc5data":14
@@ -831,14 +865,14 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[1.77172e-6,1.7469e-5,1.4034e-5,1.18065e-5,9.78704e-6,8.94936e-6,8.46615e-6,8.35177e-6,8.76038e-6,1.03259e-5
-	,1.20681e-5,1.81915e-5,2.98221e-5,5.74389e-5]
+      ,"y":[0,2.28346e-19,1.17259e-15,1.04511e-13,5.53455e-12,3.2356e-11,1.29439e-10,4.08257e-10,1.12148e-9,2.98477e-9
+	,5.0143e-9,1.244e-8,2.76751e-8,6.71255e-8]
    }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"B"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[1.0e+6,3.0e+7,5.0e+7,7.0e+7,1.0e+8,1.2e+8,1.4e+8,1.6e+8,1.8e+8,2.0e+8
-	,2.1e+8,2.25e+8,2.35e+8,2.43e+8]
+      ,"x1":[1000,3.0e+4,5.0e+4,7.0e+4,1.0e+5,1.2e+5,1.4e+5,1.6e+5,1.8e+5,2.0e+5
+	,2.1e+5,2.25e+5,2.35e+5,2.43e+5]
    }
  }
 }
