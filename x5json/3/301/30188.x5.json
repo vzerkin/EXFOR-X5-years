@@ -1,9 +1,9 @@
-  {"ENTRY":"30188", "updated":20080208, "TransID":"3126", "TransDate":20080530, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"30188", "updated":20161207, "TransID":"3176", "TransDate":20170113, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":1970,"a1":"M.D.Ricabarra+","r1":"J,CJP,48,2362,1970"
    ,"ref":"Jour: Canadian Journal of Physics, Vol.48, p.2362 (1970)"
-   ,"title":"Anomalous Zr-96 resonance integral to thermal activat. cross-section ratio and neutron activation resonance integral of Zr-94 and Zr-96"
+   ,"title":"Anomalous 96Zr resonance integral to thermal activation cross-section ratio and the neutron activation resonance integral of 94Zr and 96Zr"
    ,"x4subents":[
-   {"SUBENT":"30188001", "isub":1, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+   {"SUBENT":"30188001", "isub":1, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -40,9 +40,9 @@
      ,"TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Anomalous Zr-96 resonance integral to thermal activat."
-		,"cross-section ratio and neutron activation resonance"
-		,"integral of Zr-94 and Zr-96"]
+	,"x4freetext":["Anomalous 96Zr resonance integral to thermal activation"
+		,"cross-section ratio and the neutron activation"
+		,"resonance integral of 94Zr and 96Zr"]
 	}
       ]
      ,"EXP-YEAR":[
@@ -52,7 +52,8 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"REAC", "dict":"FACILITY", "idict":18,"hlp":"Reactor"}]
+	,"x4codes":[{"code":"REAC", "dict":"FACILITY", "idict":18,"hlp":"Reactor"}
+	    ,{"code":"3ARGCNE", "dict":"INSTITUTE", "idict":3,"hlp":"Comision Nacional de Energia Atomica, Buenos Aires, Argentina"}]
 	}
       ]
      ,"INC-SOURCE":[
@@ -116,6 +117,13 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" BIB section updated"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20161206A", "date":"20161206", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF8=RNV added to resonance integrals."
+		," EN-MIN,EN-NRM deleted from subent 001 and added to"
+		," 002-007 as appropriate."]
+	}
       ]
      ,"CORRECTION":[
 	{"x4pointer":" "
@@ -131,45 +139,40 @@
 	}
       ]
     }
-    ,"COMMON":{"ncols":4, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"EN-MIN", "units":"EV", "pointer":" "
-	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
-	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-NRM", "units":"EV", "pointer":" "
-	,"headerHelp":"Incident projectile energy used for normalization", "pFlag":"0000000"
-	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"MONIT", "units":"B", "pointer":" "
+       {"icol":0, "header":"MONIT", "units":"B", "pointer":" "
 	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":3, "header":"MONIT-ERR", "units":"B", "pointer":" "
+      ,{"icol":1, "header":"MONIT-ERR", "units":"B", "pointer":" "
 	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN-MIN"    ,"EN-NRM"    ,"MONIT"     ,"MONIT-ERR" ]
-	,["EV"        ,"EV"        ,"B"         ,"B"         ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["MONIT"     ,"MONIT-ERR" ]
+	,["B"         ,"B"         ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [0.6,0.025,13.3,0.1]]}
+	 [13.3,0.1]]}
    }
-  ,{"SUBENT":"30188002", "isub":2, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30188002", "isub":2, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(40-ZR-96(N,G)40-ZR-97,,RI)/\n(40-ZR-96(N,G)40-ZR-97,,SIG)"
-	    ,"c4reac":"((N,G),RI)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Resonance integral]"
+	,"x4code":{"code":"(40-ZR-96(N,G)40-ZR-97,,RI,,RNV)//\n(40-ZR-96(N,G)40-ZR-97,,SIG)"
+	    ,"c4reac":"((N,G),RI,,RNV)//((N,G),SIG)"
+	    ,"combi":"a//a","combiQuant":"Ratio of [Resonance integral, non 1/v part]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"40-ZR-96(N,G)40-ZR-97,,RI"
+	    {"code":"40-ZR-96(N,G)40-ZR-97,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"40-ZR-96","Targ":{"code":"40-ZR-96","nam":"Zr-96","ZA":40096}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"40-ZR-97","Prod":{"code":"40-ZR-97","nam":"Zr-97","ZA":40097}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }
 	    ,{"code":"40-ZR-96(N,G)40-ZR-97,,SIG"
 		,"Reac":"N,G"
@@ -232,35 +235,48 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" Quoted error is standard deviation"]
+	,"x4freetext":[" No information on source of uncertainty"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text (p2366) of Can.J.Phys.48(1970)2362"]
 	}
       ]
     }
-    ,"DATA":{"ncols":2, "nrows":1
+    ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
+       {"icol":0, "header":"EN-MIN-NM", "units":"EV", "pointer":" "
+	,"headerHelp":"Lower limit of inc. en. range, REACTION ratio numer.", "pFlag":"2100000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"EN-DN", "units":"EV", "pointer":" "
+	,"headerHelp":"Incident energy for REACTION ratio denominator", "pFlag":"1200000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ]
-	,[" "         ," "         ]]
+	 ["EN-MIN-NM" ,"EN-DN"     ,"DATA"      ,"DATA-ERR"  ]
+	,["EV"        ,"EV"        ,"NO-DIM"    ,"NO-DIM"    ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [879,96]]}
+	 [0.6,0.0253,879,96]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30188002", "Pointer":" "
- ,"Subent":"30188002", "compiled":20080208
+ ,"Subent":"30188002", "compiled":20161207
  ,"year1":1970, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":40, "targ1":"Zr-96", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral]"
- ,"reacode":"(40-ZR-96(N,G)40-ZR-97,,RI)/(40-ZR-96(N,G)40-ZR-97,,SIG)"
- ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=0.75%"
-	,"OPERATION...  Value=Min  Min:EN-MIN"]
+ ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral, non 1/v part]"
+ ,"reacode":"(40-ZR-96(N,G)40-ZR-97,,RI,,RNV)//(40-ZR-96(N,G)40-ZR-97,,SIG)"
+ ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=0.75%"]
  ,"wx4data":6
  ,"lx4data":1
  ,"x4data":[
@@ -282,21 +298,21 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":0.1
     ,"com1":0.1}
-  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
-    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN-DN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value-dn", "dataType":"41", "rank":1.12
     ,"expansion":"Incident energy: energy"
-    ,"com0":0.6
-    ,"com1":0.6}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.025
-    ,"com1":0.025}
+    ,"dat0":[0.0253]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN-MIN-NM", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min-nm", "dataType":"41", "rank":1.21
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[0.6]
+   ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT", "units":"B", "basicUnits":"B"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
+    ,"what":"ZZZ", "dataType":"11", "rank":777.0
     ,"expansion":"Assumed values: monitor"
     ,"com0":13.3
     ,"com1":13.3}
@@ -313,33 +329,32 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[0.6]
+      ,"x1":[0.0253]
    }
  }
- ,"c5mon":{"m0ref":"[MONIT]/al27na", "m1ref":"recom/zr96ng"
-      ,"enNorm":[0.6] }
 }
    ]
    }
-  ,{"SUBENT":"30188003", "isub":3, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30188003", "isub":3, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-96(N,G)40-ZR-97,,RI"
-	    ,"c4reac":"(N,G),RI"
+	,"x4code":{"code":"40-ZR-96(N,G)40-ZR-97,,RI,,RNV"
+	    ,"c4reac":"(N,G),RI,,RNV"
 	    ,"combi":"a"
 	    ,"MF":213
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-96(N,G)40-ZR-97,,RI"
+	    {"code":"40-ZR-96(N,G)40-ZR-97,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"40-ZR-96","Targ":{"code":"40-ZR-96","nam":"Zr-96","ZA":40096}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"40-ZR-97","Prod":{"code":"40-ZR-97","nam":"Zr-97","ZA":40097}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }]}
 	}
       ]
@@ -377,30 +392,44 @@
 		,"measurement plus estimated systematic errors."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text (p2368) of Can.J.Phys.48(1970)2362"]
+	}
+      ]
     }
-    ,"DATA":{"ncols":2, "nrows":1
+    ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"B", "pointer":" "
+       {"icol":0, "header":"EN-MIN", "units":"EV", "pointer":" "
+	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"EN-NRM", "units":"EV", "pointer":" "
+	,"headerHelp":"Incident projectile energy used for normalization", "pFlag":"0000000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":2, "header":"DATA", "units":"B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"B", "pointer":" "
+      ,{"icol":3, "header":"DATA-ERR", "units":"B", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ]
-	,["B"         ,"B"         ]
-	,[" "         ," "         ]]
+	 ["EN-MIN"    ,"EN-NRM"    ,"DATA"      ,"DATA-ERR"  ]
+	,["EV"        ,"EV"        ,"B"         ,"B"         ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [4.97,0.5]]}
+	 [0.6,0.0253,4.97,0.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30188003", "Pointer":" "
- ,"Subent":"30188003", "compiled":20080208
+ ,"Subent":"30188003", "compiled":20161207
  ,"year1":1970, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":40, "targ1":"Zr-96", "proj1":"n", "emis1":"G", "MF":213, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral"
- ,"reacode":"40-ZR-96(N,G)40-ZR-97,,RI"
+ ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral, non 1/v part"
+ ,"reacode":"40-ZR-96(N,G)40-ZR-97,,RI,,RNV"
  ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=0.75%"
 	,"OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":6
@@ -424,18 +453,18 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":0.1
     ,"com1":0.1}
-  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Min", "dataType":"41", "rank":1.2
     ,"expansion":"Incident energy: energy"
-    ,"com0":0.6
-    ,"com1":0.6}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"dat0":[0.6]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
     ,"what":"ZZZ", "dataType":"1", "rank":777.0
     ,"expansion":"Assumed values"
-    ,"com0":0.025
-    ,"com1":0.025}
+    ,"dat0":[0.0253]
+   ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT", "units":"B", "basicUnits":"B"
     ,"what":"ZZZ", "dataType":"11", "rank":777.1
@@ -461,7 +490,7 @@
 }
    ]
    }
-  ,{"SUBENT":"30188004", "isub":4, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30188004", "isub":4, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -481,37 +510,67 @@
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
-	,"x4freetext":["  At energy E0= 0.025 eV. Deduced value"
-		,"from own measurement (subent 30188.002 and 30188.003)"]
+	,"x4freetext":["  At energy E0= 0.025 eV."]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on source of uncertainty"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text (p2368) of Can.J.Phys.48(1970)2362"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"DEP,30188002"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"30188002"
+		}]
+	,"x4freetext":[" I`/sigma0"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"DEP,30188003"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"30188003"
+		}]
+	,"x4freetext":[" I`"]
 	}
       ]
     }
-    ,"DATA":{"ncols":2, "nrows":1
+    ,"DATA":{"ncols":3, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"MB", "pointer":" "
+       {"icol":0, "header":"EN", "units":"EV", "pointer":" "
+	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"MB", "pointer":" "
+      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ]
-	,["MB"        ,"MB"        ]
-	,[" "         ," "         ]]
+	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	,["EV"        ,"MB"        ,"MB"        ]
+	,[" "         ," "         ," "         ]]
       ,"data":[
-	 [5.7,1]]}
+	 [0.0253,5.7,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30188004", "Pointer":" "
- ,"Subent":"30188004", "compiled":20080208
+ ,"Subent":"30188004", "compiled":20161207
  ,"year1":1970, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":40, "targ1":"Zr-96", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"40-ZR-96(N,G)40-ZR-97,,SIG"
- ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=0.75%"
-	,"OPERATION...  Value=Min  Min:EN-MIN"]
- ,"wx4data":6
+ ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=0.75%"]
+ ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -532,21 +591,15 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":0.1
     ,"com1":0.1}
-  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
-    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
-    ,"com0":0.6
-    ,"com1":0.6}
+    ,"dat0":[0.0253]
+   ,"dat1eq":true}
   ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.025
-    ,"com1":0.025}
-  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT", "units":"B", "basicUnits":"B"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
+    ,"what":"ZZZ", "dataType":"11", "rank":777.0
     ,"expansion":"Assumed values: monitor"
     ,"com0":13.3
     ,"com1":13.3}
@@ -563,29 +616,30 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[0.6]
+      ,"x1":[0.0253]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"30188005", "isub":5, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30188005", "isub":5, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(40-ZR-94(N,G)40-ZR-95,,RI)/\n(40-ZR-94(N,G)40-ZR-95,,SIG)"
-	    ,"c4reac":"((N,G),RI)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Resonance integral]"
+	,"x4code":{"code":"(40-ZR-94(N,G)40-ZR-95,,RI,,RNV)//\n(40-ZR-94(N,G)40-ZR-95,,SIG)"
+	    ,"c4reac":"((N,G),RI,,RNV)//((N,G),SIG)"
+	    ,"combi":"a//a","combiQuant":"Ratio of [Resonance integral, non 1/v part]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"40-ZR-94(N,G)40-ZR-95,,RI"
+	    {"code":"40-ZR-94(N,G)40-ZR-95,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"40-ZR-94","Targ":{"code":"40-ZR-94","nam":"Zr-94","ZA":40094}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"40-ZR-95","Prod":{"code":"40-ZR-95","nam":"Zr-95","ZA":40095}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }
 	    ,{"code":"40-ZR-94(N,G)40-ZR-95,,SIG"
 		,"Reac":"N,G"
@@ -624,32 +678,52 @@
 		,"unity."]
 	}
       ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on source of uncertainty"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text (p2368) of Can.J.Phys.48(1970)2362"]
+	}
+      ]
     }
-    ,"DATA":{"ncols":2, "nrows":1
+    ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
+       {"icol":0, "header":"EN-MIN-NM", "units":"EV", "pointer":" "
+	,"headerHelp":"Lower limit of inc. en. range, REACTION ratio numer.", "pFlag":"2100000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"EN-DN", "units":"EV", "pointer":" "
+	,"headerHelp":"Incident energy for REACTION ratio denominator", "pFlag":"1200000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ]
-	,[" "         ," "         ]]
+	 ["EN-MIN-NM" ,"EN-DN"     ,"DATA"      ,"DATA-ERR"  ]
+	,["EV"        ,"EV"        ,"NO-DIM"    ,"NO-DIM"    ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [5.87,0.05]]}
+	 [0.6,0.0253,5.87,0.05]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30188005", "Pointer":" "
- ,"Subent":"30188005", "compiled":20080208
+ ,"Subent":"30188005", "compiled":20161207
  ,"year1":1970, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":40, "targ1":"Zr-94", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral]"
- ,"reacode":"(40-ZR-94(N,G)40-ZR-95,,RI)/(40-ZR-94(N,G)40-ZR-95,,SIG)"
- ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=0.75%"
-	,"OPERATION...  Value=Min  Min:EN-MIN"]
+ ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral, non 1/v part]"
+ ,"reacode":"(40-ZR-94(N,G)40-ZR-95,,RI,,RNV)//(40-ZR-94(N,G)40-ZR-95,,SIG)"
+ ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=0.75%"]
  ,"wx4data":6
  ,"lx4data":1
  ,"x4data":[
@@ -671,21 +745,21 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":0.1
     ,"com1":0.1}
-  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
-    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN-DN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value-dn", "dataType":"41", "rank":1.12
     ,"expansion":"Incident energy: energy"
-    ,"com0":0.6
-    ,"com1":0.6}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.025
-    ,"com1":0.025}
+    ,"dat0":[0.0253]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN-MIN-NM", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min-nm", "dataType":"41", "rank":1.21
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[0.6]
+   ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT", "units":"B", "basicUnits":"B"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
+    ,"what":"ZZZ", "dataType":"11", "rank":777.0
     ,"expansion":"Assumed values: monitor"
     ,"com0":13.3
     ,"com1":13.3}
@@ -702,33 +776,32 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[0.6]
+      ,"x1":[0.0253]
    }
  }
- ,"c5mon":{"m0ref":"[MONIT]/al27na", "m1ref":"recom/zr94ng"
-      ,"enNorm":[0.6] }
 }
    ]
    }
-  ,{"SUBENT":"30188006", "isub":6, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30188006", "isub":6, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-94(N,G)40-ZR-95,,RI"
-	    ,"c4reac":"(N,G),RI"
+	,"x4code":{"code":"40-ZR-94(N,G)40-ZR-95,,RI,,RNV"
+	    ,"c4reac":"(N,G),RI,,RNV"
 	    ,"combi":"a"
 	    ,"MF":213
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-94(N,G)40-ZR-95,,RI"
+	    {"code":"40-ZR-94(N,G)40-ZR-95,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"40-ZR-94","Targ":{"code":"40-ZR-94","nam":"Zr-94","ZA":40094}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"40-ZR-95","Prod":{"code":"40-ZR-95","nam":"Zr-95","ZA":40095}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }]}
 	}
       ]
@@ -757,33 +830,47 @@
 	,"x4freetext":[" estimated systematic errors"]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text (p2369) of Can.J.Phys.48(1970)2362"]
+	}
+      ]
     }
-    ,"DATA":{"ncols":3, "nrows":1
+    ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"B", "pointer":" "
+       {"icol":0, "header":"EN-MIN", "units":"EV", "pointer":" "
+	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"EN-NRM", "units":"EV", "pointer":" "
+	,"headerHelp":"Incident projectile energy used for normalization", "pFlag":"0000000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":2, "header":"DATA", "units":"B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"B", "pointer":" "
+      ,{"icol":3, "header":"DATA-ERR", "units":"B", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":2, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
+      ,{"icol":4, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
 	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ,"ERR-1"     ]
-	,["B"         ,"B"         ,"PER-CENT"  ]
-	,[" "         ," "         ," "         ]]
+	 ["EN-MIN"    ,"EN-NRM"    ,"DATA"      ,"DATA-ERR"  ,"ERR-1"     ]
+	,["EV"        ,"EV"        ,"B"         ,"B"         ,"PER-CENT"  ]
+	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [0.369,0.037,8]]}
+	 [0.6,0.0253,0.369,0.037,8]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30188006", "Pointer":" "
- ,"Subent":"30188006", "compiled":20080208
+ ,"Subent":"30188006", "compiled":20161207
  ,"year1":1970, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":40, "targ1":"Zr-94", "proj1":"n", "emis1":"G", "MF":213, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral"
- ,"reacode":"40-ZR-94(N,G)40-ZR-95,,RI"
+ ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral, non 1/v part"
+ ,"reacode":"40-ZR-94(N,G)40-ZR-95,,RI,,RNV"
  ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=0.75%"
 	,"OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":7
@@ -813,18 +900,18 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":0.1
     ,"com1":0.1}
-  ,{"ivar":4, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+  ,{"ivar":4, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Min", "dataType":"41", "rank":1.2
     ,"expansion":"Incident energy: energy"
-    ,"com0":0.6
-    ,"com1":0.6}
-  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"dat0":[0.6]
+   ,"dat1eq":true}
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
     ,"what":"ZZZ", "dataType":"1", "rank":777.0
     ,"expansion":"Assumed values"
-    ,"com0":0.025
-    ,"com1":0.025}
+    ,"dat0":[0.0253]
+   ,"dat1eq":true}
   ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT", "units":"B", "basicUnits":"B"
     ,"what":"ZZZ", "dataType":"11", "rank":777.1
@@ -850,7 +937,7 @@
 }
    ]
    }
-  ,{"SUBENT":"30188007", "isub":7, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30188007", "isub":7, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -870,37 +957,67 @@
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
-	,"x4freetext":[" At energy E0=0.025eV, deduced value from"
-		,"own measurements (subent 30188.005 and 30188.006)"]
+	,"x4freetext":[" At energy E0=0.025eV"]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on source of uncertainty"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text (p2369) of Can.J.Phys.48(1970)2362"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"DEP,30188005"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"30188005"
+		}]
+	,"x4freetext":[" I`/sigma0"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"DEP,30188006"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"30188006"
+		}]
+	,"x4freetext":[" I`"]
 	}
       ]
     }
-    ,"DATA":{"ncols":2, "nrows":1
+    ,"DATA":{"ncols":3, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"B", "pointer":" "
+       {"icol":0, "header":"EN", "units":"EV", "pointer":" "
+	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"DATA", "units":"B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"B", "pointer":" "
+      ,{"icol":2, "header":"DATA-ERR", "units":"B", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ]
-	,["B"         ,"B"         ]
-	,[" "         ," "         ]]
+	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	,["EV"        ,"B"         ,"B"         ]
+	,[" "         ," "         ," "         ]]
       ,"data":[
-	 [0.063,0.008]]}
+	 [0.0253,0.063,0.008]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30188007", "Pointer":" "
- ,"Subent":"30188007", "compiled":20080208
+ ,"Subent":"30188007", "compiled":20161207
  ,"year1":1970, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":40, "targ1":"Zr-94", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"40-ZR-94(N,G)40-ZR-95,,SIG"
- ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=0.75%"
-	,"OPERATION...  Value=Min  Min:EN-MIN"]
- ,"wx4data":6
+ ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=0.75%"]
+ ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -921,21 +1038,15 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":0.1
     ,"com1":0.1}
-  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
-    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
-    ,"com0":0.6
-    ,"com1":0.6}
+    ,"dat0":[0.0253]
+   ,"dat1eq":true}
   ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.025
-    ,"com1":0.025}
-  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT", "units":"B", "basicUnits":"B"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
+    ,"what":"ZZZ", "dataType":"11", "rank":777.0
     ,"expansion":"Assumed values: monitor"
     ,"com0":13.3
     ,"com1":13.3}
@@ -952,7 +1063,7 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[0.6]
+      ,"x1":[0.0253]
    }
  }
 }
