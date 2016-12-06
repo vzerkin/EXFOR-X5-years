@@ -1,9 +1,9 @@
-  {"ENTRY":"30128", "updated":20080208, "TransID":"3126", "TransDate":20080530, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"30128", "updated":20161207, "TransID":"3176", "TransDate":20170113, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":1969,"a1":"M.D.Ricabarra+","r1":"J,CJP,47,2031,1969"
    ,"ref":"Jour: Canadian Journal of Physics, Vol.47, p.2031 (1969)"
    ,"title":"Neutron activation resonance integrals of Zn-64,Zn-68, Rb-85,Mo-100,Ru-102,In-113,Sb-123 and Hf-180"
    ,"x4subents":[
-   {"SUBENT":"30128001", "isub":1, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+   {"SUBENT":"30128001", "isub":1, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -44,15 +44,16 @@
 	,"x4freetext":[" Same values"]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"P,INDC(ARG)-3,10,1972","stdFileName":"R,INDC(ARG)-3,10,1972"
-		,"year":1972,"typ":"P","ref":"R,INDC(ARG)-","no":"3","p":"10"
-		,"shortRef":"Prog: Argentine report to the I.N.D.C., No.3, p.10 (1972)"}]
+	,"x4codes":[{"code":"P,INDC(ARG)-3,7,1972","stdFileName":"R,INDC(ARG)-3,7,1972"
+		,"year":1972,"typ":"P","ref":"R,INDC(ARG)-","no":"3","p":"7"
+		,"shortRef":"Prog: Argentine report to the I.N.D.C., No.3, p.7 (1972)"}]
 	,"x4freetext":[" Brief comment on Mo-100 res-int"]
 	}
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"REAC", "dict":"FACILITY", "idict":18,"hlp":"Reactor"}]
+	,"x4codes":[{"code":"REAC", "dict":"FACILITY", "idict":18,"hlp":"Reactor"}
+	    ,{"code":"3ARGCNE", "dict":"INSTITUTE", "idict":3,"hlp":"Comision Nacional de Energia Atomica, Buenos Aires, Argentina"}]
 	,"x4freetext":[" RA-1"]
 	}
       ]
@@ -186,41 +187,55 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" BIB section updated"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20161206A", "date":"20161206", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. EN-MIN,EN-NRM->EN-MIN-NM1,EN-DM1,"
+		,"  EN-MIN-NM2 and EN-DM2 added in subent 001."
+		,"  SF8=RNV added to resonance integrals in all subents."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
+    ,"COMMON":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"EN-MIN", "units":"EV", "pointer":" "
+       {"icol":0, "header":"EN-MIN-NM", "units":"EV", "pointer":"1"
+	,"headerHelp":"Lower limit of inc. en. range, REACTION ratio numer.", "pFlag":"2100000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"EN-DN", "units":"EV", "pointer":"1"
+	,"headerHelp":"Incident energy for REACTION ratio denominator", "pFlag":"1200000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":2, "header":"EN-MIN", "units":"EV", "pointer":"2"
 	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-NRM", "units":"EV", "pointer":" "
+      ,{"icol":3, "header":"EN-NRM", "units":"EV", "pointer":"2"
 	,"headerHelp":"Incident projectile energy used for normalization", "pFlag":"0000000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN-MIN"    ,"EN-NRM"    ]
-	,["EV"        ,"EV"        ]
-	,[" "         ," "         ]]
+	 ["EN-MIN-NM" ,"EN-DN"     ,"EN-MIN"    ,"EN-NRM"    ]
+	,["EV"        ,"EV"        ,"EV"        ,"EV"        ]
+	,["1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [0.6,0.0253]]}
+	 [0.6,0.0253,0.6,0.0253]]}
    }
-  ,{"SUBENT":"30128002", "isub":2, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30128002", "isub":2, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"(30-ZN-64(N,G)30-ZN-65,,RI)/\n(30-ZN-64(N,G)30-ZN-65,,SIG)"
-	    ,"c4reac":"((N,G),RI)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Resonance integral]"
+	,"x4code":{"code":"(30-ZN-64(N,G)30-ZN-65,,RI,,RNV)//\n(30-ZN-64(N,G)30-ZN-65,,SIG)"
+	    ,"c4reac":"((N,G),RI,,RNV)//((N,G),SIG)"
+	    ,"combi":"a//a","combiQuant":"Ratio of [Resonance integral, non 1/v part]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"30-ZN-64(N,G)30-ZN-65,,RI"
+	    {"code":"30-ZN-64(N,G)30-ZN-65,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"30-ZN-64","Targ":{"code":"30-ZN-64","nam":"Zn-64","ZA":30064}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"30-ZN-65","Prod":{"code":"30-ZN-65","nam":"Zn-65","ZA":30065}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }
 	    ,{"code":"30-ZN-64(N,G)30-ZN-65,,SIG"
 		,"Reac":"N,G"
@@ -233,21 +248,22 @@
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"30-ZN-64(N,G)30-ZN-65,,RI"
-	    ,"c4reac":"(N,G),RI"
+	,"x4code":{"code":"30-ZN-64(N,G)30-ZN-65,,RI,,RNV"
+	    ,"c4reac":"(N,G),RI,,RNV"
 	    ,"combi":"a"
 	    ,"MF":213
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"30-ZN-64(N,G)30-ZN-65,,RI"
+	    {"code":"30-ZN-64(N,G)30-ZN-65,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"30-ZN-64","Targ":{"code":"30-ZN-64","nam":"Zn-64","ZA":30064}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"30-ZN-65","Prod":{"code":"30-ZN-65","nam":"Zn-65","ZA":30065}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }]}
 	,"x4freetext":["Reduced resonance integral and ratio to thermal"
 		,"absorption cross section"]
@@ -282,6 +298,14 @@
 		,"Brune and Jirlow (JNE/ab 17 350 1963)"]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table IV of 70HELSINKI,2,589,1970"]
+	}
+      ]
     }
     ,"DATA":{"ncols":6, "nrows":1
       ,"x4headers":[
@@ -291,34 +315,34 @@
       ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"MONIT", "units":"B", "pointer":"2"
-	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":3, "header":"MONIT-ERR", "units":"B", "pointer":"2"
-	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":4, "header":"DATA", "units":"B", "pointer":"2"
+      ,{"icol":2, "header":"DATA", "units":"B", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":5, "header":"DATA-ERR", "units":"B", "pointer":"2"
+      ,{"icol":3, "header":"DATA-ERR", "units":"B", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":4, "header":"MONIT", "units":"B", "pointer":"2"
+	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":5, "header":"MONIT-ERR", "units":"B", "pointer":"2"
+	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ,"DATA"      ,"DATA-ERR"  ]
+	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ]
 	,["NO-DIM"    ,"NO-DIM"    ,"B"         ,"B"         ,"B"         ,"B"         ]
 	,["1"         ,"1"         ,"2"         ,"2"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [1.83,0.03,0.47,0.05,0.86,0.09]]}
+	 [1.83,0.03,0.86,0.09,0.47,0.05]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"301280021", "Pointer":"1"
- ,"Subent":"30128002", "compiled":20080208
+ ,"Subent":"30128002", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":30, "targ1":"Zn-64", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral]"
- ,"reacode":"(30-ZN-64(N,G)30-ZN-65,,RI)/(30-ZN-64(N,G)30-ZN-65,,SIG)"
- ,"compNotes":["OPERATION...  Value=Min  Min:EN-MIN"]
+ ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral, non 1/v part]"
+ ,"reacode":"(30-ZN-64(N,G)30-ZN-65,,RI,,RNV)//(30-ZN-64(N,G)30-ZN-65,,SIG)"
+ ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -335,17 +359,17 @@
     ,"dat0":[0.03]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
-    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"header":"EN-DN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value-dn", "dataType":"41", "rank":1.12
+    ,"expansion":"Incident energy: energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-MIN-NM", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min-nm", "dataType":"41", "rank":1.21
     ,"expansion":"Incident energy: energy"
     ,"com0":0.6
     ,"com1":0.6}
-  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -358,19 +382,17 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[0.6]
+      ,"x1":[0.0253]
    }
  }
- ,"c5mon":{"m0ref":"[MONIT]/cu65n2n", "m1ref":"recom/zn64ng"
-      ,"enNorm":[0.6] }
 }
 ,{"iDataset":1, "DatasetID":"301280022", "Pointer":"2"
- ,"Subent":"30128002", "compiled":20080208
+ ,"Subent":"30128002", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":30, "targ1":"Zn-64", "proj1":"n", "emis1":"G", "MF":213, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral"
- ,"reacode":"30-ZN-64(N,G)30-ZN-65,,RI"
+ ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral, non 1/v part"
+ ,"reacode":"30-ZN-64(N,G)30-ZN-65,,RI,,RNV"
  ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=10.64%"
 	,"OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":6
@@ -431,23 +453,24 @@
 }
    ]
    }
-  ,{"SUBENT":"30128003", "isub":3, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30128003", "isub":3, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"(30-ZN-68(N,G)30-ZN-69,,RI)/\n(30-ZN-68(N,G)30-ZN-69,,SIG)"
-	    ,"c4reac":"((N,G),RI)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Resonance integral]"
+	,"x4code":{"code":"(30-ZN-68(N,G)30-ZN-69,,RI,,RNV)//\n(30-ZN-68(N,G)30-ZN-69,,SIG)"
+	    ,"c4reac":"((N,G),RI,,RNV)//((N,G),SIG)"
+	    ,"combi":"a//a","combiQuant":"Ratio of [Resonance integral, non 1/v part]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"30-ZN-68(N,G)30-ZN-69,,RI"
+	    {"code":"30-ZN-68(N,G)30-ZN-69,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"30-ZN-68","Targ":{"code":"30-ZN-68","nam":"Zn-68","ZA":30068}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"30-ZN-69","Prod":{"code":"30-ZN-69","nam":"Zn-69","ZA":30069}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }
 	    ,{"code":"30-ZN-68(N,G)30-ZN-69,,SIG"
 		,"Reac":"N,G"
@@ -460,21 +483,22 @@
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"30-ZN-68(N,G)30-ZN-69,,RI"
-	    ,"c4reac":"(N,G),RI"
+	,"x4code":{"code":"30-ZN-68(N,G)30-ZN-69,,RI,,RNV"
+	    ,"c4reac":"(N,G),RI,,RNV"
 	    ,"combi":"a"
 	    ,"MF":213
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"30-ZN-68(N,G)30-ZN-69,,RI"
+	    {"code":"30-ZN-68(N,G)30-ZN-69,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"30-ZN-68","Targ":{"code":"30-ZN-68","nam":"Zn-68","ZA":30068}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"30-ZN-69","Prod":{"code":"30-ZN-69","nam":"Zn-69","ZA":30069}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }]}
 	,"x4freetext":["reduced resonance integral and ratio to thermal"
 		,"absorption cross section"]
@@ -509,6 +533,14 @@
 	,"x4freetext":["Measured S0 value was S0=3.72+-0.14"]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":"2"
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table IV of Can.J.Phys.47(1969)2031"]
+	}
+      ]
     }
     ,"DATA":{"ncols":6, "nrows":1
       ,"x4headers":[
@@ -518,34 +550,34 @@
       ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"MONIT", "units":"B", "pointer":"2"
-	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":3, "header":"MONIT-ERR", "units":"B", "pointer":"2"
-	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":4, "header":"DATA", "units":"B", "pointer":"2"
+      ,{"icol":2, "header":"DATA", "units":"B", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":5, "header":"DATA-ERR", "units":"B", "pointer":"2"
+      ,{"icol":3, "header":"DATA-ERR", "units":"B", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":4, "header":"MONIT", "units":"B", "pointer":"2"
+	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":5, "header":"MONIT-ERR", "units":"B", "pointer":"2"
+	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ,"DATA"      ,"DATA-ERR"  ]
+	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ]
 	,["NO-DIM"    ,"NO-DIM"    ,"B"         ,"B"         ,"B"         ,"B"         ]
 	,["1"         ,"1"         ,"2"         ,"2"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [3.3,0.12,1.095,0.15,3.61,0.51]]}
+	 [3.3,0.12,3.61,0.51,1.095,0.15]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"301280031", "Pointer":"1"
- ,"Subent":"30128003", "compiled":20080208
+ ,"Subent":"30128003", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":30, "targ1":"Zn-68", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral]"
- ,"reacode":"(30-ZN-68(N,G)30-ZN-69,,RI)/(30-ZN-68(N,G)30-ZN-69,,SIG)"
- ,"compNotes":["OPERATION...  Value=Min  Min:EN-MIN"]
+ ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral, non 1/v part]"
+ ,"reacode":"(30-ZN-68(N,G)30-ZN-69,,RI,,RNV)//(30-ZN-68(N,G)30-ZN-69,,SIG)"
+ ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -562,17 +594,17 @@
     ,"dat0":[0.12]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
-    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"header":"EN-DN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value-dn", "dataType":"41", "rank":1.12
+    ,"expansion":"Incident energy: energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-MIN-NM", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min-nm", "dataType":"41", "rank":1.21
     ,"expansion":"Incident energy: energy"
     ,"com0":0.6
     ,"com1":0.6}
-  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -585,19 +617,17 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[0.6]
+      ,"x1":[0.0253]
    }
  }
- ,"c5mon":{"m0ref":"[MONIT]/cu65n2n", "m1ref":"recom/zn68ng"
-      ,"enNorm":[0.6] }
 }
 ,{"iDataset":1, "DatasetID":"301280032", "Pointer":"2"
- ,"Subent":"30128003", "compiled":20080208
+ ,"Subent":"30128003", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":30, "targ1":"Zn-68", "proj1":"n", "emis1":"G", "MF":213, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral"
- ,"reacode":"30-ZN-68(N,G)30-ZN-69,,RI"
+ ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral, non 1/v part"
+ ,"reacode":"30-ZN-68(N,G)30-ZN-69,,RI,,RNV"
  ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=13.7%"
 	,"OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":6
@@ -658,23 +688,24 @@
 }
    ]
    }
-  ,{"SUBENT":"30128004", "isub":4, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30128004", "isub":4, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"(37-RB-85(N,G)37-RB-86,,RI)/\n(37-RB-85(N,G)37-RB-86,,SIG)"
-	    ,"c4reac":"((N,G),RI)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Resonance integral]"
+	,"x4code":{"code":"(37-RB-85(N,G)37-RB-86,,RI,,RNV)//\n(37-RB-85(N,G)37-RB-86,,SIG)"
+	    ,"c4reac":"((N,G),RI,,RNV)//((N,G),SIG)"
+	    ,"combi":"a//a","combiQuant":"Ratio of [Resonance integral, non 1/v part]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"37-RB-85(N,G)37-RB-86,,RI"
+	    {"code":"37-RB-85(N,G)37-RB-86,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"37-RB-85","Targ":{"code":"37-RB-85","nam":"Rb-85","ZA":37085}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"37-RB-86","Prod":{"code":"37-RB-86","nam":"Rb-86","ZA":37086}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }
 	    ,{"code":"37-RB-85(N,G)37-RB-86,,SIG"
 		,"Reac":"N,G"
@@ -687,21 +718,22 @@
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"37-RB-85(N,G)37-RB-86,,RI"
-	    ,"c4reac":"(N,G),RI"
+	,"x4code":{"code":"37-RB-85(N,G)37-RB-86,,RI,,RNV"
+	    ,"c4reac":"(N,G),RI,,RNV"
 	    ,"combi":"a"
 	    ,"MF":213
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"37-RB-85(N,G)37-RB-86,,RI"
+	    {"code":"37-RB-85(N,G)37-RB-86,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"37-RB-85","Targ":{"code":"37-RB-85","nam":"Rb-85","ZA":37085}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"37-RB-86","Prod":{"code":"37-RB-86","nam":"Rb-86","ZA":37086}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }]}
 	,"x4freetext":["reduced resonance integral and ratio to thermal"
 		,"absorption cross section"]
@@ -743,6 +775,14 @@
 		,"calculated value"]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table IV of 70HELSINKI,2,589,1970"]
+	}
+      ]
     }
     ,"DATA":{"ncols":6, "nrows":1
       ,"x4headers":[
@@ -752,34 +792,34 @@
       ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"MONIT", "units":"B", "pointer":"2"
-	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":3, "header":"MONIT-ERR", "units":"B", "pointer":"2"
-	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":4, "header":"DATA", "units":"B", "pointer":"2"
+      ,{"icol":2, "header":"DATA", "units":"B", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":5, "header":"DATA-ERR", "units":"B", "pointer":"2"
+      ,{"icol":3, "header":"DATA-ERR", "units":"B", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":4, "header":"MONIT", "units":"B", "pointer":"2"
+	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":5, "header":"MONIT-ERR", "units":"B", "pointer":"2"
+	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ,"DATA"      ,"DATA-ERR"  ]
+	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ]
 	,["NO-DIM"    ,"NO-DIM"    ,"B"         ,"B"         ,"B"         ,"B"         ]
 	,["1"         ,"1"         ,"2"         ,"2"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [16.31,0.53,0.45,0.05,7.34,0.68]]}
+	 [16.31,0.53,7.34,0.68,0.45,0.04]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"301280041", "Pointer":"1"
- ,"Subent":"30128004", "compiled":20080208
+ ,"Subent":"30128004", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":37, "targ1":"Rb-85", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral]"
- ,"reacode":"(37-RB-85(N,G)37-RB-86,,RI)/(37-RB-85(N,G)37-RB-86,,SIG)"
- ,"compNotes":["OPERATION...  Value=Min  Min:EN-MIN"]
+ ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral, non 1/v part]"
+ ,"reacode":"(37-RB-85(N,G)37-RB-86,,RI,,RNV)//(37-RB-85(N,G)37-RB-86,,SIG)"
+ ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -796,17 +836,17 @@
     ,"dat0":[0.53]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
-    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"header":"EN-DN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value-dn", "dataType":"41", "rank":1.12
+    ,"expansion":"Incident energy: energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-MIN-NM", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min-nm", "dataType":"41", "rank":1.21
     ,"expansion":"Incident energy: energy"
     ,"com0":0.6
     ,"com1":0.6}
-  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -819,20 +859,18 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[0.6]
+      ,"x1":[0.0253]
    }
  }
- ,"c5mon":{"m0ref":"[MONIT]/cu65n2n", "m1ref":"recom/rb85ng"
-      ,"enNorm":[0.6] }
 }
 ,{"iDataset":1, "DatasetID":"301280042", "Pointer":"2"
- ,"Subent":"30128004", "compiled":20080208
+ ,"Subent":"30128004", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":37, "targ1":"Rb-85", "proj1":"n", "emis1":"G", "MF":213, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral"
- ,"reacode":"37-RB-85(N,G)37-RB-86,,RI"
- ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=11.11%"
+ ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral, non 1/v part"
+ ,"reacode":"37-RB-85(N,G)37-RB-86,,RI,,RNV"
+ ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=8.89%"
 	,"OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":6
  ,"lx4data":1
@@ -853,7 +891,7 @@
     ,"header":"MONIT-ERR", "units":"B", "basicUnits":"B"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[0.05]
+    ,"dat0":[0.04]
    ,"dat1eq":true}
   ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
@@ -882,7 +920,7 @@
       ,"expansion":"Data: data"
       ,"y":[7.34]
       ,"dy":[0.68]
-      ,"dysys":[0.815474]   }
+      ,"dysys":[0.652526]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -892,23 +930,24 @@
 }
    ]
    }
-  ,{"SUBENT":"30128005", "isub":5, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30128005", "isub":5, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"(42-MO-100(N,G)42-MO-101,,RI)/\n(42-MO-100(N,G)42-MO-101,,SIG)"
-	    ,"c4reac":"((N,G),RI)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Resonance integral]"
+	,"x4code":{"code":"(42-MO-100(N,G)42-MO-101,,RI,,RNV)//\n(42-MO-100(N,G)42-MO-101,,SIG)"
+	    ,"c4reac":"((N,G),RI,,RNV)//((N,G),SIG)"
+	    ,"combi":"a//a","combiQuant":"Ratio of [Resonance integral, non 1/v part]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"42-MO-100(N,G)42-MO-101,,RI"
+	    {"code":"42-MO-100(N,G)42-MO-101,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"42-MO-100","Targ":{"code":"42-MO-100","nam":"Mo-100","ZA":42100}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"42-MO-101","Prod":{"code":"42-MO-101","nam":"Mo-101","ZA":42101}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }
 	    ,{"code":"42-MO-100(N,G)42-MO-101,,SIG"
 		,"Reac":"N,G"
@@ -921,21 +960,22 @@
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"42-MO-100(N,G)42-MO-101,,RI"
-	    ,"c4reac":"(N,G),RI"
+	,"x4code":{"code":"42-MO-100(N,G)42-MO-101,,RI,,RNV"
+	    ,"c4reac":"(N,G),RI,,RNV"
 	    ,"combi":"a"
 	    ,"MF":213
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"42-MO-100(N,G)42-MO-101,,RI"
+	    {"code":"42-MO-100(N,G)42-MO-101,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"42-MO-100","Targ":{"code":"42-MO-100","nam":"Mo-100","ZA":42100}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"42-MO-101","Prod":{"code":"42-MO-101","nam":"Mo-101","ZA":42101}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }]}
 	,"x4freetext":["reduced resonance integral and ratio to thermal capture"
 		,"cross section"]
@@ -976,6 +1016,14 @@
 	,"x4freetext":["Measured S0 value was 21.7+-0.8"]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table IV of 70HELSINKI,2,589,1970"]
+	}
+      ]
     }
     ,"DATA":{"ncols":6, "nrows":1
       ,"x4headers":[
@@ -985,34 +1033,34 @@
       ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"MONIT", "units":"B", "pointer":"2"
-	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":3, "header":"MONIT-ERR", "units":"B", "pointer":"2"
-	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":4, "header":"DATA", "units":"B", "pointer":"2"
+      ,{"icol":2, "header":"DATA", "units":"B", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":5, "header":"DATA-ERR", "units":"B", "pointer":"2"
+      ,{"icol":3, "header":"DATA-ERR", "units":"B", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":4, "header":"MONIT", "units":"B", "pointer":"2"
+	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":5, "header":"MONIT-ERR", "units":"B", "pointer":"2"
+	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ,"DATA"      ,"DATA-ERR"  ]
+	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ]
 	,["NO-DIM"    ,"NO-DIM"    ,"B"         ,"B"         ,"B"         ,"B"         ]
 	,["1"         ,"1"         ,"2"         ,"2"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [19.24,0.71,0.199,0.003,3.82,0.15]]}
+	 [19.24,0.71,3.82,0.15,0.199,0.003]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"301280051", "Pointer":"1"
- ,"Subent":"30128005", "compiled":20080208
+ ,"Subent":"30128005", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":42, "targ1":"Mo-100", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral]"
- ,"reacode":"(42-MO-100(N,G)42-MO-101,,RI)/(42-MO-100(N,G)42-MO-101,,SIG)"
- ,"compNotes":["OPERATION...  Value=Min  Min:EN-MIN"]
+ ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral, non 1/v part]"
+ ,"reacode":"(42-MO-100(N,G)42-MO-101,,RI,,RNV)//(42-MO-100(N,G)42-MO-101,,SIG)"
+ ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -1029,17 +1077,17 @@
     ,"dat0":[0.71]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
-    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"header":"EN-DN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value-dn", "dataType":"41", "rank":1.12
+    ,"expansion":"Incident energy: energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-MIN-NM", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min-nm", "dataType":"41", "rank":1.21
     ,"expansion":"Incident energy: energy"
     ,"com0":0.6
     ,"com1":0.6}
-  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -1052,19 +1100,17 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[0.6]
+      ,"x1":[0.0253]
    }
  }
- ,"c5mon":{"m0ref":"[MONIT]/cu65n2n", "m1ref":"recom/mo100ng"
-      ,"enNorm":[0.6] }
 }
 ,{"iDataset":1, "DatasetID":"301280052", "Pointer":"2"
- ,"Subent":"30128005", "compiled":20080208
+ ,"Subent":"30128005", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":42, "targ1":"Mo-100", "proj1":"n", "emis1":"G", "MF":213, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral"
- ,"reacode":"42-MO-100(N,G)42-MO-101,,RI"
+ ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral, non 1/v part"
+ ,"reacode":"42-MO-100(N,G)42-MO-101,,RI,,RNV"
  ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=1.51%"
 	,"OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":6
@@ -1125,23 +1171,24 @@
 }
    ]
    }
-  ,{"SUBENT":"30128006", "isub":6, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30128006", "isub":6, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"(44-RU-102(N,G)44-RU-103,,RI)/\n(44-RU-102(N,G)44-RU-103,,SIG)"
-	    ,"c4reac":"((N,G),RI)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Resonance integral]"
+	,"x4code":{"code":"(44-RU-102(N,G)44-RU-103,,RI,,RNV)//\n(44-RU-102(N,G)44-RU-103,,SIG)"
+	    ,"c4reac":"((N,G),RI,,RNV)//((N,G),SIG)"
+	    ,"combi":"a//a","combiQuant":"Ratio of [Resonance integral, non 1/v part]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"44-RU-102(N,G)44-RU-103,,RI"
+	    {"code":"44-RU-102(N,G)44-RU-103,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"44-RU-102","Targ":{"code":"44-RU-102","nam":"Ru-102","ZA":44102}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"44-RU-103","Prod":{"code":"44-RU-103","nam":"Ru-103","ZA":44103}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }
 	    ,{"code":"44-RU-102(N,G)44-RU-103,,SIG"
 		,"Reac":"N,G"
@@ -1154,21 +1201,22 @@
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"44-RU-102(N,G)44-RU-103,,RI"
-	    ,"c4reac":"(N,G),RI"
+	,"x4code":{"code":"44-RU-102(N,G)44-RU-103,,RI,,RNV"
+	    ,"c4reac":"(N,G),RI,,RNV"
 	    ,"combi":"a"
 	    ,"MF":213
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"44-RU-102(N,G)44-RU-103,,RI"
+	    {"code":"44-RU-102(N,G)44-RU-103,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"44-RU-102","Targ":{"code":"44-RU-102","nam":"Ru-102","ZA":44102}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"44-RU-103","Prod":{"code":"44-RU-103","nam":"Ru-103","ZA":44103}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }]}
 	,"x4freetext":["reduced resonance integral and ratio to thermal capture"
 		,"cross section"]
@@ -1209,6 +1257,14 @@
 		,"with calculated and previous experimental value"]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":"2"
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table IV of Can.J.Phys.47(1969)2031"]
+	}
+      ]
     }
     ,"DATA":{"ncols":6, "nrows":1
       ,"x4headers":[
@@ -1218,34 +1274,34 @@
       ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"MONIT", "units":"B", "pointer":"2"
-	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":3, "header":"MONIT-ERR", "units":"B", "pointer":"2"
-	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":4, "header":"DATA", "units":"B", "pointer":"2"
+      ,{"icol":2, "header":"DATA", "units":"B", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":5, "header":"DATA-ERR", "units":"B", "pointer":"2"
+      ,{"icol":3, "header":"DATA-ERR", "units":"B", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":4, "header":"MONIT", "units":"B", "pointer":"2"
+	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":5, "header":"MONIT-ERR", "units":"B", "pointer":"2"
+	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ,"DATA"      ,"DATA-ERR"  ]
+	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ]
 	,["NO-DIM"    ,"NO-DIM"    ,"B"         ,"B"         ,"B"         ,"B"         ]
 	,["1"         ,"1"         ,"2"         ,"2"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [3.33,0.03,1.44,0.16,4.8,0.5]]}
+	 [3.33,0.03,4.8,0.52,1.44,0.16]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"301280061", "Pointer":"1"
- ,"Subent":"30128006", "compiled":20080208
+ ,"Subent":"30128006", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":44, "targ1":"Ru-102", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral]"
- ,"reacode":"(44-RU-102(N,G)44-RU-103,,RI)/(44-RU-102(N,G)44-RU-103,,SIG)"
- ,"compNotes":["OPERATION...  Value=Min  Min:EN-MIN"]
+ ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral, non 1/v part]"
+ ,"reacode":"(44-RU-102(N,G)44-RU-103,,RI,,RNV)//(44-RU-102(N,G)44-RU-103,,SIG)"
+ ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -1262,17 +1318,17 @@
     ,"dat0":[0.03]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
-    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"header":"EN-DN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value-dn", "dataType":"41", "rank":1.12
+    ,"expansion":"Incident energy: energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-MIN-NM", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min-nm", "dataType":"41", "rank":1.21
     ,"expansion":"Incident energy: energy"
     ,"com0":0.6
     ,"com1":0.6}
-  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -1285,19 +1341,17 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[0.6]
+      ,"x1":[0.0253]
    }
  }
- ,"c5mon":{"m0ref":"[MONIT]/cu65n2n", "m1ref":"recom/ru102ng"
-      ,"enNorm":[0.6] }
 }
 ,{"iDataset":1, "DatasetID":"301280062", "Pointer":"2"
- ,"Subent":"30128006", "compiled":20080208
+ ,"Subent":"30128006", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":44, "targ1":"Ru-102", "proj1":"n", "emis1":"G", "MF":213, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral"
- ,"reacode":"44-RU-102(N,G)44-RU-103,,RI"
+ ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral, non 1/v part"
+ ,"reacode":"44-RU-102(N,G)44-RU-103,,RI,,RNV"
  ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=11.11%"
 	,"OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":6
@@ -1313,7 +1367,7 @@
     ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[0.5]
+    ,"dat0":[0.52]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
     ,"header":"MONIT-ERR", "units":"B", "basicUnits":"B"
@@ -1347,7 +1401,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[4.8]
-      ,"dy":[0.5]
+      ,"dy":[0.52]
       ,"dysys":[0.53328]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
@@ -1358,23 +1412,24 @@
 }
    ]
    }
-  ,{"SUBENT":"30128007", "isub":7, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30128007", "isub":7, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"(49-IN-113(N,G)49-IN-114,,RI)/\n(49-IN-113(N,G)49-IN-114,,SIG)"
-	    ,"c4reac":"((N,G),RI)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Resonance integral]"
+	,"x4code":{"code":"(49-IN-113(N,G)49-IN-114,,RI,,RNV)//\n(49-IN-113(N,G)49-IN-114,,SIG)"
+	    ,"c4reac":"((N,G),RI,,RNV)//((N,G),SIG)"
+	    ,"combi":"a//a","combiQuant":"Ratio of [Resonance integral, non 1/v part]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"49-IN-113(N,G)49-IN-114,,RI"
+	    {"code":"49-IN-113(N,G)49-IN-114,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"49-IN-113","Targ":{"code":"49-IN-113","nam":"In-113","ZA":49113}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"49-IN-114","Prod":{"code":"49-IN-114","nam":"In-114","ZA":49114}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }
 	    ,{"code":"49-IN-113(N,G)49-IN-114,,SIG"
 		,"Reac":"N,G"
@@ -1387,21 +1442,22 @@
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"49-IN-113(N,G)49-IN-114,,RI"
-	    ,"c4reac":"(N,G),RI"
+	,"x4code":{"code":"49-IN-113(N,G)49-IN-114,,RI,,RNV"
+	    ,"c4reac":"(N,G),RI,,RNV"
 	    ,"combi":"a"
 	    ,"MF":213
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"49-IN-113(N,G)49-IN-114,,RI"
+	    {"code":"49-IN-113(N,G)49-IN-114,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"49-IN-113","Targ":{"code":"49-IN-113","nam":"In-113","ZA":49113}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"49-IN-114","Prod":{"code":"49-IN-114","nam":"In-114","ZA":49114}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }]}
 	,"x4freetext":["reduced resonance integral and ratio to thermal capture"
 		,"cross section"]
@@ -1439,6 +1495,14 @@
 		,"with calculated value"]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":"2"
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table IV of Can.J.Phys.47(1969)2031"]
+	}
+      ]
     }
     ,"DATA":{"ncols":6, "nrows":1
       ,"x4headers":[
@@ -1448,34 +1512,34 @@
       ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"MONIT", "units":"B", "pointer":"2"
+      ,{"icol":2, "header":"DATA", "units":"B", "pointer":"2"
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":3, "header":"MONIT", "units":"B", "pointer":"2"
 	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":3, "header":"MONIT-ERR", "units":"B", "pointer":"2"
+      ,{"icol":4, "header":"MONIT-ERR", "units":"B", "pointer":"2"
 	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":4, "header":"DATA", "units":"B", "pointer":"2"
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ,{"icol":5, "header":"DATA-ERR", "units":"B", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ,"DATA"      ,"DATA-ERR"  ]
+	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"MONIT"     ,"MONIT-ERR" ,"DATA-ERR"  ]
 	,["NO-DIM"    ,"NO-DIM"    ,"B"         ,"B"         ,"B"         ,"B"         ]
 	,["1"         ,"1"         ,"2"         ,"2"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [21.9,0.4,11.1,1.3,243.1,29]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"301280071", "Pointer":"1"
- ,"Subent":"30128007", "compiled":20080208
+ ,"Subent":"30128007", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":49, "targ1":"In-113", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral]"
- ,"reacode":"(49-IN-113(N,G)49-IN-114,,RI)/(49-IN-113(N,G)49-IN-114,,SIG)"
- ,"compNotes":["OPERATION...  Value=Min  Min:EN-MIN"]
+ ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral, non 1/v part]"
+ ,"reacode":"(49-IN-113(N,G)49-IN-114,,RI,,RNV)//(49-IN-113(N,G)49-IN-114,,SIG)"
+ ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -1492,17 +1556,17 @@
     ,"dat0":[0.4]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
-    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"header":"EN-DN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value-dn", "dataType":"41", "rank":1.12
+    ,"expansion":"Incident energy: energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-MIN-NM", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min-nm", "dataType":"41", "rank":1.21
     ,"expansion":"Incident energy: energy"
     ,"com0":0.6
     ,"com1":0.6}
-  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -1515,20 +1579,18 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[0.6]
+      ,"x1":[0.0253]
    }
  }
- ,"c5mon":{"m0ref":"[MONIT]/cu65n2n", "m1ref":"recom/in113ng"
-      ,"enNorm":[0.6] }
 }
 ,{"iDataset":1, "DatasetID":"301280072", "Pointer":"2"
- ,"Subent":"30128007", "compiled":20080208
+ ,"Subent":"30128007", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":49, "targ1":"In-113", "proj1":"n", "emis1":"G", "MF":213, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral"
- ,"reacode":"49-IN-113(N,G)49-IN-114,,RI"
- ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=11.71%"
+ ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral, non 1/v part"
+ ,"reacode":"49-IN-113(N,G)49-IN-114,,RI,,RNV"
+ ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=18700.0%"
 	,"OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":6
  ,"lx4data":1
@@ -1537,7 +1599,7 @@
     ,"header":"DATA", "units":"B", "basicUnits":"B"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[243.1]
+    ,"dat0":[11.1]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
     ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
@@ -1549,7 +1611,7 @@
     ,"header":"MONIT-ERR", "units":"B", "basicUnits":"B"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[1.3]
+    ,"dat0":[243.1]
    ,"dat1eq":true}
   ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
@@ -1567,7 +1629,7 @@
     ,"header":"MONIT", "units":"B", "basicUnits":"B"
     ,"what":"ZZZ", "dataType":"11", "rank":777.1
     ,"expansion":"Assumed values: monitor"
-    ,"dat0":[11.1]
+    ,"dat0":[1.3]
    ,"dat1eq":true}
   ]
  ,"wc5data":2
@@ -1576,9 +1638,9 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[243.1]
+      ,"y":[11.1]
       ,"dy":[29]
-      ,"dysys":[28.467]   }
+      ,"dysys":[2075.7]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1588,23 +1650,24 @@
 }
    ]
    }
-  ,{"SUBENT":"30128008", "isub":8, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30128008", "isub":8, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"(51-SB-123(N,G)51-SB-124,,RI)/\n(51-SB-123(N,G)51-SB-124,,SIG)"
-	    ,"c4reac":"((N,G),RI)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Resonance integral]"
+	,"x4code":{"code":"(51-SB-123(N,G)51-SB-124,,RI,,RNV)//\n(51-SB-123(N,G)51-SB-124,,SIG)"
+	    ,"c4reac":"((N,G),RI,,RNV)//((N,G),SIG)"
+	    ,"combi":"a//a","combiQuant":"Ratio of [Resonance integral, non 1/v part]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"51-SB-123(N,G)51-SB-124,,RI"
+	    {"code":"51-SB-123(N,G)51-SB-124,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"51-SB-123","Targ":{"code":"51-SB-123","nam":"Sb-123","ZA":51123}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"51-SB-124","Prod":{"code":"51-SB-124","nam":"Sb-124","ZA":51124}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }
 	    ,{"code":"51-SB-123(N,G)51-SB-124,,SIG"
 		,"Reac":"N,G"
@@ -1617,21 +1680,22 @@
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"51-SB-123(N,G)51-SB-124,,RI"
-	    ,"c4reac":"(N,G),RI"
+	,"x4code":{"code":"51-SB-123(N,G)51-SB-124,,RI,,RNV"
+	    ,"c4reac":"(N,G),RI,,RNV"
 	    ,"combi":"a"
 	    ,"MF":213
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"51-SB-123(N,G)51-SB-124,,RI"
+	    {"code":"51-SB-123(N,G)51-SB-124,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"51-SB-123","Targ":{"code":"51-SB-123","nam":"Sb-123","ZA":51123}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"51-SB-124","Prod":{"code":"51-SB-124","nam":"Sb-124","ZA":51124}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }]}
 	,"x4freetext":["reduced resonance integral and ratio to thermal capture"
 		,"cross section"]
@@ -1673,6 +1737,14 @@
 	,"x4freetext":["Measured S0 value was S0 = 28.3+-2.1"]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":"2"
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table IV of Can.J.Phys.47(1969)2031"]
+	}
+      ]
     }
     ,"DATA":{"ncols":6, "nrows":1
       ,"x4headers":[
@@ -1685,31 +1757,31 @@
       ,{"icol":2, "header":"MONIT", "units":"B", "pointer":"2"
 	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":3, "header":"MONIT-ERR", "units":"B", "pointer":"2"
-	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":4, "header":"DATA", "units":"B", "pointer":"2"
+      ,{"icol":3, "header":"DATA", "units":"B", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":5, "header":"DATA-ERR", "units":"B", "pointer":"2"
+      ,{"icol":4, "header":"DATA-ERR", "units":"B", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":5, "header":"MONIT-ERR", "units":"B", "pointer":"2"
+	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ,"DATA"      ,"DATA-ERR"  ]
+	 ["DATA"      ,"DATA-ERR"  ,"MONIT"     ,"DATA"      ,"DATA-ERR"  ,"MONIT-ERR" ]
 	,["NO-DIM"    ,"NO-DIM"    ,"B"         ,"B"         ,"B"         ,"B"         ]
 	,["1"         ,"1"         ,"2"         ,"2"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [25.1,1.9,4.5,0.14,112.9,8.7]]}
+	 [25.1,1.9,4.5,112.9,8.7,0.14]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"301280081", "Pointer":"1"
- ,"Subent":"30128008", "compiled":20080208
+ ,"Subent":"30128008", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":51, "targ1":"Sb-123", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral]"
- ,"reacode":"(51-SB-123(N,G)51-SB-124,,RI)/(51-SB-123(N,G)51-SB-124,,SIG)"
- ,"compNotes":["OPERATION...  Value=Min  Min:EN-MIN"]
+ ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral, non 1/v part]"
+ ,"reacode":"(51-SB-123(N,G)51-SB-124,,RI,,RNV)//(51-SB-123(N,G)51-SB-124,,SIG)"
+ ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -1726,17 +1798,17 @@
     ,"dat0":[1.9]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
-    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"header":"EN-DN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value-dn", "dataType":"41", "rank":1.12
+    ,"expansion":"Incident energy: energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-MIN-NM", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min-nm", "dataType":"41", "rank":1.21
     ,"expansion":"Incident energy: energy"
     ,"com0":0.6
     ,"com1":0.6}
-  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -1749,19 +1821,17 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[0.6]
+      ,"x1":[0.0253]
    }
  }
- ,"c5mon":{"m0ref":"[MONIT]/cu65n2n", "m1ref":"recom/sb123ng"
-      ,"enNorm":[0.6] }
 }
 ,{"iDataset":1, "DatasetID":"301280082", "Pointer":"2"
- ,"Subent":"30128008", "compiled":20080208
+ ,"Subent":"30128008", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":51, "targ1":"Sb-123", "proj1":"n", "emis1":"G", "MF":213, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral"
- ,"reacode":"51-SB-123(N,G)51-SB-124,,RI"
+ ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral, non 1/v part"
+ ,"reacode":"51-SB-123(N,G)51-SB-124,,RI,,RNV"
  ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=3.11%"
 	,"OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":6
@@ -1822,23 +1892,24 @@
 }
    ]
    }
-  ,{"SUBENT":"30128009", "isub":9, "compiled":20080208, "TransID":"3126", "TransDate":20080530
+  ,{"SUBENT":"30128009", "isub":9, "compiled":20161207, "TransID":"3176", "TransDate":20170113
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"(72-HF-180(N,G)72-HF-181,,RI)/\n(72-HF-180(N,G)72-HF-181,,SIG)"
-	    ,"c4reac":"((N,G),RI)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Resonance integral]"
+	,"x4code":{"code":"(72-HF-180(N,G)72-HF-181,,RI,,RNV)//\n(72-HF-180(N,G)72-HF-181,,SIG)"
+	    ,"c4reac":"((N,G),RI,,RNV)//((N,G),SIG)"
+	    ,"combi":"a//a","combiQuant":"Ratio of [Resonance integral, non 1/v part]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"72-HF-180(N,G)72-HF-181,,RI"
+	    {"code":"72-HF-180(N,G)72-HF-181,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"72-HF-180","Targ":{"code":"72-HF-180","nam":"Hf-180","ZA":72180}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"72-HF-181","Prod":{"code":"72-HF-181","nam":"Hf-181","ZA":72181}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }
 	    ,{"code":"72-HF-180(N,G)72-HF-181,,SIG"
 		,"Reac":"N,G"
@@ -1851,21 +1922,22 @@
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"72-HF-180(N,G)72-HF-181,,RI"
-	    ,"c4reac":"(N,G),RI"
+	,"x4code":{"code":"72-HF-180(N,G)72-HF-181,,RI,,RNV"
+	    ,"c4reac":"(N,G),RI,,RNV"
 	    ,"combi":"a"
 	    ,"MF":213
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"72-HF-180(N,G)72-HF-181,,RI"
+	    {"code":"72-HF-180(N,G)72-HF-181,,RI,,RNV"
 		,"Reac":"N,G"
 		,"SF1":"72-HF-180","Targ":{"code":"72-HF-180","nam":"Hf-180","ZA":72180}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"72-HF-181","Prod":{"code":"72-HF-181","nam":"Hf-181","ZA":72181}
 		,"SF6":"RI"
-		,"SF58":",RI","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral"
+		,"SF8":"RNV"
+		,"SF58":",RI,,RNV","Quant":"RI","BasicUnits":"B","QuantHlp":"Resonance integral, non 1/v part"
 	    }]}
 	,"x4freetext":["reduced resonance integral and ratio to thermal capture"
 		,"cross section"]
@@ -1906,6 +1978,14 @@
 	,"x4freetext":["Measured S0 value was S0=2.17+-0.09"]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":"2"
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table IV of Can.J.Phys.47(1969)2031"]
+	}
+      ]
     }
     ,"DATA":{"ncols":6, "nrows":1
       ,"x4headers":[
@@ -1915,34 +1995,34 @@
       ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"MONIT", "units":"B", "pointer":"2"
-	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":3, "header":"MONIT-ERR", "units":"B", "pointer":"2"
-	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":4, "header":"DATA", "units":"B", "pointer":"2"
+      ,{"icol":2, "header":"DATA", "units":"B", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":5, "header":"DATA-ERR", "units":"B", "pointer":"2"
+      ,{"icol":3, "header":"DATA-ERR", "units":"B", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":4, "header":"MONIT", "units":"B", "pointer":"2"
+	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":5, "header":"MONIT-ERR", "units":"B", "pointer":"2"
+	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ,"DATA"      ,"DATA-ERR"  ]
+	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"MONIT"     ,"MONIT-ERR" ]
 	,["NO-DIM"    ,"NO-DIM"    ,"B"         ,"B"         ,"B"         ,"B"         ]
 	,["1"         ,"1"         ,"2"         ,"2"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [1.92,0.08,12.6,0.7,24.3,1.6]]}
+	 [1.92,0.08,24.3,1.6,12.6,0.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"301280091", "Pointer":"1"
- ,"Subent":"30128009", "compiled":20080208
+ ,"Subent":"30128009", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":72, "targ1":"Hf-180", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral]"
- ,"reacode":"(72-HF-180(N,G)72-HF-181,,RI)/(72-HF-180(N,G)72-HF-181,,SIG)"
- ,"compNotes":["OPERATION...  Value=Min  Min:EN-MIN"]
+ ,"ReactionType":"Ratio", "quant":"RI", "quantExpan":"Ratio of [Resonance integral, non 1/v part]"
+ ,"reacode":"(72-HF-180(N,G)72-HF-181,,RI,,RNV)//(72-HF-180(N,G)72-HF-181,,SIG)"
+ ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -1959,17 +2039,17 @@
     ,"dat0":[0.08]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
-    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"header":"EN-DN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value-dn", "dataType":"41", "rank":1.12
+    ,"expansion":"Incident energy: energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-MIN-NM", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min-nm", "dataType":"41", "rank":1.21
     ,"expansion":"Incident energy: energy"
     ,"com0":0.6
     ,"com1":0.6}
-  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -1982,19 +2062,17 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[0.6]
+      ,"x1":[0.0253]
    }
  }
- ,"c5mon":{"m0ref":"[MONIT]/cu65n2n", "m1ref":"recom/hf180ng"
-      ,"enNorm":[0.6] }
 }
 ,{"iDataset":1, "DatasetID":"301280092", "Pointer":"2"
- ,"Subent":"30128009", "compiled":20080208
+ ,"Subent":"30128009", "compiled":20161207
  ,"year1":1969, "author1ini":"M.D.", "author1":"Ricabarra"
  ,"zTarg1":72, "targ1":"Hf-180", "proj1":"n", "emis1":"G", "MF":213, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral"
- ,"reacode":"72-HF-180(N,G)72-HF-181,,RI"
+ ,"ReactionType":"RI", "quant":"RI", "quantExpan":"Resonance integral, non 1/v part"
+ ,"reacode":"72-HF-180(N,G)72-HF-181,,RI,,RNV"
  ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=5.56%"
 	,"OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":6
