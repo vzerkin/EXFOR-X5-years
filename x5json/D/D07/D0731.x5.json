@@ -1,9 +1,9 @@
-  {"ENTRY":"D0731", "updated":20140514, "TransID":"D094", "TransDate":20140902, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"D0731", "updated":20170220, "TransID":"D108", "TransDate":20170328, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":2014,"a1":"J.Khuyagbaatar+","r1":"J,PRL,112,172501,2014"
    ,"ref":"Jour: Physical Review Letters, Vol.112, p.172501 (2014)"
    ,"title":"48Ca+249Bk fusion reaction leading to element Z=117: long-lived alpha-decaying 270Db and discovery of 266Lr"
    ,"x4subents":[
-   {"SUBENT":"D0731001", "isub":1, "compiled":20140514, "TransID":"D094", "TransDate":20140902
+   {"SUBENT":"D0731001", "isub":1, "compiled":20170220, "TransID":"D108", "TransDate":20170328
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -112,7 +112,7 @@
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"3POLPOL", "dict":"INSTITUTE", "idict":3,"hlp":"Poland, Poland"}]
-	,"x4freetext":[" Institute of Electron Technology"]
+	,"x4freetext":[" Institute of Electron Technology, Warsaw"]
 	}
       ]
      ,"REFERENCE":[
@@ -124,15 +124,15 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"117-*-294", "t12":51.0, "t12units":"MSEC", "t12sec":0.051000003
+	,"x4codes":[{"Nucl":"117-TS-294", "t12":51.0, "t12units":"MSEC", "t12sec":0.051000003
 	, "Radiations":[ {"Type":"A", "Energy":[11050.0]}]}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"Nucl":"115-*-290", "t12":1.3, "t12units":"SEC", "t12sec":1.3
+	,"x4codes":[{"Nucl":"115-MC-290", "t12":1.3, "t12units":"SEC", "t12sec":1.3
 	, "Radiations":[ {"Type":"A", "Energy":[10310.0]}]}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"Nucl":"113-*-286", "t12":2.9, "t12units":"SEC", "t12sec":2.9
+	,"x4codes":[{"Nucl":"113-NH-286", "t12":2.9, "t12units":"SEC", "t12sec":2.9
 	, "Radiations":[ {"Type":"A", "Energy":[9300.0]}]}]
 	}
 	,{"x4pointer":" "
@@ -217,26 +217,32 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" M.Odsuren"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170127A", "date":"20170127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. Codes for the new elements Z=113,115"
+		," and 118 updated in 001 (DECAY-DATA) and 002 (SF4)"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"D0731002", "isub":2, "compiled":20140514, "TransID":"D094", "TransDate":20140902
+  ,{"SUBENT":"D0731002", "isub":2, "compiled":20170220, "TransID":"D108", "TransDate":20170328
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"97-BK-249(20-CA-48,3N)117-*-294,,SIG"
+	,"x4code":{"code":"97-BK-249(20-CA-48,3N)117-TS-294,,SIG"
 	    ,"c4reac":"(20-CA-48,3N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":17
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"97-BK-249(20-CA-48,3N)117-*-294,,SIG"
+	    {"code":"97-BK-249(20-CA-48,3N)117-TS-294,,SIG"
 		,"Reac":"20-CA-48,3N"
 		,"SF1":"97-BK-249","Targ":{"code":"97-BK-249","nam":"Bk-249","ZA":97249}
 		,"SF2":"20-CA-48","Proj":{"code":"20-CA-48","nam":"Ca-48","ZA":20048}
 		,"SF3":"3N"
-		,"SF4":"117-*-294","Prod":{"code":"117-*-294","nam":"*-294","ZA":117294}
+		,"SF4":"117-TS-294","Prod":{"code":"117-TS-294","nam":"Ts-294","ZA":117294}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
@@ -247,6 +253,13 @@
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" No information on source of uncertainties"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20170127A", "date":"20170127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF4 updated."]
 	}
       ]
     }
@@ -261,15 +274,15 @@
       ,{"icol":2, "header":"DATA", "units":"PB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"picobarns","familyCode":"B","convFc":1.0E-12,"basicUnits":"B"}
-      ,{"icol":3, "header":"+ERR-S", "units":"PB", "pointer":" "
-	,"headerHelp":"+ Unsymmetric statistical error", "pFlag":"0009400"
+      ,{"icol":3, "header":"+DATA-ERR", "units":"PB", "pointer":" "
+	,"headerHelp":"+ Unsymmetric data error, see ERR-ANALYS", "pFlag":"0009100"
 	,"unitsHelp":"picobarns","familyCode":"B","convFc":1.0E-12,"basicUnits":"B"}
-      ,{"icol":4, "header":"-ERR-S", "units":"PB", "pointer":" "
-	,"headerHelp":"- Unsymmetric statistical uncertainty", "pFlag":"0009040"
+      ,{"icol":4, "header":"-DATA-ERR", "units":"PB", "pointer":" "
+	,"headerHelp":"- Unsymmetric data error, see ERR-ANALYS.", "pFlag":"0009010"
 	,"unitsHelp":"picobarns","familyCode":"B","convFc":1.0E-12,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN-MIN"    ,"EN-MIN"    ,"DATA"      ,"+ERR-S"    ,"-ERR-S"    ]
+	 ["EN-MIN"    ,"EN-MIN"    ,"DATA"      ,"+DATA-ERR" ,"-DATA-ERR" ]
 	,["MEV"       ,"MEV"       ,"PB"        ,"PB"        ,"PB"        ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -277,12 +290,12 @@
 	,[255.9,260,0.9,2,0.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0731002", "Pointer":" "
- ,"Subent":"D0731002", "compiled":20140514
+ ,"Subent":"D0731002", "compiled":20170220
  ,"year1":2014, "author1ini":"J.", "author1":"Khuyagbaatar"
  ,"zTarg1":97, "targ1":"Bk-249", "proj1":"Ca-48", "emis1":"3N", "MF":3, "MT":17, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"97-BK-249(20-CA-48,3N)117-*-294,,SIG"
+ ,"reacode":"97-BK-249(20-CA-48,3N)117-TS-294,,SIG"
  ,"compNotes":["OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":5
  ,"lx4data":2
@@ -294,14 +307,14 @@
     ,"dat0":[0.7,0.9]
     ,"dat1":[7.0e-13,9.0e-13]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"-ERR-S", "units":"PB", "basicUnits":"B"
-    ,"what":"Y.sErr-", "dataType":"21", "rank":0.904
+    ,"header":"-DATA-ERR", "units":"PB", "basicUnits":"B"
+    ,"what":"Y.Err-", "dataType":"21", "rank":0.901
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.6,0.7]
     ,"dat1":[6.0e-13,7.0e-13]}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"+ERR-S", "units":"PB", "basicUnits":"B"
-    ,"what":"Y.sErr+", "dataType":"21", "rank":0.94
+    ,"header":"+DATA-ERR", "units":"PB", "basicUnits":"B"
+    ,"what":"Y.Err+", "dataType":"21", "rank":0.91
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.6,2]
     ,"dat1":[1.6e-12,2.0e-12]}
@@ -325,8 +338,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[7.0e-13,9.0e-13]
-      ,"dy":[1.6e-12,2.0e-12]
-      ,"dystat":[1.6e-12,2.0e-12]   }
+      ,"dy":[1.6e-12,2.0e-12]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
