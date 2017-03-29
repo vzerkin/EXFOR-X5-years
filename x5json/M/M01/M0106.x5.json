@@ -1,9 +1,9 @@
-  {"ENTRY":"M0106", "updated":20130531, "TransID":"M067", "TransDate":20130819, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
+  {"ENTRY":"M0106", "updated":20170330, "TransID":"M088", "TransDate":20170607, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
    ,"y1":1964,"a1":"E.B.Bazhanov+","r1":"J,ZET,46,1497,1964"
    ,"ref":"Jour: Zhurnal Eksperimental'noi i Teoret. Fiziki, Vol.46, p.1497 (1964)"
    ,"title":"Photoneutrons from Li-6 and Co-59."
    ,"x4subents":[
-   {"SUBENT":"M0106001", "isub":1, "compiled":20130531, "TransID":"M067", "TransDate":20130819
+   {"SUBENT":"M0106001", "isub":1, "compiled":20170330, "TransID":"M088", "TransDate":20170607
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -100,6 +100,18 @@
 	,"x4freetext":[" Corrected     by    V.Varlamov:    dates,"
 		," REFERENCE,  REACTION,  STATUS,  DATA in SUBENT  004,"
 		," DATA-ERR, SUBENTS 005 and 006 added, lowercase."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20161114A", "date":"20161114", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected   by  V.Varlamov:  REACTION  in"
+		," SUBENTs 003 and 006, DATA in SUBENT 006."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170330A", "date":"20170330", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: the HISTORY line"
+		," (20130531C) added in SUBENT 002."]
 	}
       ]
     }
@@ -274,26 +286,28 @@
 }
    ]
    }
-  ,{"SUBENT":"M0106003", "isub":3, "compiled":20130531, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0106003", "isub":3, "compiled":20161114, "TransID":"M085", "TransDate":20170110
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"27-CO-59(G,N)27-CO-58,,SIG,,BRS"
-	    ,"c4reac":"(G,N),SIG,,BRS"
+	,"x4code":{"code":"27-CO-59(G,X)0-NN-1,UNW,SIG,,BRS"
+	    ,"c4reac":"(G,X)UNW,SIG,,BRS"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"27-CO-59(G,N)27-CO-58,,SIG,,BRS"
-		,"Reac":"G,N"
+	    {"code":"27-CO-59(G,X)0-NN-1,UNW,SIG,,BRS"
+		,"Reac":"G,X"
 		,"SF1":"27-CO-59","Targ":{"code":"27-CO-59","nam":"Co-59","ZA":27059}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N"
-		,"SF4":"27-CO-58","Prod":{"code":"27-CO-58","nam":"Co-58","ZA":27058}
+		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
+		,"SF5":"UNW"
 		,"SF6":"SIG"
 		,"SF8":"BRS"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"UNW,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Unweighted production cross section"
 	    }]}
+	,"x4freetext":["Reaction (g,sn) = (g,n) + (g,np) + (g,2n)."]
 	}
       ]
      ,"STATUS":[
@@ -317,6 +331,11 @@
 	,"x4code":{"code":"20130531A", "date":"20130531", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected by V.Varlamov: BRA -> BRS."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20161114A", "date":"20161114", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION."]
 	}
       ]
     }
@@ -378,12 +397,12 @@
 	,[29.83,6.5,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0106003", "Pointer":" "
- ,"Subent":"M0106003", "compiled":20130531
+ ,"Subent":"M0106003", "compiled":20161114
  ,"year1":1964, "author1ini":"E.B.", "author1":"Bazhanov"
- ,"zTarg1":27, "targ1":"Co-59", "proj1":"g", "emis1":"N", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":27, "targ1":"Co-59", "proj1":"g", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"27-CO-59(G,N)27-CO-58,,SIG,,BRS"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Unweighted production cross section"
+ ,"reacode":"27-CO-59(G,X)0-NN-1,UNW,SIG,,BRS"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":39
@@ -733,26 +752,27 @@
 }
    ]
    }
-  ,{"SUBENT":"M0106006", "isub":6, "compiled":20130531, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0106006", "isub":6, "compiled":20170330, "TransID":"M088", "TransDate":20170607
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"27-CO-59(G,X)0-NN-1,,INT,,BRA"
-	    ,"c4reac":"(G,X),INT,,BRA"
+	,"x4code":{"code":"27-CO-59(G,X)0-NN-1,UNW,INT,,BRA"
+	    ,"c4reac":"(G,X)UNW,INT,,BRA"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"27-CO-59(G,X)0-NN-1,,INT,,BRA"
+	    {"code":"27-CO-59(G,X)0-NN-1,UNW,INT,,BRA"
 		,"Reac":"G,X"
 		,"SF1":"27-CO-59","Targ":{"code":"27-CO-59","nam":"Co-59","ZA":27059}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
+		,"SF5":"UNW"
 		,"SF6":"INT"
 		,"SF8":"BRA"
-		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
+		,"SF58":"UNW,INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Unweighted prod.cs integral over incid.energy"
 	    }]}
-	,"x4freetext":[" Reaction (g,xn) = (g,n) + 2(g,2n) + ..."]
+	,"x4freetext":[" Reaction (g,xn) = (g,n) + (g,2n) + ..."]
 	}
       ]
      ,"STATUS":[
@@ -763,9 +783,9 @@
 	,"x4freetext":[" Data from text."]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"DEP,M0106004"
+	,"x4codes":[{"code":"DEP,M0106003"
 		,"flag":"DEP", "help":"Dependent data"
-		,"subent":"M0106004"
+		,"subent":"M0106003"
 		}]
 	,"x4freetext":[" Reaction cross section."]
 	}
@@ -774,6 +794,18 @@
 	{"x4pointer":" "
 	,"x4code":{"code":"20130531C", "date":"20130531", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20161114A", "date":"20161114", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION - UNW,"
+		," STATUS, DATA substituted."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170330A", "date":"20170330", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: the HISTORY line"
+		," (20130531C) added."]
 	}
       ]
     }
@@ -794,15 +826,15 @@
 	,["MEV"       ,"MB*MEV"    ,"PER-CENT"  ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
-	 [29,700,13]]}
+	 [29,701,13]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0106006", "Pointer":" "
- ,"Subent":"M0106006", "compiled":20130531
+ ,"Subent":"M0106006", "compiled":20170330
  ,"year1":1964, "author1ini":"E.B.", "author1":"Bazhanov"
  ,"zTarg1":27, "targ1":"Co-59", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"27-CO-59(G,X)0-NN-1,,INT,,BRA"
+ ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Unweighted prod.cs integral over incid.energy"
+ ,"reacode":"27-CO-59(G,X)0-NN-1,UNW,INT,,BRA"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":3
  ,"lx4data":1
@@ -811,8 +843,8 @@
     ,"header":"DATA", "units":"MB*MEV", "basicUnits":"B*EV"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[700]
-    ,"dat1":[7.0e+5]}
+    ,"dat0":[701]
+    ,"dat1":[7.01e+5]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
     ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
@@ -832,8 +864,8 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B*EV"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[7.0e+5]
-      ,"dy":[9.1e+4]   }
+      ,"y":[7.01e+5]
+      ,"dy":[91130]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
