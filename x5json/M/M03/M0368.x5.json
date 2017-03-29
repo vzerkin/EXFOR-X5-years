@@ -1,9 +1,9 @@
-  {"ENTRY":"M0368", "updated":20120621, "TransID":"M064", "TransDate":20121112, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
+  {"ENTRY":"M0368", "updated":20170330, "TransID":"M088", "TransDate":20170607, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
    ,"y1":1982,"a1":"P.Carlos+","r1":"J,NP/A,378,317,1982","doi1":"10.1016/0375-9474(82)90596-6"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.378, p.317 (1982)"
    ,"title":"Photoneutron cross sections for oxygen from 24 - 133 MeV."
    ,"x4subents":[
-   {"SUBENT":"M0368001", "isub":1, "compiled":20120621, "TransID":"M064", "TransDate":20121112
+   {"SUBENT":"M0368001", "isub":1, "compiled":20170330, "TransID":"M088", "TransDate":20170607
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -44,7 +44,7 @@
       ]
      ,"INC-SOURCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"QMPH", "dict":"INC-SOURCE", "idict":19,"hlp":"Quasi-monoenergetic photons"}]
+	,"x4codes":[{"code":"ARAD", "dict":"INC-SOURCE", "idict":19,"hlp":"Annihilation radiation"}]
 	,"x4freetext":[" Positron annihilation in flight."]
 	}
       ]
@@ -110,11 +110,23 @@
 	     ,"actHelp":"Compiled at the data center"}
 	}
 	,{"x4pointer":" "
+	,"x4code":{"code":"20120405A", "date":"20120405", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":["  Corrected   by  V.Varlamov:  dates,  doi,"
+		," ERR-ANALYS, DATA-ERR, lowercase."]
+	}
+	,{"x4pointer":" "
 	,"x4code":{"code":"20120621A", "date":"20120621", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected   by  V.Varlamov:  dates,  doi,"
 		," DATA-ERR,  REACTION  in   SUBENTs   002   and   005,"
 		," (EXP in all), lowercase."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170330A", "date":"20170330", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: INC-SOURCE,"
+		," the HISTORY line (20120405A) added corrected."]
 	}
       ]
     }
@@ -131,7 +143,7 @@
       ,"data":[
 	 [10]]}
    }
-  ,{"SUBENT":"M0368002", "isub":2, "compiled":20120621, "TransID":"M064", "TransDate":20121112
+  ,{"SUBENT":"M0368002", "isub":2, "compiled":20170330, "TransID":"M088", "TransDate":20170607
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -177,6 +189,19 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data from the Table 1."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20120405A", "date":"20120405", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: DATA-ERR."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170330A", "date":"20170330", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: the HISTORY line"
+		," (20120405A) added."]
 	}
       ]
     }
@@ -234,7 +259,7 @@
 	,[133,0.5,0.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0368002", "Pointer":" "
- ,"Subent":"M0368002", "compiled":20120621
+ ,"Subent":"M0368002", "compiled":20170330
  ,"year1":1982, "author1ini":"P.", "author1":"Carlos"
  ,"zTarg1":8, "targ1":"O-16", "proj1":"g", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -668,7 +693,7 @@
 }
    ]
    }
-  ,{"SUBENT":"M0368005", "isub":5, "compiled":20120621, "TransID":"M064", "TransDate":20121112
+  ,{"SUBENT":"M0368005", "isub":5, "compiled":20170330, "TransID":"M088", "TransDate":20170607
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -691,15 +716,27 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-S"
-	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
-	,"x4freetext":[" Statistical error."]
-	}
-	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-1"
 	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" Systematical error - additional"
-		," quasi-statistical uncertainty."]
+	,"x4freetext":[" The quasi-statistical uncertainty resulted"
+		," from the combination in quadrature of the purely"
+		," statistical uncerainties of the photoneutron counting"
+		," rates (including background subdtractions), the"
+		," mostly statistical uncerainties related to the photon"
+		," beam, and the mostly systematic uncertainties"
+		," associated with the neutron-detector efficiency."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-2"
+	     ,"headerHelp":"2nd partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" Additional uncertainty which accounts for the"
+		," true systematic uncertainties added to each of"
+		," quasi-statistical uncertainties"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on source."]
 	}
       ]
      ,"ANALYSIS":[
@@ -720,6 +757,26 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data from the Table 3."]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Data for energy range  15.7 - 140.0 MeV  are from the"
+		," text on page 326."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20120405A", "date":"20120405", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: DATA-ERR."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170330A", "date":"20170330", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: the HISTORY line"
+		," (20120405A) added."]
 	}
       ]
     }
@@ -755,7 +812,7 @@
 	,[89,133,26.1,null,null,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0368005", "Pointer":" "
- ,"Subent":"M0368005", "compiled":20120621
+ ,"Subent":"M0368005", "compiled":20170330
  ,"year1":1982, "author1ini":"P.", "author1":"Carlos"
  ,"zTarg1":8, "targ1":"O-16", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
