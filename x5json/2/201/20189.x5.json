@@ -1,9 +1,9 @@
-  {"ENTRY":"20189", "updated":20160907, "TransID":"2252", "TransDate":20170124, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"20189", "updated":20170423, "TransID":"2261", "TransDate":20180123, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1961,"a1":"A.J.Deruytter","r1":"J,JNE/AB,15,165,1961"
    ,"ref":"Jour: J.Nuclear Energy A&B (Reactor Sci. and Technol.), Vol.15, p.165 (1961)"
    ,"title":"The fission cross-section of U-235 from 0.01 eV to 0.1 eV and its absolute value at 0.0253 eV"
    ,"x4subents":[
-   {"SUBENT":"20189001", "isub":1, "compiled":20160907, "TransID":"2252", "TransDate":20170124
+   {"SUBENT":"20189001", "isub":1, "compiled":20170423, "TransID":"2261", "TransDate":20180123
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -19,7 +19,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,JNE/AB,15,165,196112","stdFileName":"J,JNE_AB,15,165,1961"
+	,"x4codes":[{"code":"J,JNE/AB,15,165,1961","stdFileName":"J,JNE_AB,15,165,1961"
 		,"year":1961,"typ":"J","ref":"J,JNE/AB","vol":"15","p":"165"
 		,"shortRef":"Jour: J.Nuclear Energy A&B (Reactor Sci. and Technol.), Vol.15, p.165 (1961)"}]
 	}
@@ -44,7 +44,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"code":"CHOPS", "dict":"FACILITY", "idict":18,"hlp":"Slow chopper"}
 	    ,{"code":"2BLGMOL", "dict":"INSTITUTE", "idict":3,"hlp":"SCK CEN (Belgian Nuclear Research Centre), Mol, Belgium"}]
-	,"x4freetext":["    Br1-reactor with slow chopper."]
+	,"x4freetext":["    BR1-reactor with slow chopper."]
 	}
       ]
      ,"METHOD":[
@@ -117,6 +117,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD:Updated to new date formats,lower case."
 		,"Subent 002 split in two. Data were corrected in Sub.002"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170423A", "date":"20170423", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Energy units in Subent 003 corrected."]
 	}
       ]
     }
@@ -311,7 +316,7 @@
 }
    ]
    }
-  ,{"SUBENT":"20189003", "isub":3, "compiled":20160907, "TransID":"2252", "TransDate":20170124
+  ,{"SUBENT":"20189003", "isub":3, "compiled":20170423, "TransID":"2261", "TransDate":20180123
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -348,6 +353,7 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"20189002"
 		}]
+	,"x4freetext":["  Point-wise cross sections"]
 	}
       ]
      ,"HISTORY":[
@@ -356,13 +362,18 @@
 	     ,"actHelp":"Converted from previous compilation"}
 	,"x4freetext":[" SD"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170423A", "date":"20170423", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Energy units: MEV -> EV."]
+	}
       ]
     }
     ,"DATA":{"ncols":3, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
+       {"icol":0, "header":"EN", "units":"EV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
@@ -372,13 +383,13 @@
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"B"         ,"B"         ]
+	,["EV"        ,"B"         ,"B"         ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [0.0253,587,6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"20189003", "Pointer":" "
- ,"Subent":"20189003", "compiled":20160907
+ ,"Subent":"20189003", "compiled":20170423
  ,"year1":1961, "author1ini":"A.J.", "author1":"Deruytter"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -388,9 +399,9 @@
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 92-U-235(N,F),,SIG,,,DERIV"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
-	," #[0]#En=25300.0"
+	," #[0]#En=0.0253"
 	," a0=[MONIT];                   #[0]#old monitor point 97.7"
-	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.0253MeV]"
+	," a1=therm$au197ng[0.0253];     #[0]#new monitor point [2.53E-8MeV]"
 	," dy=dy/y;                      #to rel. uncertainties"
 	," y=y*a1/a0;                    #[0]#renormalizing CS"
 	," dy=dy*y;                      #to abs. uncertainties"]
@@ -416,11 +427,11 @@
     ,"com0":0.5
     ,"com1":0.5}
   ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"header":"EN", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[0.0253]
-    ,"dat1":[25300]}
+   ,"dat1eq":true}
   ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT", "units":"B", "basicUnits":"B"
     ,"what":"ZZZ", "dataType":"11", "rank":777.0
@@ -440,16 +451,13 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[25300]
+      ,"x1":[0.0253]
    }
  }
  ,"c5mon":{"m0ref":"[MONIT]/au197ng", "m1ref":"recom/au197ng"
-      ,"enNorm":[25300]
+      ,"enNorm":[0.0253]
       ,"m0":[97.7]
-      ,"m1":[0.62701]
-      ,"dm0":[0.5]
-      ,"dm1":[0.0111896]
-      ,"Fc0":[0.00641771] }
+      ,"dm0":[0.5] }
 }
    ]
    }
