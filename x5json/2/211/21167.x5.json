@@ -1,9 +1,9 @@
-  {"ENTRY":"21167", "updated":20120914, "TransID":"2234", "TransDate":20130718, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"21167", "updated":20170723, "TransID":"2261", "TransDate":20180123, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1946,"a1":"A.Gibert+","r1":"J,HPA,19,493,1946"
    ,"ref":"Jour: Helvetica Physica Acta, Vol.19, p.493 (1946)"
    ,"title":"Influence of molecular bindings on the diffusion of thermal neutrons through nitrogen"
    ,"x4subents":[
-   {"SUBENT":"21167001", "isub":1, "compiled":20120914, "TransID":"2234", "TransDate":20130718
+   {"SUBENT":"21167001", "isub":1, "compiled":20170723, "TransID":"2261", "TransDate":20180123
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,7 +12,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,HPA,19,493,194612","stdFileName":"J,HPA,19,493,1946"
+	,"x4codes":[{"code":"J,HPA,19,493,1946","stdFileName":"J,HPA,19,493,1946"
 		,"year":1946,"typ":"J","ref":"J,HPA","vol":"19","p":"493"
 		,"shortRef":"Jour: Helvetica Physica Acta, Vol.19, p.493 (1946)"}]
 	}
@@ -90,8 +90,12 @@
 	,"x4code":{"code":"20120914A", "date":"20120914", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: Updated to new date formats,lower case."
-		,"     Corrected according last EXFOR rules and Dict."
 		,"     BIB update."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170723A", "date":"20170723", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code in Subent 002 update."]
 	}
       ]
     }
@@ -108,26 +112,27 @@
       ,"data":[
 	 [0.0253]]}
    }
-  ,{"SUBENT":"21167002", "isub":2, "compiled":20120914, "TransID":"2234", "TransDate":20130718
+  ,{"SUBENT":"21167002", "isub":2, "compiled":20170723, "TransID":"2261", "TransDate":20180123
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"7-N-14(N,THS)7-N-14,BA,SIG/TMP,,MXW"
-	    ,"c4reac":"(N,THS)BA,SIG/TMP,,MXW"
+	,"x4code":{"code":"7-N-14(N,THS)7-N-14,,SIG,,MXW/TMP"
+	    ,"c4reac":"(N,THS),SIG,,MXW/TMP"
 	    ,"combi":"a"
+	    ,"MF":3
+	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"7-N-14(N,THS)7-N-14,BA,SIG/TMP,,MXW"
+	    {"code":"7-N-14(N,THS)7-N-14,,SIG,,MXW/TMP"
 		,"Reac":"N,THS"
 		,"SF1":"7-N-14","Targ":{"code":"7-N-14","nam":"N-14","ZA":7014}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"THS","procHlp":"Thermal neutron scattering"
 		,"SF4":"7-N-14","Prod":{"code":"7-N-14","nam":"N-14","ZA":7014}
-		,"SF5":"BA"
-		,"SF6":"SIG/TMP"
-		,"SF8":"MXW"
-		,"SF58":"BA,SIG/TMP","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"SIG"
+		,"SF8":"MXW/TMP"
+		,"SF58":",SIG,,TMP","Quant":"CST","BasicUnits":"B","QuantHlp":"Cross section at other than the room temperature"
 	    }]}
-	,"x4freetext":[" Scatt. cross sect"]
+	,"x4freetext":[" Scatt. cross sect."]
 	}
       ]
      ,"ANALYSIS":[
@@ -157,6 +162,14 @@
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" .Total error given, systematic error about"
 		," one fifth of statistical error."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20170723A", "date":"20170723", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF5=BA deleted, SF6=SIG/TMP -> SIG,"
+		,"SF8=MXW -> MXW/TMP) in REACTION code (MEMO CP-D/928)."]
 	}
       ]
     }
@@ -197,13 +210,66 @@
 	,[125,11.1,0.8]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"21167002", "Pointer":" "
- ,"Subent":"21167002", "compiled":20120914
-,"year1":1946, "author1ini":"A.", "author1":"Gibert"
-, "zTarg1":7, "targ1":"N-14", "proj1":"n", "emis1":"THS", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"7-N-14(N,THS)7-N-14,BA,SIG/TMP,,MXW"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"21167002", "compiled":20170723
+ ,"year1":1946, "author1ini":"A.", "author1":"Gibert"
+ ,"zTarg1":7, "targ1":"N-14", "proj1":"n", "emis1":"THS", "MF":3, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(SpE,TMS)"
+ ,"ReactionType":"CST", "quant":"CST", "quantExpan":"Cross section at other than the room temperature"
+ ,"reacode":"7-N-14(N,THS)7-N-14,,SIG,,MXW/TMP"
+ ,"compNotes":["STORE DATA FOR I78:[TMS] Other variable: sample temperature"]
+ ,"wx4data":5
+ ,"lx4data":6
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"B", "basicUnits":"B"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[10.2,9.3,8.7,8.5,9.6,11.1]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.6,0.7,0.3,0.4,0.5,0.8]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x2", "fam":"TMS", "ifComm":false, "ifCM":false
+    ,"header":"TEMP", "units":"K", "basicUnits":"K"
+    ,"what":"X2.Value", "dataType":"82", "rank":2.1
+    ,"expansion":"Other variable: sample temperature"
+    ,"dat0":[20,40,60,65,100,125]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"ASSUM", "units":"B", "basicUnits":"B"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
+    ,"com0":1.2
+    ,"com1":1.2}
+  ]
+ ,"wc5data":3
+ ,"lc5data":6
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[10.2,9.3,8.7,8.5,9.6,11.1]
+      ,"dy":[0.6,0.7,0.3,0.4,0.5,0.8]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[0.0253,0.0253,0.0253,0.0253,0.0253,0.0253]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"TMS", "ifCM":false, "units":"K"
+      ,"header":"TMS", "dataType":"82", "rank":2.0
+      ,"expansion":"Other variable: sample temperature"
+      ,"x2":[20,40,60,65,100,125]
+   }
+ }
 }
    ]
    }
