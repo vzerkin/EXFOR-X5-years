@@ -1,9 +1,9 @@
-  {"ENTRY":"10089", "updated":20130503, "TransID":"1391", "TransDate":20130926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10089", "updated":20170822, "TransID":"1431", "TransDate":20170822, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1969,"a1":"F.P.Mooring+","r1":"J,PR,178,1612,1969","doi1":"10.1103/PhysRev.178.1612"
-   ,"ref":"Jour: Physical Review, Vol.178, Issue.4, p.1612 (1969)"
+   ,"ref":"Jour: Physical Review, Vol.178, p.1612 (1969)"
    ,"title":"Properties of the 3.39-MeV state in B12"
    ,"x4subents":[
-   {"SUBENT":"10089001", "isub":1, "compiled":20130503, "TransID":"1391", "TransDate":20130926
+   {"SUBENT":"10089001", "isub":1, "compiled":20170822, "TransID":"1431", "TransDate":20170822
     ,"BIB":{
       "AUTHOR":[
 	{"x4pointer":" "
@@ -20,10 +20,10 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,PR,178,(4),1612,1969","stdFileName":"J,PR,178,1612,1969"
-		,"year":1969,"typ":"J","ref":"J,PR","vol":"178","issue":"4","p":"1612"
+	,"x4codes":[{"code":"J,PR,178,1612,1969","stdFileName":"J,PR,178,1612,1969"
+		,"year":1969,"typ":"J","ref":"J,PR","vol":"178","p":"1612"
 		,"DOI":"10.1103/PhysRev.178.1612"
-		,"shortRef":"Jour: Physical Review, Vol.178, Issue.4, p.1612 (1969)"}]
+		,"shortRef":"Jour: Physical Review, Vol.178, p.1612 (1969)"}]
 	,"x4freetext":["#doi:10.1103/PhysRev.178.1612"]
 	}
       ]
@@ -79,6 +79,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" BP: corrections according last EXFOR rules"
 		,"and Dict. Updated subentries, digitized Fig.3,4."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170820A", "date":"20170820", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Added parameter in sub.4"]
 	}
       ]
     }
@@ -603,7 +608,7 @@
 }
    ]
    }
-  ,{"SUBENT":"10089004", "isub":4, "compiled":20130503, "TransID":"1391", "TransDate":20130926
+  ,{"SUBENT":"10089004", "isub":4, "compiled":20170822, "TransID":"1431", "TransDate":20170822
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -679,20 +684,28 @@
 	,"x4freetext":[" Updated, digitized Fig.3, corrected"
 		,"reaction code for transmission measurement."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170820A", "date":"20170820", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Added THICKNESS"]
+	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-RSL", "units":"KEV", "pointer":" "
 	,"headerHelp":"Incident projectile energy resolution (Unspecified)", "pFlag":"9220000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"THICKNESS", "units":"G/CM-SQ", "pointer":" "
+	,"headerHelp":"Sample thickness", "pFlag":"1000000"
+	,"unitsHelp":"grams per centimeters-squared","familyCode":"THK","convFc":1.0,"basicUnits":"G/CM-SQ"}
       ]
       ,"datacols":[
-	 ["EN-RSL"    ]
-	,["KEV"       ]
-	,[" "         ]]
+	 ["EN-RSL"    ,"THICKNESS" ]
+	,["KEV"       ,"G/CM-SQ"   ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [1]]}
+	 [1,0.864]]}
     ,"DATA":{"ncols":3, "nrows":14
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
@@ -726,14 +739,14 @@
 	,[25.94,0.5621,0.003165]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10089004", "Pointer":" "
- ,"Subent":"10089004", "compiled":20130503
+ ,"Subent":"10089004", "compiled":20170822
  ,"year1":1969, "author1ini":"F.P.", "author1":"Mooring"
  ,"zTarg1":5, "targ1":"B-11", "proj1":"n", "emis1":"TOT", "MF":0, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=y(x1,x2)"
+ ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(EN,THS)"
  ,"ReactionType":"TOF", "quant":"CS", "quantExpan":"Transmission"
  ,"reacode":"5-B-11(N,TOT),,TRN"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":14
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -764,6 +777,12 @@
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":1
     ,"com1":1000}
+  ,{"ivar":4, "cvar":"x2", "fam":"THS", "ifComm":true , "ifCM":false
+    ,"header":"THICKNESS", "units":"G/CM-SQ", "basicUnits":"G/CM-SQ"
+    ,"what":"X2.Value", "dataType":"83", "rank":2.1
+    ,"expansion":"Other variable: sample thickness"
+    ,"com0":0.864
+    ,"com1":0.864}
   ]
  ,"wc5data":3
  ,"lc5data":14
@@ -782,6 +801,12 @@
 	,22470,22890,23930,25940]
       ,"dx1":[1000,1000,1000,1000,1000,1000,1000,1000,1000,1000
 	,1000,1000,1000,1000]   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"THS", "ifCM":false, "units":"G/CM-SQ"
+      ,"header":"THS", "dataType":"83", "rank":2.0
+      ,"expansion":"Other variable: sample thickness"
+      ,"x2":[0.864,0.864,0.864,0.864,0.864,0.864,0.864,0.864,0.864,0.864
+	,0.864,0.864,0.864,0.864]
+   }
  }
 }
    ]
