@@ -1,9 +1,9 @@
-  {"ENTRY":"22435", "updated":20120216, "TransID":"2229", "TransDate":20120704, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
-   ,"y1":1997,"a1":"F.Vives+","r1":"R,INDC(EUR)-031/G,16,1997"
-   ,"ref":"Conf: Comm. of the European Commun. report to I.N.D.C., No.031/G, p.16 (1997)"
+  {"ENTRY":"22435", "updated":20170823, "TransID":"2265", "TransDate":20180126, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+   ,"y1":1997,"a1":"F.Vives+","r1":"R,INDC(EUR)-031,16,1997"
+   ,"ref":"Conf: Comm. of the European Commun. report to I.N.D.C., No.031, p.16 (1997)"
    ,"title":"Investigation of the 238U(n,f)-process at incident neutron energies between 1.6 and 3.5 MeV"
    ,"x4subents":[
-   {"SUBENT":"22435001", "isub":1, "compiled":20120216, "TransID":"2229", "TransDate":20120704
+   {"SUBENT":"22435001", "isub":1, "compiled":20170823, "TransID":"2265", "TransDate":20180126
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -31,9 +31,9 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"S,INDC(EUR)-031/G,16,199706","stdFileName":"R,INDC(EUR)-031_G,16,1997"
-		,"year":1997,"typ":"S","ref":"R,INDC(EUR)-","no":"031/G","p":"16"
-		,"shortRef":"Conf: Comm. of the European Commun. report to I.N.D.C., No.031/G, p.16 (1997)"}]
+	,"x4codes":[{"code":"S,INDC(EUR)-031,16,1997","stdFileName":"R,INDC(EUR)-031,16,1997"
+		,"year":1997,"typ":"S","ref":"R,INDC(EUR)-","no":"031","p":"16"
+		,"shortRef":"Conf: Comm. of the European Commun. report to I.N.D.C., No.031, p.16 (1997)"}]
 	,"x4freetext":["  Main reference"
 		," Report IRMM-NEA/NSC/DOC(97)7,16,199706"]
 	}
@@ -73,22 +73,27 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":[" Corrections were made for the inefficiency of the"
-		," frisch grid, for the pulse-height defect in the"
+		," Frisch grid, for the pulse-height defect in the"
 		," counter and the energy loss in the fissioning target"]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["From P.Jaffke: \"Reaction code was wrong in Subent 003."
+		,"This data set gives an alternative result of 002"
+		," (002: nu(A) of 233,235U(n,f) used;"
+		,"  003: nu(A) of 239Pu(n,f) used for correction for"
+		,"  prompt neutron emission), and could be merged to 002"
+		,"  with the multiple reaction formalism."]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"PRELM"
-		,"flag":"PRELM", "help":"Preliminary data"
-		}]
-	,"x4freetext":["  Notified as preliminary by the authors"]
-	}
-	,{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":["  Table 4 of S,INDC(EUR)-031/G,16,1997"]
+	,"x4freetext":["  Table 4 of S,INDC(EUR)-031,16,1997"]
 	}
       ]
      ,"HISTORY":[
@@ -105,7 +110,14 @@
 	,{"x4pointer":" "
 	,"x4code":{"code":"20120216A", "date":"20120216", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" Correction of EN values (subent 002,003)"]
+	,"x4freetext":[" Correction of EN values (Subent 002,003)"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170823A", "date":"20170823", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Subents 002, 003 were merged (see"
+		,"COMMENT). STATUS `PRELM` deleted (final data were not"
+		,"published during thirty years)."]
 	}
       ]
     }
@@ -122,10 +134,29 @@
       ,"data":[
 	 [0.0253]]}
    }
-  ,{"SUBENT":"22435002", "isub":2, "compiled":20120216, "TransID":"2229", "TransDate":20120704
+  ,{"SUBENT":"22435002", "isub":2, "compiled":20170823, "TransID":"2265", "TransDate":20180126
     ,"BIB":{
       "REACTION":[
-	{"x4pointer":" "
+	{"x4pointer":"1"
+	,"x4code":{"code":"92-U-238(N,F),PRE,AKE,LF+HF"
+	    ,"c4reac":"(N,F)PRE,AKE,LF+HF"
+	    ,"combi":"a"
+	    ,"MF":801
+	    ,"MT":18
+	    ,"Units":"EV"
+	    ,"reacs": [
+	    {"code":"92-U-238(N,F),PRE,AKE,LF+HF"
+		,"Reac":"N,F"
+		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF5":"PRE"
+		,"SF6":"AKE"
+		,"SF7":"LF+HF"
+		,"SF58":"PRE,AKE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Average total kin. energy for prim.fiss.frag."
+	    }]}
+	}
+	,{"x4pointer":"2"
 	,"x4code":{"code":"92-U-238(N,F),PRE,AKE,LF+HF"
 	    ,"c4reac":"(N,F)PRE,AKE,LF+HF"
 	    ,"combi":"a"
@@ -145,34 +176,64 @@
 	    }]}
 	}
       ]
+     ,"CORRECTION":[
+	{"x4pointer":"1"
+	,"x4code":null
+	,"x4freetext":[" nu(A) of 233,235U(n,f) was used for correction for"
+		,"  prompt neutron emission)"]
+	}
+	,{"x4pointer":"2"
+	,"x4code":null
+	,"x4freetext":[" nu(A) of 239Pu(n,f) was used for correction for"
+		,"  prompt neutron emission)"]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"ERR-S"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical error"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20170823A", "date":"20170823", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Data from Subent 003 were added."
+		,"CORRECTION was added."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":3, "nrows":7
+    ,"DATA":{"ncols":4, "nrows":7
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MEV", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MEV", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"ERR-S", "units":"MEV", "pointer":" "
+      ,{"icol":2, "header":"DATA", "units":"MEV", "pointer":"2"
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":3, "header":"ERR-S", "units":"MEV", "pointer":" "
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"ERR-S"     ]
-	,["MEV"       ,"MEV"       ,"MEV"       ]
-	,[" "         ," "         ," "         ]]
+	 ["EN"        ,"DATA"      ,"DATA"      ,"ERR-S"     ]
+	,["MEV"       ,"MEV"       ,"MEV"       ,"MEV"       ]
+	,[" "         ,"1"         ,"2"         ," "         ]]
       ,"data":[
-	 [1.6,170.31,0.04]
-	,[1.7,170.31,0.04]
-	,[1.8,170.36,0.03]
-	,[2,170.37,0.03]
-	,[2.5,170.36,0.03]
-	,[3,170.33,0.03]
-	,[3.5,170.11,0.03]]}
+	 [1.6,170.31,170.32,0.04]
+	,[1.7,170.31,170.32,0.04]
+	,[1.8,170.36,170.36,0.03]
+	,[2,170.37,170.39,0.03]
+	,[2.5,170.36,170.36,0.03]
+	,[3,170.33,170.34,0.03]
+	,[3.5,170.11,170.12,0.03]]}
   ,"datasets":[
-{"iDataset":0, "DatasetID":"22435002", "Pointer":" "
- ,"Subent":"22435002", "compiled":20120216
+{"iDataset":0, "DatasetID":"224350021", "Pointer":"1"
+ ,"Subent":"22435002", "compiled":20170823
  ,"year1":1997, "author1ini":"F.", "author1":"Vives"
  ,"zTarg1":92, "targ1":"U-238", "proj1":"n", "emis1":"F", "MF":801, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -223,64 +284,13 @@
    }
  }
 }
-   ]
-   }
-  ,{"SUBENT":"22435003", "isub":3, "compiled":20120216, "TransID":"2229", "TransDate":20120704
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"94-PU-239(N,F),PRE,AKE,LF+HF"
-	    ,"c4reac":"(N,F)PRE,AKE,LF+HF"
-	    ,"combi":"a"
-	    ,"MF":801
-	    ,"MT":18
-	    ,"Units":"EV"
-	    ,"reacs": [
-	    {"code":"94-PU-239(N,F),PRE,AKE,LF+HF"
-		,"Reac":"N,F"
-		,"SF1":"94-PU-239","Targ":{"code":"94-PU-239","nam":"Pu-239","ZA":94239}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"PRE"
-		,"SF6":"AKE"
-		,"SF7":"LF+HF"
-		,"SF58":"PRE,AKE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Average total kin. energy for prim.fiss.frag."
-	    }]}
-	}
-      ]
-    }
-    ,"DATA":{"ncols":3, "nrows":7
-      ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MEV", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"ERR-S", "units":"MEV", "pointer":" "
-	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ]
-      ,"datacols":[
-	 ["EN"        ,"DATA"      ,"ERR-S"     ]
-	,["MEV"       ,"MEV"       ,"MEV"       ]
-	,[" "         ," "         ," "         ]]
-      ,"data":[
-	 [1.6,170.32,0.04]
-	,[1.7,170.32,0.04]
-	,[1.8,170.36,0.03]
-	,[2,170.39,0.03]
-	,[2.5,170.36,0.03]
-	,[3,170.34,0.03]
-	,[3.5,170.12,0.03]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"22435003", "Pointer":" "
- ,"Subent":"22435003", "compiled":20120216
+,{"iDataset":1, "DatasetID":"224350022", "Pointer":"2"
+ ,"Subent":"22435002", "compiled":20170823
  ,"year1":1997, "author1ini":"F.", "author1":"Vives"
- ,"zTarg1":94, "targ1":"Pu-239", "proj1":"n", "emis1":"F", "MF":801, "MT":18, "nExpectedArgs":1
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"n", "emis1":"F", "MF":801, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"E", "quant":"E", "quantExpan":"Average total kin. energy for prim.fiss.frag."
- ,"reacode":"94-PU-239(N,F),PRE,AKE,LF+HF"
+ ,"reacode":"92-U-238(N,F),PRE,AKE,LF+HF"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":7
@@ -327,6 +337,8 @@
  }
 }
    ]
+   }
+  ,{"SUBENT":"22435003", "isub":3, "compiled":20170823, "TransID":"2265", "TransDate":20180126, "nosubent":true 
    }
   ]
  }
