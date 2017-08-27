@@ -1,15 +1,15 @@
-  {"ENTRY":"23233", "updated":20140512, "TransID":"2239", "TransDate":20140923, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"23233", "updated":20170828, "TransID":"2265", "TransDate":20180126, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":2014,"a1":"V.Semkova+","r1":"J,EPJ/CS,66,03077,2014","doi1":"10.1051/epjconf/20146603077"
    ,"ref":"Jour: EPJ Web of Conferences, Vol.66, p.03077 (2014)"
-   ,"title":"Measurement of Neutron Activation Cross Sections on Mo isotopes in the Energy Range from 7 MeV to 15 MeV."
+   ,"title":"Measurement of neutron activation cross sections on Mo isotopes in the energy range from 7 MeV to 15 MeV."
    ,"x4subents":[
-   {"SUBENT":"23233001", "isub":1, "compiled":20140512, "TransID":"2239", "TransDate":20140923
+   {"SUBENT":"23233001", "isub":1, "compiled":20170828, "TransID":"2265", "TransDate":20180126
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Measurement of Neutron Activation Cross Sections on Mo"
-		,"isotopes in the Energy Range from 7 MeV to 15 MeV."]
+	,"x4freetext":["Measurement of neutron activation cross sections on Mo"
+		,"isotopes in the energy range from 7 MeV to 15 MeV."]
 	}
       ]
      ,"AUTHOR":[
@@ -136,6 +136,13 @@
 		,"summing effects."]
 	}
       ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information about source of uncertainties"]
+	}
+      ]
      ,"MONITOR":[
 	{"x4pointer":" "
 	,"x4code":{"code":"13-AL-27(N,A)11-NA-24,,SIG"
@@ -166,10 +173,15 @@
 	     ,"actHelp":"Data received at the data center"}
 	,"x4freetext":[" Data were received 23 May 2014."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170828U", "date":"20170828", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: EN-RSL-HW ->EN-RSL-FW. ERR-T ->DATA-ERR"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"23233002", "isub":2, "compiled":20140512, "TransID":"2239", "TransDate":20140923
+  ,{"SUBENT":"23233002", "isub":2, "compiled":20170828, "TransID":"2265", "TransDate":20180126
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -212,18 +224,18 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-HW", "units":"MEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Half width)", "pFlag":"9330000"
+      ,{"icol":1, "header":"EN-RSL-FW", "units":"MEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL-HW" ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-RSL-FW" ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -236,7 +248,7 @@
 	,[8.08,0.13,95,5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23233002", "Pointer":" "
- ,"Subent":"23233002", "compiled":20140512
+ ,"Subent":"23233002", "compiled":20170828
  ,"year1":2014, "author1ini":"V.", "author1":"Semkova"
  ,"zTarg1":42, "targ1":"Mo-92", "proj1":"n", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -253,7 +265,7 @@
     ,"dat0":[66,91,100,107,103,101,95]
     ,"dat1":[0.066,0.091,0.1,0.107,0.103,0.101,0.095]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[7,5,5,6,4,5,5]
@@ -265,8 +277,8 @@
     ,"dat0":[14.48,13.08,12.09,10.92,10.05,8.92,8.08]
     ,"dat1":[1.448e+7,1.308e+7,1.209e+7,1.092e+7,1.005e+7,8.92e+6,8.08e+6]}
   ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-RSL-HW", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.hRes+-", "dataType":"41", "rank":1.933
+    ,"header":"EN-RSL-FW", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.11,0.11,0.11,0.11,0.11,0.12,0.13]
     ,"dat1":[1.1e+5,1.1e+5,1.1e+5,1.1e+5,1.1e+5,1.2e+5,1.3e+5]}
@@ -283,12 +295,12 @@
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.448e+7,1.308e+7,1.209e+7,1.092e+7,1.005e+7,8.92e+6,8.08e+6]
-      ,"dx1":[2.2e+5,2.2e+5,2.2e+5,2.2e+5,2.2e+5,2.4e+5,2.6e+5]   }
+      ,"dx1":[1.1e+5,1.1e+5,1.1e+5,1.1e+5,1.1e+5,1.2e+5,1.3e+5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"23233003", "isub":3, "compiled":20140512, "TransID":"2239", "TransDate":20140923
+  ,{"SUBENT":"23233003", "isub":3, "compiled":20170828, "TransID":"2265", "TransDate":20180126
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -331,18 +343,18 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-HW", "units":"MEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Half width)", "pFlag":"9330000"
+      ,{"icol":1, "header":"EN-RSL-FW", "units":"MEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL-HW" ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-RSL-FW" ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -355,7 +367,7 @@
 	,[7.73,0.13,3.6,0.3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23233003", "Pointer":" "
- ,"Subent":"23233003", "compiled":20140512
+ ,"Subent":"23233003", "compiled":20170828
  ,"year1":2014, "author1ini":"V.", "author1":"Semkova"
  ,"zTarg1":42, "targ1":"Mo-92", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -372,7 +384,7 @@
     ,"dat0":[24,19,15.4,11.8,9.4,5.9,3.6]
     ,"dat1":[0.024,0.019,0.0154,0.0118,0.0094,0.0059,0.0036]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1,1,0.8,0.7,0.5,0.5,0.3]
@@ -384,8 +396,8 @@
     ,"dat0":[14.48,13.08,12.09,10.92,10.05,8.92,7.73]
     ,"dat1":[1.448e+7,1.308e+7,1.209e+7,1.092e+7,1.005e+7,8.92e+6,7.73e+6]}
   ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-RSL-HW", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.hRes+-", "dataType":"41", "rank":1.933
+    ,"header":"EN-RSL-FW", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.11,0.11,0.11,0.11,0.11,0.12,0.13]
     ,"dat1":[1.1e+5,1.1e+5,1.1e+5,1.1e+5,1.1e+5,1.2e+5,1.3e+5]}
@@ -402,12 +414,12 @@
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.448e+7,1.308e+7,1.209e+7,1.092e+7,1.005e+7,8.92e+6,7.73e+6]
-      ,"dx1":[2.2e+5,2.2e+5,2.2e+5,2.2e+5,2.2e+5,2.4e+5,2.6e+5]   }
+      ,"dx1":[1.1e+5,1.1e+5,1.1e+5,1.1e+5,1.1e+5,1.2e+5,1.3e+5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"23233004", "isub":4, "compiled":20140512, "TransID":"2239", "TransDate":20140923
+  ,{"SUBENT":"23233004", "isub":4, "compiled":20170828, "TransID":"2265", "TransDate":20180126
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -450,18 +462,18 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-HW", "units":"MEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Half width)", "pFlag":"9330000"
+      ,{"icol":1, "header":"EN-RSL-FW", "units":"MEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL-HW" ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-RSL-FW" ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -472,7 +484,7 @@
 	,[7.73,0.13,1.5,0.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23233004", "Pointer":" "
- ,"Subent":"23233004", "compiled":20140512
+ ,"Subent":"23233004", "compiled":20170828
  ,"year1":2014, "author1ini":"V.", "author1":"Semkova"
  ,"zTarg1":42, "targ1":"Mo-95", "proj1":"n", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -489,7 +501,7 @@
     ,"dat0":[6.8,5.2,4.8,2.7,1.5]
     ,"dat1":[0.0068,0.0052,0.0048,0.0027,0.0015]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.3,0.5,0.3,0.1,0.1]
@@ -501,8 +513,8 @@
     ,"dat0":[13.08,11.77,10.92,8.92,7.73]
     ,"dat1":[1.308e+7,1.177e+7,1.092e+7,8.92e+6,7.73e+6]}
   ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-RSL-HW", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.hRes+-", "dataType":"41", "rank":1.933
+    ,"header":"EN-RSL-FW", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.11,0.11,0.11,0.12,0.13]
     ,"dat1":[1.1e+5,1.1e+5,1.1e+5,1.2e+5,1.3e+5]}
@@ -519,12 +531,12 @@
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.308e+7,1.177e+7,1.092e+7,8.92e+6,7.73e+6]
-      ,"dx1":[2.2e+5,2.2e+5,2.2e+5,2.4e+5,2.6e+5]   }
+      ,"dx1":[1.1e+5,1.1e+5,1.1e+5,1.2e+5,1.3e+5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"23233005", "isub":5, "compiled":20140512, "TransID":"2239", "TransDate":20140923
+  ,{"SUBENT":"23233005", "isub":5, "compiled":20170828, "TransID":"2265", "TransDate":20180126
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -567,18 +579,18 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-HW", "units":"MEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Half width)", "pFlag":"9330000"
+      ,{"icol":1, "header":"EN-RSL-FW", "units":"MEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL-HW" ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-RSL-FW" ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -588,7 +600,7 @@
 	,[8.08,0.12,5.7,0.8]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23233005", "Pointer":" "
- ,"Subent":"23233005", "compiled":20140512
+ ,"Subent":"23233005", "compiled":20170828
  ,"year1":2014, "author1ini":"V.", "author1":"Semkova"
  ,"zTarg1":42, "targ1":"Mo-95", "proj1":"n", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -605,7 +617,7 @@
     ,"dat0":[36,27.7,15.1,5.7]
     ,"dat1":[0.036,0.0277,0.0151,0.0057]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1,1.5,1,0.8]
@@ -617,8 +629,8 @@
     ,"dat0":[13.08,12.09,10.05,8.08]
     ,"dat1":[1.308e+7,1.209e+7,1.005e+7,8.08e+6]}
   ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-RSL-HW", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.hRes+-", "dataType":"41", "rank":1.933
+    ,"header":"EN-RSL-FW", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.11,0.11,0.11,0.12]
     ,"dat1":[1.1e+5,1.1e+5,1.1e+5,1.2e+5]}
@@ -635,12 +647,12 @@
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.308e+7,1.209e+7,1.005e+7,8.08e+6]
-      ,"dx1":[2.2e+5,2.2e+5,2.2e+5,2.4e+5]   }
+      ,"dx1":[1.1e+5,1.1e+5,1.1e+5,1.2e+5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"23233006", "isub":6, "compiled":20140512, "TransID":"2239", "TransDate":20140923
+  ,{"SUBENT":"23233006", "isub":6, "compiled":20170828, "TransID":"2265", "TransDate":20180126
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -683,18 +695,18 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-HW", "units":"MEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Half width)", "pFlag":"9330000"
+      ,{"icol":1, "header":"EN-RSL-FW", "units":"MEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL-HW" ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-RSL-FW" ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -704,7 +716,7 @@
 	,[8.92,0.12,1.46,0.15]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23233006", "Pointer":" "
- ,"Subent":"23233006", "compiled":20140512
+ ,"Subent":"23233006", "compiled":20170828
  ,"year1":2014, "author1ini":"V.", "author1":"Semkova"
  ,"zTarg1":42, "targ1":"Mo-96", "proj1":"n", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -721,7 +733,7 @@
     ,"dat0":[16.4,10.5,6.4,1.46]
     ,"dat1":[0.0164,0.0105,0.0064,0.00146]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.7,0.5,0.2,0.15]
@@ -733,8 +745,8 @@
     ,"dat0":[13.08,12.09,10.92,8.92]
     ,"dat1":[1.308e+7,1.209e+7,1.092e+7,8.92e+6]}
   ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-RSL-HW", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.hRes+-", "dataType":"41", "rank":1.933
+    ,"header":"EN-RSL-FW", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.11,0.11,0.11,0.12]
     ,"dat1":[1.1e+5,1.1e+5,1.1e+5,1.2e+5]}
@@ -751,12 +763,12 @@
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.308e+7,1.209e+7,1.092e+7,8.92e+6]
-      ,"dx1":[2.2e+5,2.2e+5,2.2e+5,2.4e+5]   }
+      ,"dx1":[1.1e+5,1.1e+5,1.1e+5,1.2e+5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"23233007", "isub":7, "compiled":20140512, "TransID":"2239", "TransDate":20140923
+  ,{"SUBENT":"23233007", "isub":7, "compiled":20170828, "TransID":"2265", "TransDate":20180126
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -799,18 +811,18 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-HW", "units":"MEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Half width)", "pFlag":"9330000"
+      ,{"icol":1, "header":"EN-RSL-FW", "units":"MEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL-HW" ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-RSL-FW" ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -820,7 +832,7 @@
 	,[8.92,0.12,1.04,0.15]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23233007", "Pointer":" "
- ,"Subent":"23233007", "compiled":20140512
+ ,"Subent":"23233007", "compiled":20170828
  ,"year1":2014, "author1ini":"V.", "author1":"Semkova"
  ,"zTarg1":42, "targ1":"Mo-97", "proj1":"n", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -837,7 +849,7 @@
     ,"dat0":[13,7.8,4.5,1.04]
     ,"dat1":[0.013,0.0078,0.0045,0.00104]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.7,0.7,0.2,0.15]
@@ -849,8 +861,8 @@
     ,"dat0":[13.08,12.09,10.92,8.92]
     ,"dat1":[1.308e+7,1.209e+7,1.092e+7,8.92e+6]}
   ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-RSL-HW", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.hRes+-", "dataType":"41", "rank":1.933
+    ,"header":"EN-RSL-FW", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.11,0.11,0.11,0.12]
     ,"dat1":[1.1e+5,1.1e+5,1.1e+5,1.2e+5]}
@@ -867,12 +879,12 @@
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.308e+7,1.209e+7,1.092e+7,8.92e+6]
-      ,"dx1":[2.2e+5,2.2e+5,2.2e+5,2.4e+5]   }
+      ,"dx1":[1.1e+5,1.1e+5,1.1e+5,1.2e+5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"23233008", "isub":8, "compiled":20140512, "TransID":"2239", "TransDate":20140923
+  ,{"SUBENT":"23233008", "isub":8, "compiled":20170828, "TransID":"2265", "TransDate":20180126
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -915,18 +927,18 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-HW", "units":"MEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Half width)", "pFlag":"9330000"
+      ,{"icol":1, "header":"EN-RSL-FW", "units":"MEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL-HW" ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-RSL-FW" ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -936,7 +948,7 @@
 	,[10.96,0.11,0.32,0.08]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23233008", "Pointer":" "
- ,"Subent":"23233008", "compiled":20140512
+ ,"Subent":"23233008", "compiled":20170828
  ,"year1":2014, "author1ini":"V.", "author1":"Semkova"
  ,"zTarg1":42, "targ1":"Mo-98", "proj1":"n", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -965,7 +977,7 @@
     ,"dat0":[4.95,2.7,0.92,0.32]
     ,"dat1":[0.00495,0.0027,9.2e-4,3.2e-4]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.2,0.2,0.09,0.08]
@@ -977,8 +989,8 @@
     ,"dat0":[14.48,13.08,11.77,10.96]
     ,"dat1":[1.448e+7,1.308e+7,1.177e+7,1.096e+7]}
   ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-RSL-HW", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.hRes+-", "dataType":"41", "rank":1.933
+    ,"header":"EN-RSL-FW", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.11,0.11,0.11,0.11]
     ,"dat1":[1.1e+5,1.1e+5,1.1e+5,1.1e+5]}
@@ -995,12 +1007,12 @@
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.448e+7,1.308e+7,1.177e+7,1.096e+7]
-      ,"dx1":[2.2e+5,2.2e+5,2.2e+5,2.2e+5]   }
+      ,"dx1":[1.1e+5,1.1e+5,1.1e+5,1.1e+5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"23233009", "isub":9, "compiled":20140512, "TransID":"2239", "TransDate":20140923
+  ,{"SUBENT":"23233009", "isub":9, "compiled":20170828, "TransID":"2265", "TransDate":20180126
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1043,18 +1055,18 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-HW", "units":"MEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Half width)", "pFlag":"9330000"
+      ,{"icol":1, "header":"EN-RSL-FW", "units":"MEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL-HW" ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-RSL-FW" ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1062,7 +1074,7 @@
 	,[13.08,0.11,4.14,0.4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23233009", "Pointer":" "
- ,"Subent":"23233009", "compiled":20140512
+ ,"Subent":"23233009", "compiled":20170828
  ,"year1":2014, "author1ini":"V.", "author1":"Semkova"
  ,"zTarg1":42, "targ1":"Mo-98", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1079,7 +1091,7 @@
     ,"dat0":[2.76,4.14]
     ,"dat1":[0.00276,0.00414]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.2,0.4]
@@ -1091,8 +1103,8 @@
     ,"dat0":[12.09,13.08]
     ,"dat1":[1.209e+7,1.308e+7]}
   ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-RSL-HW", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.hRes+-", "dataType":"41", "rank":1.933
+    ,"header":"EN-RSL-FW", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.11,0.11]
     ,"dat1":[1.1e+5,1.1e+5]}
@@ -1109,12 +1121,12 @@
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.209e+7,1.308e+7]
-      ,"dx1":[2.2e+5,2.2e+5]   }
+      ,"dx1":[1.1e+5,1.1e+5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"23233010", "isub":10, "compiled":20140512, "TransID":"2239", "TransDate":20140923
+  ,{"SUBENT":"23233010", "isub":10, "compiled":20170828, "TransID":"2265", "TransDate":20180126
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1157,18 +1169,18 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-HW", "units":"MEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Half width)", "pFlag":"9330000"
+      ,{"icol":1, "header":"EN-RSL-FW", "units":"MEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL-HW" ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-RSL-FW" ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1178,7 +1190,7 @@
 	,[10.92,0.12,0.72,0.14]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23233010", "Pointer":" "
- ,"Subent":"23233010", "compiled":20140512
+ ,"Subent":"23233010", "compiled":20170828
  ,"year1":2014, "author1ini":"V.", "author1":"Semkova"
  ,"zTarg1":42, "targ1":"Mo-100", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1195,7 +1207,7 @@
     ,"dat0":[3.1,1.78,1.12,0.72]
     ,"dat1":[0.0031,0.00178,0.00112,7.2e-4]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.2,0.1,0.1,0.14]
@@ -1207,8 +1219,8 @@
     ,"dat0":[14.48,13.08,12.09,10.92]
     ,"dat1":[1.448e+7,1.308e+7,1.209e+7,1.092e+7]}
   ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-RSL-HW", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.hRes+-", "dataType":"41", "rank":1.933
+    ,"header":"EN-RSL-FW", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.02,0.02,0.02,0.12]
     ,"dat1":[2.0e+4,2.0e+4,2.0e+4,1.2e+5]}
@@ -1225,12 +1237,12 @@
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.448e+7,1.308e+7,1.209e+7,1.092e+7]
-      ,"dx1":[4.0e+4,4.0e+4,4.0e+4,2.4e+5]   }
+      ,"dx1":[2.0e+4,2.0e+4,2.0e+4,1.2e+5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"23233011", "isub":11, "compiled":20140512, "TransID":"2239", "TransDate":20140923
+  ,{"SUBENT":"23233011", "isub":11, "compiled":20170828, "TransID":"2265", "TransDate":20180126
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1273,18 +1285,18 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-HW", "units":"MEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Half width)", "pFlag":"9330000"
+      ,{"icol":1, "header":"EN-RSL-FW", "units":"MEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL-HW" ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-RSL-FW" ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1296,7 +1308,7 @@
 	,[8.92,0.12,138,7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23233011", "Pointer":" "
- ,"Subent":"23233011", "compiled":20140512
+ ,"Subent":"23233011", "compiled":20170828
  ,"year1":2014, "author1ini":"V.", "author1":"Semkova"
  ,"zTarg1":42, "targ1":"Mo-100", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1325,7 +1337,7 @@
     ,"dat0":[1538,1428,1344,1299,752,138]
     ,"dat1":[1.538,1.428,1.344,1.299,0.752,0.138]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[60,70,60,60,35,7]
@@ -1337,8 +1349,8 @@
     ,"dat0":[14.48,13.08,12.09,11.77,10.09,8.92]
     ,"dat1":[1.448e+7,1.308e+7,1.209e+7,1.177e+7,1.009e+7,8.92e+6]}
   ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-RSL-HW", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.hRes+-", "dataType":"41", "rank":1.933
+    ,"header":"EN-RSL-FW", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.11,0.11,0.11,0.11,0.11,0.12]
     ,"dat1":[1.1e+5,1.1e+5,1.1e+5,1.1e+5,1.1e+5,1.2e+5]}
@@ -1355,7 +1367,7 @@
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.448e+7,1.308e+7,1.209e+7,1.177e+7,1.009e+7,8.92e+6]
-      ,"dx1":[2.2e+5,2.2e+5,2.2e+5,2.2e+5,2.2e+5,2.4e+5]   }
+      ,"dx1":[1.1e+5,1.1e+5,1.1e+5,1.1e+5,1.1e+5,1.2e+5]   }
  }
 }
    ]
