@@ -1,9 +1,9 @@
-  {"ENTRY":"14112", "updated":20130110, "TransID":"1387", "TransDate":20130315, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14112", "updated":20170912, "TransID":"1434", "TransDate":20180107, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2006,"a1":"N.J.Drindak+","r1":"J,NSE,154,294,2006"
    ,"ref":"Jour: Nuclear Science and Engineering, Vol.154, p.294 (2006)"
    ,"title":"Neutron capture and transmission measurements and resonance parameter analysis of niobium"
    ,"x4subents":[
-   {"SUBENT":"14112001", "isub":1, "compiled":20130110, "TransID":"1387", "TransDate":20130315
+   {"SUBENT":"14112001", "isub":1, "compiled":20170912, "TransID":"1434", "TransDate":20180107
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -87,6 +87,11 @@
 	,"x4code":{"code":"20130110U", "date":"20130110", "act":"U", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" On. INC-SOURCE: SPALL -> PHOTO"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170911A", "date":"20170911", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Addition in subs.4-9"]
 	}
       ]
     }
@@ -775,7 +780,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14112004", "isub":4, "compiled":20130110, "TransID":"1387", "TransDate":20130315
+  ,{"SUBENT":"14112004", "isub":4, "compiled":20170912, "TransID":"1434", "TransDate":20180107
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -803,7 +808,7 @@
 		," Physical type:        Metal"
 		," Chemical composition: Element (Niobium)"
 		," Diameter:             5.042 cm"
-		," Thickness:            0.051 mm"]
+		," Thickness:            0.051 mm, 0.0002826 atoms/b"]
 	}
       ]
      ,"INC-SOURCE":[
@@ -846,20 +851,28 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. REACTION: ,TRN,,RYL/RAW -> ,RYL,,RAW"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170911A", "date":"20170911", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added THICKNESS to COMMON, SAMPLE"]
+	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"TEMP", "units":"K", "pointer":" "
 	,"headerHelp":"Sample temperature", "pFlag":"1000000"
 	,"unitsHelp":"Kelvin","familyCode":"TEM","convFc":1.0,"basicUnits":"K"}
+      ,{"icol":1, "header":"THICKNESS", "units":"ATOMS/B", "pointer":" "
+	,"headerHelp":"Sample thickness", "pFlag":"1000000"
+	,"unitsHelp":"atoms/barn","familyCode":"THK","convFc":1.0,"basicUnits":"ATOMS/B"}
       ]
       ,"datacols":[
-	 ["TEMP"      ]
-	,["K"         ]
-	,[" "         ]]
+	 ["TEMP"      ,"THICKNESS" ]
+	,["K"         ,"ATOMS/B"   ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [297]]}
+	 [297,2.826E-4]]}
     ,"DATA":{"ncols":3, "nrows":3154
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"EV", "pointer":" "
@@ -4033,14 +4046,14 @@
 ,[509.5,2.021E-4,1.2746E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14112004", "Pointer":" "
- ,"Subent":"14112004", "compiled":20130110
+ ,"Subent":"14112004", "compiled":20170912
  ,"year1":2006, "author1ini":"N.J.", "author1":"Drindak"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(EN,TMS)"
  ,"ReactionType":"TOF", "quant":"CS", "quantExpan":"Reaction yield"
  ,"reacode":"41-NB-93(N,G)41-NB-94,,RYL,,RAW"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":3154
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -5012,6 +5025,12 @@
     ,"expansion":"Other variable: sample temperature"
     ,"com0":297
     ,"com1":297}
+  ,{"ivar":4, "cvar":"x2", "fam":"THS", "ifComm":true , "ifCM":false
+    ,"header":"THICKNESS", "units":"ATOMS/B", "basicUnits":"ATOMS/B"
+    ,"what":"X2.Value", "dataType":"83", "rank":2.1
+    ,"expansion":"Other variable: sample thickness"
+    ,"com0":2.826e-4
+    ,"com1":2.826e-4}
   ]
  ,"wc5data":3
  ,"lc5data":3154
@@ -6290,13 +6309,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"TMS", "ifCM":false, "units":"K"
       ,"header":"TMS", "dataType":"82", "rank":2.0
       ,"expansion":"Other variable: sample temperature"
-      ,"rpt":3154      ,"x2":[297]
+      ,"rpt":3154      ,"x2":[2.826e-4]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"14112005", "isub":5, "compiled":20130110, "TransID":"1387", "TransDate":20130315
+  ,{"SUBENT":"14112005", "isub":5, "compiled":20170912, "TransID":"1434", "TransDate":20180107
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -6324,7 +6343,7 @@
 		," Physical type:        Metal"
 		," Chemical composition: Element (Niobium)"
 		," Diameter:             5.042 cm"
-		," Thickness:            0.127 mm"]
+		," Thickness:            0.127 mm, 0.0007417 atoms/b"]
 	}
       ]
      ,"INC-SOURCE":[
@@ -6367,20 +6386,28 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. REACTION: ,TRN,,RYL/RAW -> ,RYL,,RAW"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170911A", "date":"20170911", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added THICKNESS to COMMON, SAMPLE"]
+	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"TEMP", "units":"K", "pointer":" "
 	,"headerHelp":"Sample temperature", "pFlag":"1000000"
 	,"unitsHelp":"Kelvin","familyCode":"TEM","convFc":1.0,"basicUnits":"K"}
+      ,{"icol":1, "header":"THICKNESS", "units":"ATOMS/B", "pointer":" "
+	,"headerHelp":"Sample thickness", "pFlag":"1000000"
+	,"unitsHelp":"atoms/barn","familyCode":"THK","convFc":1.0,"basicUnits":"ATOMS/B"}
       ]
       ,"datacols":[
-	 ["TEMP"      ]
-	,["K"         ]
-	,[" "         ]]
+	 ["TEMP"      ,"THICKNESS" ]
+	,["K"         ,"ATOMS/B"   ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [297]]}
+	 [297,7.417E-4]]}
     ,"DATA":{"ncols":3, "nrows":3154
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"EV", "pointer":" "
@@ -9554,14 +9581,14 @@
 ,[509.5,-1.9972E-4,1.6499E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14112005", "Pointer":" "
- ,"Subent":"14112005", "compiled":20130110
+ ,"Subent":"14112005", "compiled":20170912
  ,"year1":2006, "author1ini":"N.J.", "author1":"Drindak"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(EN,TMS)"
  ,"ReactionType":"TOF", "quant":"CS", "quantExpan":"Reaction yield"
  ,"reacode":"41-NB-93(N,G)41-NB-94,,RYL,,RAW"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":3154
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -10533,6 +10560,12 @@
     ,"expansion":"Other variable: sample temperature"
     ,"com0":297
     ,"com1":297}
+  ,{"ivar":4, "cvar":"x2", "fam":"THS", "ifComm":true , "ifCM":false
+    ,"header":"THICKNESS", "units":"ATOMS/B", "basicUnits":"ATOMS/B"
+    ,"what":"X2.Value", "dataType":"83", "rank":2.1
+    ,"expansion":"Other variable: sample thickness"
+    ,"com0":7.417e-4
+    ,"com1":7.417e-4}
   ]
  ,"wc5data":3
  ,"lc5data":3154
@@ -11811,13 +11844,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"TMS", "ifCM":false, "units":"K"
       ,"header":"TMS", "dataType":"82", "rank":2.0
       ,"expansion":"Other variable: sample temperature"
-      ,"rpt":3154      ,"x2":[297]
+      ,"rpt":3154      ,"x2":[7.417e-4]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"14112006", "isub":6, "compiled":20130110, "TransID":"1387", "TransDate":20130315
+  ,{"SUBENT":"14112006", "isub":6, "compiled":20170912, "TransID":"1434", "TransDate":20180107
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -11845,7 +11878,7 @@
 		," Physical type:        Metal"
 		," Chemical composition: Element (Niobium)"
 		," Diameter:             5.042 cm"
-		," Thickness:            0.254 mm"]
+		," Thickness:            0.254 mm, 0.001192 atoms/b"]
 	}
       ]
      ,"INC-SOURCE":[
@@ -11888,20 +11921,28 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. REACTION: ,TRN,,RYL/RAW -> ,RYL,,RAW"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170911A", "date":"20170911", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added THICKNESS to COMMON, SAMPLE"]
+	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"TEMP", "units":"K", "pointer":" "
 	,"headerHelp":"Sample temperature", "pFlag":"1000000"
 	,"unitsHelp":"Kelvin","familyCode":"TEM","convFc":1.0,"basicUnits":"K"}
+      ,{"icol":1, "header":"THICKNESS", "units":"ATOMS/B", "pointer":" "
+	,"headerHelp":"Sample thickness", "pFlag":"1000000"
+	,"unitsHelp":"atoms/barn","familyCode":"THK","convFc":1.0,"basicUnits":"ATOMS/B"}
       ]
       ,"datacols":[
-	 ["TEMP"      ]
-	,["K"         ]
-	,[" "         ]]
+	 ["TEMP"      ,"THICKNESS" ]
+	,["K"         ,"ATOMS/B"   ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [297]]}
+	 [297,0.001192]]}
     ,"DATA":{"ncols":3, "nrows":3154
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"EV", "pointer":" "
@@ -15075,14 +15116,14 @@
 ,[509.5,5.8938E-4,2.6652E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14112006", "Pointer":" "
- ,"Subent":"14112006", "compiled":20130110
+ ,"Subent":"14112006", "compiled":20170912
  ,"year1":2006, "author1ini":"N.J.", "author1":"Drindak"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(EN,TMS)"
  ,"ReactionType":"TOF", "quant":"CS", "quantExpan":"Reaction yield"
  ,"reacode":"41-NB-93(N,G)41-NB-94,,RYL,,RAW"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":3154
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -16054,6 +16095,12 @@
     ,"expansion":"Other variable: sample temperature"
     ,"com0":297
     ,"com1":297}
+  ,{"ivar":4, "cvar":"x2", "fam":"THS", "ifComm":true , "ifCM":false
+    ,"header":"THICKNESS", "units":"ATOMS/B", "basicUnits":"ATOMS/B"
+    ,"what":"X2.Value", "dataType":"83", "rank":2.1
+    ,"expansion":"Other variable: sample thickness"
+    ,"com0":0.001192
+    ,"com1":0.001192}
   ]
  ,"wc5data":3
  ,"lc5data":3154
@@ -17332,13 +17379,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"TMS", "ifCM":false, "units":"K"
       ,"header":"TMS", "dataType":"82", "rank":2.0
       ,"expansion":"Other variable: sample temperature"
-      ,"rpt":3154      ,"x2":[297]
+      ,"rpt":3154      ,"x2":[0.001192]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"14112007", "isub":7, "compiled":20130110, "TransID":"1387", "TransDate":20130315
+  ,{"SUBENT":"14112007", "isub":7, "compiled":20170912, "TransID":"1434", "TransDate":20180107
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -17366,7 +17413,7 @@
 		," Physical type:        Metal"
 		," Chemical composition: Element (Niobium)"
 		," Diameter:             5.042 cm"
-		," Thickness:            0.508 mm"]
+		," Thickness:            0.508 mm, 0.002585 atoms/b"]
 	}
       ]
      ,"INC-SOURCE":[
@@ -17409,20 +17456,28 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. REACTION: ,TRN,,RYL/RAW -> ,RYL,,RAW"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170911A", "date":"20170911", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added THICKNESS to COMMON, SAMPLE"]
+	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"TEMP", "units":"K", "pointer":" "
 	,"headerHelp":"Sample temperature", "pFlag":"1000000"
 	,"unitsHelp":"Kelvin","familyCode":"TEM","convFc":1.0,"basicUnits":"K"}
+      ,{"icol":1, "header":"THICKNESS", "units":"ATOMS/B", "pointer":" "
+	,"headerHelp":"Sample thickness", "pFlag":"1000000"
+	,"unitsHelp":"atoms/barn","familyCode":"THK","convFc":1.0,"basicUnits":"ATOMS/B"}
       ]
       ,"datacols":[
-	 ["TEMP"      ]
-	,["K"         ]
-	,[" "         ]]
+	 ["TEMP"      ,"THICKNESS" ]
+	,["K"         ,"ATOMS/B"   ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [297]]}
+	 [297,0.002585]]}
     ,"DATA":{"ncols":3, "nrows":3154
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"EV", "pointer":" "
@@ -20596,14 +20651,14 @@
 ,[509.5,6.9895E-4,3.8054E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14112007", "Pointer":" "
- ,"Subent":"14112007", "compiled":20130110
+ ,"Subent":"14112007", "compiled":20170912
  ,"year1":2006, "author1ini":"N.J.", "author1":"Drindak"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(EN,TMS)"
  ,"ReactionType":"TOF", "quant":"CS", "quantExpan":"Reaction yield"
  ,"reacode":"41-NB-93(N,G)41-NB-94,,RYL,,RAW"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":3154
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -21575,6 +21630,12 @@
     ,"expansion":"Other variable: sample temperature"
     ,"com0":297
     ,"com1":297}
+  ,{"ivar":4, "cvar":"x2", "fam":"THS", "ifComm":true , "ifCM":false
+    ,"header":"THICKNESS", "units":"ATOMS/B", "basicUnits":"ATOMS/B"
+    ,"what":"X2.Value", "dataType":"83", "rank":2.1
+    ,"expansion":"Other variable: sample thickness"
+    ,"com0":0.002585
+    ,"com1":0.002585}
   ]
  ,"wc5data":3
  ,"lc5data":3154
@@ -22853,13 +22914,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"TMS", "ifCM":false, "units":"K"
       ,"header":"TMS", "dataType":"82", "rank":2.0
       ,"expansion":"Other variable: sample temperature"
-      ,"rpt":3154      ,"x2":[297]
+      ,"rpt":3154      ,"x2":[0.002585]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"14112008", "isub":8, "compiled":20100212, "TransID":"1361", "TransDate":20100517
+  ,{"SUBENT":"14112008", "isub":8, "compiled":20170912, "TransID":"1434", "TransDate":20180107
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -22886,7 +22947,7 @@
 		," Physical type:        Metal"
 		," Chemical composition: Element (Neobium)"
 		," Diameter:             5.042 cm"
-		," Thickness:            3.429 mm"]
+		," Thickness:            3.429 mm, 0.01944 atoms/b"]
 	}
       ]
      ,"INC-SOURCE":[
@@ -22924,19 +22985,29 @@
 	,"x4freetext":[" Not in reference, sent by the author (D.B.)"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20170911A", "date":"20170911", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added THICKNESS to COMMON, SAMPLE"]
+	}
+      ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"TEMP", "units":"K", "pointer":" "
 	,"headerHelp":"Sample temperature", "pFlag":"1000000"
 	,"unitsHelp":"Kelvin","familyCode":"TEM","convFc":1.0,"basicUnits":"K"}
+      ,{"icol":1, "header":"THICKNESS", "units":"ATOMS/B", "pointer":" "
+	,"headerHelp":"Sample thickness", "pFlag":"1000000"
+	,"unitsHelp":"atoms/barn","familyCode":"THK","convFc":1.0,"basicUnits":"ATOMS/B"}
       ]
       ,"datacols":[
-	 ["TEMP"      ]
-	,["K"         ]
-	,[" "         ]]
+	 ["TEMP"      ,"THICKNESS" ]
+	,["K"         ,"ATOMS/B"   ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [297]]}
+	 [297,0.01944]]}
     ,"DATA":{"ncols":3, "nrows":4391
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"EV", "pointer":" "
@@ -27347,14 +27418,14 @@
 ,[509.75,0.88263,0.01346]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14112008", "Pointer":" "
- ,"Subent":"14112008", "compiled":20100212
+ ,"Subent":"14112008", "compiled":20170912
  ,"year1":2006, "author1ini":"N.J.", "author1":"Drindak"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"TOT", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(EN,TMS)"
  ,"ReactionType":"TOF", "quant":"CS", "quantExpan":"Transmission"
  ,"reacode":"41-NB-93(N,TOT),,TRN,,RAW"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":4391
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -28698,6 +28769,12 @@
     ,"expansion":"Other variable: sample temperature"
     ,"com0":297
     ,"com1":297}
+  ,{"ivar":4, "cvar":"x2", "fam":"THS", "ifComm":true , "ifCM":false
+    ,"header":"THICKNESS", "units":"ATOMS/B", "basicUnits":"ATOMS/B"
+    ,"what":"X2.Value", "dataType":"83", "rank":2.1
+    ,"expansion":"Other variable: sample thickness"
+    ,"com0":0.01944
+    ,"com1":0.01944}
   ]
  ,"wc5data":3
  ,"lc5data":4391
@@ -30472,13 +30549,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"TMS", "ifCM":false, "units":"K"
       ,"header":"TMS", "dataType":"82", "rank":2.0
       ,"expansion":"Other variable: sample temperature"
-      ,"rpt":4391      ,"x2":[297]
+      ,"rpt":4391      ,"x2":[0.01944]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"14112009", "isub":9, "compiled":20100212, "TransID":"1361", "TransDate":20100517
+  ,{"SUBENT":"14112009", "isub":9, "compiled":20170912, "TransID":"1434", "TransDate":20180107
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -30505,7 +30582,7 @@
 		," Physical type:        Metal"
 		," Chemical composition: Element (Neobium)"
 		," Diameter:             5.042 cm"
-		," Thickness:            6.782 mm"]
+		," Thickness:            6.782 mm, 0.03837 atoms/b"]
 	}
       ]
      ,"INC-SOURCE":[
@@ -30543,19 +30620,29 @@
 	,"x4freetext":[" Not in ref., data sent by the author (D.B.)"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20170911A", "date":"20170911", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added THICKNESS to COMMON, SAMPLE"]
+	}
+      ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"TEMP", "units":"K", "pointer":" "
 	,"headerHelp":"Sample temperature", "pFlag":"1000000"
 	,"unitsHelp":"Kelvin","familyCode":"TEM","convFc":1.0,"basicUnits":"K"}
+      ,{"icol":1, "header":"THICKNESS", "units":"ATOMS/B", "pointer":" "
+	,"headerHelp":"Sample thickness", "pFlag":"1000000"
+	,"unitsHelp":"atoms/barn","familyCode":"THK","convFc":1.0,"basicUnits":"ATOMS/B"}
       ]
       ,"datacols":[
-	 ["TEMP"      ]
-	,["K"         ]
-	,[" "         ]]
+	 ["TEMP"      ,"THICKNESS" ]
+	,["K"         ,"ATOMS/B"   ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [297]]}
+	 [297,0.03837]]}
     ,"DATA":{"ncols":3, "nrows":4391
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"EV", "pointer":" "
@@ -34966,14 +35053,14 @@
 ,[509.75,0.75693,0.013579]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14112009", "Pointer":" "
- ,"Subent":"14112009", "compiled":20100212
+ ,"Subent":"14112009", "compiled":20170912
  ,"year1":2006, "author1ini":"N.J.", "author1":"Drindak"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"TOT", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(EN,TMS)"
  ,"ReactionType":"TOF", "quant":"CS", "quantExpan":"Transmission"
  ,"reacode":"41-NB-93(N,TOT),,TRN,,RAW"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":4391
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -36317,6 +36404,12 @@
     ,"expansion":"Other variable: sample temperature"
     ,"com0":297
     ,"com1":297}
+  ,{"ivar":4, "cvar":"x2", "fam":"THS", "ifComm":true , "ifCM":false
+    ,"header":"THICKNESS", "units":"ATOMS/B", "basicUnits":"ATOMS/B"
+    ,"what":"X2.Value", "dataType":"83", "rank":2.1
+    ,"expansion":"Other variable: sample thickness"
+    ,"com0":0.03837
+    ,"com1":0.03837}
   ]
  ,"wc5data":3
  ,"lc5data":4391
@@ -38091,7 +38184,7 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"TMS", "ifCM":false, "units":"K"
       ,"header":"TMS", "dataType":"82", "rank":2.0
       ,"expansion":"Other variable: sample temperature"
-      ,"rpt":4391      ,"x2":[297]
+      ,"rpt":4391      ,"x2":[0.03837]
    }
  }
 }
