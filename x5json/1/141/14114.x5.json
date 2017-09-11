@@ -1,9 +1,9 @@
-  {"ENTRY":"14114", "updated":20140417, "TransID":"1401", "TransDate":20141111, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14114", "updated":20170912, "TransID":"1434", "TransDate":20180107, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2006,"a1":"R.F.Carlton+","r1":"J,PR/C,74,044614,2006"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.74, p.044614 (2006)"
    ,"title":"High-resolution transmission measurements for 54Cr+n"
    ,"x4subents":[
-   {"SUBENT":"14114001", "isub":1, "compiled":20140417, "TransID":"1401", "TransDate":20141111
+   {"SUBENT":"14114001", "isub":1, "compiled":20170912, "TransID":"1434", "TransDate":20180107
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -33,7 +33,7 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"ACCEL", "dict":"FACILITY", "idict":18,"hlp":"Accelerator"}
+	,"x4codes":[{"code":"LINAC", "dict":"FACILITY", "idict":18,"hlp":"Linear accelerator"}
 	    ,{"code":"1USAORL", "dict":"INSTITUTE", "idict":3,"hlp":"Oak Ridge National Laboratory, Oak Ridge, TN, United States of America"}]
 	,"x4freetext":[" ORELA"]
 	}
@@ -92,6 +92,11 @@
 	,"x4code":{"code":"20140417A", "date":"20140417", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: REACTION code in Sub. 4 corrected."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170911A", "date":"20170911", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. THICKNESS added in sub.4"]
 	}
       ]
     }
@@ -1649,7 +1654,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14114004", "isub":4, "compiled":20140417, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14114004", "isub":4, "compiled":20170912, "TransID":"1434", "TransDate":20180107
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1699,8 +1704,25 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: SF6=SIG -> TRN in REACTION code."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20170911A", "date":"20170911", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" THICKNESS added to COMMON"]
+	}
       ]
     }
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"THICKNESS", "units":"ATOMS/B", "pointer":" "
+	,"headerHelp":"Sample thickness", "pFlag":"1000000"
+	,"unitsHelp":"atoms/barn","familyCode":"THK","convFc":1.0,"basicUnits":"ATOMS/B"}
+      ]
+      ,"datacols":[
+	 ["THICKNESS" ]
+	,["ATOMS/B"   ]
+	,[" "         ]]
+      ,"data":[
+	 [0.05411]]}
     ,"DATA":{"ncols":3, "nrows":5169
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"EV", "pointer":" "
@@ -6889,14 +6911,14 @@
 ,[2875225,0.7532288,0.744]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14114004", "Pointer":" "
- ,"Subent":"14114004", "compiled":20140417
+ ,"Subent":"14114004", "compiled":20170912
  ,"year1":2006, "author1ini":"R.F.", "author1":"Carlton"
  ,"zTarg1":24, "targ1":"Cr-54", "proj1":"n", "emis1":"TOT", "MF":0, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=y(x1,x2)"
+ ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=DATA(EN,THS)"
  ,"ReactionType":"TOF", "quant":"CS", "quantExpan":"Transmission"
  ,"reacode":"24-CR-54(N,TOT),,TRN"
  ,"compNotes":[]
- ,"wx4data":3
+ ,"wx4data":4
  ,"lx4data":5169
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -8465,6 +8487,12 @@
 ,2.82755e+6,2.83016e+6,2.83279e+6,2.83541e+6,2.83804e+6,2.84067e+6,2.84331e+6,2.84595e+6,2.84859e+6,2.85124e+6
 ,2.85389e+6,2.85654e+6,2.8592e+6,2.86186e+6,2.86453e+6,2.8672e+6,2.86987e+6,2.87255e+6,2.87523e+6]
    ,"dat1eq":true}
+  ,{"ivar":3, "cvar":"x2", "fam":"THS", "ifComm":true , "ifCM":false
+    ,"header":"THICKNESS", "units":"ATOMS/B", "basicUnits":"ATOMS/B"
+    ,"what":"X2.Value", "dataType":"83", "rank":2.1
+    ,"expansion":"Other variable: sample thickness"
+    ,"com0":0.05411
+    ,"com1":0.05411}
   ]
  ,"wc5data":3
  ,"lc5data":5169
@@ -10026,6 +10054,11 @@
 ,2.80157e+6,2.80415e+6,2.80673e+6,2.80932e+6,2.81192e+6,2.81451e+6,2.81711e+6,2.81971e+6,2.82232e+6,2.82493e+6
 ,2.82755e+6,2.83016e+6,2.83279e+6,2.83541e+6,2.83804e+6,2.84067e+6,2.84331e+6,2.84595e+6,2.84859e+6,2.85124e+6
 ,2.85389e+6,2.85654e+6,2.8592e+6,2.86186e+6,2.86453e+6,2.8672e+6,2.86987e+6,2.87255e+6,2.87523e+6]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"THS", "ifCM":false, "units":"ATOMS/B"
+      ,"header":"THS", "dataType":"83", "rank":2.0
+      ,"expansion":"Other variable: sample thickness"
+      ,"rpt":5169      ,"x2":[0.05411]
    }
  }
 }
