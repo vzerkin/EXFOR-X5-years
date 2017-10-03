@@ -1,20 +1,15 @@
-  {"ENTRY":"C1533", "updated":20070321, "TransID":"C080", "TransDate":20070716, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C1533", "updated":20171004, "TransID":"C168", "TransDate":20171206, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2005,"a1":"A.L.Vavere+","r1":"J,NMB,32,117,2005"
    ,"ref":"Jour: Int. Journal of Nuclear Medicine and Biology, Vol.32, p.117 (2005)"
    ,"title":"Production, processing and small animal PET imaging of titanium-45"
    ,"x4subents":[
-   {"SUBENT":"C1533001", "isub":1, "compiled":20070321, "TransID":"C080", "TransDate":20070716
+   {"SUBENT":"C1533001", "isub":1, "compiled":20171004, "TransID":"C168", "TransDate":20171206
     ,"BIB":{
-      "INSTITUTE":[
+      "TITLE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"1USAWAS", "dict":"INSTITUTE", "idict":3,"hlp":"Washington University, St.Louis, MO, United States of America"}]
-	}
-      ]
-     ,"REFERENCE":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"J,NMB,32,117,2005","stdFileName":"J,NMB,32,117,2005"
-		,"year":2005,"typ":"J","ref":"J,NMB","vol":"32","p":"117"
-		,"shortRef":"Jour: Int. Journal of Nuclear Medicine and Biology, Vol.32, p.117 (2005)"}]
+	,"x4code":null
+	,"x4freetext":["Production, processing and small animal PET imaging of"
+		," titanium-45"]
 	}
       ]
      ,"AUTHOR":[
@@ -24,11 +19,16 @@
 	    ,{"ini":"M.J.","nam":"Welch"}]
 	}
       ]
-     ,"TITLE":[
+     ,"INSTITUTE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Production, processing and small animal PET imaging of"
-		," titanium-45"]
+	,"x4codes":[{"code":"1USAWAS", "dict":"INSTITUTE", "idict":3,"hlp":"Washington University, St.Louis, MO, United States of America"}]
+	}
+      ]
+     ,"REFERENCE":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"J,NMB,32,117,2005","stdFileName":"J,NMB,32,117,2005"
+		,"year":2005,"typ":"J","ref":"J,NMB","vol":"32","p":"117"
+		,"shortRef":"Jour: Int. Journal of Nuclear Medicine and Biology, Vol.32, p.117 (2005)"}]
 	}
       ]
      ,"FACILITY":[
@@ -71,27 +71,35 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20171003A", "date":"20171003", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" TS+On. Major revisions in 002."
+		," See also CP-D/933."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C1533002", "isub":2, "compiled":20070321, "TransID":"C080", "TransDate":20070716
+  ,{"SUBENT":"C1533002", "isub":2, "compiled":20171004, "TransID":"C168", "TransDate":20171206
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"21-SC-45(P,N)22-TI-45,,TTY,,DT"
-	    ,"c4reac":"(P,N),TTY,,DT"
+	,"x4code":{"code":"21-SC-45(P,N)22-TI-45,,TTY,,EOB/MSC"
+	    ,"c4reac":"(P,N),TTY,,EOB/MSC"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"21-SC-45(P,N)22-TI-45,,TTY,,DT"
+	    {"code":"21-SC-45(P,N)22-TI-45,,TTY,,EOB/MSC"
 		,"Reac":"P,N"
 		,"SF1":"21-SC-45","Targ":{"code":"21-SC-45","nam":"Sc-45","ZA":21045}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"N"
 		,"SF4":"22-TI-45","Prod":{"code":"22-TI-45","nam":"Ti-45","ZA":22045}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB/MSC"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
+	,"x4freetext":[" EOB activity (various irradiation) divided by charge"]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -103,8 +111,17 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from the text p. 119"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from the text p. 119"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171003A", "date":"20171003", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" TS+On. REACTION(SF8) revised."]
 	}
       ]
     }
@@ -137,13 +154,49 @@
 	 [422,30]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1533002", "Pointer":" "
- ,"Subent":"C1533002", "compiled":20070321
-,"year1":2005, "author1ini":"A.L.", "author1":"Vavere"
-, "zTarg1":21, "targ1":"Sc-45", "proj1":"p", "emis1":"N", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"21-SC-45(P,N)22-TI-45,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"C1533002", "compiled":20171004
+ ,"year1":2005, "author1ini":"A.L.", "author1":"Vavere"
+ ,"zTarg1":21, "targ1":"Sc-45", "proj1":"p", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"21-SC-45(P,N)22-TI-45,,TTY,,EOB/MSC"
+ ,"compNotes":["Ignored column:DATA-ERR,MBQ/MUAHR  expected units:MBQ/MUA,PER-CENT"]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[422]
+    ,"dat1":[4.22e+8]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[30]
+    ,"dat1":[3.0e+7]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":14.5
+    ,"com1":1.45e+7}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[4.22e+8]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.45e+7]
+   }
+ }
 }
    ]
    }
