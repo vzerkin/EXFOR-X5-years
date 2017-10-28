@@ -1,9 +1,9 @@
-  {"ENTRY":"C0721", "updated":20000816, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C0721", "updated":20171029, "TransID":"C169", "TransDate":20171227, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1968,"a1":"Y.W.Yu+","r1":"J,PR,170,1131,1968"
    ,"ref":"Jour: Physical Review, Vol.170, p.1131 (1968)"
    ,"title":"Excitation Functions, Recoil Ranges, and Statistical- Theory Analysis of Reactions Induced in Zr90 with 25- and 80-MeV Helium Ions"
    ,"x4subents":[
-   {"SUBENT":"C0721001", "isub":1, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"C0721001", "isub":1, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -19,8 +19,8 @@
       ]
      ,"AUTHOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"ini":"Y.W.","nam":"YU"}
-	    ,{"ini":"M.","nam":"BLANN"}]
+	,"x4codes":[{"ini":"Y.W.","nam":"Yu"}
+	    ,{"ini":"M.","nam":"Blann"}]
 	}
       ]
      ,"TITLE":[
@@ -38,13 +38,15 @@
 		," target foil."]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"RCHEM", "dict":"METHOD", "idict":21,"hlp":"Radiochemical separation"}]
+	,"x4codes":[{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from Tables III-IV in reference."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Tables III-IV in reference."]
 	}
       ]
      ,"HISTORY":[
@@ -53,10 +55,17 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" Converted from data set P0126 and updated."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20171028A", "date":"20171028", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. DECAY-DATA in sub.10 corrected,"
+		," RECTION coding changed in subs.3-6,8-15,"
+		," several minor BIB corrections"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C0721002", "isub":2, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0721002", "isub":2, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -86,9 +95,10 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Foils enriched to 97.8% 90Zr (2-5 mg/cm2), and foils"
-		," of 90Zr (0.9-1 mg/cm2) evaporated onto aluminum foils."]
+	,"x4code":{"Nucl":"40-ZR-90","ENR":0.978}
+	,"x4freetext":[" Foils enriched to 97.8% 90Zr"
+		," (2-5 mg/cm2), and foils of 90Zr (0.9-1 mg/cm2)"
+		," evaporated onto aluminum foils."]
 	}
       ]
      ,"DETECTOR":[
@@ -130,7 +140,7 @@
 	,[79.5,46]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0721002", "Pointer":" "
- ,"Subent":"C0721002", "compiled":20000816
+ ,"Subent":"C0721002", "compiled":20171029
  ,"year1":1968, "author1ini":"Y.W.", "author1":"Yu"
  ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"4N", "MF":3, "MT":37, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -188,22 +198,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0721003", "isub":3, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0721003", "isub":3, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-90(A,3N+P)41-NB-90,,SIG"
-	    ,"c4reac":"(A,3N+P),SIG"
+	,"x4code":{"code":"40-ZR-90(A,X)41-NB-90,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":42
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(A,3N+P)41-NB-90,,SIG"
-		,"Reac":"A,3N+P"
+	    {"code":"40-ZR-90(A,X)41-NB-90,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"3N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"41-NB-90","Prod":{"code":"41-NB-90","nam":"Nb-90","ZA":41090}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -218,9 +228,10 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Foils enriched to 97.8% 90Zr (2-5 mg/cm2), and foils"
-		," of 90Zr (0.9-1 mg/cm2) evaporated onto aluminum foils."]
+	,"x4code":{"Nucl":"40-ZR-90","ENR":0.978}
+	,"x4freetext":[" Foils enriched to 97.8% 90Zr"
+		," (2-5 mg/cm2), and foils of 90Zr (0.9-1 mg/cm2)"
+		," evaporated onto aluminum foils."]
 	}
       ]
      ,"DETECTOR":[
@@ -232,6 +243,13 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"41-NB-90-G", "t12":14.6, "t12units":"HR", "t12sec":52560.0
 	, "Radiations":[ {"Type":"DG", "Energy":[142.0], "Intensity":0.9}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171028A", "date":"20171028", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
 	}
       ]
     }
@@ -262,21 +280,21 @@
 	,[79.5,227]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0721003", "Pointer":" "
- ,"Subent":"C0721003", "compiled":20000816
+ ,"Subent":"C0721003", "compiled":20171029
  ,"year1":1968, "author1ini":"Y.W.", "author1":"Yu"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"3N+P", "MF":3, "MT":42, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"40-ZR-90(A,3N+P)41-NB-90,,SIG"
+ ,"reacode":"40-ZR-90(A,X)41-NB-90,,SIG"
  ,"compNotes":[]
  ,"DECAY-DATA":{"Nuclide":"41-NB-90-G","HalfLife":"14.6HR","HalfLife1":"14.6HR"
 	,"RadiationType":"DG","Ene":142.0,"Ene1":141.178,"Abu":0.9,"Abu1":0.668
 	,"FcCorrDECAY_DATA":1.3473054
-	,"reaction":"40-ZR-90(A,3N+P)41-NB-90,,SIG"}
- ,"autoCorrNotes":["#Reaction: 40-ZR-90(A,3N+P)41-NB-90,,SIG"
+	,"reaction":"40-ZR-90(A,X)41-NB-90,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 40-ZR-90(A,X)41-NB-90,,SIG"
 	," dy=dy/y;                      #to rel. uncertainties"
 	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (40-ZR-90(A,3N+P)41-NB-90,,SIG)"
+	,"  #[1]#REACTION   (40-ZR-90(A,X)41-NB-90,,SIG)"
 	,"  #[1]#DECAY-DATA (41-NB-90-G,14.6HR,DG,142.,0.90) #Ix_old=0.9"
 	,"   a1=0.9/0.668;               #[1]#DECAY-DATA: correction to new 141.178 keV gamma-yield per decay Nb-90-g Ix_new=0.668"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.3473054"
@@ -320,22 +338,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0721004", "isub":4, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0721004", "isub":4, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-90(A,N+A)40-ZR-89,,SIG"
-	    ,"c4reac":"(A,N+A),SIG"
+	,"x4code":{"code":"40-ZR-90(A,X)40-ZR-89,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":22
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(A,N+A)40-ZR-89,,SIG"
-		,"Reac":"A,N+A"
+	    {"code":"40-ZR-90(A,X)40-ZR-89,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"N+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"40-ZR-89","Prod":{"code":"40-ZR-89","nam":"Zr-89","ZA":40089}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -350,9 +368,10 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Foils enriched to 97.8% 90Zr (2-5 mg/cm2), and foils"
-		," of 90Zr (0.9-1 mg/cm2) evaporated onto aluminum foils."]
+	,"x4code":{"Nucl":"40-ZR-90","ENR":0.978}
+	,"x4freetext":[" Foils enriched to 97.8% 90Zr"
+		," (2-5 mg/cm2), and foils of 90Zr (0.9-1 mg/cm2)"
+		," evaporated onto aluminum foils."]
 	}
       ]
      ,"DETECTOR":[
@@ -366,6 +385,13 @@
 	,"x4codes":[{"Nucl":"40-ZR-89-G", "t12":79.3, "t12units":"HR", "t12sec":285480.0
 	, "Radiations":[ {"Type":"DG", "Energy":[915.0], "Intensity":1.0}
 			,{"Type":"B+", "Intensity":0.25}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171028A", "date":"20171028", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
 	}
       ]
     }
@@ -397,12 +423,12 @@
 	,[79.5,338]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0721004", "Pointer":" "
- ,"Subent":"C0721004", "compiled":20000816
+ ,"Subent":"C0721004", "compiled":20171029
  ,"year1":1968, "author1ini":"Y.W.", "author1":"Yu"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"N+A", "MF":3, "MT":22, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"40-ZR-90(A,N+A)40-ZR-89,,SIG"
+ ,"reacode":"40-ZR-90(A,X)40-ZR-89,,SIG"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":12
@@ -443,22 +469,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0721005", "isub":5, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0721005", "isub":5, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-90(A,2N+A)40-ZR-88,,SIG"
-	    ,"c4reac":"(A,2N+A),SIG"
+	,"x4code":{"code":"40-ZR-90(A,X)40-ZR-88,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":24
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(A,2N+A)40-ZR-88,,SIG"
-		,"Reac":"A,2N+A"
+	    {"code":"40-ZR-90(A,X)40-ZR-88,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"2N+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"40-ZR-88","Prod":{"code":"40-ZR-88","nam":"Zr-88","ZA":40088}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -473,9 +499,10 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Foils enriched to 97.8% 90Zr (2-5 mg/cm2), and foils"
-		," of 90Zr (0.9-1 mg/cm2) evaporated onto aluminum foils."]
+	,"x4code":{"Nucl":"40-ZR-90","ENR":0.978}
+	,"x4freetext":[" Foils enriched to 97.8% 90Zr"
+		," (2-5 mg/cm2), and foils of 90Zr (0.9-1 mg/cm2)"
+		," evaporated onto aluminum foils."]
 	}
       ]
      ,"DETECTOR":[
@@ -487,6 +514,13 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"40-ZR-88", "t12":85.0, "t12units":"D", "t12sec":7344000.0
 	, "Radiations":[ {"Type":"DG", "Energy":[390.0], "Intensity":1.0}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171028A", "date":"20171028", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
 	}
       ]
     }
@@ -518,21 +552,21 @@
 	,[79.5,69]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0721005", "Pointer":" "
- ,"Subent":"C0721005", "compiled":20000816
+ ,"Subent":"C0721005", "compiled":20171029
  ,"year1":1968, "author1ini":"Y.W.", "author1":"Yu"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"2N+A", "MF":3, "MT":24, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"40-ZR-90(A,2N+A)40-ZR-88,,SIG"
+ ,"reacode":"40-ZR-90(A,X)40-ZR-88,,SIG"
  ,"compNotes":[]
  ,"DECAY-DATA":{"Nuclide":"40-ZR-88","HalfLife":"85.D","HalfLife1":"83.4D"
 	,"RadiationType":"DG","Ene":390.0,"Ene1":392.87,"Abu":1.0,"Abu1":0.9728573
 	,"FcCorrDECAY_DATA":1.0279
-	,"reaction":"40-ZR-90(A,2N+A)40-ZR-88,,SIG"}
- ,"autoCorrNotes":["#Reaction: 40-ZR-90(A,2N+A)40-ZR-88,,SIG"
+	,"reaction":"40-ZR-90(A,X)40-ZR-88,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 40-ZR-90(A,X)40-ZR-88,,SIG"
 	," dy=dy/y;                      #to rel. uncertainties"
 	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (40-ZR-90(A,2N+A)40-ZR-88,,SIG)"
+	,"  #[1]#REACTION   (40-ZR-90(A,X)40-ZR-88,,SIG)"
 	,"  #[1]#DECAY-DATA (40-ZR-88,85.D,DG,390.,1.00) #Ix_old=1.0"
 	,"   a1=1.0/0.9728573;           #[1]#DECAY-DATA: correction to new 392.87 keV gamma-yield per decay Zr-88 Ix_new=0.9728573"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0279"
@@ -576,22 +610,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0721006", "isub":6, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0721006", "isub":6, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-90(A,N+P+A)39-Y-88,,SIG"
-	    ,"c4reac":"(A,N+P+A),SIG"
+	,"x4code":{"code":"40-ZR-90(A,X)39-Y-88,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":45
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(A,N+P+A)39-Y-88,,SIG"
-		,"Reac":"A,N+P+A"
+	    {"code":"40-ZR-90(A,X)39-Y-88,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"N+P+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"39-Y-88","Prod":{"code":"39-Y-88","nam":"Y-88","ZA":39088}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -606,9 +640,10 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Foils enriched to 97.8% 90Zr (2-5 mg/cm2), and foils"
-		," of 90Zr (0.9-1 mg/cm2) evaporated onto aluminum foils."]
+	,"x4code":{"Nucl":"40-ZR-90","ENR":0.978}
+	,"x4freetext":[" Foils enriched to 97.8% 90Zr"
+		," (2-5 mg/cm2), and foils of 90Zr (0.9-1 mg/cm2)"
+		," evaporated onto aluminum foils."]
 	}
       ]
      ,"DETECTOR":[
@@ -620,6 +655,13 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"39-Y-88", "t12":105.0, "t12units":"D", "t12sec":9072000.0
 	, "Radiations":[ {"Type":"DG", "Energy":[900.0], "Intensity":0.92}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171028A", "date":"20171028", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
 	}
       ]
     }
@@ -651,21 +693,21 @@
 	,[79.5,30]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0721006", "Pointer":" "
- ,"Subent":"C0721006", "compiled":20000816
+ ,"Subent":"C0721006", "compiled":20171029
  ,"year1":1968, "author1ini":"Y.W.", "author1":"Yu"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"N+P+A", "MF":3, "MT":45, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"40-ZR-90(A,N+P+A)39-Y-88,,SIG"
+ ,"reacode":"40-ZR-90(A,X)39-Y-88,,SIG"
  ,"compNotes":[]
  ,"DECAY-DATA":{"Nuclide":"39-Y-88","HalfLife":"105.D","HalfLife1":"106.626D"
 	,"RadiationType":"DG","Ene":900.0,"Ene1":898.042,"Abu":0.92,"Abu1":0.937
 	,"FcCorrDECAY_DATA":0.98185706
-	,"reaction":"40-ZR-90(A,N+P+A)39-Y-88,,SIG"}
- ,"autoCorrNotes":["#Reaction: 40-ZR-90(A,N+P+A)39-Y-88,,SIG"
+	,"reaction":"40-ZR-90(A,X)39-Y-88,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 40-ZR-90(A,X)39-Y-88,,SIG"
 	," dy=dy/y;                      #to rel. uncertainties"
 	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (40-ZR-90(A,N+P+A)39-Y-88,,SIG)"
+	,"  #[1]#REACTION   (40-ZR-90(A,X)39-Y-88,,SIG)"
 	,"  #[1]#DECAY-DATA (39-Y-88,105.D,DG,900.,0.92) #Ix_old=0.92"
 	,"   a1=0.92/0.937;              #[1]#DECAY-DATA: correction to new 898.042 keV gamma-yield per decay Y-88 Ix_new=0.937"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.98185706"
@@ -839,22 +881,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0721008", "isub":8, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0721008", "isub":8, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-90(A,3N+P)41-NB-90,,SIG"
-	    ,"c4reac":"(A,3N+P),SIG"
+	,"x4code":{"code":"40-ZR-90(A,X)41-NB-90,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":42
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(A,3N+P)41-NB-90,,SIG"
-		,"Reac":"A,3N+P"
+	    {"code":"40-ZR-90(A,X)41-NB-90,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"3N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"41-NB-90","Prod":{"code":"41-NB-90","nam":"Nb-90","ZA":41090}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -884,6 +926,13 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[142.0], "Intensity":0.9}]}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171028A", "date":"20171028", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
+	}
+      ]
     }
     ,"DATA":{"ncols":2, "nrows":10
       ,"x4headers":[
@@ -911,21 +960,21 @@
 	,[79.5,245]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0721008", "Pointer":" "
- ,"Subent":"C0721008", "compiled":20000816
+ ,"Subent":"C0721008", "compiled":20171029
  ,"year1":1968, "author1ini":"Y.W.", "author1":"Yu"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"3N+P", "MF":3, "MT":42, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"40-ZR-90(A,3N+P)41-NB-90,,SIG"
+ ,"reacode":"40-ZR-90(A,X)41-NB-90,,SIG"
  ,"compNotes":[]
  ,"DECAY-DATA":{"Nuclide":"41-NB-90-G","HalfLife":"14.6HR","HalfLife1":"14.6HR"
 	,"RadiationType":"DG","Ene":142.0,"Ene1":141.178,"Abu":0.9,"Abu1":0.668
 	,"FcCorrDECAY_DATA":1.3473054
-	,"reaction":"40-ZR-90(A,3N+P)41-NB-90,,SIG"}
- ,"autoCorrNotes":["#Reaction: 40-ZR-90(A,3N+P)41-NB-90,,SIG"
+	,"reaction":"40-ZR-90(A,X)41-NB-90,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 40-ZR-90(A,X)41-NB-90,,SIG"
 	," dy=dy/y;                      #to rel. uncertainties"
 	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (40-ZR-90(A,3N+P)41-NB-90,,SIG)"
+	,"  #[1]#REACTION   (40-ZR-90(A,X)41-NB-90,,SIG)"
 	,"  #[1]#DECAY-DATA (41-NB-90-G,14.6HR,DG,142.,0.90) #Ix_old=0.9"
 	,"   a1=0.9/0.668;               #[1]#DECAY-DATA: correction to new 141.178 keV gamma-yield per decay Nb-90-g Ix_new=0.668"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.3473054"
@@ -963,22 +1012,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0721009", "isub":9, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0721009", "isub":9, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-90(A,N+A)40-ZR-89,,SIG"
-	    ,"c4reac":"(A,N+A),SIG"
+	,"x4code":{"code":"40-ZR-90(A,X)40-ZR-89,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":22
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(A,N+A)40-ZR-89,,SIG"
-		,"Reac":"A,N+A"
+	    {"code":"40-ZR-90(A,X)40-ZR-89,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"N+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"40-ZR-89","Prod":{"code":"40-ZR-89","nam":"Zr-89","ZA":40089}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -1012,6 +1061,13 @@
 	,"x4codes":[{"Nucl":"40-ZR-89-G", "t12":79.3, "t12units":"HR", "t12sec":285480.0
 	, "Radiations":[ {"Type":"DG", "Energy":[915.0], "Intensity":1.0}
 			,{"Type":"B+", "Intensity":0.25}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171028A", "date":"20171028", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
 	}
       ]
     }
@@ -1070,12 +1126,12 @@
 	,[78.1,423]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0721009", "Pointer":" "
- ,"Subent":"C0721009", "compiled":20000816
+ ,"Subent":"C0721009", "compiled":20171029
  ,"year1":1968, "author1ini":"Y.W.", "author1":"Yu"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"N+A", "MF":3, "MT":22, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"40-ZR-90(A,N+A)40-ZR-89,,SIG"
+ ,"reacode":"40-ZR-90(A,X)40-ZR-89,,SIG"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":39
@@ -1128,22 +1184,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0721010", "isub":10, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0721010", "isub":10, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-90(A,2N+A)40-ZR-88,,SIG"
-	    ,"c4reac":"(A,2N+A),SIG"
+	,"x4code":{"code":"40-ZR-90(A,X)40-ZR-88,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":24
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(A,2N+A)40-ZR-88,,SIG"
-		,"Reac":"A,2N+A"
+	    {"code":"40-ZR-90(A,X)40-ZR-88,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"2N+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"40-ZR-88","Prod":{"code":"40-ZR-88","nam":"Zr-88","ZA":40088}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -1173,8 +1229,16 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"40-ZR-88", "t12":17.0, "t12units":"HR", "t12sec":61200.0
+	,"x4codes":[{"Nucl":"40-ZR-88", "t12":85.0, "t12units":"D", "t12sec":7344000.0
 	, "Radiations":[ {"Type":"DG", "Energy":[242.0], "Intensity":1.0}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171028A", "date":"20171028", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Half-life in DECAY-DATA corrected,"
+		," REACTION SF3 changed to X"]
 	}
       ]
     }
@@ -1225,12 +1289,12 @@
 	,[79.5,108]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0721010", "Pointer":" "
- ,"Subent":"C0721010", "compiled":20000816
+ ,"Subent":"C0721010", "compiled":20171029
  ,"year1":1968, "author1ini":"Y.W.", "author1":"Yu"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"2N+A", "MF":3, "MT":24, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"40-ZR-90(A,2N+A)40-ZR-88,,SIG"
+ ,"reacode":"40-ZR-90(A,X)40-ZR-88,,SIG"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":31
@@ -1283,22 +1347,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0721011", "isub":11, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0721011", "isub":11, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-90(A,3N+A)40-ZR-87,,SIG"
-	    ,"c4reac":"(A,3N+A),SIG"
+	,"x4code":{"code":"40-ZR-90(A,X)40-ZR-87,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":25
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(A,3N+A)40-ZR-87,,SIG"
-		,"Reac":"A,3N+A"
+	    {"code":"40-ZR-90(A,X)40-ZR-87,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"3N+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"40-ZR-87","Prod":{"code":"40-ZR-87","nam":"Zr-87","ZA":40087}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -1333,6 +1397,13 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[480.0], "Intensity":1.0}]}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171028A", "date":"20171028", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
+	}
+      ]
     }
     ,"DATA":{"ncols":2, "nrows":8
       ,"x4headers":[
@@ -1358,12 +1429,12 @@
 	,[78.1,99]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0721011", "Pointer":" "
- ,"Subent":"C0721011", "compiled":20000816
+ ,"Subent":"C0721011", "compiled":20171029
  ,"year1":1968, "author1ini":"Y.W.", "author1":"Yu"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"3N+A", "MF":3, "MT":25, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"40-ZR-90(A,3N+A)40-ZR-87,,SIG"
+ ,"reacode":"40-ZR-90(A,X)40-ZR-87,,SIG"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":8
@@ -1398,22 +1469,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0721012", "isub":12, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0721012", "isub":12, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-90(A,4N+A)40-ZR-86,,SIG"
-	    ,"c4reac":"(A,4N+A),SIG"
+	,"x4code":{"code":"40-ZR-90(A,X)40-ZR-86,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":165
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(A,4N+A)40-ZR-86,,SIG"
-		,"Reac":"A,4N+A"
+	    {"code":"40-ZR-90(A,X)40-ZR-86,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"4N+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"40-ZR-86","Prod":{"code":"40-ZR-86","nam":"Zr-86","ZA":40086}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -1443,6 +1514,13 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[242.0], "Intensity":1.0}]}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171028A", "date":"20171028", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
+	}
+      ]
     }
     ,"DATA":{"ncols":2, "nrows":8
       ,"x4headers":[
@@ -1468,21 +1546,21 @@
 	,[78.1,17]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0721012", "Pointer":" "
- ,"Subent":"C0721012", "compiled":20000816
+ ,"Subent":"C0721012", "compiled":20171029
  ,"year1":1968, "author1ini":"Y.W.", "author1":"Yu"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"4N+A", "MF":3, "MT":165, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"40-ZR-90(A,4N+A)40-ZR-86,,SIG"
+ ,"reacode":"40-ZR-90(A,X)40-ZR-86,,SIG"
  ,"compNotes":[]
  ,"DECAY-DATA":{"Nuclide":"40-ZR-86","HalfLife":"17.HR","HalfLife1":"16.5HR"
 	,"RadiationType":"DG","Ene":242.0,"Ene1":242.8,"Abu":1.0,"Abu1":0.9584
 	,"FcCorrDECAY_DATA":1.0434057
-	,"reaction":"40-ZR-90(A,4N+A)40-ZR-86,,SIG"}
- ,"autoCorrNotes":["#Reaction: 40-ZR-90(A,4N+A)40-ZR-86,,SIG"
+	,"reaction":"40-ZR-90(A,X)40-ZR-86,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 40-ZR-90(A,X)40-ZR-86,,SIG"
 	," dy=dy/y;                      #to rel. uncertainties"
 	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (40-ZR-90(A,4N+A)40-ZR-86,,SIG)"
+	,"  #[1]#REACTION   (40-ZR-90(A,X)40-ZR-86,,SIG)"
 	,"  #[1]#DECAY-DATA (40-ZR-86,17.HR,DG,242.,1.00) #Ix_old=1.0"
 	,"   a1=1.0/0.9584;              #[1]#DECAY-DATA: correction to new 242.8 keV gamma-yield per decay Zr-86 Ix_new=0.9584"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0434057"
@@ -1520,22 +1598,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0721013", "isub":13, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0721013", "isub":13, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-90(A,N+P+A)39-Y-88,,SIG"
-	    ,"c4reac":"(A,N+P+A),SIG"
+	,"x4code":{"code":"40-ZR-90(A,X)39-Y-88,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":45
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(A,N+P+A)39-Y-88,,SIG"
-		,"Reac":"A,N+P+A"
+	    {"code":"40-ZR-90(A,X)39-Y-88,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"N+P+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"39-Y-88","Prod":{"code":"39-Y-88","nam":"Y-88","ZA":39088}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -1567,6 +1645,13 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"39-Y-88", "t12":105.0, "t12units":"D", "t12sec":9072000.0
 	, "Radiations":[ {"Type":"DG", "Energy":[900.0], "Intensity":0.92}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171028A", "date":"20171028", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
 	}
       ]
     }
@@ -1615,21 +1700,21 @@
 	,[79.5,39]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0721013", "Pointer":" "
- ,"Subent":"C0721013", "compiled":20000816
+ ,"Subent":"C0721013", "compiled":20171029
  ,"year1":1968, "author1ini":"Y.W.", "author1":"Yu"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"N+P+A", "MF":3, "MT":45, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"40-ZR-90(A,N+P+A)39-Y-88,,SIG"
+ ,"reacode":"40-ZR-90(A,X)39-Y-88,,SIG"
  ,"compNotes":[]
  ,"DECAY-DATA":{"Nuclide":"39-Y-88","HalfLife":"105.D","HalfLife1":"106.626D"
 	,"RadiationType":"DG","Ene":900.0,"Ene1":898.042,"Abu":0.92,"Abu1":0.937
 	,"FcCorrDECAY_DATA":0.98185706
-	,"reaction":"40-ZR-90(A,N+P+A)39-Y-88,,SIG"}
- ,"autoCorrNotes":["#Reaction: 40-ZR-90(A,N+P+A)39-Y-88,,SIG"
+	,"reaction":"40-ZR-90(A,X)39-Y-88,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 40-ZR-90(A,X)39-Y-88,,SIG"
 	," dy=dy/y;                      #to rel. uncertainties"
 	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (40-ZR-90(A,N+P+A)39-Y-88,,SIG)"
+	,"  #[1]#REACTION   (40-ZR-90(A,X)39-Y-88,,SIG)"
 	,"  #[1]#DECAY-DATA (39-Y-88,105.D,DG,900.,0.92) #Ix_old=0.92"
 	,"   a1=0.92/0.937;              #[1]#DECAY-DATA: correction to new 898.042 keV gamma-yield per decay Y-88 Ix_new=0.937"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.98185706"
@@ -1679,21 +1764,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0721014", "isub":14, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0721014", "isub":14, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-90(A,2N+P+A)39-Y-87,,SIG"
-	    ,"c4reac":"(A,2N+P+A),SIG"
+	,"x4code":{"code":"40-ZR-90(A,X)39-Y-87,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(A,2N+P+A)39-Y-87,,SIG"
-		,"Reac":"A,2N+P+A"
+	    {"code":"40-ZR-90(A,X)39-Y-87,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"2N+P+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"39-Y-87","Prod":{"code":"39-Y-87","nam":"Y-87","ZA":39087}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -1731,6 +1817,13 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[389.0], "Intensity":1.0}]}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171028A", "date":"20171028", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
+	}
+      ]
     }
     ,"DATA":{"ncols":2, "nrows":8
       ,"x4headers":[
@@ -1756,12 +1849,12 @@
 	,[78.1,96]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0721014", "Pointer":" "
- ,"Subent":"C0721014", "compiled":20000816
+ ,"Subent":"C0721014", "compiled":20171029
  ,"year1":1968, "author1ini":"Y.W.", "author1":"Yu"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"2N+P+A", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"40-ZR-90(A,2N+P+A)39-Y-87,,SIG"
+ ,"reacode":"40-ZR-90(A,X)39-Y-87,,SIG"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":8
@@ -1796,21 +1889,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0721015", "isub":15, "compiled":20000816, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0721015", "isub":15, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-90(A,3N+P+A)39-Y-86,,SIG"
-	    ,"c4reac":"(A,3N+P+A),SIG"
+	,"x4code":{"code":"40-ZR-90(A,X)39-Y-86,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(A,3N+P+A)39-Y-86,,SIG"
-		,"Reac":"A,3N+P+A"
+	    {"code":"40-ZR-90(A,X)39-Y-86,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"3N+P+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"39-Y-86","Prod":{"code":"39-Y-86","nam":"Y-86","ZA":39086}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -1840,6 +1934,13 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[1080.0], "Intensity":1.0}]}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171028A", "date":"20171028", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
+	}
+      ]
     }
     ,"DATA":{"ncols":2, "nrows":9
       ,"x4headers":[
@@ -1866,12 +1967,12 @@
 	,[78.1,49]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0721015", "Pointer":" "
- ,"Subent":"C0721015", "compiled":20000816
+ ,"Subent":"C0721015", "compiled":20171029
  ,"year1":1968, "author1ini":"Y.W.", "author1":"Yu"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"3N+P+A", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"40-ZR-90(A,3N+P+A)39-Y-86,,SIG"
+ ,"reacode":"40-ZR-90(A,X)39-Y-86,,SIG"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":9
