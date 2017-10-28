@@ -1,9 +1,9 @@
-  {"ENTRY":"C0383", "updated":20070501, "TransID":"C079", "TransDate":20070501, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C0383", "updated":20171029, "TransID":"C169", "TransDate":20171227, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1964,"a1":"M.Blann+","r1":"J,PR,134,B783,1964"
    ,"ref":"Jour: Physical Review, Vol.134, p.B783 (1964)"
    ,"title":"Recoil range measurements of reactions induced in Ni-58 with 46- to 68-MeV helium ions"
    ,"x4subents":[
-   {"SUBENT":"C0383001", "isub":1, "compiled":20070501, "TransID":"C079", "TransDate":20070501
+   {"SUBENT":"C0383001", "isub":1, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -45,11 +45,11 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Each stack consisted of ten targets of 99.95% enriched"
-		,"Ni-58 on gold, each followed by an aluminum catcher"
-		,"foil. the target thicknesses varied between 4.07 and"
-		,"9.52 mg/cm2."]
+	,"x4code":{"Nucl":"28-NI-58","ENR":0.9995}
+	,"x4freetext":[" Each stack consisted of ten"
+		,"targets of 99.95% enriched Ni-58 on gold, each followed"
+		,"by an aluminum catcher foil. the target thicknesses"
+		,"varied between 4.07 and 9.52 mg/cm2."]
 	}
       ]
      ,"METHOD":[
@@ -82,25 +82,32 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" DR Reference corrected to follow APS format"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20171027A", "date":"20171027", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTIONs corrected, DECAY-DATA in"
+		," sub.7 corrected, upper case text converted in subs."
+		," 2-7"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C0383002", "isub":2, "compiled":19871228, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0383002", "isub":2, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-58(A,2N+A)28-NI-56,,SIG"
-	    ,"c4reac":"(A,2N+A),SIG"
+	,"x4code":{"code":"28-NI-58(A,X)28-NI-56,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":24
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"28-NI-58(A,2N+A)28-NI-56,,SIG"
-		,"Reac":"A,2N+A"
+	    {"code":"28-NI-58(A,X)28-NI-56,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"28-NI-58","Targ":{"code":"28-NI-58","nam":"Ni-58","ZA":28058}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"2N+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"28-NI-56","Prod":{"code":"28-NI-56","nam":"Ni-56","ZA":28056}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -116,18 +123,25 @@
      ,"MISC-COL":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"MISC1"}]
-	,"x4freetext":[" TARGET THICKNESS;"]
+	,"x4freetext":[" Target thickness"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"MISC2"}]
-	,"x4freetext":[" MEAN PROJECTED RECOIL RANGES."]
+	,"x4freetext":[" Mean projected recoil ranges."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["AN ACCURACY OF +- 10% FOR THE NI-56 RANGES"
-		,"WAS ESTIMATED."]
+	,"x4freetext":["An accuracy of +- 10% for the Ni-56 ranges"
+		,"was estimated."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171027A", "date":"20171027", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
 	}
       ]
     }
@@ -173,12 +187,12 @@
 	,[46.1,1.42,0.00842,6.8E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0383002", "Pointer":" "
- ,"Subent":"C0383002", "compiled":19871228
+ ,"Subent":"C0383002", "compiled":20171029
  ,"year1":1964, "author1ini":"M.", "author1":"Blann"
- ,"zTarg1":28, "targ1":"Ni-58", "proj1":"a", "emis1":"2N+A", "MF":3, "MT":24, "nExpectedArgs":1
+ ,"zTarg1":28, "targ1":"Ni-58", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"28-NI-58(A,2N+A)28-NI-56,,SIG"
+ ,"reacode":"28-NI-58(A,X)28-NI-56,,SIG"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":20
@@ -233,22 +247,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0383003", "isub":3, "compiled":19871228, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0383003", "isub":3, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-58(A,N+A)28-NI-57,,SIG"
-	    ,"c4reac":"(A,N+A),SIG"
+	,"x4code":{"code":"28-NI-58(A,X)28-NI-57,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":22
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"28-NI-58(A,N+A)28-NI-57,,SIG"
-		,"Reac":"A,N+A"
+	    {"code":"28-NI-58(A,X)28-NI-57,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"28-NI-58","Targ":{"code":"28-NI-58","nam":"Ni-58","ZA":28058}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"N+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"28-NI-57","Prod":{"code":"28-NI-57","nam":"Ni-57","ZA":28057}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -264,18 +278,25 @@
      ,"MISC-COL":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"MISC1"}]
-	,"x4freetext":[" TARGET THICKNESS;"]
+	,"x4freetext":[" Target thickness"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"MISC2"}]
-	,"x4freetext":[" MEAN PROJECTED RECOIL RANGES."]
+	,"x4freetext":[" Mean projected recoil ranges."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["AN ACCURACY OF +- 10% FOR THE NI-57 RANGES"
-		,"WAS ESTIMATED."]
+	,"x4freetext":["An accuracy of +- 10% for the Ni-57 ranges"
+		,"was estimated."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171027A", "date":"20171027", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
 	}
       ]
     }
@@ -321,12 +342,12 @@
 	,[46.1,24,0.00842,4.0E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0383003", "Pointer":" "
- ,"Subent":"C0383003", "compiled":19871228
+ ,"Subent":"C0383003", "compiled":20171029
  ,"year1":1964, "author1ini":"M.", "author1":"Blann"
- ,"zTarg1":28, "targ1":"Ni-58", "proj1":"a", "emis1":"N+A", "MF":3, "MT":22, "nExpectedArgs":1
+ ,"zTarg1":28, "targ1":"Ni-58", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"28-NI-58(A,N+A)28-NI-57,,SIG"
+ ,"reacode":"28-NI-58(A,X)28-NI-57,,SIG"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":20
@@ -381,21 +402,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0383004", "isub":4, "compiled":19881228, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0383004", "isub":4, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-58(A,2N+P+A)27-CO-55,,SIG"
-	    ,"c4reac":"(A,2N+P+A),SIG"
+	,"x4code":{"code":"28-NI-58(A,X)27-CO-55,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"28-NI-58(A,2N+P+A)27-CO-55,,SIG"
-		,"Reac":"A,2N+P+A"
+	    {"code":"28-NI-58(A,X)27-CO-55,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"28-NI-58","Targ":{"code":"28-NI-58","nam":"Ni-58","ZA":28058}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"2N+P+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"27-CO-55","Prod":{"code":"27-CO-55","nam":"Co-55","ZA":27055}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -411,25 +433,30 @@
      ,"MISC-COL":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"MISC1"}]
-	,"x4freetext":[" TARGET THICKNESS;"]
+	,"x4freetext":[" Target thickness"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"MISC2"}]
-	,"x4freetext":[" MEAN PROJECTED RECOIL RANGES."]
+	,"x4freetext":[" Mean projected recoil ranges."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["AN ACCURACY OF +- 7% FOR THE CO-55 RANGES"
-		,"WAS ESTIMATED."]
+	,"x4freetext":["An accuracy of +- 7% for the Co-55 ranges"
+		,"was estimated."]
 	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":{"code":"881228A", "date":"881228", "act":"A", "dict":"HISTORY", "idict":15
+	,"x4code":{"code":"19881228A", "date":"19881228", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" BLANK DATA REMOVED"]
+	,"x4freetext":[" Blank data removed"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20171027A", "date":"20171027", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
 	}
       ]
     }
@@ -474,12 +501,12 @@
 	,[47.4,1,0.00644,6.5E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0383004", "Pointer":" "
- ,"Subent":"C0383004", "compiled":19881228
+ ,"Subent":"C0383004", "compiled":20171029
  ,"year1":1964, "author1ini":"M.", "author1":"Blann"
- ,"zTarg1":28, "targ1":"Ni-58", "proj1":"a", "emis1":"2N+P+A", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":28, "targ1":"Ni-58", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"28-NI-58(A,2N+P+A)27-CO-55,,SIG"
+ ,"reacode":"28-NI-58(A,X)27-CO-55,,SIG"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":19
@@ -534,22 +561,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0383005", "isub":5, "compiled":19871228, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0383005", "isub":5, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-58(A,N+P+A)27-CO-56,,SIG"
-	    ,"c4reac":"(A,N+P+A),SIG"
+	,"x4code":{"code":"28-NI-58(A,X)27-CO-56,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":45
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"28-NI-58(A,N+P+A)27-CO-56,,SIG"
-		,"Reac":"A,N+P+A"
+	    {"code":"28-NI-58(A,X)27-CO-56,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"28-NI-58","Targ":{"code":"28-NI-58","nam":"Ni-58","ZA":28058}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"N+P+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"27-CO-56","Prod":{"code":"27-CO-56","nam":"Co-56","ZA":27056}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -565,18 +592,25 @@
      ,"MISC-COL":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"MISC1"}]
-	,"x4freetext":[" TARGET THICKNESS;"]
+	,"x4freetext":[" Target thickness"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"MISC2"}]
-	,"x4freetext":[" MEAN PROJECTED RECOIL RANGES."]
+	,"x4freetext":[" Mean projected recoil ranges."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["AN ACCURACY OF +- 15% FOR THE CO-56 RANGES"
-		,"WAS ESTIMATED."]
+	,"x4freetext":["An accuracy of +- 15% for the Co-56 ranges"
+		,"was estimated."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171027A", "date":"20171027", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
 	}
       ]
     }
@@ -622,12 +656,12 @@
 	,[46.1,133,0.00842,6.9E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0383005", "Pointer":" "
- ,"Subent":"C0383005", "compiled":19871228
+ ,"Subent":"C0383005", "compiled":20171029
  ,"year1":1964, "author1ini":"M.", "author1":"Blann"
- ,"zTarg1":28, "targ1":"Ni-58", "proj1":"a", "emis1":"N+P+A", "MF":3, "MT":45, "nExpectedArgs":1
+ ,"zTarg1":28, "targ1":"Ni-58", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"28-NI-58(A,N+P+A)27-CO-56,,SIG"
+ ,"reacode":"28-NI-58(A,X)27-CO-56,,SIG"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":20
@@ -682,22 +716,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0383006", "isub":6, "compiled":19881228, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0383006", "isub":6, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-58(A,P+A)27-CO-57,,SIG"
-	    ,"c4reac":"(A,P+A),SIG"
+	,"x4code":{"code":"28-NI-58(A,X)27-CO-57,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":112
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"28-NI-58(A,P+A)27-CO-57,,SIG"
-		,"Reac":"A,P+A"
+	    {"code":"28-NI-58(A,X)27-CO-57,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"28-NI-58","Targ":{"code":"28-NI-58","nam":"Ni-58","ZA":28058}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"P+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"27-CO-57","Prod":{"code":"27-CO-57","nam":"Co-57","ZA":27057}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -713,25 +747,30 @@
      ,"MISC-COL":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"MISC1"}]
-	,"x4freetext":[" TARGET THICKNESS;"]
+	,"x4freetext":[" Target thickness"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"MISC2"}]
-	,"x4freetext":[" MEAN PROJECTED RECOIL RANGES."]
+	,"x4freetext":[" Mean projected recoil ranges."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["AN ACCURACY OF +- 8% FOR THE CO-57 RANGES"
-		,"WAS ESTIMATED."]
+	,"x4freetext":["An accuracy of +- 8% for the Co-57 ranges"
+		,"was estimated."]
 	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":{"code":"881228A", "date":"881228", "act":"A", "dict":"HISTORY", "idict":15
+	,"x4code":{"code":"19881228A", "date":"19881228", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" BLANK DATA REMOVED"]
+	,"x4freetext":[" Blank data removed"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20171027A", "date":"20171027", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
 	}
       ]
     }
@@ -776,12 +815,12 @@
 	,[46.1,78,0.00842,5.9E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0383006", "Pointer":" "
- ,"Subent":"C0383006", "compiled":19881228
+ ,"Subent":"C0383006", "compiled":20171029
  ,"year1":1964, "author1ini":"M.", "author1":"Blann"
- ,"zTarg1":28, "targ1":"Ni-58", "proj1":"a", "emis1":"P+A", "MF":3, "MT":112, "nExpectedArgs":1
+ ,"zTarg1":28, "targ1":"Ni-58", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"28-NI-58(A,P+A)27-CO-57,,SIG"
+ ,"reacode":"28-NI-58(A,X)27-CO-57,,SIG"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":19
@@ -836,22 +875,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0383007", "isub":7, "compiled":19881228, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0383007", "isub":7, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-58(A,N+3P)27-CO-58,,SIG"
-	    ,"c4reac":"(A,N+3P),SIG"
+	,"x4code":{"code":"28-NI-58(A,X)27-CO-58,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":198
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"28-NI-58(A,N+3P)27-CO-58,,SIG"
-		,"Reac":"A,N+3P"
+	    {"code":"28-NI-58(A,X)27-CO-58,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"28-NI-58","Targ":{"code":"28-NI-58","nam":"Ni-58","ZA":28058}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"N+3P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"27-CO-58","Prod":{"code":"27-CO-58","nam":"Co-58","ZA":27058}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -860,32 +899,38 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"27-CO-58-M", "t12":71.0, "t12units":"D", "t12sec":6134400.0
+	,"x4codes":[{"Nucl":"27-CO-58-G", "t12":71.0, "t12units":"D", "t12sec":6134400.0
 	, "Radiations":[ {"Type":"DG", "Energy":[810.0]}]}]
 	}
       ]
      ,"MISC-COL":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"MISC1"}]
-	,"x4freetext":[" TARGET THICKNESS;"]
+	,"x4freetext":[" Target thickness"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"MISC2"}]
-	,"x4freetext":[" MEAN PROJECTED RECOIL RANGES."]
+	,"x4freetext":[" Mean projected recoil ranges."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["AN ACCURACY OF +- 15% FOR THE CO-58 RANGES"
-		,"WAS ESTIMATED."]
+	,"x4freetext":["An accuracy of +- 15% for the Co-58 ranges"
+		,"was estimated."]
 	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":{"code":"881228A", "date":"881228", "act":"A", "dict":"HISTORY", "idict":15
+	,"x4code":{"code":"19881228A", "date":"19881228", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" BLANK DATA REMOVED"]
+	,"x4freetext":[" Blank data removed"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20171027A", "date":"20171027", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X; Isomer flag in"
+		," DECAY-DATA changed to G"]
 	}
       ]
     }
@@ -930,12 +975,12 @@
 	,[46.1,34,0.00842,6.3E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0383007", "Pointer":" "
- ,"Subent":"C0383007", "compiled":19881228
+ ,"Subent":"C0383007", "compiled":20171029
  ,"year1":1964, "author1ini":"M.", "author1":"Blann"
- ,"zTarg1":28, "targ1":"Ni-58", "proj1":"a", "emis1":"N+3P", "MF":3, "MT":198, "nExpectedArgs":1
+ ,"zTarg1":28, "targ1":"Ni-58", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"28-NI-58(A,N+3P)27-CO-58,,SIG"
+ ,"reacode":"28-NI-58(A,X)27-CO-58,,SIG"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":19
