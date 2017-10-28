@@ -1,9 +1,9 @@
-  {"ENTRY":"C0831", "updated":20010806, "TransID":"C089", "TransDate":20081218, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C0831", "updated":20171029, "TransID":"C169", "TransDate":20171227, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1969,"a1":"F.H.Ruddy+","r1":"J,NP/A,127,305,1969"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.127, p.305 (1969)"
    ,"title":"Formation and decay of the compound nucleus 68Ge"
    ,"x4subents":[
-   {"SUBENT":"C0831001", "isub":1, "compiled":20010806, "TransID":"C089", "TransDate":20081218
+   {"SUBENT":"C0831001", "isub":1, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -32,7 +32,7 @@
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"STTA", "dict":"METHOD", "idict":21,"hlp":"Stacked target irradiation"}
-	    ,{"code":"RCHEM", "dict":"METHOD", "idict":21,"hlp":"Radiochemical separation"}]
+	    ,{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}]
 	}
       ]
      ,"DETECTOR":[
@@ -46,10 +46,16 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" VM"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20171024A", "date":"20171024", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Data corrected in subs.13-15,"
+		," BIB updates also in subs. 2-11"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C0831002", "isub":2, "compiled":20010806, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0831002", "isub":2, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -80,8 +86,8 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Target enriched to 99.85% 64Zn."]
+	,"x4code":{"Nucl":"30-ZN-64","ENR":0.9985}
+	,"x4freetext":[" Target enriched to 99.85% 64Zn."]
 	}
       ]
      ,"DECAY-DATA":[
@@ -99,9 +105,9 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,ATKINSON+,R,UCRL-2426,(2),35,1957"
+	,"x4codes":[{"code":"R,,J.H.Atkinson+,R,UCRL-2426,(2),35,1957"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"ATKINSON+","stdFileName":"R,UCRL-2426,(2),35,1957"
+		,"author1":"J.H.Atkinson+","stdFileName":"R,UCRL-2426,(2),35,1957"
 		,"year":1957,"typ":"R","ref":"R,UCRL-","no":"2426","p":"35"
 		,"shortRef":"Rept: U.C., Lawrence Rad.Lab. (Berkeley and Livermore), No.2426, Vol.(2), p.35 (1957)"}]
 	,"x4freetext":["."]
@@ -109,7 +115,7 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
+	,"x4code":{"header":"DATA-ERR", "max":"20."
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Maximum uncertainty resulting from"
 		," statistical uncertainties and uncertainties in"
@@ -117,19 +123,22 @@
 		,"Relative uncertainties generally less than 10%."]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table 3 in reference."]
+	}
       ]
-      ,"datacols":[
-	 ["DATA-ERR"  ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [20]]}
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171024A", "date":"20171024", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" STATUS added, SAMPLE updated"]
+	}
+      ]
+    }
     ,"DATA":{"ncols":2, "nrows":4
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -150,13 +159,14 @@
 	,[15.6,0.218]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0831002", "Pointer":" "
- ,"Subent":"C0831002", "compiled":20010806
+ ,"Subent":"C0831002", "compiled":20171029
  ,"year1":1969, "author1ini":"F.H.", "author1":"Ruddy"
  ,"zTarg1":30, "targ1":"Zn-64", "proj1":"a", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"30-ZN-64(A,G)32-GE-68,,SIG"
- ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
+ ,"compNotes":["ERR-ANALYS:(DATA-ERR,,20.)    ADDED AS COMMON:DATA-ERR,PER-CENT=10.0%"
+	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
  ,"wx4data":3
  ,"lx4data":4
  ,"x4data":[
@@ -170,8 +180,8 @@
     ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"com0":20
-    ,"com1":20}
+    ,"com0":10
+    ,"com1":10}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -186,8 +196,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[2.59e-4,7.71e-4,7.2e-4,2.18e-4]
-      ,"dy":[5.18e-5,1.542e-4,1.44e-4,4.36e-5]
-      ,"dysys":[5.18e-5,1.542e-4,1.44e-4,4.36e-5]   }
+      ,"dy":[2.59e-5,7.71e-5,7.2e-5,2.18e-5]
+      ,"dysys":[2.59e-5,7.71e-5,7.2e-5,2.18e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -197,7 +207,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0831003", "isub":3, "compiled":20010806, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0831003", "isub":3, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -238,8 +248,8 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Target enriched to 99.85% 64Zn."]
+	,"x4code":{"Nucl":"30-ZN-64","ENR":0.9985}
+	,"x4freetext":[" Target enriched to 99.85% 64Zn."]
 	}
       ]
      ,"DECAY-DATA":[
@@ -258,9 +268,9 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,ATKINSON+,R,UCRL-2426,(2),35,1957"
+	,"x4codes":[{"code":"R,,J.H.Atkinson+,R,UCRL-2426,(2),35,1957"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"ATKINSON+","stdFileName":"R,UCRL-2426,(2),35,1957"
+		,"author1":"J.H.Atkinson+","stdFileName":"R,UCRL-2426,(2),35,1957"
 		,"year":1957,"typ":"R","ref":"R,UCRL-","no":"2426","p":"35"
 		,"shortRef":"Rept: U.C., Lawrence Rad.Lab. (Berkeley and Livermore), No.2426, Vol.(2), p.35 (1957)"}]
 	,"x4freetext":["."]
@@ -274,7 +284,7 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
+	,"x4code":{"header":"DATA-ERR", "max":"20."
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Maximum uncertainty resulting from"
 		," statistical uncertainties and uncertainties in"
@@ -282,19 +292,22 @@
 		,"Relative uncertainties generally less than 10%."]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table 3 in reference."]
+	}
       ]
-      ,"datacols":[
-	 ["DATA-ERR"  ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [20]]}
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171024A", "date":"20171024", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" STATUS added, SAMPLE updated"]
+	}
+      ]
+    }
     ,"DATA":{"ncols":2, "nrows":10
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -321,13 +334,14 @@
 	,[37.3,11.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0831003", "Pointer":" "
- ,"Subent":"C0831003", "compiled":20010806
+ ,"Subent":"C0831003", "compiled":20171029
  ,"year1":1969, "author1ini":"F.H.", "author1":"Ruddy"
  ,"zTarg1":30, "targ1":"Zn-64", "proj1":"a", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"30-ZN-64(A,P)31-GA-67,,SIG"
- ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
+ ,"compNotes":["ERR-ANALYS:(DATA-ERR,,20.)    ADDED AS COMMON:DATA-ERR,PER-CENT=10.0%"
+	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
  ,"wx4data":3
  ,"lx4data":10
  ,"x4data":[
@@ -341,8 +355,8 @@
     ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"com0":20
-    ,"com1":20}
+    ,"com0":10
+    ,"com1":10}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -357,8 +371,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.0218,0.115,0.269,0.305,0.404,0.452,0.339,0.225,0.0848,0.0117]
-      ,"dy":[0.00436,0.023,0.0538,0.061,0.0808,0.0904,0.0678,0.045,0.01696,0.00234]
-      ,"dysys":[0.00436,0.023,0.0538,0.061,0.0808,0.0904,0.0678,0.045,0.01696,0.00234]   }
+      ,"dy":[0.00218,0.0115,0.0269,0.0305,0.0404,0.0452,0.0339,0.0225,0.00848,0.00117]
+      ,"dysys":[0.00218,0.0115,0.0269,0.0305,0.0404,0.0452,0.0339,0.0225,0.00848,0.00117]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -368,7 +382,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0831004", "isub":4, "compiled":20010806, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0831004", "isub":4, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -409,8 +423,8 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Target enriched to 99.85% 64Zn."]
+	,"x4code":{"Nucl":"30-ZN-64","ENR":0.9985}
+	,"x4freetext":[" Target enriched to 99.85% 64Zn."]
 	}
       ]
      ,"DECAY-DATA":[
@@ -434,9 +448,9 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,ATKINSON+,R,UCRL-2426,(2),35,1957"
+	,"x4codes":[{"code":"R,,J.H.Atkinson+,R,UCRL-2426,(2),35,1957"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"ATKINSON+","stdFileName":"R,UCRL-2426,(2),35,1957"
+		,"author1":"J.H.Atkinson+","stdFileName":"R,UCRL-2426,(2),35,1957"
 		,"year":1957,"typ":"R","ref":"R,UCRL-","no":"2426","p":"35"
 		,"shortRef":"Rept: U.C., Lawrence Rad.Lab. (Berkeley and Livermore), No.2426, Vol.(2), p.35 (1957)"}]
 	,"x4freetext":["."]
@@ -444,7 +458,7 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
+	,"x4code":{"header":"DATA-ERR", "max":"20."
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Maximum uncertainty resulting from"
 		," statistical uncertainties and uncertainties in"
@@ -452,19 +466,22 @@
 		,"Relative uncertainties generally less than 10%."]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table 3 in reference."]
+	}
       ]
-      ,"datacols":[
-	 ["DATA-ERR"  ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [20]]}
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171024A", "date":"20171024", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" STATUS added, SAMPLE updated"]
+	}
+      ]
+    }
     ,"DATA":{"ncols":2, "nrows":9
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -490,13 +507,14 @@
 	,[34.5,20]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0831004", "Pointer":" "
- ,"Subent":"C0831004", "compiled":20010806
+ ,"Subent":"C0831004", "compiled":20171029
  ,"year1":1969, "author1ini":"F.H.", "author1":"Ruddy"
  ,"zTarg1":30, "targ1":"Zn-64", "proj1":"a", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"30-ZN-64(A,N)32-GE-67,,SIG"
- ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
+ ,"compNotes":["ERR-ANALYS:(DATA-ERR,,20.)    ADDED AS COMMON:DATA-ERR,PER-CENT=10.0%"
+	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
  ,"wx4data":3
  ,"lx4data":9
  ,"x4data":[
@@ -510,8 +528,8 @@
     ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"com0":20
-    ,"com1":20}
+    ,"com0":10
+    ,"com1":10}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -526,8 +544,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.002,0.0112,0.0675,0.233,0.206,0.0823,0.0451,0.0361,0.02]
-      ,"dy":[4.0e-4,0.00224,0.0135,0.0466,0.0412,0.01646,0.00902,0.00722,0.004]
-      ,"dysys":[4.0e-4,0.00224,0.0135,0.0466,0.0412,0.01646,0.00902,0.00722,0.004]   }
+      ,"dy":[2.0e-4,0.00112,0.00675,0.0233,0.0206,0.00823,0.00451,0.00361,0.002]
+      ,"dysys":[2.0e-4,0.00112,0.00675,0.0233,0.0206,0.00823,0.00451,0.00361,0.002]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -537,22 +555,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0831005", "isub":5, "compiled":20081022, "TransID":"C089", "TransDate":20081218
+  ,{"SUBENT":"C0831005", "isub":5, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"30-ZN-64(A,N+P)31-GA-66,,SIG"
-	    ,"c4reac":"(A,N+P),SIG"
+	,"x4code":{"code":"30-ZN-64(A,X)31-GA-66,,SIG"
+	    ,"c4reac":"(A,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":28
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"30-ZN-64(A,N+P)31-GA-66,,SIG"
-		,"Reac":"A,N+P"
+	    {"code":"30-ZN-64(A,X)31-GA-66,,SIG"
+		,"Reac":"A,X"
 		,"SF1":"30-ZN-64","Targ":{"code":"30-ZN-64","nam":"Zn-64","ZA":30064}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"31-GA-66","Prod":{"code":"31-GA-66","nam":"Ga-66","ZA":31066}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -578,8 +596,8 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Target enriched to 99.85% 64Zn."]
+	,"x4code":{"Nucl":"30-ZN-64","ENR":0.9985}
+	,"x4freetext":[" Target enriched to 99.85% 64Zn."]
 	}
       ]
      ,"DECAY-DATA":[
@@ -597,9 +615,9 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,ATKINSON+,R,UCRL-2426,(2),35,1957"
+	,"x4codes":[{"code":"R,,J.H.Atkinson+,R,UCRL-2426,(2),35,1957"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"ATKINSON+","stdFileName":"R,UCRL-2426,(2),35,1957"
+		,"author1":"J.H.Atkinson+","stdFileName":"R,UCRL-2426,(2),35,1957"
 		,"year":1957,"typ":"R","ref":"R,UCRL-","no":"2426","p":"35"
 		,"shortRef":"Rept: U.C., Lawrence Rad.Lab. (Berkeley and Livermore), No.2426, Vol.(2), p.35 (1957)"}]
 	,"x4freetext":["."]
@@ -607,7 +625,7 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
+	,"x4code":{"header":"DATA-ERR", "max":"20."
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Maximum uncertainty resulting from"
 		," statistical uncertainties and uncertainties in"
@@ -629,20 +647,14 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Data correction."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20171024A", "date":"20171024", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X, SAMPLE modified,"
+		," STATUS added"]
+	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
-      ]
-      ,"datacols":[
-	 ["DATA-ERR"  ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [20]]}
     ,"DATA":{"ncols":2, "nrows":7
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -666,21 +678,22 @@
 	,[36.9,4.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0831005", "Pointer":" "
- ,"Subent":"C0831005", "compiled":20081022
+ ,"Subent":"C0831005", "compiled":20171029
  ,"year1":1969, "author1ini":"F.H.", "author1":"Ruddy"
- ,"zTarg1":30, "targ1":"Zn-64", "proj1":"a", "emis1":"N+P", "MF":3, "MT":28, "nExpectedArgs":1
+ ,"zTarg1":30, "targ1":"Zn-64", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"30-ZN-64(A,N+P)31-GA-66,,SIG"
- ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
+ ,"reacode":"30-ZN-64(A,X)31-GA-66,,SIG"
+ ,"compNotes":["ERR-ANALYS:(DATA-ERR,,20.)    ADDED AS COMMON:DATA-ERR,PER-CENT=10.0%"
+	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
  ,"DECAY-DATA":{"Nuclide":"31-GA-66","HalfLife":"9.5HR","HalfLife1":""
 	,"RadiationType":"AR","Ene":511.0,"Ene1":511.0,"Abu":0.879,"Abu1":1.14
 	,"FcCorrDECAY_DATA":0.77105266
-	,"reaction":"30-ZN-64(A,N+P)31-GA-66,,SIG"}
- ,"autoCorrNotes":["#Reaction: 30-ZN-64(A,N+P)31-GA-66,,SIG"
+	,"reaction":"30-ZN-64(A,X)31-GA-66,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 30-ZN-64(A,X)31-GA-66,,SIG"
 	," dy=dy/y;                      #to rel. uncertainties"
 	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (30-ZN-64(A,N+P)31-GA-66,,SIG)"
+	,"  #[1]#REACTION   (30-ZN-64(A,X)31-GA-66,,SIG)"
 	,"  #[1]#DECAY-DATA (31-GA-66,9.5HR,AR,511.,0.879) #Ix_old=0.879"
 	,"   a1=0.879/1.14;              #[1]#DECAY-DATA: correction to new 511 keV gamma-yield per decay Ga-66 Ix_new=1.14"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.77105266"
@@ -698,8 +711,8 @@
     ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"com0":20
-    ,"com1":20}
+    ,"com0":10
+    ,"com1":10}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -714,8 +727,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[6.4e-4,0.0841,0.551,0.938,0.969,0.539,0.0045]
-      ,"dy":[1.28e-4,0.01682,0.1102,0.1876,0.1938,0.1078,9.0e-4]
-      ,"dysys":[1.28e-4,0.01682,0.1102,0.1876,0.1938,0.1078,9.0e-4]   }
+      ,"dy":[6.4e-5,0.00841,0.0551,0.0938,0.0969,0.0539,4.5e-4]
+      ,"dysys":[6.4e-5,0.00841,0.0551,0.0938,0.0969,0.0539,4.5e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -725,7 +738,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0831006", "isub":6, "compiled":20010806, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0831006", "isub":6, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -766,8 +779,8 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Target enriched to 99.85% 64Zn."]
+	,"x4code":{"Nucl":"30-ZN-64","ENR":0.9985}
+	,"x4freetext":[" Target enriched to 99.85% 64Zn."]
 	}
       ]
      ,"DECAY-DATA":[
@@ -785,9 +798,9 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,ATKINSON+,R,UCRL-2426,(2),35,1957"
+	,"x4codes":[{"code":"R,,J.H.Atkinson+,R,UCRL-2426,(2),35,1957"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"ATKINSON+","stdFileName":"R,UCRL-2426,(2),35,1957"
+		,"author1":"J.H.Atkinson+","stdFileName":"R,UCRL-2426,(2),35,1957"
 		,"year":1957,"typ":"R","ref":"R,UCRL-","no":"2426","p":"35"
 		,"shortRef":"Rept: U.C., Lawrence Rad.Lab. (Berkeley and Livermore), No.2426, Vol.(2), p.35 (1957)"}]
 	,"x4freetext":["."]
@@ -795,7 +808,7 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
+	,"x4code":{"header":"DATA-ERR", "max":"20."
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Maximum uncertainty resulting from"
 		," statistical uncertainties and uncertainties in"
@@ -803,19 +816,15 @@
 		,"Relative uncertainties generally less than 10%."]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table 3 in reference."]
+	}
       ]
-      ,"datacols":[
-	 ["DATA-ERR"  ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [20]]}
+    }
     ,"DATA":{"ncols":2, "nrows":6
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -838,13 +847,14 @@
 	,[37.3,82.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0831006", "Pointer":" "
- ,"Subent":"C0831006", "compiled":20010806
+ ,"Subent":"C0831006", "compiled":20171029
  ,"year1":1969, "author1ini":"F.H.", "author1":"Ruddy"
  ,"zTarg1":30, "targ1":"Zn-64", "proj1":"a", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"30-ZN-64(A,2N)32-GE-66,,SIG"
- ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
+ ,"compNotes":["ERR-ANALYS:(DATA-ERR,,20.)    ADDED AS COMMON:DATA-ERR,PER-CENT=10.0%"
+	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
  ,"DECAY-DATA":{"Nuclide":"32-GE-66","HalfLife":"2.4HR","HalfLife1":"2.26HR"
 	,"RadiationType":"DG","Ene":381.4,"Ene1":381.85,"Abu":0.334,"Abu1":0.283
 	,"FcCorrDECAY_DATA":1.180212
@@ -870,8 +880,8 @@
     ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"com0":20
-    ,"com1":20}
+    ,"com0":10
+    ,"com1":10}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -886,8 +896,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[9.7e-4,0.0509,0.126,0.129,0.109,0.0822]
-      ,"dy":[1.94e-4,0.01018,0.0252,0.0258,0.0218,0.01644]
-      ,"dysys":[1.94e-4,0.01018,0.0252,0.0258,0.0218,0.01644]   }
+      ,"dy":[9.7e-5,0.00509,0.0126,0.0129,0.0109,0.00822]
+      ,"dysys":[9.7e-5,0.00509,0.0126,0.0129,0.0109,0.00822]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -897,33 +907,26 @@
 }
    ]
    }
-  ,{"SUBENT":"C0831007", "isub":7, "compiled":20010806, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0831007", "isub":7, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(26-FE-56(6-C-12,N)32-GE-67,,SIG)+\n(26-FE-56(6-C-12,P)31-GA-67,,SIG)"
-	    ,"c4reac":"((6-C-12,N),SIG)+((6-C-12,P),SIG)"
-	    ,"combi":"a","combiQuant":"Cross section"
-	    ,"MF":503
+	,"x4code":{"code":"26-FE-56(6-C-12,X)31-GA-67,CUM,SIG"
+	    ,"c4reac":"(6-C-12,X)CUM,SIG"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":9001
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"26-FE-56(6-C-12,N)32-GE-67,,SIG"
-		,"Reac":"6-C-12,N"
+	    {"code":"26-FE-56(6-C-12,X)31-GA-67,CUM,SIG"
+		,"Reac":"6-C-12,X"
 		,"SF1":"26-FE-56","Targ":{"code":"26-FE-56","nam":"Fe-56","ZA":26056}
 		,"SF2":"6-C-12","Proj":{"code":"6-C-12","nam":"C-12","ZA":6012}
-		,"SF3":"N"
-		,"SF4":"32-GE-67","Prod":{"code":"32-GE-67","nam":"Ge-67","ZA":32067}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"26-FE-56(6-C-12,P)31-GA-67,,SIG"
-		,"Reac":"6-C-12,P"
-		,"SF1":"26-FE-56","Targ":{"code":"26-FE-56","nam":"Fe-56","ZA":26056}
-		,"SF2":"6-C-12","Proj":{"code":"6-C-12","nam":"C-12","ZA":6012}
-		,"SF3":"P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"31-GA-67","Prod":{"code":"31-GA-67","nam":"Ga-67","ZA":31067}
+		,"SF5":"CUM"
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"CUM,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cumulative cross section"
 	    }]}
 	}
       ]
@@ -936,9 +939,9 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Iron foil targets enriched to 99.7% 56Fe, prepared by"
-		," electroplating onto aluminum."]
+	,"x4code":{"Nucl":"26-FE-56","ENR":0.997}
+	,"x4freetext":[" Iron foil targets enriched to"
+		," 99.7% 56Fe, prepared by electroplating onto aluminum."]
 	}
       ]
      ,"METHOD":[
@@ -962,23 +965,23 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,ARN,13,67,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,ARN,13,67,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,ARN,13,67,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,ARN,13,67,1960"
 		,"year":1960,"typ":"J","ref":"J,ARN","vol":"13","p":"67"
 		,"shortRef":"Jour: Annual Review of Nuclear and Part.Sci., Vol.13, p.67 (1960)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,PR,120,1744,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,PR,120,1744,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,PR,120,1744,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,PR,120,1744,1960"
 		,"year":1960,"typ":"J","ref":"J,PR","vol":"120","p":"1744"
 		,"shortRef":"Jour: Physical Review, Vol.120, p.1744 (1960)"}]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
+	,"x4code":{"header":"DATA-ERR", "max":"20."
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Maximum uncertainty resulting from"
 		," uncertainties in beam energy and the small and"
@@ -986,19 +989,15 @@
 		,"Relative uncertainties generally less than 10%."]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table 5 in reference."]
+	}
       ]
-      ,"datacols":[
-	 ["DATA-ERR"  ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [60]]}
+    }
     ,"DATA":{"ncols":2, "nrows":2
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -1017,13 +1016,14 @@
 	,[39.1,1.49]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0831007", "Pointer":" "
- ,"Subent":"C0831007", "compiled":20010806
+ ,"Subent":"C0831007", "compiled":20171029
  ,"year1":1969, "author1ini":"F.H.", "author1":"Ruddy"
- ,"zTarg1":26, "targ1":"Fe-56", "proj1":"C-12", "emis1":"N", "MF":503, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":26, "targ1":"Fe-56", "proj1":"C-12", "emis1":"X", "MF":3, "MT":9001, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(26-FE-56(6-C-12,N)32-GE-67,,SIG)+(26-FE-56(6-C-12,P)31-GA-67,,SIG)"
- ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
+ ,"reacode":"26-FE-56(6-C-12,X)31-GA-67,CUM,SIG"
+ ,"compNotes":["ERR-ANALYS:(DATA-ERR,,20.)    ADDED AS COMMON:DATA-ERR,PER-CENT=10.0%"
+	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
  ,"wx4data":3
  ,"lx4data":2
  ,"x4data":[
@@ -1037,8 +1037,8 @@
     ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"com0":60
-    ,"com1":60}
+    ,"com0":10
+    ,"com1":10}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -1053,8 +1053,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.00257,0.00149]
-      ,"dy":[0.001542,8.94e-4]
-      ,"dysys":[0.001542,8.94e-4]   }
+      ,"dy":[2.57e-4,1.49e-4]
+      ,"dysys":[2.57e-4,1.49e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1064,22 +1064,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0831008", "isub":8, "compiled":20010806, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0831008", "isub":8, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"26-FE-56(6-C-12,N+P)31-GA-66,,SIG"
-	    ,"c4reac":"(6-C-12,N+P),SIG"
+	,"x4code":{"code":"26-FE-56(6-C-12,X)31-GA-66,,SIG"
+	    ,"c4reac":"(6-C-12,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":28
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"26-FE-56(6-C-12,N+P)31-GA-66,,SIG"
-		,"Reac":"6-C-12,N+P"
+	    {"code":"26-FE-56(6-C-12,X)31-GA-66,,SIG"
+		,"Reac":"6-C-12,X"
 		,"SF1":"26-FE-56","Targ":{"code":"26-FE-56","nam":"Fe-56","ZA":26056}
 		,"SF2":"6-C-12","Proj":{"code":"6-C-12","nam":"C-12","ZA":6012}
-		,"SF3":"N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"31-GA-66","Prod":{"code":"31-GA-66","nam":"Ga-66","ZA":31066}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -1095,9 +1095,9 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Iron foil targets enriched to 99.7% 56Fe, prepared by"
-		," electroplating onto aluminum."]
+	,"x4code":{"Nucl":"26-FE-56","ENR":0.997}
+	,"x4freetext":[" Iron foil targets enriched to"
+		," 99.7% 56Fe, prepared by electroplating onto aluminum."]
 	}
       ]
      ,"METHOD":[
@@ -1120,23 +1120,23 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,ARN,13,67,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,ARN,13,67,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,ARN,13,67,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,ARN,13,67,1960"
 		,"year":1960,"typ":"J","ref":"J,ARN","vol":"13","p":"67"
 		,"shortRef":"Jour: Annual Review of Nuclear and Part.Sci., Vol.13, p.67 (1960)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,PR,120,1744,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,PR,120,1744,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,PR,120,1744,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,PR,120,1744,1960"
 		,"year":1960,"typ":"J","ref":"J,PR","vol":"120","p":"1744"
 		,"shortRef":"Jour: Physical Review, Vol.120, p.1744 (1960)"}]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
+	,"x4code":{"header":"DATA-ERR", "max":"20."
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Maximum uncertainty resulting from"
 		," statistical uncertainties and uncertainties in"
@@ -1144,19 +1144,23 @@
 		,"Relative uncertainties generally less than 10%."]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table 5 in reference."]
+	}
       ]
-      ,"datacols":[
-	 ["DATA-ERR"  ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [20]]}
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171024A", "date":"20171024", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X, SAMPLE modified,"
+		," STATUS added"]
+	}
+      ]
+    }
     ,"DATA":{"ncols":3, "nrows":4
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -1180,22 +1184,23 @@
 	,[75.4,null,0.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0831008", "Pointer":" "
- ,"Subent":"C0831008", "compiled":20010806
+ ,"Subent":"C0831008", "compiled":20171029
  ,"year1":1969, "author1ini":"F.H.", "author1":"Ruddy"
- ,"zTarg1":26, "targ1":"Fe-56", "proj1":"C-12", "emis1":"N+P", "MF":3, "MT":28, "nExpectedArgs":1
+ ,"zTarg1":26, "targ1":"Fe-56", "proj1":"C-12", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"26-FE-56(6-C-12,N+P)31-GA-66,,SIG"
- ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"
+ ,"reacode":"26-FE-56(6-C-12,X)31-GA-66,,SIG"
+ ,"compNotes":["ERR-ANALYS:(DATA-ERR,,20.)    ADDED AS COMMON:DATA-ERR,PER-CENT=10.0%"
+	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"
 	,"OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"DECAY-DATA":{"Nuclide":"31-GA-66","HalfLife":"9.5HR","HalfLife1":""
 	,"RadiationType":"AR","Ene":511.0,"Ene1":511.0,"Abu":0.879,"Abu1":1.14
 	,"FcCorrDECAY_DATA":0.77105266
-	,"reaction":"26-FE-56(6-C-12,N+P)31-GA-66,,SIG"}
- ,"autoCorrNotes":["#Reaction: 26-FE-56(6-C-12,N+P)31-GA-66,,SIG"
+	,"reaction":"26-FE-56(6-C-12,X)31-GA-66,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 26-FE-56(6-C-12,X)31-GA-66,,SIG"
 	," dy=dy/y;                      #to rel. uncertainties"
 	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (26-FE-56(6-C-12,N+P)31-GA-66,,SIG)"
+	,"  #[1]#REACTION   (26-FE-56(6-C-12,X)31-GA-66,,SIG)"
 	,"  #[1]#DECAY-DATA (31-GA-66,9.5HR,AR,511.,0.879) #Ix_old=0.879"
 	,"   a1=0.879/1.14;              #[1]#DECAY-DATA: correction to new 511 keV gamma-yield per decay Ga-66 Ix_new=1.14"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.77105266"
@@ -1219,8 +1224,8 @@
     ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"com0":20
-    ,"com1":20}
+    ,"com0":10
+    ,"com1":10}
   ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -1235,8 +1240,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.37,0.09,0.0172,5.0e-4]
-      ,"dy":[0.074,0.018,0.00344,1.0e-4]
-      ,"dysys":[0.074,0.018,0.00344,1.0e-4]   }
+      ,"dy":[0.037,0.009,0.00172,5.0e-5]
+      ,"dysys":[0.037,0.009,0.00172,5.0e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1246,7 +1251,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0831009", "isub":9, "compiled":20010806, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0831009", "isub":9, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1277,9 +1282,9 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Iron foil targets enriched to 99.7% 56Fe, prepared by"
-		," electroplating onto aluminum."]
+	,"x4code":{"Nucl":"26-FE-56","ENR":0.997}
+	,"x4freetext":[" Iron foil targets enriched to"
+		," 99.7% 56Fe, prepared by electroplating onto aluminum."]
 	}
       ]
      ,"METHOD":[
@@ -1302,23 +1307,23 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,ARN,13,67,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,ARN,13,67,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,ARN,13,67,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,ARN,13,67,1960"
 		,"year":1960,"typ":"J","ref":"J,ARN","vol":"13","p":"67"
 		,"shortRef":"Jour: Annual Review of Nuclear and Part.Sci., Vol.13, p.67 (1960)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,PR,120,1744,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,PR,120,1744,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,PR,120,1744,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,PR,120,1744,1960"
 		,"year":1960,"typ":"J","ref":"J,PR","vol":"120","p":"1744"
 		,"shortRef":"Jour: Physical Review, Vol.120, p.1744 (1960)"}]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
+	,"x4code":{"header":"DATA-ERR", "max":"20."
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Maximum uncertainty resulting from"
 		," statistical uncertainties and uncertainties in"
@@ -1326,19 +1331,15 @@
 		,"Relative uncertainties generally less than 10%."]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table 5 in reference."]
+	}
       ]
-      ,"datacols":[
-	 ["DATA-ERR"  ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [20]]}
+    }
     ,"DATA":{"ncols":3, "nrows":4
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -1362,13 +1363,14 @@
 	,[75.4,null,0.9]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0831009", "Pointer":" "
- ,"Subent":"C0831009", "compiled":20010806
+ ,"Subent":"C0831009", "compiled":20171029
  ,"year1":1969, "author1ini":"F.H.", "author1":"Ruddy"
  ,"zTarg1":26, "targ1":"Fe-56", "proj1":"C-12", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"26-FE-56(6-C-12,2N)32-GE-66,,SIG"
- ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"
+ ,"compNotes":["ERR-ANALYS:(DATA-ERR,,20.)    ADDED AS COMMON:DATA-ERR,PER-CENT=10.0%"
+	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"
 	,"OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"DECAY-DATA":{"Nuclide":"32-GE-66","HalfLife":"2.4HR","HalfLife1":"2.26HR"
 	,"RadiationType":"DG","Ene":381.4,"Ene1":381.85,"Abu":0.334,"Abu1":0.283
@@ -1401,8 +1403,8 @@
     ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"com0":20
-    ,"com1":20}
+    ,"com0":10
+    ,"com1":10}
   ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -1417,8 +1419,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.098,0.0242,0.0053,9.0e-4]
-      ,"dy":[0.0196,0.00484,0.00106,1.8e-4]
-      ,"dysys":[0.0196,0.00484,0.00106,1.8e-4]   }
+      ,"dy":[0.0098,0.00242,5.3e-4,9.0e-5]
+      ,"dysys":[0.0098,0.00242,5.3e-4,9.0e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1428,33 +1430,26 @@
 }
    ]
    }
-  ,{"SUBENT":"C0831010", "isub":10, "compiled":20010806, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0831010", "isub":10, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(24-CR-52(8-O-16,N)32-GE-67,,SIG)+\n(24-CR-52(8-O-16,P)31-GA-67,,SIG)"
-	    ,"c4reac":"((8-O-16,N),SIG)+((8-O-16,P),SIG)"
-	    ,"combi":"a","combiQuant":"Cross section"
-	    ,"MF":503
+	,"x4code":{"code":"24-CR-52(8-O-16,X)31-GA-67,CUM,SIG"
+	    ,"c4reac":"(8-O-16,X)CUM,SIG"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":9001
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"24-CR-52(8-O-16,N)32-GE-67,,SIG"
-		,"Reac":"8-O-16,N"
+	    {"code":"24-CR-52(8-O-16,X)31-GA-67,CUM,SIG"
+		,"Reac":"8-O-16,X"
 		,"SF1":"24-CR-52","Targ":{"code":"24-CR-52","nam":"Cr-52","ZA":24052}
 		,"SF2":"8-O-16","Proj":{"code":"8-O-16","nam":"O-16","ZA":8016}
-		,"SF3":"N"
-		,"SF4":"32-GE-67","Prod":{"code":"32-GE-67","nam":"Ge-67","ZA":32067}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"24-CR-52(8-O-16,P)31-GA-67,,SIG"
-		,"Reac":"8-O-16,P"
-		,"SF1":"24-CR-52","Targ":{"code":"24-CR-52","nam":"Cr-52","ZA":24052}
-		,"SF2":"8-O-16","Proj":{"code":"8-O-16","nam":"O-16","ZA":8016}
-		,"SF3":"P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"31-GA-67","Prod":{"code":"31-GA-67","nam":"Ga-67","ZA":31067}
+		,"SF5":"CUM"
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"CUM,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cumulative cross section"
 	    }]}
 	}
       ]
@@ -1479,11 +1474,6 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"32-GE-67", "t12":19.0, "t12units":"MIN", "t12sec":1140.0
-	, "Radiations":[]}]
-	,"x4freetext":[" Assay of daughter activity."]
-	}
-	,{"x4pointer":" "
 	,"x4codes":[{"Nucl":"31-GA-67", "t12":78.0, "t12units":"HR", "t12sec":280800.0
 	, "Radiations":[ {"Type":"DG", "Energy":[91.2,93.3], "Intensity":0.473}
 			,{"Type":"DG", "Energy":[184.5,206.0], "Intensity":0.274}]}]
@@ -1498,33 +1488,29 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,ARN,13,67,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,ARN,13,67,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,ARN,13,67,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,ARN,13,67,1960"
 		,"year":1960,"typ":"J","ref":"J,ARN","vol":"13","p":"67"
 		,"shortRef":"Jour: Annual Review of Nuclear and Part.Sci., Vol.13, p.67 (1960)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,PR,120,1744,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,PR,120,1744,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,PR,120,1744,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,PR,120,1744,1960"
 		,"year":1960,"typ":"J","ref":"J,PR","vol":"120","p":"1744"
 		,"shortRef":"Jour: Physical Review, Vol.120, p.1744 (1960)"}]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table 6 in reference."]
+	}
       ]
-      ,"datacols":[
-	 ["DATA-ERR"  ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [20]]}
+    }
     ,"DATA":{"ncols":2, "nrows":3
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -1544,15 +1530,14 @@
 	,[131,2.6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0831010", "Pointer":" "
- ,"Subent":"C0831010", "compiled":20010806
+ ,"Subent":"C0831010", "compiled":20171029
  ,"year1":1969, "author1ini":"F.H.", "author1":"Ruddy"
- ,"zTarg1":24, "targ1":"Cr-52", "proj1":"O-16", "emis1":"N", "MF":503, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":24, "targ1":"Cr-52", "proj1":"O-16", "emis1":"X", "MF":3, "MT":9001, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(24-CR-52(8-O-16,N)32-GE-67,,SIG)+(24-CR-52(8-O-16,P)31-GA-67,,SIG)"
- ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"
-	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
- ,"wx4data":3
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
+ ,"reacode":"24-CR-52(8-O-16,X)31-GA-67,CUM,SIG"
+ ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
+ ,"wx4data":2
  ,"lx4data":3
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1561,13 +1546,7 @@
     ,"expansion":"Data: data"
     ,"dat0":[1.8,2.7,2.6]
     ,"dat1":[0.0018,0.0027,0.0026]}
-  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
-    ,"expansion":"Data: data /Error/"
-    ,"com0":20
-    ,"com1":20}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -1581,8 +1560,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.0018,0.0027,0.0026]
-      ,"dy":[3.6e-4,5.4e-4,5.2e-4]
-      ,"dysys":[3.6e-4,5.4e-4,5.2e-4]   }
+   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1592,22 +1570,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0831011", "isub":11, "compiled":20010806, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0831011", "isub":11, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"24-CR-52(8-O-16,N+P)31-GA-66,,SIG"
-	    ,"c4reac":"(8-O-16,N+P),SIG"
+	,"x4code":{"code":"24-CR-52(8-O-16,X)31-GA-66,,SIG"
+	    ,"c4reac":"(8-O-16,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":28
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"24-CR-52(8-O-16,N+P)31-GA-66,,SIG"
-		,"Reac":"8-O-16,N+P"
+	    {"code":"24-CR-52(8-O-16,X)31-GA-66,,SIG"
+		,"Reac":"8-O-16,X"
 		,"SF1":"24-CR-52","Targ":{"code":"24-CR-52","nam":"Cr-52","ZA":24052}
 		,"SF2":"8-O-16","Proj":{"code":"8-O-16","nam":"O-16","ZA":8016}
-		,"SF3":"N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"31-GA-66","Prod":{"code":"31-GA-66","nam":"Ga-66","ZA":31066}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -1648,33 +1626,36 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,ARN,13,67,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,ARN,13,67,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,ARN,13,67,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,ARN,13,67,1960"
 		,"year":1960,"typ":"J","ref":"J,ARN","vol":"13","p":"67"
 		,"shortRef":"Jour: Annual Review of Nuclear and Part.Sci., Vol.13, p.67 (1960)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,PR,120,1744,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,PR,120,1744,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,PR,120,1744,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,PR,120,1744,1960"
 		,"year":1960,"typ":"J","ref":"J,PR","vol":"120","p":"1744"
 		,"shortRef":"Jour: Physical Review, Vol.120, p.1744 (1960)"}]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table 6 in reference."]
+	}
       ]
-      ,"datacols":[
-	 ["DATA-ERR"  ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [20]]}
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171024A", "date":"20171024", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X, STATUS added"]
+	}
+      ]
+    }
     ,"DATA":{"ncols":2, "nrows":3
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -1694,27 +1675,26 @@
 	,[131,0.33]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0831011", "Pointer":" "
- ,"Subent":"C0831011", "compiled":20010806
+ ,"Subent":"C0831011", "compiled":20171029
  ,"year1":1969, "author1ini":"F.H.", "author1":"Ruddy"
- ,"zTarg1":24, "targ1":"Cr-52", "proj1":"O-16", "emis1":"N+P", "MF":3, "MT":28, "nExpectedArgs":1
+ ,"zTarg1":24, "targ1":"Cr-52", "proj1":"O-16", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"24-CR-52(8-O-16,N+P)31-GA-66,,SIG"
- ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"
-	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
+ ,"reacode":"24-CR-52(8-O-16,X)31-GA-66,,SIG"
+ ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"DECAY-DATA":{"Nuclide":"31-GA-66","HalfLife":"9.5HR","HalfLife1":""
 	,"RadiationType":"AR","Ene":511.0,"Ene1":511.0,"Abu":0.879,"Abu1":1.14
 	,"FcCorrDECAY_DATA":0.77105266
-	,"reaction":"24-CR-52(8-O-16,N+P)31-GA-66,,SIG"}
- ,"autoCorrNotes":["#Reaction: 24-CR-52(8-O-16,N+P)31-GA-66,,SIG"
+	,"reaction":"24-CR-52(8-O-16,X)31-GA-66,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 24-CR-52(8-O-16,X)31-GA-66,,SIG"
 	," dy=dy/y;                      #to rel. uncertainties"
 	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (24-CR-52(8-O-16,N+P)31-GA-66,,SIG)"
+	,"  #[1]#REACTION   (24-CR-52(8-O-16,X)31-GA-66,,SIG)"
 	,"  #[1]#DECAY-DATA (31-GA-66,9.5HR,AR,511.,0.879) #Ix_old=0.879"
 	,"   a1=0.879/1.14;              #[1]#DECAY-DATA: correction to new 511 keV gamma-yield per decay Ga-66 Ix_new=1.14"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.77105266"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":3
+ ,"wx4data":2
  ,"lx4data":3
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1723,13 +1703,7 @@
     ,"expansion":"Data: data"
     ,"dat0":[0.23,0.34,0.33]
     ,"dat1":[2.3e-4,3.4e-4,3.3e-4]}
-  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
-    ,"expansion":"Data: data /Error/"
-    ,"com0":20
-    ,"com1":20}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -1743,8 +1717,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[2.3e-4,3.4e-4,3.3e-4]
-      ,"dy":[4.6e-5,6.8e-5,6.6e-5]
-      ,"dysys":[4.6e-5,6.8e-5,6.6e-5]   }
+   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1931,22 +1904,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0831013", "isub":13, "compiled":20010806, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0831013", "isub":13, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"24-CR-52(8-O-16,2N+A)30-ZN-62,,SIG"
-	    ,"c4reac":"(8-O-16,2N+A),SIG"
+	,"x4code":{"code":"24-CR-52(8-O-16,X)30-ZN-62,,SIG"
+	    ,"c4reac":"(8-O-16,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":24
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"24-CR-52(8-O-16,2N+A)30-ZN-62,,SIG"
-		,"Reac":"8-O-16,2N+A"
+	    {"code":"24-CR-52(8-O-16,X)30-ZN-62,,SIG"
+		,"Reac":"8-O-16,X"
 		,"SF1":"24-CR-52","Targ":{"code":"24-CR-52","nam":"Cr-52","ZA":24052}
 		,"SF2":"8-O-16","Proj":{"code":"8-O-16","nam":"O-16","ZA":8016}
-		,"SF3":"2N+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"30-ZN-62","Prod":{"code":"30-ZN-62","nam":"Zn-62","ZA":30062}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -1981,33 +1954,37 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,ARN,13,67,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,ARN,13,67,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,ARN,13,67,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,ARN,13,67,1960"
 		,"year":1960,"typ":"J","ref":"J,ARN","vol":"13","p":"67"
 		,"shortRef":"Jour: Annual Review of Nuclear and Part.Sci., Vol.13, p.67 (1960)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,PR,120,1744,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,PR,120,1744,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,PR,120,1744,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,PR,120,1744,1960"
 		,"year":1960,"typ":"J","ref":"J,PR","vol":"120","p":"1744"
 		,"shortRef":"Jour: Physical Review, Vol.120, p.1744 (1960)"}]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table 6 in reference."]
+	}
       ]
-      ,"datacols":[
-	 ["DATA-ERR"  ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [20]]}
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171024A", "date":"20171024", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X, first EN value"
+		," corrected, STATUS added"]
+	}
+      ]
+    }
     ,"DATA":{"ncols":2, "nrows":3
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -2022,20 +1999,19 @@
 	,["MEV"       ,"MB"        ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [36.2,3.1]
+	 [39.2,3.1]
 	,[47.5,2.1]
 	,[131,3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0831013", "Pointer":" "
- ,"Subent":"C0831013", "compiled":20010806
+ ,"Subent":"C0831013", "compiled":20171029
  ,"year1":1969, "author1ini":"F.H.", "author1":"Ruddy"
- ,"zTarg1":24, "targ1":"Cr-52", "proj1":"O-16", "emis1":"2N+A", "MF":3, "MT":24, "nExpectedArgs":1
+ ,"zTarg1":24, "targ1":"Cr-52", "proj1":"O-16", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"24-CR-52(8-O-16,2N+A)30-ZN-62,,SIG"
- ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"
-	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
- ,"wx4data":3
+ ,"reacode":"24-CR-52(8-O-16,X)30-ZN-62,,SIG"
+ ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
+ ,"wx4data":2
  ,"lx4data":3
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2044,18 +2020,12 @@
     ,"expansion":"Data: data"
     ,"dat0":[3.1,2.1,3]
     ,"dat1":[0.0031,0.0021,0.003]}
-  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
-    ,"expansion":"Data: data /Error/"
-    ,"com0":20
-    ,"com1":20}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
-    ,"dat0":[36.2,47.5,131]
-    ,"dat1":[3.62e+7,4.75e+7,1.31e+8]}
+    ,"dat0":[39.2,47.5,131]
+    ,"dat1":[3.92e+7,4.75e+7,1.31e+8]}
   ]
  ,"wc5data":2
  ,"lc5data":3
@@ -2064,33 +2034,32 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.0031,0.0021,0.003]
-      ,"dy":[6.2e-4,4.2e-4,6.0e-4]
-      ,"dysys":[6.2e-4,4.2e-4,6.0e-4]   }
+   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[3.62e+7,4.75e+7,1.31e+8]
+      ,"x1":[3.92e+7,4.75e+7,1.31e+8]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C0831014", "isub":14, "compiled":20010806, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0831014", "isub":14, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"24-CR-52(8-O-16,N+P+A)29-CU-62,,SIG"
-	    ,"c4reac":"(8-O-16,N+P+A),SIG"
+	,"x4code":{"code":"24-CR-52(8-O-16,X)29-CU-62,,SIG"
+	    ,"c4reac":"(8-O-16,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":45
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"24-CR-52(8-O-16,N+P+A)29-CU-62,,SIG"
-		,"Reac":"8-O-16,N+P+A"
+	    {"code":"24-CR-52(8-O-16,X)29-CU-62,,SIG"
+		,"Reac":"8-O-16,X"
 		,"SF1":"24-CR-52","Targ":{"code":"24-CR-52","nam":"Cr-52","ZA":24052}
 		,"SF2":"8-O-16","Proj":{"code":"8-O-16","nam":"O-16","ZA":8016}
-		,"SF3":"N+P+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"29-CU-62","Prod":{"code":"29-CU-62","nam":"Cu-62","ZA":29062}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -2125,33 +2094,37 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,ARN,13,67,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,ARN,13,67,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,ARN,13,67,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,ARN,13,67,1960"
 		,"year":1960,"typ":"J","ref":"J,ARN","vol":"13","p":"67"
 		,"shortRef":"Jour: Annual Review of Nuclear and Part.Sci., Vol.13, p.67 (1960)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,PR,120,1744,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,PR,120,1744,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,PR,120,1744,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,PR,120,1744,1960"
 		,"year":1960,"typ":"J","ref":"J,PR","vol":"120","p":"1744"
 		,"shortRef":"Jour: Physical Review, Vol.120, p.1744 (1960)"}]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table 6 in reference."]
+	}
       ]
-      ,"datacols":[
-	 ["DATA-ERR"  ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [20]]}
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171024A", "date":"20171024", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X, first EN value"
+		," corrected, STATUS added"]
+	}
+      ]
+    }
     ,"DATA":{"ncols":2, "nrows":3
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -2166,20 +2139,19 @@
 	,["MEV"       ,"MB"        ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [36.2,0.7]
+	 [39.2,0.7]
 	,[47.5,0.48]
 	,[131,0.69]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0831014", "Pointer":" "
- ,"Subent":"C0831014", "compiled":20010806
+ ,"Subent":"C0831014", "compiled":20171029
  ,"year1":1969, "author1ini":"F.H.", "author1":"Ruddy"
- ,"zTarg1":24, "targ1":"Cr-52", "proj1":"O-16", "emis1":"N+P+A", "MF":3, "MT":45, "nExpectedArgs":1
+ ,"zTarg1":24, "targ1":"Cr-52", "proj1":"O-16", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"24-CR-52(8-O-16,N+P+A)29-CU-62,,SIG"
- ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"
-	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
- ,"wx4data":3
+ ,"reacode":"24-CR-52(8-O-16,X)29-CU-62,,SIG"
+ ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
+ ,"wx4data":2
  ,"lx4data":3
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2188,18 +2160,12 @@
     ,"expansion":"Data: data"
     ,"dat0":[0.7,0.48,0.69]
     ,"dat1":[7.0e-4,4.8e-4,6.9e-4]}
-  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
-    ,"expansion":"Data: data /Error/"
-    ,"com0":20
-    ,"com1":20}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
-    ,"dat0":[36.2,47.5,131]
-    ,"dat1":[3.62e+7,4.75e+7,1.31e+8]}
+    ,"dat0":[39.2,47.5,131]
+    ,"dat1":[3.92e+7,4.75e+7,1.31e+8]}
   ]
  ,"wc5data":2
  ,"lc5data":3
@@ -2208,32 +2174,32 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[7.0e-4,4.8e-4,6.9e-4]
-      ,"dy":[1.4e-4,9.6e-5,1.38e-4]
-      ,"dysys":[1.4e-4,9.6e-5,1.38e-4]   }
+   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[3.62e+7,4.75e+7,1.31e+8]
+      ,"x1":[3.92e+7,4.75e+7,1.31e+8]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C0831015", "isub":15, "compiled":20010806, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0831015", "isub":15, "compiled":20171029, "TransID":"C169", "TransDate":20171227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"24-CR-52(8-O-16,N+3P)29-CU-64,,SIG"
-	    ,"c4reac":"(8-O-16,N+3P),SIG"
+	,"x4code":{"code":"24-CR-52(8-O-16,X)29-CU-64,,SIG"
+	    ,"c4reac":"(8-O-16,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"24-CR-52(8-O-16,N+3P)29-CU-64,,SIG"
-		,"Reac":"8-O-16,N+3P"
+	    {"code":"24-CR-52(8-O-16,X)29-CU-64,,SIG"
+		,"Reac":"8-O-16,X"
 		,"SF1":"24-CR-52","Targ":{"code":"24-CR-52","nam":"Cr-52","ZA":24052}
 		,"SF2":"8-O-16","Proj":{"code":"8-O-16","nam":"O-16","ZA":8016}
-		,"SF3":"N+3P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"29-CU-64","Prod":{"code":"29-CU-64","nam":"Cu-64","ZA":29064}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -2268,33 +2234,37 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,ARN,13,67,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,ARN,13,67,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,ARN,13,67,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,ARN,13,67,1960"
 		,"year":1960,"typ":"J","ref":"J,ARN","vol":"13","p":"67"
 		,"shortRef":"Jour: Annual Review of Nuclear and Part.Sci., Vol.13, p.67 (1960)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,,NORTHCLIFFE,J,PR,120,1744,1960"
+	,"x4codes":[{"code":"R,,L.C.Northcliffe,J,PR,120,1744,1960"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"NORTHCLIFFE","stdFileName":"J,PR,120,1744,1960"
+		,"author1":"L.C.Northcliffe","stdFileName":"J,PR,120,1744,1960"
 		,"year":1960,"typ":"J","ref":"J,PR","vol":"120","p":"1744"
 		,"shortRef":"Jour: Physical Review, Vol.120, p.1744 (1960)"}]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table 6 in reference."]
+	}
       ]
-      ,"datacols":[
-	 ["DATA-ERR"  ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [20]]}
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171024A", "date":"20171024", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X, first EN value"
+		," corrected, STATUS added"]
+	}
+      ]
+    }
     ,"DATA":{"ncols":2, "nrows":3
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -2309,20 +2279,19 @@
 	,["MEV"       ,"MB"        ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [36.2,0.28]
+	 [39.2,0.28]
 	,[47.5,0.19]
 	,[131,0.27]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0831015", "Pointer":" "
- ,"Subent":"C0831015", "compiled":20010806
+ ,"Subent":"C0831015", "compiled":20171029
  ,"year1":1969, "author1ini":"F.H.", "author1":"Ruddy"
- ,"zTarg1":24, "targ1":"Cr-52", "proj1":"O-16", "emis1":"N+3P", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":24, "targ1":"Cr-52", "proj1":"O-16", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"24-CR-52(8-O-16,N+3P)29-CU-64,,SIG"
- ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"
-	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
- ,"wx4data":3
+ ,"reacode":"24-CR-52(8-O-16,X)29-CU-64,,SIG"
+ ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
+ ,"wx4data":2
  ,"lx4data":3
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2331,18 +2300,12 @@
     ,"expansion":"Data: data"
     ,"dat0":[0.28,0.19,0.27]
     ,"dat1":[2.8e-4,1.9e-4,2.7e-4]}
-  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
-    ,"expansion":"Data: data /Error/"
-    ,"com0":20
-    ,"com1":20}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
-    ,"dat0":[36.2,47.5,131]
-    ,"dat1":[3.62e+7,4.75e+7,1.31e+8]}
+    ,"dat0":[39.2,47.5,131]
+    ,"dat1":[3.92e+7,4.75e+7,1.31e+8]}
   ]
  ,"wc5data":2
  ,"lc5data":3
@@ -2351,12 +2314,11 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[2.8e-4,1.9e-4,2.7e-4]
-      ,"dy":[5.6e-5,3.8e-5,5.4e-5]
-      ,"dysys":[5.6e-5,3.8e-5,5.4e-5]   }
+   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[3.62e+7,4.75e+7,1.31e+8]
+      ,"x1":[3.92e+7,4.75e+7,1.31e+8]
    }
  }
 }
