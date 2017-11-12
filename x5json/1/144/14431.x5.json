@@ -1,9 +1,9 @@
-  {"ENTRY":"14431", "updated":20150815, "TransID":"1409", "TransDate":20160203, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14431", "updated":20171113, "TransID":"1436", "TransDate":20180122, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2015,"a1":"N.V.Kornilov","r1":"R,INDC(USA)-108,2015"
    ,"ref":"Rept: U.S. report to the I.N.D.C., No.108 (2015)"
    ,"title":"Verification of the 252Cf standard in the energy range 2 - 20 MeV"
    ,"x4subents":[
-   {"SUBENT":"14431001", "isub":1, "compiled":20150815, "TransID":"1409", "TransDate":20160203
+   {"SUBENT":"14431001", "isub":1, "compiled":20171113, "TransID":"1436", "TransDate":20180122
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -85,28 +85,34 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" Compiled by S.H."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20171113A", "date":"20171113", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION updated in sub.2"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"14431002", "isub":2, "compiled":20150815, "TransID":"1409", "TransDate":20160203
+  ,{"SUBENT":"14431002", "isub":2, "compiled":20171113, "TransID":"1436", "TransDate":20180122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"98-CF-252(0,F),PR,NU/DE"
-	    ,"c4reac":"(0,F)PR,NU/DE"
+	,"x4code":{"code":"98-CF-252(0,F),PR,NU/DE,,NPD"
+	    ,"c4reac":"(0,F)PR,NU/DE,,NPD"
 	    ,"combi":"a"
 	    ,"MF":5
 	    ,"MT":18
-	    ,"Units":"PC/FIS/MEV"
+	    ,"Units":"1/EV"
 	    ,"reacs": [
-	    {"code":"98-CF-252(0,F),PR,NU/DE"
+	    {"code":"98-CF-252(0,F),PR,NU/DE,,NPD"
 		,"Reac":"0,F"
 		,"SF1":"98-CF-252","Targ":{"code":"98-CF-252","nam":"Cf-252","ZA":98252}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF5":"PR"
 		,"SF6":"NU/DE"
-		,"SF58":"PR,NU/DE","Quant":"MFQ","BasicUnits":"PC/FIS/MEV","QuantHlp":"Energy spectrum of prompt fission neutrons"
+		,"SF8":"NPD"
+		,"SF58":"PR,NU/DE,,NPD","Quant":"MFQ","BasicUnits":"1/EV","QuantHlp":"Prompt fission neutron spectrum in probability"
 	    }]}
 	}
       ]
@@ -118,22 +124,29 @@
 	,"x4freetext":[" Data taken from tab. 6 of the reference"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171113A", "date":"20171113", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added SF8=NPD"]
+	}
+      ]
     }
     ,"DATA":{"ncols":3, "nrows":90
       ,"x4headers":[
        {"icol":0, "header":"E", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"PT/FIS/MEV", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"1/MEV", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"particles per fission per MeV","familyCode":"FYDE","convFc":1.0E-6,"basicUnits":"PT/FIS/MEV"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"PT/FIS/MEV", "pointer":" "
+	,"unitsHelp":"per MeV","familyCode":"1/E","convFc":1.0E-6,"basicUnits":"1/EV"}
+      ,{"icol":2, "header":"DATA-ERR", "units":"1/MEV", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"particles per fission per MeV","familyCode":"FYDE","convFc":1.0E-6,"basicUnits":"PT/FIS/MEV"}
+	,"unitsHelp":"per MeV","familyCode":"1/E","convFc":1.0E-6,"basicUnits":"1/EV"}
       ]
       ,"datacols":[
 	 ["E"         ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"PT/FIS/MEV","PT/FIS/MEV"]
+	,["MEV"       ,"1/MEV"     ,"1/MEV"     ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [2,0.244,0.00274]
@@ -228,18 +241,18 @@
 	,[20,1.535E-6,1.33E-6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14431002", "Pointer":" "
- ,"Subent":"14431002", "compiled":20150815
+ ,"Subent":"14431002", "compiled":20171113
  ,"year1":2015, "author1ini":"N.V.", "author1":"Kornilov"
  ,"zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":5, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0  3       ", "getYFormulaStr":"y=DATA(E2)"
- ,"ReactionType":"NUE", "quant":"MFQ", "quantExpan":"Energy spectrum of prompt fission neutrons"
- ,"reacode":"98-CF-252(0,F),PR,NU/DE"
+ ,"ReactionType":"NUE", "quant":"MFQ", "quantExpan":"Prompt fission neutron spectrum in probability"
+ ,"reacode":"98-CF-252(0,F),PR,NU/DE,,NPD"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":90
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"PT/FIS/MEV", "basicUnits":"PT/FIS/MEV"
+    ,"header":"DATA", "units":"1/MEV", "basicUnits":"1/EV"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[0.244,0.2247,0.2028,0.1823,0.1629,0.1444,0.1297,0.1142,0.1005,0.08918
@@ -261,7 +274,7 @@
 	,3.121e-11,2.53e-11,1.775e-11,2.217e-11,1.232e-11,1.363e-11,1.173e-11,6.951e-12,1.765e-12,7.243e-12
 	,7.96e-12,8.14e-12,8.533e-12,3.481e-12,1.399e-12,2.25e-12,1.453e-12,1.951e-12,1.988e-12,1.535e-12]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"PT/FIS/MEV", "basicUnits":"PT/FIS/MEV"
+    ,"header":"DATA-ERR", "units":"1/MEV", "basicUnits":"1/EV"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.00274,0.00186,8.47e-4,6.83e-4,0.00123,3.22e-4,7.76e-4,3.52e-4,7.11e-4,5.34e-4
@@ -308,7 +321,7 @@
  ,"wc5data":2
  ,"lc5data":90
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PC/FIS/MEV"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"1/EV"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[2.44e-7,2.247e-7,2.028e-7,1.823e-7,1.629e-7,1.444e-7,1.297e-7,1.142e-7,1.005e-7,8.918e-8
