@@ -1,9 +1,9 @@
-  {"ENTRY":"13981", "updated":20120808, "TransID":"1385", "TransDate":20121127, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"13981", "updated":20171113, "TransID":"1436", "TransDate":20180122, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1996,"a1":"M.R.Lane+","r1":"J,PR/C,53,2893,1996"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.53, p.2893 (1996)"
    ,"title":"Spontaneous fission properties of 104-RF-262"
    ,"x4subents":[
-   {"SUBENT":"13981001", "isub":1, "compiled":20120808, "TransID":"1385", "TransDate":20121127
+   {"SUBENT":"13981001", "isub":1, "compiled":20171113, "TransID":"1436", "TransDate":20180122
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -82,26 +82,32 @@
 	,"x4freetext":[" SD: BIB update. INC-SOURCE deleted."
 		,"           DETECTOR changed."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20171113A", "date":"20171113", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION in sub.2 corrected"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"13981002", "isub":2, "compiled":20050309, "TransID":"1332", "TransDate":20050926
+  ,{"SUBENT":"13981002", "isub":2, "compiled":20171113, "TransID":"1436", "TransDate":20180122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"104-RF-262(0,F)MASS,MAS,FY"
-	    ,"c4reac":"(0,F)MASS,MAS,FY"
+	,"x4code":{"code":"104-RF-262(0,F)MASS,PRE,FY"
+	    ,"c4reac":"(0,F)MASS,PRE,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"104-RF-262(0,F)MASS,MAS,FY"
+	    {"code":"104-RF-262(0,F)MASS,PRE,FY"
 		,"Reac":"0,F"
 		,"SF1":"104-RF-262","Targ":{"code":"104-RF-262","nam":"Rf-262","ZA":104262}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF4":"MASS","Prod":{"code":"MASS","nam":"mass"}
-		,"SF5":"MAS"
+		,"SF5":"PRE"
 		,"SF6":"FY"
-		,"SF58":"MAS,FY","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"PRE,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Primary fission-product yield"
 	    }]}
 	}
       ]
@@ -118,6 +124,13 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[" Data taken from Fig. 4 of the article"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171113A", "date":"20171113", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF5 changed from MAS to PRE"]
 	}
       ]
     }
@@ -161,13 +174,65 @@
 	,[180,0.243,0.101]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"13981002", "Pointer":" "
- ,"Subent":"13981002", "compiled":20050309
-,"year1":1996, "author1ini":"M.R.", "author1":"Lane"
-, "zTarg1":104, "targ1":"Rf-262", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"104-RF-262(0,F)MASS,MAS,FY"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"13981002", "compiled":20171113
+ ,"year1":1996, "author1ini":"M.R.", "author1":"Lane"
+ ,"zTarg1":104, "targ1":"Rf-262", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Primary fission-product yield"
+ ,"reacode":"104-RF-262(0,F)MASS,PRE,FY"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":21
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PC/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.213,0.226,0.402,0.654,0.414,1.52,1.52,1.91,3.99,5.72
+	,7.2,5.71,4.04,1.92,1.52,1.52,0.396,0.61,0.408,0.206
+	,0.243]
+    ,"dat1":[0.00213,0.00226,0.00402,0.00654,0.00414,0.0152,0.0152,0.0191,0.0399,0.0572
+	,0.072,0.0571,0.0404,0.0192,0.0152,0.0152,0.00396,0.0061,0.00408,0.00206
+	,0.00243]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PC/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.138,0.126,0.201,0.189,0.176,0.366,0.366,0.429,0.631,0.744
+	,0.82,0.732,0.58,0.378,0.353,0.366,0.189,0.265,0.202,0.151
+	,0.101]
+    ,"dat1":[0.00138,0.00126,0.00201,0.00189,0.00176,0.00366,0.00366,0.00429,0.00631,0.00744
+	,0.0082,0.00732,0.0058,0.00378,0.00353,0.00366,0.00189,0.00265,0.00202,0.00151
+	,0.00101]}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"dat0":[80,85,90,95,100,105,110,115,120,125
+	,130,135,140,145,150,155,160,165,170,175
+	,180]
+   ,"dat1eq":true}
+  ]
+ ,"wc5data":2
+ ,"lc5data":21
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00213,0.00226,0.00402,0.00654,0.00414,0.0152,0.0152,0.0191,0.0399,0.0572
+	,0.072,0.0571,0.0404,0.0192,0.0152,0.0152,0.00396,0.0061,0.00408,0.00206
+	,0.00243]
+      ,"dy":[0.00138,0.00126,0.00201,0.00189,0.00176,0.00366,0.00366,0.00429,0.00631,0.00744
+	,0.0082,0.00732,0.0058,0.00378,0.00353,0.00366,0.00189,0.00265,0.00202,0.00151
+	,0.00101]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"92", "rank":1.0
+      ,"expansion":"Isotope/particle identification: mass"
+      ,"x1":[80,85,90,95,100,105,110,115,120,125
+	,130,135,140,145,150,155,160,165,170,175
+	,180]
+   }
+ }
 }
    ]
    }
