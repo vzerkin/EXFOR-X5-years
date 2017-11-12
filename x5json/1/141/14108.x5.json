@@ -1,9 +1,9 @@
-  {"ENTRY":"14108", "updated":20061117, "TransID":"1342", "TransDate":20070213, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14108", "updated":20171113, "TransID":"1436", "TransDate":20180122, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2006,"a1":"D.Rochman+","r1":"J,NIM/A,564,400,2006"
    ,"ref":"Jour: Nucl. Instrum. Methods in Physics Res., Sect.A, Vol.564, p.400 (2006)"
    ,"title":"Cross-section measurements for 239Pu(n,f) and 6Li(n,a) with a lead slowing-down spectrometer"
    ,"x4subents":[
-   {"SUBENT":"14108001", "isub":1, "compiled":20061117, "TransID":"1342", "TransDate":20070213
+   {"SUBENT":"14108001", "isub":1, "compiled":20171113, "TransID":"1436", "TransDate":20180122
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -56,7 +56,7 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MESON", "dict":"FACILITY", "idict":18,"hlp":"Meson facility"}
+	,"x4codes":[{"code":"LINAC", "dict":"FACILITY", "idict":18,"hlp":"Linear accelerator"}
 	    ,{"code":"1USALAS", "dict":"INSTITUTE", "idict":3,"hlp":"Los Alamos National Laboratory, NM, United States of America"}]
 	,"x4freetext":[" the 800MeV proton accelerator at the"
 		," Los Alamos Neutron Science Center (LANSCE)."]
@@ -98,21 +98,21 @@
       ]
      ,"PART-DET":[
 	{"x4pointer":" "
-	,"x4codes":["A"]
-	}
-	,{"x4pointer":" "
-	,"x4codes":["FF"]
+	,"x4codes":["A","FF"]
 	}
       ]
      ,"METHOD":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"TOF", "dict":"METHOD", "idict":21,"hlp":"Time-of-flight"}]
+	,"x4codes":[{"code":"TOF", "dict":"METHOD", "idict":21,"hlp":"Time-of-flight"}
+	    ,{"code":"SLODT", "dict":"METHOD", "idict":21,"hlp":"Slowing-down time"}]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data received from D. Rochman and C. Romano on"
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data received from D. Rochman and C. Romano on"
 		," 07/21/2006"]
 	}
       ]
@@ -122,26 +122,32 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20171113A", "date":"20171113", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTIONs updated"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"14108002", "isub":2, "compiled":20061117, "TransID":"1342", "TransDate":20070213
+  ,{"SUBENT":"14108002", "isub":2, "compiled":20171113, "TransID":"1436", "TransDate":20180122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"94-PU-239(N,F),,SIG"
-	    ,"c4reac":"(N,F),SIG"
+	,"x4code":{"code":"94-PU-239(N,F),,SIG,,SDT"
+	    ,"c4reac":"(N,F),SIG,,SDT"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":18
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"94-PU-239(N,F),,SIG"
+	    {"code":"94-PU-239(N,F),,SIG,,SDT"
 		,"Reac":"N,F"
 		,"SF1":"94-PU-239","Targ":{"code":"94-PU-239","nam":"Pu-239","ZA":94239}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF6":"SIG"
+		,"SF8":"SDT"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
@@ -157,6 +163,13 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["27 ng of Pu239"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171113A", "date":"20171113", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added REACTION SF8=SDT"]
 	}
       ]
     }
@@ -290,12 +303,12 @@
 	,[2.73E-5,2330,464]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14108002", "Pointer":" "
- ,"Subent":"14108002", "compiled":20061117
+ ,"Subent":"14108002", "compiled":20171113
  ,"year1":2006, "author1ini":"D.", "author1":"Rochman"
  ,"zTarg1":94, "targ1":"Pu-239", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"94-PU-239(N,F),,SIG"
+ ,"reacode":"94-PU-239(N,F),,SIG,,SDT"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":111
@@ -425,23 +438,24 @@
 }
    ]
    }
-  ,{"SUBENT":"14108003", "isub":3, "compiled":20061117, "TransID":"1342", "TransDate":20070213
+  ,{"SUBENT":"14108003", "isub":3, "compiled":20171113, "TransID":"1436", "TransDate":20180122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"94-PU-239(N,F),,SIG"
-	    ,"c4reac":"(N,F),SIG"
+	,"x4code":{"code":"94-PU-239(N,F),,SIG,,SDT"
+	    ,"c4reac":"(N,F),SIG,,SDT"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":18
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"94-PU-239(N,F),,SIG"
+	    {"code":"94-PU-239(N,F),,SIG,,SDT"
 		,"Reac":"N,F"
 		,"SF1":"94-PU-239","Targ":{"code":"94-PU-239","nam":"Pu-239","ZA":94239}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF6":"SIG"
+		,"SF8":"SDT"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
@@ -457,6 +471,13 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["9.87 ng of Pu239"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171113A", "date":"20171113", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added REACTION SF8=SDT"]
 	}
       ]
     }
@@ -531,12 +552,12 @@
 	,[7.1,3.1,0.612]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14108003", "Pointer":" "
- ,"Subent":"14108003", "compiled":20061117
+ ,"Subent":"14108003", "compiled":20171113
  ,"year1":2006, "author1ini":"D.", "author1":"Rochman"
  ,"zTarg1":94, "targ1":"Pu-239", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"94-PU-239(N,F),,SIG"
+ ,"reacode":"94-PU-239(N,F),,SIG,,SDT"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":52
@@ -618,24 +639,25 @@
 }
    ]
    }
-  ,{"SUBENT":"14108004", "isub":4, "compiled":20061117, "TransID":"1342", "TransDate":20070213
+  ,{"SUBENT":"14108004", "isub":4, "compiled":20171113, "TransID":"1436", "TransDate":20180122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-6(N,T)2-HE-4,,SIG"
-	    ,"c4reac":"(N,T),SIG"
+	,"x4code":{"code":"3-LI-6(N,T)2-HE-4,,SIG,,SDT"
+	    ,"c4reac":"(N,T),SIG,,SDT"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":105
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"3-LI-6(N,T)2-HE-4,,SIG"
+	    {"code":"3-LI-6(N,T)2-HE-4,,SIG,,SDT"
 		,"Reac":"N,T"
 		,"SF1":"3-LI-6","Targ":{"code":"3-LI-6","nam":"Li-6","ZA":3006}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"T"
 		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF6":"SIG"
+		,"SF8":"SDT"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
@@ -651,6 +673,13 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["1.1 microg of 6Li"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171113A", "date":"20171113", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added REACTION SF8=SDT"]
 	}
       ]
     }
@@ -813,12 +842,12 @@
 	,[0.112,413,9.24]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14108004", "Pointer":" "
- ,"Subent":"14108004", "compiled":20061117
+ ,"Subent":"14108004", "compiled":20171113
  ,"year1":2006, "author1ini":"D.", "author1":"Rochman"
  ,"zTarg1":3, "targ1":"Li-6", "proj1":"n", "emis1":"T", "MF":3, "MT":105, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"3-LI-6(N,T)2-HE-4,,SIG"
+ ,"reacode":"3-LI-6(N,T)2-HE-4,,SIG,,SDT"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":140
@@ -951,24 +980,25 @@
 }
    ]
    }
-  ,{"SUBENT":"14108005", "isub":5, "compiled":20061117, "TransID":"1342", "TransDate":20070213
+  ,{"SUBENT":"14108005", "isub":5, "compiled":20171113, "TransID":"1436", "TransDate":20180122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-6(N,T)2-HE-4,,SIG"
-	    ,"c4reac":"(N,T),SIG"
+	,"x4code":{"code":"3-LI-6(N,T)2-HE-4,,SIG,,SDT"
+	    ,"c4reac":"(N,T),SIG,,SDT"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":105
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"3-LI-6(N,T)2-HE-4,,SIG"
+	    {"code":"3-LI-6(N,T)2-HE-4,,SIG,,SDT"
 		,"Reac":"N,T"
 		,"SF1":"3-LI-6","Targ":{"code":"3-LI-6","nam":"Li-6","ZA":3006}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"T"
 		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF6":"SIG"
+		,"SF8":"SDT"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
@@ -984,6 +1014,13 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["0.760 microg of 6Li"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20171113A", "date":"20171113", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added REACTION SF8=SDT"]
 	}
       ]
     }
@@ -1116,12 +1153,12 @@
 	,[0.112,370,30.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14108005", "Pointer":" "
- ,"Subent":"14108005", "compiled":20061117
+ ,"Subent":"14108005", "compiled":20171113
  ,"year1":2006, "author1ini":"D.", "author1":"Rochman"
  ,"zTarg1":3, "targ1":"Li-6", "proj1":"n", "emis1":"T", "MF":3, "MT":105, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"3-LI-6(N,T)2-HE-4,,SIG"
+ ,"reacode":"3-LI-6(N,T)2-HE-4,,SIG,,SDT"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":110
