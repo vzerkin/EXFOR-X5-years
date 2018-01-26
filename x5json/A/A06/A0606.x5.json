@@ -1,9 +1,9 @@
-  {"ENTRY":"A0606", "updated":20140226, "TransID":"A080", "TransDate":20140331, "CenterID":"CAJaD", "Center":"Russian Nuclear Structure and Reaction Data Centre, Kurchatov Institute, Moscow, Russia"
+  {"ENTRY":"A0606", "updated":20180127, "TransID":"A088", "TransDate":20180408, "CenterID":"CAJaD", "Center":"Russian Nuclear Structure and Reaction Data Centre, Kurchatov Institute, Moscow, Russia"
    ,"y1":1997,"a1":"S.N.Kondratyev+","r1":"J,ARI,48,601,1997"
    ,"ref":"Jour: Applied Radiation and Isotopes, Vol.48, p.601 (1997)"
    ,"title":"Production of residual nuclei by 3He-induced reactions on 27Al and natCu"
    ,"x4subents":[
-   {"SUBENT":"A0606001", "isub":1, "compiled":20140226, "TransID":"A080", "TransDate":20140331
+   {"SUBENT":"A0606001", "isub":1, "compiled":20180127, "TransID":"A088", "TransDate":20180408
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -32,16 +32,31 @@
 		,"shortRef":"Jour: Applied Radiation and Isotopes, Vol.48, p.601 (1997)"}]
 	}
 	,{"x4pointer":" "
+	,"x4codes":[{"code":"J,AE,81,273,1996","stdFileName":"J,AE,81,273,1996"
+		,"year":1996,"typ":"J","ref":"J,AE","vol":"81","p":"273"
+		,"shortRef":"Jour: Atomnaya Energiya, Vol.81, p.273 (1996)"}]
+	,"x4freetext":[" Tabulated data for natCu + He3"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"J,AE/T,81,714,1996","stdFileName":"J,AE_T,81,714,1996"
+		,"year":1996,"typ":"J","ref":"J,AE/T","vol":"81","p":"714"
+		,"shortRef":"Jour: Atomic Energy, Vol.81, p.714 (1996)"}]
+	,"x4freetext":[" - English transl. of"
+		,"                      Atom.Energ.81(1996)273"]
+	}
+	,{"x4pointer":" "
 	,"x4codes":[{"code":"J,AE,79,307,1995","stdFileName":"J,AE,79,307,1995"
 		,"year":1995,"typ":"J","ref":"J,AE","vol":"79","p":"307"
 		,"shortRef":"Jour: Atomnaya Energiya, Vol.79, p.307 (1995)"}]
-	,"x4freetext":[" Very similar 27Al(3He,x)24,22Na cross sections given"]
+	,"x4freetext":[" -  Very similar 27Al(3He,x)24,22Na"
+		,"                      cross sections given"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"J,AE/T,79,717,1995","stdFileName":"J,AE_T,79,717,1995"
 		,"year":1995,"typ":"J","ref":"J,AE/T","vol":"79","p":"717"
 		,"shortRef":"Jour: Atomic Energy, Vol.79, p.717 (1995)"}]
-	,"x4freetext":[" English translation of Atom.Energ.79(1995)717"]
+	,"x4freetext":[" - English translation of"
+		,"                     Atom.Energ.79(1995)717"]
 	}
       ]
      ,"DETECTOR":[
@@ -59,9 +74,9 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Each stack consisted of high purity Al and Cu foils of"
-		," commercial origin."
-		,"The thickness of each foil was determined by precise"
-		," weighting."]
+		,"commercial origin. The aluminum foils of thickness"
+		,"varying from 12.4 to 52.0 mg/cm2 and copper foils"
+		,"from 20.0 to 40.0 mg/cm2"]
 	}
       ]
      ,"METHOD":[
@@ -120,6 +135,11 @@
 	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
 	,"x4freetext":[" Efficiency of detector"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-2", "max":"3."
+	     ,"headerHelp":"2nd partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" Uncertainty in beam current"]
+	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
@@ -141,6 +161,12 @@
 	,"x4code":{"code":"20140226A", "date":"20140226", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" REFERENCE: AE and AE/T added; ERR-1 added."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180127A", "date":"20180127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Ref.AE,81,273, and its transl. added."
+		,"ERR-ANALYS update. Small corrections in Subents 003-006"]
 	}
       ]
     }
@@ -300,8 +326,8 @@
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
  ,"reacode":"13-AL-27(HE3,X)11-NA-22,CUM,SIG"
- ,"compNotes":[]
- ,"wx4data":5
+ ,"compNotes":["ERR-ANALYS:(ERR-2,,3.)        ADDED AS COMMON:ERR-2,PER-CENT=1.5%"]
+ ,"wx4data":6
  ,"lx4data":34
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -334,7 +360,13 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":2
     ,"com1":2}
-  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":4, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -346,7 +378,7 @@
 	,7.13e+7,6.77e+7,6.65e+7,6.46e+7,6.11e+7,5.77e+7,5.57e+7,5.38e+7,5.06e+7,4.99e+7
 	,4.7e+7,4.54e+7,4.39e+7,4.11e+7,3.81e+7,3.66e+7,3.46e+7,3.11e+7,2.89e+7,2.71e+7
 	,2.33e+7,2.02e+7,1.91e+7,8.5e+6]}
-  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":5, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
@@ -373,10 +405,10 @@
 	,0.0028,0.0051,0.0044,0.0032,0.0027,0.0023,0.0027,0.0024,0.0014,0.0015
 	,0.0012,0.0013,8.0e-4,0.001,0.001,0.001,0.0012,0.0016,0.0024,0.0026
 	,0.0029,0.0024,0.0019,7.0e-5]
-      ,"dysys":[9.28e-4,0.001038,9.16e-4,0.00116,0.001078,0.001018,0.001148,9.96e-4,9.86e-4,0.0011
-	,9.42e-4,0.001012,8.52e-4,8.98e-4,7.38e-4,6.56e-4,5.02e-4,4.76e-4,3.76e-4,3.02e-4
-	,2.38e-4,2.44e-4,2.16e-4,1.88e-4,1.9e-4,2.02e-4,2.44e-4,3.24e-4,4.8e-4,5.06e-4
-	,5.68e-4,4.76e-4,3.8e-4,1.2e-5]   }
+      ,"dysys":[0.00116,0.0012975,0.001145,0.00145,0.0013475,0.0012725,0.001435,0.001245,0.0012325,0.001375
+	,0.0011775,0.001265,0.001065,0.0011225,9.225e-4,8.2e-4,6.275e-4,5.95e-4,4.7e-4,3.775e-4
+	,2.975e-4,3.05e-4,2.7e-4,2.35e-4,2.375e-4,2.525e-4,3.05e-4,4.05e-4,6.0e-4,6.325e-4
+	,7.1e-4,5.95e-4,4.75e-4,1.5e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -397,8 +429,8 @@
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
  ,"reacode":"13-AL-27(HE3,X)11-NA-24,CUM,SIG"
- ,"compNotes":[]
- ,"wx4data":5
+ ,"compNotes":["ERR-ANALYS:(ERR-2,,3.)        ADDED AS COMMON:ERR-2,PER-CENT=1.5%"]
+ ,"wx4data":6
  ,"lx4data":34
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -431,7 +463,13 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":2
     ,"com1":2}
-  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":4, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -443,7 +481,7 @@
 	,7.13e+7,6.77e+7,6.65e+7,6.46e+7,6.11e+7,5.77e+7,5.57e+7,5.38e+7,5.06e+7,4.99e+7
 	,4.7e+7,4.54e+7,4.39e+7,4.04e+7,3.76e+7,3.66e+7,3.46e+7,2.99e+7,2.89e+7,2.62e+7
 	,2.38e+7,2.23e+7,2.02e+7,1.82e+7]}
-  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":5, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
@@ -470,10 +508,10 @@
 	,0.0013,0.0027,0.0024,0.0017,0.0018,0.0018,0.0029,0.003,0.0022,0.0036
 	,0.0032,0.0039,0.0027,0.003,0.0042,0.0035,0.0026,0.0017,0.0016,5.0e-4
 	,1.8e-4,7.0e-5,6.0e-5,5.0e-5]
-      ,"dysys":[4.6e-4,4.74e-4,5.78e-4,4.38e-4,4.72e-4,5.06e-4,5.26e-4,4.22e-4,4.7e-4,5.2e-4
-	,4.6e-4,5.3e-4,4.68e-4,4.72e-4,5.12e-4,5.02e-4,5.76e-4,6.06e-4,6.2e-4,7.08e-4
-	,6.42e-4,7.64e-4,7.44e-4,8.46e-4,8.4e-4,7.34e-4,7.14e-4,4.6e-4,3.18e-4,1.0e-4
-	,3.32e-5,1.22e-5,6.4e-6,2.8e-6]   }
+      ,"dysys":[5.75e-4,5.925e-4,7.225e-4,5.475e-4,5.9e-4,6.325e-4,6.575e-4,5.275e-4,5.875e-4,6.5e-4
+	,5.75e-4,6.625e-4,5.85e-4,5.9e-4,6.4e-4,6.275e-4,7.2e-4,7.575e-4,7.75e-4,8.85e-4
+	,8.025e-4,9.55e-4,9.3e-4,0.0010575,0.00105,9.175e-4,8.925e-4,5.75e-4,3.975e-4,1.25e-4
+	,4.15e-5,1.525e-5,8.0e-6,3.5e-6]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -489,7 +527,7 @@
 }
    ]
    }
-  ,{"SUBENT":"A0606003", "isub":3, "compiled":19990318, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"A0606003", "isub":3, "compiled":20180127, "TransID":"A088", "TransDate":20180408
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -516,6 +554,23 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"30-ZN-65", "t12":244.26, "t12units":"D", "t12sec":2.1104064E7
 	, "Radiations":[ {"Type":"DG", "Energy":[1115.5], "Intensity":0.5075}]}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Tbl. 3 from ARI,48,601,1997"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180127A", "date":"20180127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Zeros were added to right side of"
+		,"values according to presentation in the Table."
+		,"STATUS was added."]
 	}
       ]
     }
@@ -569,13 +624,13 @@
 	,[12.4,1.5,27.1,3.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A0606003", "Pointer":" "
- ,"Subent":"A0606003", "compiled":19990318
+ ,"Subent":"A0606003", "compiled":20180127
  ,"year1":1997, "author1ini":"S.N.", "author1":"Kondratyev"
  ,"zTarg1":29, "targ1":"Cu-0", "proj1":"he3", "emis1":"X", "MF":3, "MT":9001, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
  ,"reacode":"29-CU-0(HE3,X)30-ZN-65,CUM,SIG"
- ,"compNotes":[]
+ ,"compNotes":["ERR-ANALYS:(ERR-2,,3.)        ADDED AS COMMON:ERR-2,PER-CENT=1.5%"]
  ,"DECAY-DATA":{"Nuclide":"30-ZN-65","HalfLife":"244.26D","HalfLife1":"243.93D"
 	,"RadiationType":"DG","Ene":1115.5,"Ene1":1115.539,"Abu":0.5075,"Abu1":0.5004
 	,"FcCorrDECAY_DATA":1.0141886
@@ -588,7 +643,7 @@
 	,"   a1=0.5075/0.5004;           #[1]#DECAY-DATA: correction to new 1115.539 keV gamma-yield per decay Zn-65 Ix_new=0.5004"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0141886"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":5
+ ,"wx4data":6
  ,"lx4data":28
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -617,7 +672,13 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":2
     ,"com1":2}
-  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":4, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -627,7 +688,7 @@
     ,"dat1":[9.16e+7,8.9e+7,8.64e+7,8.38e+7,8.1e+7,7.82e+7,7.53e+7,7.23e+7,6.92e+7,6.61e+7
 	,6.27e+7,5.93e+7,5.57e+7,5.19e+7,4.85e+7,4.56e+7,4.26e+7,3.94e+7,3.62e+7,3.25e+7
 	,2.87e+7,2.48e+7,2.13e+7,2.02e+7,1.66e+7,1.53e+7,1.4e+7,1.24e+7]}
-  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":5, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
@@ -650,9 +711,9 @@
       ,"dy":[0.0022,0.0025,0.0026,0.0027,0.0028,0.0029,0.0033,0.0034,0.0045,0.0051
 	,0.0051,0.0051,0.0062,0.008,0.0078,0.0086,0.0101,0.0142,0.0177,0.0193
 	,0.02,0.0127,0.0123,0.0098,0.0038,0.0047,0.0025,0.0031]
-      ,"dysys":[8.7e-4,9.68e-4,0.001006,0.00106,0.001106,0.001142,0.001314,0.00133,0.00153,0.001776
-	,0.001744,0.002014,0.00249,0.002758,0.003124,0.003412,0.004036,0.00491,0.006124,0.006564
-	,0.006892,0.004124,0.003468,0.001894,0.001314,8.58e-4,8.56e-4,5.42e-4]   }
+      ,"dysys":[0.0010875,0.00121,0.0012575,0.001325,0.0013825,0.0014275,0.0016425,0.0016625,0.0019125,0.00222
+	,0.00218,0.0025175,0.0031125,0.0034475,0.003905,0.004265,0.005045,0.0061375,0.007655,0.008205
+	,0.008615,0.005155,0.004335,0.0023675,0.0016425,0.0010725,0.00107,6.775e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -666,7 +727,7 @@
 }
    ]
    }
-  ,{"SUBENT":"A0606004", "isub":4, "compiled":19990318, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"A0606004", "isub":4, "compiled":20180127, "TransID":"A088", "TransDate":20180408
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -694,6 +755,23 @@
 	,"x4codes":[{"Nucl":"27-CO-57", "t12":271.79, "t12units":"D", "t12sec":2.3482656E7
 	, "Radiations":[ {"Type":"DG", "Energy":[122.1], "Intensity":0.855}
 			,{"Type":"DG", "Energy":[136.5], "Intensity":0.1069}]}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Tbl. 3 from ARI,48,601,1997"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180127A", "date":"20180127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Zeros were added to right side of"
+		,"values according to presentation in the Table."
+		,"STATUS was added."]
 	}
       ]
     }
@@ -742,14 +820,14 @@
 	,[21.3,1.1,0.47,0.06]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A0606004", "Pointer":" "
- ,"Subent":"A0606004", "compiled":19990318
+ ,"Subent":"A0606004", "compiled":20180127
  ,"year1":1997, "author1ini":"S.N.", "author1":"Kondratyev"
  ,"zTarg1":29, "targ1":"Cu-0", "proj1":"he3", "emis1":"X", "MF":3, "MT":9001, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
  ,"reacode":"29-CU-0(HE3,X)27-CO-57,CUM,SIG"
- ,"compNotes":[]
- ,"wx4data":5
+ ,"compNotes":["ERR-ANALYS:(ERR-2,,3.)        ADDED AS COMMON:ERR-2,PER-CENT=1.5%"]
+ ,"wx4data":6
  ,"lx4data":23
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -778,7 +856,13 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":2
     ,"com1":2}
-  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":4, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -788,7 +872,7 @@
     ,"dat1":[9.16e+7,8.9e+7,8.64e+7,8.38e+7,8.1e+7,7.82e+7,7.53e+7,7.23e+7,6.92e+7,6.61e+7
 	,6.27e+7,5.93e+7,5.57e+7,5.19e+7,4.85e+7,4.56e+7,4.26e+7,3.94e+7,3.62e+7,3.25e+7
 	,2.87e+7,2.48e+7,2.13e+7]}
-  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":5, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
@@ -811,9 +895,9 @@
       ,"dy":[0.0058,0.0062,0.0061,0.006,0.0057,0.0052,0.0049,0.004,0.0039,0.003
 	,0.0018,0.0011,8.0e-4,7.0e-4,6.0e-4,6.0e-4,8.0e-4,0.0011,0.0011,9.0e-4
 	,6.0e-4,3.0e-4,6.0e-5]
-      ,"dysys":[0.002478,0.002652,0.002604,0.002552,0.002446,0.002236,0.002106,0.001718,0.001426,0.001114
-	,6.7e-4,4.48e-4,3.34e-4,2.62e-4,2.62e-4,2.7e-4,3.36e-4,3.96e-4,4.14e-4,3.34e-4
-	,1.92e-4,4.2e-5,9.4e-6]   }
+      ,"dysys":[0.0030975,0.003315,0.003255,0.00319,0.0030575,0.002795,0.0026325,0.0021475,0.0017825,0.0013925
+	,8.375e-4,5.6e-4,4.175e-4,3.275e-4,3.275e-4,3.375e-4,4.2e-4,4.95e-4,5.175e-4,4.175e-4
+	,2.4e-4,5.25e-5,1.175e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -827,25 +911,25 @@
 }
    ]
    }
-  ,{"SUBENT":"A0606005", "isub":5, "compiled":19990318, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"A0606005", "isub":5, "compiled":20180127, "TransID":"A088", "TransDate":20180408
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"29-CU-0(HE3,X)27-CO-58-G,M+,SIG"
-	    ,"c4reac":"(HE3,X)M+,SIG"
+	,"x4code":{"code":"29-CU-0(HE3,X)27-CO-58,,SIG"
+	    ,"c4reac":"(HE3,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"29-CU-0(HE3,X)27-CO-58-G,M+,SIG"
+	    {"code":"29-CU-0(HE3,X)27-CO-58,,SIG"
 		,"Reac":"HE3,X"
 		,"SF1":"29-CU-0","Targ":{"code":"29-CU-0","nam":"Cu-0","ZA":29000}
 		,"SF2":"HE3","Proj":{"code":"HE3","nam":"he3","ZA":2003}
 		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"27-CO-58-G","Prod":{"code":"27-CO-58-G","nam":"Co-58-g","ZA":27058,"ProdM":"G"}
-		,"SF5":"M+"
+		,"SF4":"27-CO-58","Prod":{"code":"27-CO-58","nam":"Co-58","ZA":27058}
 		,"SF6":"SIG"
-		,"SF58":"M+,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section, incl. form. via isomeric trans."
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
@@ -853,6 +937,24 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"27-CO-58-G", "t12":70.82, "t12units":"D", "t12sec":6118848.0
 	, "Radiations":[ {"Type":"DG", "Energy":[810.8], "Intensity":0.995}]}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Tbl. 3 from ARI,48,601,1997"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180127A", "date":"20180127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Zeros were added to right side of"
+		,"values according to presentation in the Table."
+		,"STATUS was added. SF4=Co-58g -> Co-58, SF5=M+ deleted"
+		,"from REACTION code (IT~100%, T1/2(m.s.)<<T1/2(g.s.))."]
 	}
       ]
     }
@@ -905,14 +1007,14 @@
 	,[12.4,1.5,0.7,0.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A0606005", "Pointer":" "
- ,"Subent":"A0606005", "compiled":19990318
+ ,"Subent":"A0606005", "compiled":20180127
  ,"year1":1997, "author1ini":"S.N.", "author1":"Kondratyev"
- ,"zTarg1":29, "targ1":"Cu-0", "proj1":"he3", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":29, "targ1":"Cu-0", "proj1":"he3", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section, incl. form. via isomeric trans."
- ,"reacode":"29-CU-0(HE3,X)27-CO-58-G,M+,SIG"
- ,"compNotes":[]
- ,"wx4data":5
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
+ ,"reacode":"29-CU-0(HE3,X)27-CO-58,,SIG"
+ ,"compNotes":["ERR-ANALYS:(ERR-2,,3.)        ADDED AS COMMON:ERR-2,PER-CENT=1.5%"]
+ ,"wx4data":6
  ,"lx4data":27
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -941,7 +1043,13 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":2
     ,"com1":2}
-  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":4, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -951,7 +1059,7 @@
     ,"dat1":[9.16e+7,8.9e+7,8.64e+7,8.38e+7,8.1e+7,7.82e+7,7.53e+7,7.23e+7,6.92e+7,6.61e+7
 	,6.27e+7,5.93e+7,5.57e+7,5.19e+7,4.85e+7,4.56e+7,4.26e+7,3.94e+7,3.62e+7,3.25e+7
 	,2.87e+7,2.48e+7,2.13e+7,2.02e+7,1.66e+7,1.4e+7,1.24e+7]}
-  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":5, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
@@ -974,9 +1082,9 @@
       ,"dy":[0.0066,0.0069,0.0067,0.0066,0.0065,0.0063,0.0069,0.0064,0.008,0.0084
 	,0.0071,0.0054,0.0044,0.0032,0.0015,8.0e-4,6.0e-4,5.0e-4,4.0e-4,3.0e-4
 	,4.0e-4,4.0e-4,5.0e-4,5.0e-4,2.0e-4,2.0e-4,2.0e-4]
-      ,"dysys":[0.002624,0.002738,0.002662,0.00263,0.00257,0.002514,0.002722,0.002556,0.00275,0.002904
-	,0.002452,0.002142,0.001766,0.001092,5.88e-4,3.3e-4,2.12e-4,1.42e-4,1.06e-4,8.4e-5
-	,1.22e-4,1.26e-4,1.12e-4,8.0e-5,5.0e-5,2.4e-5,1.4e-5]   }
+      ,"dysys":[0.00328,0.0034225,0.0033275,0.0032875,0.0032125,0.0031425,0.0034025,0.003195,0.0034375,0.00363
+	,0.003065,0.0026775,0.0022075,0.001365,7.35e-4,4.125e-4,2.65e-4,1.775e-4,1.325e-4,1.05e-4
+	,1.525e-4,1.575e-4,1.4e-4,1.0e-4,6.25e-5,3.0e-5,1.75e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -990,25 +1098,25 @@
 }
    ]
    }
-  ,{"SUBENT":"A0606006", "isub":6, "compiled":19990318, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"A0606006", "isub":6, "compiled":20180127, "TransID":"A088", "TransDate":20180408
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"29-CU-0(HE3,X)27-CO-60-G,M+,SIG"
-	    ,"c4reac":"(HE3,X)M+,SIG"
+	,"x4code":{"code":"29-CU-0(HE3,X)27-CO-60,,SIG"
+	    ,"c4reac":"(HE3,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"29-CU-0(HE3,X)27-CO-60-G,M+,SIG"
+	    {"code":"29-CU-0(HE3,X)27-CO-60,,SIG"
 		,"Reac":"HE3,X"
 		,"SF1":"29-CU-0","Targ":{"code":"29-CU-0","nam":"Cu-0","ZA":29000}
 		,"SF2":"HE3","Proj":{"code":"HE3","nam":"he3","ZA":2003}
 		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"27-CO-60-G","Prod":{"code":"27-CO-60-G","nam":"Co-60-g","ZA":27060,"ProdM":"G"}
-		,"SF5":"M+"
+		,"SF4":"27-CO-60","Prod":{"code":"27-CO-60","nam":"Co-60","ZA":27060}
 		,"SF6":"SIG"
-		,"SF58":"M+,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section, incl. form. via isomeric trans."
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
@@ -1022,8 +1130,27 @@
      ,"COMMENT":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["- By Compiler - Co-60 Production Due to Radioactive"
-		,"Decay of 60-Fe is Negligible."]
+	,"x4freetext":["- By Compiler - Co-60 production due to radioactive"
+		,"Decay of 60-Fe is negligible."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Tbl. 3 from ARI,48,601,1997"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180127A", "date":"20180127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Zeros were added to right side of"
+		,"values according to presentation in the Table."
+		,"STATUS was added. ERR-T corrected at E=28.7 MeV."
+		,"SF4=Co-60g -> Co-60, SF5=M+ deleted from REACTION code"
+		," (IT~100%, T1/2(m.s.)<<T1/2(g.s.))."]
 	}
       ]
     }
@@ -1067,21 +1194,21 @@
 	,[39.4,1.1,8.1,0.6]
 	,[36.2,1.1,7.3,0.5]
 	,[32.5,1.4,5.2,0.4]
-	,[28.7,1.5,2.73,0.7]
+	,[28.7,1.5,2.73,0.2]
 	,[24.8,1.5,1.53,0.15]
 	,[21.3,1.1,0.95,0.11]
 	,[16.6,1.2,0.49,0.05]
 	,[14,1.4,0.33,0.03]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A0606006", "Pointer":" "
- ,"Subent":"A0606006", "compiled":19990318
+ ,"Subent":"A0606006", "compiled":20180127
  ,"year1":1997, "author1ini":"S.N.", "author1":"Kondratyev"
- ,"zTarg1":29, "targ1":"Cu-0", "proj1":"he3", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":29, "targ1":"Cu-0", "proj1":"he3", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section, incl. form. via isomeric trans."
- ,"reacode":"29-CU-0(HE3,X)27-CO-60-G,M+,SIG"
- ,"compNotes":[]
- ,"wx4data":5
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
+ ,"reacode":"29-CU-0(HE3,X)27-CO-60,,SIG"
+ ,"compNotes":["ERR-ANALYS:(ERR-2,,3.)        ADDED AS COMMON:ERR-2,PER-CENT=1.5%"]
+ ,"wx4data":6
  ,"lx4data":25
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1100,17 +1227,23 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.1,1.1,1.1,1.1,1,1,1,0.9,1,0.9
 	,0.8,0.6,0.5,0.5,0.4,0.4,0.4,0.6,0.5,0.4
-	,0.7,0.15,0.11,0.05,0.03]
+	,0.2,0.15,0.11,0.05,0.03]
     ,"dat1":[0.0011,0.0011,0.0011,0.0011,0.001,0.001,0.001,9.0e-4,0.001,9.0e-4
 	,8.0e-4,6.0e-4,5.0e-4,5.0e-4,4.0e-4,4.0e-4,4.0e-4,6.0e-4,5.0e-4,4.0e-4
-	,7.0e-4,1.5e-4,1.1e-4,5.0e-5,3.0e-5]}
+	,2.0e-4,1.5e-4,1.1e-4,5.0e-5,3.0e-5]}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":2
     ,"com1":2}
-  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":4, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -1120,7 +1253,7 @@
     ,"dat1":[9.16e+7,8.9e+7,8.64e+7,8.38e+7,8.1e+7,7.82e+7,7.53e+7,7.23e+7,6.92e+7,6.61e+7
 	,6.27e+7,5.93e+7,5.57e+7,5.19e+7,4.85e+7,4.56e+7,4.26e+7,3.94e+7,3.62e+7,3.25e+7
 	,2.87e+7,2.48e+7,2.13e+7,1.66e+7,1.4e+7]}
-  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":5, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
@@ -1142,10 +1275,10 @@
 	,0.00273,0.00153,9.5e-4,4.9e-4,3.3e-4]
       ,"dy":[0.0011,0.0011,0.0011,0.0011,0.001,0.001,0.001,9.0e-4,0.001,9.0e-4
 	,8.0e-4,6.0e-4,5.0e-4,5.0e-4,4.0e-4,4.0e-4,4.0e-4,6.0e-4,5.0e-4,4.0e-4
-	,7.0e-4,1.5e-4,1.1e-4,5.0e-5,3.0e-5]
-      ,"dysys":[4.06e-4,4.24e-4,4.16e-4,4.08e-4,3.96e-4,3.82e-4,3.72e-4,3.36e-4,2.96e-4,2.88e-4
-	,2.42e-4,2.16e-4,1.84e-4,1.5e-4,1.54e-4,1.42e-4,1.56e-4,1.62e-4,1.46e-4,1.04e-4
-	,5.46e-5,3.06e-5,1.9e-5,9.8e-6,6.6e-6]   }
+	,2.0e-4,1.5e-4,1.1e-4,5.0e-5,3.0e-5]
+      ,"dysys":[5.075e-4,5.3e-4,5.2e-4,5.1e-4,4.95e-4,4.775e-4,4.65e-4,4.2e-4,3.7e-4,3.6e-4
+	,3.025e-4,2.7e-4,2.3e-4,1.875e-4,1.925e-4,1.775e-4,1.95e-4,2.025e-4,1.825e-4,1.3e-4
+	,6.825e-5,3.825e-5,2.375e-5,1.225e-5,8.25e-6]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
