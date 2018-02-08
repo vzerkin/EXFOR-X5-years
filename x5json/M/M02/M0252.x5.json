@@ -1,9 +1,9 @@
-  {"ENTRY":"M0252", "updated":20130613, "TransID":"M067", "TransDate":20130819, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
+  {"ENTRY":"M0252", "updated":20180209, "TransID":"M094", "TransDate":20180406, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
    ,"y1":1966,"a1":"S.Costa+","r1":"J,NC/B,42,382,1966"
    ,"ref":"Jour: Nuovo Cimento B, Vol.42, Issue.2, p.382 (1966)"
    ,"title":"Photodisintegration of Li-6."
    ,"x4subents":[
-   {"SUBENT":"M0252001", "isub":1, "compiled":20130613, "TransID":"M067", "TransDate":20130819
+   {"SUBENT":"M0252001", "isub":1, "compiled":20180209, "TransID":"M094", "TransDate":20180406
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -20,16 +20,16 @@
 	    ,{"ini":"L.","nam":"Roasio"}]
 	}
       ]
-     ,"INSTITUTE":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"2ITYTUP", "dict":"INSTITUTE", "idict":3,"hlp":"Politecnico di Torino, Italy"}]
-	}
-      ]
      ,"REFERENCE":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"J,NC/B,42,(2),382,1966","stdFileName":"J,NC_B,42,382,1966"
 		,"year":1966,"typ":"J","ref":"J,NC/B","vol":"42","issue":"2","p":"382"
 		,"shortRef":"Jour: Nuovo Cimento B, Vol.42, Issue.2, p.382 (1966)"}]
+	}
+      ]
+     ,"INSTITUTE":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"2ITYTUP", "dict":"INSTITUTE", "idict":3,"hlp":"Politecnico di Torino, Italy"}]
 	}
       ]
      ,"FACILITY":[
@@ -43,6 +43,12 @@
 	,"x4codes":[{"code":"BRST", "dict":"INC-SOURCE", "idict":19,"hlp":"Bremsstrahlung"}]
 	}
       ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":{"Nucl":"3-LI-6","ENR":0.993}
+	,"x4freetext":[" One mole of enriched Li-6 (99.3%)."]
+	}
+      ]
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"EXTB", "dict":"METHOD", "idict":21,"hlp":"Irradiation with external beam"}
@@ -52,11 +58,6 @@
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"BF3", "dict":"DETECTOR", "idict":22,"hlp":"Boron Trifluoride neutron detector"}]
-	}
-      ]
-     ,"PART-DET":[
-	{"x4pointer":" "
-	,"x4codes":["N"]
 	}
       ]
      ,"ANALYSIS":[
@@ -72,14 +73,8 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" Root-mean-squared errors."]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"CURVE"
-		,"flag":"CURVE", "help":"Data read from a curve"
-		}]
+	,"x4freetext":[" No information about source of"
+		," uncertainties."]
 	}
       ]
      ,"HISTORY":[
@@ -98,29 +93,44 @@
 	,"x4freetext":[" Corrected   by   V.Varlamov:    REACTION,"
 		," COMMENT, dates, lowercase."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180209A", "date":"20180209", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by SD and VV: SAMPLE added,"
+		," STATUS, PART-DET, REACTION."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"M0252002", "isub":2, "compiled":20130613, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0252002", "isub":2, "compiled":20180209, "TransID":"M094", "TransDate":20180406
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-6(G,N)3-LI-5,,SIG,,BRS"
-	    ,"c4reac":"(G,N),SIG,,BRS"
+	,"x4code":{"code":"3-LI-6(G,X)0-NN-1,,SIG,,BRS"
+	    ,"c4reac":"(G,X),SIG,,BRS"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":201
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"3-LI-6(G,N)3-LI-5,,SIG,,BRS"
-		,"Reac":"G,N"
+	    {"code":"3-LI-6(G,X)0-NN-1,,SIG,,BRS"
+		,"Reac":"G,X"
 		,"SF1":"3-LI-6","Targ":{"code":"3-LI-6","nam":"Li-6","ZA":3006}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N"
-		,"SF4":"3-LI-5","Prod":{"code":"3-LI-5","nam":"Li-5","ZA":3005}
+		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"SIG"
 		,"SF8":"BRS"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Data from Fig.1 of NC/B,42,(2),382,1966."]
 	}
       ]
      ,"HISTORY":[
@@ -128,6 +138,12 @@
 	,"x4code":{"code":"20130613A", "date":"20130613", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected by V.Varlamov: BRA -> BRS."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180209A", "date":"20180209", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by SD and VV: SF3 = N -> X,"
+		," SF4 = 3-LI-5 -> 0-NN-1 in REACTION, STATUS."]
 	}
       ]
     }
@@ -190,12 +206,12 @@
 	,[85,0.26,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0252002", "Pointer":" "
- ,"Subent":"M0252002", "compiled":20130613
+ ,"Subent":"M0252002", "compiled":20180209
  ,"year1":1966, "author1ini":"S.", "author1":"Costa"
- ,"zTarg1":3, "targ1":"Li-6", "proj1":"g", "emis1":"N", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":3, "targ1":"Li-6", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"3-LI-6(G,N)3-LI-5,,SIG,,BRS"
+ ,"reacode":"3-LI-6(G,X)0-NN-1,,SIG,,BRS"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":40
