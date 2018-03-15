@@ -1,14 +1,14 @@
-  {"ENTRY":"22763", "updated":20100714, "TransID":"2222", "TransDate":20101216, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"22763", "updated":20180316, "TransID":"2270", "TransDate":20190220, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1991,"a1":"N.I.Molla+","r1":"J,ARI,42,337,1991"
    ,"ref":"Jour: Applied Radiation and Isotopes, Vol.42, p.337 (1991)"
    ,"title":"Excitation functions of natTi(n,x)46,47,48Sc processes in the energy range of 12.5 - 19.6 MeV"
    ,"x4subents":[
-   {"SUBENT":"22763001", "isub":1, "compiled":20100714, "TransID":"2222", "TransDate":20101216
+   {"SUBENT":"22763001", "isub":1, "compiled":20180316, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[".Excitation functions of natTi(n,x)46,47,48Sc processes"
+	,"x4freetext":["Excitation functions of natTi(n,x)46,47,48Sc processes"
 		," in the energy range of 12.5 - 19.6 MeV"]
 	}
       ]
@@ -47,7 +47,7 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["About 5 g Ti metal powder (>99.9%) was pressed at"
+	,"x4freetext":["About 5g Ti metal powder (>99.9%) was pressed at"
 		,"10t/cm2 and disk (2cm in diam., 0.5 cm - thick) was"
 		,"obtained. Fifteen such samples, each sandwiched"
 		,"between pairs of aluminum  sheets (2 cm diam. x0.1cm),"
@@ -63,7 +63,7 @@
      ,"INC-SOURCE":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"D-T", "dict":"INC-SOURCE", "idict":19,"hlp":"3H(d,n)"}]
-	,"x4freetext":[" A 3 Mg/Cm2 T-Ti Target was used. The target"
+	,"x4freetext":[" A 3 mg/cm2 T-Ti target was used. The target"
 		," was backed by a 4 cm diameter silver sheet of 0.3 mm"
 		," thickness, fixed in an aluminum  tube of 1 mm wall"
 		," thickness. The silver sheet was cooled by a thin"
@@ -182,7 +182,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 1 of main reference"]
+	,"x4freetext":[" Table 1 from Appl.Rad.Isot.42(1991)337"]
 	}
       ]
      ,"HISTORY":[
@@ -207,6 +207,13 @@
 	,"x4code":{"code":"20100714A", "date":"20100714", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" M.M. Subent 002 was corrected."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180316A", "date":"20180316", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: MISC and MISC-ERR were added to Subents"
+		,"003, 004. REACTION code corrected in Subents 003,004"
+		,"according to remark from V.Semkova."]
 	}
       ]
     }
@@ -416,34 +423,39 @@
 }
    ]
    }
-  ,{"SUBENT":"22763003", "isub":3, "compiled":20090215, "TransID":"2207", "TransDate":20090507
+  ,{"SUBENT":"22763003", "isub":3, "compiled":20180316, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"22-TI-0(N,X)21-SC-47,,SIG"
-	    ,"c4reac":"(N,X),SIG"
-	    ,"combi":"a"
-	    ,"MF":3
-	    ,"MT":9000
+	,"x4code":{"code":"(22-TI-47(N,P)21-SC-47,,SIG,,FCT)+\n(22-TI-48(N,X)21-SC-47,,SIG,,FCT)"
+	    ,"c4reac":"((N,P),SIG,,FCT)+((N,X),SIG,,FCT)"
+	    ,"combi":"a","combiQuant":"Cross section"
+	    ,"MF":503
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"22-TI-0(N,X)21-SC-47,,SIG"
+	    {"code":"22-TI-47(N,P)21-SC-47,,SIG,,FCT"
+		,"Reac":"N,P"
+		,"SF1":"22-TI-47","Targ":{"code":"22-TI-47","nam":"Ti-47","ZA":22047}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"P"
+		,"SF4":"21-SC-47","Prod":{"code":"21-SC-47","nam":"Sc-47","ZA":21047}
+		,"SF6":"SIG"
+		,"SF8":"FCT"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }
+	    ,{"code":"22-TI-48(N,X)21-SC-47,,SIG,,FCT"
 		,"Reac":"N,X"
-		,"SF1":"22-TI-0","Targ":{"code":"22-TI-0","nam":"Ti-0","ZA":22000}
+		,"SF1":"22-TI-48","Targ":{"code":"22-TI-48","nam":"Ti-48","ZA":22048}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"21-SC-47","Prod":{"code":"21-SC-47","nam":"Sc-47","ZA":21047}
 		,"SF6":"SIG"
+		,"SF8":"FCT"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
-	}
-      ]
-     ,"ANALYSIS":[
-	{"x4pointer":" "
-	,"x4code":null
 	,"x4freetext":["Cross-section normalized to 47-Ti + 48-Ti (summed"
-		,"abundance 81.2%).Contribution of Ti-47(N,P) and"
-		,"Ti-48(N,NP) were considered. Contribution of (N,NP) was"
+		,"abundance 81.2%). Contribution of Ti-47(n,p) and"
+		,"Ti-48(n,np) were considered. Contribution of (n,np) was"
 		,"not negligible since Ti-48 abundance is about 10 times"
 		,"higher than that of Ti-47."]
 	}
@@ -454,15 +466,30 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[159.0], "Intensity":0.685}]}]
 	}
       ]
+     ,"MISC-COL":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"MISC"}]
+	,"x4freetext":[" Neutron flux density, 10**6 1/cm**2/sec."
+		,"       Average of two measurements."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20090215A", "date":"20090215", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Misprint in abundance was corrected."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180316A", "date":"20180316", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Instead of one REACTION code presented"
+		,"as sum of reactions using different targets (Ti-0 ->"
+		," Ti-47 and Ti-48). MISC and MISC-ERR were added."
+		," ANALYSIS deleted (info moved to REACTION code)."]
+	}
       ]
     }
-    ,"DATA":{"ncols":4, "nrows":15
+    ,"DATA":{"ncols":6, "nrows":15
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
@@ -476,49 +503,55 @@
       ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ,{"icol":4, "header":"MISC", "units":"SEE TEXT", "pointer":" "
+	,"headerHelp":"Miscellaneous Information, defined under MISC-COL.", "pFlag":"0000000"
+	,"unitsHelp":"rare units. See `MISC-COL`","familyCode":"","convFc":1.0,"basicUnits":"SEE TEXT"}
+      ,{"icol":5, "header":"MISC-ERR", "units":"SEE TEXT", "pointer":" "
+	,"headerHelp":"Error in miscellaneous value", "pFlag":"0000000"
+	,"unitsHelp":"rare units. See `MISC-COL`","familyCode":"","convFc":1.0,"basicUnits":"SEE TEXT"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
-	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ,"MISC"      ,"MISC-ERR"  ]
+	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ,"SEE TEXT"  ,"SEE TEXT"  ]
+	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [12.59,0.22,17.1,1.1]
-	,[12.64,0.21,18.9,1.1]
-	,[13.39,0.3,17.8,1.1]
-	,[13.43,0.3,21.8,1.3]
-	,[14.36,0.36,25.3,1.5]
-	,[14.39,0.35,27.1,1.6]
-	,[15.82,0.37,46.5,2.8]
-	,[15.84,0.38,43.8,2.6]
-	,[16.9,0.37,68.7,4.1]
-	,[16.96,0.37,61.6,3.7]
-	,[17.92,0.35,87.1,5.2]
-	,[17.99,0.35,82.6,5]
-	,[18.81,0.26,110,6.6]
-	,[18.88,0.25,99.2,6]
-	,[19.58,0.23,117.5,7.1]]}
+	 [12.59,0.22,17.1,1.1,0.276,0.008]
+	,[12.64,0.21,18.9,1.1,0.254,0.007]
+	,[13.39,0.3,17.8,1.1,0.265,0.007]
+	,[13.43,0.3,21.8,1.3,0.252,0.007]
+	,[14.36,0.36,25.3,1.5,0.277,0.007]
+	,[14.39,0.35,27.1,1.6,0.267,0.007]
+	,[15.82,0.37,46.5,2.8,0.261,0.008]
+	,[15.84,0.38,43.8,2.6,0.274,0.008]
+	,[16.9,0.37,68.7,4.1,0.338,0.01]
+	,[16.96,0.37,61.6,3.7,0.368,0.011]
+	,[17.92,0.35,87.1,5.2,0.408,0.012]
+	,[17.99,0.35,82.6,5,0.436,0.012]
+	,[18.81,0.26,110,6.6,0.509,0.014]
+	,[18.88,0.25,99.2,6,0.532,0.015]
+	,[19.58,0.23,117.5,7.1,0.731,0.022]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22763003", "Pointer":" "
- ,"Subent":"22763003", "compiled":20090215
+ ,"Subent":"22763003", "compiled":20180316
  ,"year1":1991, "author1ini":"N.I.", "author1":"Molla"
- ,"zTarg1":22, "targ1":"Ti-0", "proj1":"n", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
+ ,"zTarg1":22, "targ1":"Ti-47", "proj1":"n", "emis1":"P", "MF":503, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"22-TI-0(N,X)21-SC-47,,SIG"
+ ,"reacode":"(22-TI-47(N,P)21-SC-47,,SIG,,FCT)+(22-TI-48(N,X)21-SC-47,,SIG,,FCT)"
  ,"compNotes":[]
  ,"DECAY-DATA":{"Nuclide":"21-SC-47","HalfLife":"3.42D","HalfLife1":"3.3492D"
 	,"RadiationType":"DG","Ene":159.0,"Ene1":159.381,"Abu":0.685,"Abu1":0.683
 	,"FcCorrDECAY_DATA":1.0029283
-	,"reaction":"22-TI-0(N,X)21-SC-47,,SIG"}
- ,"autoCorrNotes":["#Reaction: 22-TI-0(N,X)21-SC-47,,SIG"
+	,"reaction":"(22-TI-47(N,P)21-SC-47,,SIG,,FCT)+(22-TI-48(N,X)21-SC-47,,SIG,,FCT)"}
+ ,"autoCorrNotes":["#Reaction: (22-TI-47(N,P)21-SC-47,,SIG,,FCT)+(22-TI-48(N,X)21-SC-47,,SIG,,FCT)"
 	," dy=dy/y;                      #to rel. uncertainties"
 	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (22-TI-0(N,X)21-SC-47,,SIG)"
+	,"  #[1]#REACTION   ((22-TI-47(N,P)21-SC-47,,SIG,,FCT)+(22-TI-48(N,X)21-SC-47,,SIG,,FCT))"
 	,"  #[1]#DECAY-DATA (21-SC-47,3.42D,DG,159.,0.685) #Ix_old=0.685"
 	,"   a1=0.685/0.683;             #[1]#DECAY-DATA: correction to new 159.381 keV gamma-yield per decay Sc-47 Ix_new=0.683"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0029283"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":5
+ ,"wx4data":7
  ,"lx4data":15
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -559,6 +592,20 @@
 	,0.35,0.35,0.26,0.25,0.23]
     ,"dat1":[2.2e+5,2.1e+5,3.0e+5,3.0e+5,3.6e+5,3.5e+5,3.7e+5,3.8e+5,3.7e+5,3.7e+5
 	,3.5e+5,3.5e+5,2.6e+5,2.5e+5,2.3e+5]}
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"SEE TEXT", "basicUnits":"SEE TEXT"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.276,0.254,0.265,0.252,0.277,0.267,0.261,0.274,0.338,0.368
+	,0.408,0.436,0.509,0.532,0.731]
+   ,"dat1eq":true}
+  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"SEE TEXT", "basicUnits":"SEE TEXT"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.008,0.007,0.007,0.007,0.007,0.007,0.008,0.008,0.01,0.011
+	,0.012,0.012,0.014,0.015,0.022]
+   ,"dat1eq":true}
   ]
  ,"wc5data":2
  ,"lc5data":15
@@ -583,33 +630,47 @@
 }
    ]
    }
-  ,{"SUBENT":"22763004", "isub":4, "compiled":20090215, "TransID":"2207", "TransDate":20090507
+  ,{"SUBENT":"22763004", "isub":4, "compiled":20180316, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"22-TI-0(N,X)21-SC-48,,SIG"
-	    ,"c4reac":"(N,X),SIG"
-	    ,"combi":"a"
-	    ,"MF":3
-	    ,"MT":9000
+	,"x4code":{"code":"(22-TI-48(N,P)21-SC-48,,SIG)+\n(22-TI-49(N,X)21-SC-48,,SIG,,RAB)"
+	    ,"c4reac":"((N,P),SIG)+((N,X),SIG,,RAB)"
+	    ,"combi":"a","combiQuant":"Cross section"
+	    ,"MF":503
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"22-TI-0(N,X)21-SC-48,,SIG"
+	    {"code":"22-TI-48(N,P)21-SC-48,,SIG"
+		,"Reac":"N,P"
+		,"SF1":"22-TI-48","Targ":{"code":"22-TI-48","nam":"Ti-48","ZA":22048}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"P"
+		,"SF4":"21-SC-48","Prod":{"code":"21-SC-48","nam":"Sc-48","ZA":21048}
+		,"SF6":"SIG"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }
+	    ,{"code":"22-TI-49(N,X)21-SC-48,,SIG,,RAB"
 		,"Reac":"N,X"
-		,"SF1":"22-TI-0","Targ":{"code":"22-TI-0","nam":"Ti-0","ZA":22000}
+		,"SF1":"22-TI-49","Targ":{"code":"22-TI-49","nam":"Ti-49","ZA":22049}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"21-SC-48","Prod":{"code":"21-SC-48","nam":"Sc-48","ZA":21048}
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF8":"RAB"
+		,"SF58":",SIG,,RAB","Quant":"CS","BasicUnits":"B","QuantHlp":"Cs * abund.(nat)/abund.(nuclide of 1st term)"
 	    }]}
+	}
+      ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":{"Nucl":"22-TI-49","NAT":0.0541}
 	}
       ]
      ,"ANALYSIS":[
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Cross-section normalized to 48-Ti (abundance 73.8%),"
-		,"assuming that the Ti-48(N,P) is the only contributing"
+		,"assuming that the Ti-48(n,p) is the only contributing"
 		,"reaction."]
 	}
       ]
@@ -621,8 +682,24 @@
 			,{"Type":"DG", "Energy":[1312.0], "Intensity":1.0}]}]
 	}
       ]
+     ,"MISC-COL":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"MISC"}]
+	,"x4freetext":[" Neutron flux density, 10**6 1/cm**2/sec."
+		,"       Average of two measurements."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180316A", "date":"20180316", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Instead of one REACTION code presented"
+		,"as sum of reactions using different targets (Ti-0 ->"
+		," Ti-47 and Ti-48).  MISC and MISC-ERR were added."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":4, "nrows":15
+    ,"DATA":{"ncols":6, "nrows":15
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
@@ -636,37 +713,43 @@
       ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ,{"icol":4, "header":"MISC", "units":"SEE TEXT", "pointer":" "
+	,"headerHelp":"Miscellaneous Information, defined under MISC-COL.", "pFlag":"0000000"
+	,"unitsHelp":"rare units. See `MISC-COL`","familyCode":"","convFc":1.0,"basicUnits":"SEE TEXT"}
+      ,{"icol":5, "header":"MISC-ERR", "units":"SEE TEXT", "pointer":" "
+	,"headerHelp":"Error in miscellaneous value", "pFlag":"0000000"
+	,"unitsHelp":"rare units. See `MISC-COL`","familyCode":"","convFc":1.0,"basicUnits":"SEE TEXT"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
-	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ,"MISC"      ,"MISC-ERR"  ]
+	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ,"SEE TEXT"  ,"SEE TEXT"  ]
+	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [12.59,0.22,57.6,3.5]
-	,[12.64,0.21,58.8,3.5]
-	,[13.39,0.3,65,3.9]
-	,[13.43,0.3,63.4,3.8]
-	,[14.36,0.36,68.7,4.1]
-	,[14.39,0.35,67.7,4.1]
-	,[15.82,0.37,64,3.8]
-	,[15.84,0.38,62.5,3.7]
-	,[16.9,0.37,56.5,3.4]
-	,[16.96,0.37,55.2,3.3]
-	,[17.92,0.35,51.4,3.1]
-	,[17.99,0.35,50.6,3.1]
-	,[18.81,0.26,46.1,2.8]
-	,[18.88,0.25,44.7,2.7]
-	,[19.58,0.23,43.9,2.6]]}
+	 [12.59,0.22,57.6,3.5,0.276,0.008]
+	,[12.64,0.21,58.8,3.5,0.254,0.007]
+	,[13.39,0.3,65,3.9,0.265,0.007]
+	,[13.43,0.3,63.4,3.8,0.252,0.007]
+	,[14.36,0.36,68.7,4.1,0.277,0.007]
+	,[14.39,0.35,67.7,4.1,0.267,0.007]
+	,[15.82,0.37,64,3.8,0.261,0.008]
+	,[15.84,0.38,62.5,3.7,0.274,0.008]
+	,[16.9,0.37,56.5,3.4,0.338,0.01]
+	,[16.96,0.37,55.2,3.3,0.368,0.011]
+	,[17.92,0.35,51.4,3.1,0.408,0.012]
+	,[17.99,0.35,50.6,3.1,0.436,0.012]
+	,[18.81,0.26,46.1,2.8,0.509,0.014]
+	,[18.88,0.25,44.7,2.7,0.532,0.015]
+	,[19.58,0.23,43.9,2.6,0.731,0.022]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22763004", "Pointer":" "
- ,"Subent":"22763004", "compiled":20090215
+ ,"Subent":"22763004", "compiled":20180316
  ,"year1":1991, "author1ini":"N.I.", "author1":"Molla"
- ,"zTarg1":22, "targ1":"Ti-0", "proj1":"n", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
+ ,"zTarg1":22, "targ1":"Ti-48", "proj1":"n", "emis1":"P", "MF":503, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"22-TI-0(N,X)21-SC-48,,SIG"
+ ,"reacode":"(22-TI-48(N,P)21-SC-48,,SIG)+(22-TI-49(N,X)21-SC-48,,SIG,,RAB)"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":7
  ,"lx4data":15
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -707,6 +790,20 @@
 	,0.35,0.35,0.26,0.25,0.23]
     ,"dat1":[2.2e+5,2.1e+5,3.0e+5,3.0e+5,3.6e+5,3.5e+5,3.7e+5,3.8e+5,3.7e+5,3.7e+5
 	,3.5e+5,3.5e+5,2.6e+5,2.5e+5,2.3e+5]}
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"SEE TEXT", "basicUnits":"SEE TEXT"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.276,0.254,0.265,0.252,0.277,0.267,0.261,0.274,0.338,0.368
+	,0.408,0.436,0.509,0.532,0.731]
+   ,"dat1eq":true}
+  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"SEE TEXT", "basicUnits":"SEE TEXT"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.008,0.007,0.007,0.007,0.007,0.007,0.008,0.008,0.01,0.011
+	,0.012,0.012,0.014,0.015,0.022]
+   ,"dat1eq":true}
   ]
  ,"wc5data":2
  ,"lc5data":15
