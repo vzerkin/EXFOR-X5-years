@@ -1,9 +1,9 @@
-  {"ENTRY":"S0073", "updated":20130529, "TransID":"S017", "TransDate":20131018, "CenterID":"CNDC", "Center":"China Nuclear Data Center, Beijing, China"
+  {"ENTRY":"S0073", "updated":20180523, "TransID":"S024", "TransDate":20180629, "CenterID":"CNDC", "Center":"China Nuclear Data Center, Beijing, China"
    ,"y1":2012,"a1":"Jiang Li-Yang+","r1":"J,CST,46,1025,2012"
    ,"ref":"Jour: Atomic Energy Science and Technology, Vol.46, Issue.9, p.1025 (2012)"
    ,"title":"Measurement of neutron yield and angular distribution of 9Be(d,n)10B reaction between 100 keV and 500 keV"
    ,"x4subents":[
-   {"SUBENT":"S0073001", "isub":1, "compiled":20130529, "TransID":"S017", "TransDate":20131018
+   {"SUBENT":"S0073001", "isub":1, "compiled":20180523, "TransID":"S024", "TransDate":20180629
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -54,22 +54,26 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T", "max":"5."
+	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
-	,"x4freetext":[" The total uncertainty is around 5%."]
+	,"x4freetext":["      The total uncertainty           (~5%)"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-1", "max":"2."
 	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" The efficiency uncertainty of BF3 is less"
-		,"than 2%."]
+	,"x4freetext":["  The BF3 efficiency uncertainty  (<2%)"]
 	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130529C", "date":"20130529", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
-	,"x4freetext":[" Compiled by CHEN Guochang (CNDC)."]
+	,"x4freetext":[" Compiled by CHEN Guochang (CNDC)"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180523A", "date":"20180523", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. ERR-ANALYS corrected."]
 	}
       ]
     }
@@ -152,8 +156,8 @@
  ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
  ,"ReactionType":"TDA", "quant":"TTD", "quantExpan":"Part.mult.f.thick targ.d/dA per electric charge"
  ,"reacode":"4-BE-9(D,N)5-B-10,,MLT/DA,,TT/CH"
- ,"compNotes":[]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-1,,2.)        ADDED AS COMMON:ERR-1,PER-CENT=1.0%"]
+ ,"wx4data":5
  ,"lx4data":11
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -170,7 +174,13 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":5
     ,"com1":5}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -178,7 +188,7 @@
 	,500]
     ,"dat1":[1.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,3.0e+5,4.0e+5,5.0e+5,5.0e+5,5.0e+5
 	,5.0e+5]}
-  ,{"ivar":3, "cvar":"x2", "fam":"ANG", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"x2", "fam":"ANG", "ifComm":false, "ifCM":false
     ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X2.Value", "dataType":"61", "rank":2.1
     ,"expansion":"Angle: angle"
@@ -195,7 +205,9 @@
       ,"y":[1.872e+7,3.6e+7,2.8044e+7,2.79e+7,3.1212e+7,1.9368e+8,7.596e+8,1.9728e+9,1.9548e+9,1.9728e+9
 	,1.872e+9]
       ,"dy":[9.36e+5,1.8e+6,1.4022e+6,1.395e+6,1.5606e+6,9.684e+6,3.798e+7,9.864e+7,9.774e+7,9.864e+7
-	,9.36e+7]   }
+	,9.36e+7]
+      ,"dysys":[1.872e+5,3.6e+5,2.8044e+5,2.79e+5,3.1212e+5,1.9368e+6,7.596e+6,1.9728e+7,1.9548e+7,1.9728e+7
+	,1.872e+7]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -286,8 +298,8 @@
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Multiplicity for thick target per elect. charge"
  ,"reacode":"4-BE-9(D,N)5-B-10,,MLT,,TT/CH"
- ,"compNotes":[]
- ,"wx4data":3
+ ,"compNotes":["ERR-ANALYS:(ERR-1,,2.)        ADDED AS COMMON:ERR-1,PER-CENT=1.0%"]
+ ,"wx4data":4
  ,"lx4data":5
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -302,7 +314,13 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":5
     ,"com1":5}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -316,7 +334,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[2.2608e+8,4.284e+8,2.2752e+9,8.82e+9,2.2752e+10]
-      ,"dy":[1.1304e+7,2.142e+7,1.1376e+8,4.41e+8,1.1376e+9]   }
+      ,"dy":[1.1304e+7,2.142e+7,1.1376e+8,4.41e+8,1.1376e+9]
+      ,"dysys":[2.2608e+6,4.284e+6,2.2752e+7,8.82e+7,2.2752e+8]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
