@@ -1,9 +1,9 @@
-  {"ENTRY":"A0072", "updated":20080625, "TransID":"A063", "TransDate":20080901, "CenterID":"CAJaD", "Center":"Russian Nuclear Structure and Reaction Data Centre, Kurchatov Institute, Moscow, Russia"
+  {"ENTRY":"A0072", "updated":20180613, "TransID":"A090", "TransDate":20180917, "CenterID":"CAJaD", "Center":"Russian Nuclear Structure and Reaction Data Centre, Kurchatov Institute, Moscow, Russia"
    ,"y1":1980,"a1":"A.E.Antropov+","r1":"C,80LENGRD,,316,1980"
    ,"ref":"Conf: 30.Conf.Nucl.Spectr.and Nucl.Struct.,Leningrad 1980, p.316 (1980)"
    ,"title":"Measurement of total cross sections for (p,n) reactions for medium atomic weight nuclei at proton energy 6 MeV"
    ,"x4subents":[
-   {"SUBENT":"A0072001", "isub":1, "compiled":20080625, "TransID":"A063", "TransDate":20080901
+   {"SUBENT":"A0072001", "isub":1, "compiled":20180613, "TransID":"A090", "TransDate":20180917
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -24,10 +24,10 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"C,80LENGRD,,316,198003","stdFileName":"C,80LENGRD,,316,1980"
+	,"x4codes":[{"code":"C,80LENGRD,,316,1980","stdFileName":"C,80LENGRD,,316,1980"
 		,"year":1980,"typ":"C","ref":"C,80LENGRD"
 		,"shortRef":"Conf: 30.Conf.Nucl.Spectr.and Nucl.Struct.,Leningrad 1980, p.316 (1980)"}]
-	,"x4freetext":["  in russian only."]
+	,"x4freetext":["  in Russian only."]
 	}
       ]
      ,"INSTITUTE":[
@@ -50,18 +50,28 @@
 	    ,{"code":"4RUSSUL", "dict":"INSTITUTE", "idict":3,"hlp":"Gosudarstvennyi Univ. (State Univ.), St.Petersburg, Russia"}]
 	}
       ]
-     ,"ANALYSIS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"AREA", "dict":"ANALYSIS", "idict":23,"hlp":"Area analysis"}]
-	}
-      ]
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"GELI", "dict":"DETECTOR", "idict":22,"hlp":"Germanium-Lithium detector"}]
-	,"x4freetext":[".Volume=22 cm**3,resolution=4.5 keV(g-rays of"
-		,"Co-60). Relative efficiency was measured by ra-226"
+	,"x4freetext":[".Volume=22 cm**3,resolution=4.5 keV(gamma-rays of"
+		,"Co-60). Relative efficiency was measured by Ra-226"
 		,"source. Absolute efficiency was measured by standard"
 		,"set sources."]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"ERR-1"
+	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[". Average uncertainty of detector efficiency."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from the text of 80LENGRD,,316,1980"]
 	}
       ]
      ,"HISTORY":[
@@ -73,14 +83,13 @@
 	,"x4code":{"code":"20080618A", "date":"20080618", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" BIB section updated"
-		," Corrections were made according new exfor rules."]
+		," Corrections were made according new EXFOR rules."]
 	}
-      ]
-     ,"ERR-ANALYS":[
-	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
-	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[". Average uncertainty of detector efficiency."]
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180613U", "date":"20180613", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: Small correction in author`s list."
+		,"STATUS added. ANALYSIS deleted. DATA-ERR -> ERR-1."]
 	}
       ]
     }
@@ -89,12 +98,12 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":1, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA-ERR"  ]
+	 ["EN"        ,"ERR-1"     ]
 	,["MEV"       ,"PER-CENT"  ]
 	,[" "         ," "         ]]
       ,"data":[
@@ -161,7 +170,7 @@
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"24-CR-52(P,N)25-MN-52,,SIG"
- ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
+ ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":1
  ,"x4data":[
@@ -172,8 +181,8 @@
     ,"dat0":[9]
     ,"dat1":[0.009]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":8
     ,"com1":8}
@@ -256,7 +265,7 @@
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"26-FE-57(P,N)27-CO-57,,SIG"
- ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
+ ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":1
  ,"x4data":[
@@ -267,8 +276,8 @@
     ,"dat0":[32]
     ,"dat1":[0.032]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":8
     ,"com1":8}
@@ -351,7 +360,7 @@
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"28-NI-62(P,N)29-CU-62,,SIG"
- ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
+ ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":1
  ,"x4data":[
@@ -362,8 +371,8 @@
     ,"dat0":[9]
     ,"dat1":[0.009]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":8
     ,"com1":8}
@@ -446,7 +455,7 @@
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"29-CU-63(P,N)30-ZN-63,,SIG"
- ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
+ ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":1
  ,"x4data":[
@@ -457,8 +466,8 @@
     ,"dat0":[212]
     ,"dat1":[0.212]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":8
     ,"com1":8}
@@ -541,7 +550,7 @@
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"29-CU-65(P,N)30-ZN-65,,SIG"
- ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
+ ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":1
  ,"x4data":[
@@ -552,8 +561,8 @@
     ,"dat0":[358]
     ,"dat1":[0.358]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":8
     ,"com1":8}
