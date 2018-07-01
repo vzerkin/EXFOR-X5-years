@@ -1,9 +1,9 @@
-  {"ENTRY":"F0900", "updated":20130709, "TransID":"F052", "TransDate":20140206, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
+  {"ENTRY":"F0900", "updated":20180702, "TransID":"F068", "TransDate":20180927, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
    ,"y1":1970,"a1":"V.S.Siksin+","r1":"J,YF,12,15,1970"
    ,"ref":"Jour: Yadernaya Fizika, Vol.12, p.15 (1970)"
    ,"title":"Differential cross sections of proton elastic scattering on Be nuclei and the total cross section of reaction 9Be(p,n)9B near the threshold."
    ,"x4subents":[
-   {"SUBENT":"F0900001", "isub":1, "compiled":20130709, "TransID":"F052", "TransDate":20140206
+   {"SUBENT":"F0900001", "isub":1, "compiled":20180702, "TransID":"F068", "TransDate":20180927
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -83,24 +83,9 @@
 	,"x4freetext":["     Error of absolutization"]
 	}
 	,{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
-	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":["  Error from the graphic bars"]
-	}
-	,{"x4pointer":" "
 	,"x4code":{"header":"EN-ERR"
 	     ,"headerHelp":"Uncertainty in incident projectile energy"}
 	,"x4freetext":["    Accuracy of the proton energy measurement"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"EN-ERR-DIG"
-	     ,"headerHelp":"Digitizing error of incident particle energy"}
-	,"x4freetext":["Energy digitizing error"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-DIG"
-	     ,"headerHelp":"Digitizing error (of DATA)"}
-	,"x4freetext":["   Data digitizing error"]
 	}
       ]
      ,"HISTORY":[
@@ -114,6 +99,12 @@
 	,"x4freetext":[" FACILITY was corrected. Data in sub 002"
 		,"were taken out from F0121003. Data in sub 003 were"
 		,"redigitized."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180702A", "date":"20180702", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Reaction was changed in sub 002. Error"
+		,"description was changed."]
 	}
       ]
     }
@@ -130,23 +121,23 @@
       ,"data":[
 	 [0.05]]}
    }
-  ,{"SUBENT":"F0900002", "isub":2, "compiled":20130709, "TransID":"F052", "TransDate":20140206
+  ,{"SUBENT":"F0900002", "isub":2, "compiled":20180702, "TransID":"F068", "TransDate":20180927
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"4-BE-9(P,N)5-B-9,,DA"
-	    ,"c4reac":"(P,N),DA"
+	,"x4code":{"code":"4-BE-9(P,EL)4-BE-9,,DA"
+	    ,"c4reac":"(P,EL),DA"
 	    ,"combi":"a"
 	    ,"MF":4
-	    ,"MT":50
+	    ,"MT":2
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"4-BE-9(P,N)5-B-9,,DA"
-		,"Reac":"P,N"
+	    {"code":"4-BE-9(P,EL)4-BE-9,,DA"
+		,"Reac":"P,EL"
 		,"SF1":"4-BE-9","Targ":{"code":"4-BE-9","nam":"Be-9","ZA":4009}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"N"
-		,"SF4":"5-B-9","Prod":{"code":"5-B-9","nam":"B-9","ZA":5009}
+		,"SF3":"EL","procHlp":"Elastic scattering"
+		,"SF4":"4-BE-9","Prod":{"code":"4-BE-9","nam":"Be-9","ZA":4009}
 		,"SF6":"DA"
 		,"SF58":",DA","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Differential c/s with respect to angle"
 	    }]}
@@ -154,12 +145,14 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["For the angle of 45 degr. only the errors affecting"
-		,"the relative course of a curve (except absolutization"
-		,"error) are given in the graphic bars. For 135 degr."
-		,"angle the error affecting the relative course of a"
-		,"curve was ~8.5% and for 83.5 degr. angle it was ~3.5%."]
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" For the angle of 45 degr. only the errors"
+		,"affecting the relative course of a curve (except"
+		,"absolutization error) are given in the graphic bars."
+		,"For 135 degr. angle the error affecting the relative"
+		,"course of a curve was ~8.5% and for 83.5 degr. angle"
+		,"it was ~3.5%."]
 	}
       ]
      ,"STATUS":[
@@ -770,12 +763,12 @@
 	,[135,2.1096,0.0955,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"F0900002", "Pointer":" "
- ,"Subent":"F0900002", "compiled":20130709
+ ,"Subent":"F0900002", "compiled":20180702
  ,"year1":1970, "author1ini":"V.S.", "author1":"Siksin"
- ,"zTarg1":4, "targ1":"Be-9", "proj1":"p", "emis1":"N", "MF":4, "MT":50, "nExpectedArgs":2
+ ,"zTarg1":4, "targ1":"Be-9", "proj1":"p", "emis1":"EL", "MF":4, "MT":2, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
  ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
- ,"reacode":"4-BE-9(P,N)5-B-9,,DA"
+ ,"reacode":"4-BE-9(P,EL)4-BE-9,,DA"
  ,"compNotes":["Ignored column:ERR-DIG,B/SR (digitizing error)"
 	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
  ,"wx4data":8
@@ -1458,7 +1451,7 @@
 }
    ]
    }
-  ,{"SUBENT":"F0900003", "isub":3, "compiled":20130709, "TransID":"F052", "TransDate":20140206
+  ,{"SUBENT":"F0900003", "isub":3, "compiled":20180702, "TransID":"F068", "TransDate":20180927
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1482,11 +1475,12 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Only the errors affecting the relative course of a"
-		,"curve are given in the graphic bars. They include"
-		,"statistical error and uncertainty in proton current"
-		,"definition."]
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" Only the errors affecting the relative"
+		,"course of a curve are given in the graphic bars. They"
+		,"include statistical error and uncertainty in proton"
+		,"current definition."]
 	}
       ]
      ,"STATUS":[
@@ -1621,7 +1615,7 @@
 	,[2.109,45.322,4.204]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"F0900003", "Pointer":" "
- ,"Subent":"F0900003", "compiled":20130709
+ ,"Subent":"F0900003", "compiled":20180702
  ,"year1":1970, "author1ini":"V.S.", "author1":"Siksin"
  ,"zTarg1":4, "targ1":"Be-9", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
