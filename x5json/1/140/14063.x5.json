@@ -1,9 +1,9 @@
-  {"ENTRY":"14063", "updated":20051214, "TransID":"1339", "TransDate":20060314, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14063", "updated":20180818, "TransID":"1443", "TransDate":20181021, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1960,"a1":"P.C.Stevenson+","r1":"J,PR,117,186,1960"
    ,"ref":"Jour: Physical Review, Vol.117, p.186 (1960)"
    ,"title":"Calorimetric Determination of the Average Total Kinetic Energy of Fragments from Fission of U235 and U238 by 14-Mev Neutrons"
    ,"x4subents":[
-   {"SUBENT":"14063001", "isub":1, "compiled":20051214, "TransID":"1339", "TransDate":20060314
+   {"SUBENT":"14063001", "isub":1, "compiled":20180818, "TransID":"1443", "TransDate":20181021
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -21,7 +21,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"ini":"P.C.","nam":"Stevenson"}
 	    ,{"ini":"H.G.","nam":"Hicks"}
-	    ,{"ini":"J.C.","nam":"Armstrong"}
+	    ,{"ini":"J.C.","nam":"Armstrong Jr"}
 	    ,{"ini":"S.R.","nam":"Gunn"}]
 	}
       ]
@@ -35,7 +35,7 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"ACCEL", "dict":"FACILITY", "idict":18,"hlp":"Accelerator"}
+	,"x4codes":[{"code":"CCW", "dict":"FACILITY", "idict":18,"hlp":"Cockcroft-Walton accelerator"}
 	    ,{"code":"1USALRL", "dict":"INSTITUTE", "idict":3,"hlp":"Lawrence Livermore National Laboratory, Livermore, CA, United States of America"}]
 	,"x4freetext":[" Cockcroft-Walton accelerator"]
 	}
@@ -43,21 +43,14 @@
      ,"INC-SOURCE":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"D-T", "dict":"INC-SOURCE", "idict":19,"hlp":"3H(d,n)"}]
-	,"x4freetext":[" Nominal 14 MeV neutron"]
+	,"x4freetext":[" Nominal 14 MeV neutrons"]
 	}
       ]
      ,"METHOD":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"TOF", "dict":"METHOD", "idict":21,"hlp":"Time-of-flight"}]
-	,"x4freetext":[" Number of fissions determined by a 99Mo radiochemical"
-		," analysis"]
-	}
-      ]
-     ,"DECAY-DATA":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"42-MO-99", "t12":66.0, "t12units":"HR", "t12sec":237600.0
-	, "Radiations":[]}]
-	,"x4freetext":["  Half-life of 66.00 +/- 0.15 hr."]
+	,"x4code":null
+	,"x4freetext":["Number of fissions determined by a 99Mo radiochemical"
+		,"analysis"]
 	}
       ]
      ,"DETECTOR":[
@@ -67,11 +60,6 @@
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"NAICR", "dict":"DETECTOR", "idict":22,"hlp":"Sodium-Iodide crystal"}]
-	}
-      ]
-     ,"PART-DET":[
-	{"x4pointer":" "
-	,"x4codes":["N"]
 	}
       ]
      ,"SAMPLE":[
@@ -93,6 +81,12 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180813A", "date":"20180813", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION in subs.2,3 corrected, minor"
+		," BIB changes"]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
@@ -108,83 +102,110 @@
       ,"data":[
 	 [14]]}
    }
-  ,{"SUBENT":"14063002", "isub":2, "compiled":20051214, "TransID":"1339", "TransDate":20060314
+  ,{"SUBENT":"14063002", "isub":2, "compiled":20180818, "TransID":"1443", "TransDate":20181021
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-235(N,F)42-MO-99,SEC,FY"
-	    ,"c4reac":"(N,F)SEC,FY"
+	,"x4code":{"code":"92-U-235(N,F)42-MO-99,CUM,FY"
+	    ,"c4reac":"(N,F)CUM,FY"
 	    ,"combi":"a"
 	    ,"MF":8
-	    ,"MT":454
+	    ,"MT":459
 	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"92-U-235(N,F)42-MO-99,SEC,FY"
+	    {"code":"92-U-235(N,F)42-MO-99,CUM,FY"
 		,"Reac":"N,F"
 		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF4":"42-MO-99","Prod":{"code":"42-MO-99","nam":"Mo-99","ZA":42099}
-		,"SF5":"SEC"
+		,"SF5":"CUM"
 		,"SF6":"FY"
-		,"SF58":"SEC,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Post-neutron-emiss.fission-prod.yld.(mass yield)"
+		,"SF58":"CUM,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Cumulative fission-product yield"
 	    }]}
-	,"x4freetext":[" Fission yield after neutron emission"]
+	}
+      ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":{"Nucl":"92-U-235","ENR":0.93}
+	,"x4freetext":[" Approximate values"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"92-U-234","ENR":0.01}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"92-U-238","ENR":0.06}
+	}
+      ]
+     ,"DECAY-DATA":[
+	{"x4pointer":" "
+	,"x4codes":[{"Nucl":"42-MO-99", "t12":66.0, "t12units":"HR", "t12sec":237600.0
+	, "Radiations":[ {"Type":"DG"}]}]
+	,"x4freetext":["  Half-life of 66.00 +/- 0.15 hr."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Total uncertainty"]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from the article"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from the article, p.188 and abstract"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180813A", "date":"20180813", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF5 changed to CUM"]
 	}
       ]
     }
     ,"DATA":{"ncols":2, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"PRT/FIS", "pointer":" "
+       {"icol":0, "header":"DATA", "units":"PC/FIS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
-      ,{"icol":1, "header":"ERR-T", "units":"PRT/FIS", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
-	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+	,"unitsHelp":"particles per 100 fissions","familyCode":"FY","convFc":0.01,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PC/FIS", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"particles per 100 fissions","familyCode":"FY","convFc":0.01,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"ERR-T"     ]
-	,["PRT/FIS"   ,"PRT/FIS"   ]
+	 ["DATA"      ,"DATA-ERR"  ]
+	,["PC/FIS"    ,"PC/FIS"    ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [0.0501,0.0015]]}
+	 [5.01,0.15]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14063002", "Pointer":" "
- ,"Subent":"14063002", "compiled":20051214
+ ,"Subent":"14063002", "compiled":20180818
  ,"year1":1960, "author1ini":"P.C.", "author1":"Stevenson"
- ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":8, "MT":454, "nExpectedArgs":2
+ ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":8, "MT":459, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
- ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Post-neutron-emiss.fission-prod.yld.(mass yield)"
- ,"reacode":"92-U-235(N,F)42-MO-99,SEC,FY"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Cumulative fission-product yield"
+ ,"reacode":"92-U-235(N,F)42-MO-99,CUM,FY"
  ,"compNotes":[]
  ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"PRT/FIS", "basicUnits":"PART/FIS"
+    ,"header":"DATA", "units":"PC/FIS", "basicUnits":"PART/FIS"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[0.0501]
-   ,"dat1eq":true}
+    ,"dat0":[5.01]
+    ,"dat1":[0.0501]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"PRT/FIS", "basicUnits":"PART/FIS"
+    ,"header":"DATA-ERR", "units":"PC/FIS", "basicUnits":"PART/FIS"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[0.0015]
-   ,"dat1eq":true}
+    ,"dat0":[0.15]
+    ,"dat1":[0.0015]}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -226,83 +247,104 @@
 }
    ]
    }
-  ,{"SUBENT":"14063003", "isub":3, "compiled":20051214, "TransID":"1339", "TransDate":20060314
+  ,{"SUBENT":"14063003", "isub":3, "compiled":20180818, "TransID":"1443", "TransDate":20181021
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-238(N,F)42-MO-99,SEC,FY"
-	    ,"c4reac":"(N,F)SEC,FY"
+	,"x4code":{"code":"92-U-238(N,F)42-MO-99,CUM,FY"
+	    ,"c4reac":"(N,F)CUM,FY"
 	    ,"combi":"a"
 	    ,"MF":8
-	    ,"MT":454
+	    ,"MT":459
 	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"92-U-238(N,F)42-MO-99,SEC,FY"
+	    {"code":"92-U-238(N,F)42-MO-99,CUM,FY"
 		,"Reac":"N,F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF4":"42-MO-99","Prod":{"code":"42-MO-99","nam":"Mo-99","ZA":42099}
-		,"SF5":"SEC"
+		,"SF5":"CUM"
 		,"SF6":"FY"
-		,"SF58":"SEC,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Post-neutron-emiss.fission-prod.yld.(mass yield)"
+		,"SF58":"CUM,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Cumulative fission-product yield"
 	    }]}
-	,"x4freetext":[" Fission yield after neutron emission"]
+	}
+      ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Natural U"]
+	}
+      ]
+     ,"DECAY-DATA":[
+	{"x4pointer":" "
+	,"x4codes":[{"Nucl":"42-MO-99", "t12":66.0, "t12units":"HR", "t12sec":237600.0
+	, "Radiations":[ {"Type":"DG"}]}]
+	,"x4freetext":["  Half-life of 66.00 +/- 0.15 hr."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Total uncertainty"]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from the article"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from the article, p.187 and abstract"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180813A", "date":"20180813", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF5 changed to CUM"]
 	}
       ]
     }
     ,"DATA":{"ncols":2, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"PRT/FIS", "pointer":" "
+       {"icol":0, "header":"DATA", "units":"PC/FIS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
-      ,{"icol":1, "header":"ERR-T", "units":"PRT/FIS", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
-	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+	,"unitsHelp":"particles per 100 fissions","familyCode":"FY","convFc":0.01,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PC/FIS", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"particles per 100 fissions","familyCode":"FY","convFc":0.01,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"ERR-T"     ]
-	,["PRT/FIS"   ,"PRT/FIS"   ]
+	 ["DATA"      ,"DATA-ERR"  ]
+	,["PC/FIS"    ,"PC/FIS"    ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [0.0586,0.0016]]}
+	 [5.86,0.16]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14063003", "Pointer":" "
- ,"Subent":"14063003", "compiled":20051214
+ ,"Subent":"14063003", "compiled":20180818
  ,"year1":1960, "author1ini":"P.C.", "author1":"Stevenson"
- ,"zTarg1":92, "targ1":"U-238", "proj1":"n", "emis1":"F", "MF":8, "MT":454, "nExpectedArgs":2
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"n", "emis1":"F", "MF":8, "MT":459, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
- ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Post-neutron-emiss.fission-prod.yld.(mass yield)"
- ,"reacode":"92-U-238(N,F)42-MO-99,SEC,FY"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Cumulative fission-product yield"
+ ,"reacode":"92-U-238(N,F)42-MO-99,CUM,FY"
  ,"compNotes":[]
  ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"PRT/FIS", "basicUnits":"PART/FIS"
+    ,"header":"DATA", "units":"PC/FIS", "basicUnits":"PART/FIS"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[0.0586]
-   ,"dat1eq":true}
+    ,"dat0":[5.86]
+    ,"dat1":[0.0586]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"PRT/FIS", "basicUnits":"PART/FIS"
+    ,"header":"DATA-ERR", "units":"PC/FIS", "basicUnits":"PART/FIS"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[0.0016]
-   ,"dat1eq":true}
+    ,"dat0":[0.16]
+    ,"dat1":[0.0016]}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -344,7 +386,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14063004", "isub":4, "compiled":20051214, "TransID":"1339", "TransDate":20060314
+  ,{"SUBENT":"14063004", "isub":4, "compiled":20180818, "TransID":"1443", "TransDate":20181021
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -366,17 +408,31 @@
 	    }]}
 	}
       ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":{"Nucl":"92-U-235","ENR":0.93}
+	,"x4freetext":[" Approximate values"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"92-U-234","ENR":0.01}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"92-U-238","ENR":0.06}
+	}
+      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Total uncertainty"]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from the article"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table V"]
 	}
       ]
     }
@@ -385,19 +441,19 @@
        {"icol":0, "header":"DATA", "units":"MEV", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"ERR-T", "units":"MEV", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":1, "header":"DATA-ERR", "units":"MEV", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"ERR-T"     ]
+	 ["DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [174,4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14063004", "Pointer":" "
- ,"Subent":"14063004", "compiled":20051214
+ ,"Subent":"14063004", "compiled":20180818
  ,"year1":1960, "author1ini":"P.C.", "author1":"Stevenson"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":1, "MT":458, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -414,7 +470,7 @@
     ,"dat0":[174]
     ,"dat1":[1.74e+8]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MEV", "basicUnits":"EV"
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[4]
@@ -443,7 +499,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14063005", "isub":5, "compiled":20051214, "TransID":"1339", "TransDate":20060314
+  ,{"SUBENT":"14063005", "isub":5, "compiled":20180818, "TransID":"1443", "TransDate":20181021
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -465,17 +521,25 @@
 	    }]}
 	}
       ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Natural U"]
+	}
+      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Total uncertainty"]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from the article"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table IV"]
 	}
       ]
     }
@@ -484,19 +548,19 @@
        {"icol":0, "header":"DATA", "units":"MEV", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"ERR-T", "units":"MEV", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":1, "header":"DATA-ERR", "units":"MEV", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"ERR-T"     ]
+	 ["DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [175,2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14063005", "Pointer":" "
- ,"Subent":"14063005", "compiled":20051214
+ ,"Subent":"14063005", "compiled":20180818
  ,"year1":1960, "author1ini":"P.C.", "author1":"Stevenson"
  ,"zTarg1":92, "targ1":"U-238", "proj1":"n", "emis1":"F", "MF":1, "MT":458, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -513,7 +577,7 @@
     ,"dat0":[175]
     ,"dat1":[1.75e+8]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MEV", "basicUnits":"EV"
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[2]
