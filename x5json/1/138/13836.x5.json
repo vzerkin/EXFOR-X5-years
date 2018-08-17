@@ -1,9 +1,9 @@
-  {"ENTRY":"13836", "updated":20020501, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"13836", "updated":20180818, "TransID":"1443", "TransDate":20181021, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1972,"a1":"T.von egidy+","r1":"J,PR/C,6,266,1972"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.6, Issue.1, p.266 (1972)"
    ,"title":"Nuclear Levels in 233Th Excited by Neutron Capture and (d,p) Reactions."
    ,"x4subents":[
-   {"SUBENT":"13836001", "isub":1, "compiled":20020501, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"13836001", "isub":1, "compiled":20180818, "TransID":"1443", "TransDate":20181021
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -27,7 +27,8 @@
 	    ,{"ini":"D.","nam":"Rabenstein"}
 	    ,{"ini":"J.R.","nam":"Erskine"}
 	    ,{"ini":"O.A.","nam":"Wasson"}
-	    ,{"ini":"R.E.Chrien.D.","nam":"Breitig"}
+	    ,{"ini":"R.E.","nam":"Chrien"}
+	    ,{"ini":"D.","nam":"Breitig"}
 	    ,{"ini":"R.P.","nam":"Sharma"}
 	    ,{"ini":"H.A.","nam":"Baader"}
 	    ,{"ini":"H.R.","nam":"Koch"}]
@@ -137,8 +138,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from Table II of reference."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table II of reference."]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"COREL,C0818001"
@@ -153,6 +156,11 @@
 	,"x4code":{"code":"20020426C", "date":"20020426", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" IS"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180807A", "date":"20180807", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION in sub.3 corrected"]
 	}
       ]
     }
@@ -383,24 +391,32 @@
 }
    ]
    }
-  ,{"SUBENT":"13836003", "isub":3, "compiled":20020501, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"13836003", "isub":3, "compiled":20180818, "TransID":"1443", "TransDate":20181021
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"90-TH-232(N,G),,SPC,,RES"
+	,"x4code":{"code":"90-TH-232(N,G)90-TH-233,,SPC,,RES"
 	    ,"c4reac":"(N,G),SPC,,RES"
 	    ,"combi":"a"
 	    ,"Units":"GAM/PART"
 	    ,"reacs": [
-	    {"code":"90-TH-232(N,G),,SPC,,RES"
+	    {"code":"90-TH-232(N,G)90-TH-233,,SPC,,RES"
 		,"Reac":"N,G"
 		,"SF1":"90-TH-232","Targ":{"code":"90-TH-232","nam":"Th-232","ZA":90232}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
+		,"SF4":"90-TH-233","Prod":{"code":"90-TH-233","nam":"Th-233","ZA":90233}
 		,"SF6":"SPC"
 		,"SF8":"RES"
 		,"SF58":",SPC,,RES","Quant":"SP","BasicUnits":"GAM/PART","QuantHlp":"Gamma spectrum at resonance"
 	    }]}
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180807A", "date":"20180807", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF4 added"]
 	}
       ]
     }
@@ -588,12 +604,12 @@
 	,[69.1,2841.5,null,5.47,1.37,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"13836003", "Pointer":" "
- ,"Subent":"13836003", "compiled":20020501
+ ,"Subent":"13836003", "compiled":20180818
  ,"year1":1972, "author1ini":"T.", "author1":"von egidy"
  ,"zTarg1":90, "targ1":"Th-232", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"01 3       ", "getYFormulaStr":"y=DATA(ENR,E2)"
  ,"ReactionType":"SPR", "quant":"SP", "quantExpan":"Gamma spectrum at resonance"
- ,"reacode":"90-TH-232(N,G),,SPC,,RES"
+ ,"reacode":"90-TH-232(N,G)90-TH-233,,SPC,,RES"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"
 	,"Ignored column:DATA-ERR,PRD/REAC  expected units:GAM/PART,PER-CENT"]
  ,"wx4data":6
