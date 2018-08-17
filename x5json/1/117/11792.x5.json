@@ -1,9 +1,9 @@
-  {"ENTRY":"11792", "updated":20020222, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"11792", "updated":20180818, "TransID":"1443", "TransDate":20181021, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1968,"a1":"W.V.Prestwich+","r1":"J,PR,174,1421,1968"
    ,"ref":"Jour: Physical Review, Vol.174, p.1421 (1968)"
-   ,"title":"Study of the Nb93(n(res),gamma) reaction."
+   ,"title":"Study of the Nb93(n(res),gamma)Nb94 reaction."
    ,"x4subents":[
-   {"SUBENT":"11792001", "isub":1, "compiled":20020222, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"11792001", "isub":1, "compiled":20180818, "TransID":"1443", "TransDate":20181021
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,7 +12,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,PR,174,1421,196810","stdFileName":"J,PR,174,1421,1968"
+	,"x4codes":[{"code":"J,PR,174,1421,1968","stdFileName":"J,PR,174,1421,1968"
 		,"year":1968,"typ":"J","ref":"J,PR","vol":"174","p":"1421"
 		,"shortRef":"Jour: Physical Review, Vol.174, p.1421 (1968)"}]
 	}
@@ -27,13 +27,17 @@
      ,"TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Study of the Nb93(n(res),gamma) reaction."]
+	,"x4freetext":["Study of the Nb93(n(res),gamma)Nb94 reaction."]
 	}
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"REAC", "dict":"FACILITY", "idict":18,"hlp":"Reactor"}
-	    ,{"code":"CHOPF", "dict":"FACILITY", "idict":18,"hlp":"Fast chopper"}]
+	    ,{"code":"1USAANL", "dict":"INSTITUTE", "idict":3,"hlp":"Argonne National Laboratory, Argonne, IL, United States of America"}]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"CHOPF", "dict":"FACILITY", "idict":18,"hlp":"Fast chopper"}
+	    ,{"code":"1USAANL", "dict":"INSTITUTE", "idict":3,"hlp":"Argonne National Laboratory, Argonne, IL, United States of America"}]
 	,"x4freetext":[" Fast chopper rotor speed of 15 000 rpm."]
 	}
       ]
@@ -72,10 +76,19 @@
 		,"  energy dependence of the counter efficiency."]
 	}
       ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on sources of uncertainties"]
+	}
+      ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from tables in reference."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from tables in reference."]
 	}
       ]
      ,"HISTORY":[
@@ -97,6 +110,12 @@
 	,"x4code":{"code":"20020202A", "date":"20020202", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Converted to new date formats"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180730A", "date":"20180730", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION in sub.4 corrected."
+		," Minor BIB changes."]
 	}
       ]
     }
@@ -604,21 +623,22 @@
 }
    ]
    }
-  ,{"SUBENT":"11792004", "isub":4, "compiled":20020222, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"11792004", "isub":4, "compiled":20180818, "TransID":"1443", "TransDate":20181021
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"41-NB-93(N,G),,SPC,,REL/RES"
+	,"x4code":{"code":"41-NB-93(N,G)41-NB-94,,SPC,,REL/RES"
 	    ,"c4reac":"(N,G),SPC,,REL/RES"
 	    ,"combi":"a"
 	    ,"MF":600
 	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"41-NB-93(N,G),,SPC,,REL/RES"
+	    {"code":"41-NB-93(N,G)41-NB-94,,SPC,,REL/RES"
 		,"Reac":"N,G"
 		,"SF1":"41-NB-93","Targ":{"code":"41-NB-93","nam":"Nb-93","ZA":41093}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
+		,"SF4":"41-NB-94","Prod":{"code":"41-NB-94","nam":"Nb-94","ZA":41094}
 		,"SF6":"SPC"
 		,"SF8":"REL/RES"
 		,"SF58":",SPC,,RES","Quant":"SP","BasicUnits":"ARB-UNITS","QuantHlp":"Gamma spectrum at resonance"
@@ -630,6 +650,11 @@
 	,"x4code":{"code":"20020222A", "date":"20020222", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Data added."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180730A", "date":"20180730", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION corrected"]
 	}
       ]
     }
@@ -675,12 +700,12 @@
 	,[5731,570,140]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"11792004", "Pointer":" "
- ,"Subent":"11792004", "compiled":20020222
+ ,"Subent":"11792004", "compiled":20180818
  ,"year1":1968, "author1ini":"W.V.", "author1":"Prestwich"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"G", "MF":600, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"01 3       ", "getYFormulaStr":"y=DATA(ENR,E2)"
  ,"ReactionType":"SPR", "quant":"SP", "quantExpan":"Gamma spectrum at resonance"
- ,"reacode":"41-NB-93(N,G),,SPC,,REL/RES"
+ ,"reacode":"41-NB-93(N,G)41-NB-94,,SPC,,REL/RES"
  ,"compNotes":[]
  ,"wx4data":5
  ,"lx4data":8
