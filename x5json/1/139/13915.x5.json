@@ -1,9 +1,9 @@
-  {"ENTRY":"13915", "updated":20041122, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"13915", "updated":20180818, "TransID":"1443", "TransDate":20181021, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1977,"a1":"R.E.Chrien+","r1":"J,PRL,39,911,1977"
    ,"ref":"Jour: Physical Review Letters, Vol.39, p.911 (1977)"
    ,"title":"Implications for Radiative-Strength Functions from Neutron Capture in 35Cl"
    ,"x4subents":[
-   {"SUBENT":"13915001", "isub":1, "compiled":20041122, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"13915001", "isub":1, "compiled":20180818, "TransID":"1443", "TransDate":20181021
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -13,7 +13,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,PRL,39,911,197710","stdFileName":"J,PRL,39,911,1977"
+	,"x4codes":[{"code":"J,PRL,39,911,1977","stdFileName":"J,PRL,39,911,1977"
 		,"year":1977,"typ":"J","ref":"J,PRL","vol":"39","p":"911"
 		,"shortRef":"Jour: Physical Review Letters, Vol.39, p.911 (1977)"}]
 	}
@@ -21,7 +21,7 @@
      ,"AUTHOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"ini":"R.E.","nam":"Chrien"}
-	    ,{"ini":"J.","nam":"Kopechy"}]
+	    ,{"ini":"J.","nam":"Kopecky"}]
 	}
       ]
      ,"TITLE":[
@@ -67,10 +67,16 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180811A", "date":"20180811", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION in sub.3 corrected."
+		," 2nd author`s name corrected."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"13915002", "isub":2, "compiled":20041122, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"13915002", "isub":2, "compiled":20180818, "TransID":"1443", "TransDate":20181021
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -112,8 +118,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from table I of the journal article"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from table I of the journal article"]
 	}
       ]
     }
@@ -134,13 +142,13 @@
        {"icol":0, "header":"E", "units":"KEV", "pointer":" "
 	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"PC/INC", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"PC/REAC", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"particles/100 incid.projectiles","familyCode":"YLD","convFc":0.01,"basicUnits":"GAM/PART"}
+	,"unitsHelp":"particles/100 reactions","familyCode":"MLT","convFc":0.01,"basicUnits":"PRD/REAC"}
       ]
       ,"datacols":[
 	 ["E"         ,"DATA"      ]
-	,["KEV"       ,"PC/INC"    ]
+	,["KEV"       ,"PC/REAC"   ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [8579,2.6]
@@ -159,7 +167,7 @@
 	,[4617,0.65]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"13915002", "Pointer":" "
- ,"Subent":"13915002", "compiled":20041122
+ ,"Subent":"13915002", "compiled":20180818
  ,"year1":1977, "author1ini":"R.E.", "author1":"Chrien"
  ,"zTarg1":17, "targ1":"Cl-35", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(SpE,E2)"
@@ -170,7 +178,7 @@
  ,"lx4data":14
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"PC/INC", "basicUnits":"GAM/PART"
+    ,"header":"DATA", "units":"PC/REAC", "basicUnits":"PRD/REAC"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[2.6,8.61,10,2.23,4.64,8.1,19.7,1.08,1.11,5.14
@@ -217,20 +225,21 @@
 }
    ]
    }
-  ,{"SUBENT":"13915003", "isub":3, "compiled":20041122, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"13915003", "isub":3, "compiled":20180818, "TransID":"1443", "TransDate":20181021
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"17-CL-35(N,G),,SPC,,RES"
+	,"x4code":{"code":"17-CL-35(N,G)17-CL-36,,SPC,,RES"
 	    ,"c4reac":"(N,G),SPC,,RES"
 	    ,"combi":"a"
 	    ,"Units":"GAM/PART"
 	    ,"reacs": [
-	    {"code":"17-CL-35(N,G),,SPC,,RES"
+	    {"code":"17-CL-35(N,G)17-CL-36,,SPC,,RES"
 		,"Reac":"N,G"
 		,"SF1":"17-CL-35","Targ":{"code":"17-CL-35","nam":"Cl-35","ZA":17035}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
+		,"SF4":"17-CL-36","Prod":{"code":"17-CL-36","nam":"Cl-36","ZA":17036}
 		,"SF6":"SPC"
 		,"SF8":"RES"
 		,"SF58":",SPC,,RES","Quant":"SP","BasicUnits":"GAM/PART","QuantHlp":"Gamma spectrum at resonance"
@@ -253,8 +262,17 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from table I of the journal article"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from table I of the journal article"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180811A", "date":"20180811", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF4 added"]
 	}
       ]
     }
@@ -275,19 +293,19 @@
        {"icol":0, "header":"E", "units":"KEV", "pointer":" "
 	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"PC/INC", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"PC/REAC", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"particles/100 incid.projectiles","familyCode":"YLD","convFc":0.01,"basicUnits":"GAM/PART"}
-      ,{"icol":2, "header":"DATA-MAX", "units":"PC/INC", "pointer":" "
+	,"unitsHelp":"particles/100 reactions","familyCode":"MLT","convFc":0.01,"basicUnits":"PRD/REAC"}
+      ,{"icol":2, "header":"DATA-MAX", "units":"PC/REAC", "pointer":" "
 	,"headerHelp":"Upper limit of quantity specified under REACTION", "pFlag":"0003000"
-	,"unitsHelp":"particles/100 incid.projectiles","familyCode":"YLD","convFc":0.01,"basicUnits":"GAM/PART"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"PC/INC", "pointer":" "
+	,"unitsHelp":"particles/100 reactions","familyCode":"MLT","convFc":0.01,"basicUnits":"PRD/REAC"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"PC/REAC", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"particles/100 incid.projectiles","familyCode":"YLD","convFc":0.01,"basicUnits":"GAM/PART"}
+	,"unitsHelp":"particles/100 reactions","familyCode":"MLT","convFc":0.01,"basicUnits":"PRD/REAC"}
       ]
       ,"datacols":[
 	 ["E"         ,"DATA"      ,"DATA-MAX"  ,"DATA-ERR"  ]
-	,["KEV"       ,"PC/INC"    ,"PC/INC"    ,"PC/INC"    ]
+	,["KEV"       ,"PC/REAC"   ,"PC/REAC"   ,"PC/REAC"   ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
 	 [8579,2.8,null,0.3]
@@ -306,18 +324,19 @@
 	,[4617,1.6,null,0.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"13915003", "Pointer":" "
- ,"Subent":"13915003", "compiled":20041122
+ ,"Subent":"13915003", "compiled":20180818
  ,"year1":1977, "author1ini":"R.E.", "author1":"Chrien"
  ,"zTarg1":17, "targ1":"Cl-35", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"01 3       ", "getYFormulaStr":"y=DATA(ENR,E2)"
  ,"ReactionType":"SPR", "quant":"SP", "quantExpan":"Gamma spectrum at resonance"
- ,"reacode":"17-CL-35(N,G),,SPC,,RES"
- ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
+ ,"reacode":"17-CL-35(N,G)17-CL-36,,SPC,,RES"
+ ,"compNotes":["Ignored column:DATA-ERR,PRD/REAC  expected units:GAM/PART,PER-CENT"
+	,"OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":5
  ,"lx4data":14
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"PC/INC", "basicUnits":"GAM/PART"
+    ,"header":"DATA", "units":"PC/REAC", "basicUnits":"PRD/REAC"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[2.8,7,0.4,0.6,4.2,14.4,20.4,0.3,1.3,3.6
@@ -325,7 +344,7 @@
     ,"dat1":[0.028,0.07,0.004,0.006,0.042,0.144,0.204,0.003,0.013,0.036
 	,0.019,0.028,null,0.016]}
   ,{"ivar":1, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-MAX", "units":"PC/INC", "basicUnits":"GAM/PART"
+    ,"header":"DATA-MAX", "units":"PC/REAC", "basicUnits":"PRD/REAC"
     ,"what":"Y.Max", "dataType":"21", "rank":0.3
     ,"expansion":"Data: data"
     ,"dat0":[null,null,null,null,null,null,null,null,null,null
@@ -333,7 +352,7 @@
     ,"dat1":[null,null,null,null,null,null,null,null,null,null
 	,null,null,0.003,null]}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"PC/INC", "basicUnits":"GAM/PART"
+    ,"header":"DATA-ERR", "units":"PC/REAC", "basicUnits":"PRD/REAC"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.3,0.5,0.2,0.3,1,1.5,3,0.2,0.4,0.3
@@ -363,8 +382,7 @@
       ,"expansion":"Data: data"
       ,"y":[0.028,0.07,0.004,0.006,0.042,0.144,0.204,0.003,0.013,0.036
 	,0.019,0.028,0.003,0.016]
-      ,"dy":[0.003,0.005,0.002,0.003,0.01,0.015,0.03,0.002,0.004,0.003
-	,0.003,0.008,null,0.002]   }
+   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"ENR", "ifCM":false, "units":"EV"
       ,"header":"ENR", "dataType":"32", "rank":1.0
       ,"expansion":"Resonance parameter: energy"
