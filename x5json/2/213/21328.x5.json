@@ -1,9 +1,9 @@
-  {"ENTRY":"21328", "updated":20170805, "TransID":"2263", "TransDate":20180123, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"21328", "updated":20180826, "TransID":"2270", "TransDate":20190220, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1968,"a1":"J.H.Towle","r1":"J,NP/A,117,657,1968"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.117, p.657 (1968)"
    ,"title":"Spins of V-51 levels from inelastic neutron scattering"
    ,"x4subents":[
-   {"SUBENT":"21328001", "isub":1, "compiled":20170805, "TransID":"2263", "TransDate":20180123
+   {"SUBENT":"21328001", "isub":1, "compiled":20180826, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -131,6 +131,11 @@
 		,"Ref. AWRE-CNR/PR10 deleted (not useful). Ref.65ANTWERP"
 		,"corrected. REL-REF added. Meaningless  zeros were"
 		,"deleted from the data. Refs update."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180826A", "date":"20180826", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code corrected in Subent 007."]
 	}
       ]
     }
@@ -973,26 +978,27 @@
 }
    ]
    }
-  ,{"SUBENT":"21328007", "isub":7, "compiled":20170805, "TransID":"2263", "TransDate":20180123
+  ,{"SUBENT":"21328007", "isub":7, "compiled":20180826, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"23-V-51(N,INL)23-V-51,PAR,SIG"
-	    ,"c4reac":"(N,INL)PAR,SIG"
+	,"x4code":{"code":"23-V-51(N,INL)23-V-51,PAR,DA,,4PI"
+	    ,"c4reac":"(N,INL)PAR,DA,,4PI"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":51
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"23-V-51(N,INL)23-V-51,PAR,SIG"
+	    {"code":"23-V-51(N,INL)23-V-51,PAR,DA,,4PI"
 		,"Reac":"N,INL"
 		,"SF1":"23-V-51","Targ":{"code":"23-V-51","nam":"V-51","ZA":23051}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"INL","procHlp":"Inelastic scattering"
 		,"SF4":"23-V-51","Prod":{"code":"23-V-51","nam":"V-51","ZA":23051}
 		,"SF5":"PAR"
-		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF6":"DA"
+		,"SF8":"4PI"
+		,"SF58":"PAR,DA,,4PI","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial diff. cross section d/dA * 4pi"
 	    }]}
 	,"x4freetext":[" Partial inelastic"
 		," cross section excitation functions."]
@@ -1012,10 +1018,30 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[" Data only given in curves, fig 5(a)."]
+	,"x4freetext":["  fig 5(a) from Nucl.Phys.A117(1968)657"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180826A", "date":"20180826", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF6=SIG -> DA, SF8=4PI in REACTION"
+		,"code. ANG=125. degr. added."]
 	}
       ]
     }
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"ANG", "units":"ADEG", "pointer":" "
+	,"headerHelp":"Angle, laboratory system", "pFlag":"1000000"
+	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
+      ]
+      ,"datacols":[
+	 ["ANG"       ]
+	,["ADEG"      ]
+	,[" "         ]]
+      ,"data":[
+	 [125]]}
     ,"DATA":{"ncols":4, "nrows":46
       ,"x4headers":[
        {"icol":0, "header":"E-LVL", "units":"MEV", "pointer":" "
@@ -1084,14 +1110,14 @@
 	,[1.81,3.8,200,30]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"21328007", "Pointer":" "
- ,"Subent":"21328007", "compiled":20170805
+ ,"Subent":"21328007", "compiled":20180826
  ,"year1":1968, "author1ini":"J.H.", "author1":"Towle"
- ,"zTarg1":23, "targ1":"V-51", "proj1":"n", "emis1":"INL", "MF":3, "MT":51, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"23-V-51(N,INL)23-V-51,PAR,SIG"
+ ,"zTarg1":23, "targ1":"V-51", "proj1":"n", "emis1":"INL", "MF":3, "MT":51, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
+ ,"ReactionType":"CP4", "quant":"CSP", "quantExpan":"Partial diff. cross section d/dA * 4pi"
+ ,"reacode":"23-V-51(N,INL)23-V-51,PAR,DA,,4PI"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":46
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1150,8 +1176,14 @@
 	,9.3e+5,9.3e+5,9.3e+5,9.3e+5,9.3e+5,9.3e+5,9.3e+5,1.61e+6,1.61e+6,1.61e+6
 	,1.61e+6,1.61e+6,1.61e+6,1.61e+6,1.61e+6,1.61e+6,1.61e+6,1.81e+6,1.81e+6,1.81e+6
 	,1.81e+6,1.81e+6,1.81e+6,1.81e+6,1.81e+6,1.81e+6]}
+  ,{"ivar":4, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":125
+    ,"com1":125}
   ]
- ,"wc5data":3
+ ,"wc5data":4
  ,"lc5data":46
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
@@ -1184,6 +1216,15 @@
 	,9.3e+5,9.3e+5,9.3e+5,9.3e+5,9.3e+5,9.3e+5,9.3e+5,1.61e+6,1.61e+6,1.61e+6
 	,1.61e+6,1.61e+6,1.61e+6,1.61e+6,1.61e+6,1.61e+6,1.61e+6,1.81e+6,1.81e+6,1.81e+6
 	,1.81e+6,1.81e+6,1.81e+6,1.81e+6,1.81e+6,1.81e+6]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
+      ,"expansion":"Angle: angle"
+      ,"x3":[125,125,125,125,125,125,125,125,125,125
+	,125,125,125,125,125,125,125,125,125,125
+	,125,125,125,125,125,125,125,125,125,125
+	,125,125,125,125,125,125,125,125,125,125
+	,125,125,125,125,125,125]
    }
  }
 }
