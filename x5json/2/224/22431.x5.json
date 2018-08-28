@@ -1,9 +1,9 @@
-  {"ENTRY":"22431", "updated":20121222, "TransID":"2234", "TransDate":20130718, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"22431", "updated":20180829, "TransID":"2270", "TransDate":20190220, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1997,"a1":"M.Igashira+","r1":"R,JAERI-C-98-003,253,1997"
    ,"ref":"Conf: JAERI Conference proceedings, No.98-003, p.253 (1997)"
    ,"title":"Measurements of Gamma-Rays from keV-Neutron Resonance Capture by Odd-Z Nuclei in the 2s-1d Shell Region"
    ,"x4subents":[
-   {"SUBENT":"22431001", "isub":1, "compiled":20121222, "TransID":"2234", "TransDate":20130718
+   {"SUBENT":"22431001", "isub":1, "compiled":20180829, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -28,7 +28,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"S,JAERI-C-98-003,253,199711","stdFileName":"R,JAERI-C-98-003,253,1997"
+	,"x4codes":[{"code":"S,JAERI-C-98-003,253,1997","stdFileName":"R,JAERI-C-98-003,253,1997"
 		,"year":1997,"typ":"S","ref":"R,JAERI-C-","no":"98-003","p":"253"
 		,"shortRef":"Conf: JAERI Conference proceedings, No.98-003, p.253 (1997)"}]
 	,"x4freetext":["  Main reference,"
@@ -109,27 +109,35 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" SD: Ref. JAERI-98-003 -> JAERI-C-98-003"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180829A", "date":"20180829", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code corrected in"
+		,"               Subents 002,003."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"22431002", "isub":2, "compiled":19991203, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"22431002", "isub":2, "compiled":20180829, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"9-F-19(N,G),,SPC,,RES/REL"
-	    ,"c4reac":"(N,G),SPC,,RES/REL"
+	,"x4code":{"code":"9-F-19(N,G)9-F-20,PAR,MLT,,RES/REL"
+	    ,"c4reac":"(N,G)PAR,MLT,,RES/REL"
 	    ,"combi":"a"
 	    ,"MF":600
 	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"9-F-19(N,G),,SPC,,RES/REL"
+	    {"code":"9-F-19(N,G)9-F-20,PAR,MLT,,RES/REL"
 		,"Reac":"N,G"
 		,"SF1":"9-F-19","Targ":{"code":"9-F-19","nam":"F-19","ZA":9019}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
-		,"SF6":"SPC"
+		,"SF4":"9-F-20","Prod":{"code":"9-F-20","nam":"F-20","ZA":9020}
+		,"SF5":"PAR"
+		,"SF6":"MLT"
 		,"SF8":"RES/REL"
-		,"SF58":",SPC,,RES","Quant":"SP","BasicUnits":"ARB-UNITS","QuantHlp":"Gamma spectrum at resonance"
+		,"SF58":"PAR,MLT,,RES","Quant":"MLT","BasicUnits":"ARB-UNITS","QuantHlp":"Partial multiplicity at resonance"
 	    }]}
 	,"x4freetext":[" Relative intensity"
 		,"     of primary gamma transitions from the resonance."]
@@ -137,8 +145,8 @@
       ]
      ,"EN-SEC":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::E-LVL-FIN,9-F-20"}
-	,"x4freetext":[" FINAL ENERGY OF GAMMA TRANSITION"]
+	,"x4code":{"code":"orig::E-LVL,9-F-20"}
+	,"x4freetext":[" Final energy of gamma transition"]
 	}
       ]
      ,"STATUS":[
@@ -146,7 +154,15 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":["  Data are taken from table 1 of main reference"]
+	,"x4freetext":["  Table 1 from JAERI-C-98-003,253,1997"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180829A", "date":"20180829", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=F-20; SF5=PAR added; SPC -> MLT in"
+		,"REACTION code. E-LVL-FIN -> E-LVL."]
 	}
       ]
     }
@@ -155,8 +171,8 @@
        {"icol":0, "header":"EN-RES", "units":"KEV", "pointer":" "
 	,"headerHelp":"Resonance energy", "pFlag":"1000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"E-LVL-FIN", "units":"MEV", "pointer":" "
-	,"headerHelp":"Final level of gamma transition", "pFlag":"1000000"
+      ,{"icol":1, "header":"E-LVL", "units":"MEV", "pointer":" "
+	,"headerHelp":"Level energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -172,7 +188,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN-RES"    ,"E-LVL-FIN" ,"DATA"      ,"DATA-ERR"  ,"SPIN J"    ,"PARITY"    ]
+	 ["EN-RES"    ,"E-LVL"     ,"DATA"      ,"DATA-ERR"  ,"SPIN J"    ,"PARITY"    ]
 	,["KEV"       ,"MEV"       ,"ARB-UNITS" ,"ARB-UNITS" ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -213,12 +229,12 @@
 	,[97,4.315,9.8,0.7,1,-1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22431002", "Pointer":" "
- ,"Subent":"22431002", "compiled":19991203
+ ,"Subent":"22431002", "compiled":20180829
  ,"year1":1997, "author1ini":"M.", "author1":"Igashira"
  ,"zTarg1":9, "targ1":"F-19", "proj1":"n", "emis1":"G", "MF":600, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"01 3       ", "getYFormulaStr":"y=DATA(ENR,LVL)"
- ,"ReactionType":"SPR", "quant":"SP", "quantExpan":"Gamma spectrum at resonance"
- ,"reacode":"9-F-19(N,G),,SPC,,RES/REL"
+ ,"ReactionType":"PZR", "quant":"MLT", "quantExpan":"Partial multiplicity at resonance"
+ ,"reacode":"9-F-19(N,G)9-F-20,PAR,MLT,,RES/REL"
  ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":35
@@ -272,7 +288,7 @@
 	,1,1,1,1,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"x2", "fam":"LVL", "ifComm":false, "ifCM":false
-    ,"header":"E-LVL-FIN", "units":"MEV", "basicUnits":"EV"
+    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"52", "rank":2.1
     ,"expansion":"Secondary energy: level energy"
     ,"dat0":[0,0.656,0.984,1.057,1.309,1.824,1.843,1.971,2.044,2.194
@@ -318,33 +334,36 @@
 }
    ]
    }
-  ,{"SUBENT":"22431003", "isub":3, "compiled":19991203, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"22431003", "isub":3, "compiled":20180829, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"13-AL-27(N,G),,SPC,,RES/REL"
-	    ,"c4reac":"(N,G),SPC,,RES/REL"
+	,"x4code":{"code":"13-AL-27(N,G)13-AL-28,PAR,MLT,,RES/REL"
+	    ,"c4reac":"(N,G)PAR,MLT,,RES/REL"
 	    ,"combi":"a"
 	    ,"MF":600
 	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"13-AL-27(N,G),,SPC,,RES/REL"
+	    {"code":"13-AL-27(N,G)13-AL-28,PAR,MLT,,RES/REL"
 		,"Reac":"N,G"
 		,"SF1":"13-AL-27","Targ":{"code":"13-AL-27","nam":"Al-27","ZA":13027}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
-		,"SF6":"SPC"
+		,"SF4":"13-AL-28","Prod":{"code":"13-AL-28","nam":"Al-28","ZA":13028}
+		,"SF5":"PAR"
+		,"SF6":"MLT"
 		,"SF8":"RES/REL"
-		,"SF58":",SPC,,RES","Quant":"SP","BasicUnits":"ARB-UNITS","QuantHlp":"Gamma spectrum at resonance"
+		,"SF58":"PAR,MLT,,RES","Quant":"MLT","BasicUnits":"ARB-UNITS","QuantHlp":"Partial multiplicity at resonance"
 	    }]}
-	,"x4freetext":[" Relative Intensity"
-		,"     of primary gamma transitions from the resonance."]
+	,"x4freetext":[" Relatative"
+		,"intensity of primary gamma transitions from the"
+		,"resonance."]
 	}
       ]
      ,"EN-SEC":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::E-LVL-FIN,13-AL-28"}
-	,"x4freetext":[" FINAL ENERGY OF GAMMA TRANSITION"]
+	,"x4code":{"code":"orig::E-LVL,13-AL-28"}
+	,"x4freetext":[" Final energy of gamma transition"]
 	}
       ]
      ,"STATUS":[
@@ -352,7 +371,15 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":["  Data are taken from table 2 of main reference"]
+	,"x4freetext":["  Table 2 from JAERI-C-98-003,253,1997"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180829A", "date":"20180829", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=Al-28;SF5=PAR added; SPC -> MLT in"
+		,"REACTION code. E-LVL-FIN -> E-LVL."]
 	}
       ]
     }
@@ -376,8 +403,8 @@
 	 [35,2,1]]}
     ,"DATA":{"ncols":3, "nrows":20
       ,"x4headers":[
-       {"icol":0, "header":"E-LVL-FIN", "units":"MEV", "pointer":" "
-	,"headerHelp":"Final level of gamma transition", "pFlag":"1000000"
+       {"icol":0, "header":"E-LVL", "units":"MEV", "pointer":" "
+	,"headerHelp":"Level energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -387,7 +414,7 @@
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E-LVL-FIN" ,"DATA"      ,"DATA-ERR"  ]
+	 ["E-LVL"     ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"ARB-UNITS" ,"ARB-UNITS" ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -413,12 +440,12 @@
 	,[5.442,0.8,0.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22431003", "Pointer":" "
- ,"Subent":"22431003", "compiled":19991203
+ ,"Subent":"22431003", "compiled":20180829
  ,"year1":1997, "author1ini":"M.", "author1":"Igashira"
  ,"zTarg1":13, "targ1":"Al-27", "proj1":"n", "emis1":"G", "MF":600, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"01 3       ", "getYFormulaStr":"y=DATA(ENR,LVL)"
- ,"ReactionType":"SPR", "quant":"SP", "quantExpan":"Gamma spectrum at resonance"
- ,"reacode":"13-AL-27(N,G),,SPC,,RES/REL"
+ ,"ReactionType":"PZR", "quant":"MLT", "quantExpan":"Partial multiplicity at resonance"
+ ,"reacode":"13-AL-27(N,G)13-AL-28,PAR,MLT,,RES/REL"
  ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":20
@@ -456,7 +483,7 @@
     ,"com0":2
     ,"com1":2}
   ,{"ivar":5, "cvar":"x2", "fam":"LVL", "ifComm":false, "ifCM":false
-    ,"header":"E-LVL-FIN", "units":"MEV", "basicUnits":"EV"
+    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"52", "rank":2.1
     ,"expansion":"Secondary energy: level energy"
     ,"dat0":[0,0.031,1.014,1.373,1.62,1.623,2.139,2.486,2.988,3.591
