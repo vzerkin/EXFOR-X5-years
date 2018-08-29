@@ -1,9 +1,9 @@
-  {"ENTRY":"23112", "updated":20101029, "TransID":"2223", "TransDate":20110208, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"23112", "updated":20180830, "TransID":"2270", "TransDate":20190220, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":2010,"a1":"B.L.Goldblum+","r1":"J,PR/C,81,054606,2010","doi1":"10.1103/PhysRevC.81.054606"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.81, p.054606 (2010)"
    ,"title":"Surrogate ratio methodology for the indirect determination of neutron capture cross sections."
    ,"x4subents":[
-   {"SUBENT":"23112001", "isub":1, "compiled":20101029, "TransID":"2223", "TransDate":20110208
+   {"SUBENT":"23112001", "isub":1, "compiled":20180830, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -73,11 +73,11 @@
 		,"shortRef":"Jour: Physical Review, Part C, Nuclear Physics, Vol.68, p.064306 (2003)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"I,,A.Schiller+,J,PR/C,68,064306,2001"
+	,"x4codes":[{"code":"I,,A.Schiller+,J,PR/C,63,021306,2001"
 		,"flag":{"code":"I", "help":" Reference to related data compiled in another entry"}
-		,"author1":"A.Schiller+","stdFileName":"J,PR_C,68,064306,2001"
-		,"year":2001,"typ":"J","ref":"J,PR/C","vol":"68","p":"064306"
-		,"shortRef":"Jour: Physical Review, Part C, Nuclear Physics, Vol.68, p.064306 (2001)"}]
+		,"author1":"A.Schiller+","stdFileName":"J,PR_C,63,021306,2001"
+		,"year":2001,"typ":"J","ref":"J,PR/C","vol":"63","p":"021306"
+		,"shortRef":"Jour: Physical Review, Part C, Nuclear Physics, Vol.63, p.021306 (2001)"}]
 	,"x4freetext":["  Ion beam details."]
 	}
 	,{"x4pointer":" "
@@ -181,10 +181,15 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" M.M."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180830U", "date":"20180830", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: ERR-ANALYS was updated in Subent 002."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"23112002", "isub":2, "compiled":20101029, "TransID":"2223", "TransDate":20110208
+  ,{"SUBENT":"23112002", "isub":2, "compiled":20180830, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -245,22 +250,22 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T", "min":"22."
+	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Statistical and systematical errors"
-		,"included:"]
+		,"included:"
+		," * Uncertainty of unfolding of CACTUS detector response"
+		,"function."
+		," * Uncertainty in energy identified as normalization"
+		,"point for gamma-decay probability."
+		," * Uncertainty in contributions to particle-gamma"
+		,"spectra due to target contaminants."]
 	}
 	,{"x4pointer":" "
-	,"x4code":{"header":"MONIT-ERR", "min":"20."
-	     ,"headerHelp":"Error in normalization value"}
+	,"x4code":{"header":"ERR-1", "min":"10.", "max":"20."
+	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
 	,"x4freetext":["Uncertainty of monitor reaction c-s as"
-		,"conservative estimate."
-		,"Uncertainty of unfolding of CACTUS detector response"
-		,"function."
-		,"Uncertainty in energy identified as normalization"
-		,"point for gamma-decay probability."
-		,"Uncertainty in contributions to particle-gamma spectra"
-		,"due to target contaminants."]
+		,"conservative estimate."]
 	}
       ]
      ,"CORRECTION":[
@@ -289,6 +294,14 @@
 	,"x4code":{"code":"orig::Fig.1a"}
 	,"x4freetext":[" was not included in EXFOR according to"
 		,"comment of author. See COMMENT in Subent 001."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180830U", "date":"20180830", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: ERR-ANALYS was updated:"
+		," ERR-T,22. ->ERR-T; MONIT-ERR,20. -> ERR-1,10.,20."]
 	}
       ]
     }
@@ -327,14 +340,14 @@
 	,[493,0.20557559,0.04571493]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23112002", "Pointer":" "
- ,"Subent":"23112002", "compiled":20101029
+ ,"Subent":"23112002", "compiled":20180830
  ,"year1":2010, "author1ini":"B.L.", "author1":"Goldblum"
  ,"zTarg1":66, "targ1":"Dy-161", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"66-DY-161(N,G)66-DY-162,,SIG,,,DERIV"
- ,"compNotes":[]
- ,"wx4data":4
+ ,"compNotes":["ERR-ANALYS:(ERR-1,10.,20.)    ADDED AS COMMON:ERR-1,PER-CENT=10.0%"]
+ ,"wx4data":5
  ,"lx4data":4
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -349,13 +362,19 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.107858,0.0844829,0.0687256,0.0457149]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":10
+    ,"com1":10}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[133,253,373,493]
     ,"dat1":[1.33e+5,2.53e+5,3.73e+5,4.93e+5]}
-  ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
+  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN-ERR", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
@@ -369,7 +388,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.493041,0.38277,0.308297,0.205576]
-      ,"dy":[0.107858,0.0844829,0.0687256,0.0457149]   }
+      ,"dy":[0.107858,0.0844829,0.0687256,0.0457149]
+      ,"dysys":[0.0493041,0.038277,0.0308297,0.0205576]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
