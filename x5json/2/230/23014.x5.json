@@ -1,9 +1,9 @@
-  {"ENTRY":"23014", "updated":20071203, "TransID":"2189", "TransDate":20071203, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"23014", "updated":20180830, "TransID":"2270", "TransDate":20190220, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1997,"a1":"H.Baba+","r1":"J,NST,34,871,1997"
-   ,"ref":"Jour: Jour. of Nuclear Science and Technology, Vol.34, Issue.9, p.871 (1997)"
+   ,"ref":"Jour: Jour. of Nuclear Science and Technology, Vol.34, p.871 (1997)"
    ,"title":"Role of effective distance in the fission mechanism study by the double-energy measurement for uranium isotopes"
    ,"x4subents":[
-   {"SUBENT":"23014001", "isub":1, "compiled":20071203, "TransID":"2189", "TransDate":20071203
+   {"SUBENT":"23014001", "isub":1, "compiled":20180830, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -41,9 +41,9 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,NST,34,(9),871,199709","stdFileName":"J,NST,34,871,1997"
-		,"year":1997,"typ":"J","ref":"J,NST","vol":"34","issue":"9","p":"871"
-		,"shortRef":"Jour: Jour. of Nuclear Science and Technology, Vol.34, Issue.9, p.871 (1997)"}]
+	,"x4codes":[{"code":"J,NST,34,871,1997","stdFileName":"J,NST,34,871,1997"
+		,"year":1997,"typ":"J","ref":"J,NST","vol":"34","p":"871"
+		,"shortRef":"Jour: Jour. of Nuclear Science and Technology, Vol.34, p.871 (1997)"}]
 	,"x4freetext":["Main reference. See also TITLE and AUTHOR."]
 	}
 	,{"x4pointer":" "
@@ -51,11 +51,6 @@
 		,"year":1992,"typ":"T","ref":"T","vol":"Miyauchi"
 		,"shortRef":"Thesis: Miyauchi (1992)"}]
 	,"x4freetext":[" T.Miyauchi, part of numerical data"]
-	}
-      ]
-     ,"PART-DET":[
-	{"x4pointer":" "
-	,"x4codes":["FF"]
 	}
       ]
      ,"INC-SOURCE":[
@@ -96,19 +91,28 @@
 	,"x4freetext":[" To measure fission fragments complementary"]
 	}
       ]
-     ,"STATUS":[
+     ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"COREL,E2089001"
-		,"flag":"COREL", "help":"Data correlated with another data set"
-		,"subent":"E2089001"
-		}]
-	,"x4freetext":[" (p,f) data of this work"]
+	,"x4codes":[{"code":"O,E2089001,H.Baba+,J,NST,34,871,1997"
+		,"flag":{"code":"O", "help":" Reference to related data compiled in another entry"}
+		,"subent":"E2089001","author1":"H.Baba+","stdFileName":"J,NST,34,871,1997"
+		,"year":1997,"typ":"J","ref":"J,NST","vol":"34","p":"871"
+		,"shortRef":"Jour: Jour. of Nuclear Science and Technology, Vol.34, p.871 (1997)"}]
+	,"x4freetext":[" (p,f) data"
+		,"                                       of this work"]
 	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20071019C", "date":"20071019", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180830A", "date":"20180830", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code corrected in"
+		,"Subents 002,003. Cosmetic correction in REFERENCE."
+		,"STATUS `COREL` deleted (info moved to REL-REF)."]
 	}
       ]
     }
@@ -125,32 +129,37 @@
       ,"data":[
 	 [0.0253]]}
    }
-  ,{"SUBENT":"23014002", "isub":2, "compiled":20071203, "TransID":"2189", "TransDate":20071203
+  ,{"SUBENT":"23014002", "isub":2, "compiled":20180830, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-233(N,F)MASS,PRE,KE/CRL,LF/HF,MXW"
-	    ,"c4reac":"(N,F)MASS,PRE,KE/CRL,LF/HF,MXW"
+	,"x4code":{"code":"92-U-233(N,F)MASS,PRE,KE,LF+HF,MXW"
+	    ,"c4reac":"(N,F)MASS,PRE,KE,LF+HF,MXW"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"92-U-233(N,F)MASS,PRE,KE/CRL,LF/HF,MXW"
+	    {"code":"92-U-233(N,F)MASS,PRE,KE,LF+HF,MXW"
 		,"Reac":"N,F"
 		,"SF1":"92-U-233","Targ":{"code":"92-U-233","nam":"U-233","ZA":92233}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF4":"MASS","Prod":{"code":"MASS","nam":"mass"}
 		,"SF5":"PRE"
-		,"SF6":"KE/CRL"
-		,"SF7":"LF/HF"
+		,"SF6":"KE"
+		,"SF7":"LF+HF"
 		,"SF8":"MXW"
-		,"SF58":"PRE,KE/CRL,LF/HF","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"PRE,KE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Tot.kin.energy of primary fission fragments spec"
 	    }]}
 	,"x4freetext":["Total kinetic energy"]
 	}
       ]
      ,"MISC-COL":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MISC"}]
+	,"x4codes":[{"code":"MISC1"}]
+	,"x4freetext":[" Dispersion of total kinetic energy"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"MISC2"}]
 	,"x4freetext":[" Skewness"]
 	}
       ]
@@ -161,19 +170,21 @@
 		,"- Target-thickness is 0.013 mg/cm**2."]
 	}
       ]
-     ,"ERR-ANALYS":[
-	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
-	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" Dispersion of total kinetic energy"]
-	}
-      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Taken from Table 1, p873 of main reference"]
+	,"x4freetext":[" Table 1, p.873 of Nucl.Sci.Tech.34(1997)871"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180830A", "date":"20180830", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF6=KE/CRL -> KE; LF/HF -> LF+HF in"
+		," REACTION code. MISC -> MISC2;  DATA-ERR ->  MISC1"
+		," (dispersion is not the uncertainty).ERR-ANALYS deleted"]
 	}
       ]
     }
@@ -185,15 +196,15 @@
       ,{"icol":1, "header":"DATA", "units":"MEV", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MEV", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"MISC1", "units":"MEV", "pointer":" "
+	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":3, "header":"MISC", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Miscellaneous Information, defined under MISC-COL.", "pFlag":"0000000"
+      ,{"icol":3, "header":"MISC2", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"2nd miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["MASS"      ,"DATA"      ,"DATA-ERR"  ,"MISC"      ]
+	 ["MASS"      ,"DATA"      ,"MISC1"     ,"MISC2"     ]
 	,["NO-DIM"    ,"MEV"       ,"MEV"       ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -238,42 +249,127 @@
 	,[155,153.6,7,-0.26]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23014002", "Pointer":" "
- ,"Subent":"23014002", "compiled":20071203
-,"year1":1997, "author1ini":"H.", "author1":"Baba"
-, "zTarg1":92, "targ1":"U-233", "proj1":"n", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"92-U-233(N,F)MASS,PRE,KE/CRL,LF/HF,MXW"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"23014002", "compiled":20180830
+ ,"year1":1997, "author1ini":"H.", "author1":"Baba"
+ ,"zTarg1":92, "targ1":"U-233", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Tot.kin.energy of primary fission fragments spec"
+ ,"reacode":"92-U-233(N,F)MASS,PRE,KE,LF+HF,MXW"
+ ,"compNotes":[]
+ ,"wx4data":5
+ ,"lx4data":39
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[162.1,162.4,161.2,162.2,165.5,169.4,170.3,172.9,174.9,176.3
+	,177.8,178.8,179.9,179.7,179.7,179.6,179.2,178.3,176.8,175.1
+	,174,173.1,171.8,170.5,169.4,168.2,167.4,166.6,165.3,164
+	,162.6,161.4,160.5,159.3,158.1,157.4,156.2,155.3,153.6]
+    ,"dat1":[1.621e+8,1.624e+8,1.612e+8,1.622e+8,1.655e+8,1.694e+8,1.703e+8,1.729e+8,1.749e+8,1.763e+8
+	,1.778e+8,1.788e+8,1.799e+8,1.797e+8,1.797e+8,1.796e+8,1.792e+8,1.783e+8,1.768e+8,1.751e+8
+	,1.74e+8,1.731e+8,1.718e+8,1.705e+8,1.694e+8,1.682e+8,1.674e+8,1.666e+8,1.653e+8,1.64e+8
+	,1.626e+8,1.614e+8,1.605e+8,1.593e+8,1.581e+8,1.574e+8,1.562e+8,1.553e+8,1.536e+8]}
+  ,{"ivar":1, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":2, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"92", "rank":2.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"dat0":[117,118,119,120,121,122,123,124,125,126
+	,127,128,129,130,131,132,133,134,135,136
+	,137,138,139,140,141,142,143,144,145,146
+	,147,148,149,150,151,152,153,154,155]
+   ,"dat1eq":true}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC1", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[11.9,13.1,9.9,11.5,12.5,13,12.9,11.9,11.4,10.6
+	,10.8,10.9,11,10.6,10.3,10.4,10.3,10.2,9.9,9.5
+	,9,8.9,8.7,8.4,8.1,7.9,7.8,7.8,7.9,7.7
+	,7.5,7.5,7.4,7.2,7.4,7.2,6.9,7.2,7]
+    ,"dat1":[1.19e+7,1.31e+7,9.9e+6,1.15e+7,1.25e+7,1.3e+7,1.29e+7,1.19e+7,1.14e+7,1.06e+7
+	,1.08e+7,1.09e+7,1.1e+7,1.06e+7,1.03e+7,1.04e+7,1.03e+7,1.02e+7,9.9e+6,9.5e+6
+	,9.0e+6,8.9e+6,8.7e+6,8.4e+6,8.1e+6,7.9e+6,7.8e+6,7.8e+6,7.9e+6,7.7e+6
+	,7.5e+6,7.5e+6,7.4e+6,7.2e+6,7.4e+6,7.2e+6,6.9e+6,7.2e+6,7.0e+6]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.33,-1.06,-1.64,-1.98,-0.27,-0.52,-0.52,-0.22,0.01,-0.25
+	,-0.53,-0.42,-0.51,-0.35,-0.35,-0.36,-0.39,-0.3,-0.31,-0.3
+	,-0.29,-0.32,-0.29,-0.32,-0.22,-0.3,-0.21,-0.32,-0.15,-0.18
+	,-0.31,-0.23,-0.26,-0.16,-0.07,-0.3,-0.32,-0.35,-0.26]
+   ,"dat1eq":true}
+  ]
+ ,"wc5data":3
+ ,"lc5data":39
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.621e+8,1.624e+8,1.612e+8,1.622e+8,1.655e+8,1.694e+8,1.703e+8,1.729e+8,1.749e+8,1.763e+8
+	,1.778e+8,1.788e+8,1.799e+8,1.797e+8,1.797e+8,1.796e+8,1.792e+8,1.783e+8,1.768e+8,1.751e+8
+	,1.74e+8,1.731e+8,1.718e+8,1.705e+8,1.694e+8,1.682e+8,1.674e+8,1.666e+8,1.653e+8,1.64e+8
+	,1.626e+8,1.614e+8,1.605e+8,1.593e+8,1.581e+8,1.574e+8,1.562e+8,1.553e+8,1.536e+8]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253
+	,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253
+	,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253
+	,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"92", "rank":2.0
+      ,"expansion":"Isotope/particle identification: mass"
+      ,"x2":[117,118,119,120,121,122,123,124,125,126
+	,127,128,129,130,131,132,133,134,135,136
+	,137,138,139,140,141,142,143,144,145,146
+	,147,148,149,150,151,152,153,154,155]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"23014003", "isub":3, "compiled":20071203, "TransID":"2189", "TransDate":20071203
+  ,{"SUBENT":"23014003", "isub":3, "compiled":20180830, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-235(N,F)MASS,PRE,KE/CRL,LF/HF,MXW"
-	    ,"c4reac":"(N,F)MASS,PRE,KE/CRL,LF/HF,MXW"
+	,"x4code":{"code":"92-U-235(N,F)MASS,PRE,KE,LF+HF,MXW"
+	    ,"c4reac":"(N,F)MASS,PRE,KE,LF+HF,MXW"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"92-U-235(N,F)MASS,PRE,KE/CRL,LF/HF,MXW"
+	    {"code":"92-U-235(N,F)MASS,PRE,KE,LF+HF,MXW"
 		,"Reac":"N,F"
 		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF4":"MASS","Prod":{"code":"MASS","nam":"mass"}
 		,"SF5":"PRE"
-		,"SF6":"KE/CRL"
-		,"SF7":"LF/HF"
+		,"SF6":"KE"
+		,"SF7":"LF+HF"
 		,"SF8":"MXW"
-		,"SF58":"PRE,KE/CRL,LF/HF","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"PRE,KE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Tot.kin.energy of primary fission fragments spec"
 	    }]}
 	,"x4freetext":["Total kinetic energy"]
 	}
       ]
      ,"MISC-COL":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MISC"}]
+	,"x4codes":[{"code":"MISC1"}]
+	,"x4freetext":[" Dispersion of total kinetic energy"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"MISC2"}]
 	,"x4freetext":[" Skewness"]
 	}
       ]
@@ -284,19 +380,21 @@
 		,"- Target-thickness is 0.006 mg/cm**2."]
 	}
       ]
-     ,"ERR-ANALYS":[
-	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
-	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" Dispersion of total kinetic energy"]
-	}
-      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Taken from Table 1, p873 of main reference"]
+	,"x4freetext":[" Table 1, p.873 of Nucl.Sci.Tech.34(1997)871"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180830A", "date":"20180830", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF6=KE/CRL -> KE; LF/HF -> LF+HF in"
+		," REACTION code. MISC -> MISC2;  DATA-ERR ->  MISC1"
+		," (dispersion is not the uncertainty).ERR-ANALYS deleted"]
 	}
       ]
     }
@@ -308,15 +406,15 @@
       ,{"icol":1, "header":"DATA", "units":"MEV", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MEV", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"MISC1", "units":"MEV", "pointer":" "
+	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":3, "header":"MISC", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Miscellaneous Information, defined under MISC-COL.", "pFlag":"0000000"
+      ,{"icol":3, "header":"MISC2", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"2nd miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["MASS"      ,"DATA"      ,"DATA-ERR"  ,"MISC"      ]
+	 ["MASS"      ,"DATA"      ,"MISC1"     ,"MISC2"     ]
 	,["NO-DIM"    ,"MEV"       ,"MEV"       ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -360,13 +458,93 @@
 	,[155,153.6,7.5,-0.86]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23014003", "Pointer":" "
- ,"Subent":"23014003", "compiled":20071203
-,"year1":1997, "author1ini":"H.", "author1":"Baba"
-, "zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"92-U-235(N,F)MASS,PRE,KE/CRL,LF/HF,MXW"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"23014003", "compiled":20180830
+ ,"year1":1997, "author1ini":"H.", "author1":"Baba"
+ ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Tot.kin.energy of primary fission fragments spec"
+ ,"reacode":"92-U-235(N,F)MASS,PRE,KE,LF+HF,MXW"
+ ,"compNotes":[]
+ ,"wx4data":5
+ ,"lx4data":38
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[150.5,151.2,156.9,156.4,157,160.1,167.3,169.6,172,175.6
+	,177.7,179.6,180.4,180.5,180.5,180.2,179.5,178.2,176.2,174.6
+	,173.3,172.3,171,169.6,168.2,167.2,166.4,165.5,164.4,163
+	,161.5,160.4,159.5,158.3,157.2,155.6,154.6,153.6]
+    ,"dat1":[1.505e+8,1.512e+8,1.569e+8,1.564e+8,1.57e+8,1.601e+8,1.673e+8,1.696e+8,1.72e+8,1.756e+8
+	,1.777e+8,1.796e+8,1.804e+8,1.805e+8,1.805e+8,1.802e+8,1.795e+8,1.782e+8,1.762e+8,1.746e+8
+	,1.733e+8,1.723e+8,1.71e+8,1.696e+8,1.682e+8,1.672e+8,1.664e+8,1.655e+8,1.644e+8,1.63e+8
+	,1.615e+8,1.604e+8,1.595e+8,1.583e+8,1.572e+8,1.556e+8,1.546e+8,1.536e+8]}
+  ,{"ivar":1, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":2, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"92", "rank":2.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"dat0":[118,119,120,121,122,123,124,125,126,127
+	,128,129,130,131,132,133,134,135,136,137
+	,138,139,140,141,142,143,144,145,146,147
+	,148,149,150,151,152,153,154,155]
+   ,"dat1eq":true}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC1", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[14.9,14.6,13.8,16.3,16.6,18,15.3,12.3,12.9,10.8
+	,10.6,10.5,10.8,10.6,10.4,10.4,10.3,10,9.7,9.3
+	,8.9,8.6,8.4,8.2,7.9,7.7,7.7,7.6,7.7,7.5
+	,7.4,7.3,7.2,7.5,7.2,7.3,7,7.5]
+    ,"dat1":[1.49e+7,1.46e+7,1.38e+7,1.63e+7,1.66e+7,1.8e+7,1.53e+7,1.23e+7,1.29e+7,1.08e+7
+	,1.06e+7,1.05e+7,1.08e+7,1.06e+7,1.04e+7,1.04e+7,1.03e+7,1.0e+7,9.7e+6,9.3e+6
+	,8.9e+6,8.6e+6,8.4e+6,8.2e+6,7.9e+6,7.7e+6,7.7e+6,7.6e+6,7.7e+6,7.5e+6
+	,7.4e+6,7.3e+6,7.2e+6,7.5e+6,7.2e+6,7.3e+6,7.0e+6,7.5e+6]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[-0.72,-0.6,-1.09,-1.1,-1.1,-0.67,-0.98,-0.67,-1.04,-0.62
+	,-0.69,-0.54,-0.58,-0.53,-0.48,-0.43,-0.42,-0.4,-0.34,-0.34
+	,-0.33,-0.32,-0.35,-0.32,-0.33,-0.37,-0.35,-0.29,-0.27,-0.24
+	,-0.4,-0.35,-0.39,-0.59,-0.57,-0.62,-0.37,-0.86]
+   ,"dat1eq":true}
+  ]
+ ,"wc5data":3
+ ,"lc5data":38
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.505e+8,1.512e+8,1.569e+8,1.564e+8,1.57e+8,1.601e+8,1.673e+8,1.696e+8,1.72e+8,1.756e+8
+	,1.777e+8,1.796e+8,1.804e+8,1.805e+8,1.805e+8,1.802e+8,1.795e+8,1.782e+8,1.762e+8,1.746e+8
+	,1.733e+8,1.723e+8,1.71e+8,1.696e+8,1.682e+8,1.672e+8,1.664e+8,1.655e+8,1.644e+8,1.63e+8
+	,1.615e+8,1.604e+8,1.595e+8,1.583e+8,1.572e+8,1.556e+8,1.546e+8,1.536e+8]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253
+	,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253
+	,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253
+	,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253,0.0253]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"92", "rank":2.0
+      ,"expansion":"Isotope/particle identification: mass"
+      ,"x2":[118,119,120,121,122,123,124,125,126,127
+	,128,129,130,131,132,133,134,135,136,137
+	,138,139,140,141,142,143,144,145,146,147
+	,148,149,150,151,152,153,154,155]
+   }
+ }
 }
    ]
    }
