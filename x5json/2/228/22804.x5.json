@@ -1,9 +1,9 @@
-  {"ENTRY":"22804", "updated":20121229, "TransID":"2234", "TransDate":20130718, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"22804", "updated":20180830, "TransID":"2270", "TransDate":20190220, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":2002,"a1":"H.Beer+","r1":"J,NP/A,709,453,2002"
-   ,"ref":"Jour: Nuclear Physics, Section A, Vol.709, Issue.1-4, p.453 (2002)"
+   ,"ref":"Jour: Nuclear Physics, Section A, Vol.709, p.453 (2002)"
    ,"title":"Neutron capture of 30Si"
    ,"x4subents":[
-   {"SUBENT":"22804001", "isub":1, "compiled":20121229, "TransID":"2234", "TransDate":20130718
+   {"SUBENT":"22804001", "isub":1, "compiled":20180830, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -48,9 +48,9 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,NP/A,709,(1-4),453,2002","stdFileName":"J,NP_A,709,453,2002"
-		,"year":2002,"typ":"J","ref":"J,NP/A","vol":"709","issue":"1-4","p":"453"
-		,"shortRef":"Jour: Nuclear Physics, Section A, Vol.709, Issue.1-4, p.453 (2002)"}]
+	,"x4codes":[{"code":"J,NP/A,709,453,2002","stdFileName":"J,NP_A,709,453,2002"
+		,"year":2002,"typ":"J","ref":"J,NP/A","vol":"709","p":"453"
+		,"shortRef":"Jour: Nuclear Physics, Section A, Vol.709, p.453 (2002)"}]
 	,"x4freetext":["    Main reference"]
 	}
       ]
@@ -248,16 +248,21 @@
 	,"x4freetext":[" SD:EN-MEAN -> KT and values were corrected"
 		," in Subent 2; ERR-ANALYS update."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180830U", "date":"20180830", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: ERR-1 -> ERR-2 in COMMON section."]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
+       {"icol":0, "header":"ERR-2", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"2nd partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["ERR-1"     ]
+	 ["ERR-2"     ]
 	,["PER-CENT"  ]
 	,[" "         ]]
       ,"data":[
@@ -351,8 +356,11 @@
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"14-SI-30(N,G)14-SI-31,,SIG,,MXW"
  ,"compNotes":["ERR-ANALYS:(ERR-S,0.03,3.)    ADDED AS COMMON:ERR-S,PER-CENT=0.03%"
+	,"ERR-ANALYS:(ERR-1,5.,9.6)     ADDED AS COMMON:ERR-1,PER-CENT=5.0%"
+	,"ERR-ANALYS:(ERR-3,,0.5)       ADDED AS COMMON:ERR-3,PER-CENT=0.25%"
+	,"ERR-ANALYS:(ERR-4,,0.5)       ADDED AS COMMON:ERR-4,PER-CENT=0.25%"
 	,"ERR-ANALYS:(MONIT-ERR,1.5,3.) ADDED AS COMMON:MONIT-ERR,PER-CENT=1.5%"]
- ,"wx4data":6
+ ,"wx4data":9
  ,"lx4data":2
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -377,15 +385,33 @@
     ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
+    ,"com0":5
+    ,"com1":5}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
     ,"com0":0.4
     ,"com1":0.4}
-  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.25
+    ,"com1":0.25}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.25
+    ,"com1":0.25}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"MONIT-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":1.5
     ,"com1":1.5}
-  ,{"ivar":5, "cvar":"x1", "fam":"SpT", "ifComm":false, "ifCM":false
+  ,{"ivar":8, "cvar":"x1", "fam":"SpT", "ifComm":false, "ifCM":false
     ,"header":"KT", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"44", "rank":1.1
     ,"expansion":"Incident energy: spectrum temperature"
@@ -400,7 +426,7 @@
       ,"expansion":"Data: data"
       ,"y":[0.00351,7.2e-4]
       ,"dy":[1.5e-4,7.0e-5]
-      ,"dysys":[5.44899e-5,1.11774e-5]
+      ,"dysys":[1.84183e-4,3.77811e-5]
       ,"dystat":[1.053e-6,2.16e-7]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpT", "ifCM":false, "units":"EV"
       ,"header":"SpT", "dataType":"44", "rank":1.0
@@ -492,8 +518,11 @@
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"14-SI-30(N,G)14-SI-31,,SIG,,SPA"
  ,"compNotes":["ERR-ANALYS:(ERR-S,0.03,3.)    ADDED AS COMMON:ERR-S,PER-CENT=0.03%"
+	,"ERR-ANALYS:(ERR-1,5.,9.6)     ADDED AS COMMON:ERR-1,PER-CENT=5.0%"
+	,"ERR-ANALYS:(ERR-3,,0.5)       ADDED AS COMMON:ERR-3,PER-CENT=0.25%"
+	,"ERR-ANALYS:(ERR-4,,0.5)       ADDED AS COMMON:ERR-4,PER-CENT=0.25%"
 	,"ERR-ANALYS:(MONIT-ERR,1.5,3.) ADDED AS COMMON:MONIT-ERR,PER-CENT=1.5%"]
- ,"wx4data":7
+ ,"wx4data":10
  ,"lx4data":5
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -518,21 +547,39 @@
     ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
+    ,"com0":5
+    ,"com1":5}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
     ,"com0":0.4
     ,"com1":0.4}
-  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.25
+    ,"com1":0.25}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.25
+    ,"com1":0.25}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"MONIT-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":1.5
     ,"com1":1.5}
-  ,{"ivar":5, "cvar":"x1", "fam":"SpE", "ifComm":false, "ifCM":false
+  ,{"ivar":8, "cvar":"x1", "fam":"SpE", "ifComm":false, "ifCM":false
     ,"header":"EN-MEAN", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
     ,"expansion":"Incident energy: spectrum energy"
     ,"dat0":[30,104,149,180,215]
     ,"dat1":[3.0e+4,1.04e+5,1.49e+5,1.8e+5,2.15e+5]}
-  ,{"ivar":6, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":9, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-RSL", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
     ,"expansion":"Incident energy: energy /Error/"
@@ -547,7 +594,7 @@
       ,"expansion":"Data: data"
       ,"y":[3.0e-4,8.7e-4,4.2e-4,5.5e-4,4.4e-4]
       ,"dy":[2.0e-5,7.0e-5,3.0e-5,3.0e-5,3.0e-5]
-      ,"dysys":[4.65725e-6,1.3506e-5,6.52015e-6,8.5383e-6,6.83064e-6]
+      ,"dysys":[1.57421e-5,4.56522e-5,2.2039e-5,2.88606e-5,2.30885e-5]
       ,"dystat":[9.0e-8,2.61e-7,1.26e-7,1.65e-7,1.32e-7]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
@@ -676,8 +723,11 @@
  ,"reacode":"14-SI-30(N,0),,L"
  ,"compNotes":["OPERATION...  Value=Min  Min:DATA-MIN"
 	,"ERR-ANALYS:(ERR-S,0.03,3.)    ADDED AS COMMON:ERR-S,PER-CENT=0.03%"
+	,"ERR-ANALYS:(ERR-1,5.,9.6)     ADDED AS COMMON:ERR-1,PER-CENT=5.0%"
+	,"ERR-ANALYS:(ERR-3,,0.5)       ADDED AS COMMON:ERR-3,PER-CENT=0.25%"
+	,"ERR-ANALYS:(ERR-4,,0.5)       ADDED AS COMMON:ERR-4,PER-CENT=0.25%"
 	,"ERR-ANALYS:(MONIT-ERR,1.5,3.) ADDED AS COMMON:MONIT-ERR,PER-CENT=1.5%"]
- ,"wx4data":6
+ ,"wx4data":9
  ,"lx4data":6
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -702,15 +752,33 @@
     ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
+    ,"com0":5
+    ,"com1":5}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
     ,"com0":0.4
     ,"com1":0.4}
-  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.25
+    ,"com1":0.25}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.25
+    ,"com1":0.25}
+  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"MONIT-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":1.5
     ,"com1":1.5}
-  ,{"ivar":5, "cvar":"x1", "fam":"ENR", "ifComm":false, "ifCM":false
+  ,{"ivar":8, "cvar":"x1", "fam":"ENR", "ifComm":false, "ifCM":false
     ,"header":"EN-RES", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"32", "rank":1.1
     ,"expansion":"Resonance parameter: energy"
@@ -724,8 +792,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[1,1,0,2,2,1]
-      ,"dy":[0.0155271,0.0155271,0,0.0310541,0.0310541,0.0155271]
-      ,"dysys":[0.0155242,0.0155242,0,0.0310484,0.0310484,0.0155242]
+      ,"dy":[0.0524747,0.0524747,0,0.104949,0.104949,0.0524747]
+      ,"dysys":[0.0524738,0.0524738,0,0.104948,0.104948,0.0524738]
       ,"dystat":[3.0e-4,3.0e-4,0,6.0e-4,6.0e-4,3.0e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"ENR", "ifCM":false, "units":"EV"
       ,"header":"ENR", "dataType":"32", "rank":1.0
@@ -742,8 +810,11 @@
  ,"ReactionType":"RP", "quant":"RP", "quantExpan":"Spin J"
  ,"reacode":"14-SI-30(N,0),,J"
  ,"compNotes":["ERR-ANALYS:(ERR-S,0.03,3.)    ADDED AS COMMON:ERR-S,PER-CENT=0.03%"
+	,"ERR-ANALYS:(ERR-1,5.,9.6)     ADDED AS COMMON:ERR-1,PER-CENT=5.0%"
+	,"ERR-ANALYS:(ERR-3,,0.5)       ADDED AS COMMON:ERR-3,PER-CENT=0.25%"
+	,"ERR-ANALYS:(ERR-4,,0.5)       ADDED AS COMMON:ERR-4,PER-CENT=0.25%"
 	,"ERR-ANALYS:(MONIT-ERR,1.5,3.) ADDED AS COMMON:MONIT-ERR,PER-CENT=1.5%"]
- ,"wx4data":5
+ ,"wx4data":8
  ,"lx4data":6
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -762,15 +833,33 @@
     ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
+    ,"com0":5
+    ,"com1":5}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
     ,"com0":0.4
     ,"com1":0.4}
-  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.25
+    ,"com1":0.25}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.25
+    ,"com1":0.25}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"MONIT-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":1.5
     ,"com1":1.5}
-  ,{"ivar":4, "cvar":"x1", "fam":"ENR", "ifComm":false, "ifCM":false
+  ,{"ivar":7, "cvar":"x1", "fam":"ENR", "ifComm":false, "ifCM":false
     ,"header":"EN-RES", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"32", "rank":1.1
     ,"expansion":"Resonance parameter: energy"
@@ -784,8 +873,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[1.5,0.5,0.5,1.5,1.5,0.5]
-      ,"dy":[0.0232906,0.00776354,0.00776354,0.0232906,0.0232906,0.00776354]
-      ,"dysys":[0.0232863,0.00776209,0.00776209,0.0232863,0.0232863,0.00776209]
+      ,"dy":[0.078712,0.0262373,0.0262373,0.078712,0.078712,0.0262373]
+      ,"dysys":[0.0787107,0.0262369,0.0262369,0.0787107,0.0787107,0.0262369]
       ,"dystat":[4.5e-4,1.5e-4,1.5e-4,4.5e-4,4.5e-4,1.5e-4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"ENR", "ifCM":false, "units":"EV"
       ,"header":"ENR", "dataType":"32", "rank":1.0
@@ -802,8 +891,11 @@
  ,"ReactionType":"RP", "quant":"RP", "quantExpan":"Resonance strength"
  ,"reacode":"14-SI-30(N,G),,WID/STR"
  ,"compNotes":["ERR-ANALYS:(ERR-S,0.03,3.)    ADDED AS COMMON:ERR-S,PER-CENT=0.03%"
+	,"ERR-ANALYS:(ERR-1,5.,9.6)     ADDED AS COMMON:ERR-1,PER-CENT=5.0%"
+	,"ERR-ANALYS:(ERR-3,,0.5)       ADDED AS COMMON:ERR-3,PER-CENT=0.25%"
+	,"ERR-ANALYS:(ERR-4,,0.5)       ADDED AS COMMON:ERR-4,PER-CENT=0.25%"
 	,"ERR-ANALYS:(MONIT-ERR,1.5,3.) ADDED AS COMMON:MONIT-ERR,PER-CENT=1.5%"]
- ,"wx4data":5
+ ,"wx4data":8
  ,"lx4data":2
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -822,15 +914,33 @@
     ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
+    ,"com0":5
+    ,"com1":5}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
     ,"com0":0.4
     ,"com1":0.4}
-  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.25
+    ,"com1":0.25}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.25
+    ,"com1":0.25}
+  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"MONIT-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":1.5
     ,"com1":1.5}
-  ,{"ivar":4, "cvar":"x1", "fam":"ENR", "ifComm":false, "ifCM":false
+  ,{"ivar":7, "cvar":"x1", "fam":"ENR", "ifComm":false, "ifCM":false
     ,"header":"EN-RES", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"32", "rank":1.1
     ,"expansion":"Resonance parameter: energy"
@@ -844,8 +954,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.41,0.12]
-      ,"dy":[0.0063661,0.00186325]
-      ,"dysys":[0.00636491,0.0018629]
+      ,"dy":[0.0215146,0.00629696]
+      ,"dysys":[0.0215143,0.00629686]
       ,"dystat":[1.23e-4,3.6e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"ENR", "ifCM":false, "units":"EV"
       ,"header":"ENR", "dataType":"32", "rank":1.0
