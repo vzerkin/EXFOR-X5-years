@@ -1,9 +1,9 @@
-  {"ENTRY":"22929", "updated":20101105, "TransID":"2225", "TransDate":20110721, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"22929", "updated":20180831, "TransID":"2270", "TransDate":20190220, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":2005,"a1":"T.Ohsaki+","r1":"C,2005NOTRED,,378,2005"
    ,"ref":"Conf: Symp.on Capt.Gamma Ray Spectroscopy, Notre Dame 2005, p.378 (2005)"
    ,"title":"Measurements of capture gamma rays from the 46- and 84-keV neutron resonances of MG-24."
    ,"x4subents":[
-   {"SUBENT":"22929001", "isub":1, "compiled":20101105, "TransID":"2225", "TransDate":20110721
+   {"SUBENT":"22929001", "isub":1, "compiled":20180831, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -105,22 +105,26 @@
      ,"CORRECTION":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[".Corrections were made for the count leakage, attenu-"
-		," ation of neutron monitor counts due to the sample,"
-		," self-shielding and multiple scattering of neutrons"
-		," in sample, for the scattering and absorption of gamma-"
-		," rays in sample, for the dependence of the gamma-ray"
-		," detection efficiency on gamma source position, for"
-		," the effect of pulse-height discrimination ( less than"
-		," 0.5 MeV) on the capture yield of 197Au, for dead time"
-		," see rel-ref."]
+	,"x4freetext":[".Corrections were made:"
+		,"  * for the count leakage,"
+		,"  * for attenuation of neutron monitor counts due to"
+		,"                                          the sample,"
+		,"  * for self-shielding and multiple scattering of"
+		,"                                  neutrons in sample,"
+		,"  * for the scattering and absorption of gamma-rays"
+		,"                                           in sample,"
+		,"  * for the dependence of the gamma-ray detection"
+		,"                 efficiency on gamma source position,"
+		,"  * for the effect of pulse-height discrimination"
+		,"    (less than 0.5 MeV) on the capture yield of 197Au,"
+		,"  * for dead time (see REL-REF)."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
-	,"x4freetext":["  The error is reported in table."]
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information about source of uncertaities"]
 	}
       ]
      ,"HISTORY":[
@@ -141,10 +145,16 @@
 		,"     J,PR/C, 14,1328,1976 => J,PR/C,14,1328,1976"
 		,"     in Subents 004, 007."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180831A", "date":"20180831", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code corrected in Subent 003."
+		," ERR-T -> DATA-ERR."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"22929002", "isub":2, "compiled":20061121, "TransID":"2180", "TransDate":20061127
+  ,{"SUBENT":"22929002", "isub":2, "compiled":20180831, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -164,7 +174,6 @@
 		,"SF6":"WID/STR"
 		,"SF58":"PAR,WID/STR","Quant":"RP","BasicUnits":"EV","QuantHlp":"Partial resonance strength"
 	    }]}
-	,"x4freetext":["  Partial capture kernel"]
 	}
       ]
      ,"EN-SEC":[
@@ -254,8 +263,17 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".TABLE 1 in main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" TABLE 1 from 2005NOTRED,,378,2005"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180831U", "date":"20180831", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: STATUS updated. ERR-T -> DATA-ERR."]
 	}
       ]
     }
@@ -279,8 +297,8 @@
       ,{"icol":1, "header":"DATA", "units":"EV", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"ERR-T", "units":"EV", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":2, "header":"DATA-ERR", "units":"EV", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
       ,{"icol":3, "header":"LVL-FLAG", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Level Flag, Link to information under LEVEL-PROP", "pFlag":"0000000"
@@ -290,7 +308,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E-LVL"     ,"DATA"      ,"ERR-T"     ,"LVL-FLAG"  ,"FLAG"      ]
+	 ["E-LVL"     ,"DATA"      ,"DATA-ERR"  ,"LVL-FLAG"  ,"FLAG"      ]
 	,["KEV"       ,"EV"        ,"EV"        ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -317,7 +335,7 @@
 	,[6678,0.07,0.02,21,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22929002", "Pointer":" "
- ,"Subent":"22929002", "compiled":20061121
+ ,"Subent":"22929002", "compiled":20180831
  ,"year1":2005, "author1ini":"T.", "author1":"Ohsaki"
  ,"zTarg1":12, "targ1":"Mg-24", "proj1":"n", "emis1":"G", "MF":2, "MT":151, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"01 3       ", "getYFormulaStr":"y=DATA(ENR,LVL)"
@@ -336,7 +354,7 @@
 	,0.07]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"EV", "basicUnits":"EV"
+    ,"header":"DATA-ERR", "units":"EV", "basicUnits":"EV"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.08,0.02,0.02,0.01,0.01,0.01,0.01,0.01,0.01,0.007
@@ -406,26 +424,26 @@
 }
    ]
    }
-  ,{"SUBENT":"22929003", "isub":3, "compiled":20061121, "TransID":"2180", "TransDate":20061127
+  ,{"SUBENT":"22929003", "isub":3, "compiled":20180831, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"12-MG-24(N,G),,SPC,,RES"
-	    ,"c4reac":"(N,G),SPC,,RES"
+	,"x4code":{"code":"12-MG-24(N,G)12-MG-25,PAR,MLT,,RES"
+	    ,"c4reac":"(N,G)PAR,MLT,,RES"
 	    ,"combi":"a"
-	    ,"Units":"GAM/PART"
+	    ,"Units":"PRD/REAC"
 	    ,"reacs": [
-	    {"code":"12-MG-24(N,G),,SPC,,RES"
+	    {"code":"12-MG-24(N,G)12-MG-25,PAR,MLT,,RES"
 		,"Reac":"N,G"
 		,"SF1":"12-MG-24","Targ":{"code":"12-MG-24","nam":"Mg-24","ZA":12024}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
-		,"SF6":"SPC"
+		,"SF4":"12-MG-25","Prod":{"code":"12-MG-25","nam":"Mg-25","ZA":12025}
+		,"SF5":"PAR"
+		,"SF6":"MLT"
 		,"SF8":"RES"
-		,"SF58":",SPC,,RES","Quant":"SP","BasicUnits":"GAM/PART","QuantHlp":"Gamma spectrum at resonance"
+		,"SF58":"PAR,MLT,,RES","Quant":"MLT","BasicUnits":"PRD/REAC","QuantHlp":"Partial multiplicity at resonance"
 	    }]}
-	,"x4freetext":["   Intensity of the"
-		,"                            gamma transition"]
 	}
       ]
      ,"EN-SEC":[
@@ -524,8 +542,18 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".TABLE 1 in main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Tbl. 1 from 2005NOTRED,,378,2005"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180831A", "date":"20180831", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=Mg-25, SF5=PAR added;"
+		," SF6=SPC -> MLT in REACTION code. ERR-T -> DATA-ERR."]
 	}
       ]
     }
@@ -549,8 +577,8 @@
       ,{"icol":1, "header":"DATA", "units":"PC/REAC", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"particles/100 reactions","familyCode":"MLT","convFc":0.01,"basicUnits":"PRD/REAC"}
-      ,{"icol":2, "header":"ERR-T", "units":"PC/REAC", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":2, "header":"DATA-ERR", "units":"PC/REAC", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"particles/100 reactions","familyCode":"MLT","convFc":0.01,"basicUnits":"PRD/REAC"}
       ,{"icol":3, "header":"LVL-FLAG", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Level Flag, Link to information under LEVEL-PROP", "pFlag":"0000000"
@@ -560,7 +588,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E-LVL"     ,"DATA"      ,"ERR-T"     ,"LVL-FLAG"  ,"FLAG"      ]
+	 ["E-LVL"     ,"DATA"      ,"DATA-ERR"  ,"LVL-FLAG"  ,"FLAG"      ]
 	,["KEV"       ,"PC/REAC"   ,"PC/REAC"   ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -587,13 +615,13 @@
 	,[6678,3.9,1.1,21,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22929003", "Pointer":" "
- ,"Subent":"22929003", "compiled":20061121
+ ,"Subent":"22929003", "compiled":20180831
  ,"year1":2005, "author1ini":"T.", "author1":"Ohsaki"
  ,"zTarg1":12, "targ1":"Mg-24", "proj1":"n", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"01 3       ", "getYFormulaStr":"y=DATA(ENR,LVL)"
- ,"ReactionType":"SPR", "quant":"SP", "quantExpan":"Gamma spectrum at resonance"
- ,"reacode":"12-MG-24(N,G),,SPC,,RES"
- ,"compNotes":["Ignored column:ERR-T,PRD/REAC  expected units:GAM/PART,PER-CENT"]
+ ,"ReactionType":"PZR", "quant":"MLT", "quantExpan":"Partial multiplicity at resonance"
+ ,"reacode":"12-MG-24(N,G)12-MG-25,PAR,MLT,,RES"
+ ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":21
  ,"x4data":[
@@ -608,7 +636,7 @@
 	,0.021,0.037,0.01,0.013,0.022,0.02,0.022,0.015,0.028,0.014
 	,0.039]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"PC/REAC", "basicUnits":"PRD/REAC"
+    ,"header":"DATA-ERR", "units":"PC/REAC", "basicUnits":"PRD/REAC"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[4.5,1,0.9,0.7,0.3,0.3,0.5,0.5,0.5,0.3
@@ -653,13 +681,15 @@
  ,"wc5data":3
  ,"lc5data":21
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"GAM/PART"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PRD/REAC"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.431,0.086,0.068,0.05,0.009,0.015,0.036,0.03,0.026,0.007
 	,0.021,0.037,0.01,0.013,0.022,0.02,0.022,0.015,0.028,0.014
 	,0.039]
-   }
+      ,"dy":[0.045,0.01,0.009,0.007,0.003,0.003,0.005,0.005,0.005,0.003
+	,0.003,0.006,0.004,0.005,0.007,0.006,0.006,0.006,0.008,0.007
+	,0.011]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"ENR", "ifCM":false, "units":"EV"
       ,"header":"ENR", "dataType":"32", "rank":1.0
       ,"expansion":"Resonance parameter: energy"
@@ -678,7 +708,7 @@
 }
    ]
    }
-  ,{"SUBENT":"22929004", "isub":4, "compiled":20101105, "TransID":"2225", "TransDate":20110721
+  ,{"SUBENT":"22929004", "isub":4, "compiled":20180831, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -697,7 +727,6 @@
 		,"SF6":"WID/STR"
 		,"SF58":",WID/STR","Quant":"RP","BasicUnits":"EV","QuantHlp":"Resonance strength"
 	    }]}
-	,"x4freetext":["    Total capture kernel"]
 	}
       ]
      ,"REL-REF":[
@@ -728,7 +757,7 @@
 		,"shortRef":"Jour: Physical Review, Part C, Nuclear Physics, Vol.14, p.1328 (1976)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"D,,S.F.Mughabghab+,B,NEUT.CS 1A,,1981"
+	,"x4codes":[{"code":"D,,S.F.Mughabghab+,B,NEUT.CS 1A,,,1981"
 		,"flag":{"code":"D", "help":" Reference to related data compiled in another entry"}
 		,"author1":"S.F.Mughabghab+","stdFileName":"C,NEUT.CS1A,,,1981"
 		,"year":1981,"typ":"B","ref":"C,NEUT.CS 1A"
@@ -763,6 +792,11 @@
 	,"x4freetext":[" SD: space in one of REL-REF codes deleted:"
 		,"     J,PR/C, 14,1328,1976 => J,PR/C,14,1328,1976"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180831U", "date":"20180831", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: ERR-T -> DATA-ERR."]
+	}
       ]
     }
     ,"DATA":{"ncols":3, "nrows":1
@@ -773,19 +807,19 @@
       ,{"icol":1, "header":"DATA", "units":"EV", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"ERR-T", "units":"EV", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":2, "header":"DATA-ERR", "units":"EV", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN-RES"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN-RES"    ,"DATA"      ,"DATA-ERR"  ]
 	,["KEV"       ,"EV"        ,"EV"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [46,1.888,0.092]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22929004", "Pointer":" "
- ,"Subent":"22929004", "compiled":20101105
+ ,"Subent":"22929004", "compiled":20180831
  ,"year1":2005, "author1ini":"T.", "author1":"Ohsaki"
  ,"zTarg1":12, "targ1":"Mg-24", "proj1":"n", "emis1":"G", "MF":2, "MT":151, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
@@ -802,7 +836,7 @@
     ,"dat0":[1.888]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"EV", "basicUnits":"EV"
+    ,"header":"DATA-ERR", "units":"EV", "basicUnits":"EV"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.092]
@@ -831,7 +865,7 @@
 }
    ]
    }
-  ,{"SUBENT":"22929005", "isub":5, "compiled":20061121, "TransID":"2180", "TransDate":20061127
+  ,{"SUBENT":"22929005", "isub":5, "compiled":20180831, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -851,14 +885,11 @@
 		,"SF6":"WID/STR"
 		,"SF58":"PAR,WID/STR","Quant":"RP","BasicUnits":"EV","QuantHlp":"Partial resonance strength"
 	    }]}
-	,"x4freetext":["  Partial capture kernel"]
 	}
       ]
      ,"EN-SEC":[
 	{"x4pointer":" "
 	,"x4code":{"code":"orig::E-LVL,12-MG-25"}
-	,"x4freetext":[" Final energy level of the gamma"
-		,"                     transition"]
 	}
       ]
      ,"LEVEL-PROP":[
@@ -951,6 +982,21 @@
 		,"      as for the dipole radiation."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" TABLE 3 from 2005NOTRED,,378,2005"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180831U", "date":"20180831", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: STATUS added. ERR-T -> DATA-ERR."]
+	}
+      ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
@@ -972,8 +1018,8 @@
       ,{"icol":1, "header":"DATA", "units":"EV", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"ERR-T", "units":"EV", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":2, "header":"DATA-ERR", "units":"EV", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
       ,{"icol":3, "header":"LVL-FLAG", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Level Flag, Link to information under LEVEL-PROP", "pFlag":"0000000"
@@ -983,7 +1029,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E-LVL"     ,"DATA"      ,"ERR-T"     ,"LVL-FLAG"  ,"FLAG"      ]
+	 ["E-LVL"     ,"DATA"      ,"DATA-ERR"  ,"LVL-FLAG"  ,"FLAG"      ]
 	,["KEV"       ,"EV"        ,"EV"        ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1014,7 +1060,7 @@
 	,[6777,0.13,0.04,25,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22929005", "Pointer":" "
- ,"Subent":"22929005", "compiled":20061121
+ ,"Subent":"22929005", "compiled":20180831
  ,"year1":2005, "author1ini":"T.", "author1":"Ohsaki"
  ,"zTarg1":12, "targ1":"Mg-24", "proj1":"n", "emis1":"G", "MF":2, "MT":151, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"01 3       ", "getYFormulaStr":"y=DATA(ENR,LVL)"
@@ -1033,7 +1079,7 @@
 	,0.04,0.09,0.11,0.09,0.13]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"EV", "basicUnits":"EV"
+    ,"header":"DATA-ERR", "units":"EV", "basicUnits":"EV"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.2,0.74,0.01,0.04,0.15,0.01,0.02,0.02,0.02,0.02
@@ -1103,7 +1149,7 @@
 }
    ]
    }
-  ,{"SUBENT":"22929006", "isub":6, "compiled":20061121, "TransID":"2180", "TransDate":20061127
+  ,{"SUBENT":"22929006", "isub":6, "compiled":20180831, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1123,14 +1169,11 @@
 		,"SF6":"WID"
 		,"SF58":"PAR,WID","Quant":"RP","BasicUnits":"EV","QuantHlp":"Partial width"
 	    }]}
-	,"x4freetext":[" Partial radiative width"]
 	}
       ]
      ,"EN-SEC":[
 	{"x4pointer":" "
 	,"x4code":{"code":"orig::E-LVL,12-MG-25"}
-	,"x4freetext":[" Final energy level of the gamma"
-		,"                   transition"]
 	}
       ]
      ,"REL-REF":[
@@ -1242,8 +1285,17 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 3 of main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" TABLE 3 from 2005NOTRED,,378,2005"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180831U", "date":"20180831", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: STATUS updated. ERR-T -> DATA-ERR."]
 	}
       ]
     }
@@ -1267,8 +1319,8 @@
       ,{"icol":1, "header":"DATA", "units":"EV", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"ERR-T", "units":"EV", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":2, "header":"DATA-ERR", "units":"EV", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
       ,{"icol":3, "header":"LVL-FLAG", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Level Flag, Link to information under LEVEL-PROP", "pFlag":"0000000"
@@ -1278,11 +1330,11 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E-LVL"     ,"DATA"      ,"ERR-T"     ,"LVL-FLAG"  ,"FLAG"      ]
+	 ["E-LVL"     ,"DATA"      ,"DATA-ERR"  ,"LVL-FLAG"  ,"FLAG"      ]
 	,["KEV"       ,"EV"        ,"EV"        ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [0,1.09,0.11,1,null]
+	 [0,1.09,0.1,1,null]
 	,[585,4.14,0.37,2,null]
 	,[1611.8,0.02,0.01,3,1]
 	,[1964.6,0.18,0.02,4,null]
@@ -1309,7 +1361,7 @@
 	,[6777,0.06,0.02,25,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22929006", "Pointer":" "
- ,"Subent":"22929006", "compiled":20061121
+ ,"Subent":"22929006", "compiled":20180831
  ,"year1":2005, "author1ini":"T.", "author1":"Ohsaki"
  ,"zTarg1":12, "targ1":"Mg-24", "proj1":"n", "emis1":"G", "MF":2, "MT":151, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"01 3       ", "getYFormulaStr":"y=DATA(ENR,LVL)"
@@ -1328,10 +1380,10 @@
 	,0.02,0.05,0.06,0.05,0.06]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"EV", "basicUnits":"EV"
+    ,"header":"DATA-ERR", "units":"EV", "basicUnits":"EV"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[0.11,0.37,0.01,0.02,0.08,0.01,0.01,0.01,0.01,0.01
+    ,"dat0":[0.1,0.37,0.01,0.02,0.08,0.01,0.01,0.01,0.01,0.01
 	,0.005,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01
 	,0.01,0.01,0.02,0.02,0.02]
    ,"dat1eq":true}
@@ -1377,7 +1429,7 @@
       ,"y":[1.09,4.14,0.02,0.18,0.82,0.03,0.06,0.07,0.03,0.04
 	,0.01,0.02,0.02,0.02,0.03,0.03,0.02,0.02,0.02,0.03
 	,0.02,0.05,0.06,0.05,0.06]
-      ,"dy":[0.11,0.37,0.01,0.02,0.08,0.01,0.01,0.01,0.01,0.01
+      ,"dy":[0.1,0.37,0.01,0.02,0.08,0.01,0.01,0.01,0.01,0.01
 	,0.005,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01
 	,0.01,0.01,0.02,0.02,0.02]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"ENR", "ifCM":false, "units":"EV"
@@ -1398,7 +1450,7 @@
 }
    ]
    }
-  ,{"SUBENT":"22929007", "isub":7, "compiled":20101105, "TransID":"2225", "TransDate":20110721
+  ,{"SUBENT":"22929007", "isub":7, "compiled":20180831, "TransID":"2270", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
@@ -1417,7 +1469,6 @@
 		,"SF6":"WID"
 		,"SF58":",WID","Quant":"RP","BasicUnits":"EV","QuantHlp":"Resonance width"
 	    }]}
-	,"x4freetext":["         Total radiation width"]
 	}
 	,{"x4pointer":"2"
 	,"x4code":{"code":"12-MG-24(N,G),,WID/STR"
@@ -1435,7 +1486,6 @@
 		,"SF6":"WID/STR"
 		,"SF58":",WID/STR","Quant":"RP","BasicUnits":"EV","QuantHlp":"Resonance strength"
 	    }]}
-	,"x4freetext":["     Total capture kernel"]
 	}
       ]
      ,"REL-REF":[
@@ -1466,7 +1516,7 @@
 		,"shortRef":"Jour: Physical Review, Part C, Nuclear Physics, Vol.14, p.1328 (1976)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"D,,S.F.Mughabghab+,B,NEUT.CS 1A,,1981"
+	,"x4codes":[{"code":"D,,S.F.Mughabghab+,B,NEUT.CS 1A,,,1981"
 		,"flag":{"code":"D", "help":" Reference to related data compiled in another entry"}
 		,"author1":"S.F.Mughabghab+","stdFileName":"C,NEUT.CS1A,,,1981"
 		,"year":1981,"typ":"B","ref":"C,NEUT.CS 1A"
@@ -1516,6 +1566,11 @@
 	,"x4freetext":[" SD: space in one of REL-REF codes deleted:"
 		,"     J,PR/C, 14,1328,1976 => J,PR/C,14,1328,1976"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180831U", "date":"20180831", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: ERR-T -> DATA-ERR."]
+	}
       ]
     }
     ,"DATA":{"ncols":5, "nrows":1
@@ -1526,25 +1581,25 @@
       ,{"icol":1, "header":"DATA", "units":"EV", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"ERR-T", "units":"EV", "pointer":"1"
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":2, "header":"DATA-ERR", "units":"EV", "pointer":"1"
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
       ,{"icol":3, "header":"DATA", "units":"EV", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
-      ,{"icol":4, "header":"ERR-T", "units":"EV", "pointer":"2"
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":4, "header":"DATA-ERR", "units":"EV", "pointer":"2"
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN-RES"    ,"DATA"      ,"ERR-T"     ,"DATA"      ,"ERR-T"     ]
+	 ["EN-RES"    ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
 	,["KEV"       ,"EV"        ,"EV"        ,"EV"        ,"EV"        ]
 	,[" "         ,"1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [84,6.93,0.39,13.8,0.8]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"229290071", "Pointer":"1"
- ,"Subent":"22929007", "compiled":20101105
+ ,"Subent":"22929007", "compiled":20180831
  ,"year1":2005, "author1ini":"T.", "author1":"Ohsaki"
  ,"zTarg1":12, "targ1":"Mg-24", "proj1":"n", "emis1":"G", "MF":402, "MT":6031, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
@@ -1561,7 +1616,7 @@
     ,"dat0":[6.93]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"EV", "basicUnits":"EV"
+    ,"header":"DATA-ERR", "units":"EV", "basicUnits":"EV"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.39]
@@ -1589,7 +1644,7 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"229290072", "Pointer":"2"
- ,"Subent":"22929007", "compiled":20101105
+ ,"Subent":"22929007", "compiled":20180831
  ,"year1":2005, "author1ini":"T.", "author1":"Ohsaki"
  ,"zTarg1":12, "targ1":"Mg-24", "proj1":"n", "emis1":"G", "MF":2, "MT":151, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
@@ -1606,7 +1661,7 @@
     ,"dat0":[13.8]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"EV", "basicUnits":"EV"
+    ,"header":"DATA-ERR", "units":"EV", "basicUnits":"EV"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.8]
