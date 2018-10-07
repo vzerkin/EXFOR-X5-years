@@ -1,9 +1,9 @@
-  {"ENTRY":"C0181", "updated":20070716, "TransID":"C080", "TransDate":20070716, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C0181", "updated":20181008, "TransID":"C179", "TransDate":20190118, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1957,"a1":"R.L.Clarke+","r1":"J,CJP,35,155,1957"
    ,"ref":"Jour: Canadian Journal of Physics, Vol.35, p.155 (1957)"
    ,"title":"The Angular Distribution and Yield of the Reaction F19(p,alpha0)O16"
    ,"x4subents":[
-   {"SUBENT":"C0181001", "isub":1, "compiled":20070716, "TransID":"C080", "TransDate":20070716
+   {"SUBENT":"C0181001", "isub":1, "compiled":20181008, "TransID":"C179", "TransDate":20190118
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -19,8 +19,8 @@
       ]
      ,"AUTHOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"ini":"R.L.","nam":"CLARKE"}
-	    ,{"ini":"E.B.","nam":"PAUL"}]
+	,"x4codes":[{"ini":"R.L.","nam":"Clarke"}
+	    ,{"ini":"E.B.","nam":"Paul"}]
 	}
       ]
      ,"TITLE":[
@@ -32,8 +32,9 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Electrostatic accelerator."]
+	,"x4codes":[{"code":"ACCEL", "dict":"FACILITY", "idict":18,"hlp":"Accelerator"}
+	    ,{"code":"1CANCRC", "dict":"INSTITUTE", "idict":3,"hlp":"A.E.C.L., Chalk River, Ontario, Canada"}]
+	,"x4freetext":[" Electrostatic accelerator."]
 	}
       ]
      ,"INC-SPECT":[
@@ -73,6 +74,11 @@
 	,"x4freetext":[" DR Page of the CJP reference corrected"
 		,"            and Legendre coefficients added"
 		,"            subentries 4 to 6"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20180927A", "date":"20180927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION in sub.3 orrected"]
 	}
       ]
     }
@@ -298,7 +304,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0181003", "isub":3, "compiled":19990121, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0181003", "isub":3, "compiled":20181008, "TransID":"C179", "TransDate":20190118
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
@@ -335,18 +341,19 @@
 	    }]}
 	}
 	,{"x4pointer":"3"
-	,"x4code":{"code":"9-F-19(P,A),,SIG,,RES"
+	,"x4code":{"code":"9-F-19(P,A)8-O-16,,SIG,,RES"
 	    ,"c4reac":"(P,A),SIG,,RES"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":107
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"9-F-19(P,A),,SIG,,RES"
+	    {"code":"9-F-19(P,A)8-O-16,,SIG,,RES"
 		,"Reac":"P,A"
 		,"SF1":"9-F-19","Targ":{"code":"9-F-19","nam":"F-19","ZA":9019}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"A"
+		,"SF4":"8-O-16","Prod":{"code":"8-O-16","nam":"O-16","ZA":8016}
 		,"SF6":"SIG"
 		,"SF8":"RES"
 		,"SF58":",SIG,,RES","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section at resonance"
@@ -408,8 +415,17 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from Table IV in reference."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table IV in reference."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20180927A", "date":"20180927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added SF4 in REACTION 3"]
 	}
       ]
     }
@@ -456,7 +472,7 @@
 	,[2.58,0.025,300,25,51,10,0,1,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C01810031", "Pointer":"1"
- ,"Subent":"C0181003", "compiled":19990121
+ ,"Subent":"C0181003", "compiled":20181008
  ,"year1":1957, "author1ini":"R.L.", "author1":"Clarke"
  ,"zTarg1":9, "targ1":"F-19", "proj1":"p", "emis1":"0", "MF":402, "MT":6001, "nExpectedArgs":0
  ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
@@ -496,7 +512,7 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"C01810032", "Pointer":"2"
- ,"Subent":"C0181003", "compiled":19990121
+ ,"Subent":"C0181003", "compiled":20181008
  ,"year1":1957, "author1ini":"R.L.", "author1":"Clarke"
  ,"zTarg1":9, "targ1":"F-19", "proj1":"p", "emis1":"A", "MF":2, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
@@ -553,12 +569,12 @@
  }
 }
 ,{"iDataset":2, "DatasetID":"C01810033", "Pointer":"3"
- ,"Subent":"C0181003", "compiled":19990121
+ ,"Subent":"C0181003", "compiled":20181008
  ,"year1":1957, "author1ini":"R.L.", "author1":"Clarke"
  ,"zTarg1":9, "targ1":"F-19", "proj1":"p", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
  ,"ReactionType":"CSR", "quant":"CS", "quantExpan":"Cross section at resonance"
- ,"reacode":"9-F-19(P,A),,SIG,,RES"
+ ,"reacode":"9-F-19(P,A)8-O-16,,SIG,,RES"
  ,"compNotes":[]
  ,"wx4data":5
  ,"lx4data":6
@@ -610,7 +626,7 @@
  }
 }
 ,{"iDataset":3, "DatasetID":"C01810034", "Pointer":"4"
- ,"Subent":"C0181003", "compiled":19990121
+ ,"Subent":"C0181003", "compiled":20181008
  ,"year1":1957, "author1ini":"R.L.", "author1":"Clarke"
  ,"zTarg1":9, "targ1":"F-19", "proj1":"p", "emis1":"0", "MF":402, "MT":6003, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
@@ -661,7 +677,7 @@
  }
 }
 ,{"iDataset":4, "DatasetID":"C01810035", "Pointer":"5"
- ,"Subent":"C0181003", "compiled":19990121
+ ,"Subent":"C0181003", "compiled":20181008
  ,"year1":1957, "author1ini":"R.L.", "author1":"Clarke"
  ,"zTarg1":9, "targ1":"F-19", "proj1":"p", "emis1":"0", "MF":2, "MT":151, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
