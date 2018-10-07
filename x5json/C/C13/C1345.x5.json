@@ -1,9 +1,9 @@
-  {"ENTRY":"C1345", "updated":20051019, "TransID":"C076", "TransDate":20060104, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C1345", "updated":20181008, "TransID":"C179", "TransDate":20190118, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1993,"a1":"A.J.Kellock+","r1":"J,NIM/B,79,493,1993"
    ,"ref":"Jour: Nucl. Instrum. Methods in Physics Res., Sect.B, Vol.79, p.493 (1993)"
-   ,"title":"Absolute cross section for D(4He, D)4He forward scattering"
+   ,"title":"Absolute cross section for D(4He,D)4He forward scattering"
    ,"x4subents":[
-   {"SUBENT":"C1345001", "isub":1, "compiled":20051019, "TransID":"C076", "TransDate":20060104
+   {"SUBENT":"C1345001", "isub":1, "compiled":20181008, "TransID":"C179", "TransDate":20190118
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -26,7 +26,7 @@
      ,"TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Absolute cross section for D(4He, D)4He forward"
+	,"x4freetext":["Absolute cross section for D(4He,D)4He forward"
 		," scattering"]
 	}
       ]
@@ -55,8 +55,8 @@
 	{"x4pointer":" "
 	,"x4codes":[{"code":"SIBAR", "dict":"DETECTOR", "idict":22,"hlp":"Silicon surface barrier detector"}]
 	,"x4freetext":[" Two detectors were used to allow simultaneous"
-		," collection of Elastic recoil spectrometry (ERS) and"
-		," Rutherford backscattering spectra (RBS). The RBS"
+		," collection of Elastic Recoil Spectrometry (ERS) and"
+		," Rutherford Backscattering Spectra (RBS). The RBS"
 		," detector was at 170 degree with a solid angle of"
 		," 2.88 msr at the sample. The angle of the ERS detector"
 		," was adjustable, and its active surface was 11.8 mm x"
@@ -75,9 +75,11 @@
      ,"PART-DET":[
 	{"x4pointer":" "
 	,"x4codes":["D"]
+	,"x4freetext":[" Recoil deuteron from alpha scattering on 2H"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":["A"]
+	,"x4freetext":[" Outoging alpha from alpha scattering on C"]
 	}
       ]
      ,"MONITOR":[
@@ -85,9 +87,16 @@
 	,"x4code":{"code":""}
 	,"x4freetext":["The accelerator energy scale was calibrated with"
 		," reference to an 241Am alpha source, resonance energies"
-		," for 19F(p,alpha+g) at 340 keV and 27Al(p, g)28Si at"
-		," 770 and 992 keV, and the 7Li(p, n)7Be threshold at"
+		," for 19F(p,alpha+g) at 340 keV and 27Al(p,g)28Si at"
+		," 770 and 992 keV, and the 7Li(p,n)7Be threshold at"
 		," 1881 keV."]
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"NTRTH", "dict":"ANALYSIS", "idict":23,"hlp":"Normalized to Rutherford scattering cross section"}]
+	,"x4freetext":[" Normalized to C(a,a)C Rutherford scattering"
+		,"cross section"]
 	}
       ]
      ,"HISTORY":[
@@ -96,28 +105,34 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20181005A", "date":"20181005", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION corrected"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C1345002", "isub":2, "compiled":20051019, "TransID":"C076", "TransDate":20060104
+  ,{"SUBENT":"C1345002", "isub":2, "compiled":20181008, "TransID":"C179", "TransDate":20190118
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"1-H-2(A,EL)1-H-2,,DA"
-	    ,"c4reac":"(A,EL),DA"
+	,"x4code":{"code":"1-H-2(A,EL)1-H-2,,DA,D"
+	    ,"c4reac":"(A,EL),DA,D"
 	    ,"combi":"a"
 	    ,"MF":4
 	    ,"MT":2
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"1-H-2(A,EL)1-H-2,,DA"
+	    {"code":"1-H-2(A,EL)1-H-2,,DA,D"
 		,"Reac":"A,EL"
 		,"SF1":"1-H-2","Targ":{"code":"1-H-2","nam":"H-2","ZA":1002}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"EL","procHlp":"Elastic scattering"
 		,"SF4":"1-H-2","Prod":{"code":"1-H-2","nam":"H-2","ZA":1002}
 		,"SF6":"DA"
-		,"SF58":",DA","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Differential c/s with respect to angle"
+		,"SF7":"D"
+		,"SF58":",DA,D","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Angular distribution of particle specified"
 	    }]}
 	}
       ]
@@ -134,6 +149,13 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[" Data taken from Fig. 1"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20181005A", "date":"20181005", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF7 added"]
 	}
       ]
     }
@@ -330,12 +352,12 @@
 	,[40,2.86,350]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1345002", "Pointer":" "
- ,"Subent":"C1345002", "compiled":20051019
+ ,"Subent":"C1345002", "compiled":20181008
  ,"year1":1993, "author1ini":"A.J.", "author1":"Kellock"
  ,"zTarg1":1, "targ1":"H-2", "proj1":"a", "emis1":"EL", "MF":4, "MT":2, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
- ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
- ,"reacode":"1-H-2(A,EL)1-H-2,,DA"
+ ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Angular distribution of particle specified"
+ ,"reacode":"1-H-2(A,EL)1-H-2,,DA,D"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":162
