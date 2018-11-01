@@ -1,9 +1,9 @@
-  {"ENTRY":"11853", "updated":19860505, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"11853", "updated":20181102, "TransID":"1444", "TransDate":20190109, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1962,"a1":"R.E.Shamu","r1":"J,NP,31,166,1962"
    ,"ref":"Jour: Nuclear Physics, Vol.31, p.166 (1962)"
-   ,"title":"The Disintegration of Neon and Krypton By Neutrons."
+   ,"title":"The disintegration of neon and krypton by neutrons."
    ,"x4subents":[
-   {"SUBENT":"11853001", "isub":1, "compiled":19860505, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"11853001", "isub":1, "compiled":20181102, "TransID":"1444", "TransDate":20190109
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,20 +12,25 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,NP,31,166,62","stdFileName":"J,NP,31,166,1962"
+	,"x4codes":[{"code":"J,NP,31,166,1962","stdFileName":"J,NP,31,166,1962"
 		,"year":1962,"typ":"J","ref":"J,NP","vol":"31","p":"166"
 		,"shortRef":"Jour: Nuclear Physics, Vol.31, p.166 (1962)"}]
 	}
       ]
      ,"AUTHOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"ini":"R.E.","nam":"SHAMU"}]
+	,"x4codes":[{"ini":"R.E.","nam":"Shamu"}]
 	}
       ]
      ,"TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["THE DISINTEGRATION OF NEON AND KRYPTON BY NEUTRONS."]
+	,"x4freetext":["The disintegration of neon and krypton by neutrons."]
+	}
+      ]
+     ,"FACILITY":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"VDGT", "dict":"FACILITY", "idict":18,"hlp":"Tandem van de Graaff"}]
 	}
       ]
      ,"INC-SOURCE":[
@@ -36,7 +41,7 @@
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"SCIN", "dict":"DETECTOR", "idict":22,"hlp":"Scintillation detector"}]
-	,"x4freetext":[" GAS SCINTILLATION COUNTER."]
+	,"x4freetext":[" Gas scintillation counter."]
 	}
       ]
      ,"MONITOR":[
@@ -54,39 +59,52 @@
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":{"code":"760731T", "date":"760731", "act":"T", "dict":"HISTORY", "idict":15
+	,"x4code":{"code":"19760731T", "date":"19760731", "act":"T", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Converted from previous compilation"}
-	,"x4freetext":[" TRANSLATED FROM SCISRS"]
+	,"x4freetext":[" Translated from SCISRS"]
 	}
 	,{"x4pointer":" "
-	,"x4code":{"code":"830919A", "date":"830919", "act":"A", "dict":"HISTORY", "idict":15
+	,"x4code":{"code":"19830919A", "date":"19830919", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" CONVERTED TO REACTION FORMALISM"]
+	,"x4freetext":[" Converted to reaction formalism"]
 	}
 	,{"x4pointer":" "
-	,"x4code":{"code":"860505A", "date":"860505", "act":"A", "dict":"HISTORY", "idict":15
+	,"x4code":{"code":"19860505A", "date":"19860505", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" BIB UPDATES."]
+	,"x4freetext":[" BIB updates."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20181029U", "date":"20181029", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" OS. REACTION codes in subs.2,3 corrected,"
+		," converted to lower and upper case"]
 	}
       ]
     }
    }
-  ,{"SUBENT":"11853002", "isub":2, "compiled":19860505, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"11853002", "isub":2, "compiled":20181102, "TransID":"1444", "TransDate":20190109
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"36-KR-0(N,X),,SIG"
-	    ,"c4reac":"(N,X),SIG"
-	    ,"combi":"a"
-	    ,"MF":3
-	    ,"MT":9000
+	,"x4code":{"code":"(36-KR-0(N,A),,SIG)+(36-KR-0(N,P),,SIG)"
+	    ,"c4reac":"((N,A),SIG)+((N,P),SIG)"
+	    ,"combi":"a","combiQuant":"Cross section"
+	    ,"MF":503
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"36-KR-0(N,X),,SIG"
-		,"Reac":"N,X"
+	    {"code":"36-KR-0(N,A),,SIG"
+		,"Reac":"N,A"
 		,"SF1":"36-KR-0","Targ":{"code":"36-KR-0","nam":"Kr-0","ZA":36000}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF3":"A"
+		,"SF6":"SIG"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }
+	    ,{"code":"36-KR-0(N,P),,SIG"
+		,"Reac":"N,P"
+		,"SF1":"36-KR-0","Targ":{"code":"36-KR-0","nam":"Kr-0","ZA":36000}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"P"
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
@@ -97,7 +115,14 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[" READ FROM CURVE REC`D IN PRIVATE COMM."]
+	,"x4freetext":[" Read from curve rec`d in private comm."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20181029U", "date":"20181029", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" REACTION changed to sum of (n,a)+(n,p)"]
 	}
       ]
     }
@@ -141,12 +166,12 @@
 	,[11.95,0.0252]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"11853002", "Pointer":" "
- ,"Subent":"11853002", "compiled":19860505
+ ,"Subent":"11853002", "compiled":20181102
  ,"year1":1962, "author1ini":"R.E.", "author1":"Shamu"
- ,"zTarg1":36, "targ1":"Kr-0", "proj1":"n", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
+ ,"zTarg1":36, "targ1":"Kr-0", "proj1":"n", "emis1":"A", "MF":503, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"36-KR-0(N,X),,SIG"
+ ,"reacode":"(36-KR-0(N,A),,SIG)+(36-KR-0(N,P),,SIG)"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":12
@@ -193,25 +218,39 @@
 }
    ]
    }
-  ,{"SUBENT":"11853003", "isub":3, "compiled":19860505, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"11853003", "isub":3, "compiled":20181102, "TransID":"1444", "TransDate":20190109
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"10-NE-0(N,X),,SIG"
-	    ,"c4reac":"(N,X),SIG"
-	    ,"combi":"a"
-	    ,"MF":3
-	    ,"MT":9000
+	,"x4code":{"code":"(10-NE-0(N,A),,SIG)+(10-NE-0(N,P),,SIG)"
+	    ,"c4reac":"((N,A),SIG)+((N,P),SIG)"
+	    ,"combi":"a","combiQuant":"Cross section"
+	    ,"MF":503
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"10-NE-0(N,X),,SIG"
-		,"Reac":"N,X"
+	    {"code":"10-NE-0(N,A),,SIG"
+		,"Reac":"N,A"
 		,"SF1":"10-NE-0","Targ":{"code":"10-NE-0","nam":"Ne-0","ZA":10000}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF3":"A"
+		,"SF6":"SIG"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }
+	    ,{"code":"10-NE-0(N,P),,SIG"
+		,"Reac":"N,P"
+		,"SF1":"10-NE-0","Targ":{"code":"10-NE-0","nam":"Ne-0","ZA":10000}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"P"
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on sources of uncertainties"]
 	}
       ]
      ,"STATUS":[
@@ -219,7 +258,14 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[" READ FROM CURVE FOR BNL-325"]
+	,"x4freetext":[" Read from curve for BNL-325"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20181029U", "date":"20181029", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" REACTION changed to sum of (n,a)+(n,p)"]
 	}
       ]
     }
@@ -389,12 +435,12 @@
 	,[9.0617,325.79]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"11853003", "Pointer":" "
- ,"Subent":"11853003", "compiled":19860505
+ ,"Subent":"11853003", "compiled":20181102
  ,"year1":1962, "author1ini":"R.E.", "author1":"Shamu"
- ,"zTarg1":10, "targ1":"Ne-0", "proj1":"n", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
+ ,"zTarg1":10, "targ1":"Ne-0", "proj1":"n", "emis1":"A", "MF":503, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"10-NE-0(N,X),,SIG"
+ ,"reacode":"(10-NE-0(N,A),,SIG)+(10-NE-0(N,P),,SIG)"
  ,"compNotes":["Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
  ,"wx4data":4
  ,"lx4data":135
@@ -559,7 +605,7 @@
 }
    ]
    }
-  ,{"SUBENT":"11853004", "isub":4, "compiled":19860505, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"11853004", "isub":4, "compiled":20181102, "TransID":"1444", "TransDate":20190109
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -579,6 +625,13 @@
 		,"SF6":"SIG"
 		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
 	    }]}
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on sources of uncertainties"]
 	}
       ]
     }
@@ -1128,7 +1181,7 @@
 	,[3.85,9.5831,49.306]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"11853004", "Pointer":" "
- ,"Subent":"11853004", "compiled":19860505
+ ,"Subent":"11853004", "compiled":20181102
  ,"year1":1962, "author1ini":"R.E.", "author1":"Shamu"
  ,"zTarg1":10, "targ1":"Ne-0", "proj1":"n", "emis1":"A", "MF":3, "MT":801, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
@@ -1804,7 +1857,7 @@
 }
    ]
    }
-  ,{"SUBENT":"11853005", "isub":5, "compiled":19860505, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"11853005", "isub":5, "compiled":20181102, "TransID":"1444", "TransDate":20190109
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1824,6 +1877,13 @@
 		,"SF6":"SIG"
 		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
 	    }]}
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on sources of uncertainties"]
 	}
       ]
     }
@@ -1908,7 +1968,7 @@
 	,[10.728,60.84]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"11853005", "Pointer":" "
- ,"Subent":"11853005", "compiled":19860505
+ ,"Subent":"11853005", "compiled":20181102
  ,"year1":1962, "author1ini":"R.E.", "author1":"Shamu"
  ,"zTarg1":10, "targ1":"Ne-0", "proj1":"n", "emis1":"A", "MF":3, "MT":801, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
