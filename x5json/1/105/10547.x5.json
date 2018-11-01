@@ -1,9 +1,9 @@
-  {"ENTRY":"10547", "updated":20040517, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10547", "updated":20181102, "TransID":"1444", "TransDate":20190109, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1976,"a1":"J.B.Czirr+","r1":"J,NSE,60,383,1976"
    ,"ref":"Jour: Nuclear Science and Engineering, Vol.60, p.383 (1976)"
    ,"title":"A Measurement of the Fission Cross Section of 235U from 100 eV to 680 keV."
    ,"x4subents":[
-   {"SUBENT":"10547001", "isub":1, "compiled":20040517, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"10547001", "isub":1, "compiled":20181102, "TransID":"1444", "TransDate":20190109
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,15 +12,15 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,NSE,60,383,197608","stdFileName":"J,NSE,60,383,1976"
+	,"x4codes":[{"code":"J,NSE,60,383,1976","stdFileName":"J,NSE,60,383,1976"
 		,"year":1976,"typ":"J","ref":"J,NSE","vol":"60","p":"383"
 		,"shortRef":"Jour: Nuclear Science and Engineering, Vol.60, p.383 (1976)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"J,NSE,64,892,197712","stdFileName":"J,NSE,64,892,1977"
+	,"x4codes":[{"code":"J,NSE,64,892,1977","stdFileName":"J,NSE,64,892,1977"
 		,"year":1977,"typ":"J","ref":"J,NSE","vol":"64","p":"892"
 		,"shortRef":"Jour: Nuclear Science and Engineering, Vol.64, p.892 (1977)"}]
-	,"x4freetext":[" Renormalized data for 0.1-75 keV."]
+	,"x4freetext":["   Renormalized data for 0.1-75 keV."]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"R,UCRL-77377,19751001","stdFileName":"R,UCRL-77377,1975"
@@ -61,7 +61,7 @@
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"GLASD", "dict":"DETECTOR", "idict":22,"hlp":"Glass detector"}]
-	,"x4freetext":[" 6Li glass detectors for flux monitoring       1"]
+	,"x4freetext":[" 6Li glass detectors for flux monitoring"]
 	}
       ]
      ,"CORRECTION":[
@@ -91,6 +91,14 @@
 		," energy dependence of the 6Li(n,alpha) reaction."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table III, Nucl.Sci.Eng.60,383(1976)"]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"19751014C", "date":"19751014", "act":"C", "dict":"HISTORY", "idict":15
@@ -107,10 +115,15 @@
 	,"x4freetext":[" Converted to new date formats, lower case."
 		,"            Data heading updated."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20181014U", "date":"20181014", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" OS. Minor correction in sub.2"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"10547002", "isub":2, "compiled":20040517, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10547002", "isub":2, "compiled":20181102, "TransID":"1444", "TransDate":20190109
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
@@ -163,19 +176,12 @@
 		,"reaction":"3-LI-6(N,T)2-HE-4,,SIG"}
 	}
 	,{"x4pointer":" "
-	,"x4code":{"code":"(MONIT2)92-U-235(N,F),,SIG"
-		,"heading":"MONIT2"
+	,"x4code":{"code":"(MONIT)92-U-235(N,F),,SIG"
+		,"heading":"MONIT"
 		,"reaction":"92-U-235(N,F),,SIG"}
 	,"x4freetext":[" Normalized to thermal-"
 		," neutron cross section from ENDF/B-IV using data taken"
 		," in a separate measurement in the range 0.02 - 2000 eV."]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":"2"
-	,"x4codes":[{"code":"DEP"
-		,"flag":"DEP", "help":"Dependent data"
-		}]
 	}
       ]
      ,"HISTORY":[
@@ -184,6 +190,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Data replaced with published values"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20181014U", "date":"20181014", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" STATUS keyword deleted"]
+	}
       ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
@@ -191,12 +202,12 @@
        {"icol":0, "header":"EN-NRM", "units":"EV", "pointer":"2"
 	,"headerHelp":"Incident projectile energy used for normalization", "pFlag":"0000000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"MONIT2", "units":"B", "pointer":"2"
-	,"headerHelp":"2nd normalization value, see MONITOR", "pFlag":"0000000"
+      ,{"icol":1, "header":"MONIT", "units":"B", "pointer":"2"
+	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN-NRM"    ,"MONIT2"    ]
+	 ["EN-NRM"    ,"MONIT"     ]
 	,["EV"        ,"B"         ]
 	,["2"         ,"2"         ]]
       ,"data":[
@@ -269,7 +280,7 @@
 	,[650,680,3.46,1.02,2.2,2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"105470021", "Pointer":"1"
- ,"Subent":"10547002", "compiled":20040517
+ ,"Subent":"10547002", "compiled":20181102
  ,"year1":1976, "author1ini":"J.B.", "author1":"Czirr"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":203, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -380,7 +391,7 @@
 	,0.0166419,0.0120103,0.0094538,0.0080481,0.00555091,0.00459242,0.00398587,0.00363827,0.00325524,0.0030627] }
 }
 ,{"iDataset":1, "DatasetID":"105470022", "Pointer":"2"
- ,"Subent":"10547002", "compiled":20040517
+ ,"Subent":"10547002", "compiled":20181102
  ,"year1":1976, "author1ini":"J.B.", "author1":"Czirr"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -448,7 +459,7 @@
     ,"com0":0.0253
     ,"com1":0.0253}
   ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT2", "units":"B", "basicUnits":"B"
+    ,"header":"MONIT", "units":"B", "basicUnits":"B"
     ,"what":"ZZZ", "dataType":"11", "rank":777.1
     ,"expansion":"Assumed values: monitor"
     ,"com0":585.4
