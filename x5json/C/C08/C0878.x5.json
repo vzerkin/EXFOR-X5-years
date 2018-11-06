@@ -1,9 +1,9 @@
-  {"ENTRY":"C0878", "updated":20020515, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C0878", "updated":20181107, "TransID":"C181", "TransDate":20190120, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2001,"a1":"N.Curtis+","r1":"J,PR/C,64,044604,2001"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.64, p.044604 (2001)"
    ,"title":"Decay angular correlations and spectroscopy for 10Be*->4He+6He"
    ,"x4subents":[
-   {"SUBENT":"C0878001", "isub":1, "compiled":20020515, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"C0878001", "isub":1, "compiled":20181107, "TransID":"C181", "TransDate":20190120
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,7 +12,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,PR/C,64,044604,200110","stdFileName":"J,PR_C,64,044604,2001"
+	,"x4codes":[{"code":"J,PR/C,64,044604,2001","stdFileName":"J,PR_C,64,044604,2001"
 		,"year":2001,"typ":"J","ref":"J,PR/C","vol":"64","p":"044604"
 		,"shortRef":"Jour: Physical Review, Part C, Nuclear Physics, Vol.64, p.044604 (2001)"}]
 	}
@@ -101,8 +101,11 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data rec`d by email from D. Caussyn, 10 May 2002."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data rec`d by email from D. Caussyn,"
+		," 10 May 2002."]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"APRVD"
@@ -117,18 +120,24 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" VM"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20181106U", "date":"20181106", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" OS. Minor corr.in sub.2, minor BIB changes"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C0878002", "isub":2, "compiled":20020515, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0878002", "isub":2, "compiled":20181107, "TransID":"C181", "TransDate":20190120
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-7(3-LI-7,2A)2-HE-6,PAR,DA/DA,4-BE-10/A,REL"
-	    ,"c4reac":"(3-LI-7,2A)PAR,DA/DA,4-BE-10/A,REL"
+	,"x4code":{"code":"3-LI-7(3-LI-7,2A)2-HE-6,PAR,DA/DA,BE10/A,MSC"
+	    ,"c4reac":"(3-LI-7,2A)PAR,DA/DA,BE10/A,MSC"
 	    ,"combi":"a"
+	    ,"Units":"MB/SR2"
 	    ,"reacs": [
-	    {"code":"3-LI-7(3-LI-7,2A)2-HE-6,PAR,DA/DA,4-BE-10/A,REL"
+	    {"code":"3-LI-7(3-LI-7,2A)2-HE-6,PAR,DA/DA,BE10/A,MSC"
 		,"Reac":"3-LI-7,2A"
 		,"SF1":"3-LI-7","Targ":{"code":"3-LI-7","nam":"Li-7","ZA":3007}
 		,"SF2":"3-LI-7","Proj":{"code":"3-LI-7","nam":"Li-7","ZA":3007}
@@ -136,9 +145,9 @@
 		,"SF4":"2-HE-6","Prod":{"code":"2-HE-6","nam":"He-6","ZA":2006}
 		,"SF5":"PAR"
 		,"SF6":"DA/DA"
-		,"SF7":"4-BE-10/A"
-		,"SF8":"REL"
-		,"SF58":"PAR,DA/DA,4-BE-10/A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF7":"BE10/A"
+		,"SF8":"MSC"
+		,"SF58":"PAR,DA/DA,BE10/A","Quant":"DA","BasicUnits":"MB/SR2","QuantHlp":"Partial double diff.cross sect. d2/dA(*)/dA(*)"
 	    }]}
 	,"x4freetext":[" Angular correlation of 10Be formation to alpha+6He"
 		," decay particles averaged over 10 degree angular bins."
@@ -158,6 +167,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" REACTION, data units corrected. Angle bin"
 		,"            width added to COMMON."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20181106U", "date":"20181106", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" Coding of REACTION SF7 modified"]
 	}
       ]
     }
@@ -217,13 +231,93 @@
 	,[10.15,140,95.5,12.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0878002", "Pointer":" "
- ,"Subent":"C0878002", "compiled":20020515
-,"year1":2001, "author1ini":"N.", "author1":"Curtis"
-, "zTarg1":3, "targ1":"Li-7", "proj1":"Li-7", "emis1":"2A", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"3-LI-7(3-LI-7,2A)2-HE-6,PAR,DA/DA,4-BE-10/A,REL"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"C0878002", "compiled":20181107
+ ,"year1":2001, "author1ini":"N.", "author1":"Curtis"
+ ,"zTarg1":3, "targ1":"Li-7", "proj1":"Li-7", "emis1":"2A", "MF":0, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,EXC,ANG)"
+ ,"ReactionType":"D2P", "quant":"DA", "quantExpan":"Partial double diff.cross sect. d2/dA(*)/dA(*)"
+ ,"reacode":"3-LI-7(3-LI-7,2A)2-HE-6,PAR,DA/DA,BE10/A,MSC"
+ ,"compNotes":["Ignored column:DATA-ERR,NO-DIM  expected units:MB/SR2,PER-CENT"]
+ ,"wx4data":7
+ ,"lx4data":16
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[68.4,79.7,115.4,128.8,119.5,87.2,71.6,125.9,140.2,98.7
+	,83.3,95.3,125.5,139.1,141.5,95.5]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[8,8.6,10.2,11,9.7,8.1,7.8,17.3,12.7,10.7
+	,10.8,11.7,11.3,12.4,15.4,12.7]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":34
+    ,"com1":3.4e+7}
+  ,{"ivar":3, "cvar":"x2", "fam":"EXC", "ifComm":false, "ifCM":false
+    ,"header":"E-EXC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"53", "rank":2.1
+    ,"expansion":"Secondary energy: excitation energy"
+    ,"dat0":[9.56,9.56,9.56,9.56,9.56,9.56,9.56,10.15,10.15,10.15
+	,10.15,10.15,10.15,10.15,10.15,10.15]
+    ,"dat1":[9.56e+6,9.56e+6,9.56e+6,9.56e+6,9.56e+6,9.56e+6,9.56e+6,1.015e+7,1.015e+7,1.015e+7
+	,1.015e+7,1.015e+7,1.015e+7,1.015e+7,1.015e+7,1.015e+7]}
+  ,{"ivar":4, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG1", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":0
+    ,"com1":0}
+  ,{"ivar":5, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
+    ,"header":"ANG2", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"dat0":[70,80,90,100,110,120,130,60,70,80
+	,90,100,110,120,130,140]
+   ,"dat1eq":true}
+  ,{"ivar":6, "cvar":"dx3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG-RSL", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Resl+-", "dataType":"61", "rank":3.922
+    ,"expansion":"Angle: angle /Error/"
+    ,"com0":10
+    ,"com1":10}
+  ]
+ ,"wc5data":4
+ ,"lc5data":16
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MB/SR2"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[68.4,79.7,115.4,128.8,119.5,87.2,71.6,125.9,140.2,98.7
+	,83.3,95.3,125.5,139.1,141.5,95.5]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[3.4e+7,3.4e+7,3.4e+7,3.4e+7,3.4e+7,3.4e+7,3.4e+7,3.4e+7,3.4e+7,3.4e+7
+	,3.4e+7,3.4e+7,3.4e+7,3.4e+7,3.4e+7,3.4e+7]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"EXC", "ifCM":false, "units":"EV"
+      ,"header":"EXC", "dataType":"53", "rank":2.0
+      ,"expansion":"Secondary energy: excitation energy"
+      ,"x2":[9.56e+6,9.56e+6,9.56e+6,9.56e+6,9.56e+6,9.56e+6,9.56e+6,1.015e+7,1.015e+7,1.015e+7
+	,1.015e+7,1.015e+7,1.015e+7,1.015e+7,1.015e+7,1.015e+7]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
+      ,"expansion":"Angle: angle"
+      ,"x3":[70,80,90,100,110,120,130,60,70,80
+	,90,100,110,120,130,140]
+      ,"dx3":[10,10,10,10,10,10,10,10,10,10
+	,10,10,10,10,10,10]   }
+ }
 }
    ]
    }
