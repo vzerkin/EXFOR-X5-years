@@ -1,9 +1,9 @@
-  {"ENTRY":"14104", "updated":20061027, "TransID":"1342", "TransDate":20070213, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14104", "updated":20181203, "TransID":"1445", "TransDate":20190227, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2003,"a1":"C.Granja+","r1":"J,NP/A,729,679,2003"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.729, p.679 (2003)"
    ,"title":"Levels of 159Gd populated in average resonance neutron capture"
    ,"x4subents":[
-   {"SUBENT":"14104001", "isub":1, "compiled":20061027, "TransID":"1342", "TransDate":20070213
+   {"SUBENT":"14104001", "isub":1, "compiled":20181203, "TransID":"1445", "TransDate":20190227
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -39,7 +39,7 @@
 	,"x4codes":[{"code":"REAC", "dict":"FACILITY", "idict":18,"hlp":"Reactor"}
 	    ,{"code":"1USABNL", "dict":"INSTITUTE", "idict":3,"hlp":"Brookhaven National Laboratory, Upton, NY, United States of America"}]
 	,"x4freetext":[" the high flux beam reactor at Brookhaven"
-		," national laboratory"]
+		," National Laboratory"]
 	}
       ]
      ,"INC-SOURCE":[
@@ -66,10 +66,20 @@
 		," in 158Gd (152    154   155   156  157   158    160"
 		,"          <0.05  <0.05  0.6   0.7  1.7   95.8   1.1 %)"]
 	}
-      ]
-     ,"PART-DET":[
-	{"x4pointer":" "
-	,"x4codes":["G"]
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"64-GD-155","ENR":0.006}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"64-GD-156","ENR":0.007}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"64-GD-157","ENR":0.017}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"64-GD-158","ENR":0.958}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"64-GD-160","ENR":0.011}
 	}
       ]
      ,"MONITOR":[
@@ -93,10 +103,15 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20181202U", "date":"20181202", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" OS. Minor BIB corrections"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"14104002", "isub":2, "compiled":20061027, "TransID":"1342", "TransDate":20070213
+  ,{"SUBENT":"14104002", "isub":2, "compiled":20181203, "TransID":"1445", "TransDate":20190227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -121,8 +136,8 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Total uncertainty"]
 	}
       ]
@@ -141,12 +156,12 @@
       ,{"icol":3, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":4, "header":"ERR-T", "units":"ARB-UNITS", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":4, "header":"DATA-ERR", "units":"ARB-UNITS", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN"        ,"E"         ,"E-ERR"     ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"E"         ,"E-ERR"     ,"DATA"      ,"DATA-ERR"  ]
 	,["KEV"       ,"KEV"       ,"KEV"       ,"ARB-UNITS" ,"ARB-UNITS" ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -439,7 +454,7 @@
 	,[24,2925.7,0.5,46,7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14104002", "Pointer":" "
- ,"Subent":"14104002", "compiled":20061027
+ ,"Subent":"14104002", "compiled":20181203
  ,"year1":2003, "author1ini":"C.", "author1":"Granja"
  ,"zTarg1":64, "targ1":"Gd-158", "proj1":"n", "emis1":"G", "MF":600, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
@@ -484,7 +499,7 @@
 	,20,19,22,37,34,39,46]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"header":"DATA-ERR", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.4,2.7,2.5,0.3,2.9,2.3,2.4,2.3,1,1.2
@@ -866,7 +881,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14104003", "isub":3, "compiled":20061027, "TransID":"1342", "TransDate":20070213
+  ,{"SUBENT":"14104003", "isub":3, "compiled":20181203, "TransID":"1445", "TransDate":20190227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -891,8 +906,8 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Total uncertainty"]
 	}
       ]
@@ -923,12 +938,12 @@
       ,{"icol":2, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"ERR-T", "units":"ARB-UNITS", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"ARB-UNITS", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E"         ,"E-ERR"     ,"DATA"      ,"ERR-T"     ]
+	 ["E"         ,"E-ERR"     ,"DATA"      ,"DATA-ERR"  ]
 	,["KEV"       ,"KEV"       ,"ARB-UNITS" ,"ARB-UNITS" ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1017,7 +1032,7 @@
 	,[2903.2,0.7,16.3,2.8]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14104003", "Pointer":" "
- ,"Subent":"14104003", "compiled":20061027
+ ,"Subent":"14104003", "compiled":20181203
  ,"year1":2003, "author1ini":"C.", "author1":"Granja"
  ,"zTarg1":64, "targ1":"Gd-158", "proj1":"n", "emis1":"G", "MF":600, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(SpE,E2)"
@@ -1042,7 +1057,7 @@
 	,15.8,14.6,16.3]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"header":"DATA-ERR", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.2,0.6,0.6,0.5,0.4,0.5,0.4,0.5,0.5,0.8
