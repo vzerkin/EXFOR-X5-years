@@ -1,13 +1,13 @@
-  {"ENTRY":"L0101", "updated":20050718, "TransID":"L008", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"L0101", "updated":20181204, "TransID":"L037", "TransDate":20190220, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1970,"a1":"A.P.Komar+","r1":"J,SNP,10,30,1970"
    ,"ref":"Jour: Soviet Journal of Nuclear Physics, Vol.10, p.30 (1970)"
    ,"title":"Mass and energy distributions of fragments from photofission of U238, Bi209 and Au197"
    ,"x4subents":[
-   {"SUBENT":"L0101001", "isub":1, "compiled":20050718, "TransID":"L008", "TransDate":20050926
+   {"SUBENT":"L0101001", "isub":1, "compiled":20181204, "TransID":"L037", "TransDate":20190220
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"4UKRUFT", "dict":"INSTITUTE", "idict":3,"hlp":"Ukrainskiy Fiziko-Tekhnicheskiy Inst., Kharkov, Ukraine"}]
+	,"x4codes":[{"code":"4UKRKFT", "dict":"INSTITUTE", "idict":3,"hlp":"Kharkovskii Fiziko-Tekhnicheskii Inst., Kharkov, Ukraine"}]
 	}
       ]
      ,"REFERENCE":[
@@ -43,7 +43,7 @@
      ,"FACILITY":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"LINAC", "dict":"FACILITY", "idict":18,"hlp":"Linear accelerator"}
-	    ,{"code":"4UKRUFT", "dict":"INSTITUTE", "idict":3,"hlp":"Ukrainskiy Fiziko-Tekhnicheskiy Inst., Kharkov, Ukraine"}]
+	    ,{"code":"4UKRKFT", "dict":"INSTITUTE", "idict":3,"hlp":"Kharkovskii Fiziko-Tekhnicheskii Inst., Kharkov, Ukraine"}]
 	,"x4freetext":[" Khar`kov U-2000 linear accelerator"]
 	}
       ]
@@ -74,27 +74,34 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20181204A", "date":"20181204", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION in sub.2 changed"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"L0101002", "isub":2, "compiled":20050718, "TransID":"L008", "TransDate":20050926
+  ,{"SUBENT":"L0101002", "isub":2, "compiled":20181204, "TransID":"L037", "TransDate":20190220
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-238(G,F)MASS,,KE/CRL,LF/HF,BRA"
-	    ,"c4reac":"(G,F)MASS,,KE/CRL,LF/HF,BRA"
+	,"x4code":{"code":"92-U-238(G,F)MASS,SEC,KE,LF+HF,BRA"
+	    ,"c4reac":"(G,F)MASS,SEC,KE,LF+HF,BRA"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"92-U-238(G,F)MASS,,KE/CRL,LF/HF,BRA"
+	    {"code":"92-U-238(G,F)MASS,SEC,KE,LF+HF,BRA"
 		,"Reac":"G,F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF4":"MASS","Prod":{"code":"MASS","nam":"mass"}
-		,"SF6":"KE/CRL"
-		,"SF7":"LF/HF"
+		,"SF5":"SEC"
+		,"SF6":"KE"
+		,"SF7":"LF+HF"
 		,"SF8":"BRA"
-		,"SF58":",KE/CRL,LF/HF","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"SEC,KE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Tot.kin.energ.of lig./heav.post-n-emis.frag.pair"
 	    }]}
 	,"x4freetext":[" Total kinetic energy for fragment pair as a"
 		," function of heavy mass fragment."]
@@ -121,6 +128,13 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[" Data taken from Figs. 4 and 5"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20181204A", "date":"20181204", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF5-7 changed"]
 	}
       ]
     }
@@ -171,13 +185,72 @@
 	,[157,159,2.54,null,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"L0101002", "Pointer":" "
- ,"Subent":"L0101002", "compiled":20050718
-,"year1":1970, "author1ini":"A.P.", "author1":"Komar"
-, "zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"92-U-238(G,F)MASS,,KE/CRL,LF/HF,BRA"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"L0101002", "compiled":20181204
+ ,"year1":1970, "author1ini":"A.P.", "author1":"Komar"
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Tot.kin.energ.of lig./heav.post-n-emis.frag.pair"
+ ,"reacode":"92-U-238(G,F)MASS,SEC,KE,LF+HF,BRA"
+ ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
+ ,"wx4data":6
+ ,"lx4data":10
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[165,167,171,172,170,169,165,166,161,159]
+    ,"dat1":[1.65e+8,1.67e+8,1.71e+8,1.72e+8,1.7e+8,1.69e+8,1.65e+8,1.66e+8,1.61e+8,1.59e+8]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.655,0.655,0.573,0.491,0.409,0.573,0.819,0.901,1.22,2.54]
+    ,"dat1":[6.55e+5,6.55e+5,5.73e+5,4.91e+5,4.09e+5,5.73e+5,8.19e+5,9.01e+5,1.22e+6,2.54e+6]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Max", "dataType":"41", "rank":1.3
+    ,"expansion":"Incident energy: energy"
+    ,"com0":1000
+    ,"com1":1.0e+9}
+  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"92", "rank":2.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"dat0":[121,125,129,133,137,141,145,149,153,157]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC1", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[161,168,146,135,122,98,129,155,null,null]
+    ,"dat1":[1.61e+8,1.68e+8,1.46e+8,1.35e+8,1.22e+8,9.8e+7,1.29e+8,1.55e+8,null,null]}
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC1-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[9.69,12.1,7.28,7.27,6.47,7.27,15.3,29,null,null]
+    ,"dat1":[9.69e+6,1.21e+7,7.28e+6,7.27e+6,6.47e+6,7.27e+6,1.53e+7,2.9e+7,null,null]}
+  ]
+ ,"wc5data":3
+ ,"lc5data":10
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.65e+8,1.67e+8,1.71e+8,1.72e+8,1.7e+8,1.69e+8,1.65e+8,1.66e+8,1.61e+8,1.59e+8]
+      ,"dy":[6.55e+5,6.55e+5,5.73e+5,4.91e+5,4.09e+5,5.73e+5,8.19e+5,9.01e+5,1.22e+6,2.54e+6]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.0e+9,1.0e+9,1.0e+9,1.0e+9,1.0e+9,1.0e+9,1.0e+9,1.0e+9,1.0e+9,1.0e+9]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"92", "rank":2.0
+      ,"expansion":"Isotope/particle identification: mass"
+      ,"x2":[121,125,129,133,137,141,145,149,153,157]
+   }
+ }
 }
    ]
    }
