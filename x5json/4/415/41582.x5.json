@@ -1,9 +1,9 @@
-  {"ENTRY":"41582", "updated":20120512, "TransID":"4157", "TransDate":20120928, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
+  {"ENTRY":"41582", "updated":20181224, "TransID":"4181", "TransDate":20190326, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
    ,"y1":1979,"a1":"Uy.I.Kolevatov+","r1":"R,FEI-913,1979"
    ,"ref":"Rept: Fiz.-Energ Institut, Obninsk Reports, No.913 (1979)"
    ,"title":"Radionuclide neutron source on the base of californium-252."
    ,"x4subents":[
-   {"SUBENT":"41582001", "isub":1, "compiled":20120512, "TransID":"4157", "TransDate":20120928
+   {"SUBENT":"41582001", "isub":1, "compiled":20181224, "TransID":"4181", "TransDate":20190326
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -95,6 +95,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" DOI code was corrected in Subent 003"
 		," according to WP2012-26 ."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20181224A", "date":"20181224", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Reaction in Subent 005 was corrected."]
 	}
       ]
     }
@@ -636,24 +641,27 @@
 }
    ]
    }
-  ,{"SUBENT":"41582005", "isub":5, "compiled":20111215, "TransID":"4155", "TransDate":20120207
+  ,{"SUBENT":"41582005", "isub":5, "compiled":20181224, "TransID":"4181", "TransDate":20190326
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"98-CF-252(0,F)0-G-0,,MLT/DE,,RAW"
-	    ,"c4reac":"(0,F),MLT/DE,,RAW"
+	,"x4code":{"code":"98-CF-252(0,F)0-G-0,PR,FY/DE,,RAW"
+	    ,"c4reac":"(0,F)PR,FY/DE,,RAW"
 	    ,"combi":"a"
-	    ,"Units":"PT/RCT/MEV"
+	    ,"MF":5
+	    ,"MT":18
+	    ,"Units":"PC/FIS/MEV"
 	    ,"reacs": [
-	    {"code":"98-CF-252(0,F)0-G-0,,MLT/DE,,RAW"
+	    {"code":"98-CF-252(0,F)0-G-0,PR,FY/DE,,RAW"
 		,"Reac":"0,F"
 		,"SF1":"98-CF-252","Targ":{"code":"98-CF-252","nam":"Cf-252","ZA":98252}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF4":"0-G-0","Prod":{"code":"0-G-0","nam":"G-0"}
-		,"SF6":"MLT/DE"
+		,"SF5":"PR"
+		,"SF6":"FY/DE"
 		,"SF8":"RAW"
-		,"SF58":",MLT/DE","Quant":"MLT","BasicUnits":"PT/RCT/MEV","QuantHlp":"Particle multiplicity d/dE"
+		,"SF58":"PR,FY/DE","Quant":"FY","BasicUnits":"PC/FIS/MEV","QuantHlp":"Energy spectrum of prompt fission particles"
 	    }]}
 	,"x4freetext":[" Gamma spectrum."
 		," Data units given in title of table are gamma/(sec*MeV)"
@@ -665,13 +673,6 @@
 	,"x4code":null
 	,"x4freetext":[" Energy gamma spectrum was defined as:"
 		," f(E)=4*PI*R**2*F(E) ."]
-	}
-      ]
-     ,"COMMENT":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Of compiler. Integral of this data by E in given"
-		,"energy range is about ."]
 	}
       ]
      ,"CRITIQUE":[
@@ -697,7 +698,16 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 7 of R,FEI-1730 ."]
+	,"x4freetext":[" Table 7 of Rep.FEI-1730 ."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20181224A", "date":"20181224", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Reaction was corrected"
+		," 0-G-0,,MLT/DE,,RAW) -> 0-G-0,PR,FY/DE,,RAW)"
+		," according to a comment of N.Otsuka ( NDS, IAEA)"]
 	}
       ]
     }
@@ -759,15 +769,15 @@
 	,[8.8979,15300]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41582005", "Pointer":" "
- ,"Subent":"41582005", "compiled":20111215
+ ,"Subent":"41582005", "compiled":20181224
  ,"year1":1979, "author1ini":"Uy.I.", "author1":"Kolevatov"
- ,"zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0  3       ", "getYFormulaStr":"y=DATA(E2)"
- ,"ReactionType":"MTE", "quant":"MLT", "quantExpan":"Particle multiplicity d/dE"
- ,"reacode":"98-CF-252(0,F)0-G-0,,MLT/DE,,RAW"
+ ,"zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":5, "MT":18, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0  3   7   ", "getYFormulaStr":"y=DATA(E2,ZAM)"
+ ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Energy spectrum of prompt fission particles"
+ ,"reacode":"98-CF-252(0,F)0-G-0,PR,FY/DE,,RAW"
  ,"compNotes":["ERR-ANALYS:(DATA-ERR,,20.)    ADDED AS COMMON:DATA-ERR,PER-CENT=10.0%"
 	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
- ,"wx4data":3
+ ,"wx4data":5
  ,"lx4data":42
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -800,11 +810,23 @@
 	,2.8843e+6,3.0855e+6,3.2866e+6,3.4876e+6,3.6885e+6,3.8893e+6,4.09e+6,4.3408e+6,4.6417e+6,4.9425e+6
 	,5.2432e+6,5.5438e+6,5.8443e+6,6.1448e+6,6.4453e+6,6.7457e+6,7.0461e+6,7.3464e+6,7.6968e+6,8.0972e+6
 	,8.4976e+6,8.8979e+6]}
+  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":0
+    ,"com1":0}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"92", "rank":2.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":0
+    ,"com1":0}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":42
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PT/RCT/MEV"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PC/FIS/MEV"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[5.3e+9,5.4e+9,4.0e+9,3.1e+9,2.37e+9,2.05e+9,1.51e+9,1.56e+9,1.49e+9,1.04e+9
@@ -830,6 +852,15 @@
 	,2.8843e+6,3.0855e+6,3.2866e+6,3.4876e+6,3.6885e+6,3.8893e+6,4.09e+6,4.3408e+6,4.6417e+6,4.9425e+6
 	,5.2432e+6,5.5438e+6,5.8443e+6,6.1448e+6,6.4453e+6,6.7457e+6,7.0461e+6,7.3464e+6,7.6968e+6,8.0972e+6
 	,8.4976e+6,8.8979e+6]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":2.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x2":[0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0,0,0,0,0,0,0,0,0
+	,0,0]
    }
  }
 }
