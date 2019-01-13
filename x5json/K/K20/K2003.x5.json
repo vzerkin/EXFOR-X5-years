@@ -1,9 +1,9 @@
-  {"ENTRY":"K2003", "updated":20070310, "TransID":"K001", "TransDate":20070310, "CenterID":"JCPRG", "Center":"Japan Charged Particle Nuclear Reaction Data Group, Hokkaido University, Sapporo, Japan"
-   ,"y1":2001,"a1":"H.Utsunomiya+","r1":"J,PR/C,63,018801,2001"
-   ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.63, Issue.1, p.018801 (2001)"
+  {"ENTRY":"K2003", "updated":20190114, "TransID":"K018", "TransDate":20190222, "CenterID":"JCPRG", "Center":"Japan Charged Particle Nuclear Reaction Data Group, Hokkaido University, Sapporo, Japan"
+   ,"y1":2000,"a1":"H.Utsunomiya+","r1":"J,PR/C,63,018801,2000"
+   ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.63, p.018801 (2000)"
    ,"title":"Photodisintegration of 9Be with laser-induced Compton backscattered gamma rays"
    ,"x4subents":[
-   {"SUBENT":"K2003001", "isub":1, "compiled":20070310, "TransID":"K001", "TransDate":20070310
+   {"SUBENT":"K2003001", "isub":1, "compiled":20190114, "TransID":"K018", "TransDate":20190222
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -40,10 +40,10 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,PR/C,63,(1),018801,200101","stdFileName":"J,PR_C,63,018801,2001"
-		,"year":2001,"typ":"J","ref":"J,PR/C","vol":"63","issue":"1","p":"018801"
-		,"shortRef":"Jour: Physical Review, Part C, Nuclear Physics, Vol.63, Issue.1, p.018801 (2001)"}]
-	,"x4freetext":["Title and authors are coded under TITLE and AUTHOR."]
+	,"x4codes":[{"code":"J,PR/C,63,018801,2000","stdFileName":"J,PR_C,63,018801,2000"
+		,"year":2000,"typ":"J","ref":"J,PR/C","vol":"63","p":"018801"
+		,"shortRef":"Jour: Physical Review, Part C, Nuclear Physics, Vol.63, p.018801 (2000)"}]
+	,"x4freetext":["Main reference. See also TITLE and AUTHOR."]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"W,UTSUNOMIYA,20070113","stdFileName":"W,UTSUNOMIYA,2007"
@@ -67,10 +67,12 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["- Target enrichment is 99.5%."
-		,"- Chemical-form of target is element."
+	,"x4freetext":["- Chemical-form of target is element."
 		,"- Physical-form of target is solid."
 		,"- Target-thickness: 4 cm"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"4-BE-9","ENR":0.995}
 	}
       ]
      ,"FACILITY":[
@@ -123,12 +125,58 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" On"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190114A", "date":"20190114", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Tada. 002-003: REACTION changed."
+		,"            ERR-1 is corrected."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"K2003002", "isub":2, "compiled":20070310, "TransID":"K001", "TransDate":20070310
+  ,{"SUBENT":"K2003002", "isub":2, "compiled":20190114, "TransID":"K018", "TransDate":20190222
     ,"BIB":{
-      "REL-REF":[
+      "REACTION":[
+	{"x4pointer":" "
+	,"x4code":{"code":"4-BE-9(G,X)0-NN-1,,SIG"
+	    ,"c4reac":"(G,X),SIG"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":9000
+	    ,"Units":"B"
+	    ,"reacs": [
+	    {"code":"4-BE-9(G,X)0-NN-1,,SIG"
+		,"Reac":"G,X"
+		,"SF1":"4-BE-9","Targ":{"code":"4-BE-9","nam":"Be-9","ZA":4009}
+		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
+		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
+		,"SF6":"SIG"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }]}
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"ERR-1", "min":"9.", "max":"12."
+	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" Uncertainty due to asymmetric"
+		,"               photoneutron emission (9-12%)"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical uncertainty"]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Polarized LCS photons used"
+		,"EN: Peak energy of spectrum"]
+	}
+      ]
+     ,"REL-REF":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"N,K2004001,K.Sumiyoshi+,J,NP/A,709,467,2002"
 		,"flag":{"code":"N", "help":" Reference to related data compiled in another entry"}
@@ -154,53 +202,14 @@
 	,"x4freetext":["Radioactive isotope measurement"]
 	}
       ]
-     ,"REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"4-BE-9(G,N)4-BE-8,,SIG"
-	    ,"c4reac":"(G,N),SIG"
-	    ,"combi":"a"
-	    ,"MF":3
-	    ,"MT":4
-	    ,"Units":"B"
-	    ,"reacs": [
-	    {"code":"4-BE-9(G,N)4-BE-8,,SIG"
-		,"Reac":"G,N"
-		,"SF1":"4-BE-9","Targ":{"code":"4-BE-9","nam":"Be-9","ZA":4009}
-		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N"
-		,"SF4":"4-BE-8","Prod":{"code":"4-BE-8","nam":"Be-8","ZA":4008}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }]}
-	}
-      ]
-     ,"ERR-ANALYS":[
-	{"x4pointer":" "
-	,"x4code":{"header":"ERR-1"
-	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" Maximum uncertainty due to asymmetric"
-		,"        photoneutron emission (9-12%)"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-S"
-	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
-	,"x4freetext":[" Statistical uncertainty"]
-	}
-      ]
-     ,"COMMENT":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Polarized LCS photons used"
-		,"EN: Peak energy of spectrum"]
-	}
-      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data (Fig.2, p018801-2 in reference) received"
-		,"        by e-mail from A.Makinaga (2007.01.09)"]
+	,"x4freetext":[" Data (Fig.2, p018801-2 in Phys. Rev. C"
+		,"        63(2001)018801) received by e-mail from"
+		,"        A.Makinaga (2007.01.09)"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"SPSDD,K2004003"
@@ -211,19 +220,14 @@
 		,"                 correction"]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190114A", "date":"20190114", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Tada.  SF3-SF4: N)4-BE-8 -> X)0-NN-1"]
+	}
       ]
-      ,"datacols":[
-	 ["ERR-1"     ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [12]]}
+    }
     ,"DATA":{"ncols":5, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -257,13 +261,13 @@
 	,[2.19,0.01,0.08,0.2,0.02]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"K2003002", "Pointer":" "
- ,"Subent":"K2003002", "compiled":20070310
- ,"year1":2001, "author1ini":"H.", "author1":"Utsunomiya"
- ,"zTarg1":4, "targ1":"Be-9", "proj1":"g", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
+ ,"Subent":"K2003002", "compiled":20190114
+ ,"year1":2000, "author1ini":"H.", "author1":"Utsunomiya"
+ ,"zTarg1":4, "targ1":"Be-9", "proj1":"g", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"4-BE-9(G,N)4-BE-8,,SIG"
- ,"compNotes":[]
+ ,"reacode":"4-BE-9(G,X)0-NN-1,,SIG"
+ ,"compNotes":["ERR-ANALYS:(ERR-1,9.,12.)     ADDED AS COMMON:ERR-1,PER-CENT=9.0%"]
  ,"wx4data":6
  ,"lx4data":8
  ,"x4data":[
@@ -283,8 +287,8 @@
     ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
-    ,"com0":12
-    ,"com1":12}
+    ,"com0":9
+    ,"com1":9}
   ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -311,8 +315,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[6.7e-4,6.2e-4,4.8e-4,4.8e-4,5.0e-4,4.0e-4,3.6e-4,2.0e-4]
-      ,"dy":[8.58147e-5,7.70413e-5,6.09734e-5,6.49443e-5,6.32456e-5,5.2e-5,4.7605e-5,3.1241e-5]
-      ,"dysys":[8.04e-5,7.44e-5,5.76e-5,5.76e-5,6.0e-5,4.8e-5,4.32e-5,2.4e-5]
+      ,"dy":[6.73505e-5,5.9276e-5,4.7605e-5,5.25951e-5,4.92443e-5,4.11825e-5,3.80757e-5,2.69072e-5]
+      ,"dysys":[6.03e-5,5.58e-5,4.32e-5,4.32e-5,4.5e-5,3.6e-5,3.24e-5,1.8e-5]
       ,"dystat":[3.0e-5,2.0e-5,2.0e-5,3.0e-5,2.0e-5,2.0e-5,2.0e-5,2.0e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
@@ -323,9 +327,58 @@
 }
    ]
    }
-  ,{"SUBENT":"K2003003", "isub":3, "compiled":20070310, "TransID":"K001", "TransDate":20070310
+  ,{"SUBENT":"K2003003", "isub":3, "compiled":20190114, "TransID":"K018", "TransDate":20190222
     ,"BIB":{
-      "REL-REF":[
+      "REACTION":[
+	{"x4pointer":" "
+	,"x4code":{"code":"4-BE-9(G,X)0-NN-1,,SIG"
+	    ,"c4reac":"(G,X),SIG"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":9000
+	    ,"Units":"B"
+	    ,"reacs": [
+	    {"code":"4-BE-9(G,X)0-NN-1,,SIG"
+		,"Reac":"G,X"
+		,"SF1":"4-BE-9","Targ":{"code":"4-BE-9","nam":"Be-9","ZA":4009}
+		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
+		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
+		,"SF6":"SIG"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }]}
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"ERR-1", "min":"9.", "max":"12."
+	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" Uncertainty due to asymmetric"
+		,"               photoneutron emission (9-12%)"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical uncertainty"]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["EN: Peak energy of spectrum"]
+	}
+      ]
+     ,"FLAG":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"1."}]
+	,"x4freetext":[" Polarized LCS photons used"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"2."}]
+	,"x4freetext":[" Unpolarized LCS photons used"]
+	}
+      ]
+     ,"REL-REF":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"N,K2004001,K.Sumiyoshi+,J,NP/A,709,467,2002"
 		,"flag":{"code":"N", "help":" Reference to related data compiled in another entry"}
@@ -351,77 +404,24 @@
 	,"x4freetext":["Radioactive isotope measurement"]
 	}
       ]
-     ,"REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"4-BE-9(G,N)4-BE-8,,SIG"
-	    ,"c4reac":"(G,N),SIG"
-	    ,"combi":"a"
-	    ,"MF":3
-	    ,"MT":4
-	    ,"Units":"B"
-	    ,"reacs": [
-	    {"code":"4-BE-9(G,N)4-BE-8,,SIG"
-		,"Reac":"G,N"
-		,"SF1":"4-BE-9","Targ":{"code":"4-BE-9","nam":"Be-9","ZA":4009}
-		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N"
-		,"SF4":"4-BE-8","Prod":{"code":"4-BE-8","nam":"Be-8","ZA":4008}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }]}
-	}
-      ]
-     ,"ERR-ANALYS":[
-	{"x4pointer":" "
-	,"x4code":{"header":"ERR-1"
-	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" Maximum uncertainty due to asymmetric"
-		,"        photoneutron emission (9-12%)"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-S"
-	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
-	,"x4freetext":[" Statistical uncertainty"]
-	}
-      ]
-     ,"COMMENT":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["EN: Peak energy of spectrum"]
-	}
-      ]
-     ,"FLAG":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"1."}]
-	,"x4freetext":[" Polarized LCS photons used"]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"2."}]
-	,"x4freetext":[" Unpolarized LCS photons used"]
-	}
-      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data (Fig.2, p018801-2 in reference) received"
-		,"        by e-mail from A.Makinaga (2007.01.09)"]
+	,"x4freetext":[" Data (Fig.2, p018801-2 in Phys. Rev. C"
+		,"        63(2001)018801) received by e-mail from"
+		,"        A.Makinaga (2007.01.09)"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190114A", "date":"20190114", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Tada. SF3-SF4: N)4-BE-8 -> X)0-NN-1"]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
-	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
-      ]
-      ,"datacols":[
-	 ["ERR-1"     ]
-	,["PER-CENT"  ]
-	,[" "         ]]
-      ,"data":[
-	 [12]]}
     ,"DATA":{"ncols":6, "nrows":59
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -509,13 +509,13 @@
 	,[6.11,0.02,0.15,1.03,0.04,2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"K2003003", "Pointer":" "
- ,"Subent":"K2003003", "compiled":20070310
- ,"year1":2001, "author1ini":"H.", "author1":"Utsunomiya"
- ,"zTarg1":4, "targ1":"Be-9", "proj1":"g", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
+ ,"Subent":"K2003003", "compiled":20190114
+ ,"year1":2000, "author1ini":"H.", "author1":"Utsunomiya"
+ ,"zTarg1":4, "targ1":"Be-9", "proj1":"g", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"4-BE-9(G,N)4-BE-8,,SIG"
- ,"compNotes":[]
+ ,"reacode":"4-BE-9(G,X)0-NN-1,,SIG"
+ ,"compNotes":["ERR-ANALYS:(ERR-1,9.,12.)     ADDED AS COMMON:ERR-1,PER-CENT=9.0%"]
  ,"wx4data":7
  ,"lx4data":59
  ,"x4data":[
@@ -555,8 +555,8 @@
     ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
-    ,"com0":12
-    ,"com1":12}
+    ,"com0":9
+    ,"com1":9}
   ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -629,18 +629,18 @@
 	,9.2e-4,7.6e-4,6.7e-4,6.5e-4,6.4e-4,4.6e-4,4.3e-4,4.4e-4,4.1e-4,4.0e-4
 	,4.3e-4,4.6e-4,4.9e-4,5.4e-4,5.2e-4,5.9e-4,6.0e-4,6.4e-4,6.6e-4,7.7e-4
 	,8.9e-4,7.8e-4,7.7e-4,8.5e-4,9.8e-4,0.00102,9.7e-4,0.00104,0.00103]
-      ,"dy":[3.1241e-5,2.6e-5,3.40846e-5,2.48966e-5,2.85685e-5,2.05913e-5,2.16481e-5,3.03289e-5,8.87279e-5,1.25651e-4
-	,6.43441e-5,6.49443e-5,6.07276e-5,7.9961e-5,7.1851e-5,5.35851e-5,5.35851e-5,5.1614e-5,5.97609e-5,5.62864e-5
-	,6.15649e-5,5.45835e-5,6.2482e-5,7.9924e-5,8.65665e-5,9.4648e-5,1.2313e-4,1.2775e-4,1.20758e-4,1.54999e-4
-	,1.42437e-4,1.28131e-4,8.28502e-5,1.19097e-4,1.18314e-4,8.91462e-5,8.6963e-5,1.31102e-4,7.75928e-5,5.2e-5
-	,5.53404e-5,5.87115e-5,6.60109e-5,6.78162e-5,6.9237e-5,7.68937e-5,7.8e-5,8.24514e-5,8.46914e-5,9.29396e-5
-	,1.10933e-4,9.82902e-5,1.00686e-4,1.09563e-4,1.24217e-4,1.32219e-4,1.26685e-4,1.34443e-4,1.29911e-4]
-      ,"dysys":[2.4e-5,2.4e-5,2.76e-5,2.28e-5,2.04e-5,1.8e-5,1.92e-5,2.28e-5,7.92e-5,1.104e-4
-	,5.04e-5,5.76e-5,5.28e-5,6.24e-5,5.16e-5,4.44e-5,4.44e-5,4.2e-5,4.44e-5,3.96e-5
-	,4.68e-5,4.56e-5,4.8e-5,5.28e-5,6.24e-5,7.32e-5,9.36e-5,9.96e-5,9.84e-5,1.092e-4
-	,1.104e-4,9.12e-5,8.04e-5,7.8e-5,7.68e-5,5.52e-5,5.16e-5,5.28e-5,4.92e-5,4.8e-5
-	,5.16e-5,5.52e-5,5.88e-5,6.48e-5,6.24e-5,7.08e-5,7.2e-5,7.68e-5,7.92e-5,9.24e-5
-	,1.068e-4,9.36e-5,9.24e-5,1.02e-4,1.176e-4,1.224e-4,1.164e-4,1.248e-4,1.236e-4]
+      ,"dy":[2.69072e-5,2.05913e-5,2.87835e-5,1.98093e-5,2.51811e-5,1.68003e-5,1.75317e-5,2.63137e-5,7.16126e-5,1.02254e-4
+	,5.50349e-5,5.25951e-5,4.96806e-5,6.84853e-5,6.32273e-5,4.48206e-5,4.48206e-5,4.35e-5,5.2047e-5,4.98206e-5
+	,5.32166e-5,4.54933e-5,5.38145e-5,7.18899e-5,7.60936e-5,8.13266e-5,1.06433e-4,1.09454e-4,1.01717e-4,1.37141e-4
+	,1.22294e-4,1.13042e-4,6.35302e-5,1.07342e-4,1.06854e-4,8.13263e-5,7.99856e-5,1.26365e-4,7.04387e-5,4.11825e-5
+	,4.35625e-5,4.59778e-5,5.33368e-5,5.25544e-5,5.55899e-5,6.09886e-5,6.17738e-5,6.49443e-5,6.65459e-5,7.00178e-5
+	,8.55337e-5,7.63416e-5,8.00156e-5,8.63264e-5,9.68465e-5,1.04533e-4,1.00605e-4,1.06118e-4,1.00962e-4]
+      ,"dysys":[1.8e-5,1.8e-5,2.07e-5,1.71e-5,1.53e-5,1.35e-5,1.44e-5,1.71e-5,5.94e-5,8.28e-5
+	,3.78e-5,4.32e-5,3.96e-5,4.68e-5,3.87e-5,3.33e-5,3.33e-5,3.15e-5,3.33e-5,2.97e-5
+	,3.51e-5,3.42e-5,3.6e-5,3.96e-5,4.68e-5,5.49e-5,7.02e-5,7.47e-5,7.38e-5,8.19e-5
+	,8.28e-5,6.84e-5,6.03e-5,5.85e-5,5.76e-5,4.14e-5,3.87e-5,3.96e-5,3.69e-5,3.6e-5
+	,3.87e-5,4.14e-5,4.41e-5,4.86e-5,4.68e-5,5.31e-5,5.4e-5,5.76e-5,5.94e-5,6.93e-5
+	,8.01e-5,7.02e-5,6.93e-5,7.65e-5,8.82e-5,9.18e-5,8.73e-5,9.36e-5,9.27e-5]
       ,"dystat":[2.0e-5,1.0e-5,2.0e-5,1.0e-5,2.0e-5,1.0e-5,1.0e-5,2.0e-5,4.0e-5,6.0e-5
 	,4.0e-5,3.0e-5,3.0e-5,5.0e-5,5.0e-5,3.0e-5,3.0e-5,3.0e-5,4.0e-5,4.0e-5
 	,4.0e-5,3.0e-5,4.0e-5,6.0e-5,6.0e-5,6.0e-5,8.0e-5,8.0e-5,7.0e-5,1.1e-4
@@ -666,27 +666,9 @@
 }
    ]
    }
-  ,{"SUBENT":"K2003004", "isub":4, "compiled":20070310, "TransID":"K001", "TransDate":20070310
+  ,{"SUBENT":"K2003004", "isub":4, "compiled":20190114, "TransID":"K018", "TransDate":20190222
     ,"BIB":{
-      "REL-REF":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"N,,H.-G.Clerc+,J,NP/A,120,441,1968"
-		,"flag":{"code":"N", "help":" Reference to related data compiled in another entry"}
-		,"author1":"H.-G.Clerc+","stdFileName":"J,NP_A,120,441,1968"
-		,"year":1968,"typ":"J","ref":"J,NP/A","vol":"120","p":"441"
-		,"shortRef":"Jour: Nuclear Physics, Section A, Vol.120, p.441 (1968)"}]
-	,"x4freetext":["Compared with the present result"]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"N,,G.Kuechler+,J,ZP/A,326,447,1987"
-		,"flag":{"code":"N", "help":" Reference to related data compiled in another entry"}
-		,"author1":"G.Kuechler+","stdFileName":"J,ZP_A,326,447,1987"
-		,"year":1987,"typ":"J","ref":"J,ZP/A","vol":"326","p":"447"
-		,"shortRef":"Jour: Zeitschrift fuer Physik A, Hadrons and Nuclei, Vol.326, p.447 (1987)"}]
-	,"x4freetext":["Compared with the present result"]
-	}
-      ]
-     ,"REACTION":[
+      "REACTION":[
 	{"x4pointer":"1"
 	,"x4code":{"code":"4-BE-9(G,0),,EN"
 	    ,"c4reac":"(G,0),EN"
@@ -720,7 +702,6 @@
 		,"SF6":"WID"
 		,"SF58":",WID","Quant":"RP","BasicUnits":"EV","QuantHlp":"Resonance width"
 	    }]}
-	,"x4freetext":["Gamma(gamma)"]
 	}
 	,{"x4pointer":"3"
 	,"x4code":{"code":"4-BE-9(G,N),,WID"
@@ -737,7 +718,6 @@
 		,"SF6":"WID"
 		,"SF58":",WID","Quant":"RP","BasicUnits":"EV","QuantHlp":"Resonance width"
 	    }]}
-	,"x4freetext":["Gamma(n)"]
 	}
       ]
      ,"ANALYSIS":[
@@ -763,13 +743,31 @@
 		," (e**2 fm**2) for 1/2+ and 5/2+ states."]
 	}
       ]
+     ,"REL-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"N,,H.-G.Clerc+,J,NP/A,120,441,1968"
+		,"flag":{"code":"N", "help":" Reference to related data compiled in another entry"}
+		,"author1":"H.-G.Clerc+","stdFileName":"J,NP_A,120,441,1968"
+		,"year":1968,"typ":"J","ref":"J,NP/A","vol":"120","p":"441"
+		,"shortRef":"Jour: Nuclear Physics, Section A, Vol.120, p.441 (1968)"}]
+	,"x4freetext":["Compared with the present result"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"N,,G.Kuechler+,J,ZP/A,326,447,1987"
+		,"flag":{"code":"N", "help":" Reference to related data compiled in another entry"}
+		,"author1":"G.Kuechler+","stdFileName":"J,ZP_A,326,447,1987"
+		,"year":1987,"typ":"J","ref":"J,ZP/A","vol":"326","p":"447"
+		,"shortRef":"Jour: Zeitschrift fuer Physik A, Hadrons and Nuclei, Vol.326, p.447 (1987)"}]
+	,"x4freetext":["Compared with the present result"]
+	}
+      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data taken from Table I, p018801-3 in"
-		,"        reference"]
+	,"x4freetext":[" Taken from Table I, p018801-3 in Phys. Rev. C"
+		,"        63(2001)018801"]
 	}
       ]
     }
@@ -810,8 +808,8 @@
 	,[2.5,1,3.082,0.012,null,null,533,19]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"K20030041", "Pointer":"1"
- ,"Subent":"K2003004", "compiled":20070310
- ,"year1":2001, "author1ini":"H.", "author1":"Utsunomiya"
+ ,"Subent":"K2003004", "compiled":20190114
+ ,"year1":2000, "author1ini":"H.", "author1":"Utsunomiya"
  ,"zTarg1":4, "targ1":"Be-9", "proj1":"g", "emis1":"0", "MF":402, "MT":6001, "nExpectedArgs":0
  ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
  ,"ReactionType":"RE", "quant":"RP", "quantExpan":"Resonance energy"
@@ -856,8 +854,8 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"K20030042", "Pointer":"2"
- ,"Subent":"K2003004", "compiled":20070310
- ,"year1":2001, "author1ini":"H.", "author1":"Utsunomiya"
+ ,"Subent":"K2003004", "compiled":20190114
+ ,"year1":2000, "author1ini":"H.", "author1":"Utsunomiya"
  ,"zTarg1":4, "targ1":"Be-9", "proj1":"g", "emis1":"EL", "MF":402, "MT":6021, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
  ,"ReactionType":"RP", "quant":"RP", "quantExpan":"Resonance width"
@@ -919,8 +917,8 @@
  }
 }
 ,{"iDataset":2, "DatasetID":"K20030043", "Pointer":"3"
- ,"Subent":"K2003004", "compiled":20070310
- ,"year1":2001, "author1ini":"H.", "author1":"Utsunomiya"
+ ,"Subent":"K2003004", "compiled":20190114
+ ,"year1":2000, "author1ini":"H.", "author1":"Utsunomiya"
  ,"zTarg1":4, "targ1":"Be-9", "proj1":"g", "emis1":"N", "MF":2, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
  ,"ReactionType":"RP", "quant":"RP", "quantExpan":"Resonance width"
