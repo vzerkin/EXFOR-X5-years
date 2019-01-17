@@ -1,9 +1,9 @@
-  {"ENTRY":"R0039", "updated":20061228, "TransID":"R019", "TransDate":20061228, "CenterID":"RIKEN", "Center":"RIKEN Nuclear Data Group, Japan (extinct)"
+  {"ENTRY":"R0039", "updated":20190118, "TransID":"R029", "TransDate":20190222, "CenterID":"RIKEN", "Center":"RIKEN Nuclear Data Group, Japan (extinct)"
    ,"y1":1956,"a1":"K.G.Porges","r1":"J,PR,101,225,1956"
-   ,"ref":"Jour: Physical Review, Vol.101, Issue.1, p.225 (1956)"
+   ,"ref":"Jour: Physical Review, Vol.101, p.225 (1956)"
    ,"title":"Alpha excitation functions of silver and copper"
    ,"x4subents":[
-   {"SUBENT":"R0039001", "isub":1, "compiled":20061228, "TransID":"R019", "TransDate":20061228
+   {"SUBENT":"R0039001", "isub":1, "compiled":20190118, "TransID":"R029", "TransDate":20190222
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -23,14 +23,16 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,PR,101,(1),225,195601","stdFileName":"J,PR,101,225,1956"
-		,"year":1956,"typ":"J","ref":"J,PR","vol":"101","issue":"1","p":"225"
-		,"shortRef":"Jour: Physical Review, Vol.101, Issue.1, p.225 (1956)"}]
+	,"x4codes":[{"code":"J,PR,101,225,1956","stdFileName":"J,PR,101,225,1956"
+		,"year":1956,"typ":"J","ref":"J,PR","vol":"101","p":"225"
+		,"shortRef":"Jour: Physical Review, Vol.101, p.225 (1956)"}]
 	}
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}]
+	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}
+	    ,{"code":"1USABRK", "dict":"INSTITUTE", "idict":3,"hlp":"Lawrence Berkeley National Laboratory, Berkeley, CA, United States of America"}]
+	,"x4freetext":[" Crocker Laboratory"]
 	}
       ]
      ,"METHOD":[
@@ -44,42 +46,8 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Silver and copper foils of 6 - 10 mg/cm2 for energies"
-		,"above 15 MeV. For lower energies 3 mg/cm2 foils were"
-		,"prepared by evaporation."]
-	}
-      ]
-     ,"INC-SPECT":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Beam was monochromatized by successive narrow"
-		,"collimating slits in the cyclotron fringing field."
-		,"Beam energy was continuously measured during the"
-		,"bombardment by a variable absorber system, consisted"
-		,"of 5 cm dry air at adjustable pressures (fine) and an"
-		,"absorber wheel (coarse), placed between the target"
-		,"stack and a faraday cup."]
-	}
-      ]
-     ,"CORRECTION":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["66Ga production: Electron/positron ratio from the"
-		,"irradiated foils was measured by a trochoidal"
-		,"spectrometer. Cross sections were calculated from a"
-		,"graphical analysis of these data for each foil, decay"
-		,"schemes of 66Ga and 64Cu, isotopic composition of"
-		,"copper, foil weight, bombardment current and the"
-		,"geometrical factor as well as usual corrections for"
-		,"source self-absorption and back scattering, Geiger"
-		,"counter dead-time, and decay during bombardment."]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"CURVE"
-		,"flag":"CURVE", "help":"Data read from a curve"
-		}]
+	,"x4freetext":["Ag and Cu foils (6 to 10 mg/cm2 thick at above 15 MeV,"
+		," 3 mg/cm2 thick below 15 MeV)"]
 	}
       ]
      ,"HISTORY":[
@@ -94,10 +62,22 @@
 	,"x4freetext":[" On. Changed to lower case and 4-digit year."
 		,"                EXP in SF9 deleted."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190110A", "date":"20190110", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Tada. 008,009: REACTION, DECAY-DATA and"
+		,"            RAD-DET are corrected as per CP-D/888."
+		,"            All SUBENT: STATUS added."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190118A", "date":"20190118", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. Major revisions in 007,011,013"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"R0039002", "isub":2, "compiled":20061228, "TransID":"R019", "TransDate":20061228
+  ,{"SUBENT":"R0039002", "isub":2, "compiled":20190118, "TransID":"R029", "TransDate":20190222
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -119,10 +99,11 @@
 	    }]}
 	}
       ]
-     ,"METHOD":[
+     ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"GSPEC", "dict":"METHOD", "idict":21,"hlp":"Gamma ray spectrometry"}
-	    ,{"code":"COINC", "dict":"METHOD", "idict":21,"hlp":"Coincidence"}]
+	,"x4codes":[{"Nucl":"31-GA-67"
+	, "Radiations":[ {"Type":"DG", "Energy":[300.0], "Intensity":0.139}
+			,{"Type":"DG", "Energy":[92.0]}]}]
 	}
       ]
      ,"DETECTOR":[
@@ -130,21 +111,35 @@
 	,"x4codes":[{"code":"SCIN", "dict":"DETECTOR", "idict":22,"hlp":"Scintillation detector"}]
 	}
       ]
-     ,"RAD-DET":[
+     ,"METHOD":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::31-GA-67,DG"}
-	,"x4freetext":[" Delayed coincidence between 300 keV"
-		,"              gamma and 92 keV gamma to discriminate"
-		,"              against 92 keV gamma from 67Cu- decay."
-		,"              Error in this determination was about"
-		,"              25%."]
+	,"x4codes":[{"code":"GSPEC", "dict":"METHOD", "idict":21,"hlp":"Gamma ray spectrometry"}]
+	,"x4freetext":[" Delayed coincidence between 300 keV and 92 keV"
+		," gammas to discriminate against 92 keV gamma from 67Cu"
+		," decay."
+		,"Error in this determination was about 25%."]
 	}
       ]
-     ,"DECAY-DATA":[
+     ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"31-GA-67"
-	, "Radiations":[ {"Type":"DG", "Energy":[300.0], "Intensity":0.139}
-			,{"Type":"DG", "Energy":[92.0]}]}]
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on source of uncertainty"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Fig.1 of Phys.Rev.101(1956)225."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190118U", "date":"20190118", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" On. RAD-DET deleted."]
 	}
       ]
     }
@@ -191,7 +186,7 @@
 	,[36.7,264.4,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"R0039002", "Pointer":" "
- ,"Subent":"R0039002", "compiled":20061228
+ ,"Subent":"R0039002", "compiled":20190118
  ,"year1":1956, "author1ini":"K.G.", "author1":"Porges"
  ,"zTarg1":29, "targ1":"Cu-65", "proj1":"a", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -255,7 +250,7 @@
 }
    ]
    }
-  ,{"SUBENT":"R0039003", "isub":3, "compiled":20061228, "TransID":"R019", "TransDate":20061228
+  ,{"SUBENT":"R0039003", "isub":3, "compiled":20190118, "TransID":"R029", "TransDate":20190222
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -277,22 +272,44 @@
 	    }]}
 	}
       ]
-     ,"DETECTOR":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"GEMUC", "dict":"DETECTOR", "idict":22,"hlp":"Geiger-Mueller counter"}]
-	}
-      ]
-     ,"RAD-DET":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::31-GA-68,B+"}
-	,"x4freetext":[" To discriminate between beta-rays from"
-		,"              68Ga and 64Cu, an absorber was used."]
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"31-GA-68", "t12":68.0, "t12units":"MIN", "t12sec":4080.0
 	, "Radiations":[ {"Type":"B+"}]}]
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"GEMUC", "dict":"DETECTOR", "idict":22,"hlp":"Geiger-Mueller counter"}]
+	,"x4freetext":[" An absorber was used to discriminate between"
+		," beta-rays from 68Ga and 64Cu,"]
+	}
+      ]
+     ,"METHOD":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"BSPEC", "dict":"METHOD", "idict":21,"hlp":"Beta ray spectrometry"}]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on source of uncertainty"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Fig.1 of Phys.Rev.101(1956)225."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190118U", "date":"20190118", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" On. RAD-DET deleted."]
 	}
       ]
     }
@@ -322,7 +339,7 @@
 	,[25,43.9,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"R0039003", "Pointer":" "
- ,"Subent":"R0039003", "compiled":20061228
+ ,"Subent":"R0039003", "compiled":20190118
  ,"year1":1956, "author1ini":"K.G.", "author1":"Porges"
  ,"zTarg1":29, "targ1":"Cu-65", "proj1":"a", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -368,7 +385,7 @@
 }
    ]
    }
-  ,{"SUBENT":"R0039004", "isub":4, "compiled":20061228, "TransID":"R019", "TransDate":20061228
+  ,{"SUBENT":"R0039004", "isub":4, "compiled":20190118, "TransID":"R029", "TransDate":20190222
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -390,24 +407,38 @@
 	    }]}
 	}
       ]
-     ,"DETECTOR":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"GEMUC", "dict":"DETECTOR", "idict":22,"hlp":"Geiger-Mueller counter"}]
-	}
-      ]
-     ,"RAD-DET":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::31-GA-66,B+"}
-	,"x4freetext":[" To discriminate between beta-rays from"
-		,"              66Ga and 64Cu, a 1.7G Al absorber which"
-		,"              transmitted only beta+ from 66Ga was"
-		,"              used."]
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"31-GA-66", "t12":9.8, "t12units":"HR", "t12sec":35280.0
 	, "Radiations":[ {"Type":"B+", "Energy":[4140.0]}]}]
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"GEMUC", "dict":"DETECTOR", "idict":22,"hlp":"Geiger-Mueller counter"}]
+	,"x4freetext":[" A 1.7 g Al absorber transmitting only beta+"
+		," from 66Ga used to discriminate between beta-rays from"
+		," 66Ga and 64Cu"]
+	}
+      ]
+     ,"METHOD":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"BSPEC", "dict":"METHOD", "idict":21,"hlp":"Beta ray spectrometry"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Fig.1 of Phys.Rev.101(1956)225."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190118U", "date":"20190118", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" On. RAD-DET deleted."]
 	}
       ]
     }
@@ -437,7 +468,7 @@
 	,[28.5,13.07]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"R0039004", "Pointer":" "
- ,"Subent":"R0039004", "compiled":20061228
+ ,"Subent":"R0039004", "compiled":20190118
  ,"year1":1956, "author1ini":"K.G.", "author1":"Porges"
  ,"zTarg1":29, "targ1":"Cu-63", "proj1":"a", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -477,39 +508,33 @@
 }
    ]
    }
-  ,{"SUBENT":"R0039005", "isub":5, "compiled":20061228, "TransID":"R019", "TransDate":20061228
+  ,{"SUBENT":"R0039005", "isub":5, "compiled":20190118, "TransID":"R029", "TransDate":20190222
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(29-CU-63(A,2N)31-GA-65,,SIG)+\n(29-CU-63(A,N+P)30-ZN-65,,SIG)"
-	    ,"c4reac":"((A,2N),SIG)+((A,N+P),SIG)"
-	    ,"combi":"a","combiQuant":"Cross section"
-	    ,"MF":503
+	,"x4code":{"code":"29-CU-63(A,X)30-ZN-65,CUM,SIG"
+	    ,"c4reac":"(A,X)CUM,SIG"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":9001
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"29-CU-63(A,2N)31-GA-65,,SIG"
-		,"Reac":"A,2N"
+	    {"code":"29-CU-63(A,X)30-ZN-65,CUM,SIG"
+		,"Reac":"A,X"
 		,"SF1":"29-CU-63","Targ":{"code":"29-CU-63","nam":"Cu-63","ZA":29063}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"2N"
-		,"SF4":"31-GA-65","Prod":{"code":"31-GA-65","nam":"Ga-65","ZA":31065}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"29-CU-63(A,N+P)30-ZN-65,,SIG"
-		,"Reac":"A,N+P"
-		,"SF1":"29-CU-63","Targ":{"code":"29-CU-63","nam":"Cu-63","ZA":29063}
-		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"30-ZN-65","Prod":{"code":"30-ZN-65","nam":"Zn-65","ZA":30065}
+		,"SF5":"CUM"
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"CUM,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cumulative cross section"
 	    }]}
 	}
       ]
-     ,"METHOD":[
+     ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"GSPEC", "dict":"METHOD", "idict":21,"hlp":"Gamma ray spectrometry"}]
+	,"x4codes":[{"Nucl":"30-ZN-65", "t12":250.0, "t12units":"D", "t12sec":2.16E7
+	, "Radiations":[ {"Type":"DG", "Energy":[1100.0]}]}]
 	}
       ]
      ,"DETECTOR":[
@@ -517,16 +542,24 @@
 	,"x4codes":[{"code":"SCIN", "dict":"DETECTOR", "idict":22,"hlp":"Scintillation detector"}]
 	}
       ]
-     ,"RAD-DET":[
+     ,"METHOD":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::30-ZN-65,DG"}
-	,"x4freetext":[" Daughter of 65Ga"]
+	,"x4codes":[{"code":"GSPEC", "dict":"METHOD", "idict":21,"hlp":"Gamma ray spectrometry"}]
 	}
       ]
-     ,"DECAY-DATA":[
+     ,"STATUS":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"30-ZN-65", "t12":250.0, "t12units":"D", "t12sec":2.16E7
-	, "Radiations":[ {"Type":"DG", "Energy":[1100.0]}]}]
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Fig.1 of Phys.Rev.101(1956)225."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190118A", "date":"20190118", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. REACTION corrected. RAD-DET deleted."]
 	}
       ]
     }
@@ -563,12 +596,12 @@
 	,[36.7,387]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"R0039005", "Pointer":" "
- ,"Subent":"R0039005", "compiled":20061228
+ ,"Subent":"R0039005", "compiled":20190118
  ,"year1":1956, "author1ini":"K.G.", "author1":"Porges"
- ,"zTarg1":29, "targ1":"Cu-63", "proj1":"a", "emis1":"2N", "MF":503, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":29, "targ1":"Cu-63", "proj1":"a", "emis1":"X", "MF":3, "MT":9001, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(29-CU-63(A,2N)31-GA-65,,SIG)+(29-CU-63(A,N+P)30-ZN-65,,SIG)"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
+ ,"reacode":"29-CU-63(A,X)30-ZN-65,CUM,SIG"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":17
@@ -609,7 +642,7 @@
 }
    ]
    }
-  ,{"SUBENT":"R0039006", "isub":6, "compiled":20061228, "TransID":"R019", "TransDate":20061228
+  ,{"SUBENT":"R0039006", "isub":6, "compiled":20190118, "TransID":"R029", "TransDate":20190222
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -631,24 +664,38 @@
 	    }]}
 	}
       ]
-     ,"DETECTOR":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"GEMUC", "dict":"DETECTOR", "idict":22,"hlp":"Geiger-Mueller counter"}]
-	}
-      ]
-     ,"RAD-DET":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::31-GA-66,B+"}
-	,"x4freetext":[" To discriminate between beta-rays from"
-		,"              66Ga and 64Cu, a 1.7G Al absorber which"
-		,"              transmitted only beta+ from 66Ga was"
-		,"              used."]
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"31-GA-66", "t12":9.8, "t12units":"HR", "t12sec":35280.0
 	, "Radiations":[ {"Type":"B+", "Energy":[4140.0]}]}]
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"GEMUC", "dict":"DETECTOR", "idict":22,"hlp":"Geiger-Mueller counter"}]
+	,"x4freetext":[" A 1.7 g Al absorber transmitingd only beta+"
+		," from 66Ga used to discriminate between beta-rays from"
+		," 66Ga and 64Cu."]
+	}
+      ]
+     ,"METHOD":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"BSPEC", "dict":"METHOD", "idict":21,"hlp":"Beta ray spectrometry"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Fig.1 of Phys.Rev.101(1956)225."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190118U", "date":"20190118", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" On. RAD-DET deleted."]
 	}
       ]
     }
@@ -676,7 +723,7 @@
 	,[37,167.6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"R0039006", "Pointer":" "
- ,"Subent":"R0039006", "compiled":20061228
+ ,"Subent":"R0039006", "compiled":20190118
  ,"year1":1956, "author1ini":"K.G.", "author1":"Porges"
  ,"zTarg1":29, "targ1":"Cu-65", "proj1":"a", "emis1":"3N", "MF":3, "MT":17, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -716,73 +763,73 @@
 }
    ]
    }
-  ,{"SUBENT":"R0039007", "isub":7, "compiled":20061228, "TransID":"R019", "TransDate":20061228
+  ,{"SUBENT":"R0039007", "isub":7, "compiled":20190118, "TransID":"R029", "TransDate":20190222
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(29-CU-65(A,N+A)29-CU-64,,SIG,,A)+\n(29-CU-63(A,N+2P)29-CU-64,,SIG,,A)"
-	    ,"c4reac":"((A,N+A),SIG,,A)+((A,N+2P),SIG,,A)"
-	    ,"combi":"a","combiQuant":"Cross section"
-	    ,"MF":503
+	,"x4code":{"code":"29-CU-0(A,X)29-CU-64,,SIG"
+	    ,"c4reac":"(A,X),SIG"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"29-CU-65(A,N+A)29-CU-64,,SIG,,A"
-		,"Reac":"A,N+A"
-		,"SF1":"29-CU-65","Targ":{"code":"29-CU-65","nam":"Cu-65","ZA":29065}
+	    {"code":"29-CU-0(A,X)29-CU-64,,SIG"
+		,"Reac":"A,X"
+		,"SF1":"29-CU-0","Targ":{"code":"29-CU-0","nam":"Cu-0","ZA":29000}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"N+A"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"29-CU-64","Prod":{"code":"29-CU-64","nam":"Cu-64","ZA":29064}
 		,"SF6":"SIG"
-		,"SF8":"A"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"29-CU-63(A,N+2P)29-CU-64,,SIG,,A"
-		,"Reac":"A,N+2P"
-		,"SF1":"29-CU-63","Targ":{"code":"29-CU-63","nam":"Cu-63","ZA":29063}
-		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"N+2P"
-		,"SF4":"29-CU-64","Prod":{"code":"29-CU-64","nam":"Cu-64","ZA":29064}
-		,"SF6":"SIG"
-		,"SF8":"A"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
-     ,"DETECTOR":[
+     ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"GEMUC", "dict":"DETECTOR", "idict":22,"hlp":"Geiger-Mueller counter"}]
+	,"x4codes":[{"Nucl":"29-CU-64", "t12":13.0, "t12units":"HR", "t12sec":46800.0
+	, "Radiations":[]}]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"Nucl":"31-GA-66", "t12":9.8, "t12units":"HR", "t12sec":35280.0
+	, "Radiations":[ {"Type":"B+", "Energy":[4140.0]}]}]
 	}
       ]
      ,"RAD-DET":[
 	{"x4pointer":" "
 	,"x4code":{"code":"orig::31-GA-66,B+"}
-	,"x4freetext":[" To discriminate between beta-rays from"
-		,"              66Ga and 64Cu, a 1.7G Al absorber which"
-		,"              transmitted only beta+ from 66Ga was"
-		,"              used. The difference between the bare"
-		,"              counts and absorber counts, corrected"
-		,"              for partial absorption of 66Ga activity,"
-		,"              was ascribed to 64Cu."]
 	}
       ]
-     ,"DECAY-DATA":[
+     ,"DETECTOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"31-GA-66", "t12":9.8, "t12units":"HR", "t12sec":35280.0
-	, "Radiations":[ {"Type":"B+", "Energy":[4140.0]}]}]
+	,"x4codes":[{"code":"GEMUC", "dict":"DETECTOR", "idict":22,"hlp":"Geiger-Mueller counter"}]
+	,"x4freetext":[" A 1.7g Al absorber transmitting only beta+"
+		," from 66Ga used to discriminate between beta-rays from"
+		," 66Ga and 64Cu. The difference between the bare counts"
+		," and absorber counts corrected for partial absorption"
+		," of 66Ga activity was ascribed to 64Cu."]
 	}
       ]
      ,"CORRECTION":[
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Electron/positron ratio of the irradiated foils was"
-		,"measured by a trochoidal spectrometer. Cross sections"
-		,"were calculated from a graphical analysis of these"
-		,"data for each foil, decay schemes of 66Ga and 64Cu,"
-		,"isotopic composition of copper, foil weight,"
-		,"bombardment current and the geometrical factor as well"
-		,"as usual corrections for source self-absorption and"
-		,"back scattering, Geiger tube dead-time, and decay"
-		,"during bombardment."]
+		," measured by a trochoidal spectrometer."
+		,"Cross sections were calculated from a graphical"
+		," analysis of these data for each foil, decay schemes"
+		," of 66Ga and 64Cu, isotopic composition of copper,"
+		," foil weight, bombardment current and the geometrical"
+		," factor as well as usual corrections for source"
+		," self-absorption and back scattering, Geiger tube"
+		," dead-time, and decayduring bombardment."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Fig.1 of Phys.Rev.101(1956)225."]
 	}
       ]
      ,"HISTORY":[
@@ -790,6 +837,11 @@
 	,"x4code":{"code":"20061212A", "date":"20061212", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. SF8 corrected."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190118A", "date":"20190118", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. REACTION corrected."]
 	}
       ]
     }
@@ -815,12 +867,12 @@
 	,[37,40.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"R0039007", "Pointer":" "
- ,"Subent":"R0039007", "compiled":20061228
+ ,"Subent":"R0039007", "compiled":20190118
  ,"year1":1956, "author1ini":"K.G.", "author1":"Porges"
- ,"zTarg1":29, "targ1":"Cu-65", "proj1":"a", "emis1":"N+A", "MF":503, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":29, "targ1":"Cu-0", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(29-CU-65(A,N+A)29-CU-64,,SIG,,A)+(29-CU-63(A,N+2P)29-CU-64,,SIG,,A)"
+ ,"reacode":"29-CU-0(A,X)29-CU-64,,SIG"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":6
@@ -855,31 +907,32 @@
 }
    ]
    }
-  ,{"SUBENT":"R0039008", "isub":8, "compiled":20061228, "TransID":"R019", "TransDate":20061228
+  ,{"SUBENT":"R0039008", "isub":8, "compiled":20190118, "TransID":"R029", "TransDate":20190222
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"47-AG-107(A,N)49-IN-110,,SIG"
+	,"x4code":{"code":"47-AG-107(A,N)49-IN-110-M,,SIG"
 	    ,"c4reac":"(A,N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":4
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"47-AG-107(A,N)49-IN-110,,SIG"
+	    {"code":"47-AG-107(A,N)49-IN-110-M,,SIG"
 		,"Reac":"A,N"
 		,"SF1":"47-AG-107","Targ":{"code":"47-AG-107","nam":"Ag-107","ZA":47107}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"N"
-		,"SF4":"49-IN-110","Prod":{"code":"49-IN-110","nam":"In-110","ZA":49110}
+		,"SF4":"49-IN-110-M","Prod":{"code":"49-IN-110-M","nam":"In-110-m","ZA":49110,"ProdM":"M"}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
-     ,"METHOD":[
+     ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"BSPEC", "dict":"METHOD", "idict":21,"hlp":"Beta ray spectrometry"}]
+	,"x4codes":[{"Nucl":"49-IN-110-M", "t12":66.0, "t12units":"MIN", "t12sec":3960.0
+	, "Radiations":[ {"Type":"ICE", "Energy":[661.0]}]}]
 	}
       ]
      ,"DETECTOR":[
@@ -888,15 +941,31 @@
 	,"x4freetext":[" beta-ray spectrometer"]
 	}
       ]
-     ,"RAD-DET":[
+     ,"METHOD":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::49-IN-110-G,ICE"}
+	,"x4codes":[{"code":"BSPEC", "dict":"METHOD", "idict":21,"hlp":"Beta ray spectrometry"}]
 	}
       ]
-     ,"DECAY-DATA":[
+     ,"STATUS":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"49-IN-110", "t12":69.0, "t12units":"MIN", "t12sec":4140.0
-	, "Radiations":[ {"Type":"ICE", "Energy":[661.0]}]}]
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Fig.2(a) of Phys.Rev.101(1956)225."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190110A", "date":"20190110", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Tada. REACTION, DECAY-DATA and RAD-DET:"
+		,"            G -> M. DECAY-DATA: 69.MIN -> 66.MIN"
+		,"            (compilation mistake)."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190118U", "date":"20190118", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" On. RAD-DET deleted."]
 	}
       ]
     }
@@ -935,12 +1004,12 @@
 	,[36.8,0.21]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"R0039008", "Pointer":" "
- ,"Subent":"R0039008", "compiled":20061228
+ ,"Subent":"R0039008", "compiled":20190118
  ,"year1":1956, "author1ini":"K.G.", "author1":"Porges"
  ,"zTarg1":47, "targ1":"Ag-107", "proj1":"a", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"47-AG-107(A,N)49-IN-110,,SIG"
+ ,"reacode":"47-AG-107(A,N)49-IN-110-M,,SIG"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":19
@@ -980,31 +1049,32 @@
 }
    ]
    }
-  ,{"SUBENT":"R0039009", "isub":9, "compiled":20061228, "TransID":"R019", "TransDate":20061228
+  ,{"SUBENT":"R0039009", "isub":9, "compiled":20190118, "TransID":"R029", "TransDate":20190222
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"47-AG-107(A,N)49-IN-110-M,,SIG"
+	,"x4code":{"code":"47-AG-107(A,N)49-IN-110-G,,SIG"
 	    ,"c4reac":"(A,N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":4
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"47-AG-107(A,N)49-IN-110-M,,SIG"
+	    {"code":"47-AG-107(A,N)49-IN-110-G,,SIG"
 		,"Reac":"A,N"
 		,"SF1":"47-AG-107","Targ":{"code":"47-AG-107","nam":"Ag-107","ZA":47107}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"N"
-		,"SF4":"49-IN-110-M","Prod":{"code":"49-IN-110-M","nam":"In-110-m","ZA":49110,"ProdM":"M"}
+		,"SF4":"49-IN-110-G","Prod":{"code":"49-IN-110-G","nam":"In-110-g","ZA":49110,"ProdM":"G"}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
-     ,"METHOD":[
+     ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"BSPEC", "dict":"METHOD", "idict":21,"hlp":"Beta ray spectrometry"}]
+	,"x4codes":[{"Nucl":"49-IN-110-G", "t12":4.9, "t12units":"HR", "t12sec":17640.0
+	, "Radiations":[ {"Type":"ICE", "Energy":[661.0]}]}]
 	}
       ]
      ,"DETECTOR":[
@@ -1013,15 +1083,30 @@
 	,"x4freetext":[" beta-ray spectrometer"]
 	}
       ]
-     ,"RAD-DET":[
+     ,"METHOD":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::49-IN-110-M,ICE"}
+	,"x4codes":[{"code":"BSPEC", "dict":"METHOD", "idict":21,"hlp":"Beta ray spectrometry"}]
 	}
       ]
-     ,"DECAY-DATA":[
+     ,"STATUS":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"49-IN-110-M", "t12":4.9, "t12units":"HR", "t12sec":17640.0
-	, "Radiations":[ {"Type":"ICE", "Energy":[661.0]}]}]
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Fig.2(a) of Phys.Rev.101(1956)225."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190110A", "date":"20190110", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Tada. REACTION, DECAY-DATA and RAD-DET:"
+		,"            M -> G."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190118U", "date":"20190118", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" On. RAD-DET deleted."]
 	}
       ]
     }
@@ -1052,12 +1137,12 @@
 	,[35.4,0.69]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"R0039009", "Pointer":" "
- ,"Subent":"R0039009", "compiled":20061228
+ ,"Subent":"R0039009", "compiled":20190118
  ,"year1":1956, "author1ini":"K.G.", "author1":"Porges"
  ,"zTarg1":47, "targ1":"Ag-107", "proj1":"a", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"47-AG-107(A,N)49-IN-110-M,,SIG"
+ ,"reacode":"47-AG-107(A,N)49-IN-110-G,,SIG"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":11
@@ -1097,7 +1182,7 @@
 }
    ]
    }
-  ,{"SUBENT":"R0039010", "isub":10, "compiled":20061228, "TransID":"R019", "TransDate":20061228
+  ,{"SUBENT":"R0039010", "isub":10, "compiled":20190118, "TransID":"R029", "TransDate":20190222
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1119,9 +1204,10 @@
 	    }]}
 	}
       ]
-     ,"METHOD":[
+     ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"BSPEC", "dict":"METHOD", "idict":21,"hlp":"Beta ray spectrometry"}]
+	,"x4codes":[{"Nucl":"49-IN-111-G", "t12":2.8, "t12units":"D", "t12sec":241920.0
+	, "Radiations":[ {"Type":"ICE", "Energy":[247.0]}]}]
 	}
       ]
      ,"DETECTOR":[
@@ -1130,15 +1216,24 @@
 	,"x4freetext":[" beta-ray spectrometer"]
 	}
       ]
-     ,"RAD-DET":[
+     ,"METHOD":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::49-IN-111-G,ICE"}
+	,"x4codes":[{"code":"BSPEC", "dict":"METHOD", "idict":21,"hlp":"Beta ray spectrometry"}]
 	}
       ]
-     ,"DECAY-DATA":[
+     ,"STATUS":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"49-IN-111", "t12":2.8, "t12units":"D", "t12sec":241920.0
-	, "Radiations":[ {"Type":"ICE", "Energy":[247.0]}]}]
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Fig.2(a) of Phys.Rev.101(1956)225."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190118U", "date":"20190118", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" On. RAD-DET deleted."]
 	}
       ]
     }
@@ -1197,7 +1292,7 @@
 	,[35.6,0.35]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"R0039010", "Pointer":" "
- ,"Subent":"R0039010", "compiled":20061228
+ ,"Subent":"R0039010", "compiled":20190118
  ,"year1":1956, "author1ini":"K.G.", "author1":"Porges"
  ,"zTarg1":47, "targ1":"Ag-109", "proj1":"a", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1252,45 +1347,44 @@
 }
    ]
    }
-  ,{"SUBENT":"R0039011", "isub":11, "compiled":20061228, "TransID":"R019", "TransDate":20061228
+  ,{"SUBENT":"R0039011", "isub":11, "compiled":20190118, "TransID":"R029", "TransDate":20190222
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(47-AG-0(A,X)49-IN-109,,SIG)+\n(47-AG-0(A,X)48-CD-109,,SIG)"
-	    ,"c4reac":"((A,X),SIG)+((A,X),SIG)"
-	    ,"combi":"a","combiQuant":"Cross section"
-	    ,"MF":503
+	,"x4code":{"code":"47-AG-107(A,X)48-CD-109,CUM,SIG"
+	    ,"c4reac":"(A,X)CUM,SIG"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":9001
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"47-AG-0(A,X)49-IN-109,,SIG"
+	    {"code":"47-AG-107(A,X)48-CD-109,CUM,SIG"
 		,"Reac":"A,X"
-		,"SF1":"47-AG-0","Targ":{"code":"47-AG-0","nam":"Ag-0","ZA":47000}
-		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"49-IN-109","Prod":{"code":"49-IN-109","nam":"In-109","ZA":49109}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"47-AG-0(A,X)48-CD-109,,SIG"
-		,"Reac":"A,X"
-		,"SF1":"47-AG-0","Targ":{"code":"47-AG-0","nam":"Ag-0","ZA":47000}
+		,"SF1":"47-AG-107","Targ":{"code":"47-AG-107","nam":"Ag-107","ZA":47107}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"48-CD-109","Prod":{"code":"48-CD-109","nam":"Cd-109","ZA":48109}
+		,"SF5":"CUM"
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"CUM,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cumulative cross section"
 	    }]}
 	}
       ]
-     ,"METHOD":[
+     ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"BSPEC", "dict":"METHOD", "idict":21,"hlp":"Beta ray spectrometry"}
-	    ,{"code":"GSPEC", "dict":"METHOD", "idict":21,"hlp":"Gamma ray spectrometry"}
-	    ,{"code":"PHD", "dict":"METHOD", "idict":21,"hlp":"Pulse-height discrimination"}
-	    ,{"code":"COINC", "dict":"METHOD", "idict":21,"hlp":"Coincidence"}
-	    ,{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}]
-	,"x4freetext":["Coinc between K-conversion electrons and K X-rays in"
-		,"40 sec 109mAg decay."]
+	,"x4codes":[{"Nucl":"47-AG-109-M", "t12":40.0, "t12units":"SEC", "t12sec":40.0
+	, "Radiations":[ {"Type":"XR", "Energy":[87.0]}
+			,{"Type":"ICE"}]}]
+	}
+      ]
+     ,"RAD-DET":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::47-AG-109-M,XR"}
+	,"x4freetext":[" K x-ray"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::47-AG-109-M,ICE"}
+	,"x4freetext":[" K-conversion electron"]
 	}
       ]
      ,"DETECTOR":[
@@ -1301,32 +1395,35 @@
 	,"x4freetext":[" Magnitic beta-ray spectrometer"]
 	}
       ]
-     ,"RAD-DET":[
+     ,"METHOD":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::49-IN-109-G,ICE"}
-	}
-	,{"x4pointer":" "
-	,"x4code":{"code":"orig::48-CD-109,XR,DG"}
-	}
-      ]
-     ,"DECAY-DATA":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"49-IN-109", "t12":4.3, "t12units":"HR", "t12sec":15480.0
-	, "Radiations":[ {"Type":"ICE"}]}]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"Nucl":"48-CD-109", "t12":453.0, "t12units":"D", "t12sec":3.91392E7
-	, "Radiations":[ {"Type":"XR"}
-			,{"Type":"DG", "Energy":[87.0]}]}]
-	,"x4freetext":["Characteristic K X-rays of ag following K-capture of"
-		,"109CD and K-conversion in Ag."]
+	,"x4codes":[{"code":"BSPEC", "dict":"METHOD", "idict":21,"hlp":"Beta ray spectrometry"}
+	    ,{"code":"XSPEC", "dict":"METHOD", "idict":21,"hlp":"X-ray spectrometry"}
+	    ,{"code":"COINC", "dict":"METHOD", "idict":21,"hlp":"Coincidence"}]
+	,"x4freetext":["Coincidence between K-conversion electrons and K"
+		," X-rays in 40 sec 109mAg decay."]
 	}
       ]
      ,"ADD-RES":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"STRUC", "dict":"ADD-RES", "idict":20,"hlp":"Nuclear structure data"}]
 	,"x4freetext":[" K ICC for 87 keV gamma in 109Cd decay was"
-		,"        measured to determine absolute cross section."]
+		," measured to determine absolute cross section."]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on source of uncertainty"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Fig.2(b) of Phys.Rev.101(1956)225."]
 	}
       ]
      ,"HISTORY":[
@@ -1334,6 +1431,11 @@
 	,"x4code":{"code":"20061212A", "date":"20061212", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. SF1 and SF3 corrected."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190118A", "date":"20190118", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. REACTION corrected."]
 	}
       ]
     }
@@ -1391,12 +1493,12 @@
 	,[34.8,0.61,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"R0039011", "Pointer":" "
- ,"Subent":"R0039011", "compiled":20061228
+ ,"Subent":"R0039011", "compiled":20190118
  ,"year1":1956, "author1ini":"K.G.", "author1":"Porges"
- ,"zTarg1":47, "targ1":"Ag-0", "proj1":"a", "emis1":"X", "MF":503, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":47, "targ1":"Ag-107", "proj1":"a", "emis1":"X", "MF":3, "MT":9001, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(47-AG-0(A,X)49-IN-109,,SIG)+(47-AG-0(A,X)48-CD-109,,SIG)"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
+ ,"reacode":"47-AG-107(A,X)48-CD-109,CUM,SIG"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":35
@@ -1458,7 +1560,7 @@
 }
    ]
    }
-  ,{"SUBENT":"R0039012", "isub":12, "compiled":20061228, "TransID":"R019", "TransDate":20061228
+  ,{"SUBENT":"R0039012", "isub":12, "compiled":20190118, "TransID":"R029", "TransDate":20190222
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1480,11 +1582,21 @@
 	    }]}
 	}
       ]
-     ,"METHOD":[
+     ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"BSPEC", "dict":"METHOD", "idict":21,"hlp":"Beta ray spectrometry"}
-	    ,{"code":"GSPEC", "dict":"METHOD", "idict":21,"hlp":"Gamma ray spectrometry"}
-	    ,{"code":"PHD", "dict":"METHOD", "idict":21,"hlp":"Pulse-height discrimination"}]
+	,"x4codes":[{"Nucl":"47-AG-109-M", "t12":40.0, "t12units":"SEC", "t12sec":40.0
+	, "Radiations":[ {"Type":"XR", "Energy":[87.0]}
+			,{"Type":"ICE"}]}]
+	}
+      ]
+     ,"RAD-DET":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::47-AG-109-M,XR"}
+	,"x4freetext":[" K x-ray"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::47-AG-109-M,ICE"}
+	,"x4freetext":[" K-conversion electron"]
 	}
       ]
      ,"DETECTOR":[
@@ -1495,25 +1607,51 @@
 	,"x4freetext":[" Magnitic beta-ray spectrometer"]
 	}
       ]
-     ,"RAD-DET":[
+     ,"METHOD":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::49-IN-109-G,ICE"}
+	,"x4codes":[{"code":"BSPEC", "dict":"METHOD", "idict":21,"hlp":"Beta ray spectrometry"}
+	    ,{"code":"XSPEC", "dict":"METHOD", "idict":21,"hlp":"X-ray spectrometry"}]
 	}
 	,{"x4pointer":" "
-	,"x4code":{"code":"orig::48-CD-109,XR"}
+	,"x4codes":[{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}]
+	,"x4freetext":[" Separation of 109Cd and 109In"]
 	}
       ]
-     ,"DECAY-DATA":[
+     ,"ANALYSIS":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"49-IN-109", "t12":4.3, "t12units":"HR", "t12sec":15480.0
-	, "Radiations":[ {"Type":"ICE"}]}]
+	,"x4code":null
+	,"x4freetext":["sig(109In)/[sig(109In)+sig(109Cd)] ratio obtained by"
+		," chemical separation measurement multiplied by"
+		," sig(109Cd)+sig(109In)"]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on source of uncertainty"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Fig.2(b) of Phys.Rev.101(1956)225."]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"Nucl":"48-CD-109", "t12":453.0, "t12units":"D", "t12sec":3.91392E7
-	, "Radiations":[ {"Type":"XR"}]}]
-	,"x4freetext":[" Characteristic K X-rays of Ag"
-		,"                     following K-capture of 109Cd and"
-		,"                     K-conversion in Ag."]
+	,"x4codes":[{"code":"DEP,R0039011"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"R0039011"
+		}]
+	,"x4freetext":[" sig(109In)+sig(109Cd)"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190118U", "date":"20190118", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" On. STATUS=DEP added"]
 	}
       ]
     }
@@ -1558,7 +1696,7 @@
 	,[34.9,0.56,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"R0039012", "Pointer":" "
- ,"Subent":"R0039012", "compiled":20061228
+ ,"Subent":"R0039012", "compiled":20190118
  ,"year1":1956, "author1ini":"K.G.", "author1":"Porges"
  ,"zTarg1":47, "targ1":"Ag-107", "proj1":"a", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1618,35 +1756,41 @@
 }
    ]
    }
-  ,{"SUBENT":"R0039013", "isub":13, "compiled":20061228, "TransID":"R019", "TransDate":20061228
+  ,{"SUBENT":"R0039013", "isub":13, "compiled":20190118, "TransID":"R029", "TransDate":20190222
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"47-AG-107(A,N+P)48-CD-109,,SIG,,,DERIV"
-	    ,"c4reac":"(A,N+P),SIG"
+	,"x4code":{"code":"47-AG-107(A,X)48-CD-109,IND,SIG"
+	    ,"c4reac":"(A,X)IND,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":28
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"47-AG-107(A,N+P)48-CD-109,,SIG,,,DERIV"
-		,"Reac":"A,N+P"
+	    {"code":"47-AG-107(A,X)48-CD-109,IND,SIG"
+		,"Reac":"A,X"
 		,"SF1":"47-AG-107","Targ":{"code":"47-AG-107","nam":"Ag-107","ZA":47107}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"48-CD-109","Prod":{"code":"48-CD-109","nam":"Cd-109","ZA":48109}
+		,"SF5":"IND"
 		,"SF6":"SIG"
-		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"IND,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Independent cross section"
 	    }]}
 	}
       ]
-     ,"COMMENT":[
+     ,"ANALYSIS":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Data was obtained by subtruction of 107Ag(a,2n)109In"
-		," (R0039.012) from 107Ag(a,2n)109In+107Ag(a,n+p)109Cd"
-		,"data (R0039.011)."]
+	,"x4freetext":["Subtraction of 109In production cross section from"
+		," 109Cd production cumulative cross section"]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on source of uncertainty"]
 	}
       ]
      ,"STATUS":[
@@ -1655,14 +1799,20 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"R0039011"
 		}]
-	,"x4freetext":[" 107Ag(a,2n)109In+107Ag(a,n+p)109Cd data"]
+	,"x4freetext":[" [sig(109In)+sig(109Cd)]"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,R0039012"
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"R0039012"
 		}]
-	,"x4freetext":[" 107Ag(a,2n)109In data"]
+	,"x4freetext":[" sig(109In)"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Fig.2(b) of Phys.Rev.101(1956)225."]
 	}
       ]
      ,"HISTORY":[
@@ -1670,6 +1820,11 @@
 	,"x4code":{"code":"20061122A", "date":"20061122", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. DERIV added in SF9 and STATUS added"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190118A", "date":"20190118", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. REACTION corrected."]
 	}
       ]
     }
@@ -1702,12 +1857,12 @@
 	,[34.3,0.04,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"R0039013", "Pointer":" "
- ,"Subent":"R0039013", "compiled":20061228
+ ,"Subent":"R0039013", "compiled":20190118
  ,"year1":1956, "author1ini":"K.G.", "author1":"Porges"
- ,"zTarg1":47, "targ1":"Ag-107", "proj1":"a", "emis1":"N+P", "MF":3, "MT":28, "nExpectedArgs":1
+ ,"zTarg1":47, "targ1":"Ag-107", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"47-AG-107(A,N+P)48-CD-109,,SIG,,,DERIV"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Independent cross section"
+ ,"reacode":"47-AG-107(A,X)48-CD-109,IND,SIG"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":10
