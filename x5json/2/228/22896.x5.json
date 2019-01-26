@@ -1,14 +1,14 @@
-  {"ENTRY":"22896", "updated":20130111, "TransID":"2234", "TransDate":20130718, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"22896", "updated":20190127, "TransID":"2274", "TransDate":20190420, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":2004,"a1":"C.Wagemans+","r1":"J,NP/A,742,291,2004"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.742, p.291 (2004)"
    ,"title":"Energy distribution of the ternary alpha`s emitted in 235-U(n-th,f) and 252-Cf(sf)"
    ,"x4subents":[
-   {"SUBENT":"22896001", "isub":1, "compiled":20130111, "TransID":"2234", "TransDate":20130718
+   {"SUBENT":"22896001", "isub":1, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[".Energy distribution of the ternary alpha`s emitted"
+	,"x4freetext":[" Energy distribution of the ternary alpha`s emitted"
 		," in 235-U(n-th,f) and 252-Cf(sf)"]
 	}
       ]
@@ -49,7 +49,7 @@
 		," ternary/binary ratio alpha emission yield data"]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"B,WAGEMANS,,1991","stdFileName":"C,WAGEMANS,,,1991"
+	,"x4codes":[{"code":"B,WAGEMANS,,,1991","stdFileName":"C,WAGEMANS,,,1991"
 		,"year":1991,"typ":"B","ref":"C,WAGEMANS"
 		,"shortRef":"Book: Wagemans, The Nuclear Fission Process, CRC Press 1991,  (1991)"}]
 	,"x4freetext":[" Data for Th229, U233, U235, Am241,"
@@ -133,7 +133,7 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[".The uncertainty is reported by authors"]
+	,"x4freetext":[" No information about source of uncertainties"]
 	}
       ]
      ,"HISTORY":[
@@ -148,26 +148,35 @@
 	,"x4freetext":[" SD: EN-DUMMY was correct to 0.0253 eV in"
 		," Subents 8-18. REACTION code was changed in 008 - 018."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code in Subents 019 - 029"
+		,"corrected according to MEMO CP-D/969. REACTION code"
+		,"in Subent 002-007 according to last EXFOR rules."
+		,"Subent 030 added."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"22896002", "isub":2, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896002", "isub":2, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-235(N,F),TER,AKE,A"
-	    ,"c4reac":"(N,F)TER,AKE,A"
+	,"x4code":{"code":"92-U-235(N,F)2-HE-4,TER,KE"
+	    ,"c4reac":"(N,F)TER,KE"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"92-U-235(N,F),TER,AKE,A"
+	    {"code":"92-U-235(N,F)2-HE-4,TER,KE"
 		,"Reac":"N,F"
 		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF5":"TER"
-		,"SF6":"AKE"
-		,"SF7":"A"
-		,"SF58":"TER,AKE,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"KE"
+		,"SF58":"TER,KE","Quant":"E","BasicUnits":"EV","QuantHlp":"Kinetic energy for ternary fission"
 	    }]}
 	,"x4freetext":[" All alpha particles"]
 	}
@@ -209,8 +218,11 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".From text of main reference, p.295, and table 3"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" From text on p.295 and table 3 from"
+		,"                             Nucl.Phys.A742(2004)291"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,22896003"
@@ -223,6 +235,14 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"22896004"
 		}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added, SF6=AKE -> KE, SF7=A"
+		,"deleted from REACTION code. STATUS updated."]
 	}
       ]
     }
@@ -252,67 +272,118 @@
 	 [0.025,16,0.1,9.4,0.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22896002", "Pointer":" "
- ,"Subent":"22896002", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"92-U-235(N,F),TER,AKE,A"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896002", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy for ternary fission"
+ ,"reacode":"92-U-235(N,F)2-HE-4,TER,KE"
+ ,"compNotes":[]
+ ,"wx4data":5
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[16]
+    ,"dat1":[1.6e+7]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.1]
+    ,"dat1":[1.0e+5]}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":false, "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"dat0":[0.025]
+   ,"dat1eq":true}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[9.4]
+    ,"dat1":[9.4e+6]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.2]
+    ,"dat1":[2.0e+5]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.6e+7]
+      ,"dy":[1.0e+5]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[0.025]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896003", "isub":3, "compiled":20060304, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896003", "isub":3, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"92-U-235(N,F),TER,AKE,A"
-	    ,"c4reac":"(N,F)TER,AKE,A"
+	,"x4code":{"code":"92-U-235(N,F)2-HE-4,TER,KE"
+	    ,"c4reac":"(N,F)TER,KE"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"92-U-235(N,F),TER,AKE,A"
+	    {"code":"92-U-235(N,F)2-HE-4,TER,KE"
 		,"Reac":"N,F"
 		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF5":"TER"
-		,"SF6":"AKE"
-		,"SF7":"A"
-		,"SF58":"TER,AKE,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"KE"
+		,"SF58":"TER,KE","Quant":"E","BasicUnits":"EV","QuantHlp":"Kinetic energy for ternary fission"
 	    }]}
 	,"x4freetext":["       \"True\" alpha-part."]
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"92-U-235(N,F),TER,AKE,A"
-	    ,"c4reac":"(N,F)TER,AKE,A"
+	,"x4code":{"code":"92-U-235(N,F)2-HE-4,TER,KE"
+	    ,"c4reac":"(N,F)TER,KE"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"92-U-235(N,F),TER,AKE,A"
+	    {"code":"92-U-235(N,F)2-HE-4,TER,KE"
 		,"Reac":"N,F"
 		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF5":"TER"
-		,"SF6":"AKE"
-		,"SF7":"A"
-		,"SF58":"TER,AKE,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"KE"
+		,"SF58":"TER,KE","Quant":"E","BasicUnits":"EV","QuantHlp":"Kinetic energy for ternary fission"
 	    }]}
 	,"x4freetext":[" Residual alphas via He-5"]
 	}
 	,{"x4pointer":"3"
-	,"x4code":{"code":"92-U-235(N,F),TER,AKE,A"
-	    ,"c4reac":"(N,F)TER,AKE,A"
+	,"x4code":{"code":"92-U-235(N,F)2-HE-4,TER,KE"
+	    ,"c4reac":"(N,F)TER,KE"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"92-U-235(N,F),TER,AKE,A"
+	    {"code":"92-U-235(N,F)2-HE-4,TER,KE"
 		,"Reac":"N,F"
 		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF5":"TER"
-		,"SF6":"AKE"
-		,"SF7":"A"
-		,"SF58":"TER,AKE,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"KE"
+		,"SF58":"TER,KE","Quant":"E","BasicUnits":"EV","QuantHlp":"Kinetic energy for ternary fission"
 	    }]}
 	,"x4freetext":[" Residual alphas via He-6"]
 	}
@@ -365,8 +436,18 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 3 of main ref."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 3 from Nucl.Phys.A742(2004)291"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added, SF6=AKE -> KE, SF7=A"
+		,"deleted from all REACTION codes. STATUS updated."]
 	}
       ]
     }
@@ -429,68 +510,214 @@
 	 [16.6,0.4,9,0.4,12.4,0.4,8.1,0.6,6.1,1.1,6.8,1.3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960031", "Pointer":"1"
- ,"Subent":"22896003", "compiled":20060304
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"92-U-235(N,F),TER,AKE,A"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896003", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy for ternary fission"
+ ,"reacode":"92-U-235(N,F)2-HE-4,TER,KE"
+ ,"compNotes":[]
+ ,"wx4data":5
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[16.6]
+    ,"dat1":[1.66e+7]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.4]
+    ,"dat1":[4.0e+5]}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[9]
+    ,"dat1":[9.0e+6]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.4]
+    ,"dat1":[4.0e+5]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.66e+7]
+      ,"dy":[4.0e+5]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[0.0253]
+   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960032", "Pointer":"2"
- ,"Subent":"22896003", "compiled":20060304
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"92-U-235(N,F),TER,AKE,A"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896003", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy for ternary fission"
+ ,"reacode":"92-U-235(N,F)2-HE-4,TER,KE"
+ ,"compNotes":[]
+ ,"wx4data":5
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[12.4]
+    ,"dat1":[1.24e+7]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.4]
+    ,"dat1":[4.0e+5]}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[8.1]
+    ,"dat1":[8.1e+6]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.6]
+    ,"dat1":[6.0e+5]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.24e+7]
+      ,"dy":[4.0e+5]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[0.0253]
+   }
+ }
 }
 ,{"iDataset":2, "DatasetID":"228960033", "Pointer":"3"
- ,"Subent":"22896003", "compiled":20060304
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"92-U-235(N,F),TER,AKE,A"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896003", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy for ternary fission"
+ ,"reacode":"92-U-235(N,F)2-HE-4,TER,KE"
+ ,"compNotes":[]
+ ,"wx4data":5
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[6.1]
+    ,"dat1":[6.1e+6]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[1.1]
+    ,"dat1":[1.1e+6]}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[6.8]
+    ,"dat1":[6.8e+6]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[1.3]
+    ,"dat1":[1.3e+6]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[6.1e+6]
+      ,"dy":[1.1e+6]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[0.0253]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896004", "isub":4, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896004", "isub":4, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"92-U-235(N,F),TER,AKE,A"
-	    ,"c4reac":"(N,F)TER,AKE,A"
+	,"x4code":{"code":"92-U-235(N,F)2-HE-4,TER,KE"
+	    ,"c4reac":"(N,F)TER,KE"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"92-U-235(N,F),TER,AKE,A"
+	    {"code":"92-U-235(N,F)2-HE-4,TER,KE"
 		,"Reac":"N,F"
 		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF5":"TER"
-		,"SF6":"AKE"
-		,"SF7":"A"
-		,"SF58":"TER,AKE,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"KE"
+		,"SF58":"TER,KE","Quant":"E","BasicUnits":"EV","QuantHlp":"Kinetic energy for ternary fission"
 	    }]}
 	,"x4freetext":["       \"True\" alpha-part."]
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"92-U-235(N,F),TER,AKE,A"
-	    ,"c4reac":"(N,F)TER,AKE,A"
+	,"x4code":{"code":"92-U-235(N,F)2-HE-4,TER,KE"
+	    ,"c4reac":"(N,F)TER,KE"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"92-U-235(N,F),TER,AKE,A"
+	    {"code":"92-U-235(N,F)2-HE-4,TER,KE"
 		,"Reac":"N,F"
 		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF5":"TER"
-		,"SF6":"AKE"
-		,"SF7":"A"
-		,"SF58":"TER,AKE,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"KE"
+		,"SF58":"TER,KE","Quant":"E","BasicUnits":"EV","QuantHlp":"Kinetic energy for ternary fission"
 	    }]}
 	,"x4freetext":[" Residual alphas via He-5"
 		,"                              and He-6"]
@@ -540,8 +767,18 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 3 of main ref."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 3 from Nucl.Phys.A742(2004)291"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added, SF6=AKE -> KE, SF7=A"
+		,"deleted from all REACTION codes. STATUS updated."]
 	}
       ]
     }
@@ -592,42 +829,139 @@
 	 [16.6,0.4,9,0.4,9.9,0.5,9.8,0.6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960041", "Pointer":"1"
- ,"Subent":"22896004", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"92-U-235(N,F),TER,AKE,A"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896004", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy for ternary fission"
+ ,"reacode":"92-U-235(N,F)2-HE-4,TER,KE"
+ ,"compNotes":[]
+ ,"wx4data":5
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[16.6]
+    ,"dat1":[1.66e+7]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.4]
+    ,"dat1":[4.0e+5]}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[9]
+    ,"dat1":[9.0e+6]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.4]
+    ,"dat1":[4.0e+5]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.66e+7]
+      ,"dy":[4.0e+5]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[0.0253]
+   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960042", "Pointer":"2"
- ,"Subent":"22896004", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"92-U-235(N,F),TER,AKE,A"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896004", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy for ternary fission"
+ ,"reacode":"92-U-235(N,F)2-HE-4,TER,KE"
+ ,"compNotes":[]
+ ,"wx4data":5
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[9.9]
+    ,"dat1":[9.9e+6]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.5]
+    ,"dat1":[5.0e+5]}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[9.8]
+    ,"dat1":[9.8e+6]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.6]
+    ,"dat1":[6.0e+5]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[9.9e+6]
+      ,"dy":[5.0e+5]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[0.0253]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896005", "isub":5, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896005", "isub":5, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"98-CF-252(0,F),TER,AKE,A"
-	    ,"c4reac":"(0,F)TER,AKE,A"
+	,"x4code":{"code":"98-CF-252(0,F)2-HE-4,TER,KE"
+	    ,"c4reac":"(0,F)TER,KE"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"98-CF-252(0,F),TER,AKE,A"
+	    {"code":"98-CF-252(0,F)2-HE-4,TER,KE"
 		,"Reac":"0,F"
 		,"SF1":"98-CF-252","Targ":{"code":"98-CF-252","nam":"Cf-252","ZA":98252}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF5":"TER"
-		,"SF6":"AKE"
-		,"SF7":"A"
-		,"SF58":"TER,AKE,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"KE"
+		,"SF58":"TER,KE","Quant":"E","BasicUnits":"EV","QuantHlp":"Kinetic energy for ternary fission"
 	    }]}
 	,"x4freetext":["   All alphas"]
 	}
@@ -655,8 +989,11 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".From Table 2 and text of main ref."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" From the text and table 2 of"
+		,"                               Nucl.Phys.A742(2004)291"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,22896006"
@@ -669,6 +1006,14 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"22896007"
 		}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added, SF6=AKE -> KE, SF7=A"
+		,"deleted from REACTION code. STATUS updated."]
 	}
       ]
     }
@@ -695,67 +1040,107 @@
 	 [15.7,0.2,10.4,0.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22896005", "Pointer":" "
- ,"Subent":"22896005", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"98-CF-252(0,F),TER,AKE,A"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896005", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy for ternary fission"
+ ,"reacode":"98-CF-252(0,F)2-HE-4,TER,KE"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[15.7]
+    ,"dat1":[1.57e+7]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.2]
+    ,"dat1":[2.0e+5]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[10.4]
+    ,"dat1":[1.04e+7]}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.2]
+    ,"dat1":[2.0e+5]}
+  ]
+ ,"wc5data":1
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.57e+7]
+      ,"dy":[2.0e+5]   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896006", "isub":6, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896006", "isub":6, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"98-CF-252(0,F),TER,AKE,A"
-	    ,"c4reac":"(0,F)TER,AKE,A"
+	,"x4code":{"code":"98-CF-252(0,F)2-HE-4,TER,KE"
+	    ,"c4reac":"(0,F)TER,KE"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"98-CF-252(0,F),TER,AKE,A"
+	    {"code":"98-CF-252(0,F)2-HE-4,TER,KE"
 		,"Reac":"0,F"
 		,"SF1":"98-CF-252","Targ":{"code":"98-CF-252","nam":"Cf-252","ZA":98252}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF5":"TER"
-		,"SF6":"AKE"
-		,"SF7":"A"
-		,"SF58":"TER,AKE,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"KE"
+		,"SF58":"TER,KE","Quant":"E","BasicUnits":"EV","QuantHlp":"Kinetic energy for ternary fission"
 	    }]}
 	,"x4freetext":["       \"True\" alpha-part."]
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"98-CF-252(0,F),TER,AKE,A"
-	    ,"c4reac":"(0,F)TER,AKE,A"
+	,"x4code":{"code":"98-CF-252(0,F)2-HE-4,TER,KE"
+	    ,"c4reac":"(0,F)TER,KE"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"98-CF-252(0,F),TER,AKE,A"
+	    {"code":"98-CF-252(0,F)2-HE-4,TER,KE"
 		,"Reac":"0,F"
 		,"SF1":"98-CF-252","Targ":{"code":"98-CF-252","nam":"Cf-252","ZA":98252}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF5":"TER"
-		,"SF6":"AKE"
-		,"SF7":"A"
-		,"SF58":"TER,AKE,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"KE"
+		,"SF58":"TER,KE","Quant":"E","BasicUnits":"EV","QuantHlp":"Kinetic energy for ternary fission"
 	    }]}
 	,"x4freetext":[" Residual alphas via He-5"]
 	}
 	,{"x4pointer":"3"
-	,"x4code":{"code":"98-CF-252(0,F),TER,AKE,A"
-	    ,"c4reac":"(0,F)TER,AKE,A"
+	,"x4code":{"code":"98-CF-252(0,F)2-HE-4,TER,KE"
+	    ,"c4reac":"(0,F)TER,KE"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"98-CF-252(0,F),TER,AKE,A"
+	    {"code":"98-CF-252(0,F)2-HE-4,TER,KE"
 		,"Reac":"0,F"
 		,"SF1":"98-CF-252","Targ":{"code":"98-CF-252","nam":"Cf-252","ZA":98252}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF5":"TER"
-		,"SF6":"AKE"
-		,"SF7":"A"
-		,"SF58":"TER,AKE,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"KE"
+		,"SF58":"TER,KE","Quant":"E","BasicUnits":"EV","QuantHlp":"Kinetic energy for ternary fission"
 	    }]}
 	,"x4freetext":[" Residual alphas via He-6"]
 	}
@@ -794,8 +1179,18 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".From Table 2 of main ref."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 2 from Nucl.Phys.A742(2004)291"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added, SF6=AKE -> KE, SF7=A"
+		,"deleted from all REACTION codes. STATUS updated."]
 	}
       ]
     }
@@ -846,68 +1241,181 @@
 	 [16.4,0.3,9.9,0.3,12.4,0.3,8.9,0.5,6.7,0.6,4.8,0.8]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960061", "Pointer":"1"
- ,"Subent":"22896006", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"98-CF-252(0,F),TER,AKE,A"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896006", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy for ternary fission"
+ ,"reacode":"98-CF-252(0,F)2-HE-4,TER,KE"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[16.4]
+    ,"dat1":[1.64e+7]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.3]
+    ,"dat1":[3.0e+5]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[9.9]
+    ,"dat1":[9.9e+6]}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.3]
+    ,"dat1":[3.0e+5]}
+  ]
+ ,"wc5data":1
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.64e+7]
+      ,"dy":[3.0e+5]   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960062", "Pointer":"2"
- ,"Subent":"22896006", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"98-CF-252(0,F),TER,AKE,A"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896006", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy for ternary fission"
+ ,"reacode":"98-CF-252(0,F)2-HE-4,TER,KE"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[12.4]
+    ,"dat1":[1.24e+7]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.3]
+    ,"dat1":[3.0e+5]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[8.9]
+    ,"dat1":[8.9e+6]}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.5]
+    ,"dat1":[5.0e+5]}
+  ]
+ ,"wc5data":1
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.24e+7]
+      ,"dy":[3.0e+5]   }
+ }
 }
 ,{"iDataset":2, "DatasetID":"228960063", "Pointer":"3"
- ,"Subent":"22896006", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"98-CF-252(0,F),TER,AKE,A"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896006", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy for ternary fission"
+ ,"reacode":"98-CF-252(0,F)2-HE-4,TER,KE"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[6.7]
+    ,"dat1":[6.7e+6]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.6]
+    ,"dat1":[6.0e+5]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[4.8]
+    ,"dat1":[4.8e+6]}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.8]
+    ,"dat1":[8.0e+5]}
+  ]
+ ,"wc5data":1
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[6.7e+6]
+      ,"dy":[6.0e+5]   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896007", "isub":7, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896007", "isub":7, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"98-CF-252(0,F),TER,AKE,A"
-	    ,"c4reac":"(0,F)TER,AKE,A"
+	,"x4code":{"code":"98-CF-252(0,F)2-HE-4,TER,KE"
+	    ,"c4reac":"(0,F)TER,KE"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"98-CF-252(0,F),TER,AKE,A"
+	    {"code":"98-CF-252(0,F)2-HE-4,TER,KE"
 		,"Reac":"0,F"
 		,"SF1":"98-CF-252","Targ":{"code":"98-CF-252","nam":"Cf-252","ZA":98252}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF5":"TER"
-		,"SF6":"AKE"
-		,"SF7":"A"
-		,"SF58":"TER,AKE,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"KE"
+		,"SF58":"TER,KE","Quant":"E","BasicUnits":"EV","QuantHlp":"Kinetic energy for ternary fission"
 	    }]}
 	,"x4freetext":["       \"True\" alpha-part."]
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"98-CF-252(0,F),TER,AKE,A"
-	    ,"c4reac":"(0,F)TER,AKE,A"
+	,"x4code":{"code":"98-CF-252(0,F)2-HE-4,TER,KE"
+	    ,"c4reac":"(0,F)TER,KE"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"98-CF-252(0,F),TER,AKE,A"
+	    {"code":"98-CF-252(0,F)2-HE-4,TER,KE"
 		,"Reac":"0,F"
 		,"SF1":"98-CF-252","Targ":{"code":"98-CF-252","nam":"Cf-252","ZA":98252}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF5":"TER"
-		,"SF6":"AKE"
-		,"SF7":"A"
-		,"SF58":"TER,AKE,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF6":"KE"
+		,"SF58":"TER,KE","Quant":"E","BasicUnits":"EV","QuantHlp":"Kinetic energy for ternary fission"
 	    }]}
 	,"x4freetext":[" Residual alphas via He-5"
 		,"                               and He-6"]
@@ -943,8 +1451,18 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".From Table 2 of main ref."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 2 from Nucl.Phys.A742(2004)291"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added, SF6=AKE -> KE, SF7=A"
+		,"deleted from all REACTION codes. STATUS updated."]
 	}
       ]
     }
@@ -983,22 +1501,96 @@
 	 [16.4,0.3,9.9,0.3,9.3,0.5,9.1,0.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960071", "Pointer":"1"
- ,"Subent":"22896007", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"98-CF-252(0,F),TER,AKE,A"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896007", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy for ternary fission"
+ ,"reacode":"98-CF-252(0,F)2-HE-4,TER,KE"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[16.4]
+    ,"dat1":[1.64e+7]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.3]
+    ,"dat1":[3.0e+5]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[9.9]
+    ,"dat1":[9.9e+6]}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.3]
+    ,"dat1":[3.0e+5]}
+  ]
+ ,"wc5data":1
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.64e+7]
+      ,"dy":[3.0e+5]   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960072", "Pointer":"2"
- ,"Subent":"22896007", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"98-CF-252(0,F),TER,AKE,A"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896007", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy for ternary fission"
+ ,"reacode":"98-CF-252(0,F)2-HE-4,TER,KE"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[9.3]
+    ,"dat1":[9.3e+6]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.5]
+    ,"dat1":[5.0e+5]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[9.1]
+    ,"dat1":[9.1e+6]}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.5]
+    ,"dat1":[5.0e+5]}
+  ]
+ ,"wc5data":1
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[9.3e+6]
+      ,"dy":[5.0e+5]   }
+ }
 }
    ]
    }
@@ -3884,41 +4476,43 @@
 }
    ]
    }
-  ,{"SUBENT":"22896019", "isub":19, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896019", "isub":19, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"94-PU-238(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"94-PU-238(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"94-PU-238(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"94-PU-238(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"94-PU-238","Targ":{"code":"94-PU-238","nam":"Pu-238","ZA":94238}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"94-PU-238(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"94-PU-238(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"94-PU-238(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"94-PU-238(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"94-PU-238","Targ":{"code":"94-PU-238","nam":"Pu-238","ZA":94238}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
       ]
@@ -3941,8 +4535,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 4 of main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 4 from Nucl.Phys.A742(2004)291"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,22896005"
@@ -3963,84 +4559,179 @@
 		}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added; SF5=TER/BIN -> TER;"
+		," SF6=FY/RAT -> FY; SF7=A deleted from REACTION codes."
+		," Units in DATA and DATA-ERR changed (NO-DIM -> PRD/FIS)"]
+	}
+      ]
     }
     ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":"1"
+       {"icol":0, "header":"DATA", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":2, "header":"DATA", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,["PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ]
 	,["1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [0.00276,1.3E-4,0.00293,1.4E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960191", "Pointer":"1"
- ,"Subent":"22896019", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":94, "targ1":"Pu-238", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"94-PU-238(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896019", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":94, "targ1":"Pu-238", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"94-PU-238(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00276]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[1.3e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00276]
+      ,"dy":[1.3e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960192", "Pointer":"2"
- ,"Subent":"22896019", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":94, "targ1":"Pu-238", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"94-PU-238(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896019", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":94, "targ1":"Pu-238", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"94-PU-238(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00293]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[1.4e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00293]
+      ,"dy":[1.4e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896020", "isub":20, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896020", "isub":20, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"94-PU-240(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"94-PU-240(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"94-PU-240(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"94-PU-240(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"94-PU-240","Targ":{"code":"94-PU-240","nam":"Pu-240","ZA":94240}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"94-PU-240(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"94-PU-240(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"94-PU-240(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"94-PU-240(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"94-PU-240","Targ":{"code":"94-PU-240","nam":"Pu-240","ZA":94240}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
       ]
@@ -4063,8 +4754,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 4 of main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 4 from Nucl.Phys.A742(2004)291"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,22896005"
@@ -4085,84 +4778,179 @@
 		}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added; SF5=TER/BIN -> TER;"
+		," SF6=FY/RAT -> FY; SF7=A deleted from REACTION codes."
+		," Units in DATA and DATA-ERR changed (NO-DIM -> PRD/FIS)"]
+	}
+      ]
     }
     ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":"1"
+       {"icol":0, "header":"DATA", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":2, "header":"DATA", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,["PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ]
 	,["1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [0.00251,1.4E-4,0.00266,1.5E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960201", "Pointer":"1"
- ,"Subent":"22896020", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":94, "targ1":"Pu-240", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"94-PU-240(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896020", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":94, "targ1":"Pu-240", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"94-PU-240(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00251]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[1.4e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00251]
+      ,"dy":[1.4e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960202", "Pointer":"2"
- ,"Subent":"22896020", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":94, "targ1":"Pu-240", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"94-PU-240(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896020", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":94, "targ1":"Pu-240", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"94-PU-240(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00266]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[1.5e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00266]
+      ,"dy":[1.5e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896021", "isub":21, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896021", "isub":21, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"94-PU-242(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"94-PU-242(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"94-PU-242(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"94-PU-242(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"94-PU-242","Targ":{"code":"94-PU-242","nam":"Pu-242","ZA":94242}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"94-PU-242(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"94-PU-242(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"94-PU-242(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"94-PU-242(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"94-PU-242","Targ":{"code":"94-PU-242","nam":"Pu-242","ZA":94242}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
       ]
@@ -4185,8 +4973,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 4 of main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 4 from Nucl.Phys.A742(2004)291"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,22896005"
@@ -4207,84 +4997,179 @@
 		}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added; SF5=TER/BIN -> TER;"
+		," SF6=FY/RAT -> FY; SF7=A deleted from REACTION codes."
+		," Units in DATA and DATA-ERR changed (NO-DIM -> PRD/FIS)"]
+	}
+      ]
     }
     ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":"1"
+       {"icol":0, "header":"DATA", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":2, "header":"DATA", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,["PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ]
 	,["1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [0.00217,7.0E-5,0.0023,8.0E-5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960211", "Pointer":"1"
- ,"Subent":"22896021", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":94, "targ1":"Pu-242", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"94-PU-242(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896021", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":94, "targ1":"Pu-242", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"94-PU-242(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00217]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[7.0e-5]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00217]
+      ,"dy":[7.0e-5]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960212", "Pointer":"2"
- ,"Subent":"22896021", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":94, "targ1":"Pu-242", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"94-PU-242(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896021", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":94, "targ1":"Pu-242", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"94-PU-242(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.0023]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[8.0e-5]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.0023]
+      ,"dy":[8.0e-5]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896022", "isub":22, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896022", "isub":22, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"94-PU-244(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"94-PU-244(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"94-PU-244(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"94-PU-244(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"94-PU-244","Targ":{"code":"94-PU-244","nam":"Pu-244","ZA":94244}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"94-PU-244(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"94-PU-244(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"94-PU-244(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"94-PU-244(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"94-PU-244","Targ":{"code":"94-PU-244","nam":"Pu-244","ZA":94244}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
       ]
@@ -4307,8 +5192,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 4 of main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 4 from Nucl.Phys.A742(2004)291"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,22896005"
@@ -4329,84 +5216,179 @@
 		}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added; SF5=TER/BIN -> TER;"
+		," SF6=FY/RAT -> FY; SF7=A deleted from REACTION codes."
+		," Units in DATA and DATA-ERR changed (NO-DIM -> PRD/FIS)"]
+	}
+      ]
     }
     ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":"1"
+       {"icol":0, "header":"DATA", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":2, "header":"DATA", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,["PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ]
 	,["1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [0.00171,9.0E-5,0.00181,1.0E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960221", "Pointer":"1"
- ,"Subent":"22896022", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":94, "targ1":"Pu-244", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"94-PU-244(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896022", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":94, "targ1":"Pu-244", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"94-PU-244(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00171]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[9.0e-5]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00171]
+      ,"dy":[9.0e-5]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960222", "Pointer":"2"
- ,"Subent":"22896022", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":94, "targ1":"Pu-244", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"94-PU-244(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896022", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":94, "targ1":"Pu-244", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"94-PU-244(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00181]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[1.0e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00181]
+      ,"dy":[1.0e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896023", "isub":23, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896023", "isub":23, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"96-CM-242(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"96-CM-242(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"96-CM-242(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"96-CM-242(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"96-CM-242","Targ":{"code":"96-CM-242","nam":"Cm-242","ZA":96242}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"96-CM-242(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"96-CM-242(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"96-CM-242(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"96-CM-242(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"96-CM-242","Targ":{"code":"96-CM-242","nam":"Cm-242","ZA":96242}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
       ]
@@ -4429,8 +5411,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 4 of main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 4 from Nucl.Phys.A742(2004)291"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,22896005"
@@ -4451,84 +5435,179 @@
 		}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added; SF5=TER/BIN -> TER;"
+		," SF6=FY/RAT -> FY; SF7=A deleted from REACTION codes."
+		," Units in DATA and DATA-ERR changed (NO-DIM -> PRD/FIS)"]
+	}
+      ]
     }
     ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":"1"
+       {"icol":0, "header":"DATA", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":2, "header":"DATA", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,["PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ]
 	,["1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [0.00334,2.6E-4,0.00354,2.8E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960231", "Pointer":"1"
- ,"Subent":"22896023", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":96, "targ1":"Cm-242", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"96-CM-242(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896023", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":96, "targ1":"Cm-242", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"96-CM-242(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00334]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[2.6e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00334]
+      ,"dy":[2.6e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960232", "Pointer":"2"
- ,"Subent":"22896023", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":96, "targ1":"Cm-242", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"96-CM-242(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896023", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":96, "targ1":"Cm-242", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"96-CM-242(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00354]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[2.8e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00354]
+      ,"dy":[2.8e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896024", "isub":24, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896024", "isub":24, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"96-CM-244(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"96-CM-244(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"96-CM-244(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"96-CM-244(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"96-CM-244","Targ":{"code":"96-CM-244","nam":"Cm-244","ZA":96244}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"96-CM-244(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"96-CM-244(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"96-CM-244(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"96-CM-244(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"96-CM-244","Targ":{"code":"96-CM-244","nam":"Cm-244","ZA":96244}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
       ]
@@ -4551,8 +5630,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 4 of main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 4 from Nucl.Phys.A742(2004)291"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,22896005"
@@ -4573,84 +5654,179 @@
 		}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added; SF5=TER/BIN -> TER;"
+		," SF6=FY/RAT -> FY; SF7=A deleted from REACTION codes."
+		," Units in DATA and DATA-ERR changed (NO-DIM -> PRD/FIS)"]
+	}
+      ]
     }
     ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":"1"
+       {"icol":0, "header":"DATA", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":2, "header":"DATA", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,["PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ]
 	,["1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [0.00273,2.0E-4,0.00289,2.1E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960241", "Pointer":"1"
- ,"Subent":"22896024", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":96, "targ1":"Cm-244", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"96-CM-244(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896024", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":96, "targ1":"Cm-244", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"96-CM-244(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00273]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[2.0e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00273]
+      ,"dy":[2.0e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960242", "Pointer":"2"
- ,"Subent":"22896024", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":96, "targ1":"Cm-244", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"96-CM-244(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896024", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":96, "targ1":"Cm-244", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"96-CM-244(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00289]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[2.1e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00289]
+      ,"dy":[2.1e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896025", "isub":25, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896025", "isub":25, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"96-CM-246(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"96-CM-246(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"96-CM-246(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"96-CM-246(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"96-CM-246","Targ":{"code":"96-CM-246","nam":"Cm-246","ZA":96246}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"96-CM-246(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"96-CM-246(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"96-CM-246(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"96-CM-246(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"96-CM-246","Targ":{"code":"96-CM-246","nam":"Cm-246","ZA":96246}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
       ]
@@ -4673,8 +5849,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 4 of main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 4 from Nucl.Phys.A742(2004)291"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,22896005"
@@ -4695,84 +5873,179 @@
 		}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added; SF5=TER/BIN -> TER;"
+		," SF6=FY/RAT -> FY; SF7=A deleted from REACTION codes."
+		," Units in DATA and DATA-ERR changed (NO-DIM -> PRD/FIS)"]
+	}
+      ]
     }
     ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":"1"
+       {"icol":0, "header":"DATA", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":2, "header":"DATA", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,["PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ]
 	,["1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [0.00249,1.2E-4,0.00264,1.3E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960251", "Pointer":"1"
- ,"Subent":"22896025", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":96, "targ1":"Cm-246", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"96-CM-246(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896025", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":96, "targ1":"Cm-246", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"96-CM-246(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00249]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[1.2e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00249]
+      ,"dy":[1.2e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960252", "Pointer":"2"
- ,"Subent":"22896025", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":96, "targ1":"Cm-246", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"96-CM-246(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896025", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":96, "targ1":"Cm-246", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"96-CM-246(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00264]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[1.3e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00264]
+      ,"dy":[1.3e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896026", "isub":26, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896026", "isub":26, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"96-CM-248(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"96-CM-248(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"96-CM-248(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"96-CM-248(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"96-CM-248","Targ":{"code":"96-CM-248","nam":"Cm-248","ZA":96248}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"96-CM-248(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"96-CM-248(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"96-CM-248(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"96-CM-248(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"96-CM-248","Targ":{"code":"96-CM-248","nam":"Cm-248","ZA":96248}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
       ]
@@ -4795,8 +6068,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 4 of main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 4 from Nucl.Phys.A742(2004)291"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,22896005"
@@ -4817,84 +6092,179 @@
 		}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added; SF5=TER/BIN -> TER;"
+		," SF6=FY/RAT -> FY; SF7=A deleted from REACTION codes."
+		," Units in DATA and DATA-ERR changed (NO-DIM -> PRD/FIS)"]
+	}
+      ]
     }
     ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":"1"
+       {"icol":0, "header":"DATA", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":2, "header":"DATA", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,["PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ]
 	,["1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [0.0023,1.0E-4,0.00244,1.1E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960261", "Pointer":"1"
- ,"Subent":"22896026", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":96, "targ1":"Cm-248", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"96-CM-248(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896026", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":96, "targ1":"Cm-248", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"96-CM-248(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.0023]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[1.0e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.0023]
+      ,"dy":[1.0e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960262", "Pointer":"2"
- ,"Subent":"22896026", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":96, "targ1":"Cm-248", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"96-CM-248(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896026", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":96, "targ1":"Cm-248", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"96-CM-248(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00244]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[1.1e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00244]
+      ,"dy":[1.1e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896027", "isub":27, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896027", "isub":27, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"98-CF-250(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"98-CF-250(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"98-CF-250(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"98-CF-250(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"98-CF-250","Targ":{"code":"98-CF-250","nam":"Cf-250","ZA":98250}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"98-CF-250(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"98-CF-250(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"98-CF-250(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"98-CF-250(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"98-CF-250","Targ":{"code":"98-CF-250","nam":"Cf-250","ZA":98250}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
       ]
@@ -4917,8 +6287,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 4 of main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 4 from Nucl.Phys.A742(2004)291"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,22896005"
@@ -4939,84 +6311,179 @@
 		}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added; SF5=TER/BIN -> TER;"
+		," SF6=FY/RAT -> FY; SF7=A deleted from REACTION codes."
+		," Units in DATA and DATA-ERR changed (NO-DIM -> PRD/FIS)"]
+	}
+      ]
     }
     ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":"1"
+       {"icol":0, "header":"DATA", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":2, "header":"DATA", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,["PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ]
 	,["1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [0.00365,2.8E-4,0.00387,3.0E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960271", "Pointer":"1"
- ,"Subent":"22896027", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":98, "targ1":"Cf-250", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"98-CF-250(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896027", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":98, "targ1":"Cf-250", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"98-CF-250(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00365]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[2.8e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00365]
+      ,"dy":[2.8e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960272", "Pointer":"2"
- ,"Subent":"22896027", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":98, "targ1":"Cf-250", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"98-CF-250(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896027", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":98, "targ1":"Cf-250", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"98-CF-250(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00387]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[3.0e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00387]
+      ,"dy":[3.0e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896028", "isub":28, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896028", "isub":28, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"98-CF-252(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"98-CF-252(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"98-CF-252(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"98-CF-252(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"98-CF-252","Targ":{"code":"98-CF-252","nam":"Cf-252","ZA":98252}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"98-CF-252(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"98-CF-252(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"98-CF-252(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"98-CF-252(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
 		,"SF1":"98-CF-252","Targ":{"code":"98-CF-252","nam":"Cf-252","ZA":98252}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
       ]
@@ -5039,8 +6506,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 4 of main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 4 from Nucl.Phys.A742(2004)291"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,22896005"
@@ -5061,84 +6530,179 @@
 		}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=He-4 added; SF5=TER/BIN -> TER;"
+		," SF6=FY/RAT -> FY; SF7=A deleted from REACTION codes."
+		," Units in DATA and DATA-ERR changed (NO-DIM -> PRD/FIS)"]
+	}
+      ]
     }
     ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":"1"
+       {"icol":0, "header":"DATA", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":2, "header":"DATA", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,["PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ]
 	,["1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [0.00306,1.1E-4,0.00324,1.2E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960281", "Pointer":"1"
- ,"Subent":"22896028", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"98-CF-252(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896028", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"98-CF-252(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00306]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[1.1e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00306]
+      ,"dy":[1.1e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960282", "Pointer":"2"
- ,"Subent":"22896028", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"98-CF-252(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896028", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":98, "targ1":"Cf-252", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"98-CF-252(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00324]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[1.2e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00324]
+      ,"dy":[1.2e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"22896029", "isub":29, "compiled":20060303, "TransID":"2176", "TransDate":20060430
+  ,{"SUBENT":"22896029", "isub":29, "compiled":20190127, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"100-FM-257(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"100-FM-256(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"100-FM-257(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"100-FM-256(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
-		,"SF1":"100-FM-257","Targ":{"code":"100-FM-257","nam":"Fm-257","ZA":100257}
+		,"SF1":"100-FM-256","Targ":{"code":"100-FM-256","nam":"Fm-256","ZA":100256}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"100-FM-257(0,F),TER/BIN,FY/RAT,A,,DERIV"
-	    ,"c4reac":"(0,F)TER/BIN,FY/RAT,A"
+	,"x4code":{"code":"100-FM-256(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
 	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"100-FM-257(0,F),TER/BIN,FY/RAT,A,,DERIV"
+	    {"code":"100-FM-256(0,F)2-HE-4,TER,FY,,,DERIV"
 		,"Reac":"0,F"
-		,"SF1":"100-FM-257","Targ":{"code":"100-FM-257","nam":"Fm-257","ZA":100257}
+		,"SF1":"100-FM-256","Targ":{"code":"100-FM-256","nam":"Fm-256","ZA":100256}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"TER/BIN"
-		,"SF6":"FY/RAT"
-		,"SF7":"A"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"TER/BIN,FY/RAT,A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
 	    }]}
 	}
       ]
@@ -5161,8 +6725,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".Table 4 of main reference"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 4 from Nucl.Phys.A742(2004)291"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,22896005"
@@ -5183,46 +6749,357 @@
 		}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127A", "date":"20190127", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF1=Fm-257 -> Fm-256; SF4=He-4 added;"
+		," SF5=TER/BIN -> TER; SF6=FY/RAT -> FY; SF7=A deleted"
+		," from REACTION codes. Units in DATA and DATA-ERR"
+		," changed (NO-DIM -> PRD/FIS)"]
+	}
+      ]
     }
     ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":"1"
+       {"icol":0, "header":"DATA", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"1"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"1"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":2, "header":"DATA", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":"2"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"2"
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,["PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ]
 	,["1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [0.00424,5.9E-4,0.00449,6.3E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"228960291", "Pointer":"1"
- ,"Subent":"22896029", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":100, "targ1":"Fm-257", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"100-FM-257(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896029", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":100, "targ1":"Fm-256", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"100-FM-256(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00424]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[5.9e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00424]
+      ,"dy":[5.9e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
 ,{"iDataset":1, "DatasetID":"228960292", "Pointer":"2"
- ,"Subent":"22896029", "compiled":20060303
-,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
-, "zTarg1":100, "targ1":"Fm-257", "proj1":"0", "emis1":"F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"100-FM-257(0,F),TER/BIN,FY/RAT,A,,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"22896029", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":100, "targ1":"Fm-256", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"100-FM-256(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00449]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[6.3e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00449]
+      ,"dy":[6.3e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
+}
+   ]
+   }
+  ,{"SUBENT":"22896030", "isub":30, "compiled":20190127, "TransID":"2274", "TransDate":20190420
+    ,"BIB":{
+      "REACTION":[
+	{"x4pointer":"1"
+	,"x4code":{"code":"100-FM-257(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
+	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
+	    ,"reacs": [
+	    {"code":"100-FM-257(0,F)2-HE-4,TER,FY,,,DERIV"
+		,"Reac":"0,F"
+		,"SF1":"100-FM-257","Targ":{"code":"100-FM-257","nam":"Fm-257","ZA":100257}
+		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
+	    }]}
+	}
+	,{"x4pointer":"2"
+	,"x4code":{"code":"100-FM-257(0,F)2-HE-4,TER,FY,,,DERIV"
+	    ,"c4reac":"(0,F)TER,FY"
+	    ,"combi":"a"
+	    ,"Units":"PART/FIS"
+	    ,"reacs": [
+	    {"code":"100-FM-257(0,F)2-HE-4,TER,FY,,,DERIV"
+		,"Reac":"0,F"
+		,"SF1":"100-FM-257","Targ":{"code":"100-FM-257","nam":"Fm-257","ZA":100257}
+		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"TER"
+		,"SF6":"FY"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
+		,"SF58":"TER,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Fission-product yield, ternary fission"
+	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":[".Fission yields obtained on the basis of the energy"
+		," distribution. Ternary alpha emission yield data have"
+		," been re-evaluated. Fit to data points > 12 MeV"]
+	}
+	,{"x4pointer":"1"
+	,"x4code":null
+	,"x4freetext":[".Data obtained according to Gauss fit analysis - \"true\""
+		," alphas"]
+	}
+	,{"x4pointer":"2"
+	,"x4code":null
+	,"x4freetext":[".Data obtained on the basis of total alpha emission"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" table 4 from Nucl.Phys.A742(2004)291"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"DEP,22896005"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"22896005"
+		}]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"DEP,22896006"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"22896006"
+		}]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"DEP,22896007"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"22896007"
+		}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190127C", "date":"20190127", "act":"C", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Compiled at the data center"}
+	,"x4freetext":[" SD"]
+	}
+      ]
+    }
+    ,"DATA":{"ncols":4, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"DATA", "units":"PRD/FIS", "pointer":"1"
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"1"
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":2, "header":"DATA", "units":"PRD/FIS", "pointer":"2"
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"PRD/FIS", "pointer":"2"
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"products/fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
+      ]
+      ,"datacols":[
+	 ["DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
+	,["PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ,"PRD/FIS"   ]
+	,["1"         ,"1"         ,"2"         ,"2"         ]]
+      ,"data":[
+	 [0.00345,3.0E-4,0.00366,3.2E-4]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"228960301", "Pointer":"1"
+ ,"Subent":"22896030", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":100, "targ1":"Fm-257", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"100-FM-257(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00345]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[3.0e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00345]
+      ,"dy":[3.0e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
+}
+,{"iDataset":1, "DatasetID":"228960302", "Pointer":"2"
+ ,"Subent":"22896030", "compiled":20190127
+ ,"year1":2004, "author1ini":"C.", "author1":"Wagemans"
+ ,"zTarg1":100, "targ1":"Fm-257", "proj1":"0", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0      7   ", "getYFormulaStr":"y=DATA(ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fission-product yield, ternary fission"
+ ,"reacode":"100-FM-257(0,F)2-HE-4,TER,FY,,,DERIV"
+ ,"compNotes":[]
+ ,"wx4data":4
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.00366]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRD/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[3.2e-4]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"91", "rank":1.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Value", "dataType":"92", "rank":1.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.00366]
+      ,"dy":[3.2e-4]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":1.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x1":[2004]
+   }
+ }
 }
    ]
    }
