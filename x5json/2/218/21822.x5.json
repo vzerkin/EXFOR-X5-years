@@ -1,9 +1,9 @@
-  {"ENTRY":"21822", "updated":20180311, "TransID":"2267", "TransDate":20180917, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"21822", "updated":20190129, "TransID":"2274", "TransDate":20190420, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1981,"a1":"P.D'hondt","r1":"T,D`HONDT,1981"
    ,"ref":"Thesis: D'hondt (1981)"
    ,"title":"Ternary fission of U-233,U-235,Np-237 and Pu-239 induced by thermal neutrons"
    ,"x4subents":[
-   {"SUBENT":"21822001", "isub":1, "compiled":20180311, "TransID":"2267", "TransDate":20180917
+   {"SUBENT":"21822001", "isub":1, "compiled":20190129, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -92,7 +92,7 @@
      ,"INC-SPECT":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Thermal Maxwellian spectrum from hfr."]
+	,"x4freetext":["Thermal Maxwellian spectrum from HFR."]
 	}
       ]
      ,"METHOD":[
@@ -153,12 +153,18 @@
 	,"x4freetext":[" G.C."]
 	}
 	,{"x4pointer":" "
-	,"x4code":{"code":"20180311U", "date":"20180311", "act":"U", "dict":"HISTORY", "idict":15
-	     ,"actHelp":"Unimportant alterations"}
+	,"x4code":{"code":"20180311A", "date":"20180311", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD:Updated to new date formats,lower case."
 		,"Small update. Comma in ref. 82ANTWER was added."
 		,"Data were update according to presentation in the Table"
 		,"ERR-T -> DATA-ERR in all Subents."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190129A", "date":"20190129", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Derived data were changed on measured"
+		,"data from the same table in Subents 002-004."]
 	}
       ]
     }
@@ -175,50 +181,34 @@
       ,"data":[
 	 [0.0253]]}
    }
-  ,{"SUBENT":"21822002", "isub":2, "compiled":20180311, "TransID":"2267", "TransDate":20180917
+  ,{"SUBENT":"21822002", "isub":2, "compiled":20190129, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-233(N,F)2-HE-4,TER,SIG,,MXW"
-	    ,"c4reac":"(N,F)TER,SIG,,MXW"
+	,"x4code":{"code":"92-U-233(N,F)2-HE-4,BIN/TER,FY/RAT,,MXW"
+	    ,"c4reac":"(N,F)BIN/TER,FY/RAT,,MXW"
 	    ,"combi":"a"
-	    ,"MF":3
-	    ,"MT":18
-	    ,"Units":"B"
+	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"92-U-233(N,F)2-HE-4,TER,SIG,,MXW"
+	    {"code":"92-U-233(N,F)2-HE-4,BIN/TER,FY/RAT,,MXW"
 		,"Reac":"N,F"
 		,"SF1":"92-U-233","Targ":{"code":"92-U-233","nam":"U-233","ZA":92233}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
-		,"SF5":"TER"
-		,"SF6":"SIG"
+		,"SF5":"BIN/TER"
+		,"SF6":"FY/RAT"
 		,"SF8":"MXW"
-		,"SF58":"TER,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Ternary fission cross section"
+		,"SF58":"BIN/TER,FY/RAT","Quant":"FY","BasicUnits":"NO-DIM","QuantHlp":"Binary/ternary fission product yield ratio"
 	    }]}
-	,"x4freetext":[" Cross section for long range alpha particle emission."]
 	}
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[".U-F(4) evaporated onto an Al-backing. It contained"
+	,"x4freetext":[" U-F(4) evaporated onto an Al-backing. It contained"
 		,"99.76% U-233, and had a thickness of 4.6 micrograms/cm2"
 		," it was not shielded with an Al-absorber."]
-	}
-      ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"92-U-233(N,F),,SIG,,MXW"
-		,"reaction":"92-U-233(N,F),,SIG,,MXW"}
-	,"x4freetext":[" Value not given."]
-	}
-      ]
-     ,"COMMENT":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".The B/LRA ratio measured was 461+-15."]
 	}
       ]
      ,"STATUS":[
@@ -236,46 +226,54 @@
 	,"x4freetext":[" SD: SF4=He-4 added, SF7=A deleted from"
 		,"REACTION code. ERR-T -> DATA-ERR."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190129A", "date":"20190129", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Derived data were changed on measured"
+		,"data => units B -> NO-DIM and in REACTION code"
+		,"SF5=TER->BIN/TER added; SF6=SIG -> FY/RAT. COMMENT,"
+		,"MONITOR deleted."]
+	}
       ]
     }
     ,"DATA":{"ncols":2, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"B", "pointer":" "
+       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"B", "pointer":" "
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ]
-	,["B"         ,"B"         ]
+	,["NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [1.15,0.04]]}
+	 [461,15]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"21822002", "Pointer":" "
- ,"Subent":"21822002", "compiled":20180311
+ ,"Subent":"21822002", "compiled":20190129
  ,"year1":1981, "author1ini":"P.", "author1":"D`hondt"
- ,"zTarg1":92, "targ1":"U-233", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Ternary fission cross section"
- ,"reacode":"92-U-233(N,F)2-HE-4,TER,SIG,,MXW"
+ ,"zTarg1":92, "targ1":"U-233", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Binary/ternary fission product yield ratio"
+ ,"reacode":"92-U-233(N,F)2-HE-4,BIN/TER,FY/RAT,,MXW"
  ,"compNotes":[]
- ,"wx4data":3
+ ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"B", "basicUnits":"B"
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[1.15]
+    ,"dat0":[461]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[0.04]
+    ,"dat0":[15]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
     ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
@@ -283,73 +281,73 @@
     ,"expansion":"Incident energy: spectrum energy"
     ,"com0":0.0253
     ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"92", "rank":2.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":1
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[1.15]
-      ,"dy":[0.04]   }
+      ,"y":[461]
+      ,"dy":[15]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
       ,"x1":[0.0253]
    }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":2.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x2":[2004]
+   }
  }
 }
    ]
    }
-  ,{"SUBENT":"21822003", "isub":3, "compiled":20180311, "TransID":"2267", "TransDate":20180917
+  ,{"SUBENT":"21822003", "isub":3, "compiled":20190129, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"93-NP-237(N,F)2-HE-4,TER,SIG,,MXW"
-	    ,"c4reac":"(N,F)TER,SIG,,MXW"
+	,"x4code":{"code":"93-NP-237(N,F)2-HE-4,BIN/TER,FY/RAT,,MXW"
+	    ,"c4reac":"(N,F)BIN/TER,FY/RAT,,MXW"
 	    ,"combi":"a"
-	    ,"MF":3
-	    ,"MT":18
-	    ,"Units":"B"
+	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"93-NP-237(N,F)2-HE-4,TER,SIG,,MXW"
+	    {"code":"93-NP-237(N,F)2-HE-4,BIN/TER,FY/RAT,,MXW"
 		,"Reac":"N,F"
 		,"SF1":"93-NP-237","Targ":{"code":"93-NP-237","nam":"Np-237","ZA":93237}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
-		,"SF5":"TER"
-		,"SF6":"SIG"
+		,"SF5":"BIN/TER"
+		,"SF6":"FY/RAT"
 		,"SF8":"MXW"
-		,"SF58":"TER,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Ternary fission cross section"
+		,"SF58":"BIN/TER,FY/RAT","Quant":"FY","BasicUnits":"NO-DIM","QuantHlp":"Binary/ternary fission product yield ratio"
 	    }]}
-	,"x4freetext":[" Absolute"
-		," cross section for long range alpha particle emission."]
 	}
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[".Np-F(4) layer evaporated onto a mylar backing. It"
+	,"x4freetext":[" Np-F(4) layer evaporated onto a Mylar backing. It"
 		,"contained 99.99% Np-237 and less than 1ppm U-235 and"
 		,"Pu-239. its thickness was 382.0 micrograms/cm**2. It"
 		,"was shielded with an aluminium absorber of 20 microns"
 		,"thickness."]
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"93-NP-237(N,F),,SIG,,MXW"
-		,"reaction":"93-NP-237(N,F),,SIG,,MXW"}
-	,"x4freetext":[" Value not given."]
-	}
-      ]
-     ,"COMMENT":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".The measured B/LRA ratio was 493+-20."]
-	}
-      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
@@ -365,46 +363,54 @@
 	,"x4freetext":[" SD: SF4=He-4 added, SF7=A deleted from"
 		,"REACTION code. ERR-T -> DATA-ERR."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190129A", "date":"20190129", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Derived data were changed on measured"
+		,"data => units B -> NO-DIM and in REACTION code"
+		,"SF5=TER->BIN/TER added; SF6=SIG -> FY/RAT. COMMENT,"
+		,"MONITOR deleted."]
+	}
       ]
     }
     ,"DATA":{"ncols":2, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"B", "pointer":" "
+       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"B", "pointer":" "
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ]
-	,["B"         ,"B"         ]
+	,["NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [4.0E-5,9.0E-6]]}
+	 [493,20]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"21822003", "Pointer":" "
- ,"Subent":"21822003", "compiled":20180311
+ ,"Subent":"21822003", "compiled":20190129
  ,"year1":1981, "author1ini":"P.", "author1":"D`hondt"
- ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Ternary fission cross section"
- ,"reacode":"93-NP-237(N,F)2-HE-4,TER,SIG,,MXW"
+ ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Binary/ternary fission product yield ratio"
+ ,"reacode":"93-NP-237(N,F)2-HE-4,BIN/TER,FY/RAT,,MXW"
  ,"compNotes":[]
- ,"wx4data":3
+ ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"B", "basicUnits":"B"
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[4.0e-5]
+    ,"dat0":[493]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[9.0e-6]
+    ,"dat0":[20]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
     ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
@@ -412,71 +418,71 @@
     ,"expansion":"Incident energy: spectrum energy"
     ,"com0":0.0253
     ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"92", "rank":2.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":1
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[4.0e-5]
-      ,"dy":[9.0e-6]   }
+      ,"y":[493]
+      ,"dy":[20]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
       ,"x1":[0.0253]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":2.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x2":[2004]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"21822004", "isub":4, "compiled":20180311, "TransID":"2267", "TransDate":20180917
+  ,{"SUBENT":"21822004", "isub":4, "compiled":20190129, "TransID":"2274", "TransDate":20190420
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"94-PU-239(N,F)2-HE-4,TER,SIG,,MXW"
-	    ,"c4reac":"(N,F)TER,SIG,,MXW"
+	,"x4code":{"code":"94-PU-239(N,F)2-HE-4,BIN/TER,FY/RAT,,MXW"
+	    ,"c4reac":"(N,F)BIN/TER,FY/RAT,,MXW"
 	    ,"combi":"a"
-	    ,"MF":3
-	    ,"MT":18
-	    ,"Units":"B"
+	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"94-PU-239(N,F)2-HE-4,TER,SIG,,MXW"
+	    {"code":"94-PU-239(N,F)2-HE-4,BIN/TER,FY/RAT,,MXW"
 		,"Reac":"N,F"
 		,"SF1":"94-PU-239","Targ":{"code":"94-PU-239","nam":"Pu-239","ZA":94239}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
-		,"SF5":"TER"
-		,"SF6":"SIG"
+		,"SF5":"BIN/TER"
+		,"SF6":"FY/RAT"
 		,"SF8":"MXW"
-		,"SF58":"TER,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Ternary fission cross section"
+		,"SF58":"BIN/TER,FY/RAT","Quant":"FY","BasicUnits":"NO-DIM","QuantHlp":"Binary/ternary fission product yield ratio"
 	    }]}
-	,"x4freetext":[" Absolute"
-		," cross section for long range alpha particle emission."]
 	}
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[".Produced by electrospraying of Pu-acetate onto a"
-		,"mylar backing. It contained 99.956% Pu-239. Its"
+	,"x4freetext":[" Produced by electrospraying of Pu-acetate onto a"
+		,"Mylar backing. It contained 99.956% Pu-239. Its"
 		,"thickness was 5.0 micrograms/cm**2. Two experiments"
 		,"were done, one with the detector shielded with a"
 		,"20 microns thick Al-foil, and one without such a foil."]
-	}
-      ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"94-PU-239(N,F),,SIG,,MXW"
-		,"reaction":"94-PU-239(N,F),,SIG,,MXW"}
-	,"x4freetext":[" Value not given."]
-	}
-      ]
-     ,"COMMENT":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".The measured B/LRA ratio was 450+-15."]
 	}
       ]
      ,"STATUS":[
@@ -494,46 +500,54 @@
 	,"x4freetext":[" SD: SF4=He-4 added, SF7=A deleted from"
 		,"REACTION code. ERR-T -> DATA-ERR."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190129A", "date":"20190129", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Derived data were changed on measured"
+		,"data => units B -> NO-DIM and in REACTION code"
+		,"SF5=TER->BIN/TER added; SF6=SIG -> FY/RAT. COMMENT,"
+		,"MONITOR deleted."]
+	}
       ]
     }
     ,"DATA":{"ncols":2, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"B", "pointer":" "
+       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"B", "pointer":" "
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
 	 ["DATA"      ,"DATA-ERR"  ]
-	,["B"         ,"B"         ]
+	,["NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [1.65,0.05]]}
+	 [450,15]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"21822004", "Pointer":" "
- ,"Subent":"21822004", "compiled":20180311
+ ,"Subent":"21822004", "compiled":20190129
  ,"year1":1981, "author1ini":"P.", "author1":"D`hondt"
- ,"zTarg1":94, "targ1":"Pu-239", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Ternary fission cross section"
- ,"reacode":"94-PU-239(N,F)2-HE-4,TER,SIG,,MXW"
+ ,"zTarg1":94, "targ1":"Pu-239", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Binary/ternary fission product yield ratio"
+ ,"reacode":"94-PU-239(N,F)2-HE-4,BIN/TER,FY/RAT,,MXW"
  ,"compNotes":[]
- ,"wx4data":3
+ ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"B", "basicUnits":"B"
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[1.65]
+    ,"dat0":[450]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[0.05]
+    ,"dat0":[15]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
     ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
@@ -541,19 +555,36 @@
     ,"expansion":"Incident energy: spectrum energy"
     ,"com0":0.0253
     ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"92", "rank":2.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"com0":4
+    ,"com1":4}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":1
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[1.65]
-      ,"dy":[0.05]   }
+      ,"y":[450]
+      ,"dy":[15]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
       ,"x1":[0.0253]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":2.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x2":[2004]
    }
  }
 }
