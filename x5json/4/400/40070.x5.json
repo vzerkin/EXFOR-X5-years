@@ -1,9 +1,9 @@
-  {"ENTRY":"40070", "updated":20171222, "TransID":"4177", "TransDate":20180319, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
+  {"ENTRY":"40070", "updated":20190225, "TransID":"4181", "TransDate":20190326, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
    ,"y1":1970,"a1":"Yu.V.Ryabov+","r1":"R,JINR-P3-4992,1970"
    ,"ref":"Rept: Joint Inst. for Nucl. Res., Dubna Reports, No.4992 (1970)"
    ,"title":"Parameters of neutron resonances for U-233,U-235,Pu-239"
    ,"x4subents":[
-   {"SUBENT":"40070001", "isub":1, "compiled":20171222, "TransID":"4177", "TransDate":20180319
+   {"SUBENT":"40070001", "isub":1, "compiled":20190225, "TransID":"4181", "TransDate":20190326
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -24,17 +24,18 @@
 	,"x4freetext":[" Engl.translation of:"]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"J,YF,13,(3),255,1971","stdFileName":"J,YF,13,255,1971"
-		,"year":1971,"typ":"J","ref":"J,YF","vol":"13","issue":"3","p":"255"
-		,"shortRef":"Jour: Yadernaya Fizika, Vol.13, Issue.3, p.255 (1971)"}]
-	,"x4freetext":[" Data of Subents 025-027, 030-031"]
+	,"x4codes":[{"code":"J,YF,13,255,1971","stdFileName":"J,YF,13,255,1971"
+		,"year":1971,"typ":"J","ref":"J,YF","vol":"13","p":"255"
+		,"shortRef":"Jour: Yadernaya Fizika, Vol.13, p.255 (1971)"}]
+	,"x4freetext":[" Data of Subents 025-027, 030-031"
+		," Issue 3."]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"J,AE,19,(1),43,1965","stdFileName":"J,AE,19,(1),43,1965"
-		,"year":1965,"typ":"J","ref":"J,AE","vol":"19","issue":"1","p":"43"
-		,"shortRef":"Jour: Atomnaya Energiya, Vol.19, Issue.1, p.43 (1965)"}]
-	,"x4freetext":[" Earlier publication of SUB.002"
-		," data. Fist author of article - Van Shi-Di."]
+	,"x4codes":[{"code":"J,AE,19,43,1965","stdFileName":"J,AE,19,43,1965"
+		,"year":1965,"typ":"J","ref":"J,AE","vol":"19","p":"43"
+		,"shortRef":"Jour: Atomnaya Energiya, Vol.19, p.43 (1965)"}]
+	,"x4freetext":[" Issue 1. Earlier publication of"
+		," SUB.002 data. Fist author of article - Van Shi-Di."]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"J,SJA,19,907,1965","stdFileName":"J,SJA,19,907,1965"
@@ -155,26 +156,41 @@
      ,"INC-SPECT":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[" EN-RES-ERR  are  explained by facility resolution"]
+	,"x4freetext":[" EN-RES-ERR  are  explained as facility resolution"]
 	}
       ]
      ,"COVARIANCE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["  Correlations of level parameters were defined by"
-		,"method described in D.J.Hudson,Statistics,Geneva,1964"
-		,"using measured data."
-		,"Correlation coefficients r(a,b) between values a and b:"
-		," (text,page 17 of JINR-P3-4992,1970,"
-		,"  text page 257 of J,SNP,13,255,1971)"
-		," U-235:"
-		,"r(2*g*GAMMAn0 , GAMMAf)= -0.04 +- 0.18"
-		,"r(2*g*GAMMAn0 , GAMMAcap)= 0.40 +- 0.34"
-		,"r(GAMMAf , GAMMAcap)= 0.11 +- 0.26"
-		," Pu-239:"
-		,"r(GAMMAn0 , GAMMAf)= 0.30 +- 0.29"
-		,"r(GAMMAn0 , GAMMAcap)= -0.09 +- 0.51"
-		,"r(GAMMAf , GAMMA0cap)= 0.03 +- 0.61"]
+	,"x4freedata":[{"name": "40070001.COR:U-235 (NO-DIM)"
+	, "lx":3, "ly":3, "lz":9, "xm":1.0, "ym":1.0, "zm":1.0
+	, "xunit":"N", "yunit":"N", "zunit":"NO-DIM"
+	, "xname":"Correlated coefficients", "yname":"Correlated coefficients", "zname":"COR:U-235", "comment":""
+	, "xarr":[ 1.0, 2.0, 3.0]
+	, "yarr":[ 1.0, 2.0, 3.0]
+	, "zarr":[
+	   [  1.0,-0.04,  0.4]
+	  ,[-0.04,  1.0, 0.11]
+	  ,[  0.4, 0.11,  1.0]]
+	,"NlegHdr":"N Parameter"
+	,"NlegN":["2*g*GAMMAn0"
+		,"GAMMAf"
+		,"GAMMAcap"]}
+      ,{"name": "40070001.COR:Pu-239 (NO-DIM)"
+	, "lx":3, "ly":3, "lz":9, "xm":1.0, "ym":1.0, "zm":1.0
+	, "xunit":"N", "yunit":"N", "zunit":"NO-DIM"
+	, "xname":"Correlated coefficients", "yname":"Correlated coefficients", "zname":"COR:Pu-239", "comment":""
+	, "xarr":[ 1.0, 2.0, 3.0]
+	, "yarr":[ 1.0, 2.0, 3.0]
+	, "zarr":[
+	   [  1.0,  0.3,-0.09]
+	  ,[  0.3,  1.0, 0.03]
+	  ,[-0.09, 0.03,  1.0]]
+	,"NlegHdr":"N Parameter"
+	,"NlegN":["2*g*GAMMAn0"
+		,"GAMMAf"
+		,"GAMMAcap"]}
+      ]
 	}
       ]
      ,"HISTORY":[
@@ -208,15 +224,21 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" M.M. Articles were checked, BIB information"
 		,"was updated. Subents 032-038 were added."
-		,"Refs. YF,13,(3),255,1971; SNP,13,255,1971 were added."]
+		,"Refs. Yad.Fiz.,13,(3),255,1971;"
+		,"Soviet J.of Nucl.Physics,13,255,1971 were added."]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"code":"20171222A", "date":"20171222", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" M.M. Refs. C,65SALZBURG, R,JINR-P-1761 were"
-		,"added."
+	,"x4freetext":[" M.M. Refs. Conf.Proc.65SALZBURG,"
+		,"Rep.JINR-P-1761 were added."
 		,"BIB information was updated in Subents 002-010."
 		,"Subent 039 was added."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190225U", "date":"20190225", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" correlation matrix were added in coded form"]
 	}
       ]
     }
