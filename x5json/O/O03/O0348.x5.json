@@ -1,9 +1,9 @@
-  {"ENTRY":"O0348", "updated":20151202, "TransID":"O056", "TransDate":20160516, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O0348", "updated":20190306, "TransID":"O068", "TransDate":20190702, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1996,"a1":"A.Yokoyama+","r1":"J,ZP/A,356,55,1996"
    ,"ref":"Jour: Zeitschrift fuer Physik A, Hadrons and Nuclei, Vol.356, p.55 (1996)"
    ,"title":"Precision determination of charge dispersion and distribution in the proton-induced fission of U-238 at 13.9 MeV excitation."
    ,"x4subents":[
-   {"SUBENT":"O0348001", "isub":1, "compiled":20151202, "TransID":"O056", "TransDate":20160516
+   {"SUBENT":"O0348001", "isub":1, "compiled":20190306, "TransID":"O068", "TransDate":20190702
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -138,10 +138,9 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" No information on source of uncertainties"
-		,"due to statistical errors in counting the gamma-ray"
-		,"emission and expected errors in the photoemission"
-		,"probability."]
+	,"x4freetext":[" Due to statistical errors in counting the"
+		,"gamma-ray emission and expected errors in the"
+		,"photoemission probability."]
 	}
       ]
      ,"STATUS":[
@@ -149,7 +148,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Tbl. 1 from ZP/A,356,55,1996"]
+	,"x4freetext":[" Tbl. 1 from Zeitsch.Phys. A356(1996)55"]
 	}
       ]
      ,"HISTORY":[
@@ -174,6 +173,11 @@
 		,"digits year; SF9=EXP deleted from all REACTION codes,"
 		,"etc). DECAY-DATA corrected in Subents 047, 096."
 		,"ERR-T -> DATA-ERR in Subents 002 - 118. E-EXC deleted."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190306U", "date":"20190306", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: Comment to Subent 118 added."]
 	}
       ]
     }
@@ -14915,37 +14919,47 @@
 }
    ]
    }
-  ,{"SUBENT":"O0348118", "isub":118, "compiled":20151202, "TransID":"O056", "TransDate":20160516
+  ,{"SUBENT":"O0348118", "isub":118, "compiled":20190306, "TransID":"O068", "TransDate":20190702
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-238(P,N)93-NP-238,IND,SIG"
-	    ,"c4reac":"(P,N)IND,SIG"
+	,"x4code":{"code":"92-U-238(P,N)93-NP-238,,SIG"
+	    ,"c4reac":"(P,N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":4
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"92-U-238(P,N)93-NP-238,IND,SIG"
+	    {"code":"92-U-238(P,N)93-NP-238,,SIG"
 		,"Reac":"P,N"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"N"
 		,"SF4":"93-NP-238","Prod":{"code":"93-NP-238","nam":"Np-238","ZA":93238}
-		,"SF5":"IND"
 		,"SF6":"SIG"
-		,"SF58":"IND,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Independent cross section"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
-	}
-      ]
-     ,"RAD-DET":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::93-NP-238,DG"}
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"93-NP-238", "t12":2.12, "t12units":"D", "t12sec":183168.0
-	, "Radiations":[]}]
+	, "Radiations":[ {"Type":"DG"}]}]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["A.Yokoyama (2019-02-13): Printed as cumulative but it"
+		," is independent."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190306U", "date":"20190306", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: Comment from Dr.A.Yokoyama added."
+		,"RAD-DET deleted. SF5=IND deleted from REACTION code."]
 	}
       ]
     }
@@ -14969,12 +14983,12 @@
 	 [8.6,1.28,0.06]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O0348118", "Pointer":" "
- ,"Subent":"O0348118", "compiled":20151202
+ ,"Subent":"O0348118", "compiled":20190306
  ,"year1":1996, "author1ini":"A.", "author1":"Yokoyama"
- ,"zTarg1":92, "targ1":"U-238", "proj1":"p", "emis1":"N", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Independent cross section"
- ,"reacode":"92-U-238(P,N)93-NP-238,IND,SIG"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
+ ,"reacode":"92-U-238(P,N)93-NP-238,,SIG"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":1
