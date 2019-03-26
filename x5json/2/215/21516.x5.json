@@ -1,33 +1,42 @@
-  {"ENTRY":"21516", "updated":20180302, "TransID":"2267", "TransDate":20180917, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
-   ,"y1":1967,"a1":"","r1":"R,EANDC(E)-76,76,1967"
-   ,"ref":"Prog: Report from Euratom-countries + Euratom to EANDC, No.76, p.76 (1967)"
-   ,"title":"Elastic and inelastic scattering of 14 MeV neutrons from Si"
+  {"ENTRY":"21516", "updated":20190327, "TransID":"2278", "TransDate":20190827, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+   ,"y1":1966,"a1":"R.Giacomich+","r1":"R,INFN/BE-66/13,1966"
+   ,"ref":"Rept: INFN Reports / Low Energy Physics Series, No.66/13 (1966)"
+   ,"title":"Elastic and inelastic scattering of 14 MeV neutrons from Si-28"
    ,"x4subents":[
-   {"SUBENT":"21516001", "isub":1, "compiled":20180302, "TransID":"2267", "TransDate":20180917
+   {"SUBENT":"21516001", "isub":1, "compiled":20190327, "TransID":"2278", "TransDate":20190827
     ,"BIB":{
-      "INSTITUTE":[
+      "TITLE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":[" Elastic and inelastic scattering of 14 MeV neutrons"
+		," from Si-28"]
+	}
+      ]
+     ,"INSTITUTE":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"2ITYTRI", "dict":"INSTITUTE", "idict":3,"hlp":"Universita degli Studi di Trieste + INFN Trieste, Italy"}]
 	}
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
+	,"x4codes":[{"code":"R,INFN/BE-66/13,1966","stdFileName":"R,INFN_BE-66_13,1966"
+		,"year":1966,"typ":"R","ref":"R,INFN/BE-","no":"66/13"
+		,"shortRef":"Rept: INFN Reports / Low Energy Physics Series, No.66/13 (1966)"}]
+	,"x4freetext":[" - main ref., prelim. data"]
+	}
+	,{"x4pointer":" "
 	,"x4codes":[{"code":"P,EANDC(E)-76,76,1967","stdFileName":"R,EANDC(E)-76,76,1967"
 		,"year":1967,"typ":"P","ref":"R,EANDC(E)-","no":"76","p":"76"
 		,"shortRef":"Prog: Report from Euratom-countries + Euratom to EANDC, No.76, p.76 (1967)"}]
+	,"x4freetext":[" - final data"]
 	}
       ]
      ,"AUTHOR":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[" Not given"]
-	}
-      ]
-     ,"TITLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[" Elastic and inelastic scattering of 14 MeV neutrons"
-		," from Si"]
+	,"x4codes":[{"ini":"R.","nam":"Giacomich"}
+	    ,{"ini":"F.","nam":"de Guarrini"}
+	    ,{"ini":"G.","nam":"Pauli"}
+	    ,{"ini":"G.","nam":"Poiani"}]
 	}
       ]
      ,"FACILITY":[
@@ -46,7 +55,7 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Si natural"]
+	,"x4freetext":["Si natural (compacted powder, 92.2% of Si-28)"]
 	}
       ]
      ,"METHOD":[
@@ -62,15 +71,19 @@
       ]
      ,"DETECTOR":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[".No details given."]
+	,"x4codes":[{"code":"SCIN", "dict":"DETECTOR", "idict":22,"hlp":"Scintillation detector"}]
+	,"x4freetext":[" the associated alpha particles were detected by"
+		,"a very thin (0.1 mm) plastic scintillator coupled with"
+		,"another 56 AVP photomultiplier."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" No information about source of uncertainties"]
+	,"x4freetext":[" uncertainty from the number of events under"
+		,"the peak area, and considering the background"
+		,"  contribution"]
 	}
       ]
      ,"HISTORY":[
@@ -86,9 +99,14 @@
 		,"STATUS moved to Subents 002,003. COMMENT deleted,"
 		,"information moved to METHOD."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190327U", "date":"20190327", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: Ref. INFN/BE added. BIB updated."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
+    ,"COMMON":{"ncols":3, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
@@ -96,13 +114,16 @@
       ,{"icol":1, "header":"EN-RSL", "units":"MEV", "pointer":" "
 	,"headerHelp":"Incident projectile energy resolution (Unspecified)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":2, "header":"ANG-ERR", "units":"ADEG", "pointer":" "
+	,"headerHelp":"Angle error", "pFlag":"9110000"
+	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL"    ]
-	,["MEV"       ,"MEV"       ]
-	,[" "         ," "         ]]
+	 ["EN"        ,"EN-RSL"    ,"ANG-ERR"   ]
+	,["MEV"       ,"MEV"       ,"ADEG"      ]
+	,[" "         ," "         ," "         ]]
       ,"data":[
-	 [14.1,0.05]]}
+	 [14.1,0.05,3]]}
    }
   ,{"SUBENT":"21516002", "isub":2, "compiled":20180302, "TransID":"2267", "TransDate":20180917
     ,"BIB":{
@@ -177,13 +198,13 @@
   ,"datasets":[
 {"iDataset":0, "DatasetID":"21516002", "Pointer":" "
  ,"Subent":"21516002", "compiled":20180302
- ,"year1":1967, "author1ini":"", "author1":""
+ ,"year1":1966, "author1ini":"R.", "author1":"Giacomich"
  ,"zTarg1":14, "targ1":"Si-28", "proj1":"n", "emis1":"EL", "MF":4, "MT":2, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
  ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
  ,"reacode":"14-SI-28(N,EL)14-SI-28,,DA"
  ,"compNotes":["Conversion from C.M. to Lab: successful"]
- ,"wx4data":5
+ ,"wx4data":6
  ,"lx4data":10
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":true
@@ -216,6 +237,12 @@
     ,"expansion":"Angle: angle"
     ,"dat0":[20,30,40,50,58,65,79,90,110,120]
    ,"dat1eq":true}
+  ,{"ivar":5, "cvar":"dx2", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG-ERR", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X2.Err+-", "dataType":"61", "rank":2.911
+    ,"expansion":"Angle: angle /Error/"
+    ,"com0":3
+    ,"com1":3}
   ]
  ,"wc5data":3
  ,"lc5data":10
@@ -234,7 +261,7 @@
       ,"header":"ANG", "dataType":"61", "rank":2.0
       ,"expansion":"Angle: angle"
       ,"x2":[19.3,29,38.7,48.5,56.3,63.2,77,87.9,108,118.2]
-   }
+      ,"dx2":[3,3,3,3,3,3,3,3,3,3]   }
  }
 }
    ]
@@ -325,13 +352,13 @@
   ,"datasets":[
 {"iDataset":0, "DatasetID":"21516003", "Pointer":" "
  ,"Subent":"21516003", "compiled":20180302
- ,"year1":1967, "author1ini":"", "author1":""
+ ,"year1":1966, "author1ini":"R.", "author1":"Giacomich"
  ,"zTarg1":14, "targ1":"Si-28", "proj1":"n", "emis1":"INL", "MF":4, "MT":51, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
  ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
  ,"reacode":"14-SI-28(N,INL)14-SI-28,PAR,DA"
  ,"compNotes":["Conversion from C.M. to Lab: successful"]
- ,"wx4data":6
+ ,"wx4data":7
  ,"lx4data":10
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":true
@@ -370,6 +397,12 @@
     ,"expansion":"Angle: angle"
     ,"dat0":[20,30,40,50,58,65,70,90,110,120]
    ,"dat1eq":true}
+  ,{"ivar":6, "cvar":"dx3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG-ERR", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Err+-", "dataType":"61", "rank":3.911
+    ,"expansion":"Angle: angle /Error/"
+    ,"com0":3
+    ,"com1":3}
   ]
  ,"wc5data":4
  ,"lc5data":10
@@ -393,7 +426,7 @@
       ,"header":"ANG", "dataType":"61", "rank":3.0
       ,"expansion":"Angle: angle"
       ,"x3":[19.3,29,38.7,48.5,56.3,63.2,68.1,87.9,108,118.2]
-   }
+      ,"dx3":[3,3,3,3,3,3,3,3,3,3]   }
  }
 }
    ]
