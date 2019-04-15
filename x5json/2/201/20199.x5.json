@@ -1,13 +1,20 @@
-  {"ENTRY":"20199", "updated":20170425, "TransID":"2261", "TransDate":20180123, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"20199", "updated":20190416, "TransID":"2278", "TransDate":20190827, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1956,"a1":"H.Nauta","r1":"J,NP,2,124,1956"
    ,"ref":"Jour: Nuclear Physics, Vol.2, p.124 (1956)"
    ,"title":"Differential elastic scattering of 14 MeV neutrons in lead, mercury and zinc"
    ,"x4subents":[
-   {"SUBENT":"20199001", "isub":1, "compiled":20170425, "TransID":"2261", "TransDate":20180123
+   {"SUBENT":"20199001", "isub":1, "compiled":20190416, "TransID":"2278", "TransDate":20190827
     ,"BIB":{
-      "INSTITUTE":[
+      "TITLE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"2NEDGRN", "dict":"INSTITUTE", "idict":3,"hlp":"Groningen, Netherlands"}]
+	,"x4code":null
+	,"x4freetext":["  Differential elastic scattering of 14 MeV neutrons"
+		,"  in lead, mercury and zinc"]
+	}
+      ]
+     ,"INSTITUTE":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"2NEDRUG", "dict":"INSTITUTE", "idict":3,"hlp":"Rijksuniversiteit Groningen, Groningen, Netherlands"}]
 	}
       ]
      ,"REFERENCE":[
@@ -28,17 +35,10 @@
 	,"x4codes":[{"ini":"H.","nam":"Nauta"}]
 	}
       ]
-     ,"TITLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["  Differential elastic scattering of 14 MeV neutrons"
-		,"  in lead, mercury and zinc"]
-	}
-      ]
      ,"FACILITY":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"CCW", "dict":"FACILITY", "idict":18,"hlp":"Cockcroft-Walton accelerator"}
-	    ,{"code":"2NEDGRN", "dict":"INSTITUTE", "idict":3,"hlp":"Groningen, Netherlands"}]
+	    ,{"code":"2NEDRUG", "dict":"INSTITUTE", "idict":3,"hlp":"Rijksuniversiteit Groningen, Groningen, Netherlands"}]
 	,"x4freetext":["      Cockcroft-Walton accelerator."]
 	}
       ]
@@ -96,12 +96,15 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-S"
-	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
-	,"x4freetext":[" Statistical errors"
-		," * Geometrical errors, uncertainty in multiple"
+	,"x4code":null
+	,"x4freetext":["   Geometrical errors, uncertainty in multiple"
 		,"scattering correction and correction for the angular"
 		,"spread are small, details in thesis pages 55 to 59."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-S"
+	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
+	,"x4freetext":[" Statistical errors"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ANG-ERR", "min":"1.", "max":"3."
@@ -125,6 +128,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD:Updated to new date formats,lower case."
 		,"REACTION code corrected in Subents 002-007. BIB update."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190416A", "date":"20190416", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Title of argument changed in Subent 002"]
 	}
       ]
     }
@@ -892,7 +900,7 @@
 }
    ]
    }
-  ,{"SUBENT":"20199007", "isub":7, "compiled":20170425, "TransID":"2261", "TransDate":20180123
+  ,{"SUBENT":"20199007", "isub":7, "compiled":20190416, "TransID":"2278", "TransDate":20190827
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -912,7 +920,6 @@
 		,"SF6":"DA"
 		,"SF58":",DA","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Differential c/s with respect to angle"
 	    }]}
-	,"x4freetext":[" Elastic angular distribution"]
 	}
       ]
      ,"STATUS":[
@@ -936,13 +943,18 @@
 		,"COS -> ANG in DATA section. Meaningless zeros  from"
 		,"right side of the values were deleted."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190416A", "date":"20190416", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: COS -> ANG."]
+	}
       ]
     }
     ,"DATA":{"ncols":3, "nrows":15
       ,"x4headers":[
-       {"icol":0, "header":"COS", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Cosine of angle, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+       {"icol":0, "header":"ANG", "units":"ADEG", "pointer":" "
+	,"headerHelp":"Angle, laboratory system", "pFlag":"1000000"
+	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
       ,{"icol":1, "header":"DATA", "units":"MB/SR", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns per steradian","familyCode":"DA","convFc":0.001,"basicUnits":"B/SR"}
@@ -951,8 +963,8 @@
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["COS"       ,"DATA"      ,"ERR-S"     ]
-	,["NO-DIM"    ,"MB/SR"     ,"PER-CENT"  ]
+	 ["ANG"       ,"DATA"      ,"ERR-S"     ]
+	,["ADEG"      ,"MB/SR"     ,"PER-CENT"  ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [15,3490,3]
@@ -972,14 +984,13 @@
 	,[90,24,30]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"20199007", "Pointer":" "
- ,"Subent":"20199007", "compiled":20170425
+ ,"Subent":"20199007", "compiled":20190416
  ,"year1":1956, "author1ini":"H.", "author1":"Nauta"
  ,"zTarg1":82, "targ1":"Pb-0", "proj1":"n", "emis1":"EL", "MF":4, "MT":2, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
  ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
  ,"reacode":"82-PB-0(N,EL)82-PB-0,,DA"
- ,"compNotes":["|COS|>1 ERROR: CORRECTED ASSUMING ANG"
-	,"ERR-ANALYS:(ANG-ERR,1.,3.)    ADDED AS COMMON:ANG-ERR,PER-CENT=1.0%"]
+ ,"compNotes":["ERR-ANALYS:(ANG-ERR,1.,3.)    ADDED AS COMMON:ANG-ERR,PER-CENT=1.0%"]
  ,"wx4data":5
  ,"lx4data":15
  ,"x4data":[
@@ -1004,10 +1015,10 @@
     ,"expansion":"Incident energy: energy"
     ,"com0":14.1
     ,"com1":1.41e+7}
-  ,{"ivar":3, "cvar":"x2", "fam":"COS", "ifComm":false, "ifCM":false
-    ,"header":"COS", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"62", "rank":2.1
-    ,"expansion":"Angle: cosine"
+  ,{"ivar":3, "cvar":"x2", "fam":"ANG", "ifComm":false, "ifCM":false
+    ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X2.Value", "dataType":"61", "rank":2.1
+    ,"expansion":"Angle: angle"
     ,"dat0":[15,20,25,30,35,37.5,40,42.5,45,50
 	,55,60,70,80,90]
    ,"dat1eq":true}
@@ -1036,9 +1047,9 @@
       ,"x1":[1.41e+7,1.41e+7,1.41e+7,1.41e+7,1.41e+7,1.41e+7,1.41e+7,1.41e+7,1.41e+7,1.41e+7
 	,1.41e+7,1.41e+7,1.41e+7,1.41e+7,1.41e+7]
    }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"NO-DIM"
-      ,"header":"ANG", "dataType":"62", "rank":2.0
-      ,"expansion":"Angle: cosine"
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":2.0
+      ,"expansion":"Angle: angle"
       ,"x2":[15,20,25,30,35,37.5,40,42.5,45,50
 	,55,60,70,80,90]
       ,"dx2":[0.15,0.2,0.25,0.3,0.35,0.375,0.4,0.425,0.45,0.5
