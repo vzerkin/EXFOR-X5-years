@@ -1,9 +1,9 @@
-  {"ENTRY":"D0547", "updated":20120502, "TransID":"D082", "TransDate":20120515, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"D0547", "updated":20190821, "TransID":"D121", "TransDate":20191003, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":2009,"a1":"L.Daraban+","r1":"J,ARI,67,506,2009"
    ,"ref":"Jour: Applied Radiation and Isotopes, Vol.67, p.506 (2009)"
    ,"title":"Study of the excitation function for the deuteron induced reaction on 64Ni(d,2n) for the production of the medical radioisotope 64Cu"
    ,"x4subents":[
-   {"SUBENT":"D0547001", "isub":1, "compiled":20120502, "TransID":"D082", "TransDate":20120515
+   {"SUBENT":"D0547001", "isub":1, "compiled":20190821, "TransID":"D121", "TransDate":20191003
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -63,7 +63,7 @@
 	,"x4code":{"Nucl":"28-NI-61","ENR":0.0013}
 	}
 	,{"x4pointer":" "
-	,"x4code":{"Nucl":"28-NI-62"}
+	,"x4code":{"Nucl":"28-NI-62","ENR":0.0051}
 	}
       ]
      ,"MONITOR":[
@@ -155,7 +155,8 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" tabulated data from the article"]
+	,"x4freetext":[" Data from the Tbl.1 and text on pp.508-509"
+		,"of the Appl.Rad.Isot.,67(2009)506"]
 	}
       ]
      ,"HISTORY":[
@@ -168,6 +169,12 @@
 	,"x4code":{"code":"20120502U", "date":"20120502", "act":"U", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" On. DECAY-MON deleted"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190821A", "date":"20190821", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code updated according to new"
+		,"EXFOR rules in Subent 004."]
 	}
       ]
     }
@@ -513,32 +520,51 @@
 }
    ]
    }
-  ,{"SUBENT":"D0547004", "isub":4, "compiled":20081207, "TransID":"D065", "TransDate":20090407
+  ,{"SUBENT":"D0547004", "isub":4, "compiled":20190821, "TransID":"D121", "TransDate":20191003
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-64(D,2N)29-CU-64,,TTY,,DT"
-	    ,"c4reac":"(D,2N),TTY,,DT"
+	,"x4code":{"code":"28-NI-64(D,2N)29-CU-64,,TTY,,(PHY),DERIV"
+	    ,"c4reac":"(D,2N),TTY,,(PHY)"
 	    ,"combi":"a"
+	    ,"Units":"PART/MUAHR"
 	    ,"reacs": [
-	    {"code":"28-NI-64(D,2N)29-CU-64,,TTY,,DT"
+	    {"code":"28-NI-64(D,2N)29-CU-64,,TTY,,(PHY),DERIV"
 		,"Reac":"D,2N"
 		,"SF1":"28-NI-64","Targ":{"code":"28-NI-64","nam":"Ni-64","ZA":28064}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"2N"
 		,"SF4":"29-CU-64","Prod":{"code":"29-CU-64","nam":"Cu-64","ZA":29064}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"(PHY)"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
+		,"SF58":",TTY,,(PHY)","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Thick/thin-target yield, unc. if physical"
 	    }]}
 	}
       ]
-     ,"DECAY-DATA":[
+     ,"ANALYSIS":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"29-CU-64", "t12":12.7, "t12units":"HR", "t12sec":45720.0
-	, "Radiations":[ {"Type":"B+", "Intensity":0.385}
-			,{"Type":"B+", "Intensity":0.18}
-			,{"Type":"EC", "Intensity":0.435}]}]
+	,"x4codes":[{"code":"INTEF", "dict":"ANALYSIS", "idict":23,"hlp":"Integration of excitation function"}]
+	,"x4freetext":[" Calculated from a fit to author`s new data"
+		,"       points"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"DEP,D0547003"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"D0547003"
+		}]
+	,"x4freetext":[" Excitation function"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190821A", "date":"20190821", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> (PHY); SF9=DERIV added to"
+		,"REACTION code. ANALYSIS added."
+		,"            On. DECAY-DATA deleted. STATUS=DEP added."]
 	}
       ]
     }
@@ -563,13 +589,81 @@
 	,[15,19,332]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0547004", "Pointer":" "
- ,"Subent":"D0547004", "compiled":20081207
-,"year1":2009, "author1ini":"L.", "author1":"Daraban"
-, "zTarg1":28, "targ1":"Ni-64", "proj1":"d", "emis1":"2N", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"28-NI-64(D,2N)29-CU-64,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D0547004", "compiled":20190821
+ ,"year1":2009, "author1ini":"L.", "author1":"Daraban"
+ ,"zTarg1":28, "targ1":"Ni-64", "proj1":"d", "emis1":"2N", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Thick/thin-target yield, unc. if physical"
+ ,"reacode":"28-NI-64(D,2N)29-CU-64,,TTY,,(PHY),DERIV"
+ ,"compNotes":["ERR-ANALYS:(ERR-5,2.,8.)      ADDED AS COMMON:ERR-5,PER-CENT=2.0%"
+	,"OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
+ ,"wx4data":8
+ ,"lx4data":2
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[844,332]
+    ,"dat1":[8.44e+8,3.32e+8]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":5
+    ,"com1":5}
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":5
+    ,"com1":5}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":5
+    ,"com1":5}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":5
+    ,"com1":5}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":6, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN-MIN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[9,15]
+    ,"dat1":[9.0e+6,1.5e+7]}
+  ,{"ivar":7, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Max", "dataType":"41", "rank":1.3
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[20.5,19]
+    ,"dat1":[2.05e+7,1.9e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":2
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[8.44e+8,3.32e+8]
+      ,"dy":[8.60714e+7,3.38575e+7]
+      ,"dysys":[8.60714e+7,3.38575e+7]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.475e+7,1.7e+7]
+      ,"dx1":[5.75e+6,2.0e+6]   }
+ }
 }
    ]
    }
