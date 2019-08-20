@@ -1,9 +1,9 @@
-  {"ENTRY":"D0662", "updated":20110918, "TransID":"D080", "TransDate":20111213, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"D0662", "updated":20190821, "TransID":"D121", "TransDate":20191003, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":2008,"a1":"M.Sadeghi+","r1":"J,RCA,96,399,2008"
    ,"ref":"Jour: Radiochimica Acta, Vol.96, p.399 (2008)"
    ,"title":"Radiochemical studies relevant to the no-carrier-added production of 61,64Cu at a cyclotron"
    ,"x4subents":[
-   {"SUBENT":"D0662001", "isub":1, "compiled":20110918, "TransID":"D080", "TransDate":20111213
+   {"SUBENT":"D0662001", "isub":1, "compiled":20190821, "TransID":"D121", "TransDate":20191003
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -94,27 +94,33 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" On"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190821A", "date":"20190821", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code updated according to new"
+		,"EXFOR rules in Subents 002-008. Subents 002,003 merged."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"D0662002", "isub":2, "compiled":20110918, "TransID":"D080", "TransDate":20111213
+  ,{"SUBENT":"D0662002", "isub":2, "compiled":20190821, "TransID":"D121", "TransDate":20191003
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-0(P,X)29-CU-64,,TTY,,PHY"
-	    ,"c4reac":"(P,X),TTY,,PHY"
+	,"x4code":{"code":"28-NI-0(P,X)29-CU-64,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
-	    ,"Units":"PART/MUAHR"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"28-NI-0(P,X)29-CU-64,,TTY,,PHY"
+	    {"code":"28-NI-0(P,X)29-CU-64,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"28-NI-0","Targ":{"code":"28-NI-0","nam":"Ni-0","ZA":28000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"29-CU-64","Prod":{"code":"29-CU-64","nam":"Cu-64","ZA":29064}
 		,"SF6":"TTY"
-		,"SF8":"PHY"
-		,"SF58":",TTY,,PHY","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Physical thick/thin-target yield"
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -136,223 +142,134 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 2 of Radiochim Acta.96(2008)399"]
+	,"x4freetext":[" Table 2 of Radiochim.Acta,96(2008)399"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190821A", "date":"20190821", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=PHY -> EOB in REACTION code."
+		,"MBQ/MUAHR -> MBQ/MUA. TIME-IRRD added to DATA section."
+		,"Data from Subent 003 added."]
 	}
       ]
     }
-    ,"DATA":{"ncols":4, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"EN-MIN", "units":"MEV", "pointer":" "
+	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"TIME-IRRD", "units":"HR", "pointer":" "
+	,"headerHelp":"Irradiation time", "pFlag":"0000000"
+	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
+      ]
+      ,"datacols":[
+	 ["EN-MIN"    ,"TIME-IRRD" ]
+	,["MEV"       ,"HR"        ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [3,1]]}
+    ,"DATA":{"ncols":3, "nrows":2
       ,"x4headers":[
        {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-MIN", "units":"MEV", "pointer":" "
-	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA", "units":"MBQ/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MBQ/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
-      ,{"icol":3, "header":"ERR-S", "units":"MBQ/MUAHR", "pointer":" "
+	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
+      ,{"icol":2, "header":"ERR-S", "units":"MBQ/MUA", "pointer":" "
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
+	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
-	 ["EN-MAX"    ,"EN-MIN"    ,"DATA"      ,"ERR-S"     ]
-	,["MEV"       ,"MEV"       ,"MBQ/MUAHR" ,"MBQ/MUAHR" ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN-MAX"    ,"DATA"      ,"ERR-S"     ]
+	,["MEV"       ,"MBQ/MUA"   ,"MBQ/MUA"   ]
+	,[" "         ," "         ," "         ]]
       ,"data":[
-	 [15,3,4.5,0.4]]}
+	 [15,4.5,0.4]
+	,[16,5.9,0.47]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0662002", "Pointer":" "
- ,"Subent":"D0662002", "compiled":20110918
+ ,"Subent":"D0662002", "compiled":20190821
  ,"year1":2008, "author1ini":"M.", "author1":"Sadeghi"
  ,"zTarg1":28, "targ1":"Ni-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick/thin-target yield"
- ,"reacode":"28-NI-0(P,X)29-CU-64,,TTY,,PHY"
- ,"compNotes":["Ignored column:ERR-S,MBQ/MUAHR  expected units:PART/MUAHR,PER-CENT"
-	,"OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
- ,"wx4data":4
- ,"lx4data":1
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"28-NI-0(P,X)29-CU-64,,TTY,,EOB"
+ ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
+ ,"wx4data":5
+ ,"lx4data":2
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"header":"DATA", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[4.5]
-    ,"dat1":[4.5e+6]}
+    ,"dat0":[4.5,5.9]
+   ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-S", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"header":"ERR-S", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
     ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[0.4]
-    ,"dat1":[4.0e+5]}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"dat0":[0.4,0.47]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN-MIN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Min", "dataType":"41", "rank":1.2
     ,"expansion":"Incident energy: energy"
-    ,"dat0":[3]
-    ,"dat1":[3.0e+6]}
+    ,"com0":3
+    ,"com1":3.0e+6}
   ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Max", "dataType":"41", "rank":1.3
     ,"expansion":"Incident energy: energy"
-    ,"dat0":[15]
-    ,"dat1":[1.5e+7]}
+    ,"dat0":[15,16]
+    ,"dat1":[1.5e+7,1.6e+7]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
   ]
  ,"wc5data":2
- ,"lc5data":1
+ ,"lc5data":2
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[4.5e+6]
-   }
+      ,"y":[4.5,5.9]
+      ,"dy":[0.4,0.47]
+      ,"dystat":[0.4,0.47]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[9.0e+6]
-      ,"dx1":[6.0e+6]   }
+      ,"x1":[9.0e+6,9.5e+6]
+      ,"dx1":[6.0e+6,6.5e+6]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"D0662003", "isub":3, "compiled":20110918, "TransID":"D080", "TransDate":20111213
+  ,{"SUBENT":"D0662003", "isub":3, "compiled":20190821, "TransID":"D121", "TransDate":20191003, "nosubent":true 
+   }
+  ,{"SUBENT":"D0662004", "isub":4, "compiled":20190821, "TransID":"D121", "TransDate":20191003
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-0(P,X)29-CU-64,,TTY,,PHY"
-	    ,"c4reac":"(P,X),TTY,,PHY"
+	,"x4code":{"code":"28-NI-0(P,X)29-CU-61,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
-	    ,"Units":"PART/MUAHR"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"28-NI-0(P,X)29-CU-64,,TTY,,PHY"
-		,"Reac":"P,X"
-		,"SF1":"28-NI-0","Targ":{"code":"28-NI-0","nam":"Ni-0","ZA":28000}
-		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"29-CU-64","Prod":{"code":"29-CU-64","nam":"Cu-64","ZA":29064}
-		,"SF6":"TTY"
-		,"SF8":"PHY"
-		,"SF58":",TTY,,PHY","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Physical thick/thin-target yield"
-	    }]}
-	}
-      ]
-     ,"FACILITY":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}
-	    ,{"code":"3CHLCEC", "dict":"INSTITUTE", "idict":3,"hlp":"Comision de Energia Nuclear, Santiago, Chile"}]
-	,"x4freetext":[" Cyclone-18/9 (IBA, Belgium)"]
-	}
-      ]
-     ,"DECAY-DATA":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"29-CU-64", "t12":12.7, "t12units":"HR", "t12sec":45720.0
-	, "Radiations":[ {"Type":"DG", "Energy":[1345.7], "Intensity":0.0047}]}]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Table 2 of Radiochim Acta.96(2008)399"]
-	}
-      ]
-    }
-    ,"DATA":{"ncols":4, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
-	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-MIN", "units":"MEV", "pointer":" "
-	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA", "units":"MBQ/MUAHR", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
-      ,{"icol":3, "header":"ERR-S", "units":"MBQ/MUAHR", "pointer":" "
-	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
-      ]
-      ,"datacols":[
-	 ["EN-MAX"    ,"EN-MIN"    ,"DATA"      ,"ERR-S"     ]
-	,["MEV"       ,"MEV"       ,"MBQ/MUAHR" ,"MBQ/MUAHR" ]
-	,[" "         ," "         ," "         ," "         ]]
-      ,"data":[
-	 [16,3,5.9,0.47]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"D0662003", "Pointer":" "
- ,"Subent":"D0662003", "compiled":20110918
- ,"year1":2008, "author1ini":"M.", "author1":"Sadeghi"
- ,"zTarg1":28, "targ1":"Ni-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick/thin-target yield"
- ,"reacode":"28-NI-0(P,X)29-CU-64,,TTY,,PHY"
- ,"compNotes":["Ignored column:ERR-S,MBQ/MUAHR  expected units:PART/MUAHR,PER-CENT"
-	,"OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
- ,"wx4data":4
- ,"lx4data":1
- ,"x4data":[
-   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
-    ,"dat0":[5.9]
-    ,"dat1":[5.9e+6]}
-  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-S", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
-    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
-    ,"expansion":"Data: data /Error/"
-    ,"dat0":[0.47]
-    ,"dat1":[4.7e+5]}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-MIN", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Min", "dataType":"41", "rank":1.2
-    ,"expansion":"Incident energy: energy"
-    ,"dat0":[3]
-    ,"dat1":[3.0e+6]}
-  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Max", "dataType":"41", "rank":1.3
-    ,"expansion":"Incident energy: energy"
-    ,"dat0":[16]
-    ,"dat1":[1.6e+7]}
-  ]
- ,"wc5data":2
- ,"lc5data":1
- ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
-      ,"header":"DATA", "dataType":"21", "rank":0.0
-      ,"expansion":"Data: data"
-      ,"y":[5.9e+6]
-   }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
-      ,"header":"EN", "dataType":"41", "rank":1.0
-      ,"expansion":"Incident energy: energy"
-      ,"x1":[9.5e+6]
-      ,"dx1":[6.5e+6]   }
- }
-}
-   ]
-   }
-  ,{"SUBENT":"D0662004", "isub":4, "compiled":20110918, "TransID":"D080", "TransDate":20111213
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-0(P,X)29-CU-61,,TTY,,PHY"
-	    ,"c4reac":"(P,X),TTY,,PHY"
-	    ,"combi":"a"
-	    ,"Units":"PART/MUAHR"
-	    ,"reacs": [
-	    {"code":"28-NI-0(P,X)29-CU-61,,TTY,,PHY"
+	    {"code":"28-NI-0(P,X)29-CU-61,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"28-NI-0","Targ":{"code":"28-NI-0","nam":"Ni-0","ZA":28000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"29-CU-61","Prod":{"code":"29-CU-61","nam":"Cu-61","ZA":29061}
 		,"SF6":"TTY"
-		,"SF8":"PHY"
-		,"SF58":",TTY,,PHY","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Physical thick/thin-target yield"
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -374,11 +291,19 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 3 of Radiochim Acta.96(2008)399"]
+	,"x4freetext":[" Table 3 of Radiochim.Acta,96(2008)399"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190821A", "date":"20190821", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=PHY -> EOB in REACTION code."
+		,"MBQ/MUAHR -> MBQ/MUA. TIME-IRRD added to DATA section."]
 	}
       ]
     }
-    ,"DATA":{"ncols":4, "nrows":1
+    ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
@@ -386,44 +311,46 @@
       ,{"icol":1, "header":"EN-MIN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA", "units":"MBQ/MUAHR", "pointer":" "
+      ,{"icol":2, "header":"TIME-IRRD", "units":"HR", "pointer":" "
+	,"headerHelp":"Irradiation time", "pFlag":"0000000"
+	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
+      ,{"icol":3, "header":"DATA", "units":"MBQ/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
-      ,{"icol":3, "header":"ERR-S", "units":"MBQ/MUAHR", "pointer":" "
+	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
+      ,{"icol":4, "header":"ERR-S", "units":"MBQ/MUA", "pointer":" "
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
+	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
-	 ["EN-MAX"    ,"EN-MIN"    ,"DATA"      ,"ERR-S"     ]
-	,["MEV"       ,"MEV"       ,"MBQ/MUAHR" ,"MBQ/MUAHR" ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN-MAX"    ,"EN-MIN"    ,"TIME-IRRD" ,"DATA"      ,"ERR-S"     ]
+	,["MEV"       ,"MEV"       ,"HR"        ,"MBQ/MUA"   ,"MBQ/MUA"   ]
+	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [16,3,17.4,1.04]]}
+	 [16,3,1,17.4,1.04]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0662004", "Pointer":" "
- ,"Subent":"D0662004", "compiled":20110918
+ ,"Subent":"D0662004", "compiled":20190821
  ,"year1":2008, "author1ini":"M.", "author1":"Sadeghi"
  ,"zTarg1":28, "targ1":"Ni-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick/thin-target yield"
- ,"reacode":"28-NI-0(P,X)29-CU-61,,TTY,,PHY"
- ,"compNotes":["Ignored column:ERR-S,MBQ/MUAHR  expected units:PART/MUAHR,PER-CENT"
-	,"OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
- ,"wx4data":4
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"28-NI-0(P,X)29-CU-61,,TTY,,EOB"
+ ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
+ ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"header":"DATA", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[17.4]
-    ,"dat1":[1.74e+7]}
+   ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-S", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"header":"ERR-S", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
     ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.04]
-    ,"dat1":[1.04e+6]}
+   ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MIN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Min", "dataType":"41", "rank":1.2
@@ -436,15 +363,22 @@
     ,"expansion":"Incident energy: energy"
     ,"dat0":[16]
     ,"dat1":[1.6e+7]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[1]
+    ,"dat1":[3600]}
   ]
  ,"wc5data":2
  ,"lc5data":1
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[1.74e+7]
-   }
+      ,"y":[17.4]
+      ,"dy":[1.04]
+      ,"dystat":[1.04]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -454,24 +388,24 @@
 }
    ]
    }
-  ,{"SUBENT":"D0662005", "isub":5, "compiled":20110918, "TransID":"D080", "TransDate":20111213
+  ,{"SUBENT":"D0662005", "isub":5, "compiled":20190821, "TransID":"D121", "TransDate":20191003
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-0(P,X)27-CO-55,,TTY,,PHY"
-	    ,"c4reac":"(P,X),TTY,,PHY"
+	,"x4code":{"code":"28-NI-0(P,X)27-CO-55,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
-	    ,"Units":"PART/MUAHR"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"28-NI-0(P,X)27-CO-55,,TTY,,PHY"
+	    {"code":"28-NI-0(P,X)27-CO-55,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"28-NI-0","Targ":{"code":"28-NI-0","nam":"Ni-0","ZA":28000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"27-CO-55","Prod":{"code":"27-CO-55","nam":"Co-55","ZA":27055}
 		,"SF6":"TTY"
-		,"SF8":"PHY"
-		,"SF58":",TTY,,PHY","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Physical thick/thin-target yield"
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -493,11 +427,19 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 3 of Radiochim Acta.96(2008)399"]
+	,"x4freetext":[" Table 3 of Radiochim.Acta,96(2008)399"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190821A", "date":"20190821", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=PHY -> EOB in REACTION code."
+		,"MBQ/MUAHR -> MBQ/MUA. TIME-IRRD added to DATA section."]
 	}
       ]
     }
-    ,"DATA":{"ncols":4, "nrows":1
+    ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
@@ -505,44 +447,46 @@
       ,{"icol":1, "header":"EN-MIN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA", "units":"MBQ/MUAHR", "pointer":" "
+      ,{"icol":2, "header":"TIME-IRRD", "units":"HR", "pointer":" "
+	,"headerHelp":"Irradiation time", "pFlag":"0000000"
+	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
+      ,{"icol":3, "header":"DATA", "units":"MBQ/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
-      ,{"icol":3, "header":"ERR-S", "units":"MBQ/MUAHR", "pointer":" "
+	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
+      ,{"icol":4, "header":"ERR-S", "units":"MBQ/MUA", "pointer":" "
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
+	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
-	 ["EN-MAX"    ,"EN-MIN"    ,"DATA"      ,"ERR-S"     ]
-	,["MEV"       ,"MEV"       ,"MBQ/MUAHR" ,"MBQ/MUAHR" ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN-MAX"    ,"EN-MIN"    ,"TIME-IRRD" ,"DATA"      ,"ERR-S"     ]
+	,["MEV"       ,"MEV"       ,"HR"        ,"MBQ/MUA"   ,"MBQ/MUA"   ]
+	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [16,3,15.5,1.08]]}
+	 [16,3,1,15.5,1.08]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0662005", "Pointer":" "
- ,"Subent":"D0662005", "compiled":20110918
+ ,"Subent":"D0662005", "compiled":20190821
  ,"year1":2008, "author1ini":"M.", "author1":"Sadeghi"
  ,"zTarg1":28, "targ1":"Ni-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick/thin-target yield"
- ,"reacode":"28-NI-0(P,X)27-CO-55,,TTY,,PHY"
- ,"compNotes":["Ignored column:ERR-S,MBQ/MUAHR  expected units:PART/MUAHR,PER-CENT"
-	,"OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
- ,"wx4data":4
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"28-NI-0(P,X)27-CO-55,,TTY,,EOB"
+ ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
+ ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"header":"DATA", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[15.5]
-    ,"dat1":[1.55e+7]}
+   ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-S", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"header":"ERR-S", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
     ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.08]
-    ,"dat1":[1.08e+6]}
+   ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MIN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Min", "dataType":"41", "rank":1.2
@@ -555,15 +499,22 @@
     ,"expansion":"Incident energy: energy"
     ,"dat0":[16]
     ,"dat1":[1.6e+7]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[1]
+    ,"dat1":[3600]}
   ]
  ,"wc5data":2
  ,"lc5data":1
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[1.55e+7]
-   }
+      ,"y":[15.5]
+      ,"dy":[1.08]
+      ,"dystat":[1.08]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -573,24 +524,24 @@
 }
    ]
    }
-  ,{"SUBENT":"D0662006", "isub":6, "compiled":20110918, "TransID":"D080", "TransDate":20111213
+  ,{"SUBENT":"D0662006", "isub":6, "compiled":20190821, "TransID":"D121", "TransDate":20191003
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-0(P,X)27-CO-57,,TTY,,PHY"
-	    ,"c4reac":"(P,X),TTY,,PHY"
+	,"x4code":{"code":"28-NI-0(P,X)27-CO-57,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
-	    ,"Units":"PART/MUAHR"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"28-NI-0(P,X)27-CO-57,,TTY,,PHY"
+	    {"code":"28-NI-0(P,X)27-CO-57,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"28-NI-0","Targ":{"code":"28-NI-0","nam":"Ni-0","ZA":28000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"27-CO-57","Prod":{"code":"27-CO-57","nam":"Co-57","ZA":27057}
 		,"SF6":"TTY"
-		,"SF8":"PHY"
-		,"SF58":",TTY,,PHY","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Physical thick/thin-target yield"
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -612,11 +563,19 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 3 of Radiochim Acta.96(2008)399"]
+	,"x4freetext":[" Table 3 of Radiochim.Acta,96(2008)399"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190821A", "date":"20190821", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=PHY -> EOB in REACTION code."
+		,"MBQ/MUAHR -> MBQ/MUA. TIME-IRRD added to DATA section."]
 	}
       ]
     }
-    ,"DATA":{"ncols":4, "nrows":1
+    ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
@@ -624,44 +583,46 @@
       ,{"icol":1, "header":"EN-MIN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA", "units":"MBQ/MUAHR", "pointer":" "
+      ,{"icol":2, "header":"TIME-IRRD", "units":"HR", "pointer":" "
+	,"headerHelp":"Irradiation time", "pFlag":"0000000"
+	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
+      ,{"icol":3, "header":"DATA", "units":"MBQ/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
-      ,{"icol":3, "header":"ERR-S", "units":"MBQ/MUAHR", "pointer":" "
+	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
+      ,{"icol":4, "header":"ERR-S", "units":"MBQ/MUA", "pointer":" "
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
+	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
-	 ["EN-MAX"    ,"EN-MIN"    ,"DATA"      ,"ERR-S"     ]
-	,["MEV"       ,"MEV"       ,"MBQ/MUAHR" ,"MBQ/MUAHR" ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN-MAX"    ,"EN-MIN"    ,"TIME-IRRD" ,"DATA"      ,"ERR-S"     ]
+	,["MEV"       ,"MEV"       ,"HR"        ,"MBQ/MUA"   ,"MBQ/MUA"   ]
+	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [16,3,0.031,0.001]]}
+	 [16,3,1,0.031,0.001]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0662006", "Pointer":" "
- ,"Subent":"D0662006", "compiled":20110918
+ ,"Subent":"D0662006", "compiled":20190821
  ,"year1":2008, "author1ini":"M.", "author1":"Sadeghi"
  ,"zTarg1":28, "targ1":"Ni-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick/thin-target yield"
- ,"reacode":"28-NI-0(P,X)27-CO-57,,TTY,,PHY"
- ,"compNotes":["Ignored column:ERR-S,MBQ/MUAHR  expected units:PART/MUAHR,PER-CENT"
-	,"OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
- ,"wx4data":4
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"28-NI-0(P,X)27-CO-57,,TTY,,EOB"
+ ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
+ ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"header":"DATA", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[0.031]
-    ,"dat1":[3.1e+4]}
+   ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-S", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"header":"ERR-S", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
     ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.001]
-    ,"dat1":[1000]}
+   ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MIN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Min", "dataType":"41", "rank":1.2
@@ -674,15 +635,22 @@
     ,"expansion":"Incident energy: energy"
     ,"dat0":[16]
     ,"dat1":[1.6e+7]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[1]
+    ,"dat1":[3600]}
   ]
  ,"wc5data":2
  ,"lc5data":1
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[3.1e+4]
-   }
+      ,"y":[0.031]
+      ,"dy":[0.001]
+      ,"dystat":[0.001]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -692,24 +660,24 @@
 }
    ]
    }
-  ,{"SUBENT":"D0662007", "isub":7, "compiled":20110918, "TransID":"D080", "TransDate":20111213
+  ,{"SUBENT":"D0662007", "isub":7, "compiled":20190821, "TransID":"D121", "TransDate":20191003
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-0(P,X)27-CO-58,,TTY,,PHY"
-	    ,"c4reac":"(P,X),TTY,,PHY"
+	,"x4code":{"code":"28-NI-0(P,X)27-CO-58,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
-	    ,"Units":"PART/MUAHR"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"28-NI-0(P,X)27-CO-58,,TTY,,PHY"
+	    {"code":"28-NI-0(P,X)27-CO-58,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"28-NI-0","Targ":{"code":"28-NI-0","nam":"Ni-0","ZA":28000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"27-CO-58","Prod":{"code":"27-CO-58","nam":"Co-58","ZA":27058}
 		,"SF6":"TTY"
-		,"SF8":"PHY"
-		,"SF58":",TTY,,PHY","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Physical thick/thin-target yield"
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -722,7 +690,7 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"27-CO-58", "t12":70.88, "t12units":"D", "t12sec":6124032.0
+	,"x4codes":[{"Nucl":"27-CO-58-G", "t12":70.88, "t12units":"D", "t12sec":6124032.0
 	, "Radiations":[ {"Type":"DG", "Energy":[810.7], "Intensity":0.994}]}]
 	}
       ]
@@ -731,11 +699,20 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 3 of Radiochim Acta.96(2008)399"]
+	,"x4freetext":[" Table 3 of Radiochim,Acta,96(2008)399"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190821A", "date":"20190821", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=PHY -> EOB in REACTION code."
+		,"MBQ/MUAHR -> MBQ/MUA. TIME-IRRD added to DATA section."
+		,"            On. DECAY-DATA: -G added."]
 	}
       ]
     }
-    ,"DATA":{"ncols":4, "nrows":1
+    ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
@@ -743,44 +720,46 @@
       ,{"icol":1, "header":"EN-MIN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA", "units":"MBQ/MUAHR", "pointer":" "
+      ,{"icol":2, "header":"TIME-IRRD", "units":"HR", "pointer":" "
+	,"headerHelp":"Irradiation time", "pFlag":"0000000"
+	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
+      ,{"icol":3, "header":"DATA", "units":"MBQ/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
-      ,{"icol":3, "header":"ERR-S", "units":"MBQ/MUAHR", "pointer":" "
+	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
+      ,{"icol":4, "header":"ERR-S", "units":"MBQ/MUA", "pointer":" "
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
+	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
-	 ["EN-MAX"    ,"EN-MIN"    ,"DATA"      ,"ERR-S"     ]
-	,["MEV"       ,"MEV"       ,"MBQ/MUAHR" ,"MBQ/MUAHR" ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN-MAX"    ,"EN-MIN"    ,"TIME-IRRD" ,"DATA"      ,"ERR-S"     ]
+	,["MEV"       ,"MEV"       ,"HR"        ,"MBQ/MUA"   ,"MBQ/MUA"   ]
+	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [16,3,0.003,0.002]]}
+	 [16,3,1,0.003,0.002]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0662007", "Pointer":" "
- ,"Subent":"D0662007", "compiled":20110918
+ ,"Subent":"D0662007", "compiled":20190821
  ,"year1":2008, "author1ini":"M.", "author1":"Sadeghi"
  ,"zTarg1":28, "targ1":"Ni-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick/thin-target yield"
- ,"reacode":"28-NI-0(P,X)27-CO-58,,TTY,,PHY"
- ,"compNotes":["Ignored column:ERR-S,MBQ/MUAHR  expected units:PART/MUAHR,PER-CENT"
-	,"OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
- ,"wx4data":4
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"28-NI-0(P,X)27-CO-58,,TTY,,EOB"
+ ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
+ ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"header":"DATA", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[0.003]
-    ,"dat1":[3000]}
+   ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-S", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"header":"ERR-S", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
     ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.002]
-    ,"dat1":[2000]}
+   ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MIN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Min", "dataType":"41", "rank":1.2
@@ -793,15 +772,22 @@
     ,"expansion":"Incident energy: energy"
     ,"dat0":[16]
     ,"dat1":[1.6e+7]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[1]
+    ,"dat1":[3600]}
   ]
  ,"wc5data":2
  ,"lc5data":1
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[3000]
-   }
+      ,"y":[0.003]
+      ,"dy":[0.002]
+      ,"dystat":[0.002]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -811,24 +797,24 @@
 }
    ]
    }
-  ,{"SUBENT":"D0662008", "isub":8, "compiled":20110918, "TransID":"D080", "TransDate":20111213
+  ,{"SUBENT":"D0662008", "isub":8, "compiled":20190821, "TransID":"D121", "TransDate":20191003
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-0(P,X)28-NI-57,,TTY,,PHY"
-	    ,"c4reac":"(P,X),TTY,,PHY"
+	,"x4code":{"code":"28-NI-0(P,X)28-NI-57,,TTY,,EOB"
+	    ,"c4reac":"(P,X),TTY,,EOB"
 	    ,"combi":"a"
-	    ,"Units":"PART/MUAHR"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"28-NI-0(P,X)28-NI-57,,TTY,,PHY"
+	    {"code":"28-NI-0(P,X)28-NI-57,,TTY,,EOB"
 		,"Reac":"P,X"
 		,"SF1":"28-NI-0","Targ":{"code":"28-NI-0","nam":"Ni-0","ZA":28000}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"28-NI-57","Prod":{"code":"28-NI-57","nam":"Ni-57","ZA":28057}
 		,"SF6":"TTY"
-		,"SF8":"PHY"
-		,"SF58":",TTY,,PHY","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Physical thick/thin-target yield"
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -850,11 +836,19 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 3 of Radiochim Acta.96(2008)399"]
+	,"x4freetext":[" Table 3 of Radiochim.Acta,96(2008)399"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190821A", "date":"20190821", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=PHY -> EOB in REACTION code."
+		,"MBQ/MUAHR -> MBQ/MUA. TIME-IRRD added to DATA section."]
 	}
       ]
     }
-    ,"DATA":{"ncols":4, "nrows":1
+    ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
@@ -862,44 +856,46 @@
       ,{"icol":1, "header":"EN-MIN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA", "units":"MBQ/MUAHR", "pointer":" "
+      ,{"icol":2, "header":"TIME-IRRD", "units":"HR", "pointer":" "
+	,"headerHelp":"Irradiation time", "pFlag":"0000000"
+	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
+      ,{"icol":3, "header":"DATA", "units":"MBQ/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
-      ,{"icol":3, "header":"ERR-S", "units":"MBQ/MUAHR", "pointer":" "
+	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
+      ,{"icol":4, "header":"ERR-S", "units":"MBQ/MUA", "pointer":" "
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
+	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
-	 ["EN-MAX"    ,"EN-MIN"    ,"DATA"      ,"ERR-S"     ]
-	,["MEV"       ,"MEV"       ,"MBQ/MUAHR" ,"MBQ/MUAHR" ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN-MAX"    ,"EN-MIN"    ,"TIME-IRRD" ,"DATA"      ,"ERR-S"     ]
+	,["MEV"       ,"MEV"       ,"HR"        ,"MBQ/MUA"   ,"MBQ/MUA"   ]
+	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [16,3,0.104,0.008]]}
+	 [16,3,1,0.104,0.008]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0662008", "Pointer":" "
- ,"Subent":"D0662008", "compiled":20110918
+ ,"Subent":"D0662008", "compiled":20190821
  ,"year1":2008, "author1ini":"M.", "author1":"Sadeghi"
  ,"zTarg1":28, "targ1":"Ni-0", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick/thin-target yield"
- ,"reacode":"28-NI-0(P,X)28-NI-57,,TTY,,PHY"
- ,"compNotes":["Ignored column:ERR-S,MBQ/MUAHR  expected units:PART/MUAHR,PER-CENT"
-	,"OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
- ,"wx4data":4
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"28-NI-0(P,X)28-NI-57,,TTY,,EOB"
+ ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
+ ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"header":"DATA", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[0.104]
-    ,"dat1":[1.04e+5]}
+   ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-S", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"header":"ERR-S", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
     ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.008]
-    ,"dat1":[8000]}
+   ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MIN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Min", "dataType":"41", "rank":1.2
@@ -912,15 +908,22 @@
     ,"expansion":"Incident energy: energy"
     ,"dat0":[16]
     ,"dat1":[1.6e+7]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[1]
+    ,"dat1":[3600]}
   ]
  ,"wc5data":2
  ,"lc5data":1
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[1.04e+5]
-   }
+      ,"y":[0.104]
+      ,"dy":[0.008]
+      ,"dystat":[0.008]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
