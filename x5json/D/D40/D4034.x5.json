@@ -1,9 +1,9 @@
-  {"ENTRY":"D4034", "updated":20060731, "TransID":"D048", "TransDate":20061120, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
+  {"ENTRY":"D4034", "updated":20190823, "TransID":"D121", "TransDate":20191003, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
    ,"y1":1985,"a1":"F.Tarkanyi+","r1":"R,ABO-ANN-84,156,1985"
    ,"ref":"Rept: Abo Akademi Annual Reports, No.84, p.156 (1985)"
    ,"title":"Production of Tl-197 with a compact cyclotron"
    ,"x4subents":[
-   {"SUBENT":"D4034001", "isub":1, "compiled":20060731, "TransID":"D048", "TransDate":20061120
+   {"SUBENT":"D4034001", "isub":1, "compiled":20190823, "TransID":"D121", "TransDate":20191003
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -86,39 +86,41 @@
 	,{"x4pointer":" "
 	,"x4code":{"code":"20060730A", "date":"20060730", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" BIB section upgrated"]
+	,"x4freetext":[" BIB section upgraded"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190823A", "date":"20190823", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code updated according to new"
+		,"EXFOR rules in Subent 002."]
 	}
       ]
     }
    }
-  ,{"SUBENT":"D4034002", "isub":2, "compiled":20060731, "TransID":"D048", "TransDate":20061120
+  ,{"SUBENT":"D4034002", "isub":2, "compiled":20190823, "TransID":"D121", "TransDate":20191003
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(HE3,3N)81-TL-197,,TTY,,DT"
-	    ,"c4reac":"(HE3,3N),TTY,,DT"
+	,"x4code":{"code":"79-AU-197(HE3,3N)81-TL-197,,TTY,,EOB"
+	    ,"c4reac":"(HE3,3N),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"79-AU-197(HE3,3N)81-TL-197,,TTY,,DT"
+	    {"code":"79-AU-197(HE3,3N)81-TL-197,,TTY,,EOB"
 		,"Reac":"HE3,3N"
 		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
 		,"SF2":"HE3","Proj":{"code":"HE3","nam":"he3","ZA":2003}
 		,"SF3":"3N"
 		,"SF4":"81-TL-197","Prod":{"code":"81-TL-197","nam":"Tl-197","ZA":81197}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
-	}
-      ]
-     ,"RAD-DET":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::81-TL-197,DG"}
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"81-TL-197", "t12":2.8, "t12units":"HR", "t12sec":10080.0
+	,"x4codes":[{"Nucl":"81-TL-197-G", "t12":2.8, "t12units":"HR", "t12sec":10080.0
 	, "Radiations":[ {"Type":"DG", "Energy":[425.8], "Intensity":0.129}]}]
 	}
       ]
@@ -131,19 +133,40 @@
 		,"ampere beam current."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190823A", "date":"20190823", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> EOB in REACTION code."
+		,"TIME-IRRD added. MUCI/MUAHR -> MUCI/MUA."
+		,"            On. DECAY-DATA: -G added. RAD-DET deleted."]
+	}
+      ]
     }
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"TIME-IRRD", "units":"HR", "pointer":" "
+	,"headerHelp":"Irradiation time", "pFlag":"0000000"
+	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
+      ]
+      ,"datacols":[
+	 ["TIME-IRRD" ]
+	,["HR"        ]
+	,[" "         ]]
+      ,"data":[
+	 [1]]}
     ,"DATA":{"ncols":2, "nrows":4
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"MUCI/MUAHR"]
+	,["MEV"       ,"MUCI/MUA"  ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [9,17.51]
@@ -152,13 +175,49 @@
 	,[18,259.78]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4034002", "Pointer":" "
- ,"Subent":"D4034002", "compiled":20060731
-,"year1":1985, "author1ini":"F.", "author1":"Tarkanyi"
-, "zTarg1":79, "targ1":"Au-197", "proj1":"he3", "emis1":"3N", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"79-AU-197(HE3,3N)81-TL-197,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D4034002", "compiled":20190823
+ ,"year1":1985, "author1ini":"F.", "author1":"Tarkanyi"
+ ,"zTarg1":79, "targ1":"Au-197", "proj1":"he3", "emis1":"3N", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"79-AU-197(HE3,3N)81-TL-197,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":4
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[17.51,50.59,75.89,259.78]
+    ,"dat1":[0.64787,1.87183,2.80793,9.61186]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[9,11.99,15,18]
+    ,"dat1":[9.0e+6,1.199e+7,1.5e+7,1.8e+7]}
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":4
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.64787,1.87183,2.80793,9.61186]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[9.0e+6,1.199e+7,1.5e+7,1.8e+7]
+   }
+ }
 }
    ]
    }
