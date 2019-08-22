@@ -1,9 +1,9 @@
-  {"ENTRY":"D4223", "updated":20110204, "TransID":"D076", "TransDate":20110325, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
+  {"ENTRY":"D4223", "updated":20190823, "TransID":"D121", "TransDate":20191003, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
    ,"y1":2009,"a1":"N.P.Van der meulen+","r1":"J,ARI,67,1320,2009","doi1":"10.1016/j.apradiso.2009.02.058"
    ,"ref":"Jour: Applied Radiation and Isotopes, Vol.67, p.1320 (2009)"
    ,"title":"The production of 88Y in the proton bombardment of natSr: New excitation and separation studies"
    ,"x4subents":[
-   {"SUBENT":"D4223001", "isub":1, "compiled":20110204, "TransID":"D076", "TransDate":20110325
+   {"SUBENT":"D4223001", "isub":1, "compiled":20190823, "TransID":"D121", "TransDate":20191003
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -31,8 +31,7 @@
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"3SAFSAF", "dict":"INSTITUTE", "idict":3,"hlp":"South Africa, Rep., South Africa, Rep."}]
-	,"x4freetext":[" Cape Peninsula University of Technology,"
-		,"           P.O. Box 1906, Bellville 7535, South Africa"]
+	,"x4freetext":[" Cape Peninsula Univ. of Technology, Bellville"]
 	}
       ]
      ,"REFERENCE":[
@@ -117,6 +116,12 @@
 	,"x4code":{"code":"20110203U", "date":"20110203", "act":"U", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" VS. DOI identifier corrected"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20190823A", "date":"20190823", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code updated according to new"
+		,"EXFOR rules in Subent 003."]
 	}
       ]
     }
@@ -265,24 +270,26 @@
 }
    ]
    }
-  ,{"SUBENT":"D4223003", "isub":3, "compiled":20090825, "TransID":"D069", "TransDate":20091222
+  ,{"SUBENT":"D4223003", "isub":3, "compiled":20190823, "TransID":"D121", "TransDate":20191003
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"38-SR-88(P,N)39-Y-88,,TTY,,DT"
-	    ,"c4reac":"(P,N),TTY,,DT"
+	,"x4code":{"code":"38-SR-88(P,N)39-Y-88,,TTY,,PHY"
+	    ,"c4reac":"(P,N),TTY,,PHY"
 	    ,"combi":"a"
+	    ,"Units":"PART/MUAHR"
 	    ,"reacs": [
-	    {"code":"38-SR-88(P,N)39-Y-88,,TTY,,DT"
+	    {"code":"38-SR-88(P,N)39-Y-88,,TTY,,PHY"
 		,"Reac":"P,N"
 		,"SF1":"38-SR-88","Targ":{"code":"38-SR-88","nam":"Sr-88","ZA":38088}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"N"
 		,"SF4":"39-Y-88","Prod":{"code":"39-Y-88","nam":"Y-88","ZA":39088}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"PHY"
+		,"SF58":",TTY,,PHY","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Physical thick/thin-target yield"
 	    }]}
+	,"x4freetext":[" Production rate"]
 	}
       ]
      ,"DECAY-DATA":[
@@ -304,6 +311,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data were received from authors."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20190823A", "date":"20190823", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> PHY in REACTION code."]
 	}
       ]
     }
@@ -355,13 +369,61 @@
 	,[20,3.609]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4223003", "Pointer":" "
- ,"Subent":"D4223003", "compiled":20090825
-,"year1":2009, "author1ini":"N.P.", "author1":"Van der meulen"
-, "zTarg1":38, "targ1":"Sr-88", "proj1":"p", "emis1":"N", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"38-SR-88(P,N)39-Y-88,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D4223003", "compiled":20190823
+ ,"year1":2009, "author1ini":"N.P.", "author1":"Van der meulen"
+ ,"zTarg1":38, "targ1":"Sr-88", "proj1":"p", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick/thin-target yield"
+ ,"reacode":"38-SR-88(P,N)39-Y-88,,TTY,,PHY"
+ ,"compNotes":[]
+ ,"wx4data":2
+ ,"lx4data":32
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.001,0.008,0.019,0.037,0.064,0.101,0.151,0.215,0.296,0.394
+	,0.51,0.644,0.794,0.961,1.141,1.332,1.532,1.738,1.946,2.152
+	,2.355,2.549,2.733,2.904,3.06,3.198,3.317,3.417,3.496,3.554
+	,3.592,3.609]
+    ,"dat1":[1000,8000,1.9e+4,3.7e+4,6.4e+4,1.01e+5,1.51e+5,2.15e+5,2.96e+5,3.94e+5
+	,5.1e+5,6.44e+5,7.94e+5,9.61e+5,1.141e+6,1.332e+6,1.532e+6,1.738e+6,1.946e+6,2.152e+6
+	,2.355e+6,2.549e+6,2.733e+6,2.904e+6,3.06e+6,3.198e+6,3.317e+6,3.417e+6,3.496e+6,3.554e+6
+	,3.592e+6,3.609e+6]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[4.5,5,5.5,6,6.5,7,7.5,8,8.5,9
+	,9.5,10,10.5,11,11.5,12,12.5,13,13.5,14
+	,14.5,15,15.5,16,16.5,17,17.5,18,18.5,19
+	,19.5,20]
+    ,"dat1":[4.5e+6,5.0e+6,5.5e+6,6.0e+6,6.5e+6,7.0e+6,7.5e+6,8.0e+6,8.5e+6,9.0e+6
+	,9.5e+6,1.0e+7,1.05e+7,1.1e+7,1.15e+7,1.2e+7,1.25e+7,1.3e+7,1.35e+7,1.4e+7
+	,1.45e+7,1.5e+7,1.55e+7,1.6e+7,1.65e+7,1.7e+7,1.75e+7,1.8e+7,1.85e+7,1.9e+7
+	,1.95e+7,2.0e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":32
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1000,8000,1.9e+4,3.7e+4,6.4e+4,1.01e+5,1.51e+5,2.15e+5,2.96e+5,3.94e+5
+	,5.1e+5,6.44e+5,7.94e+5,9.61e+5,1.141e+6,1.332e+6,1.532e+6,1.738e+6,1.946e+6,2.152e+6
+	,2.355e+6,2.549e+6,2.733e+6,2.904e+6,3.06e+6,3.198e+6,3.317e+6,3.417e+6,3.496e+6,3.554e+6
+	,3.592e+6,3.609e+6]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[4.5e+6,5.0e+6,5.5e+6,6.0e+6,6.5e+6,7.0e+6,7.5e+6,8.0e+6,8.5e+6,9.0e+6
+	,9.5e+6,1.0e+7,1.05e+7,1.1e+7,1.15e+7,1.2e+7,1.25e+7,1.3e+7,1.35e+7,1.4e+7
+	,1.45e+7,1.5e+7,1.55e+7,1.6e+7,1.65e+7,1.7e+7,1.75e+7,1.8e+7,1.85e+7,1.9e+7
+	,1.95e+7,2.0e+7]
+   }
+ }
 }
    ]
    }
