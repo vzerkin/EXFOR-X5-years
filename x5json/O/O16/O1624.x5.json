@@ -1,9 +1,9 @@
-  {"ENTRY":"O1624", "updated":20080208, "TransID":"O035", "TransDate":20080526, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O1624", "updated":20191004, "TransID":"O072", "TransDate":20191217, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1977,"a1":"G.L.Almeida+","r1":"J,RRL,28,205,1977"
    ,"ref":"Jour: Radiochemical and Radioanalytical Letters, Vol.28, p.205 (1977)"
    ,"title":"On the production of Mo-99 and Tc-99-m by cyclotron."
    ,"x4subents":[
-   {"SUBENT":"O1624001", "isub":1, "compiled":20080208, "TransID":"O035", "TransDate":20080526
+   {"SUBENT":"O1624001", "isub":1, "compiled":20191004, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -19,10 +19,8 @@
       ]
      ,"INSTITUTE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"3BZLIEN", "dict":"INSTITUTE", "idict":3,"hlp":"Instit. de Engenharia Nuclear, Rio de Janeiro, Brazil"}]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"2GERDKZ", "dict":"INSTITUTE", "idict":3,"hlp":"Deutsches Krebsforschungszentrum, Heidelberg, Germany"}]
+	,"x4codes":[{"code":"3BZLIEN", "dict":"INSTITUTE", "idict":3,"hlp":"Instit. de Engenharia Nuclear, Rio de Janeiro, Brazil"}
+	    ,{"code":"2GERDKZ", "dict":"INSTITUTE", "idict":3,"hlp":"Deutsches Krebsforschungszentrum, Heidelberg, Germany"}]
 	}
       ]
      ,"REFERENCE":[
@@ -72,8 +70,8 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"O0419001,P.P.DMITRIEV+,J,AE,24,279,1968"
-		,"subent":"O0419001","author1":"P.P.DMITRIEV+","stdFileName":"J,AE,24,279,1968"
+	,"x4codes":[{"code":"O0419001,P.P.Dmitriev+,J,AE,24,279,1968"
+		,"subent":"O0419001","author1":"P.P.Dmitriev+","stdFileName":"J,AE,24,279,1968"
 		,"year":1968,"typ":"J","ref":"J,AE","vol":"24","p":"279"
 		,"shortRef":"Jour: Atomnaya Energiya, Vol.24, p.279 (1968)"}]
 	}
@@ -109,25 +107,7 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[".The error is reported by authors on fig."]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-DIG"
-	     ,"headerHelp":"Digitizing error (of DATA)"}
-	,"x4freetext":[".Digitizing error of data."]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"EN-ERR-DIG"
-	     ,"headerHelp":"Digitizing error of incident particle energy"}
-	,"x4freetext":[".Digitizing error of incident energy."]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"CURVE"
-		,"flag":"CURVE", "help":"Data read from a curve"
-		}]
-	,"x4freetext":[".By CAJAD."]
+	,"x4freetext":[" No information about source of uncertainties"]
 	}
       ]
      ,"HISTORY":[
@@ -136,28 +116,51 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" SB"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191004A", "date":"20191004", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code corrected in"
+		,"Subents 002,003. Subents 004-007 deleted (No details"
+		,"are given for yield calculation, see MEMO CP-D/933rev)."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"O1624002", "isub":2, "compiled":20080208, "TransID":"O035", "TransDate":20080526
+  ,{"SUBENT":"O1624002", "isub":2, "compiled":20191004, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"42-MO-100(P,N+P)42-MO-99,,TTY,,DT"
-	    ,"c4reac":"(P,N+P),TTY,,DT"
+	,"x4code":{"code":"42-MO-100(P,X)42-MO-99,,TTY,,(PHY)"
+	    ,"c4reac":"(P,X),TTY,,(PHY)"
 	    ,"combi":"a"
+	    ,"Units":"PART/MUAHR"
 	    ,"reacs": [
-	    {"code":"42-MO-100(P,N+P)42-MO-99,,TTY,,DT"
-		,"Reac":"P,N+P"
+	    {"code":"42-MO-100(P,X)42-MO-99,,TTY,,(PHY)"
+		,"Reac":"P,X"
 		,"SF1":"42-MO-100","Targ":{"code":"42-MO-100","nam":"Mo-100","ZA":42100}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"42-MO-99","Prod":{"code":"42-MO-99","nam":"Mo-99","ZA":42099}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"(PHY)"
+		,"SF58":",TTY,,(PHY)","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Thick/thin-target yield, unc. if physical"
 	    }]}
-	,"x4freetext":[" fig 1"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" fig.1 from Radiochem.Radioanal.Let.,28(1977)205"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191004A", "date":"20191004", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF3=N+P -> X, SF8=DT -> (PHY) in"
+		,"REACTION code. STATUS added."]
 	}
       ]
     }
@@ -202,35 +205,102 @@
 	,[25.34,1.838,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1624002", "Pointer":" "
- ,"Subent":"O1624002", "compiled":20080208
-,"year1":1977, "author1ini":"G.L.", "author1":"Almeida"
-, "zTarg1":42, "targ1":"Mo-100", "proj1":"p", "emis1":"N+P", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"42-MO-100(P,N+P)42-MO-99,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1624002", "compiled":20191004
+ ,"year1":1977, "author1ini":"G.L.", "author1":"Almeida"
+ ,"zTarg1":42, "targ1":"Mo-100", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Thick/thin-target yield, unc. if physical"
+ ,"reacode":"42-MO-100(P,X)42-MO-99,,TTY,,(PHY)"
+ ,"compNotes":["Ignored column:DATA-ERR,MCI/MUAHR  expected units:PART/MUAHR,PER-CENT"
+	,"Ignored column:ERR-DIG,MCI/MUAHR  expected units:PART/MUAHR,PER-CENT"
+	,"Ignored column:ERR-DIG,MCI/MUAHR (digitizing error)"
+	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
+ ,"wx4data":5
+ ,"lx4data":7
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MCI/MUAHR", "basicUnits":"MCI/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.062,0.062,0.21,0.489,0.889,1.33,1.838]
+    ,"dat1":[2.294e+6,2.294e+6,7.77e+6,1.8093e+7,3.2893e+7,4.921e+7,6.8006e+7]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MCI/MUAHR", "basicUnits":"MCI/MUAHR"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[null,null,null,null,null,0.09,null]
+    ,"dat1":[null,null,null,null,null,3.33e+6,null]}
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-DIG", "units":"MCI/MUAHR", "basicUnits":"MCI/MUAHR"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.012
+    ,"com1":4.44e+5}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[9.95,12.88,15.89,18.55,20.84,23.14,25.34]
+    ,"dat1":[9.95e+6,1.288e+7,1.589e+7,1.855e+7,2.084e+7,2.314e+7,2.534e+7]}
+  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-ERR-DIG", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.pErr+-", "dataType":"41", "rank":1.955
+    ,"expansion":"Incident energy: energy /Error/"
+    ,"com0":0.13
+    ,"com1":1.3e+5}
+  ]
+ ,"wc5data":2
+ ,"lc5data":7
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[2.294e+6,2.294e+6,7.77e+6,1.8093e+7,3.2893e+7,4.921e+7,6.8006e+7]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[9.95e+6,1.288e+7,1.589e+7,1.855e+7,2.084e+7,2.314e+7,2.534e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"O1624003", "isub":3, "compiled":20080208, "TransID":"O035", "TransDate":20080526
+  ,{"SUBENT":"O1624003", "isub":3, "compiled":20191004, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"42-MO-100(P,2N)43-TC-99-M,,TTY,,DT"
-	    ,"c4reac":"(P,2N),TTY,,DT"
+	,"x4code":{"code":"42-MO-100(P,2N)43-TC-99-M,,TTY,,(PHY)"
+	    ,"c4reac":"(P,2N),TTY,,(PHY)"
 	    ,"combi":"a"
+	    ,"Units":"PART/MUAHR"
 	    ,"reacs": [
-	    {"code":"42-MO-100(P,2N)43-TC-99-M,,TTY,,DT"
+	    {"code":"42-MO-100(P,2N)43-TC-99-M,,TTY,,(PHY)"
 		,"Reac":"P,2N"
 		,"SF1":"42-MO-100","Targ":{"code":"42-MO-100","nam":"Mo-100","ZA":42100}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"2N"
 		,"SF4":"43-TC-99-M","Prod":{"code":"43-TC-99-M","nam":"Tc-99-m","ZA":43099,"ProdM":"M"}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"(PHY)"
+		,"SF58":",TTY,,(PHY)","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Thick/thin-target yield, unc. if physical"
 	    }]}
-	,"x4freetext":[" fig 2"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" fig.1 from Radiochem.Radioanal.Let.,28(1977)205"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191004A", "date":"20191004", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> (PHY) in  REACTION code."
+		,"STATUS added."]
 	}
       ]
     }
@@ -275,307 +345,74 @@
 	,[24.84,39.13,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1624003", "Pointer":" "
- ,"Subent":"O1624003", "compiled":20080208
-,"year1":1977, "author1ini":"G.L.", "author1":"Almeida"
-, "zTarg1":42, "targ1":"Mo-100", "proj1":"p", "emis1":"2N", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"42-MO-100(P,2N)43-TC-99-M,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1624003", "compiled":20191004
+ ,"year1":1977, "author1ini":"G.L.", "author1":"Almeida"
+ ,"zTarg1":42, "targ1":"Mo-100", "proj1":"p", "emis1":"2N", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Thick/thin-target yield, unc. if physical"
+ ,"reacode":"42-MO-100(P,2N)43-TC-99-M,,TTY,,(PHY)"
+ ,"compNotes":["Ignored column:DATA-ERR,MUCI/MUAHR  expected units:PART/MUAHR,PER-CENT"
+	,"Ignored column:ERR-DIG,MUCI/MUAHR  expected units:PART/MUAHR,PER-CENT"
+	,"Ignored column:ERR-DIG,MUCI/MUAHR (digitizing error)"
+	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
+ ,"wx4data":5
+ ,"lx4data":7
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUAHR", "basicUnits":"MUCI/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[2.14,10.21,18.89,27.16,31.87,36,39.13]
+    ,"dat1":[79180,3.7777e+5,6.9893e+5,1.00492e+6,1.17919e+6,1.332e+6,1.44781e+6]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MUCI/MUAHR", "basicUnits":"MUCI/MUAHR"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[null,null,null,null,null,2.5,null]
+    ,"dat1":[null,null,null,null,null,92500,null]}
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-DIG", "units":"MUCI/MUAHR", "basicUnits":"MUCI/MUAHR"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.14
+    ,"com1":5180}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[9.64,12.57,15.5,18.23,20.57,22.7,24.84]
+    ,"dat1":[9.64e+6,1.257e+7,1.55e+7,1.823e+7,2.057e+7,2.27e+7,2.484e+7]}
+  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-ERR-DIG", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.pErr+-", "dataType":"41", "rank":1.955
+    ,"expansion":"Incident energy: energy /Error/"
+    ,"com0":0.14
+    ,"com1":1.4e+5}
+  ]
+ ,"wc5data":2
+ ,"lc5data":7
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[79180,3.7777e+5,6.9893e+5,1.00492e+6,1.17919e+6,1.332e+6,1.44781e+6]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[9.64e+6,1.257e+7,1.55e+7,1.823e+7,2.057e+7,2.27e+7,2.484e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"O1624004", "isub":4, "compiled":20080208, "TransID":"O035", "TransDate":20080526
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"42-MO-100(P,X)43-TC-94,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
-	    ,"combi":"a"
-	    ,"reacs": [
-	    {"code":"42-MO-100(P,X)43-TC-94,,TTY,,DT"
-		,"Reac":"P,X"
-		,"SF1":"42-MO-100","Targ":{"code":"42-MO-100","nam":"Mo-100","ZA":42100}
-		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"43-TC-94","Prod":{"code":"43-TC-94","nam":"Tc-94","ZA":43094}
-		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
-	    }]}
-	,"x4freetext":[" fig 3"]
-	}
-      ]
-    }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
-	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"ERR-DIG", "units":"MUCI/MUAHR", "pointer":" "
-	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
-      ]
-      ,"datacols":[
-	 ["EN-ERR-DIG","ERR-DIG"   ]
-	,["MEV"       ,"MUCI/MUAHR"]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.14,1.8]]}
-    ,"DATA":{"ncols":3, "nrows":7
-      ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MUCI/MUAHR", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
-      ]
-      ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"MUCI/MUAHR","MUCI/MUAHR"]
-	,[" "         ," "         ," "         ]]
-      ,"data":[
-	 [9.78,6.4,null]
-	,[13.03,41.3,null]
-	,[16.05,110.9,null]
-	,[18.65,193.2,null]
-	,[21.05,283.1,null]
-	,[23.04,370,14]
-	,[25.23,457.8,null]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"O1624004", "Pointer":" "
- ,"Subent":"O1624004", "compiled":20080208
-,"year1":1977, "author1ini":"G.L.", "author1":"Almeida"
-, "zTarg1":42, "targ1":"Mo-100", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"42-MO-100(P,X)43-TC-94,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
-}
-   ]
+  ,{"SUBENT":"O1624004", "isub":4, "compiled":20191004, "TransID":"O072", "TransDate":20191217, "nosubent":true 
    }
-  ,{"SUBENT":"O1624005", "isub":5, "compiled":20080208, "TransID":"O035", "TransDate":20080526
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"42-MO-100(P,X)43-TC-95,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
-	    ,"combi":"a"
-	    ,"reacs": [
-	    {"code":"42-MO-100(P,X)43-TC-95,,TTY,,DT"
-		,"Reac":"P,X"
-		,"SF1":"42-MO-100","Targ":{"code":"42-MO-100","nam":"Mo-100","ZA":42100}
-		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"43-TC-95","Prod":{"code":"43-TC-95","nam":"Tc-95","ZA":43095}
-		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
-	    }]}
-	,"x4freetext":[" fig 3"]
-	}
-      ]
-    }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
-	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"ERR-DIG", "units":"MUCI/MUAHR", "pointer":" "
-	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
-      ]
-      ,"datacols":[
-	 ["EN-ERR-DIG","ERR-DIG"   ]
-	,["MEV"       ,"MUCI/MUAHR"]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.14,1.8]]}
-    ,"DATA":{"ncols":3, "nrows":7
-      ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MUCI/MUAHR", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
-      ]
-      ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"MUCI/MUAHR","MUCI/MUAHR"]
-	,[" "         ," "         ," "         ]]
-      ,"data":[
-	 [10.09,13,null]
-	,[12.93,30,null]
-	,[16.17,73,null]
-	,[18.6,106.9,null]
-	,[20.92,143,13]
-	,[23.25,183.6,null]
-	,[25.26,223.9,null]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"O1624005", "Pointer":" "
- ,"Subent":"O1624005", "compiled":20080208
-,"year1":1977, "author1ini":"G.L.", "author1":"Almeida"
-, "zTarg1":42, "targ1":"Mo-100", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"42-MO-100(P,X)43-TC-95,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
-}
-   ]
+  ,{"SUBENT":"O1624005", "isub":5, "compiled":20191004, "TransID":"O072", "TransDate":20191217, "nosubent":true 
    }
-  ,{"SUBENT":"O1624006", "isub":6, "compiled":20080208, "TransID":"O035", "TransDate":20080526
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"42-MO-100(P,X)43-TC-93,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
-	    ,"combi":"a"
-	    ,"reacs": [
-	    {"code":"42-MO-100(P,X)43-TC-93,,TTY,,DT"
-		,"Reac":"P,X"
-		,"SF1":"42-MO-100","Targ":{"code":"42-MO-100","nam":"Mo-100","ZA":42100}
-		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"43-TC-93","Prod":{"code":"43-TC-93","nam":"Tc-93","ZA":43093}
-		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
-	    }]}
-	,"x4freetext":[" fig 4"]
-	}
-      ]
-    }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
-	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"ERR-DIG", "units":"MUCI/MUAHR", "pointer":" "
-	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
-      ]
-      ,"datacols":[
-	 ["EN-ERR-DIG","ERR-DIG"   ]
-	,["MEV"       ,"MUCI/MUAHR"]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.14,4]]}
-    ,"DATA":{"ncols":3, "nrows":7
-      ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MUCI/MUAHR", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
-      ]
-      ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"MUCI/MUAHR","MUCI/MUAHR"]
-	,[" "         ," "         ," "         ]]
-      ,"data":[
-	 [10,7,null]
-	,[13.11,9,null]
-	,[15.9,55,null]
-	,[18.98,170,70]
-	,[21.06,286,null]
-	,[23.33,416,null]
-	,[25.51,547,null]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"O1624006", "Pointer":" "
- ,"Subent":"O1624006", "compiled":20080208
-,"year1":1977, "author1ini":"G.L.", "author1":"Almeida"
-, "zTarg1":42, "targ1":"Mo-100", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"42-MO-100(P,X)43-TC-93,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
-}
-   ]
+  ,{"SUBENT":"O1624006", "isub":6, "compiled":20191004, "TransID":"O072", "TransDate":20191217, "nosubent":true 
    }
-  ,{"SUBENT":"O1624007", "isub":7, "compiled":20080208, "TransID":"O035", "TransDate":20080526
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"42-MO-100(P,X)43-TC-96,,TTY,,DT"
-	    ,"c4reac":"(P,X),TTY,,DT"
-	    ,"combi":"a"
-	    ,"reacs": [
-	    {"code":"42-MO-100(P,X)43-TC-96,,TTY,,DT"
-		,"Reac":"P,X"
-		,"SF1":"42-MO-100","Targ":{"code":"42-MO-100","nam":"Mo-100","ZA":42100}
-		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"43-TC-96","Prod":{"code":"43-TC-96","nam":"Tc-96","ZA":43096}
-		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
-	    }]}
-	,"x4freetext":[" fig 4"]
-	}
-      ]
-    }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
-	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"ERR-DIG", "units":"MUCI/MUAHR", "pointer":" "
-	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
-      ]
-      ,"datacols":[
-	 ["EN-ERR-DIG","ERR-DIG"   ]
-	,["MEV"       ,"MUCI/MUAHR"]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.14,0.4]]}
-    ,"DATA":{"ncols":3, "nrows":7
-      ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MUCI/MUAHR", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
-      ]
-      ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"MUCI/MUAHR","MUCI/MUAHR"]
-	,[" "         ," "         ," "         ]]
-      ,"data":[
-	 [9.99,4.5,null]
-	,[13.08,14.5,null]
-	,[15.96,22,7]
-	,[18.85,30.1,null]
-	,[21.04,38.3,null]
-	,[23.32,49.2,null]
-	,[25.39,62.7,null]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"O1624007", "Pointer":" "
- ,"Subent":"O1624007", "compiled":20080208
-,"year1":1977, "author1ini":"G.L.", "author1":"Almeida"
-, "zTarg1":42, "targ1":"Mo-100", "proj1":"p", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"42-MO-100(P,X)43-TC-96,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
-}
-   ]
+  ,{"SUBENT":"O1624007", "isub":7, "compiled":20191004, "TransID":"O072", "TransDate":20191217, "nosubent":true 
    }
   ]
  }
