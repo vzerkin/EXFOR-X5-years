@@ -1,9 +1,9 @@
-  {"ENTRY":"O1960", "updated":20111110, "TransID":"O046", "TransDate":20120322, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O1960", "updated":20191006, "TransID":"O072", "TransDate":20191217, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":2011,"a1":"A.Ciarmatori+","r1":"J,RCA,99,631,2011"
    ,"ref":"Jour: Radiochimica Acta, Vol.99, p.631 (2011)"
    ,"title":"Some experimental studies on Sr-89."
    ,"x4subents":[
-   {"SUBENT":"O1960001", "isub":1, "compiled":20111110, "TransID":"O046", "TransDate":20120322
+   {"SUBENT":"O1960001", "isub":1, "compiled":20191006, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -86,9 +86,9 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
-	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" The uncertainty is reported in text."]
+	,"x4code":{"header":"ERR-T"
+	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4freetext":[" Total uncertainty includes:"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-1", "min":"1.", "max":"2."
@@ -136,7 +136,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Values in text of J,RCA,99,631,2011"]
+	,"x4freetext":[" text on p.633 of of Radiochim.Acta,99(2011)631"]
 	}
       ]
      ,"HISTORY":[
@@ -145,33 +145,42 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" SB"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191006A", "date":"20191006", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code corrected in Subent 002."
+		,"DATA-ERR -> ERR-T."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"O1960002", "isub":2, "compiled":20111110, "TransID":"O046", "TransDate":20120322
+  ,{"SUBENT":"O1960002", "isub":2, "compiled":20191006, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"39-Y-89(P,N)40-ZR-89,,TTY"
-	    ,"c4reac":"(P,N),TTY"
+	,"x4code":{"code":"39-Y-89(P,N)40-ZR-89-G,M+,TTY,,SAT"
+	    ,"c4reac":"(P,N)M+,TTY,,SAT"
 	    ,"combi":"a"
 	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"39-Y-89(P,N)40-ZR-89,,TTY"
+	    {"code":"39-Y-89(P,N)40-ZR-89-G,M+,TTY,,SAT"
 		,"Reac":"P,N"
 		,"SF1":"39-Y-89","Targ":{"code":"39-Y-89","nam":"Y-89","ZA":39089}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"N"
-		,"SF4":"40-ZR-89","Prod":{"code":"40-ZR-89","nam":"Zr-89","ZA":40089}
+		,"SF4":"40-ZR-89-G","Prod":{"code":"40-ZR-89-G","nam":"Zr-89-g","ZA":40089,"ProdM":"G"}
+		,"SF5":"M+"
 		,"SF6":"TTY"
-		,"SF58":",TTY","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"Saturated thick/thin-target yield"
+		,"SF8":"SAT"
+		,"SF58":"M+,TTY,,SAT","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"Saturation thick target yld.incl.isomeric trans."
 	    }]}
-	,"x4freetext":[" saturated yield given"]
+	,"x4freetext":["  (IT=93%)"
+		," saturated yield given"]
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"40-ZR-89", "t12":78.41, "t12units":"HR", "t12sec":282276.0
+	,"x4codes":[{"Nucl":"40-ZR-89-G", "t12":78.41, "t12units":"HR", "t12sec":282276.0
 	, "Radiations":[ {"Type":"DG", "Energy":[908.9], "Intensity":0.1}]}]
 	}
       ]
@@ -179,6 +188,14 @@
 	{"x4pointer":" "
 	,"x4codes":[{"code":"MISC"}]
 	,"x4freetext":[".Target thickness(mum)"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191006A", "date":"20191006", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=Zr-89 -> Zr-89g; SF5=M+ added;"
+		,"SF8=DT -> SAT in REACTION code. DATA-ERR -> ERR-T."]
 	}
       ]
     }
@@ -193,15 +210,15 @@
       ,{"icol":2, "header":"DATA", "units":"MBQ/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"MBQ/MUA", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":3, "header":"ERR-T", "units":"MBQ/MUA", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"Mega-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1.0,"basicUnits":"MBQ/MUA"}
       ,{"icol":4, "header":"MISC", "units":"SEE TEXT", "pointer":" "
 	,"headerHelp":"Miscellaneous Information, defined under MISC-COL.", "pFlag":"0000000"
 	,"unitsHelp":"rare units. See `MISC-COL`","familyCode":"","convFc":1.0,"basicUnits":"SEE TEXT"}
       ]
       ,"datacols":[
-	 ["EN-MIN"    ,"EN-MAX"    ,"DATA"      ,"DATA-ERR"  ,"MISC"      ]
+	 ["EN-MIN"    ,"EN-MAX"    ,"DATA"      ,"ERR-T"     ,"MISC"      ]
 	,["MEV"       ,"MEV"       ,"MBQ/MUA"   ,"MBQ/MUA"   ,"SEE TEXT"  ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -209,12 +226,12 @@
 	,[11.2,12.6,1150,110,150]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1960002", "Pointer":" "
- ,"Subent":"O1960002", "compiled":20111110
+ ,"Subent":"O1960002", "compiled":20191006
  ,"year1":2011, "author1ini":"A.", "author1":"Ciarmatori"
  ,"zTarg1":39, "targ1":"Y-89", "proj1":"p", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Saturated thick/thin-target yield"
- ,"reacode":"39-Y-89(P,N)40-ZR-89,,TTY"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Saturation thick target yld.incl.isomeric trans."
+ ,"reacode":"39-Y-89(P,N)40-ZR-89-G,M+,TTY,,SAT"
  ,"compNotes":["ERR-ANALYS:(ERR-1,1.,2.)      ADDED AS COMMON:ERR-1,PER-CENT=1.0%"
 	,"ERR-ANALYS:(ERR-2,,1.)        ADDED AS COMMON:ERR-2,PER-CENT=0.5%"
 	,"ERR-ANALYS:(ERR-3,,1.)        ADDED AS COMMON:ERR-3,PER-CENT=0.5%"
@@ -230,7 +247,7 @@
     ,"dat0":[2400,1150]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
+    ,"header":"ERR-T", "units":"MBQ/MUA", "basicUnits":"MBQ/MUA"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[220,110]
