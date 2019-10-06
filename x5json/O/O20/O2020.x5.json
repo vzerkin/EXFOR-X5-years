@@ -1,9 +1,9 @@
-  {"ENTRY":"O2020", "updated":20140825, "TransID":"O053", "TransDate":20150202, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O2020", "updated":20191007, "TransID":"O072", "TransDate":20191217, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":2012,"a1":"J.Kozempel+","r1":"J,RCA,100,419,2012"
    ,"ref":"Jour: Radiochimica Acta, Vol.100, p.419 (2012)"
    ,"title":"Preparation of Cu-67 via deuteron irradiation of Zn-70."
    ,"x4subents":[
-   {"SUBENT":"O2020001", "isub":1, "compiled":20140825, "TransID":"O053", "TransDate":20150202
+   {"SUBENT":"O2020001", "isub":1, "compiled":20191007, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -73,13 +73,9 @@
       ]
      ,"METHOD":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"STTA", "dict":"METHOD", "idict":21,"hlp":"Stacked target irradiation"}]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"BCINT", "dict":"METHOD", "idict":21,"hlp":"Beam current integrated"}]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}]
+	,"x4codes":[{"code":"STTA", "dict":"METHOD", "idict":21,"hlp":"Stacked target irradiation"}
+	    ,{"code":"BCINT", "dict":"METHOD", "idict":21,"hlp":"Beam current integrated"}
+	    ,{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}]
 	}
       ]
      ,"COMMENT":[
@@ -134,6 +130,12 @@
 	,"x4freetext":[" SD: COMMENT from Dr. J.Kozempel was added."
 		,"REACTION code corrected in Subent 3."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code corrected in Subent 003."
+		,"Corrections in all Subents."]
+	}
       ]
     }
     ,"COMMON":{"ncols":5, "nrows":1
@@ -161,7 +163,7 @@
       ,"data":[
 	 [12,6.5,0.1,10,5]]}
    }
-  ,{"SUBENT":"O2020002", "isub":2, "compiled":20110121, "TransID":"O049", "TransDate":20121211
+  ,{"SUBENT":"O2020002", "isub":2, "compiled":20191007, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -183,14 +185,6 @@
 	    }]}
 	}
       ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[".Table 3 of J,RCA,100,419,2012"]
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"29-CU-67", "t12":61.8, "t12units":"HR", "t12sec":222480.0
@@ -203,18 +197,31 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"EN-ERR"
 	     ,"headerHelp":"Uncertainty in incident projectile energy"}
-	,"x4freetext":[".The error is reported by authors."
-		,"Primary beam energy straggling is estimated to be less"
-		,"than 0.5%, and the uncertainty propagated within the"
-		,"stacks up to 5%."]
+	,"x4freetext":[" Uncertainty includes:"
+		," * Primary beam energy straggling < 0.5%, and"
+		," * the uncertainty propagated within the stacks < 5%."]
 	}
 	,{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
-	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[".The error is reported by authors in table."
-		,"Overall cross-section uncertainty estimates ranged from"
-		," 7 to 16%, except for the lowest energy data point"
-		,"which had an uncertainty of 28%"]
+	,"x4code":{"header":"ERR-T"
+	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4freetext":[" Overall cross-section uncertainty estimates"
+		,"ranged from 7 to 16%, except for the lowest energy"
+		,"data point which had an uncertainty of 28%"]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 3 of Radiochim.Acta,100(2012)419"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: ERR-ANALYS updated. DATA-ERR -> ERR-T."]
 	}
       ]
     }
@@ -229,12 +236,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -258,7 +265,7 @@
 	,[19.7,0.6,22,2.4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2020002", "Pointer":" "
- ,"Subent":"O2020002", "compiled":20110121
+ ,"Subent":"O2020002", "compiled":20191007
  ,"year1":2012, "author1ini":"J.", "author1":"Kozempel"
  ,"zTarg1":30, "targ1":"Zn-70", "proj1":"d", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -277,7 +284,7 @@
     ,"dat1":[0.0032,0.0047,0.0069,0.0088,0.0111,0.0125,0.0109,0.0153,0.0167,0.0192
 	,0.0193,0.0212,0.0235,0.023,0.024,0.027,0.0248,0.022]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.9,0.6,1,1.4,1.1,1.3,1.5,1.3,1.6,1.5
@@ -354,27 +361,36 @@
 }
    ]
    }
-  ,{"SUBENT":"O2020003", "isub":3, "compiled":20140825, "TransID":"O053", "TransDate":20150202
+  ,{"SUBENT":"O2020003", "isub":3, "compiled":20191007, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"30-ZN-70(D,X)ELEM/MASS,,TTY,,PHY/MSC"
-	    ,"c4reac":"(D,X)ELEM/MASS,,TTY,,PHY/MSC"
+	,"x4code":{"code":"30-ZN-70(D,X)ELEM/MASS,,TTY,,PHY"
+	    ,"c4reac":"(D,X)ELEM/MASS,,TTY,,PHY"
 	    ,"combi":"a"
 	    ,"Units":"PART/MUAHR"
 	    ,"reacs": [
-	    {"code":"30-ZN-70(D,X)ELEM/MASS,,TTY,,PHY/MSC"
+	    {"code":"30-ZN-70(D,X)ELEM/MASS,,TTY,,PHY"
 		,"Reac":"D,X"
 		,"SF1":"30-ZN-70","Targ":{"code":"30-ZN-70","nam":"Zn-70","ZA":30070}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"ELEM/MASS","Prod":{"code":"ELEM/MASS","nam":"elem/mass"}
 		,"SF6":"TTY"
-		,"SF8":"PHY/MSC"
+		,"SF8":"PHY"
 		,"SF58":",TTY,,PHY","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Physical thick/thin-target yield"
 	    }]}
 	,"x4freetext":["Yield at EOB after 0.34 muA, 3 hr irradiation"
 		,"  (EOB activity/current/irradiation time)"]
+	}
+      ]
+     ,"CRITIQUE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":[" Sandor Takacs: 67Cu and 71mZn data are wrong in"
+		," Table 4. Each was calculated with the half-life of"
+		," 64Cu. The correct values are: 0.89 and 21.76 for"
+		," 67Cu and 71mZn respectively."]
 	}
       ]
      ,"STATUS":[
@@ -382,16 +398,22 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 4 of J,RCA,100,419,2012"]
+	,"x4freetext":[" Table 4 of Radiochim.Acta,100(2012)419"]
 	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20140825A", "date":"20140825", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" SD. In RECTION code:TTY,,DT -> TTY,,PHY/MSC"
+	,"x4freetext":[" SD.In REACTION code:TTY,,DT -> TTY,,PHY/MSC"
 		," (EOB activity/current/irrad.time). Confirmed by"
 		," Dr.J.Kozempel (2014-08-21)."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=PHY/MSC -> PHY in REACTION code."
+		," CRITIQUE was added."]
 	}
       ]
     }
@@ -438,12 +460,12 @@
 	,[31,67,null,0.06]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2020003", "Pointer":" "
- ,"Subent":"O2020003", "compiled":20140825
+ ,"Subent":"O2020003", "compiled":20191007
  ,"year1":2012, "author1ini":"J.", "author1":"Kozempel"
  ,"zTarg1":30, "targ1":"Zn-70", "proj1":"d", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick/thin-target yield"
- ,"reacode":"30-ZN-70(D,X)ELEM/MASS,,TTY,,PHY/MSC"
+ ,"reacode":"30-ZN-70(D,X)ELEM/MASS,,TTY,,PHY"
  ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
  ,"wx4data":11
  ,"lx4data":6
