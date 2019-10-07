@@ -1,9 +1,9 @@
-  {"ENTRY":"O2100", "updated":20121101, "TransID":"O050", "TransDate":20130516, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O2100", "updated":20191008, "TransID":"O072", "TransDate":20191217, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1980,"a1":"C.Birattari+","r1":"R,INFN/TC-80/17,1980"
    ,"ref":"Rept: INFN Reports / Various Techniques Series, No.80/17 (1980)"
    ,"title":"Excitation functions for nuclear reactions (p,xn) and (p,pxn) on targets of gold and study of the production of the ultra-short-lived radioisotope Au-195-m"
    ,"x4subents":[
-   {"SUBENT":"O2100001", "isub":1, "compiled":20121101, "TransID":"O050", "TransDate":20130516
+   {"SUBENT":"O2100001", "isub":1, "compiled":20191008, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -30,6 +30,13 @@
 	,"x4codes":[{"code":"R,INFN/TC-80/17,1980","stdFileName":"R,INFN_TC-80_17,1980"
 		,"year":1980,"typ":"R","ref":"R,INFN/TC-","no":"80/17"
 		,"shortRef":"Rept: INFN Reports / Various Techniques Series, No.80/17 (1980)"}]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"J,ARI,35,564,1984","stdFileName":"J,ARI,35,564,1984"
+		,"year":1984,"typ":"J","ref":"J,ARI","vol":"35","p":"564"
+		,"shortRef":"Jour: Applied Radiation and Isotopes, Vol.35, p.564 (1984)"}]
+	,"x4freetext":[" - 195mHg and 195Hg EOIB at"
+		,"                          peak energy"]
 	}
       ]
      ,"FACILITY":[
@@ -63,27 +70,34 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" SB"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Ref. added, REACTION code corrected in"
+		,"Subents 002-009. Subents 010,011 added."
+		,"Report INFN/TC-80/17,1980 not reachable."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"O2100002", "isub":2, "compiled":20121028, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2100002", "isub":2, "compiled":20191008, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(P,3N)80-HG-195-G,,TTY,,TM"
-	    ,"c4reac":"(P,3N),TTY,,TM"
+	,"x4code":{"code":"79-AU-197(P,3N)80-HG-195-G,,TTY/DEN,,PHY"
+	    ,"c4reac":"(P,3N),TTY/DEN,,PHY"
 	    ,"combi":"a"
 	    ,"Units":"MBQ/C/MEV"
 	    ,"reacs": [
-	    {"code":"79-AU-197(P,3N)80-HG-195-G,,TTY,,TM"
+	    {"code":"79-AU-197(P,3N)80-HG-195-G,,TTY/DEN,,PHY"
 		,"Reac":"P,3N"
 		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"3N"
 		,"SF4":"80-HG-195-G","Prod":{"code":"80-HG-195-G","nam":"Hg-195-g","ZA":80195,"ProdM":"G"}
-		,"SF6":"TTY"
-		,"SF8":"TM"
-		,"SF58":",TTY,,TM","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Prod.thick target yield/1 MeV thn."
+		,"SF6":"TTY/DEN"
+		,"SF8":"PHY"
+		,"SF58":",TTY/DEN,,PHY","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Physical thick targ.yld.diff.by incident energy"
 	    }]}
 	}
       ]
@@ -99,6 +113,14 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[".Fig 6 of R,INFN/TC-80/17,,1980"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF6=TTY -> TTY/DEN, SF8=TM -> PHY in"
+		,"REACTION code."]
 	}
       ]
     }
@@ -128,12 +150,12 @@
 	,[37.05,604.4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2100002", "Pointer":" "
- ,"Subent":"O2100002", "compiled":20121028
+ ,"Subent":"O2100002", "compiled":20191008
  ,"year1":1980, "author1ini":"C.", "author1":"Birattari"
  ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"3N", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Prod.thick target yield/1 MeV thn."
- ,"reacode":"79-AU-197(P,3N)80-HG-195-G,,TTY,,TM"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick targ.yld.diff.by incident energy"
+ ,"reacode":"79-AU-197(P,3N)80-HG-195-G,,TTY/DEN,,PHY"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":10
@@ -168,24 +190,24 @@
 }
    ]
    }
-  ,{"SUBENT":"O2100003", "isub":3, "compiled":20121028, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2100003", "isub":3, "compiled":20191008, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(P,3N)80-HG-195-M,,TTY,,TM"
-	    ,"c4reac":"(P,3N),TTY,,TM"
+	,"x4code":{"code":"79-AU-197(P,3N)80-HG-195-M,,TTY/DEN,,PHY"
+	    ,"c4reac":"(P,3N),TTY/DEN,,PHY"
 	    ,"combi":"a"
 	    ,"Units":"MBQ/C/MEV"
 	    ,"reacs": [
-	    {"code":"79-AU-197(P,3N)80-HG-195-M,,TTY,,TM"
+	    {"code":"79-AU-197(P,3N)80-HG-195-M,,TTY/DEN,,PHY"
 		,"Reac":"P,3N"
 		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"3N"
 		,"SF4":"80-HG-195-M","Prod":{"code":"80-HG-195-M","nam":"Hg-195-m","ZA":80195,"ProdM":"M"}
-		,"SF6":"TTY"
-		,"SF8":"TM"
-		,"SF58":",TTY,,TM","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Prod.thick target yield/1 MeV thn."
+		,"SF6":"TTY/DEN"
+		,"SF8":"PHY"
+		,"SF58":",TTY/DEN,,PHY","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Physical thick targ.yld.diff.by incident energy"
 	    }]}
 	}
       ]
@@ -201,6 +223,14 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[".Fig 6 of R,INFN/TC-80/17,,1980"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF6=TTY -> TTY/DEN, SF8=TM -> PHY in"
+		,"REACTION code."]
 	}
       ]
     }
@@ -231,12 +261,12 @@
 	,[43.42,120.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2100003", "Pointer":" "
- ,"Subent":"O2100003", "compiled":20121028
+ ,"Subent":"O2100003", "compiled":20191008
  ,"year1":1980, "author1ini":"C.", "author1":"Birattari"
  ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"3N", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Prod.thick target yield/1 MeV thn."
- ,"reacode":"79-AU-197(P,3N)80-HG-195-M,,TTY,,TM"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick targ.yld.diff.by incident energy"
+ ,"reacode":"79-AU-197(P,3N)80-HG-195-M,,TTY/DEN,,PHY"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":11
@@ -277,24 +307,24 @@
 }
    ]
    }
-  ,{"SUBENT":"O2100004", "isub":4, "compiled":20121028, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2100004", "isub":4, "compiled":20191008, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(P,N)80-HG-197-G,,TTY,,TM"
-	    ,"c4reac":"(P,N),TTY,,TM"
+	,"x4code":{"code":"79-AU-197(P,N)80-HG-197-G,,TTY/DEN,,PHY"
+	    ,"c4reac":"(P,N),TTY/DEN,,PHY"
 	    ,"combi":"a"
 	    ,"Units":"MBQ/C/MEV"
 	    ,"reacs": [
-	    {"code":"79-AU-197(P,N)80-HG-197-G,,TTY,,TM"
+	    {"code":"79-AU-197(P,N)80-HG-197-G,,TTY/DEN,,PHY"
 		,"Reac":"P,N"
 		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"N"
 		,"SF4":"80-HG-197-G","Prod":{"code":"80-HG-197-G","nam":"Hg-197-g","ZA":80197,"ProdM":"G"}
-		,"SF6":"TTY"
-		,"SF8":"TM"
-		,"SF58":",TTY,,TM","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Prod.thick target yield/1 MeV thn."
+		,"SF6":"TTY/DEN"
+		,"SF8":"PHY"
+		,"SF58":",TTY/DEN,,PHY","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Physical thick targ.yld.diff.by incident energy"
 	    }]}
 	}
       ]
@@ -310,6 +340,14 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[".Fig 6 of R,INFN/TC-80/17,,1980"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF6=TTY -> TTY/DEN, SF8=TM -> PHY in"
+		,"REACTION code."]
 	}
       ]
     }
@@ -338,12 +376,12 @@
 	,[20.69,6.982]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2100004", "Pointer":" "
- ,"Subent":"O2100004", "compiled":20121028
+ ,"Subent":"O2100004", "compiled":20191008
  ,"year1":1980, "author1ini":"C.", "author1":"Birattari"
  ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Prod.thick target yield/1 MeV thn."
- ,"reacode":"79-AU-197(P,N)80-HG-197-G,,TTY,,TM"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick targ.yld.diff.by incident energy"
+ ,"reacode":"79-AU-197(P,N)80-HG-197-G,,TTY/DEN,,PHY"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":9
@@ -378,24 +416,24 @@
 }
    ]
    }
-  ,{"SUBENT":"O2100005", "isub":5, "compiled":20121028, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2100005", "isub":5, "compiled":20191008, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(P,N)80-HG-197-M,,TTY,,TM"
-	    ,"c4reac":"(P,N),TTY,,TM"
+	,"x4code":{"code":"79-AU-197(P,N)80-HG-197-M,,TTY/DEN,,PHY"
+	    ,"c4reac":"(P,N),TTY/DEN,,PHY"
 	    ,"combi":"a"
 	    ,"Units":"MBQ/C/MEV"
 	    ,"reacs": [
-	    {"code":"79-AU-197(P,N)80-HG-197-M,,TTY,,TM"
+	    {"code":"79-AU-197(P,N)80-HG-197-M,,TTY/DEN,,PHY"
 		,"Reac":"P,N"
 		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"N"
 		,"SF4":"80-HG-197-M","Prod":{"code":"80-HG-197-M","nam":"Hg-197-m","ZA":80197,"ProdM":"M"}
-		,"SF6":"TTY"
-		,"SF8":"TM"
-		,"SF58":",TTY,,TM","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Prod.thick target yield/1 MeV thn."
+		,"SF6":"TTY/DEN"
+		,"SF8":"PHY"
+		,"SF58":",TTY/DEN,,PHY","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Physical thick targ.yld.diff.by incident energy"
 	    }]}
 	}
       ]
@@ -411,6 +449,14 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[".Fig 6 of R,INFN/TC-80/17,,1980"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF6=TTY -> TTY/DEN, SF8=TM -> PHY in"
+		,"REACTION code."]
 	}
       ]
     }
@@ -442,12 +488,12 @@
 	,[33.86,10.94]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2100005", "Pointer":" "
- ,"Subent":"O2100005", "compiled":20121028
+ ,"Subent":"O2100005", "compiled":20191008
  ,"year1":1980, "author1ini":"C.", "author1":"Birattari"
  ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Prod.thick target yield/1 MeV thn."
- ,"reacode":"79-AU-197(P,N)80-HG-197-M,,TTY,,TM"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick targ.yld.diff.by incident energy"
+ ,"reacode":"79-AU-197(P,N)80-HG-197-M,,TTY/DEN,,PHY"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":12
@@ -488,24 +534,24 @@
 }
    ]
    }
-  ,{"SUBENT":"O2100006", "isub":6, "compiled":20121028, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2100006", "isub":6, "compiled":20191008, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(P,5N)80-HG-193-M,,TTY,,TM"
-	    ,"c4reac":"(P,5N),TTY,,TM"
+	,"x4code":{"code":"79-AU-197(P,5N)80-HG-193-M,,TTY/DEN,,PHY"
+	    ,"c4reac":"(P,5N),TTY/DEN,,PHY"
 	    ,"combi":"a"
 	    ,"Units":"MBQ/C/MEV"
 	    ,"reacs": [
-	    {"code":"79-AU-197(P,5N)80-HG-193-M,,TTY,,TM"
+	    {"code":"79-AU-197(P,5N)80-HG-193-M,,TTY/DEN,,PHY"
 		,"Reac":"P,5N"
 		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"5N"
 		,"SF4":"80-HG-193-M","Prod":{"code":"80-HG-193-M","nam":"Hg-193-m","ZA":80193,"ProdM":"M"}
-		,"SF6":"TTY"
-		,"SF8":"TM"
-		,"SF58":",TTY,,TM","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Prod.thick target yield/1 MeV thn."
+		,"SF6":"TTY/DEN"
+		,"SF8":"PHY"
+		,"SF58":",TTY/DEN,,PHY","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Physical thick targ.yld.diff.by incident energy"
 	    }]}
 	}
       ]
@@ -521,6 +567,14 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[".Fig 6 of R,INFN/TC-80/17,,1980"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF6=TTY -> TTY/DEN, SF8=TM -> PHY in"
+		,"REACTION code."]
 	}
       ]
     }
@@ -550,12 +604,12 @@
 	,[44.62,3264]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2100006", "Pointer":" "
- ,"Subent":"O2100006", "compiled":20121028
+ ,"Subent":"O2100006", "compiled":20191008
  ,"year1":1980, "author1ini":"C.", "author1":"Birattari"
  ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"5N", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Prod.thick target yield/1 MeV thn."
- ,"reacode":"79-AU-197(P,5N)80-HG-193-M,,TTY,,TM"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick targ.yld.diff.by incident energy"
+ ,"reacode":"79-AU-197(P,5N)80-HG-193-M,,TTY/DEN,,PHY"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":10
@@ -590,24 +644,24 @@
 }
    ]
    }
-  ,{"SUBENT":"O2100007", "isub":7, "compiled":20121028, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2100007", "isub":7, "compiled":20191008, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(P,X)79-AU-196-G,,TTY,,TM"
-	    ,"c4reac":"(P,X),TTY,,TM"
+	,"x4code":{"code":"79-AU-197(P,X)79-AU-196-G,,TTY/DEN,,PHY"
+	    ,"c4reac":"(P,X),TTY/DEN,,PHY"
 	    ,"combi":"a"
 	    ,"Units":"MBQ/C/MEV"
 	    ,"reacs": [
-	    {"code":"79-AU-197(P,X)79-AU-196-G,,TTY,,TM"
+	    {"code":"79-AU-197(P,X)79-AU-196-G,,TTY/DEN,,PHY"
 		,"Reac":"P,X"
 		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"79-AU-196-G","Prod":{"code":"79-AU-196-G","nam":"Au-196-g","ZA":79196,"ProdM":"G"}
-		,"SF6":"TTY"
-		,"SF8":"TM"
-		,"SF58":",TTY,,TM","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Prod.thick target yield/1 MeV thn."
+		,"SF6":"TTY/DEN"
+		,"SF8":"PHY"
+		,"SF58":",TTY/DEN,,PHY","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Physical thick targ.yld.diff.by incident energy"
 	    }]}
 	}
       ]
@@ -624,6 +678,14 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[".Fig 7 of R,INFN/TC-80/17,,1980"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF6=TTY -> TTY/DEN, SF8=TM -> PHY in"
+		,"REACTION code."]
 	}
       ]
     }
@@ -652,12 +714,12 @@
 	,[42.19,60.01]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2100007", "Pointer":" "
- ,"Subent":"O2100007", "compiled":20121028
+ ,"Subent":"O2100007", "compiled":20191008
  ,"year1":1980, "author1ini":"C.", "author1":"Birattari"
  ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Prod.thick target yield/1 MeV thn."
- ,"reacode":"79-AU-197(P,X)79-AU-196-G,,TTY,,TM"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick targ.yld.diff.by incident energy"
+ ,"reacode":"79-AU-197(P,X)79-AU-196-G,,TTY/DEN,,PHY"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":9
@@ -692,24 +754,24 @@
 }
    ]
    }
-  ,{"SUBENT":"O2100008", "isub":8, "compiled":20121028, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2100008", "isub":8, "compiled":20191008, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(P,X)79-AU-196-M2,,TTY,,TM"
-	    ,"c4reac":"(P,X),TTY,,TM"
+	,"x4code":{"code":"79-AU-197(P,X)79-AU-196-M2,,TTY/DEN,,PHY"
+	    ,"c4reac":"(P,X),TTY/DEN,,PHY"
 	    ,"combi":"a"
 	    ,"Units":"MBQ/C/MEV"
 	    ,"reacs": [
-	    {"code":"79-AU-197(P,X)79-AU-196-M2,,TTY,,TM"
+	    {"code":"79-AU-197(P,X)79-AU-196-M2,,TTY/DEN,,PHY"
 		,"Reac":"P,X"
 		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"79-AU-196-M2","Prod":{"code":"79-AU-196-M2","nam":"Au-196-m2","ZA":79196,"ProdM":"N"}
-		,"SF6":"TTY"
-		,"SF8":"TM"
-		,"SF58":",TTY,,TM","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Prod.thick target yield/1 MeV thn."
+		,"SF6":"TTY/DEN"
+		,"SF8":"PHY"
+		,"SF58":",TTY/DEN,,PHY","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Physical thick targ.yld.diff.by incident energy"
 	    }]}
 	}
       ]
@@ -725,6 +787,14 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[".Fig 7 of R,INFN/TC-80/17,,1980"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF6=TTY -> TTY/DEN, SF8=TM -> PHY in"
+		,"REACTION code."]
 	}
       ]
     }
@@ -751,12 +821,12 @@
 	,[42.2,68.36]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2100008", "Pointer":" "
- ,"Subent":"O2100008", "compiled":20121028
+ ,"Subent":"O2100008", "compiled":20191008
  ,"year1":1980, "author1ini":"C.", "author1":"Birattari"
  ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Prod.thick target yield/1 MeV thn."
- ,"reacode":"79-AU-197(P,X)79-AU-196-M2,,TTY,,TM"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick targ.yld.diff.by incident energy"
+ ,"reacode":"79-AU-197(P,X)79-AU-196-M2,,TTY/DEN,,PHY"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":7
@@ -791,30 +861,30 @@
 }
    ]
    }
-  ,{"SUBENT":"O2100009", "isub":9, "compiled":20121028, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2100009", "isub":9, "compiled":20191008, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(P,X)79-AU-194,,TTY,,TM"
-	    ,"c4reac":"(P,X),TTY,,TM"
+	,"x4code":{"code":"79-AU-197(P,X)79-AU-194,,TTY/DEN,,PHY"
+	    ,"c4reac":"(P,X),TTY/DEN,,PHY"
 	    ,"combi":"a"
 	    ,"Units":"MBQ/C/MEV"
 	    ,"reacs": [
-	    {"code":"79-AU-197(P,X)79-AU-194,,TTY,,TM"
+	    {"code":"79-AU-197(P,X)79-AU-194,,TTY/DEN,,PHY"
 		,"Reac":"P,X"
 		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"79-AU-194","Prod":{"code":"79-AU-194","nam":"Au-194","ZA":79194}
-		,"SF6":"TTY"
-		,"SF8":"TM"
-		,"SF58":",TTY,,TM","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Prod.thick target yield/1 MeV thn."
+		,"SF6":"TTY/DEN"
+		,"SF8":"PHY"
+		,"SF58":",TTY/DEN,,PHY","Quant":"TT","BasicUnits":"MBQ/C/MEV","QuantHlp":"Physical thick targ.yld.diff.by incident energy"
 	    }]}
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-194", "t12":39.5, "t12units":"HR", "t12sec":142200.0
+	,"x4codes":[{"Nucl":"79-AU-194-G", "t12":39.5, "t12units":"HR", "t12sec":142200.0
 	, "Radiations":[ {"Type":"DG", "Energy":[328.0], "Intensity":0.61}]}]
 	}
       ]
@@ -824,6 +894,14 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[".Fig 7 of R,INFN/TC-80/17,,1980"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF6=TTY -> TTY/DEN, SF8=TM -> PHY in"
+		,"REACTION code."]
 	}
       ]
     }
@@ -848,12 +926,12 @@
 	,[42.25,111.6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2100009", "Pointer":" "
- ,"Subent":"O2100009", "compiled":20121028
+ ,"Subent":"O2100009", "compiled":20191008
  ,"year1":1980, "author1ini":"C.", "author1":"Birattari"
  ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Prod.thick target yield/1 MeV thn."
- ,"reacode":"79-AU-197(P,X)79-AU-194,,TTY,,TM"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick targ.yld.diff.by incident energy"
+ ,"reacode":"79-AU-197(P,X)79-AU-194,,TTY/DEN,,PHY"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":5
@@ -883,6 +961,232 @@
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[3.017e+7,3.295e+7,3.605e+7,3.905e+7,4.225e+7]
+   }
+ }
+}
+   ]
+   }
+  ,{"SUBENT":"O2100010", "isub":10, "compiled":20191008, "TransID":"O072", "TransDate":20191217
+    ,"BIB":{
+      "REACTION":[
+	{"x4pointer":" "
+	,"x4code":{"code":"79-AU-197(P,3N)80-HG-195-G,,SIG"
+	    ,"c4reac":"(P,3N),SIG"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":17
+	    ,"Units":"B"
+	    ,"reacs": [
+	    {"code":"79-AU-197(P,3N)80-HG-195-G,,SIG"
+		,"Reac":"P,3N"
+		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
+		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
+		,"SF3":"3N"
+		,"SF4":"80-HG-195-G","Prod":{"code":"80-HG-195-G","nam":"Hg-195-g","ZA":80195,"ProdM":"G"}
+		,"SF6":"SIG"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }]}
+	}
+      ]
+     ,"DECAY-DATA":[
+	{"x4pointer":" "
+	,"x4codes":[{"Nucl":"80-HG-195-G", "t12":9.5, "t12units":"HR", "t12sec":34200.0
+	, "Radiations":[ {"Type":"DG", "Energy":[585.0], "Intensity":0.0232}]}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" text on p.564 of Appl.Rad.Isot.,35(1984)564"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191008C", "date":"20191008", "act":"C", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Compiled at the data center"}
+	,"x4freetext":[" SD"]
+	}
+      ]
+    }
+    ,"DATA":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
+	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ]
+      ,"datacols":[
+	 ["EN"        ,"DATA"      ]
+	,["MEV"       ,"MB"        ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [27,476]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"O2100010", "Pointer":" "
+ ,"Subent":"O2100010", "compiled":20191008
+ ,"year1":1980, "author1ini":"C.", "author1":"Birattari"
+ ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"3N", "MF":3, "MT":17, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
+ ,"reacode":"79-AU-197(P,3N)80-HG-195-G,,SIG"
+ ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"80-HG-195-G","HalfLife":"9.5HR","HalfLife1":"10.53HR"
+	,"RadiationType":"DG","Ene":585.0,"Ene1":585.13,"Abu":0.0232,"Abu1":0.02
+	,"FcCorrDECAY_DATA":1.16
+	,"reaction":"79-AU-197(P,3N)80-HG-195-G,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 79-AU-197(P,3N)80-HG-195-G,,SIG"
+	," dy=dy/y;                      #to rel. uncertainties"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (79-AU-197(P,3N)80-HG-195-G,,SIG)"
+	,"  #[1]#DECAY-DATA (80-HG-195-G,9.5HR,DG,585.0,0.0232) #Ix_old=0.0232"
+	,"   a1=0.0232/0.02;             #[1]#DECAY-DATA: correction to new 585.13 keV gamma-yield per decay Hg-195-g Ix_new=0.02"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.16"
+	," dy=dy*y;                      #to abs. uncertainties"]
+ ,"wx4data":2
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MB", "basicUnits":"B"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[476]
+    ,"dat1":[0.476]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[27]
+    ,"dat1":[2.7e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.476]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[2.7e+7]
+   }
+ }
+}
+   ]
+   }
+  ,{"SUBENT":"O2100011", "isub":11, "compiled":20191008, "TransID":"O072", "TransDate":20191217
+    ,"BIB":{
+      "REACTION":[
+	{"x4pointer":" "
+	,"x4code":{"code":"79-AU-197(P,3N)80-HG-195-M,,SIG"
+	    ,"c4reac":"(P,3N),SIG"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":17
+	    ,"Units":"B"
+	    ,"reacs": [
+	    {"code":"79-AU-197(P,3N)80-HG-195-M,,SIG"
+		,"Reac":"P,3N"
+		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
+		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
+		,"SF3":"3N"
+		,"SF4":"80-HG-195-M","Prod":{"code":"80-HG-195-M","nam":"Hg-195-m","ZA":80195,"ProdM":"M"}
+		,"SF6":"SIG"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+	    }]}
+	}
+      ]
+     ,"DECAY-DATA":[
+	{"x4pointer":" "
+	,"x4codes":[{"Nucl":"80-HG-195-M", "t12":40.0, "t12units":"HR", "t12sec":144000.0
+	, "Radiations":[ {"Type":"DG", "Energy":[560.0], "Intensity":0.086}]}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" text on p.564 of Appl.Rad.Isot.,35(1984)564"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191008C", "date":"20191008", "act":"C", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Compiled at the data center"}
+	,"x4freetext":[" SD"]
+	}
+      ]
+    }
+    ,"DATA":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
+	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ]
+      ,"datacols":[
+	 ["EN"        ,"DATA"      ]
+	,["MEV"       ,"MB"        ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [28,562]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"O2100011", "Pointer":" "
+ ,"Subent":"O2100011", "compiled":20191008
+ ,"year1":1980, "author1ini":"C.", "author1":"Birattari"
+ ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"3N", "MF":3, "MT":17, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
+ ,"reacode":"79-AU-197(P,3N)80-HG-195-M,,SIG"
+ ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"80-HG-195-M","HalfLife":"40.HR","HalfLife1":"41.6HR"
+	,"RadiationType":"DG","Ene":560.0,"Ene1":560.27,"Abu":0.086,"Abu1":0.071
+	,"FcCorrDECAY_DATA":1.2112676
+	,"reaction":"79-AU-197(P,3N)80-HG-195-M,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 79-AU-197(P,3N)80-HG-195-M,,SIG"
+	," dy=dy/y;                      #to rel. uncertainties"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (79-AU-197(P,3N)80-HG-195-M,,SIG)"
+	,"  #[1]#DECAY-DATA (80-HG-195-M,40.HR,DG,560.0,0.086) #Ix_old=0.086"
+	,"   a1=0.086/0.071;             #[1]#DECAY-DATA: correction to new 560.27 keV gamma-yield per decay Hg-195-m Ix_new=0.071"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.2112676"
+	," dy=dy*y;                      #to abs. uncertainties"]
+ ,"wx4data":2
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MB", "basicUnits":"B"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[562]
+    ,"dat1":[0.562]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[28]
+    ,"dat1":[2.8e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.562]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[2.8e+7]
    }
  }
 }
