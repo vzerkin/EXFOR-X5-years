@@ -1,9 +1,9 @@
-  {"ENTRY":"O1587", "updated":20080826, "TransID":"O037", "TransDate":20081219, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O1587", "updated":20191008, "TransID":"O072", "TransDate":20191217, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1988,"a1":"R.M.Lambrecht+","r1":"J,JRN/L,127,143,1988"
    ,"ref":"Jour: J. of Radioanalytical and Nucl. Chem., Letters, Vol.127, p.143 (1988)"
    ,"title":"Production of iodine-124."
    ,"x4subents":[
-   {"SUBENT":"O1587001", "isub":1, "compiled":20080826, "TransID":"O037", "TransDate":20081219
+   {"SUBENT":"O1587001", "isub":1, "compiled":20191008, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -43,10 +43,8 @@
       ]
      ,"METHOD":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"BCINT", "dict":"METHOD", "idict":21,"hlp":"Beam current integrated"}]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}]
+	,"x4codes":[{"code":"BCINT", "dict":"METHOD", "idict":21,"hlp":"Beam current integrated"}
+	    ,{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}]
 	}
       ]
      ,"SAMPLE":[
@@ -69,13 +67,16 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[".The error is reported by authors in text"]
+	,"x4freetext":[" No information about source of uncertainties"]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[" Data in text"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" From the text on p.147 of"
+		,"             J.Radioanal.Nucl.Chem.,Lett.,127(1988)143"]
 	}
       ]
      ,"HISTORY":[
@@ -89,26 +90,33 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Data section was changed."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code corrected in Subent 002."
+		,"BIB updated."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"O1587002", "isub":2, "compiled":20080826, "TransID":"O037", "TransDate":20081219
+  ,{"SUBENT":"O1587002", "isub":2, "compiled":20191008, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"52-TE-124(D,2N)53-I-124,,TTY,,DT"
-	    ,"c4reac":"(D,2N),TTY,,DT"
+	,"x4code":{"code":"52-TE-124(D,2N)53-I-124,,TTY,,(PHY)"
+	    ,"c4reac":"(D,2N),TTY,,(PHY)"
 	    ,"combi":"a"
+	    ,"Units":"PART/MUAHR"
 	    ,"reacs": [
-	    {"code":"52-TE-124(D,2N)53-I-124,,TTY,,DT"
+	    {"code":"52-TE-124(D,2N)53-I-124,,TTY,,(PHY)"
 		,"Reac":"D,2N"
 		,"SF1":"52-TE-124","Targ":{"code":"52-TE-124","nam":"Te-124","ZA":52124}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"2N"
 		,"SF4":"53-I-124","Prod":{"code":"53-I-124","nam":"I-124","ZA":53124}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"(PHY)"
+		,"SF58":",TTY,,(PHY)","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Thick/thin-target yield, unc. if physical"
 	    }]}
 	}
       ]
@@ -116,18 +124,26 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["*By authors*.The I-124 production yield by the"
-		,"Te-124(d,2n)I-124 was found to be 0.55+-0.06 mCi/muAHr"
-		,"and this was much higher than 0.093 mCi/muAHr obtained"
-		,"by the Te-124(p,n)I-124 reaction. See Rel-Ref."]
+		,"Te-124(d,2n)I-124 was found to be 0.55+-0.06 mCi/muAhr"
+		,"and this was much higher than 0.093 mCi/muAhr obtained"
+		,"by the Te-124(p,n)I-124 reaction. See REL-REF."]
 	}
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"D,A0266002,E.ACERBI+,J,ARI,26,741,1975"
+	,"x4codes":[{"code":"D,A0266002,E.Acerbi+,J,ARI,26,741,1975"
 		,"flag":{"code":"D", "help":" Reference to related data compiled in another entry"}
-		,"subent":"A0266002","author1":"E.ACERBI+","stdFileName":"J,ARI,26,741,1975"
+		,"subent":"A0266002","author1":"E.Acerbi+","stdFileName":"J,ARI,26,741,1975"
 		,"year":1975,"typ":"J","ref":"J,ARI","vol":"26","p":"741"
 		,"shortRef":"Jour: Applied Radiation and Isotopes, Vol.26, p.741 (1975)"}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191008A", "date":"20191008", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> (PHY) in REACTION code."
+		,"ERR-ANALYS deleted."]
 	}
       ]
     }
@@ -151,13 +167,49 @@
 	 [15,0.55,0.06]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1587002", "Pointer":" "
- ,"Subent":"O1587002", "compiled":20080826
-,"year1":1988, "author1ini":"R.M.", "author1":"Lambrecht"
-, "zTarg1":52, "targ1":"Te-124", "proj1":"d", "emis1":"2N", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"52-TE-124(D,2N)53-I-124,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1587002", "compiled":20191008
+ ,"year1":1988, "author1ini":"R.M.", "author1":"Lambrecht"
+ ,"zTarg1":52, "targ1":"Te-124", "proj1":"d", "emis1":"2N", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Thick/thin-target yield, unc. if physical"
+ ,"reacode":"52-TE-124(D,2N)53-I-124,,TTY,,(PHY)"
+ ,"compNotes":["Ignored column:DATA-ERR,MCI/MUAHR  expected units:PART/MUAHR,PER-CENT"]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MCI/MUAHR", "basicUnits":"MCI/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.55]
+    ,"dat1":[2.035e+7]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MCI/MUAHR", "basicUnits":"MCI/MUAHR"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.06]
+    ,"dat1":[2.22e+6]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[15]
+    ,"dat1":[1.5e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[2.035e+7]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.5e+7]
+   }
+ }
 }
    ]
    }
