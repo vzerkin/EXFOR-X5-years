@@ -1,15 +1,15 @@
-  {"ENTRY":"O1337", "updated":20170826, "TransID":"O063", "TransDate":20180128, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O1337", "updated":20191009, "TransID":"O072", "TransDate":20191217, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":2004,"a1":"I.E.Alekseev+","r1":"J,RAK,46,159,2004"
    ,"ref":"Jour: Radiokhimiya, Vol.46, p.159 (2004)"
-   ,"title":"A study of iron targets irradiated with C-12 and N-14 ions"
+   ,"title":"A study of iron targets irradiated with 12C(4+) and 14N(5+) ions"
    ,"x4subents":[
-   {"SUBENT":"O1337001", "isub":1, "compiled":20170826, "TransID":"O063", "TransDate":20180128
+   {"SUBENT":"O1337001", "isub":1, "compiled":20191009, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["A study of iron targets irradiated with C-12 and N-14"
-		,"ions"]
+	,"x4freetext":["A study of iron targets irradiated with 12C(4+)"
+		,"and 14N(5+) ions"]
 	}
       ]
      ,"AUTHOR":[
@@ -21,10 +21,8 @@
       ]
      ,"INSTITUTE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"4RUSSUL", "dict":"INSTITUTE", "idict":3,"hlp":"Gosudarstvennyi Univ. (State Univ.), St.Petersburg, Russia"}]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"4RUSFTI", "dict":"INSTITUTE", "idict":3,"hlp":"Fiz.-Tekhnicheskiy Inst.Ioffe, St.Petersburg+Gatchina, Russia"}]
+	,"x4codes":[{"code":"4RUSSUL", "dict":"INSTITUTE", "idict":3,"hlp":"Gosudarstvennyi Univ. (State Univ.), St.Petersburg, Russia"}
+	    ,{"code":"4RUSFTI", "dict":"INSTITUTE", "idict":3,"hlp":"Fiz.-Tekhnicheskiy Inst.Ioffe, St.Petersburg+Gatchina, Russia"}]
 	}
       ]
      ,"REFERENCE":[
@@ -46,7 +44,7 @@
 	,"x4code":null
 	,"x4freetext":["Targets were prepared by rolling from powdered Fe-57"
 		,"metal, 90% enrichment, main isotope impurity Fe-56 is"
-		," 9%."]
+		," 9%. Target thickness was 40.+-5. mu-m."]
 	}
       ]
      ,"DETECTOR":[
@@ -82,7 +80,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" In paper"]
+	,"x4freetext":[" Tbl.1 from Radiokhimiya, 46(2004)159"]
 	}
       ]
      ,"ADD-RES":[
@@ -113,18 +111,25 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" SD: Year of publ. corrected."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191009A", "date":"20191009", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code corrected in"
+		,"Subents 002-006. STATUS updated."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"O1337002", "isub":2, "compiled":20060529, "TransID":"O026", "TransDate":20060703
+  ,{"SUBENT":"O1337002", "isub":2, "compiled":20191009, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"26-FE-56(6-C-12,X)31-GA-66,CUM,TTY,,DT"
-	    ,"c4reac":"(6-C-12,X)CUM,TTY,,DT"
+	,"x4code":{"code":"26-FE-56(6-C-12,X)31-GA-66,CUM,TTY,,EOB/MSC"
+	    ,"c4reac":"(6-C-12,X)CUM,TTY,,EOB/MSC"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"26-FE-56(6-C-12,X)31-GA-66,CUM,TTY,,DT"
+	    {"code":"26-FE-56(6-C-12,X)31-GA-66,CUM,TTY,,EOB/MSC"
 		,"Reac":"6-C-12,X"
 		,"SF1":"26-FE-56","Targ":{"code":"26-FE-56","nam":"Fe-56","ZA":26056}
 		,"SF2":"6-C-12","Proj":{"code":"6-C-12","nam":"C-12","ZA":6012}
@@ -132,9 +137,10 @@
 		,"SF4":"31-GA-66","Prod":{"code":"31-GA-66","nam":"Ga-66","ZA":31066}
 		,"SF5":"CUM"
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":"CUM,TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB/MSC"
+		,"SF58":"CUM,TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"EOB thick target yield, cumulative"
 	    }]}
+	,"x4freetext":[" EOB yield without irradiation time specification"]
 	}
       ]
      ,"DECAY-DATA":[
@@ -143,46 +149,90 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[1039.0], "Intensity":0.384}]}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191009A", "date":"20191009", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> EOB/MSC in REACTION code."]
+	}
+      ]
     }
     ,"DATA":{"ncols":3, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"KBQ/MUAHR", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"KBQ/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"kilo-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000.0,"basicUnits":"KBQ/MUAHR"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"KBQ/MUAHR", "pointer":" "
+	,"unitsHelp":"kilo-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1000.0,"basicUnits":"MBQ/MUA"}
+      ,{"icol":2, "header":"DATA-ERR", "units":"KBQ/MUA", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"kilo-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000.0,"basicUnits":"KBQ/MUAHR"}
+	,"unitsHelp":"kilo-Becquerel/micro-Ampere","familyCode":"TTY","convFc":1000.0,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"KBQ/MUAHR" ,"KBQ/MUAHR" ]
+	,["MEV"       ,"KBQ/MUA"   ,"KBQ/MUA"   ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [47.2,207.9,20.4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1337002", "Pointer":" "
- ,"Subent":"O1337002", "compiled":20060529
-,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
-, "zTarg1":26, "targ1":"Fe-56", "proj1":"C-12", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"26-FE-56(6-C-12,X)31-GA-66,CUM,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1337002", "compiled":20191009
+ ,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
+ ,"zTarg1":26, "targ1":"Fe-56", "proj1":"C-12", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"EOB thick target yield, cumulative"
+ ,"reacode":"26-FE-56(6-C-12,X)31-GA-66,CUM,TTY,,EOB/MSC"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"KBQ/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[207.9]
+    ,"dat1":[2.079e+5]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"KBQ/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[20.4]
+    ,"dat1":[20400]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[47.2]
+    ,"dat1":[4.72e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[2.079e+5]
+      ,"dy":[20400]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[4.72e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"O1337003", "isub":3, "compiled":20060529, "TransID":"O026", "TransDate":20060703
+  ,{"SUBENT":"O1337003", "isub":3, "compiled":20191009, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"26-FE-57(6-C-12,X)31-GA-67,CUM,TTY,,DT"
-	    ,"c4reac":"(6-C-12,X)CUM,TTY,,DT"
+	,"x4code":{"code":"26-FE-57(6-C-12,X)31-GA-67,CUM,TTY,,EOB/MSC"
+	    ,"c4reac":"(6-C-12,X)CUM,TTY,,EOB/MSC"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"26-FE-57(6-C-12,X)31-GA-67,CUM,TTY,,DT"
+	    {"code":"26-FE-57(6-C-12,X)31-GA-67,CUM,TTY,,EOB/MSC"
 		,"Reac":"6-C-12,X"
 		,"SF1":"26-FE-57","Targ":{"code":"26-FE-57","nam":"Fe-57","ZA":26057}
 		,"SF2":"6-C-12","Proj":{"code":"6-C-12","nam":"C-12","ZA":6012}
@@ -190,15 +240,23 @@
 		,"SF4":"31-GA-67","Prod":{"code":"31-GA-67","nam":"Ga-67","ZA":31067}
 		,"SF5":"CUM"
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":"CUM,TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB/MSC"
+		,"SF58":"CUM,TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"EOB thick target yield, cumulative"
 	    }]}
+	,"x4freetext":[" EOB yield without irradiation time specification"]
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"31-GA-67", "t12":78.26, "t12units":"HR", "t12sec":281736.0
 	, "Radiations":[ {"Type":"DG", "Energy":[184.6], "Intensity":0.209}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191009A", "date":"20191009", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> EOB/MSC in REACTION code."]
 	}
       ]
     }
@@ -222,40 +280,85 @@
 	 [47.2,74.4,7.4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1337003", "Pointer":" "
- ,"Subent":"O1337003", "compiled":20060529
-,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
-, "zTarg1":26, "targ1":"Fe-57", "proj1":"C-12", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"26-FE-57(6-C-12,X)31-GA-67,CUM,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1337003", "compiled":20191009
+ ,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
+ ,"zTarg1":26, "targ1":"Fe-57", "proj1":"C-12", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"EOB thick target yield, cumulative"
+ ,"reacode":"26-FE-57(6-C-12,X)31-GA-67,CUM,TTY,,EOB/MSC"
+ ,"compNotes":["Ignored column:DATA-ERR,KBQ/MUAHR  expected units:MBQ/MUA,PER-CENT"]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"KBQ/MUAHR", "basicUnits":"KBQ/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[74.4]
+    ,"dat1":[74400]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"KBQ/MUAHR", "basicUnits":"KBQ/MUAHR"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[7.4]
+    ,"dat1":[7400]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[47.2]
+    ,"dat1":[4.72e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[74400]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[4.72e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"O1337004", "isub":4, "compiled":20060529, "TransID":"O026", "TransDate":20060703
+  ,{"SUBENT":"O1337004", "isub":4, "compiled":20191009, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"26-FE-57(7-N-14,X)27-CO-58,,TTY,,DT"
-	    ,"c4reac":"(7-N-14,X),TTY,,DT"
+	,"x4code":{"code":"26-FE-57(7-N-14,X)27-CO-58,,TTY,,EOB/MSC"
+	    ,"c4reac":"(7-N-14,X),TTY,,EOB/MSC"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"26-FE-57(7-N-14,X)27-CO-58,,TTY,,DT"
+	    {"code":"26-FE-57(7-N-14,X)27-CO-58,,TTY,,EOB/MSC"
 		,"Reac":"7-N-14,X"
 		,"SF1":"26-FE-57","Targ":{"code":"26-FE-57","nam":"Fe-57","ZA":26057}
 		,"SF2":"7-N-14","Proj":{"code":"7-N-14","nam":"N-14","ZA":7014}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"27-CO-58","Prod":{"code":"27-CO-58","nam":"Co-58","ZA":27058}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB/MSC"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
+	,"x4freetext":[" EOB yield without irradiation time specification"]
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"27-CO-58-G", "t12":70.8, "t12units":"D", "t12sec":6117120.0
 	, "Radiations":[ {"Type":"DG", "Energy":[810.8], "Intensity":0.994}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191009A", "date":"20191009", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> EOB/MSC in REACTION code."]
 	}
       ]
     }
@@ -279,25 +382,62 @@
 	 [58.8,0.47,0.04]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1337004", "Pointer":" "
- ,"Subent":"O1337004", "compiled":20060529
-,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
-, "zTarg1":26, "targ1":"Fe-57", "proj1":"N-14", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"26-FE-57(7-N-14,X)27-CO-58,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1337004", "compiled":20191009
+ ,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
+ ,"zTarg1":26, "targ1":"Fe-57", "proj1":"N-14", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"26-FE-57(7-N-14,X)27-CO-58,,TTY,,EOB/MSC"
+ ,"compNotes":["Ignored column:DATA-ERR,KBQ/MUAHR  expected units:MBQ/MUA,PER-CENT"]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"KBQ/MUAHR", "basicUnits":"KBQ/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.47]
+    ,"dat1":[470]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"KBQ/MUAHR", "basicUnits":"KBQ/MUAHR"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.04]
+    ,"dat1":[40]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[58.8]
+    ,"dat1":[5.88e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[470]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[5.88e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"O1337005", "isub":5, "compiled":20060529, "TransID":"O026", "TransDate":20060703
+  ,{"SUBENT":"O1337005", "isub":5, "compiled":20191009, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"26-FE-57(7-N-14,X)30-ZN-65,CUM,TTY,,DT"
-	    ,"c4reac":"(7-N-14,X)CUM,TTY,,DT"
+	,"x4code":{"code":"26-FE-57(7-N-14,X)30-ZN-65,CUM,TTY,,EOB/MSC"
+	    ,"c4reac":"(7-N-14,X)CUM,TTY,,EOB/MSC"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"26-FE-57(7-N-14,X)30-ZN-65,CUM,TTY,,DT"
+	    {"code":"26-FE-57(7-N-14,X)30-ZN-65,CUM,TTY,,EOB/MSC"
 		,"Reac":"7-N-14,X"
 		,"SF1":"26-FE-57","Targ":{"code":"26-FE-57","nam":"Fe-57","ZA":26057}
 		,"SF2":"7-N-14","Proj":{"code":"7-N-14","nam":"N-14","ZA":7014}
@@ -305,15 +445,23 @@
 		,"SF4":"30-ZN-65","Prod":{"code":"30-ZN-65","nam":"Zn-65","ZA":30065}
 		,"SF5":"CUM"
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":"CUM,TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB/MSC"
+		,"SF58":"CUM,TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"EOB thick target yield, cumulative"
 	    }]}
+	,"x4freetext":[" EOB yield without irradiation time specification"]
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"30-ZN-65", "t12":243.9, "t12units":"D", "t12sec":2.107296E7
 	, "Radiations":[ {"Type":"DG", "Energy":[1116.0], "Intensity":0.507}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191009A", "date":"20191009", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> EOB/MSC in REACTION code."]
 	}
       ]
     }
@@ -337,25 +485,62 @@
 	 [58.8,0.9,0.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1337005", "Pointer":" "
- ,"Subent":"O1337005", "compiled":20060529
-,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
-, "zTarg1":26, "targ1":"Fe-57", "proj1":"N-14", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"26-FE-57(7-N-14,X)30-ZN-65,CUM,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1337005", "compiled":20191009
+ ,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
+ ,"zTarg1":26, "targ1":"Fe-57", "proj1":"N-14", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"EOB thick target yield, cumulative"
+ ,"reacode":"26-FE-57(7-N-14,X)30-ZN-65,CUM,TTY,,EOB/MSC"
+ ,"compNotes":["Ignored column:DATA-ERR,KBQ/MUAHR  expected units:MBQ/MUA,PER-CENT"]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"KBQ/MUAHR", "basicUnits":"KBQ/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.9]
+    ,"dat1":[900]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"KBQ/MUAHR", "basicUnits":"KBQ/MUAHR"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.1]
+    ,"dat1":[100]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[58.8]
+    ,"dat1":[5.88e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[900]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[5.88e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"O1337006", "isub":6, "compiled":20060529, "TransID":"O026", "TransDate":20060703
+  ,{"SUBENT":"O1337006", "isub":6, "compiled":20191009, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"26-FE-57(7-N-14,X)31-GA-66,CUM,TTY,,DT"
-	    ,"c4reac":"(7-N-14,X)CUM,TTY,,DT"
+	,"x4code":{"code":"26-FE-57(7-N-14,X)31-GA-66,CUM,TTY,,EOB/MSC"
+	    ,"c4reac":"(7-N-14,X)CUM,TTY,,EOB/MSC"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"26-FE-57(7-N-14,X)31-GA-66,CUM,TTY,,DT"
+	    {"code":"26-FE-57(7-N-14,X)31-GA-66,CUM,TTY,,EOB/MSC"
 		,"Reac":"7-N-14,X"
 		,"SF1":"26-FE-57","Targ":{"code":"26-FE-57","nam":"Fe-57","ZA":26057}
 		,"SF2":"7-N-14","Proj":{"code":"7-N-14","nam":"N-14","ZA":7014}
@@ -363,15 +548,23 @@
 		,"SF4":"31-GA-66","Prod":{"code":"31-GA-66","nam":"Ga-66","ZA":31066}
 		,"SF5":"CUM"
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":"CUM,TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB/MSC"
+		,"SF58":"CUM,TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"EOB thick target yield, cumulative"
 	    }]}
+	,"x4freetext":[" EOB yield without irradiation time specification"]
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"31-GA-66", "t12":9.4, "t12units":"HR", "t12sec":33840.0
 	, "Radiations":[ {"Type":"DG", "Energy":[1039.0], "Intensity":0.384}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191009A", "date":"20191009", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> EOB/MSC in REACTION code."]
 	}
       ]
     }
@@ -395,25 +588,62 @@
 	 [58.8,66.7,6.6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1337006", "Pointer":" "
- ,"Subent":"O1337006", "compiled":20060529
-,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
-, "zTarg1":26, "targ1":"Fe-57", "proj1":"N-14", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"26-FE-57(7-N-14,X)31-GA-66,CUM,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1337006", "compiled":20191009
+ ,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
+ ,"zTarg1":26, "targ1":"Fe-57", "proj1":"N-14", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"EOB thick target yield, cumulative"
+ ,"reacode":"26-FE-57(7-N-14,X)31-GA-66,CUM,TTY,,EOB/MSC"
+ ,"compNotes":["Ignored column:DATA-ERR,KBQ/MUAHR  expected units:MBQ/MUA,PER-CENT"]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"KBQ/MUAHR", "basicUnits":"KBQ/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[66.7]
+    ,"dat1":[66700]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"KBQ/MUAHR", "basicUnits":"KBQ/MUAHR"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[6.6]
+    ,"dat1":[6600]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[58.8]
+    ,"dat1":[5.88e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[66700]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[5.88e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"O1337007", "isub":7, "compiled":20060529, "TransID":"O026", "TransDate":20060703
+  ,{"SUBENT":"O1337007", "isub":7, "compiled":20191009, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"26-FE-57(7-N-14,X)31-GA-67,CUM,TTY,,DT"
-	    ,"c4reac":"(7-N-14,X)CUM,TTY,,DT"
+	,"x4code":{"code":"26-FE-57(7-N-14,X)31-GA-67,CUM,TTY,,EOB/MSC"
+	    ,"c4reac":"(7-N-14,X)CUM,TTY,,EOB/MSC"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"26-FE-57(7-N-14,X)31-GA-67,CUM,TTY,,DT"
+	    {"code":"26-FE-57(7-N-14,X)31-GA-67,CUM,TTY,,EOB/MSC"
 		,"Reac":"7-N-14,X"
 		,"SF1":"26-FE-57","Targ":{"code":"26-FE-57","nam":"Fe-57","ZA":26057}
 		,"SF2":"7-N-14","Proj":{"code":"7-N-14","nam":"N-14","ZA":7014}
@@ -421,15 +651,23 @@
 		,"SF4":"31-GA-67","Prod":{"code":"31-GA-67","nam":"Ga-67","ZA":31067}
 		,"SF5":"CUM"
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":"CUM,TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB/MSC"
+		,"SF58":"CUM,TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"EOB thick target yield, cumulative"
 	    }]}
+	,"x4freetext":[" EOB yield without irradiation time specification"]
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"31-GA-67", "t12":78.26, "t12units":"HR", "t12sec":281736.0
 	, "Radiations":[ {"Type":"DG", "Energy":[184.6], "Intensity":0.209}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191009A", "date":"20191009", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> EOB/MSC in REACTION code."]
 	}
       ]
     }
@@ -453,25 +691,62 @@
 	 [58.8,41.6,4.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1337007", "Pointer":" "
- ,"Subent":"O1337007", "compiled":20060529
-,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
-, "zTarg1":26, "targ1":"Fe-57", "proj1":"N-14", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"26-FE-57(7-N-14,X)31-GA-67,CUM,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1337007", "compiled":20191009
+ ,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
+ ,"zTarg1":26, "targ1":"Fe-57", "proj1":"N-14", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"EOB thick target yield, cumulative"
+ ,"reacode":"26-FE-57(7-N-14,X)31-GA-67,CUM,TTY,,EOB/MSC"
+ ,"compNotes":["Ignored column:DATA-ERR,KBQ/MUAHR  expected units:MBQ/MUA,PER-CENT"]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"KBQ/MUAHR", "basicUnits":"KBQ/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[41.6]
+    ,"dat1":[41600]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"KBQ/MUAHR", "basicUnits":"KBQ/MUAHR"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[4.1]
+    ,"dat1":[4100]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[58.8]
+    ,"dat1":[5.88e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[41600]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[5.88e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"O1337008", "isub":8, "compiled":20060529, "TransID":"O026", "TransDate":20060703
+  ,{"SUBENT":"O1337008", "isub":8, "compiled":20191009, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"26-FE-57(7-N-14,X)32-GE-69,CUM,TTY,,DT"
-	    ,"c4reac":"(7-N-14,X)CUM,TTY,,DT"
+	,"x4code":{"code":"26-FE-57(7-N-14,X)32-GE-69,CUM,TTY,,EOB/MSC"
+	    ,"c4reac":"(7-N-14,X)CUM,TTY,,EOB/MSC"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"26-FE-57(7-N-14,X)32-GE-69,CUM,TTY,,DT"
+	    {"code":"26-FE-57(7-N-14,X)32-GE-69,CUM,TTY,,EOB/MSC"
 		,"Reac":"7-N-14,X"
 		,"SF1":"26-FE-57","Targ":{"code":"26-FE-57","nam":"Fe-57","ZA":26057}
 		,"SF2":"7-N-14","Proj":{"code":"7-N-14","nam":"N-14","ZA":7014}
@@ -479,9 +754,10 @@
 		,"SF4":"32-GE-69","Prod":{"code":"32-GE-69","nam":"Ge-69","ZA":32069}
 		,"SF5":"CUM"
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":"CUM,TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB/MSC"
+		,"SF58":"CUM,TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"EOB thick target yield, cumulative"
 	    }]}
+	,"x4freetext":[" EOB yield without irradiation time specification"]
 	}
       ]
      ,"DECAY-DATA":[
@@ -489,6 +765,13 @@
 	,"x4codes":[{"Nucl":"32-GE-69", "t12":39.05, "t12units":"HR", "t12sec":140580.0
 	, "Radiations":[ {"Type":"AR", "Energy":[573.9], "Intensity":0.111}
 			,{"Type":"AR", "Energy":[1106.0], "Intensity":0.257}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191009A", "date":"20191009", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> EOB/MSC in REACTION code."]
 	}
       ]
     }
@@ -512,13 +795,49 @@
 	 [58.8,29.8,2.8]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1337008", "Pointer":" "
- ,"Subent":"O1337008", "compiled":20060529
-,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
-, "zTarg1":26, "targ1":"Fe-57", "proj1":"N-14", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"26-FE-57(7-N-14,X)32-GE-69,CUM,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1337008", "compiled":20191009
+ ,"year1":2004, "author1ini":"I.E.", "author1":"Alekseev"
+ ,"zTarg1":26, "targ1":"Fe-57", "proj1":"N-14", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"EOB thick target yield, cumulative"
+ ,"reacode":"26-FE-57(7-N-14,X)32-GE-69,CUM,TTY,,EOB/MSC"
+ ,"compNotes":["Ignored column:DATA-ERR,KBQ/MUAHR  expected units:MBQ/MUA,PER-CENT"]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"KBQ/MUAHR", "basicUnits":"KBQ/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[29.8]
+    ,"dat1":[29800]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"KBQ/MUAHR", "basicUnits":"KBQ/MUAHR"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[2.8]
+    ,"dat1":[2800]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[58.8]
+    ,"dat1":[5.88e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[29800]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[5.88e+7]
+   }
+ }
 }
    ]
    }
