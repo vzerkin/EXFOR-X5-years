@@ -1,9 +1,9 @@
-  {"ENTRY":"O1583", "updated":20100920, "TransID":"O042", "TransDate":20101118, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O1583", "updated":20191009, "TransID":"O072", "TransDate":20191217, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":2004,"a1":"M.Glaser+","r1":"J,RCA,92,951,2004"
    ,"ref":"Jour: Radiochimica Acta, Vol.92, p.951 (2004)"
    ,"title":"Improved target and production of iodine-124 for PET studies."
    ,"x4subents":[
-   {"SUBENT":"O1583001", "isub":1, "compiled":20100920, "TransID":"O042", "TransDate":20101118
+   {"SUBENT":"O1583001", "isub":1, "compiled":20191009, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -44,7 +44,7 @@
 		,"increase the surface of the disk four time which"
 		,"reduces the power densities and allows a much more"
 		,"effective cooling."
-		,"A 10 MM (Te-124) TeO(2) target disk, thickness of"
+		,"A 10 mm (Te-124) TeO(2) target disk, thickness of"
 		," (Te-124)TeO(2)-191-mg/cm**2, was used for target"
 		,"yields in table 3."]
 	}
@@ -86,7 +86,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 3 in text"]
+	,"x4freetext":[" Table 3 from Radiochem.Acta,92(2004)951"]
 	}
       ]
      ,"HISTORY":[
@@ -101,26 +101,32 @@
 	,"x4freetext":[".Correction in DATA-Heading was made,"
 		,"according M.Bossant remarks."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191009A", "date":"20191009", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code corrected in Subent 002."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"O1583002", "isub":2, "compiled":20100709, "TransID":"O042", "TransDate":20101118
+  ,{"SUBENT":"O1583002", "isub":2, "compiled":20191009, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"52-TE-124(P,N)53-I-124,,TTY,,DT"
-	    ,"c4reac":"(P,N),TTY,,DT"
+	,"x4code":{"code":"52-TE-124(P,N)53-I-124,,TTY,,(PHY)"
+	    ,"c4reac":"(P,N),TTY,,(PHY)"
 	    ,"combi":"a"
+	    ,"Units":"PART/MUAHR"
 	    ,"reacs": [
-	    {"code":"52-TE-124(P,N)53-I-124,,TTY,,DT"
+	    {"code":"52-TE-124(P,N)53-I-124,,TTY,,(PHY)"
 		,"Reac":"P,N"
 		,"SF1":"52-TE-124","Targ":{"code":"52-TE-124","nam":"Te-124","ZA":52124}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"N"
 		,"SF4":"53-I-124","Prod":{"code":"53-I-124","nam":"I-124","ZA":53124}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"(PHY)"
+		,"SF58":",TTY,,(PHY)","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Thick/thin-target yield, unc. if physical"
 	    }]}
 	}
       ]
@@ -128,6 +134,13 @@
 	{"x4pointer":" "
 	,"x4codes":[{"code":"MISC"}]
 	,"x4freetext":[".I-123 yield in % of I-124 yield."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191009A", "date":"20191009", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> (PHY) in REACTION code."]
 	}
       ]
     }
@@ -157,13 +170,55 @@
 	,[11.6,8.3,9,3.3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1583002", "Pointer":" "
- ,"Subent":"O1583002", "compiled":20100709
-,"year1":2004, "author1ini":"M.", "author1":"Glaser"
-, "zTarg1":52, "targ1":"Te-124", "proj1":"p", "emis1":"N", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"52-TE-124(P,N)53-I-124,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1583002", "compiled":20191009
+ ,"year1":2004, "author1ini":"M.", "author1":"Glaser"
+ ,"zTarg1":52, "targ1":"Te-124", "proj1":"p", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Thick/thin-target yield, unc. if physical"
+ ,"reacode":"52-TE-124(P,N)53-I-124,,TTY,,(PHY)"
+ ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
+ ,"wx4data":4
+ ,"lx4data":4
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[2.86,11.4,12.5,9]
+    ,"dat1":[2.86e+6,1.14e+7,1.25e+7,9.0e+6]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN-MIN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[16.9,10.5,9.5,8.3]
+    ,"dat1":[1.69e+7,1.05e+7,9.5e+6,8.3e+6]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Max", "dataType":"41", "rank":1.3
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[19,13.3,12.3,11.6]
+    ,"dat1":[1.9e+7,1.33e+7,1.23e+7,1.16e+7]}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"SEE TEXT", "basicUnits":"SEE TEXT"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[5200,59,11,3.3]
+   ,"dat1eq":true}
+  ]
+ ,"wc5data":2
+ ,"lc5data":4
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[2.86e+6,1.14e+7,1.25e+7,9.0e+6]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.795e+7,1.19e+7,1.09e+7,9.95e+6]
+      ,"dx1":[1.05e+6,1.4e+6,1.4e+6,1.65e+6]   }
+ }
 }
    ]
    }
