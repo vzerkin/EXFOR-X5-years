@@ -1,9 +1,9 @@
-  {"ENTRY":"O1622", "updated":20080209, "TransID":"O035", "TransDate":20080526, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O1622", "updated":20191010, "TransID":"O072", "TransDate":20191217, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1984,"a1":"D.N.Abrams+","r1":"J,ARI,35,1045,1984"
    ,"ref":"Jour: Applied Radiation and Isotopes, Vol.35, p.1045 (1984)"
    ,"title":"Production of Cl-34-m from a gaseous hydrogen sulfide target."
    ,"x4subents":[
-   {"SUBENT":"O1622001", "isub":1, "compiled":20080209, "TransID":"O035", "TransDate":20080526
+   {"SUBENT":"O1622001", "isub":1, "compiled":20191010, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -97,6 +97,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
+	,"x4freetext":[" Tbl.1 from Appl.Rad.Isot.,35(1984)1045"]
 	}
       ]
      ,"HISTORY":[
@@ -105,27 +106,41 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" SB"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191010A", "date":"20191010", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code corrected in"
+		,"Subents 002,003."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"O1622002", "isub":2, "compiled":20080209, "TransID":"O035", "TransDate":20080526
+  ,{"SUBENT":"O1622002", "isub":2, "compiled":20191010, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"16-S-34(P,N)17-CL-34-M,,TTY,,DT"
-	    ,"c4reac":"(P,N),TTY,,DT"
+	,"x4code":{"code":"16-S-34(P,N)17-CL-34-M,,TTY,,PHY"
+	    ,"c4reac":"(P,N),TTY,,PHY"
 	    ,"combi":"a"
+	    ,"Units":"PART/MUAHR"
 	    ,"reacs": [
-	    {"code":"16-S-34(P,N)17-CL-34-M,,TTY,,DT"
+	    {"code":"16-S-34(P,N)17-CL-34-M,,TTY,,PHY"
 		,"Reac":"P,N"
 		,"SF1":"16-S-34","Targ":{"code":"16-S-34","nam":"S-34","ZA":16034}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"N"
 		,"SF4":"17-CL-34-M","Prod":{"code":"17-CL-34-M","nam":"Cl-34-m","ZA":17034,"ProdM":"M"}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"PHY"
+		,"SF58":",TTY,,PHY","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Physical thick/thin-target yield"
 	    }]}
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191010A", "date":"20191010", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> PHY in REACTION code"]
 	}
       ]
     }
@@ -146,34 +161,72 @@
 	 [22,13]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1622002", "Pointer":" "
- ,"Subent":"O1622002", "compiled":20080209
-,"year1":1984, "author1ini":"D.N.", "author1":"Abrams"
-, "zTarg1":16, "targ1":"S-34", "proj1":"p", "emis1":"N", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"16-S-34(P,N)17-CL-34-M,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1622002", "compiled":20191010
+ ,"year1":1984, "author1ini":"D.N.", "author1":"Abrams"
+ ,"zTarg1":16, "targ1":"S-34", "proj1":"p", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick/thin-target yield"
+ ,"reacode":"16-S-34(P,N)17-CL-34-M,,TTY,,PHY"
+ ,"compNotes":[]
+ ,"wx4data":2
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[13]
+    ,"dat1":[1.3e+7]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[22]
+    ,"dat1":[2.2e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.3e+7]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[2.2e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"O1622003", "isub":3, "compiled":20080209, "TransID":"O035", "TransDate":20080526
+  ,{"SUBENT":"O1622003", "isub":3, "compiled":20191010, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"16-S-34(D,2N)17-CL-34-M,,TTY,,DT"
-	    ,"c4reac":"(D,2N),TTY,,DT"
+	,"x4code":{"code":"16-S-34(D,2N)17-CL-34-M,,TTY,,PHY"
+	    ,"c4reac":"(D,2N),TTY,,PHY"
 	    ,"combi":"a"
+	    ,"Units":"PART/MUAHR"
 	    ,"reacs": [
-	    {"code":"16-S-34(D,2N)17-CL-34-M,,TTY,,DT"
+	    {"code":"16-S-34(D,2N)17-CL-34-M,,TTY,,PHY"
 		,"Reac":"D,2N"
 		,"SF1":"16-S-34","Targ":{"code":"16-S-34","nam":"S-34","ZA":16034}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"2N"
 		,"SF4":"17-CL-34-M","Prod":{"code":"17-CL-34-M","nam":"Cl-34-m","ZA":17034,"ProdM":"M"}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"PHY"
+		,"SF58":",TTY,,PHY","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Physical thick/thin-target yield"
 	    }]}
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191010A", "date":"20191010", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> PHY in REACTION code"]
 	}
       ]
     }
@@ -194,13 +247,43 @@
 	 [12,0.54]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1622003", "Pointer":" "
- ,"Subent":"O1622003", "compiled":20080209
-,"year1":1984, "author1ini":"D.N.", "author1":"Abrams"
-, "zTarg1":16, "targ1":"S-34", "proj1":"d", "emis1":"2N", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"16-S-34(D,2N)17-CL-34-M,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1622003", "compiled":20191010
+ ,"year1":1984, "author1ini":"D.N.", "author1":"Abrams"
+ ,"zTarg1":16, "targ1":"S-34", "proj1":"d", "emis1":"2N", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Physical thick/thin-target yield"
+ ,"reacode":"16-S-34(D,2N)17-CL-34-M,,TTY,,PHY"
+ ,"compNotes":[]
+ ,"wx4data":2
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.54]
+    ,"dat1":[5.4e+5]}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[12]
+    ,"dat1":[1.2e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[5.4e+5]
+   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.2e+7]
+   }
+ }
 }
    ]
    }
