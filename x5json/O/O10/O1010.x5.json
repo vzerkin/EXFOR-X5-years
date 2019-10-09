@@ -1,16 +1,16 @@
-  {"ENTRY":"O1010", "updated":20090128, "TransID":"O039", "TransDate":20090723, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O1010", "updated":20191010, "TransID":"O072", "TransDate":20191217, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":2002,"a1":"S.Sudar+","r1":"J,ARI,56,821,2002"
    ,"ref":"Jour: Applied Radiation and Isotopes, Vol.56, p.821 (2002)"
-   ,"title":"Measurements and nuclear model calculations on proton- induced reactions on Rh-103 up to 40-MeV-evaluation of the excitation function of the Rh-103(P,N)Pd-103 reaction relevant to the production of the therapeutic radionuclide Pd-103."
+   ,"title":"Measurements and nuclear model calculations on proton- induced reactions on Rh-103 up to 40-MeV-evaluation of the excitation function of the Rh-103(p,n)Pd-103 reaction relevant to the production of the therapeutic radionuclide Pd-103."
    ,"x4subents":[
-   {"SUBENT":"O1010001", "isub":1, "compiled":20090128, "TransID":"O039", "TransDate":20090723
+   {"SUBENT":"O1010001", "isub":1, "compiled":20191010, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Measurements and nuclear model calculations on proton-"
 		,"induced reactions on Rh-103 up to 40-MeV-evaluation of"
-		,"the excitation function of the Rh-103(P,N)Pd-103"
+		,"the excitation function of the Rh-103(p,n)Pd-103"
 		,"reaction relevant to the production of the therapeutic"
 		,"radionuclide Pd-103."]
 	}
@@ -200,6 +200,11 @@
 	,"x4code":{"code":"20090128A", "date":"20090128", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Data were corrected"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191010A", "date":"20191010", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: REACTION code corrected in Subent 005."]
 	}
       ]
     }
@@ -743,7 +748,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O1010005", "isub":5, "compiled":20090128, "TransID":"O039", "TransDate":20090723
+  ,{"SUBENT":"O1010005", "isub":5, "compiled":20191010, "TransID":"O072", "TransDate":20191217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
@@ -766,20 +771,21 @@
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"45-RH-103(P,N)46-PD-103,,TTY,,DT,DERIV"
-	    ,"c4reac":"(P,N),TTY,,DT"
+	,"x4code":{"code":"45-RH-103(P,N)46-PD-103,,TTY,,(PHY),EVAL"
+	    ,"c4reac":"(P,N),TTY,,(PHY)"
 	    ,"combi":"a"
+	    ,"Units":"PART/MUAHR"
 	    ,"reacs": [
-	    {"code":"45-RH-103(P,N)46-PD-103,,TTY,,DT,DERIV"
+	    {"code":"45-RH-103(P,N)46-PD-103,,TTY,,(PHY),EVAL"
 		,"Reac":"P,N"
 		,"SF1":"45-RH-103","Targ":{"code":"45-RH-103","nam":"Rh-103","ZA":45103}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"N"
 		,"SF4":"46-PD-103","Prod":{"code":"46-PD-103","nam":"Pd-103","ZA":46103}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"(PHY)"
+		,"SF9":"EVAL","sf9Hlp":"Evaluated data"
+		,"SF58":",TTY,,(PHY)","Quant":"TT","BasicUnits":"PART/MUAHR","QuantHlp":"Thick/thin-target yield, unc. if physical"
 	    }]}
 	}
       ]
@@ -787,11 +793,11 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["*By authors*.The model calculated excitation function"
-		,"plays a ransformation role for the data. We fitted the"
+		,"plays a transformation role for the data. We fitted the"
 		,"measured/model calculation ratio with a rational"
 		,"function, which described the deviation of the"
 		,"measured and calculated excitation function around"
-		,"20 MeV. For the fitting the TableCurve 2D program"
+		,"20 MeV. For the fitting the `TableCurve 2D` program"
 		,"of SPSS was used, taking into account in the weighting"
 		,"factor the uncertainties of the  measurement. First we"
 		,"used all available data. Then we removed those series"
@@ -809,7 +815,15 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 3"]
+	,"x4freetext":[" Table 3 from Appl.Rad.Isot.,56(2002)821"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191010A", "date":"20191010", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF8=DT -> (PHY), SF9=DERIV -> EVAL in"
+		,"REACTION code (2)."]
 	}
       ]
     }
@@ -906,7 +920,7 @@
 	,[39.5,21,10.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O10100051", "Pointer":"1"
- ,"Subent":"O1010005", "compiled":20090128
+ ,"Subent":"O1010005", "compiled":20191010
  ,"year1":2002, "author1ini":"S.", "author1":"Sudar"
  ,"zTarg1":45, "targ1":"Rh-103", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1032,13 +1046,130 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"O10100052", "Pointer":"2"
- ,"Subent":"O1010005", "compiled":20090128
-,"year1":2002, "author1ini":"S.", "author1":"Sudar"
-, "zTarg1":45, "targ1":"Rh-103", "proj1":"p", "emis1":"N", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"45-RH-103(P,N)46-PD-103,,TTY,,DT,DERIV"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"O1010005", "compiled":20191010
+ ,"year1":2002, "author1ini":"S.", "author1":"Sudar"
+ ,"zTarg1":45, "targ1":"Rh-103", "proj1":"p", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Thick/thin-target yield, unc. if physical"
+ ,"reacode":"45-RH-103(P,N)46-PD-103,,TTY,,(PHY),EVAL"
+ ,"compNotes":[]
+ ,"wx4data":7
+ ,"lx4data":71
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MBQ/MUAHR", "basicUnits":"MBQ/MUAHR"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.01,0.03,0.07,0.15,0.28,0.5,0.79,1.2,1.6,2.2
+	,2.8,3.5,4.1,4.7,5.3,5.8,6.2,6.5,6.8,7.1
+	,7.3,7.5,7.6,7.7,7.8,7.9,8,8.1,8.1,8.2
+	,8.2,8.3,8.3,8.4,8.4,8.5,8.5,8.5,8.6,8.6
+	,8.7,8.7,8.8,8.8,8.9,9,9,9.1,9.2,9.2
+	,9.3,9.3,9.4,9.5,9.6,9.6,9.7,9.8,9.8,9.9
+	,10,10,10.1,10.2,10.3,10.3,10.4,10.5,10.6,10.6
+	,10.7]
+    ,"dat1":[1.0e+4,3.0e+4,7.0e+4,1.5e+5,2.8e+5,5.0e+5,7.9e+5,1.2e+6,1.6e+6,2.2e+6
+	,2.8e+6,3.5e+6,4.1e+6,4.7e+6,5.3e+6,5.8e+6,6.2e+6,6.5e+6,6.8e+6,7.1e+6
+	,7.3e+6,7.5e+6,7.6e+6,7.7e+6,7.8e+6,7.9e+6,8.0e+6,8.1e+6,8.1e+6,8.2e+6
+	,8.2e+6,8.3e+6,8.3e+6,8.4e+6,8.4e+6,8.5e+6,8.5e+6,8.5e+6,8.6e+6,8.6e+6
+	,8.7e+6,8.7e+6,8.8e+6,8.8e+6,8.9e+6,9.0e+6,9.0e+6,9.1e+6,9.2e+6,9.2e+6
+	,9.3e+6,9.3e+6,9.4e+6,9.5e+6,9.6e+6,9.6e+6,9.7e+6,9.8e+6,9.8e+6,9.9e+6
+	,1.0e+7,1.0e+7,1.01e+7,1.02e+7,1.03e+7,1.03e+7,1.04e+7,1.05e+7,1.06e+7,1.06e+7
+	,1.07e+7]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":7
+    ,"com1":7}
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":5
+    ,"com1":5}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":25
+    ,"com1":25}
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1.5
+    ,"com1":1.5}
+  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":6, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[4.5,5,5.5,6,6.5,7,7.5,8,8.5,9
+	,9.5,10,10.5,11,11.5,12,12.5,13,13.5,14
+	,14.5,15,15.5,16,16.5,17,17.5,18,18.5,19
+	,19.5,20,20.5,21,21.5,22,22.5,23,23.5,24
+	,24.5,25,25.5,26,26.5,27,27.5,28,28.5,29
+	,29.5,30,30.5,31,31.5,32,32.5,33,33.5,34
+	,34.5,35,35.5,36,36.5,37,37.5,38,38.5,39
+	,39.5]
+    ,"dat1":[4.5e+6,5.0e+6,5.5e+6,6.0e+6,6.5e+6,7.0e+6,7.5e+6,8.0e+6,8.5e+6,9.0e+6
+	,9.5e+6,1.0e+7,1.05e+7,1.1e+7,1.15e+7,1.2e+7,1.25e+7,1.3e+7,1.35e+7,1.4e+7
+	,1.45e+7,1.5e+7,1.55e+7,1.6e+7,1.65e+7,1.7e+7,1.75e+7,1.8e+7,1.85e+7,1.9e+7
+	,1.95e+7,2.0e+7,2.05e+7,2.1e+7,2.15e+7,2.2e+7,2.25e+7,2.3e+7,2.35e+7,2.4e+7
+	,2.45e+7,2.5e+7,2.55e+7,2.6e+7,2.65e+7,2.7e+7,2.75e+7,2.8e+7,2.85e+7,2.9e+7
+	,2.95e+7,3.0e+7,3.05e+7,3.1e+7,3.15e+7,3.2e+7,3.25e+7,3.3e+7,3.35e+7,3.4e+7
+	,3.45e+7,3.5e+7,3.55e+7,3.6e+7,3.65e+7,3.7e+7,3.75e+7,3.8e+7,3.85e+7,3.9e+7
+	,3.95e+7]}
+  ]
+ ,"wc5data":2
+ ,"lc5data":71
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/MUAHR"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.0e+4,3.0e+4,7.0e+4,1.5e+5,2.8e+5,5.0e+5,7.9e+5,1.2e+6,1.6e+6,2.2e+6
+	,2.8e+6,3.5e+6,4.1e+6,4.7e+6,5.3e+6,5.8e+6,6.2e+6,6.5e+6,6.8e+6,7.1e+6
+	,7.3e+6,7.5e+6,7.6e+6,7.7e+6,7.8e+6,7.9e+6,8.0e+6,8.1e+6,8.1e+6,8.2e+6
+	,8.2e+6,8.3e+6,8.3e+6,8.4e+6,8.4e+6,8.5e+6,8.5e+6,8.5e+6,8.6e+6,8.6e+6
+	,8.7e+6,8.7e+6,8.8e+6,8.8e+6,8.9e+6,9.0e+6,9.0e+6,9.1e+6,9.2e+6,9.2e+6
+	,9.3e+6,9.3e+6,9.4e+6,9.5e+6,9.6e+6,9.6e+6,9.7e+6,9.8e+6,9.8e+6,9.9e+6
+	,1.0e+7,1.0e+7,1.01e+7,1.02e+7,1.03e+7,1.03e+7,1.04e+7,1.05e+7,1.06e+7,1.06e+7
+	,1.07e+7]
+      ,"dy":[2650,7950,18550,39750,74200,1.325e+5,2.0935e+5,3.18e+5,4.24e+5,5.83e+5
+	,7.42e+5,9.275e+5,1.0865e+6,1.2455e+6,1.4045e+6,1.537e+6,1.643e+6,1.7225e+6,1.802e+6,1.8815e+6
+	,1.9345e+6,1.9875e+6,2.014e+6,2.0405e+6,2.067e+6,2.0935e+6,2.12e+6,2.1465e+6,2.1465e+6,2.173e+6
+	,2.173e+6,2.1995e+6,2.1995e+6,2.226e+6,2.226e+6,2.2525e+6,2.2525e+6,2.2525e+6,2.279e+6,2.279e+6
+	,2.3055e+6,2.3055e+6,2.332e+6,2.332e+6,2.3585e+6,2.385e+6,2.385e+6,2.4115e+6,2.438e+6,2.438e+6
+	,2.4645e+6,2.4645e+6,2.491e+6,2.5175e+6,2.544e+6,2.544e+6,2.5705e+6,2.597e+6,2.597e+6,2.6235e+6
+	,2.65e+6,2.65e+6,2.6765e+6,2.703e+6,2.7295e+6,2.7295e+6,2.756e+6,2.7825e+6,2.809e+6,2.809e+6
+	,2.8355e+6]
+      ,"dysys":[2650,7950,18550,39750,74200,1.325e+5,2.0935e+5,3.18e+5,4.24e+5,5.83e+5
+	,7.42e+5,9.275e+5,1.0865e+6,1.2455e+6,1.4045e+6,1.537e+6,1.643e+6,1.7225e+6,1.802e+6,1.8815e+6
+	,1.9345e+6,1.9875e+6,2.014e+6,2.0405e+6,2.067e+6,2.0935e+6,2.12e+6,2.1465e+6,2.1465e+6,2.173e+6
+	,2.173e+6,2.1995e+6,2.1995e+6,2.226e+6,2.226e+6,2.2525e+6,2.2525e+6,2.2525e+6,2.279e+6,2.279e+6
+	,2.3055e+6,2.3055e+6,2.332e+6,2.332e+6,2.3585e+6,2.385e+6,2.385e+6,2.4115e+6,2.438e+6,2.438e+6
+	,2.4645e+6,2.4645e+6,2.491e+6,2.5175e+6,2.544e+6,2.544e+6,2.5705e+6,2.597e+6,2.597e+6,2.6235e+6
+	,2.65e+6,2.65e+6,2.6765e+6,2.703e+6,2.7295e+6,2.7295e+6,2.756e+6,2.7825e+6,2.809e+6,2.809e+6
+	,2.8355e+6]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[4.5e+6,5.0e+6,5.5e+6,6.0e+6,6.5e+6,7.0e+6,7.5e+6,8.0e+6,8.5e+6,9.0e+6
+	,9.5e+6,1.0e+7,1.05e+7,1.1e+7,1.15e+7,1.2e+7,1.25e+7,1.3e+7,1.35e+7,1.4e+7
+	,1.45e+7,1.5e+7,1.55e+7,1.6e+7,1.65e+7,1.7e+7,1.75e+7,1.8e+7,1.85e+7,1.9e+7
+	,1.95e+7,2.0e+7,2.05e+7,2.1e+7,2.15e+7,2.2e+7,2.25e+7,2.3e+7,2.35e+7,2.4e+7
+	,2.45e+7,2.5e+7,2.55e+7,2.6e+7,2.65e+7,2.7e+7,2.75e+7,2.8e+7,2.85e+7,2.9e+7
+	,2.95e+7,3.0e+7,3.05e+7,3.1e+7,3.15e+7,3.2e+7,3.25e+7,3.3e+7,3.35e+7,3.4e+7
+	,3.45e+7,3.5e+7,3.55e+7,3.6e+7,3.65e+7,3.7e+7,3.75e+7,3.8e+7,3.85e+7,3.9e+7
+	,3.95e+7]
+   }
+ }
 }
    ]
    }
