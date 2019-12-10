@@ -1,9 +1,9 @@
-  {"ENTRY":"E2086", "updated":20081121, "TransID":"E055", "TransDate":20081121, "CenterID":"JCPRG", "Center":"Japan Charged Particle Nuclear Reaction Data Group, Hokkaido University, Sapporo, Japan"
+  {"ENTRY":"E2086", "updated":20191211, "TransID":"E125", "TransDate":20200121, "CenterID":"JCPRG", "Center":"Japan Charged Particle Nuclear Reaction Data Group, Hokkaido University, Sapporo, Japan"
    ,"y1":2007,"a1":"M.Takei+","r1":"J,ARI,65,981,2007"
-   ,"ref":"Jour: Applied Radiation and Isotopes, Vol.65, Issue.9, p.981 (2007)"
+   ,"ref":"Jour: Applied Radiation and Isotopes, Vol.65, p.981 (2007)"
    ,"title":"Remote control production of an aqueous solution of no-carrier-added 34mCl- via the 32S(a,pn) nuclear reaction"
    ,"x4subents":[
-   {"SUBENT":"E2086001", "isub":1, "compiled":20081121, "TransID":"E055", "TransDate":20081121
+   {"SUBENT":"E2086001", "isub":1, "compiled":20191211, "TransID":"E125", "TransDate":20200121
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -34,9 +34,9 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,ARI,65,(9),981,200709","stdFileName":"J,ARI,65,981,2007"
-		,"year":2007,"typ":"J","ref":"J,ARI","vol":"65","issue":"9","p":"981"
-		,"shortRef":"Jour: Applied Radiation and Isotopes, Vol.65, Issue.9, p.981 (2007)"}]
+	,"x4codes":[{"code":"J,ARI,65,981,2007","stdFileName":"J,ARI,65,981,2007"
+		,"year":2007,"typ":"J","ref":"J,ARI","vol":"65","p":"981"
+		,"shortRef":"Jour: Applied Radiation and Isotopes, Vol.65, p.981 (2007)"}]
 	}
       ]
      ,"DECAY-DATA":[
@@ -48,7 +48,7 @@
      ,"INC-SOURCE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Beam intensity is 3 micro-Ampere."]
+	,"x4freetext":["Beam intensity is 3 uA."]
 	}
       ]
      ,"SAMPLE":[
@@ -95,28 +95,47 @@
 	{"x4pointer":" "
 	,"x4code":{"code":"20071106C", "date":"20071106", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
-	,"x4freetext":[" On + TA"]
+	,"x4freetext":[" On + At"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191209A", "date":"20191209", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Tada. REFERENCE modified, REACTION"
+		,"            corrected, TIME-IRRD added."]
 	}
       ]
     }
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"TIME-IRRD", "units":"HR", "pointer":" "
+	,"headerHelp":"Irradiation time", "pFlag":"0000000"
+	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
+      ]
+      ,"datacols":[
+	 ["TIME-IRRD" ]
+	,["HR"        ]
+	,[" "         ]]
+      ,"data":[
+	 [1]]}
    }
-  ,{"SUBENT":"E2086002", "isub":2, "compiled":20081121, "TransID":"E055", "TransDate":20081121
+  ,{"SUBENT":"E2086002", "isub":2, "compiled":20191211, "TransID":"E125", "TransDate":20200121
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"16-S-32(A,X)17-CL-34-M,,TTY,,DT"
-	    ,"c4reac":"(A,X),TTY,,DT"
+	,"x4code":{"code":"16-S-32(A,X)17-CL-34-M,,TTY,,EOB"
+	    ,"c4reac":"(A,X),TTY,,EOB"
 	    ,"combi":"a"
+	    ,"Units":"MBQ/MUA"
 	    ,"reacs": [
-	    {"code":"16-S-32(A,X)17-CL-34-M,,TTY,,DT"
+	    {"code":"16-S-32(A,X)17-CL-34-M,,TTY,,EOB"
 		,"Reac":"A,X"
 		,"SF1":"16-S-32","Targ":{"code":"16-S-32","nam":"S-32","ZA":16032}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"17-CL-34-M","Prod":{"code":"17-CL-34-M","nam":"Cl-34-m","ZA":17034,"ProdM":"M"}
 		,"SF6":"TTY"
-		,"SF8":"DT"
-		,"SF58":",TTY,,DT","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF8":"EOB"
+		,"SF58":",TTY,,EOB","Quant":"TT","BasicUnits":"MBQ/MUA","QuantHlp":"End-of-bombardment thick/thin-target yield"
 	    }]}
 	}
       ]
@@ -133,6 +152,13 @@
 	,"x4freetext":[" No information on source of uncertainties"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191209A", "date":"20191209", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SF8: DT -> EOB."]
+	}
+      ]
     }
     ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
@@ -142,28 +168,76 @@
       ,{"icol":1, "header":"MISC", "units":"MEV", "pointer":" "
 	,"headerHelp":"Miscellaneous Information, defined under MISC-COL.", "pFlag":"0000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA", "units":"MBQ/MUAHR", "pointer":" "
+      ,{"icol":2, "header":"DATA", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"MBQ/MUAHR", "pointer":" "
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"MUCI/MUA", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"Mega-Becquerel/micro-Ampere-hour","familyCode":"TTT","convFc":1000000.0,"basicUnits":"MBQ/MUAHR"}
+	,"unitsHelp":"micro-Curie/micro-Ampere","familyCode":"TTY","convFc":0.037,"basicUnits":"MBQ/MUA"}
       ]
       ,"datacols":[
 	 ["EN"        ,"MISC"      ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"MEV"       ,"MBQ/MUAHR" ,"MBQ/MUAHR" ]
+	,["MEV"       ,"MEV"       ,"MUCI/MUA"  ,"MUCI/MUA"  ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
 	 [65,58.2,470,91]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"E2086002", "Pointer":" "
- ,"Subent":"E2086002", "compiled":20081121
-,"year1":2007, "author1ini":"M.", "author1":"Takei"
-, "zTarg1":16, "targ1":"S-32", "proj1":"a", "emis1":"X", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"16-S-32(A,X)17-CL-34-M,,TTY,,DT"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"E2086002", "compiled":20191211
+ ,"year1":2007, "author1ini":"M.", "author1":"Takei"
+ ,"zTarg1":16, "targ1":"S-32", "proj1":"a", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"End-of-bombardment thick/thin-target yield"
+ ,"reacode":"16-S-32(A,X)17-CL-34-M,,TTY,,EOB"
+ ,"compNotes":[]
+ ,"wx4data":5
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[470]
+    ,"dat1":[17.39]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MUCI/MUA", "basicUnits":"MBQ/MUA"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[91]
+    ,"dat1":[3.367]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"dat0":[65]
+    ,"dat1":[6.5e+7]}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[58.2]
+    ,"dat1":[5.82e+7]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"TIME-IRRD", "units":"HR", "basicUnits":"SEC"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.1
+    ,"expansion":"Flags, etc."
+    ,"com0":1
+    ,"com1":3600}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"MBQ/MUA"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[17.39]
+      ,"dy":[3.367]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[6.5e+7]
+   }
+ }
 }
    ]
    }
