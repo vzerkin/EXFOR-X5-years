@@ -1,9 +1,9 @@
-  {"ENTRY":"40500", "updated":20170320, "TransID":"4175", "TransDate":20170630, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
+  {"ENTRY":"40500", "updated":20191212, "TransID":"4185", "TransDate":20200217, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
    ,"y1":1977,"a1":"L.M.Andreichuk+","r1":"J,SJA,42,23,1977"
    ,"ref":"Jour: Soviet Atomic Energy, Vol.42, p.23 (1977)"
    ,"title":"Measurement of average energies of U-233, U-235, Pu-239 fission neutron spectra by a relative method."
    ,"x4subents":[
-   {"SUBENT":"40500001", "isub":1, "compiled":20170320, "TransID":"4175", "TransDate":20170630
+   {"SUBENT":"40500001", "isub":1, "compiled":20191212, "TransID":"4185", "TransDate":20200217
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -18,15 +18,20 @@
 	,"x4freetext":["  Eng.trans.of AE,42,23,1977"]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"J,AE,42,(1),23,197701","stdFileName":"J,AE,42,(1),23,1977"
-		,"year":1977,"typ":"J","ref":"J,AE","vol":"42","issue":"1","p":"23"
-		,"shortRef":"Jour: Atomnaya Energiya, Vol.42, Issue.1, p.23 (1977)"}]
+	,"x4codes":[{"code":"J,AE,42,23,1977","stdFileName":"J,AE,42,23,1977"
+		,"year":1977,"typ":"J","ref":"J,AE","vol":"42","p":"23"
+		,"shortRef":"Jour: Atomnaya Energiya, Vol.42, p.23 (1977)"}]
+	,"x4freetext":["  Issue 1"]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"C,75KIEV,5,120,197506","stdFileName":"C,75KIEV,5,120,1975"
+	,"x4codes":[{"code":"C,75KIEV,5,120,1975","stdFileName":"C,75KIEV,5,120,1975"
 		,"year":1975,"typ":"C","ref":"C,75KIEV"
-		,"shortRef":"Conf: 3.All Union Conf.on Neutron Phys.,Kiev,9-13 Jun 1975, Vol.5, p.120 (1975)"}]
-	,"x4freetext":["  Prelim.data for Subents 3,5,7."]
+		,"shortRef":"Conf: 3.All Union Conf.on Neutron Phys.,Kiev,9-13 Jun 1975, Vol.5, p.120 (1975)"}
+	    ,{"code":"R,INDC(CCP)-99,(5),120,1975","stdFileName":"R,INDC(CCP)-99,(5),120,1975"
+		,"year":1975,"typ":"R","ref":"R,INDC(CCP)-","no":"99","p":"120"
+		,"shortRef":"Rept: USSR report to the I.N.D.C., No.99, Vol.(5), p.120 (1975)"}]
+	,"x4freetext":[" Vol. V."
+		,"  Prelim.data for Subents 3,5,7."]
 	}
       ]
      ,"AUTHOR":[
@@ -90,19 +95,19 @@
 	,"x4freetext":[" Gas scint.counter Ar +5% N2"]
 	}
       ]
-     ,"MONITOR":[
+     ,"ASSUMED":[
 	{"x4pointer":" "
-	,"x4code":{"code":"98-CF-252(0,F)0-NN-1,,NU/DE"
-		,"reaction":"98-CF-252(0,F)0-NN-1,,NU/DE"}
-	,"x4freetext":["           Neutron Maxwellian spectrum"]
+	,"x4code":{"code":"orig::ASSUM,98-CF-252(0,F)0-NN-1,PR,KEM"}
 	}
       ]
-     ,"MONIT-REF":[
+     ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"10614001,L.Green+,J,NSE,50,257,1973"
+	,"x4codes":[{"code":"R,10614001,L.Green+,J,NSE,50,257,1973"
+		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
 		,"subent":"10614001","author1":"L.Green+","stdFileName":"J,NSE,50,257,1973"
 		,"year":1973,"typ":"J","ref":"J,NSE","vol":"50","p":"257"
 		,"shortRef":"Jour: Nuclear Science and Engineering, Vol.50, p.257 (1973)"}]
+	,"x4freetext":[" Assumed data"]
 	}
       ]
      ,"PART-DET":[
@@ -111,12 +116,6 @@
 	}
 	,{"x4pointer":"B"
 	,"x4codes":["FF"]
-	}
-      ]
-     ,"MISC-COL":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"MISC"}]
-	,"x4freetext":["  K=(T1-T2)/T1/T2, T1=1.406 MeV, T2 is found"]
 	}
       ]
      ,"COMMENT":[
@@ -130,20 +129,7 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" Statistical plus error of the MONITOR"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-1"
-	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" Error of KT-NRM Cf-252 spectrum temperature"]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"NCHKD"
-		,"flag":"NCHKD", "help":"Authenticity not confirmed"
-		}]
-	,"x4freetext":[" Data not checked By NNDC"]
+	,"x4freetext":[" Statistical plus error of the ASSUM"]
 	}
       ]
      ,"HISTORY":[
@@ -175,28 +161,36 @@
 		,"was updated in TITLE,AUTHOR,REFERENCE,INC-SPECT,STATUS"
 		,"MONITOR was corrected \"),,DE,N)\" -> \")0-NN-1,,NU/DE)\""]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191212A", "date":"20191212", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Code NCHKD was deleted ."
+		,"Minor correction of AE refs."
+		,"Ref. INDC(CCP)-99 was added."
+		,"MONITOR -> ASSUMED, KT-NRM -> ASSUM, ERR-1 -> ASSUM-ERR"]
+	}
       ]
     }
     ,"COMMON":{"ncols":3, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"KT-NRM", "units":"MEV", "pointer":" "
-	,"headerHelp":"Temperature of reference Maxwellian spectrum", "pFlag":"0000000"
+       {"icol":0, "header":"ASSUM", "units":"MEV", "pointer":" "
+	,"headerHelp":"Assumed value, defined under ASSUMED.", "pFlag":"0000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"ERR-1", "units":"MEV", "pointer":" "
-	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
+      ,{"icol":1, "header":"ASSUM-ERR", "units":"MEV", "pointer":" "
+	,"headerHelp":"Error in assumed value", "pFlag":"0000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"EN-DUMMY", "units":"EV", "pointer":" "
 	,"headerHelp":"Dummy incident proj. energy, for broad spectrum", "pFlag":"1000000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["KT-NRM"    ,"ERR-1"     ,"EN-DUMMY"  ]
+	 ["ASSUM"     ,"ASSUM-ERR" ,"EN-DUMMY"  ]
 	,["MEV"       ,"MEV"       ,"EV"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [1.406,0.015,0.0253]]}
    }
-  ,{"SUBENT":"40500002", "isub":2, "compiled":20170320, "TransID":"4175", "TransDate":20170630
+  ,{"SUBENT":"40500002", "isub":2, "compiled":20191212, "TransID":"4185", "TransDate":20200217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -215,20 +209,21 @@
 		,"SF6":"KEM"
 		,"SF58":"PR,KEM","Quant":"E","BasicUnits":"EV","QuantHlp":"Temp.of Maxwell.distr.of prompt prod.specified"
 	    }]}
-	,"x4freetext":["  Temperature"]
 	}
       ]
      ,"ANALYSIS":[
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":[" Spectrum temperature KEM was defined using data at"
-		," energy range from E-MIN to E-MAX."
-		,"      E-MIN      E-MAX"
-		,"      MEV        MEV"]
+		," energy range from E-MIN to E-MAX."]
 	}
       ]
      ,"FLAG":[
 	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["      E-MIN,MeV  E-MAX,MeV"]
+	}
+	,{"x4pointer":" "
 	,"x4codes":[{"code":"1."}]
 	,"x4freetext":["  6.0000E-01 1.0000E+01"]
 	}
@@ -253,12 +248,18 @@
 	,"x4freetext":["  6.0000E-01 5.4800E+00"]
 	}
       ]
+     ,"MISC-COL":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"MISC"}]
+	,"x4freetext":["  K=(T1-T2)/T1/T2, T1=1.406 MeV, T2 is found"]
+	}
+      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 1 of AE,42,(1),23,1977 ."]
+	,"x4freetext":[" Table 1 of J.At.Energy,v.42,p.23,1977 ."]
 	}
       ]
      ,"HISTORY":[
@@ -308,7 +309,7 @@
 	,[1.329,0.036,0.0642,0.0033,6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40500002", "Pointer":" "
- ,"Subent":"40500002", "compiled":20170320
+ ,"Subent":"40500002", "compiled":20191212
  ,"year1":1977, "author1ini":"L.M.", "author1":"Andreichuk"
  ,"zTarg1":92, "targ1":"U-233", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -330,42 +331,42 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.028,0.025,0.027,0.026,0.029,0.036]
     ,"dat1":[2.8e+4,2.5e+4,2.7e+4,2.6e+4,2.9e+4,3.6e+4]}
-  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-1", "units":"MEV", "basicUnits":"EV"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
-    ,"expansion":"Data: data /Error/"
-    ,"com0":0.015
-    ,"com1":1.5e+4}
-  ,{"ivar":3, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
     ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
     ,"expansion":"Incident energy: spectrum energy"
     ,"com0":0.0253
     ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"ZZZ", "dataType":"01", "rank":777.0
     ,"expansion":"Flags, etc.: flag"
     ,"dat0":[1,2,3,4,5,6]
    ,"dat1eq":true}
-  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"MISC", "units":"1/MEV", "basicUnits":"1/EV"
     ,"what":"ZZZ", "dataType":"09", "rank":777.1
     ,"expansion":"Flags, etc."
     ,"dat0":[0.0461,0.0589,0.0672,0.0681,0.0679,0.0642]
     ,"dat1":[4.61e-8,5.89e-8,6.72e-8,6.81e-8,6.79e-8,6.42e-8]}
-  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"MISC-ERR", "units":"1/MEV", "basicUnits":"1/EV"
     ,"what":"ZZZ", "dataType":"09", "rank":777.2
     ,"expansion":"Flags, etc."
     ,"dat0":[0.004,0.002,0.004,0.0042,0.0032,0.0033]
     ,"dat1":[4.0e-9,2.0e-9,4.0e-9,4.2e-9,3.2e-9,3.3e-9]}
-  ,{"ivar":7, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"KT-NRM", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.3
-    ,"expansion":"Assumed values"
+  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.3
+    ,"expansion":"Assumed values: assumed"
     ,"com0":1.406
     ,"com1":1.406e+6}
+  ,{"ivar":7, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"ASSUM-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.4
+    ,"expansion":"Assumed values: assumed"
+    ,"com0":0.015
+    ,"com1":1.5e+4}
   ]
  ,"wc5data":2
  ,"lc5data":6
@@ -374,8 +375,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[1.372e+6,1.343e+6,1.331e+6,1.323e+6,1.328e+6,1.329e+6]
-      ,"dy":[2.8e+4,2.5e+4,2.7e+4,2.6e+4,2.9e+4,3.6e+4]
-      ,"dysys":[1.5e+4,1.5e+4,1.5e+4,1.5e+4,1.5e+4,1.5e+4]   }
+      ,"dy":[2.8e+4,2.5e+4,2.7e+4,2.6e+4,2.9e+4,3.6e+4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
@@ -385,7 +385,7 @@
 }
    ]
    }
-  ,{"SUBENT":"40500003", "isub":3, "compiled":20170320, "TransID":"4175", "TransDate":20170630
+  ,{"SUBENT":"40500003", "isub":3, "compiled":20191212, "TransID":"4185", "TransDate":20200217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -422,12 +422,13 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"40500002"
 		}]
+	,"x4freetext":[" Spectrum temperature"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":["  From Text of AE,42,(1),23,1977 ."]
+	,"x4freetext":["  From Text of J.At.Energy,v.42,p.23,1977 ."]
 	}
       ]
      ,"HISTORY":[
@@ -463,7 +464,7 @@
 	 [0.6,8,1.996,0.04]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40500003", "Pointer":" "
- ,"Subent":"40500003", "compiled":20170320
+ ,"Subent":"40500003", "compiled":20191212
  ,"year1":1977, "author1ini":"L.M.", "author1":"Andreichuk"
  ,"zTarg1":92, "targ1":"U-233", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(SpE,E2)"
@@ -485,36 +486,36 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.04]
     ,"dat1":[4.0e+4]}
-  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-1", "units":"MEV", "basicUnits":"EV"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
-    ,"expansion":"Data: data /Error/"
-    ,"com0":0.015
-    ,"com1":1.5e+4}
-  ,{"ivar":3, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
     ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
     ,"expansion":"Incident energy: spectrum energy"
     ,"com0":0.0253
     ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E-MIN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Min", "dataType":"51", "rank":2.2
     ,"expansion":"Secondary energy: particle energy"
     ,"dat0":[0.6]
     ,"dat1":[6.0e+5]}
-  ,{"ivar":5, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E-MAX", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Max", "dataType":"51", "rank":2.3
     ,"expansion":"Secondary energy: particle energy"
     ,"dat0":[8]
     ,"dat1":[8.0e+6]}
-  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"KT-NRM", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":1.406
     ,"com1":1.406e+6}
+  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"ASSUM-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.1
+    ,"expansion":"Assumed values: assumed"
+    ,"com0":0.015
+    ,"com1":1.5e+4}
   ]
  ,"wc5data":3
  ,"lc5data":1
@@ -523,8 +524,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[1.996e+6]
-      ,"dy":[4.0e+4]
-      ,"dysys":[1.5e+4]   }
+      ,"dy":[4.0e+4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
@@ -539,7 +539,7 @@
 }
    ]
    }
-  ,{"SUBENT":"40500004", "isub":4, "compiled":20170320, "TransID":"4175", "TransDate":20170630
+  ,{"SUBENT":"40500004", "isub":4, "compiled":20191212, "TransID":"4185", "TransDate":20200217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -558,7 +558,6 @@
 		,"SF6":"KEM"
 		,"SF58":"PR,KEM","Quant":"E","BasicUnits":"EV","QuantHlp":"Temp.of Maxwell.distr.of prompt prod.specified"
 	    }]}
-	,"x4freetext":["  Temperature"]
 	}
       ]
      ,"ANALYSIS":[
@@ -601,7 +600,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":["  Table 1 of AE,42,(1),23,1977"]
+	,"x4freetext":["  Table 1 of J.At.Energy,v.42,p.23,1977 ."]
 	}
       ]
      ,"HISTORY":[
@@ -645,7 +644,7 @@
 	,[1.289,0.02,6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40500004", "Pointer":" "
- ,"Subent":"40500004", "compiled":20170320
+ ,"Subent":"40500004", "compiled":20191212
  ,"year1":1977, "author1ini":"L.M.", "author1":"Andreichuk"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -667,30 +666,30 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.022,0.018,0.021,0.022,0.02,0.02]
     ,"dat1":[2.2e+4,1.8e+4,2.1e+4,2.2e+4,2.0e+4,2.0e+4]}
-  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-1", "units":"MEV", "basicUnits":"EV"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
-    ,"expansion":"Data: data /Error/"
-    ,"com0":0.015
-    ,"com1":1.5e+4}
-  ,{"ivar":3, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
     ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
     ,"expansion":"Incident energy: spectrum energy"
     ,"com0":0.0253
     ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"ZZZ", "dataType":"01", "rank":777.0
     ,"expansion":"Flags, etc.: flag"
     ,"dat0":[1,2,3,4,5,6]
    ,"dat1eq":true}
-  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"KT-NRM", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.1
-    ,"expansion":"Assumed values"
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.1
+    ,"expansion":"Assumed values: assumed"
     ,"com0":1.406
     ,"com1":1.406e+6}
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"ASSUM-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.2
+    ,"expansion":"Assumed values: assumed"
+    ,"com0":0.015
+    ,"com1":1.5e+4}
   ]
  ,"wc5data":2
  ,"lc5data":6
@@ -699,8 +698,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[1.32e+6,1.298e+6,1.284e+6,1.283e+6,1.283e+6,1.289e+6]
-      ,"dy":[2.2e+4,1.8e+4,2.1e+4,2.2e+4,2.0e+4,2.0e+4]
-      ,"dysys":[1.5e+4,1.5e+4,1.5e+4,1.5e+4,1.5e+4,1.5e+4]   }
+      ,"dy":[2.2e+4,1.8e+4,2.1e+4,2.2e+4,2.0e+4,2.0e+4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
@@ -710,7 +708,7 @@
 }
    ]
    }
-  ,{"SUBENT":"40500005", "isub":5, "compiled":20170320, "TransID":"4175", "TransDate":20170630
+  ,{"SUBENT":"40500005", "isub":5, "compiled":20191212, "TransID":"4185", "TransDate":20200217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -747,12 +745,13 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"40500004"
 		}]
+	,"x4freetext":[" Spectrum temperature"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":["  From Text of AE,42,(1),23,1977 ."]
+	,"x4freetext":["  From Text of J.At.Energy,v.42,p.23,1977 ."]
 	}
       ]
      ,"HISTORY":[
@@ -788,7 +787,7 @@
 	 [0.6,8,1.926,0.03]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40500005", "Pointer":" "
- ,"Subent":"40500005", "compiled":20170320
+ ,"Subent":"40500005", "compiled":20191212
  ,"year1":1977, "author1ini":"L.M.", "author1":"Andreichuk"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(SpE,E2)"
@@ -810,36 +809,36 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.03]
     ,"dat1":[3.0e+4]}
-  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-1", "units":"MEV", "basicUnits":"EV"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
-    ,"expansion":"Data: data /Error/"
-    ,"com0":0.015
-    ,"com1":1.5e+4}
-  ,{"ivar":3, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
     ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
     ,"expansion":"Incident energy: spectrum energy"
     ,"com0":0.0253
     ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E-MIN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Min", "dataType":"51", "rank":2.2
     ,"expansion":"Secondary energy: particle energy"
     ,"dat0":[0.6]
     ,"dat1":[6.0e+5]}
-  ,{"ivar":5, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E-MAX", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Max", "dataType":"51", "rank":2.3
     ,"expansion":"Secondary energy: particle energy"
     ,"dat0":[8]
     ,"dat1":[8.0e+6]}
-  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"KT-NRM", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":1.406
     ,"com1":1.406e+6}
+  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"ASSUM-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.1
+    ,"expansion":"Assumed values: assumed"
+    ,"com0":0.015
+    ,"com1":1.5e+4}
   ]
  ,"wc5data":3
  ,"lc5data":1
@@ -848,8 +847,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[1.926e+6]
-      ,"dy":[3.0e+4]
-      ,"dysys":[1.5e+4]   }
+      ,"dy":[3.0e+4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
@@ -864,7 +862,7 @@
 }
    ]
    }
-  ,{"SUBENT":"40500006", "isub":6, "compiled":20170320, "TransID":"4175", "TransDate":20170630
+  ,{"SUBENT":"40500006", "isub":6, "compiled":20191212, "TransID":"4185", "TransDate":20200217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -883,7 +881,6 @@
 		,"SF6":"KEM"
 		,"SF58":"PR,KEM","Quant":"E","BasicUnits":"EV","QuantHlp":"Temp.of Maxwell.distr.of prompt prod.specified"
 	    }]}
-	,"x4freetext":["  Temperature"]
 	}
       ]
      ,"ANALYSIS":[
@@ -921,12 +918,18 @@
 	,"x4freetext":["  6.0000E-01 5.4800E+00"]
 	}
       ]
+     ,"MISC-COL":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"MISC"}]
+	,"x4freetext":["  K=(T1-T2)/T1/T2, T1=1.406 MeV, T2 is found"]
+	}
+      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":["  Table 1 of AE,42,(1),23,1977"]
+	,"x4freetext":["  Table 1 of J.At.Energy,v.42,p.23,1977 ."]
 	}
       ]
      ,"HISTORY":[
@@ -976,7 +979,7 @@
 	,[1.365,0.029,0.021,0.0074,6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40500006", "Pointer":" "
- ,"Subent":"40500006", "compiled":20170320
+ ,"Subent":"40500006", "compiled":20191212
  ,"year1":1977, "author1ini":"L.M.", "author1":"Andreichuk"
  ,"zTarg1":94, "targ1":"Pu-239", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -998,42 +1001,42 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.026,0.028,0.027,0.027,0.027,0.029]
     ,"dat1":[2.6e+4,2.8e+4,2.7e+4,2.7e+4,2.7e+4,2.9e+4]}
-  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-1", "units":"MEV", "basicUnits":"EV"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
-    ,"expansion":"Data: data /Error/"
-    ,"com0":0.015
-    ,"com1":1.5e+4}
-  ,{"ivar":3, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
     ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
     ,"expansion":"Incident energy: spectrum energy"
     ,"com0":0.0253
     ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"ZZZ", "dataType":"01", "rank":777.0
     ,"expansion":"Flags, etc.: flag"
     ,"dat0":[1,2,3,4,5,6]
    ,"dat1eq":true}
-  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"MISC", "units":"1/MEV", "basicUnits":"1/EV"
     ,"what":"ZZZ", "dataType":"09", "rank":777.1
     ,"expansion":"Flags, etc."
     ,"dat0":[0.0139,0.0188,0.0198,0.0182,0.0159,0.021]
     ,"dat1":[1.39e-8,1.88e-8,1.98e-8,1.82e-8,1.59e-8,2.1e-8]}
-  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"MISC-ERR", "units":"1/MEV", "basicUnits":"1/EV"
     ,"what":"ZZZ", "dataType":"09", "rank":777.2
     ,"expansion":"Flags, etc."
     ,"dat0":[0.0056,0.0072,0.0063,0.0061,0.0062,0.0074]
     ,"dat1":[5.6e-9,7.2e-9,6.3e-9,6.1e-9,6.2e-9,7.4e-9]}
-  ,{"ivar":7, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"KT-NRM", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.3
-    ,"expansion":"Assumed values"
+  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.3
+    ,"expansion":"Assumed values: assumed"
     ,"com0":1.406
     ,"com1":1.406e+6}
+  ,{"ivar":7, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"ASSUM-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.4
+    ,"expansion":"Assumed values: assumed"
+    ,"com0":0.015
+    ,"com1":1.5e+4}
   ]
  ,"wc5data":2
  ,"lc5data":6
@@ -1042,8 +1045,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[1.379e+6,1.369e+6,1.367e+6,1.37e+6,1.375e+6,1.365e+6]
-      ,"dy":[2.6e+4,2.8e+4,2.7e+4,2.7e+4,2.7e+4,2.9e+4]
-      ,"dysys":[1.5e+4,1.5e+4,1.5e+4,1.5e+4,1.5e+4,1.5e+4]   }
+      ,"dy":[2.6e+4,2.8e+4,2.7e+4,2.7e+4,2.7e+4,2.9e+4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
@@ -1053,7 +1055,7 @@
 }
    ]
    }
-  ,{"SUBENT":"40500007", "isub":7, "compiled":20170320, "TransID":"4175", "TransDate":20170630
+  ,{"SUBENT":"40500007", "isub":7, "compiled":20191212, "TransID":"4185", "TransDate":20200217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1090,12 +1092,13 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"40500006"
 		}]
+	,"x4freetext":[" Spectrum temperature"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":["  From Text of AE,42,(1),23,1977 ."]
+	,"x4freetext":["  From Text of J.At.Energy,v.42,p.23,1977 ."]
 	}
       ]
      ,"HISTORY":[
@@ -1131,7 +1134,7 @@
 	 [0.6,8,2.05,0.04]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40500007", "Pointer":" "
- ,"Subent":"40500007", "compiled":20170320
+ ,"Subent":"40500007", "compiled":20191212
  ,"year1":1977, "author1ini":"L.M.", "author1":"Andreichuk"
  ,"zTarg1":94, "targ1":"Pu-239", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(SpE,E2)"
@@ -1153,36 +1156,36 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.04]
     ,"dat1":[4.0e+4]}
-  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-1", "units":"MEV", "basicUnits":"EV"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
-    ,"expansion":"Data: data /Error/"
-    ,"com0":0.015
-    ,"com1":1.5e+4}
-  ,{"ivar":3, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
     ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
     ,"expansion":"Incident energy: spectrum energy"
     ,"com0":0.0253
     ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E-MIN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Min", "dataType":"51", "rank":2.2
     ,"expansion":"Secondary energy: particle energy"
     ,"dat0":[0.6]
     ,"dat1":[6.0e+5]}
-  ,{"ivar":5, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E-MAX", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Max", "dataType":"51", "rank":2.3
     ,"expansion":"Secondary energy: particle energy"
     ,"dat0":[8]
     ,"dat1":[8.0e+6]}
-  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"KT-NRM", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":1.406
     ,"com1":1.406e+6}
+  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"ASSUM-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.1
+    ,"expansion":"Assumed values: assumed"
+    ,"com0":0.015
+    ,"com1":1.5e+4}
   ]
  ,"wc5data":3
  ,"lc5data":1
@@ -1191,8 +1194,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[2.05e+6]
-      ,"dy":[4.0e+4]
-      ,"dysys":[1.5e+4]   }
+      ,"dy":[4.0e+4]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
