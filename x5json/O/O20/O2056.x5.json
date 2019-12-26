@@ -1,9 +1,9 @@
-  {"ENTRY":"O2056", "updated":20121021, "TransID":"O050", "TransDate":20130516, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O2056", "updated":20191227, "TransID":"O073", "TransDate":20200301, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1974,"a1":"G.M.Raisbeck+","r1":"J,PR/C,9,1385,1974"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.9, p.1385 (1974)"
    ,"title":"Cross sections for the spallation production of Be-10 in targets of N, Mg, Si and their astrophysical applications."
    ,"x4subents":[
-   {"SUBENT":"O2056001", "isub":1, "compiled":20121021, "TransID":"O050", "TransDate":20130516
+   {"SUBENT":"O2056001", "isub":1, "compiled":20191227, "TransID":"O073", "TransDate":20200301
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -39,8 +39,8 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"SYNCH", "dict":"FACILITY", "idict":18,"hlp":"Synchrotron"}
-	    ,{"code":"2FR SAC", "dict":"INSTITUTE", "idict":3,"hlp":"CEA/Saclay, France"}]
+	,"x4codes":[{"code":"SYNCY", "dict":"FACILITY", "idict":18,"hlp":"Synchro cyclotron"}
+	    ,{"code":"2FR PAR", "dict":"INSTITUTE", "idict":3,"hlp":"Universite de Paris, France"}]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"SYNCH", "dict":"FACILITY", "idict":18,"hlp":"Synchrotron"}
@@ -107,29 +107,40 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":",J.TOBAILEM+,R,CEA-N-1446,1971"
-		,"author1":"J.TOBAILEM+","stdFileName":"R,CEA-N-1446,1971"
+	,"x4codes":[{"code":",J.Tobailem+,R,CEA-N-1446,1971"
+		,"author1":"J.Tobailem+","stdFileName":"R,CEA-N-1446,1971"
 		,"year":1971,"typ":"R","ref":"R,CEA-N-","no":"1446"
 		,"shortRef":"Rept: Centre d`Etudes Nucleaires, note, No.1446 (1971)"}]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
-	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[".The uncertainty is reported in table."]
+	,"x4code":{"header":"ERR-T"
+	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4freetext":[" total uncertainty includs:"
+		," * statistical counting errors (one standard deviation)"
+		," * the uncertainty in the counter efficiencies"
+		," * the uncertainties in the relative separator"
+		,"   collection efficiencies"
+		," * the uncertainties in the half-lives"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"MONIT-ERR"
 	     ,"headerHelp":"Error in normalization value"}
-	,"x4freetext":[".The uncertainty is reported in table 4."]
+	,"x4freetext":[" Uncertainty in data normalization"]
 	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20121010C", "date":"20121010", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
-	,"x4freetext":["sb"]
+	,"x4freetext":["SB"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191227U", "date":"20191227", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: Institute code in FACILITY corrected."
+		,"Corrections in all Subents (DATA-ERR -> ERR-T)."]
 	}
       ]
     }
@@ -149,7 +160,7 @@
       ,"data":[
 	 [15,3]]}
    }
-  ,{"SUBENT":"O2056002", "isub":2, "compiled":20121021, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2056002", "isub":2, "compiled":20191227, "TransID":"O073", "TransDate":20200301
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -176,7 +187,15 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 4 of J,PR/C,9,1385,1974"]
+	,"x4freetext":[" Table IV from Phys.Rrev.,C9(1974)1385"
+		,"  same value in Tbl.I."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191227U", "date":"20191227", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DATA-ERR -> ERR-T. STATUS updated."]
 	}
       ]
     }
@@ -188,19 +207,19 @@
       ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"ERR-T", "units":"MB", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"ERR-T"     ]
 	,["MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [600,6.5,1.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2056002", "Pointer":" "
- ,"Subent":"O2056002", "compiled":20121021
+ ,"Subent":"O2056002", "compiled":20191227
  ,"year1":1974, "author1ini":"G.M.", "author1":"Raisbeck"
  ,"zTarg1":12, "targ1":"Mg-0", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -226,7 +245,7 @@
     ,"dat0":[6.5]
     ,"dat1":[0.0065]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.5]
@@ -272,7 +291,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O2056003", "isub":3, "compiled":20121021, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2056003", "isub":3, "compiled":20191227, "TransID":"O073", "TransDate":20200301
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -299,7 +318,14 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 4 of J,PR/C,9,1385,1974"]
+	,"x4freetext":[" Table IV from Phys.Rrev.,C9(1974)1385"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191227U", "date":"20191227", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DATA-ERR -> ERR-T. STATUS updated."]
 	}
       ]
     }
@@ -311,19 +337,19 @@
       ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"ERR-T", "units":"MB", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"ERR-T"     ]
 	,["MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [600,5.3,1.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2056003", "Pointer":" "
- ,"Subent":"O2056003", "compiled":20121021
+ ,"Subent":"O2056003", "compiled":20191227
  ,"year1":1974, "author1ini":"G.M.", "author1":"Raisbeck"
  ,"zTarg1":14, "targ1":"Si-0", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -349,7 +375,7 @@
     ,"dat0":[5.3]
     ,"dat1":[0.0053]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.2]
@@ -395,7 +421,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O2056004", "isub":4, "compiled":20121021, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2056004", "isub":4, "compiled":20191227, "TransID":"O073", "TransDate":20200301
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -422,7 +448,14 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 4 of J,PR/C,9,1385,1974"]
+	,"x4freetext":[" Table IV from Phys.Rrev.,C9(1974)1385"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191227U", "date":"20191227", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DATA-ERR -> ERR-T. STATUS updated."]
 	}
       ]
     }
@@ -434,19 +467,19 @@
       ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"ERR-T", "units":"MB", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"ERR-T"     ]
 	,["MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [600,4.6,0.9]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2056004", "Pointer":" "
- ,"Subent":"O2056004", "compiled":20121021
+ ,"Subent":"O2056004", "compiled":20191227
  ,"year1":1974, "author1ini":"G.M.", "author1":"Raisbeck"
  ,"zTarg1":13, "targ1":"Al-27", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -472,7 +505,7 @@
     ,"dat0":[4.6]
     ,"dat1":[0.0046]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.9]
@@ -518,7 +551,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O2056005", "isub":5, "compiled":20121021, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2056005", "isub":5, "compiled":20191227, "TransID":"O073", "TransDate":20200301
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -545,7 +578,14 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 4 of J,PR/C,9,1385,1974"]
+	,"x4freetext":[" Table IV from Phys.Rrev.,C9(1974)1385"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191227U", "date":"20191227", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DATA-ERR -> ERR-T. STATUS updated."]
 	}
       ]
     }
@@ -557,19 +597,19 @@
       ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"ERR-T", "units":"MB", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"ERR-T"     ]
 	,["MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [600,32,7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2056005", "Pointer":" "
- ,"Subent":"O2056005", "compiled":20121021
+ ,"Subent":"O2056005", "compiled":20191227
  ,"year1":1974, "author1ini":"G.M.", "author1":"Raisbeck"
  ,"zTarg1":12, "targ1":"Mg-0", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -595,7 +635,7 @@
     ,"dat0":[32]
     ,"dat1":[0.032]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[7]
@@ -641,7 +681,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O2056006", "isub":6, "compiled":20121021, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2056006", "isub":6, "compiled":20191227, "TransID":"O073", "TransDate":20200301
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -668,7 +708,14 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 4 of J,PR/C,9,1385,1974"]
+	,"x4freetext":[" Table IV from Phys.Rrev.,C9(1974)1385"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191227U", "date":"20191227", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DATA-ERR -> ERR-T. STATUS updated."]
 	}
       ]
     }
@@ -680,19 +727,19 @@
       ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"ERR-T", "units":"MB", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"ERR-T"     ]
 	,["MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [600,17,4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2056006", "Pointer":" "
- ,"Subent":"O2056006", "compiled":20121021
+ ,"Subent":"O2056006", "compiled":20191227
  ,"year1":1974, "author1ini":"G.M.", "author1":"Raisbeck"
  ,"zTarg1":14, "targ1":"Si-0", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -718,7 +765,7 @@
     ,"dat0":[17]
     ,"dat1":[0.017]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[4]
@@ -764,7 +811,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O2056007", "isub":7, "compiled":20121021, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2056007", "isub":7, "compiled":20191227, "TransID":"O073", "TransDate":20200301
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -786,6 +833,15 @@
 	    }]}
 	}
       ]
+     ,"ASSUMED":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::ASSUM,23-V-0(P,X)4-BE-7,,SIG"}
+	,"x4freetext":[" Authors have estimated 7Be cross sections in V on the"
+		,"basis of measurements on the neighboring target Ti"
+		," (value from priv.comm. of  N.A.Wogman and"
+		," R.L.Brodzinski)"]
+	}
+      ]
      ,"COMMENT":[
 	{"x4pointer":" "
 	,"x4code":null
@@ -798,11 +854,19 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 1 of J,PR/C,9,1385,1974"]
+	,"x4freetext":[" from the text on p.1394 of"
+		,"                               Phys.Rrev.,C9(1974)1385"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191227U", "date":"20191227", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DATA-ERR -> ERR-T. STATUS updated."]
 	}
       ]
     }
-    ,"DATA":{"ncols":3, "nrows":2
+    ,"DATA":{"ncols":5, "nrows":2
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
@@ -810,20 +874,26 @@
       ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"ERR-T", "units":"MB", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ,{"icol":3, "header":"ASSUM", "units":"MB", "pointer":" "
+	,"headerHelp":"Assumed value, defined under ASSUMED.", "pFlag":"0000000"
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ,{"icol":4, "header":"ASSUM-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in assumed value", "pFlag":"0000000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"MB"        ,"MB"        ]
-	,[" "         ," "         ," "         ]]
+	 ["EN"        ,"DATA"      ,"ERR-T"     ,"ASSUM"     ,"ASSUM-ERR" ]
+	,["MEV"       ,"MB"        ,"MB"        ,"MB"        ,"MB"        ]
+	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [600,7,2]
-	,[150,6,1.5]]}
+	 [600,7,2,2.5,0.7]
+	,[150,6,1.5,0.2,0.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2056007", "Pointer":" "
- ,"Subent":"O2056007", "compiled":20121021
+ ,"Subent":"O2056007", "compiled":20191227
  ,"year1":1974, "author1ini":"G.M.", "author1":"Raisbeck"
  ,"zTarg1":7, "targ1":"N-14", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -840,7 +910,7 @@
 	," dy=dy/y;                      #to rel. uncertainties"
 	," y=y*a1/a0;                    #[0]#renormalizing CS"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":5
+ ,"wx4data":7
  ,"lx4data":2
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -850,7 +920,7 @@
     ,"dat0":[7,6]
     ,"dat1":[0.007,0.006]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[2,1.5]
@@ -873,6 +943,18 @@
     ,"expansion":"Assumed values: monitor"
     ,"com0":15
     ,"com1":0.015}
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"ASSUM", "units":"MB", "basicUnits":"B"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.1
+    ,"expansion":"Assumed values: assumed"
+    ,"dat0":[2.5,0.2]
+    ,"dat1":[0.0025,2.0e-4]}
+  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"ASSUM-ERR", "units":"MB", "basicUnits":"B"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.2
+    ,"expansion":"Assumed values: assumed"
+    ,"dat0":[0.7,0.1]
+    ,"dat1":[7.0e-4,1.0e-4]}
   ]
  ,"wc5data":2
  ,"lc5data":2
@@ -896,7 +978,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O2056008", "isub":8, "compiled":20121021, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2056008", "isub":8, "compiled":20191227, "TransID":"O073", "TransDate":20200301
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -923,7 +1005,14 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 1 of J,PR/C,9,1385,1974"]
+	,"x4freetext":[" Table I from Phys.Rrev.,C9(1974)1385"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191227U", "date":"20191227", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DATA-ERR -> ERR-T. STATUS updated."]
 	}
       ]
     }
@@ -935,19 +1024,19 @@
       ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"ERR-T", "units":"MB", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"ERR-T"     ]
 	,["MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [600,1.3,0.4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2056008", "Pointer":" "
- ,"Subent":"O2056008", "compiled":20121021
+ ,"Subent":"O2056008", "compiled":20191227
  ,"year1":1974, "author1ini":"G.M.", "author1":"Raisbeck"
  ,"zTarg1":12, "targ1":"Mg-0", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -973,7 +1062,7 @@
     ,"dat0":[1.3]
     ,"dat1":[0.0013]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.4]
@@ -1019,7 +1108,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O2056009", "isub":9, "compiled":20121021, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2056009", "isub":9, "compiled":20191227, "TransID":"O073", "TransDate":20200301
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1046,7 +1135,14 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 1 of J,PR/C,9,1385,1974"]
+	,"x4freetext":[" Table I from Phys.Rrev.,C9(1974)1385"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191227U", "date":"20191227", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DATA-ERR -> ERR-T. STATUS updated."]
 	}
       ]
     }
@@ -1058,19 +1154,19 @@
       ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"ERR-T", "units":"MB", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"ERR-T"     ]
 	,["MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [600,0.7,0.3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2056009", "Pointer":" "
- ,"Subent":"O2056009", "compiled":20121021
+ ,"Subent":"O2056009", "compiled":20191227
  ,"year1":1974, "author1ini":"G.M.", "author1":"Raisbeck"
  ,"zTarg1":14, "targ1":"Si-0", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1096,7 +1192,7 @@
     ,"dat0":[0.7]
     ,"dat1":[7.0e-4]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.3]
@@ -1142,7 +1238,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O2056010", "isub":10, "compiled":20121021, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2056010", "isub":10, "compiled":20191227, "TransID":"O073", "TransDate":20200301
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1176,7 +1272,29 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 1 of J,PR/C,9,1385,1974"]
+	,"x4freetext":[" from the text on p.1394 of"
+		,"                               Phys.Rrev.,C9(1974)1385"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"DEP,O2056007"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"O2056007"
+		}]
+	,"x4freetext":[" production 7Be"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"DEP,O2056013"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"O2056013"
+		}]
+	,"x4freetext":[" assumed 10Be/7Be production ratios"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191227U", "date":"20191227", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DATA-ERR -> ERR-T. STATUS updated."]
 	}
       ]
     }
@@ -1188,12 +1306,12 @@
       ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"ERR-T", "units":"MB", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"ERR-T"     ]
 	,["MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -1201,7 +1319,7 @@
 	,[150,0.6,0.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2056010", "Pointer":" "
- ,"Subent":"O2056010", "compiled":20121021
+ ,"Subent":"O2056010", "compiled":20191227
  ,"year1":1974, "author1ini":"G.M.", "author1":"Raisbeck"
  ,"zTarg1":7, "targ1":"N-14", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1228,7 +1346,7 @@
     ,"dat0":[1.3,0.6]
     ,"dat1":[0.0013,6.0e-4]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.6,0.2]
@@ -1274,7 +1392,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O2056011", "isub":11, "compiled":20121021, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2056011", "isub":11, "compiled":20191227, "TransID":"O073", "TransDate":20200301
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1310,13 +1428,21 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 1 of J,PR/C,9,1385,1974"]
+	,"x4freetext":[" Table I from Phys.Rrev.,C9(1974)1385"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,O2056002"
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"O2056002"
 		}]
+	,"x4freetext":[" the adopted 7Be cross section"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191227U", "date":"20191227", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DATA-ERR -> ERR-T. STATUS updated."]
 	}
       ]
     }
@@ -1328,19 +1454,19 @@
       ,{"icol":1, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"ERR-T", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"ERR-T"     ]
 	,["MEV"       ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [600,0.19,0.04]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2056011", "Pointer":" "
- ,"Subent":"O2056011", "compiled":20121021
+ ,"Subent":"O2056011", "compiled":20191227
  ,"year1":1974, "author1ini":"G.M.", "author1":"Raisbeck"
  ,"zTarg1":12, "targ1":"Mg-0", "proj1":"p", "emis1":"X", "MF":203, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1357,7 +1483,7 @@
     ,"dat0":[0.19]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ERR-T", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.04]
@@ -1401,7 +1527,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O2056012", "isub":12, "compiled":20121021, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2056012", "isub":12, "compiled":20191227, "TransID":"O073", "TransDate":20200301
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1437,13 +1563,21 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 1 of J,PR/C,9,1385,1974"]
+	,"x4freetext":[" Table I from Phys.Rrev.,C9(1974)1385"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,O2056003"
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"O2056003"
 		}]
+	,"x4freetext":[" the adopted 7Be cross section"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191227U", "date":"20191227", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DATA-ERR -> ERR-T. STATUS updated."]
 	}
       ]
     }
@@ -1455,19 +1589,19 @@
       ,{"icol":1, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"ERR-T", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"ERR-T"     ]
 	,["MEV"       ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [600,0.13,0.05]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2056012", "Pointer":" "
- ,"Subent":"O2056012", "compiled":20121021
+ ,"Subent":"O2056012", "compiled":20191227
  ,"year1":1974, "author1ini":"G.M.", "author1":"Raisbeck"
  ,"zTarg1":14, "targ1":"Si-0", "proj1":"p", "emis1":"X", "MF":203, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1484,7 +1618,7 @@
     ,"dat0":[0.13]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ERR-T", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.05]
@@ -1528,7 +1662,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O2056013", "isub":13, "compiled":20121021, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2056013", "isub":13, "compiled":20191227, "TransID":"O073", "TransDate":20200301
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1574,13 +1708,21 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[".Table 1 of J,PR/C,9,1385,1974"]
+	,"x4freetext":[".Table I from Phys.Rrev.,C9(1974)1385"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,O2056007"
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"O2056007"
 		}]
+	,"x4freetext":[" the adopted 7Be cross section"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191227U", "date":"20191227", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DATA-ERR -> ERR-T. STATUS updated."]
 	}
       ]
     }
@@ -1592,15 +1734,15 @@
       ,{"icol":1, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":2, "header":"ERR-T", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":3, "header":"FLAG", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Flag, defined under FLAG.", "pFlag":"0000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["EN"        ,"DATA"      ,"ERR-T"     ,"FLAG"      ]
 	,["MEV"       ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1610,7 +1752,7 @@
 	,[150,0.1,0.03,2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2056013", "Pointer":" "
- ,"Subent":"O2056013", "compiled":20121021
+ ,"Subent":"O2056013", "compiled":20191227
  ,"year1":1974, "author1ini":"G.M.", "author1":"Raisbeck"
  ,"zTarg1":7, "targ1":"N-14", "proj1":"p", "emis1":"X", "MF":203, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1627,7 +1769,7 @@
     ,"dat0":[0.2,0.18,0.11,0.1]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ERR-T", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.05,0.06,0.03,0.03]
