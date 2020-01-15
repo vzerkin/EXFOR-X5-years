@@ -1,9 +1,9 @@
-  {"ENTRY":"10074", "updated":20120412, "TransID":"1380", "TransDate":20120721, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10074", "updated":20200116, "TransID":"1462", "TransDate":20200310, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1971,"a1":"R.G.Stieglitz+","r1":"J,NP/A,163,592,1971"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.163, p.592 (1971)"
    ,"title":"keV neutron capture and transmission measurements on 50Cr, 52Cr, 53Cr, 54Cr, 60Ni and V."
    ,"x4subents":[
-   {"SUBENT":"10074001", "isub":1, "compiled":20120412, "TransID":"1380", "TransDate":20120721
+   {"SUBENT":"10074001", "isub":1, "compiled":20200116, "TransID":"1462", "TransDate":20200310
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -100,6 +100,12 @@
 	,"x4freetext":[" SD: Corrections according to new EXFOR"
 		," rules. REACTION was corrected in 4,16,19,23,28."
 		," Comments to REACTION code were added in Subents 42-53."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200104U", "date":"20200104", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" OS. Keyword CORRECTION deleted and REACTION"
+		,"  modified in subs. 42,44,46,48,50,52."]
 	}
       ]
     }
@@ -5244,25 +5250,25 @@
 }
    ]
    }
-  ,{"SUBENT":"10074042", "isub":42, "compiled":20120412, "TransID":"1380", "TransDate":20120721
+  ,{"SUBENT":"10074042", "isub":42, "compiled":20200116, "TransID":"1462", "TransDate":20200310
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"23-V-0(N,G),,SIG,,RAW"
-	    ,"c4reac":"(N,G),SIG,,RAW"
+	,"x4code":{"code":"23-V-0(N,G),,SIG,,TTA"
+	    ,"c4reac":"(N,G),SIG,,TTA"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"23-V-0(N,G),,SIG,,RAW"
+	    {"code":"23-V-0(N,G),,SIG,,TTA"
 		,"Reac":"N,G"
 		,"SF1":"23-V-0","Targ":{"code":"23-V-0","nam":"V-0","ZA":23000}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF6":"SIG"
-		,"SF8":"RAW"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF8":"TTA"
+		,"SF58":",SIG,,TTA","Quant":"CST","BasicUnits":"B","QuantHlp":"Reaction yield divided by areal density"
 	    }]}
 	,"x4freetext":["The capture data are represented on a time-of-flight"
 		,"basis as `capture yield divided by sample thickness`"
@@ -5299,12 +5305,6 @@
 		,"  flight path = 25.69 m."]
 	}
       ]
-     ,"CORRECTION":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Corrected for multiple scattering"]
-	}
-      ]
      ,"FLAG":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"1."}]
@@ -5332,6 +5332,11 @@
 	,"x4code":{"code":"19940604A", "date":"19940604", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":["  Data converted to EXFOR format from CSISRS/A"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200104U", "date":"20200104", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" REACTION SF8: RAW -> TTA"]
 	}
       ]
     }
@@ -10658,12 +10663,12 @@
 ,[376720,1,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10074042", "Pointer":" "
- ,"Subent":"10074042", "compiled":20120412
+ ,"Subent":"10074042", "compiled":20200116
  ,"year1":1971, "author1ini":"R.G.", "author1":"Stieglitz"
- ,"zTarg1":23, "targ1":"V-0", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"23-V-0(N,G),,SIG,,RAW"
+ ,"zTarg1":23, "targ1":"V-0", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=y(x1,x2)"
+ ,"ReactionType":"CST", "quant":"CST", "quantExpan":"Reaction yield divided by areal density"
+ ,"reacode":"23-V-0(N,G),,SIG,,TTA"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":5304
@@ -12807,7 +12812,7 @@
 ,1,1,1,1]
    ,"dat1eq":true}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":5304
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
@@ -23162,26 +23167,26 @@
 }
    ]
    }
-  ,{"SUBENT":"10074044", "isub":44, "compiled":20120412, "TransID":"1380", "TransDate":20120721
+  ,{"SUBENT":"10074044", "isub":44, "compiled":20200116, "TransID":"1462", "TransDate":20200310
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"24-CR-50(N,G)24-CR-51,,SIG,,RAW"
-	    ,"c4reac":"(N,G),SIG,,RAW"
+	,"x4code":{"code":"24-CR-50(N,G)24-CR-51,,SIG,,TTA"
+	    ,"c4reac":"(N,G),SIG,,TTA"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"24-CR-50(N,G)24-CR-51,,SIG,,RAW"
+	    {"code":"24-CR-50(N,G)24-CR-51,,SIG,,TTA"
 		,"Reac":"N,G"
 		,"SF1":"24-CR-50","Targ":{"code":"24-CR-50","nam":"Cr-50","ZA":24050}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"24-CR-51","Prod":{"code":"24-CR-51","nam":"Cr-51","ZA":24051}
 		,"SF6":"SIG"
-		,"SF8":"RAW"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF8":"TTA"
+		,"SF58":",SIG,,TTA","Quant":"CST","BasicUnits":"B","QuantHlp":"Reaction yield divided by areal density"
 	    }]}
 	,"x4freetext":["The capture data are represented on a time-of-flight"
 		,"basis as `capture yield divided by sample thickness`"
@@ -23220,12 +23225,6 @@
 		,"  flight path = 25.69 m."]
 	}
       ]
-     ,"CORRECTION":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Corrected for multiple scattering"]
-	}
-      ]
      ,"FLAG":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"1."}]
@@ -23253,6 +23252,11 @@
 	,"x4code":{"code":"19940604A", "date":"19940604", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":["  Data converted to EXFOR format from CSISRS/A"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200104U", "date":"20200104", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" REACTION SF8: RAW -> TTA"]
 	}
       ]
     }
@@ -28277,12 +28281,12 @@
 ,[770760,159,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10074044", "Pointer":" "
- ,"Subent":"10074044", "compiled":20120412
+ ,"Subent":"10074044", "compiled":20200116
  ,"year1":1971, "author1ini":"R.G.", "author1":"Stieglitz"
- ,"zTarg1":24, "targ1":"Cr-50", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"24-CR-50(N,G)24-CR-51,,SIG,,RAW"
+ ,"zTarg1":24, "targ1":"Cr-50", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=y(x1,x2)"
+ ,"ReactionType":"CST", "quant":"CST", "quantExpan":"Reaction yield divided by areal density"
+ ,"reacode":"24-CR-50(N,G)24-CR-51,,SIG,,TTA"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":5002
@@ -30306,7 +30310,7 @@
 ,1,1]
    ,"dat1eq":true}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":5002
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
@@ -41868,26 +41872,26 @@
 }
    ]
    }
-  ,{"SUBENT":"10074046", "isub":46, "compiled":20120412, "TransID":"1380", "TransDate":20120721
+  ,{"SUBENT":"10074046", "isub":46, "compiled":20200116, "TransID":"1462", "TransDate":20200310
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"24-CR-52(N,G)24-CR-53,,SIG,,RAW"
-	    ,"c4reac":"(N,G),SIG,,RAW"
+	,"x4code":{"code":"24-CR-52(N,G)24-CR-53,,SIG,,TTA"
+	    ,"c4reac":"(N,G),SIG,,TTA"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"24-CR-52(N,G)24-CR-53,,SIG,,RAW"
+	    {"code":"24-CR-52(N,G)24-CR-53,,SIG,,TTA"
 		,"Reac":"N,G"
 		,"SF1":"24-CR-52","Targ":{"code":"24-CR-52","nam":"Cr-52","ZA":24052}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"24-CR-53","Prod":{"code":"24-CR-53","nam":"Cr-53","ZA":24053}
 		,"SF6":"SIG"
-		,"SF8":"RAW"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF8":"TTA"
+		,"SF58":",SIG,,TTA","Quant":"CST","BasicUnits":"B","QuantHlp":"Reaction yield divided by areal density"
 	    }]}
 	,"x4freetext":["The capture data are represented on a time-of-flight"
 		,"basis as `capture yield divided by sample thickness`"
@@ -41926,12 +41930,6 @@
 		,"  flight path = 25.69 m."]
 	}
       ]
-     ,"CORRECTION":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Corrected for multiple scattering"]
-	}
-      ]
      ,"FLAG":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"1."}]
@@ -41959,6 +41957,11 @@
 	,"x4code":{"code":"19940604A", "date":"19940604", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":["  Data converted to EXFOR format from CSISRS/A"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200104U", "date":"20200104", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" REACTION SF8: RAW -> TTA"]
 	}
       ]
     }
@@ -47147,12 +47150,12 @@
 ,[241940,3,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10074046", "Pointer":" "
- ,"Subent":"10074046", "compiled":20120412
+ ,"Subent":"10074046", "compiled":20200116
  ,"year1":1971, "author1ini":"R.G.", "author1":"Stieglitz"
- ,"zTarg1":24, "targ1":"Cr-52", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"24-CR-52(N,G)24-CR-53,,SIG,,RAW"
+ ,"zTarg1":24, "targ1":"Cr-52", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=y(x1,x2)"
+ ,"ReactionType":"CST", "quant":"CST", "quantExpan":"Reaction yield divided by areal density"
+ ,"reacode":"24-CR-52(N,G)24-CR-53,,SIG,,TTA"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":5166
@@ -49240,7 +49243,7 @@
 ,1,1,1,1,1,1]
    ,"dat1eq":true}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":5166
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
@@ -60865,26 +60868,26 @@
 }
    ]
    }
-  ,{"SUBENT":"10074048", "isub":48, "compiled":20120412, "TransID":"1380", "TransDate":20120721
+  ,{"SUBENT":"10074048", "isub":48, "compiled":20200116, "TransID":"1462", "TransDate":20200310
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"24-CR-53(N,G)24-CR-54,,SIG,,RAW"
-	    ,"c4reac":"(N,G),SIG,,RAW"
+	,"x4code":{"code":"24-CR-53(N,G)24-CR-54,,SIG,,TTA"
+	    ,"c4reac":"(N,G),SIG,,TTA"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"24-CR-53(N,G)24-CR-54,,SIG,,RAW"
+	    {"code":"24-CR-53(N,G)24-CR-54,,SIG,,TTA"
 		,"Reac":"N,G"
 		,"SF1":"24-CR-53","Targ":{"code":"24-CR-53","nam":"Cr-53","ZA":24053}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"24-CR-54","Prod":{"code":"24-CR-54","nam":"Cr-54","ZA":24054}
 		,"SF6":"SIG"
-		,"SF8":"RAW"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF8":"TTA"
+		,"SF58":",SIG,,TTA","Quant":"CST","BasicUnits":"B","QuantHlp":"Reaction yield divided by areal density"
 	    }]}
 	,"x4freetext":["The capture data are represented on a time-of-flight"
 		,"basis as `capture yield divided by sample thickness`"
@@ -60923,12 +60926,6 @@
 		,"  flight path = 25.69 m."]
 	}
       ]
-     ,"CORRECTION":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Corrected for multiple scattering"]
-	}
-      ]
      ,"FLAG":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"1."}]
@@ -60956,6 +60953,11 @@
 	,"x4code":{"code":"19940604A", "date":"19940604", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":["  Data converted to EXFOR format from CSISRS/A"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200104U", "date":"20200104", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" REACTION SF8: RAW -> TTA"]
 	}
       ]
     }
@@ -65706,12 +65708,12 @@
 ,[197830,3,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10074048", "Pointer":" "
- ,"Subent":"10074048", "compiled":20120412
+ ,"Subent":"10074048", "compiled":20200116
  ,"year1":1971, "author1ini":"R.G.", "author1":"Stieglitz"
- ,"zTarg1":24, "targ1":"Cr-53", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"24-CR-53(N,G)24-CR-54,,SIG,,RAW"
+ ,"zTarg1":24, "targ1":"Cr-53", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=y(x1,x2)"
+ ,"ReactionType":"CST", "quant":"CST", "quantExpan":"Reaction yield divided by areal density"
+ ,"reacode":"24-CR-53(N,G)24-CR-54,,SIG,,TTA"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":4728
@@ -67623,7 +67625,7 @@
 ,1,1,1,1,1,1,1,1]
    ,"dat1eq":true}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":4728
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
@@ -79164,26 +79166,26 @@
 }
    ]
    }
-  ,{"SUBENT":"10074050", "isub":50, "compiled":20120412, "TransID":"1380", "TransDate":20120721
+  ,{"SUBENT":"10074050", "isub":50, "compiled":20200116, "TransID":"1462", "TransDate":20200310
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"24-CR-54(N,G)24-CR-55,,SIG,,RAW"
-	    ,"c4reac":"(N,G),SIG,,RAW"
+	,"x4code":{"code":"24-CR-54(N,G)24-CR-55,,SIG,,TTA"
+	    ,"c4reac":"(N,G),SIG,,TTA"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"24-CR-54(N,G)24-CR-55,,SIG,,RAW"
+	    {"code":"24-CR-54(N,G)24-CR-55,,SIG,,TTA"
 		,"Reac":"N,G"
 		,"SF1":"24-CR-54","Targ":{"code":"24-CR-54","nam":"Cr-54","ZA":24054}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"24-CR-55","Prod":{"code":"24-CR-55","nam":"Cr-55","ZA":24055}
 		,"SF6":"SIG"
-		,"SF8":"RAW"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF8":"TTA"
+		,"SF58":",SIG,,TTA","Quant":"CST","BasicUnits":"B","QuantHlp":"Reaction yield divided by areal density"
 	    }]}
 	,"x4freetext":["The capture data are represented on a time-of-flight"
 		,"basis as `capture yield divided by sample thickness`"
@@ -79213,12 +79215,6 @@
 		,"  flight path = 25.69 m."]
 	}
       ]
-     ,"CORRECTION":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Corrected for multiple scattering"]
-	}
-      ]
      ,"FLAG":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"1."}]
@@ -79246,6 +79242,11 @@
 	,"x4code":{"code":"19940604A", "date":"19940604", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":["  Data converted to EXFOR format from CSISRS/A"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200104U", "date":"20200104", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" REACTION SF8: RAW -> TTA"]
 	}
       ]
     }
@@ -84078,12 +84079,12 @@
 ,[223580,2,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10074050", "Pointer":" "
- ,"Subent":"10074050", "compiled":20120412
+ ,"Subent":"10074050", "compiled":20200116
  ,"year1":1971, "author1ini":"R.G.", "author1":"Stieglitz"
- ,"zTarg1":24, "targ1":"Cr-54", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"24-CR-54(N,G)24-CR-55,,SIG,,RAW"
+ ,"zTarg1":24, "targ1":"Cr-54", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=y(x1,x2)"
+ ,"ReactionType":"CST", "quant":"CST", "quantExpan":"Reaction yield divided by areal density"
+ ,"reacode":"24-CR-54(N,G)24-CR-55,,SIG,,TTA"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":4810
@@ -86027,7 +86028,7 @@
 ,1,1,1,1,1,1,1,1,1,1]
    ,"dat1eq":true}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":4810
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
@@ -96395,26 +96396,26 @@
 }
    ]
    }
-  ,{"SUBENT":"10074052", "isub":52, "compiled":20120412, "TransID":"1380", "TransDate":20120721
+  ,{"SUBENT":"10074052", "isub":52, "compiled":20200116, "TransID":"1462", "TransDate":20200310
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-60(N,G)28-NI-61,,SIG,,RAW"
-	    ,"c4reac":"(N,G),SIG,,RAW"
+	,"x4code":{"code":"28-NI-60(N,G)28-NI-61,,SIG,,TTA"
+	    ,"c4reac":"(N,G),SIG,,TTA"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"28-NI-60(N,G)28-NI-61,,SIG,,RAW"
+	    {"code":"28-NI-60(N,G)28-NI-61,,SIG,,TTA"
 		,"Reac":"N,G"
 		,"SF1":"28-NI-60","Targ":{"code":"28-NI-60","nam":"Ni-60","ZA":28060}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"28-NI-61","Prod":{"code":"28-NI-61","nam":"Ni-61","ZA":28061}
 		,"SF6":"SIG"
-		,"SF8":"RAW"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF8":"TTA"
+		,"SF58":",SIG,,TTA","Quant":"CST","BasicUnits":"B","QuantHlp":"Reaction yield divided by areal density"
 	    }]}
 	,"x4freetext":["The capture data are represented on a time-of-flight"
 		,"basis as `capture yield divided by sample thickness`"
@@ -96444,12 +96445,6 @@
 		,"  flight path = 25.69 m."]
 	}
       ]
-     ,"CORRECTION":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Corrected for multiple scattering"]
-	}
-      ]
      ,"FLAG":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"1."}]
@@ -96477,6 +96472,11 @@
 	,"x4code":{"code":"19940604A", "date":"19940604", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":["  Data converted to EXFOR format from CSISRS/A"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200104U", "date":"20200104", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" REACTION SF8: RAW -> TTA"]
 	}
       ]
     }
@@ -101912,12 +101912,12 @@
 ,[923870,42272,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10074052", "Pointer":" "
- ,"Subent":"10074052", "compiled":20120412
+ ,"Subent":"10074052", "compiled":20200116
  ,"year1":1971, "author1ini":"R.G.", "author1":"Stieglitz"
- ,"zTarg1":28, "targ1":"Ni-60", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"28-NI-60(N,G)28-NI-61,,SIG,,RAW"
+ ,"zTarg1":28, "targ1":"Ni-60", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2   6    ", "getYFormulaStr":"y=y(x1,x2)"
+ ,"ReactionType":"CST", "quant":"CST", "quantExpan":"Reaction yield divided by areal density"
+ ,"reacode":"28-NI-60(N,G)28-NI-61,,SIG,,TTA"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":5413
@@ -104105,7 +104105,7 @@
 ,1,1,1]
    ,"dat1eq":true}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":5413
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
