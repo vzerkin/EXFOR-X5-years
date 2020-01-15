@@ -1,9 +1,9 @@
-  {"ENTRY":"10710", "updated":20091106, "TransID":"1355", "TransDate":20091126, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10710", "updated":20200116, "TransID":"1462", "TransDate":20200310, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1979,"a1":"H.D.Knox+","r1":"J,NSE,69,223,1979"
    ,"ref":"Jour: Nuclear Science and Engineering, Vol.69, p.223 (1979)"
-   ,"title":"Differential scattering cross sections of Lithium-6 and Lithium-7 for neutrons of 4 to 7.5 MeV energy"
+   ,"title":"Differential neutron scattering cross sections of Lithium-6 and Lithium-7 for neutrons of 4 to 7.5 MeV energy"
    ,"x4subents":[
-   {"SUBENT":"10710001", "isub":1, "compiled":20091106, "TransID":"1355", "TransDate":20091126
+   {"SUBENT":"10710001", "isub":1, "compiled":20200116, "TransID":"1462", "TransDate":20200310
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,15 +12,15 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,NSE,69,223,197902","stdFileName":"J,NSE,69,223,1979"
+	,"x4codes":[{"code":"J,NSE,69,223,1979","stdFileName":"J,NSE,69,223,1979"
 		,"year":1979,"typ":"J","ref":"J,NSE","vol":"69","p":"223"
 		,"shortRef":"Jour: Nuclear Science and Engineering, Vol.69, p.223 (1979)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,COO-2490-8,197806","stdFileName":"R,COO-2490-8,1978"
+	,"x4codes":[{"code":"R,COO-2490-8,1978","stdFileName":"R,COO-2490-8,1978"
 		,"year":1978,"typ":"R","ref":"R,COO-","no":"2490-8"
 		,"shortRef":"Rept: Chicago Operations Office,A.E.C.,Contract rept., No.2490-8 (1978)"}]
-	,"x4freetext":[" tabulated data."]
+	,"x4freetext":[" Tabulated data."]
 	}
       ]
      ,"AUTHOR":[
@@ -33,8 +33,9 @@
      ,"TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Differential scattering cross sections of Lithium-6 and"
-		," Lithium-7 for neutrons of 4 to 7.5 MeV energy"]
+	,"x4freetext":["Differential neutron scattering cross sections of"
+		,"Lithium-6 and  Lithium-7 for neutrons of 4 to 7.5 MeV"
+		,"energy"]
 	}
       ]
      ,"FACILITY":[
@@ -121,6 +122,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Updated to new date formats,lower case."
 		,"            BIB updates."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20191228A", "date":"20191228", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Data heading corrected in sub.5"]
 	}
       ]
     }
@@ -1163,7 +1169,7 @@
 }
    ]
    }
-  ,{"SUBENT":"10710005", "isub":5, "compiled":20090817, "TransID":"1355", "TransDate":20091126
+  ,{"SUBENT":"10710005", "isub":5, "compiled":20200116, "TransID":"1462", "TransDate":20200310
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1203,8 +1209,9 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["No information on uncertainties."]
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on uncertainties."]
 	}
       ]
      ,"STATUS":[
@@ -1213,6 +1220,13 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"10710004"
 		}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20191228A", "date":"20191228", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Changed heading DATA -> DATA-ERR"]
 	}
       ]
     }
@@ -1227,12 +1241,12 @@
       ,{"icol":2, "header":"DATA-CM", "units":"MB/SR", "pointer":" "
 	,"headerHelp":"Value of quantity specif. under REACTION, c.m. sys.", "pFlag":"0001001"
 	,"unitsHelp":"millibarns per steradian","familyCode":"DA","convFc":0.001,"basicUnits":"B/SR"}
-      ,{"icol":3, "header":"DATA", "units":"MB/SR", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB/SR", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns per steradian","familyCode":"DA","convFc":0.001,"basicUnits":"B/SR"}
       ]
       ,"datacols":[
-	 ["EN"        ,"NUMBER-CM" ,"DATA-CM"   ,"DATA"      ]
+	 ["EN"        ,"NUMBER-CM" ,"DATA-CM"   ,"DATA-ERR"  ]
 	,["MEV"       ,"NO-DIM"    ,"MB/SR"     ,"MB/SR"     ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1308,7 +1322,7 @@
 	,[7.5,4,52.35,10.33]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10710005", "Pointer":" "
- ,"Subent":"10710005", "compiled":20090817
+ ,"Subent":"10710005", "compiled":20200116
  ,"year1":1979, "author1ini":"H.D.", "author1":"Knox"
  ,"zTarg1":3, "targ1":"Li-7", "proj1":"n", "emis1":"EL", "MF":154, "MT":2, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2  5     ", "getYFormulaStr":"y=DATA(EN,nCoef)"
@@ -1318,25 +1332,7 @@
  ,"wx4data":4
  ,"lx4data":70
  ,"x4data":[
-   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MB/SR", "basicUnits":"B/SR"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
-    ,"dat0":[4.74,10.15,12.71,13.72,14.95,4.93,10.75,13.47,14.21,15.16
-	,5.06,11.2,13.95,14.65,15.13,4.88,10.93,13.69,14.19,13.49
-	,5,11.39,13.9,14.27,13.66,4.6,10.47,12.81,13.19,12.26
-	,4.25,9.69,11.8,12.14,10.93,4.4,10.21,12.27,12.22,10.35
-	,4.46,10.46,12.61,12.23,9.83,4.5,10.65,12.7,12.13,9.36
-	,4.19,9.92,11.89,11.38,8.78,4.03,9.56,11.45,10.88,8.3
-	,3.75,8.94,10.58,10.02,7.62,3.94,9.16,12.15,10.28,10.33]
-    ,"dat1":[0.00474,0.01015,0.01271,0.01372,0.01495,0.00493,0.01075,0.01347,0.01421,0.01516
-	,0.00506,0.0112,0.01395,0.01465,0.01513,0.00488,0.01093,0.01369,0.01419,0.01349
-	,0.005,0.01139,0.0139,0.01427,0.01366,0.0046,0.01047,0.01281,0.01319,0.01226
-	,0.00425,0.00969,0.0118,0.01214,0.01093,0.0044,0.01021,0.01227,0.01222,0.01035
-	,0.00446,0.01046,0.01261,0.01223,0.00983,0.0045,0.01065,0.0127,0.01213,0.00936
-	,0.00419,0.00992,0.01189,0.01138,0.00878,0.00403,0.00956,0.01145,0.01088,0.0083
-	,0.00375,0.00894,0.01058,0.01002,0.00762,0.00394,0.00916,0.01215,0.01028,0.01033]}
-  ,{"ivar":1, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":true
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":true
     ,"header":"DATA-CM", "units":"MB/SR", "basicUnits":"B/SR"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
@@ -1354,6 +1350,24 @@
 	,0.14707,0.18069,0.21366,0.13309,0.06645,0.1443,0.19168,0.2133,0.15207,0.05184
 	,0.13184,0.17818,0.1927,0.13233,0.04654,0.12461,0.17454,0.19107,0.13514,0.05191
 	,0.11209,0.16179,0.17078,0.12309,0.0386,0.11325,0.16132,0.18578,0.11961,0.05235]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MB/SR", "basicUnits":"B/SR"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[4.74,10.15,12.71,13.72,14.95,4.93,10.75,13.47,14.21,15.16
+	,5.06,11.2,13.95,14.65,15.13,4.88,10.93,13.69,14.19,13.49
+	,5,11.39,13.9,14.27,13.66,4.6,10.47,12.81,13.19,12.26
+	,4.25,9.69,11.8,12.14,10.93,4.4,10.21,12.27,12.22,10.35
+	,4.46,10.46,12.61,12.23,9.83,4.5,10.65,12.7,12.13,9.36
+	,4.19,9.92,11.89,11.38,8.78,4.03,9.56,11.45,10.88,8.3
+	,3.75,8.94,10.58,10.02,7.62,3.94,9.16,12.15,10.28,10.33]
+    ,"dat1":[0.00474,0.01015,0.01271,0.01372,0.01495,0.00493,0.01075,0.01347,0.01421,0.01516
+	,0.00506,0.0112,0.01395,0.01465,0.01513,0.00488,0.01093,0.01369,0.01419,0.01349
+	,0.005,0.01139,0.0139,0.01427,0.01366,0.0046,0.01047,0.01281,0.01319,0.01226
+	,0.00425,0.00969,0.0118,0.01214,0.01093,0.0044,0.01021,0.01227,0.01222,0.01035
+	,0.00446,0.01046,0.01261,0.01223,0.00983,0.0045,0.01065,0.0127,0.01213,0.00936
+	,0.00419,0.00992,0.01189,0.01138,0.00878,0.00403,0.00956,0.01145,0.01088,0.0083
+	,0.00375,0.00894,0.01058,0.01002,0.00762,0.00394,0.00916,0.01215,0.01028,0.01033]}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -1388,7 +1402,7 @@
  ,"wc5data":3
  ,"lc5data":70
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":true, "units":"B/SR"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.19107,0.07569,0.19985,0.05579,0.05185,0.2003,0.08735,0.21526,0.07828,0.06044
@@ -1398,7 +1412,13 @@
 	,0.14707,0.18069,0.21366,0.13309,0.06645,0.1443,0.19168,0.2133,0.15207,0.05184
 	,0.13184,0.17818,0.1927,0.13233,0.04654,0.12461,0.17454,0.19107,0.13514,0.05191
 	,0.11209,0.16179,0.17078,0.12309,0.0386,0.11325,0.16132,0.18578,0.11961,0.05235]
-   }
+      ,"dy":[0.00474,0.01015,0.01271,0.01372,0.01495,0.00493,0.01075,0.01347,0.01421,0.01516
+	,0.00506,0.0112,0.01395,0.01465,0.01513,0.00488,0.01093,0.01369,0.01419,0.01349
+	,0.005,0.01139,0.0139,0.01427,0.01366,0.0046,0.01047,0.01281,0.01319,0.01226
+	,0.00425,0.00969,0.0118,0.01214,0.01093,0.0044,0.01021,0.01227,0.01222,0.01035
+	,0.00446,0.01046,0.01261,0.01223,0.00983,0.0045,0.01065,0.0127,0.01213,0.00936
+	,0.00419,0.00992,0.01189,0.01138,0.00878,0.00403,0.00956,0.01145,0.01088,0.0083
+	,0.00375,0.00894,0.01058,0.01002,0.00762,0.00394,0.00916,0.01215,0.01028,0.01033]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
