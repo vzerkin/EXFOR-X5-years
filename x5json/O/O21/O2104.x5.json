@@ -1,9 +1,9 @@
-  {"ENTRY":"O2104", "updated":20120809, "TransID":"O050", "TransDate":20130516, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O2104", "updated":20200212, "TransID":"O076", "TransDate":20200616, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1961,"a1":"J.Olkowsky+","r1":"J,NP,23,164,1961"
    ,"ref":"Jour: Nuclear Physics, Vol.23, p.164 (1961)"
    ,"title":"Excitation function of Pr-141 (p,n) Nd-141 up to 11.1 MeV."
    ,"x4subents":[
-   {"SUBENT":"O2104001", "isub":1, "compiled":20120809, "TransID":"O050", "TransDate":20130516
+   {"SUBENT":"O2104001", "isub":1, "compiled":20200212, "TransID":"O076", "TransDate":20200616
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -39,10 +39,8 @@
       ]
      ,"METHOD":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"ACTIV", "dict":"METHOD", "idict":21,"hlp":"Activation"}]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"STTA", "dict":"METHOD", "idict":21,"hlp":"Stacked target irradiation"}]
+	,"x4codes":[{"code":"ACTIV", "dict":"METHOD", "idict":21,"hlp":"Activation"}
+	    ,{"code":"STTA", "dict":"METHOD", "idict":21,"hlp":"Stacked target irradiation"}]
 	}
       ]
      ,"MONITOR":[
@@ -87,6 +85,11 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" SB"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200212U", "date":"20200212", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: Small correction in Subent 002."]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
@@ -102,7 +105,7 @@
       ,"data":[
 	 [500]]}
    }
-  ,{"SUBENT":"O2104002", "isub":2, "compiled":20120809, "TransID":"O050", "TransDate":20130516
+  ,{"SUBENT":"O2104002", "isub":2, "compiled":20200212, "TransID":"O076", "TransDate":20200616
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -126,8 +129,8 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"60-ND-141", "t12":2.5, "t12units":"HR", "t12sec":9000.0
-	, "Radiations":[ {"Type":"EC", "Energy":[38.0]}]}]
+	,"x4codes":[{"Nucl":"60-ND-141-G", "t12":2.5, "t12units":"HR", "t12sec":9000.0
+	, "Radiations":[ {"Type":"XR", "Energy":[38.0]}]}]
 	}
       ]
      ,"STATUS":[
@@ -135,10 +138,33 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[".By CAJAD-Fig.1 of J,NP,23,164,1961"]
+	,"x4freetext":[" By CAJAD-Fig.1 from Nucl.Phys.,23(1961)164"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20200212U", "date":"20200212", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DECAY-DATA, STATUS updated. Errors of"
+		,"digitizing added."]
 	}
       ]
     }
+    ,"COMMON":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
+	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"ERR-DIG", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
+	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+      ]
+      ,"datacols":[
+	 ["EN-ERR-DIG","ERR-DIG"   ]
+	,["MEV"       ,"PER-CENT"  ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [0.002,0.5]]}
     ,"DATA":{"ncols":2, "nrows":29
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -184,14 +210,15 @@
 	,[10.96,433.6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O2104002", "Pointer":" "
- ,"Subent":"O2104002", "compiled":20120809
+ ,"Subent":"O2104002", "compiled":20200212
  ,"year1":1961, "author1ini":"J.", "author1":"Olkowsky"
  ,"zTarg1":59, "targ1":"Pr-141", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"59-PR-141(P,N)60-ND-141,,SIG"
- ,"compNotes":[]
- ,"wx4data":3
+ ,"compNotes":["Ignored column:ERR-DIG,PER-CENT (digitizing error)"
+	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
+ ,"wx4data":5
  ,"lx4data":29
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -204,7 +231,13 @@
     ,"dat1":[0.001949,0.001333,0.003311,0.002912,0.006217,0.006026,0.01297,0.02236,0.03465,0.03264
 	,0.04603,0.07034,0.08024,0.09208,0.1314,0.1423,0.1619,0.1996,0.1979,0.2157
 	,0.2584,0.307,0.3252,0.3453,0.4044,0.3966,0.431,0.4141,0.4336]}
-  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-DIG", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.5
+    ,"com1":0.5}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -214,7 +247,13 @@
     ,"dat1":[5.0e+6,5.02e+6,5.39e+6,5.5e+6,5.83e+6,5.96e+6,6.2e+6,6.72e+6,6.94e+6,7.12e+6
 	,7.47e+6,7.85e+6,7.97e+6,8.12e+6,8.46e+6,8.52e+6,8.78e+6,8.94e+6,9.04e+6,9.15e+6
 	,9.45e+6,9.75e+6,9.96e+6,9.97e+6,1.035e+7,1.059e+7,1.074e+7,1.084e+7,1.096e+7]}
-  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+  ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-ERR-DIG", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.pErr+-", "dataType":"41", "rank":1.955
+    ,"expansion":"Incident energy: energy /Error/"
+    ,"com0":0.002
+    ,"com1":2000}
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT", "units":"MB", "basicUnits":"B"
     ,"what":"ZZZ", "dataType":"11", "rank":777.0
     ,"expansion":"Assumed values: monitor"
