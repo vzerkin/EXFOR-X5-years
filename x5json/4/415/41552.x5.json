@@ -1,15 +1,16 @@
-  {"ENTRY":"41552", "updated":20141017, "TransID":"4165", "TransDate":20141212, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
+  {"ENTRY":"41552", "updated":20200303, "TransID":"4186", "TransDate":20200514, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
    ,"y1":1976,"a1":"A.M.Demidov+","r1":"J,IZV,40,157,1976"
-   ,"ref":"Jour: Izv. Rossiiskoi Akademii Nauk, Ser.Fiz., Vol.40, Issue.1, p.157 (1976)"
+   ,"ref":"Jour: Izv. Rossiiskoi Akademii Nauk, Ser.Fiz., Vol.40, p.157 (1976)"
    ,"title":"Angular distribution of Cd-110,112 gamma rays emitted in inelastic scattering of fast reactor neutrons."
    ,"x4subents":[
-   {"SUBENT":"41552001", "isub":1, "compiled":20141017, "TransID":"4165", "TransDate":20141212
+   {"SUBENT":"41552001", "isub":1, "compiled":20200303, "TransID":"4186", "TransDate":20200514
     ,"BIB":{
       "REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,IZV,40,(1),157,1976","stdFileName":"J,IZV,40,157,1976"
-		,"year":1976,"typ":"J","ref":"J,IZV","vol":"40","issue":"1","p":"157"
-		,"shortRef":"Jour: Izv. Rossiiskoi Akademii Nauk, Ser.Fiz., Vol.40, Issue.1, p.157 (1976)"}]
+	,"x4codes":[{"code":"J,IZV,40,157,1976","stdFileName":"J,IZV,40,157,1976"
+		,"year":1976,"typ":"J","ref":"J,IZV","vol":"40","p":"157"
+		,"shortRef":"Jour: Izv. Rossiiskoi Akademii Nauk, Ser.Fiz., Vol.40, p.157 (1976)"}]
+	,"x4freetext":["  Issue 1."]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"J,BAS,40,(1),132,1976","stdFileName":"J,BAS,40,132,1976"
@@ -106,9 +107,14 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" Iss. number was added in J,BAS ref."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200303A", "date":"20200303", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SPC -> SPC/DA, ANG was added."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
+    ,"COMMON":{"ncols":3, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-DUMMY", "units":"MEV", "pointer":" "
 	,"headerHelp":"Dummy incident proj. energy, for broad spectrum", "pFlag":"1000000"
@@ -116,42 +122,45 @@
       ,{"icol":1, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
 	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+      ,{"icol":2, "header":"ANG", "units":"ADEG", "pointer":" "
+	,"headerHelp":"Angle, laboratory system", "pFlag":"1000000"
+	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
       ]
       ,"datacols":[
-	 ["EN-DUMMY"  ,"ERR-1"     ]
-	,["MEV"       ,"PER-CENT"  ]
-	,[" "         ," "         ]]
+	 ["EN-DUMMY"  ,"ERR-1"     ,"ANG"       ]
+	,["MEV"       ,"PER-CENT"  ,"ADEG"      ]
+	,[" "         ," "         ," "         ]]
       ,"data":[
-	 [1,3]]}
+	 [1,3,90]]}
    }
-  ,{"SUBENT":"41552002", "isub":2, "compiled":20101208, "TransID":"4151", "TransDate":20110318
+  ,{"SUBENT":"41552002", "isub":2, "compiled":20200303, "TransID":"4186", "TransDate":20200514
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(48-CD-110(N,INL)48-CD-110,,SPC,,FST)//\n(48-CD-110(N,INL)48-CD-110,,SPC,,FST)"
-	    ,"c4reac":"((N,INL),SPC,,FST)//((N,INL),SPC,,FST)"
-	    ,"combi":"a//a","combiQuant":"Ratio of [Gamma spectrum]"
+	,"x4code":{"code":"(48-CD-110(N,INL)48-CD-110,,SPC/DA,,FST)//\n(48-CD-110(N,INL)48-CD-110,,SPC/DA,,FST)"
+	    ,"c4reac":"((N,INL),SPC/DA,,FST)//((N,INL),SPC/DA,,FST)"
+	    ,"combi":"a//a","combiQuant":"Ratio of [Gamma spectrum as function of angle]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"48-CD-110(N,INL)48-CD-110,,SPC,,FST"
+	    {"code":"48-CD-110(N,INL)48-CD-110,,SPC/DA,,FST"
 		,"Reac":"N,INL"
 		,"SF1":"48-CD-110","Targ":{"code":"48-CD-110","nam":"Cd-110","ZA":48110}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"INL","procHlp":"Inelastic scattering"
 		,"SF4":"48-CD-110","Prod":{"code":"48-CD-110","nam":"Cd-110","ZA":48110}
-		,"SF6":"SPC"
+		,"SF6":"SPC/DA"
 		,"SF8":"FST"
-		,"SF58":",SPC","Quant":"SP","BasicUnits":"GAM/PART","QuantHlp":"Gamma spectrum"
+		,"SF58":",SPC/DA","Quant":"SP","BasicUnits":"PRD/INC/SR","QuantHlp":"Gamma spectrum as function of angle"
 	    }
-	    ,{"code":"48-CD-110(N,INL)48-CD-110,,SPC,,FST"
+	    ,{"code":"48-CD-110(N,INL)48-CD-110,,SPC/DA,,FST"
 		,"Reac":"N,INL"
 		,"SF1":"48-CD-110","Targ":{"code":"48-CD-110","nam":"Cd-110","ZA":48110}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"INL","procHlp":"Inelastic scattering"
 		,"SF4":"48-CD-110","Prod":{"code":"48-CD-110","nam":"Cd-110","ZA":48110}
-		,"SF6":"SPC"
+		,"SF6":"SPC/DA"
 		,"SF8":"FST"
-		,"SF58":",SPC","Quant":"SP","BasicUnits":"GAM/PART","QuantHlp":"Gamma spectrum"
+		,"SF58":",SPC/DA","Quant":"SP","BasicUnits":"PRD/INC/SR","QuantHlp":"Gamma spectrum as function of angle"
 	    }]}
 	,"x4freetext":["   Relative"
 		,"   to the intensity of 657.75 keV line"
@@ -185,18 +194,11 @@
      ,"FLAG":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"1."}]
-	,"x4freetext":[" Unresolved duplet."]
+	,"x4freetext":[" Unresolved doublet."]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"2."}]
 	,"x4freetext":[" Gamma lines used for normalization."]
-	}
-      ]
-     ,"ERR-ANALYS":[
-	{"x4pointer":" "
-	,"x4code":{"header":"E-NM-ERR"
-	     ,"headerHelp":"Error in outgoing particle en., REACTION ratio numerator"}
-	,"x4freetext":["   Error of the nominator gamma energy"]
 	}
       ]
      ,"STATUS":[
@@ -204,7 +206,8 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 1 of J,IZV,40,(1),157,1976"]
+	,"x4freetext":[" Table 1 of"
+		,"Izv.AN,ser.Phys.,V.40,is.1,p.157,1976"]
 	}
       ]
     }
@@ -307,14 +310,14 @@
 	,[2682.6,0.6,0.0017,4.0E-4,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41552002", "Pointer":" "
- ,"Subent":"41552002", "compiled":20101208
+ ,"Subent":"41552002", "compiled":20200303
  ,"year1":1976, "author1ini":"A.M.", "author1":"Demidov"
- ,"zTarg1":48, "targ1":"Cd-110", "proj1":"n", "emis1":"INL", "MF":0, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(SpE,E2)"
- ,"ReactionType":"Ratio", "quant":"SP", "quantExpan":"Ratio of [Gamma spectrum]"
- ,"reacode":"(48-CD-110(N,INL)48-CD-110,,SPC,,FST)//(48-CD-110(N,INL)48-CD-110,,SPC,,FST)"
+ ,"zTarg1":48, "targ1":"Cd-110", "proj1":"n", "emis1":"INL", "MF":0, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(SpE,E2,ANG)"
+ ,"ReactionType":"Ratio", "quant":"SP", "quantExpan":"Ratio of [Gamma spectrum as function of angle]"
+ ,"reacode":"(48-CD-110(N,INL)48-CD-110,,SPC/DA,,FST)//(48-CD-110(N,INL)48-CD-110,,SPC/DA,,FST)"
  ,"compNotes":[]
- ,"wx4data":8
+ ,"wx4data":9
  ,"lx4data":62
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -395,7 +398,13 @@
 	,600,600,400,200,300,200,300,500,300,300
 	,300,300,300,400,500,400,500,400,400,400
 	,300,600]}
-  ,{"ivar":7, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+  ,{"ivar":7, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":90
+    ,"com1":90}
+  ,{"ivar":8, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"ZZZ", "dataType":"01", "rank":777.0
     ,"expansion":"Flags, etc.: flag"
@@ -408,7 +417,7 @@
 	,null,null]
    ,"dat1eq":true}
   ]
- ,"wc5data":3
+ ,"wc5data":4
  ,"lc5data":62
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
@@ -463,38 +472,49 @@
 	,600,600,400,200,300,200,300,500,300,300
 	,300,300,300,400,500,400,500,400,400,400
 	,300,600]   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
+      ,"expansion":"Angle: angle"
+      ,"x3":[90,90,90,90,90,90,90,90,90,90
+	,90,90,90,90,90,90,90,90,90,90
+	,90,90,90,90,90,90,90,90,90,90
+	,90,90,90,90,90,90,90,90,90,90
+	,90,90,90,90,90,90,90,90,90,90
+	,90,90,90,90,90,90,90,90,90,90
+	,90,90]
+   }
  }
 }
    ]
    }
-  ,{"SUBENT":"41552003", "isub":3, "compiled":20120120, "TransID":"Y008", "TransDate":20130111
+  ,{"SUBENT":"41552003", "isub":3, "compiled":20200303, "TransID":"4186", "TransDate":20200514
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(48-CD-112(N,INL)48-CD-112,,SPC,,FST)//\n(48-CD-112(N,INL)48-CD-112,,SPC,,FST)"
-	    ,"c4reac":"((N,INL),SPC,,FST)//((N,INL),SPC,,FST)"
-	    ,"combi":"a//a","combiQuant":"Ratio of [Gamma spectrum]"
+	,"x4code":{"code":"(48-CD-112(N,INL)48-CD-112,,SPC/DA,,FST)//\n(48-CD-112(N,INL)48-CD-112,,SPC/DA,,FST)"
+	    ,"c4reac":"((N,INL),SPC/DA,,FST)//((N,INL),SPC/DA,,FST)"
+	    ,"combi":"a//a","combiQuant":"Ratio of [Gamma spectrum as function of angle]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"48-CD-112(N,INL)48-CD-112,,SPC,,FST"
+	    {"code":"48-CD-112(N,INL)48-CD-112,,SPC/DA,,FST"
 		,"Reac":"N,INL"
 		,"SF1":"48-CD-112","Targ":{"code":"48-CD-112","nam":"Cd-112","ZA":48112}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"INL","procHlp":"Inelastic scattering"
 		,"SF4":"48-CD-112","Prod":{"code":"48-CD-112","nam":"Cd-112","ZA":48112}
-		,"SF6":"SPC"
+		,"SF6":"SPC/DA"
 		,"SF8":"FST"
-		,"SF58":",SPC","Quant":"SP","BasicUnits":"GAM/PART","QuantHlp":"Gamma spectrum"
+		,"SF58":",SPC/DA","Quant":"SP","BasicUnits":"PRD/INC/SR","QuantHlp":"Gamma spectrum as function of angle"
 	    }
-	    ,{"code":"48-CD-112(N,INL)48-CD-112,,SPC,,FST"
+	    ,{"code":"48-CD-112(N,INL)48-CD-112,,SPC/DA,,FST"
 		,"Reac":"N,INL"
 		,"SF1":"48-CD-112","Targ":{"code":"48-CD-112","nam":"Cd-112","ZA":48112}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"INL","procHlp":"Inelastic scattering"
 		,"SF4":"48-CD-112","Prod":{"code":"48-CD-112","nam":"Cd-112","ZA":48112}
-		,"SF6":"SPC"
+		,"SF6":"SPC/DA"
 		,"SF8":"FST"
-		,"SF58":",SPC","Quant":"SP","BasicUnits":"GAM/PART","QuantHlp":"Gamma spectrum"
+		,"SF58":",SPC/DA","Quant":"SP","BasicUnits":"PRD/INC/SR","QuantHlp":"Gamma spectrum as function of angle"
 	    }]}
 	,"x4freetext":["   Relative"
 		,"   to the intensity of 617.8 keV line."
@@ -517,9 +537,9 @@
 		,"shortRef":"Jour: Nuclear Physics, Section A, Vol.193, p.204 (1972)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,,G.Wallage+,J,NP/A,182,417,1972"
+	,"x4codes":[{"code":"R,,G.Wallace+,J,NP/A,182,417,1972"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"G.Wallage+","stdFileName":"J,NP_A,182,417,1972"
+		,"author1":"G.Wallace+","stdFileName":"J,NP_A,182,417,1972"
 		,"year":1972,"typ":"J","ref":"J,NP/A","vol":"182","p":"417"
 		,"shortRef":"Jour: Nuclear Physics, Section A, Vol.182, p.417 (1972)"}]
 	}
@@ -532,19 +552,13 @@
 	,"x4freetext":[" Level scheme information from these 4 references."]
 	}
       ]
-     ,"ERR-ANALYS":[
-	{"x4pointer":" "
-	,"x4code":{"header":"E-NM-ERR"
-	     ,"headerHelp":"Error in outgoing particle en., REACTION ratio numerator"}
-	,"x4freetext":["   Error of the nominator gamma energy"]
-	}
-      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 2 of J,IZV,40,(1),157,1976"]
+	,"x4freetext":[" Table 2 of"
+		,"Izv.AN,ser.Phys.,V.40,is.1,p.157,1976"]
 	}
       ]
      ,"HISTORY":[
@@ -651,14 +665,14 @@
 	,[2828.9,0.8,0.0025,8.0E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41552003", "Pointer":" "
- ,"Subent":"41552003", "compiled":20120120
+ ,"Subent":"41552003", "compiled":20200303
  ,"year1":1976, "author1ini":"A.M.", "author1":"Demidov"
- ,"zTarg1":48, "targ1":"Cd-112", "proj1":"n", "emis1":"INL", "MF":0, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(SpE,E2)"
- ,"ReactionType":"Ratio", "quant":"SP", "quantExpan":"Ratio of [Gamma spectrum]"
- ,"reacode":"(48-CD-112(N,INL)48-CD-112,,SPC,,FST)//(48-CD-112(N,INL)48-CD-112,,SPC,,FST)"
+ ,"zTarg1":48, "targ1":"Cd-112", "proj1":"n", "emis1":"INL", "MF":0, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(SpE,E2,ANG)"
+ ,"ReactionType":"Ratio", "quant":"SP", "quantExpan":"Ratio of [Gamma spectrum as function of angle]"
+ ,"reacode":"(48-CD-112(N,INL)48-CD-112,,SPC/DA,,FST)//(48-CD-112(N,INL)48-CD-112,,SPC/DA,,FST)"
  ,"compNotes":[]
- ,"wx4data":7
+ ,"wx4data":8
  ,"lx4data":62
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -739,8 +753,14 @@
 	,400,600,400,700,600,600,600,600,500,800
 	,700,700,500,500,700,600,800,500,800,700
 	,700,800]}
+  ,{"ivar":7, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":90
+    ,"com1":90}
   ]
- ,"wc5data":3
+ ,"wc5data":4
  ,"lc5data":62
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
@@ -795,6 +815,17 @@
 	,400,600,400,700,600,600,600,600,500,800
 	,700,700,500,500,700,600,800,500,800,700
 	,700,800]   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
+      ,"expansion":"Angle: angle"
+      ,"x3":[90,90,90,90,90,90,90,90,90,90
+	,90,90,90,90,90,90,90,90,90,90
+	,90,90,90,90,90,90,90,90,90,90
+	,90,90,90,90,90,90,90,90,90,90
+	,90,90,90,90,90,90,90,90,90,90
+	,90,90,90,90,90,90,90,90,90,90
+	,90,90]
+   }
  }
 }
    ]
