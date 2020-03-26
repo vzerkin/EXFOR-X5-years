@@ -1,9 +1,9 @@
-  {"ENTRY":"40284", "updated":20120322, "TransID":"4156", "TransDate":20120621, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
+  {"ENTRY":"40284", "updated":20200327, "TransID":"4186", "TransDate":20200514, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
    ,"y1":1973,"a1":"V.G.Vorob'yeva+","r1":"C,73KIEV,3,270,1973"
    ,"ref":"Conf: 2.Conf.on Neutron Physics, Kiev 1973, Vol.3, p.270 (1973)"
    ,"title":"Mass yields and kinetic energy of fragments for fission of plutonium isotopes"
    ,"x4subents":[
-   {"SUBENT":"40284001", "isub":1, "compiled":20120322, "TransID":"4156", "TransDate":20120621
+   {"SUBENT":"40284001", "isub":1, "compiled":20200327, "TransID":"4186", "TransDate":20200514
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,7 +12,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"C,73KIEV,3,270,197305","stdFileName":"C,73KIEV,3,270,1973"
+	,"x4codes":[{"code":"C,73KIEV,3,270,1973","stdFileName":"C,73KIEV,3,270,1973"
 		,"year":1973,"typ":"C","ref":"C,73KIEV"
 		,"shortRef":"Conf: 2.Conf.on Neutron Physics, Kiev 1973, Vol.3, p.270 (1973)"}]
 	,"x4freetext":[" Data given partially"]
@@ -34,6 +34,17 @@
 		,"for fission of plutonium isotopes"]
 	}
       ]
+     ,"FACILITY":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"VDG", "dict":"FACILITY", "idict":18,"hlp":"Van de Graaff"}
+	    ,{"code":"4RUSFEI", "dict":"INSTITUTE", "idict":3,"hlp":"Fiziko-Energeticheskii Inst., Obninsk, Russia"}]
+	}
+      ]
+     ,"INC-SOURCE":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"D-D", "dict":"INC-SOURCE", "idict":19,"hlp":"2H(d,n)"}]
+	}
+      ]
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"COINC", "dict":"METHOD", "idict":21,"hlp":"Coincidence"}]
@@ -42,8 +53,8 @@
       ]
      ,"DETECTOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"SOLST", "dict":"DETECTOR", "idict":22,"hlp":"Solid-state detector"}]
-	,"x4freetext":[" Silicon detector"]
+	,"x4codes":[{"code":"SI", "dict":"DETECTOR", "idict":22,"hlp":"Silicon detector"}]
+	,"x4freetext":["    Silicon detector for FF"]
 	}
       ]
      ,"ANALYSIS":[
@@ -53,22 +64,16 @@
 		,"according to the formula MH=A*EL/(EL+EH)."
 		,"here A- mass-number of fissible nucleus,"
 		,"     EL and EH- kinetic energy measured for light"
-		,"     and heavy fission fragments"]
-	}
-      ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"92-U-235(N,F),,AKE,FF"
-		,"reaction":"92-U-235(N,F),,AKE,FF"}
-	,"x4freetext":[" Average kinetic energy"
+		,"     and heavy fission fragments"
+		," Average kinetic energy"
 		,"of fragments at the fission of U-235"
-		,"by thermal neutrons"]
+		,"by thermal neutrons was used for normalization."]
 	}
       ]
-     ,"PART-DET":[
+     ,"ASSUMED":[
 	{"x4pointer":" "
-	,"x4codes":["FF"]
-	,"x4freetext":[" Fission fragments"]
+	,"x4code":{"code":"orig::ASSUM,92-U-235(N,F),,AKE,FF"}
+	,"x4freetext":[" At thermal energy"]
 	}
       ]
      ,"COMMENT":[
@@ -104,7 +109,6 @@
 		,"     EK- average kinetic energy of fragments"
 		,"         with given mass M,"
 		,"     N-  number of the registered fragments"
-		,"         at the fission of plutonium isotopes"
 		,"         by neutrons."]
 	}
       ]
@@ -123,57 +127,52 @@
 		," AKE -> KE was corrected in Subents 010-012,015-016"
 		,"according to comment of N.Otsuka (NDS IAEA) ."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200327U", "date":"20200327", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" COREL was added in Subents 004,005 ."
+		," FF -> LF+HF in SF7."
+		,"\"PART-DET (FF)\" was deleted according to a comment of"
+		,"N.Otsuka (NDS,IAEA)."
+		,"Code (SEC) was added in SF5 - see CORRECTION (probably"
+		,"from authors), but no explanation in the article;"
+		,"MONITOR -> ASSUMED according to a comment of"
+		,"N.Otsuka (NDS,IAEA)."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
+    ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"MONIT", "units":"MEV", "pointer":" "
-	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
+       {"icol":0, "header":"ASSUM", "units":"MEV", "pointer":" "
+	,"headerHelp":"Assumed value, defined under ASSUMED.", "pFlag":"0000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-NRM", "units":"EV", "pointer":" "
-	,"headerHelp":"Incident projectile energy used for normalization", "pFlag":"0000000"
-	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["MONIT"     ,"EN-NRM"    ]
-	,["MEV"       ,"EV"        ]
-	,[" "         ," "         ]]
+	 ["ASSUM"     ]
+	,["MEV"       ]
+	,[" "         ]]
       ,"data":[
-	 [172.25,0.0253]]}
+	 [172.25]]}
    }
-  ,{"SUBENT":"40284002", "isub":2, "compiled":20120322, "TransID":"4156", "TransDate":20120621
+  ,{"SUBENT":"40284002", "isub":2, "compiled":20200327, "TransID":"4186", "TransDate":20200514
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"94-PU-238(N,F),,AKE,FF"
-	    ,"c4reac":"(N,F),AKE,FF"
+	,"x4code":{"code":"94-PU-238(N,F),(SEC),AKE,LF+HF"
+	    ,"c4reac":"(N,F)(SEC),AKE,LF+HF"
 	    ,"combi":"a"
-	    ,"MF":1
-	    ,"MT":458
 	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"94-PU-238(N,F),,AKE,FF"
+	    {"code":"94-PU-238(N,F),(SEC),AKE,LF+HF"
 		,"Reac":"N,F"
 		,"SF1":"94-PU-238","Targ":{"code":"94-PU-238","nam":"Pu-238","ZA":94238}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF5":"(SEC)"
 		,"SF6":"AKE"
-		,"SF7":"FF"
-		,"SF58":",AKE,FF","Quant":"E","BasicUnits":"EV","QuantHlp":"Average kinetic energy of specified particle"
+		,"SF7":"LF+HF"
+		,"SF58":"(SEC),AKE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Avg.tot.kin.energy of light and heavy fission fr"
 	    }]}
-	}
-      ]
-     ,"FACILITY":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"VDG", "dict":"FACILITY", "idict":18,"hlp":"Van de Graaff"}
-	    ,{"code":"4RUSFEI", "dict":"INSTITUTE", "idict":3,"hlp":"Fiziko-Energeticheskii Inst., Obninsk, Russia"}]
-	,"x4freetext":["  Van-de-Graaff"]
-	}
-      ]
-     ,"INC-SOURCE":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"D-D", "dict":"INC-SOURCE", "idict":19,"hlp":"2H(d,n)"}]
-	,"x4freetext":["  Deuteron-deuterium reaction"]
 	}
       ]
      ,"STATUS":[
@@ -181,7 +180,8 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 1 of C,73KIEV,3,270,1973 for 0.8 MeV."]
+	,"x4freetext":[" Table 1 of Conf.Proc.73KIEV,3,270,1973 for"
+		,"0.8 MeV."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -191,8 +191,17 @@
 	,"x4freetext":[" Not specified in article."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20200327A", "date":"20200327", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Second data line was deleted - source of"
+		,"these data is not clear, no such inc.energy in the"
+		,"article (EN=122MeV, AKE=0.128+-0.038 MeV)"]
+	}
+      ]
     }
-    ,"DATA":{"ncols":3, "nrows":2
+    ,"DATA":{"ncols":3, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
@@ -209,102 +218,86 @@
 	,["MEV"       ,"MEV"       ,"MEV"       ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
-	 [0.8,178.5,2.5]
-	,[122,0.128,0.038]]}
+	 [0.8,178.5,2.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40284002", "Pointer":" "
- ,"Subent":"40284002", "compiled":20120322
+ ,"Subent":"40284002", "compiled":20200327
  ,"year1":1973, "author1ini":"V.G.", "author1":"Vorob`yeva"
- ,"zTarg1":94, "targ1":"Pu-238", "proj1":"n", "emis1":"F", "MF":1, "MT":458, "nExpectedArgs":1
+ ,"zTarg1":94, "targ1":"Pu-238", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"E", "quant":"E", "quantExpan":"Average kinetic energy of specified particle"
- ,"reacode":"94-PU-238(N,F),,AKE,FF"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Avg.tot.kin.energy of light and heavy fission fr"
+ ,"reacode":"94-PU-238(N,F),(SEC),AKE,LF+HF"
  ,"compNotes":[]
- ,"wx4data":5
- ,"lx4data":2
+ ,"wx4data":4
+ ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
     ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[178.5,0.128]
-    ,"dat1":[1.785e+8,1.28e+5]}
+    ,"dat0":[178.5]
+    ,"dat1":[1.785e+8]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
     ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[2.5,0.038]
-    ,"dat1":[2.5e+6,3.8e+4]}
+    ,"dat0":[2.5]
+    ,"dat1":[2.5e+6]}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
-    ,"dat0":[0.8,122]
-    ,"dat1":[8.0e+5,1.22e+8]}
+    ,"dat0":[0.8]
+    ,"dat1":[8.0e+5]}
   ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
  ,"wc5data":2
- ,"lc5data":2
+ ,"lc5data":1
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[1.785e+8,1.28e+5]
-      ,"dy":[2.5e+6,3.8e+4]   }
+      ,"y":[1.785e+8]
+      ,"dy":[2.5e+6]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[8.0e+5,1.22e+8]
+      ,"x1":[8.0e+5]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"40284003", "isub":3, "compiled":20120322, "TransID":"4156", "TransDate":20120621
+  ,{"SUBENT":"40284003", "isub":3, "compiled":20200327, "TransID":"4186", "TransDate":20200514
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"94-PU-239(N,F),,AKE,FF"
-	    ,"c4reac":"(N,F),AKE,FF"
+	,"x4code":{"code":"94-PU-239(N,F),(SEC),AKE,LF+HF"
+	    ,"c4reac":"(N,F)(SEC),AKE,LF+HF"
 	    ,"combi":"a"
-	    ,"MF":1
-	    ,"MT":458
 	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"94-PU-239(N,F),,AKE,FF"
+	    {"code":"94-PU-239(N,F),(SEC),AKE,LF+HF"
 		,"Reac":"N,F"
 		,"SF1":"94-PU-239","Targ":{"code":"94-PU-239","nam":"Pu-239","ZA":94239}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF5":"(SEC)"
 		,"SF6":"AKE"
-		,"SF7":"FF"
-		,"SF58":",AKE,FF","Quant":"E","BasicUnits":"EV","QuantHlp":"Average kinetic energy of specified particle"
+		,"SF7":"LF+HF"
+		,"SF58":"(SEC),AKE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Avg.tot.kin.energy of light and heavy fission fr"
 	    }]}
-	}
-      ]
-     ,"FACILITY":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"VDG", "dict":"FACILITY", "idict":18,"hlp":"Van de Graaff"}
-	    ,{"code":"4RUSFEI", "dict":"INSTITUTE", "idict":3,"hlp":"Fiziko-Energeticheskii Inst., Obninsk, Russia"}]
-	,"x4freetext":["  Van-de-Graaff"]
 	}
       ]
      ,"INC-SOURCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"D-D", "dict":"INC-SOURCE", "idict":19,"hlp":"2H(d,n)"}]
-	,"x4freetext":["  Deuteron-deuterium reaction"
-		,"Thermal neutrons were obtained by moderation of"
+	,"x4code":null
+	,"x4freetext":[" Thermal neutrons were obtained by moderation of"
 		,"fast neutrons in paraffin block"]
 	}
       ]
@@ -313,7 +306,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 1 of C,73KIEV,3,270,1973."]
+	,"x4freetext":[" Table 1 of Conf.Proc.73KIEV,3,270,1973."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -344,14 +337,14 @@
 	 [0.0253,178.8,0.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40284003", "Pointer":" "
- ,"Subent":"40284003", "compiled":20120322
+ ,"Subent":"40284003", "compiled":20200327
  ,"year1":1973, "author1ini":"V.G.", "author1":"Vorob`yeva"
- ,"zTarg1":94, "targ1":"Pu-239", "proj1":"n", "emis1":"F", "MF":1, "MT":458, "nExpectedArgs":1
+ ,"zTarg1":94, "targ1":"Pu-239", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"E", "quant":"E", "quantExpan":"Average kinetic energy of specified particle"
- ,"reacode":"94-PU-239(N,F),,AKE,FF"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Avg.tot.kin.energy of light and heavy fission fr"
+ ,"reacode":"94-PU-239(N,F),(SEC),AKE,LF+HF"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -373,15 +366,9 @@
     ,"dat0":[0.0253]
    ,"dat1eq":true}
   ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
@@ -402,25 +389,24 @@
 }
    ]
    }
-  ,{"SUBENT":"40284004", "isub":4, "compiled":20120322, "TransID":"4156", "TransDate":20120621
+  ,{"SUBENT":"40284004", "isub":4, "compiled":20200327, "TransID":"4186", "TransDate":20200514
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"94-PU-240(N,F),,AKE,FF"
-	    ,"c4reac":"(N,F),AKE,FF"
+	,"x4code":{"code":"94-PU-240(N,F),(SEC),AKE,LF+HF"
+	    ,"c4reac":"(N,F)(SEC),AKE,LF+HF"
 	    ,"combi":"a"
-	    ,"MF":1
-	    ,"MT":458
 	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"94-PU-240(N,F),,AKE,FF"
+	    {"code":"94-PU-240(N,F),(SEC),AKE,LF+HF"
 		,"Reac":"N,F"
 		,"SF1":"94-PU-240","Targ":{"code":"94-PU-240","nam":"Pu-240","ZA":94240}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF5":"(SEC)"
 		,"SF6":"AKE"
-		,"SF7":"FF"
-		,"SF58":",AKE,FF","Quant":"E","BasicUnits":"EV","QuantHlp":"Average kinetic energy of specified particle"
+		,"SF7":"LF+HF"
+		,"SF58":"(SEC),AKE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Avg.tot.kin.energy of light and heavy fission fr"
 	    }]}
 	}
       ]
@@ -428,13 +414,11 @@
 	{"x4pointer":" "
 	,"x4codes":[{"code":"VDG", "dict":"FACILITY", "idict":18,"hlp":"Van de Graaff"}
 	    ,{"code":"4RUSFEI", "dict":"INSTITUTE", "idict":3,"hlp":"Fiziko-Energeticheskii Inst., Obninsk, Russia"}]
-	,"x4freetext":["  Van-de-Graaff"]
 	}
       ]
      ,"INC-SOURCE":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"D-D", "dict":"INC-SOURCE", "idict":19,"hlp":"2H(d,n)"}]
-	,"x4freetext":["  Deuteron-deuterium reaction"]
 	}
       ]
      ,"STATUS":[
@@ -442,7 +426,14 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 1 of C,73KIEV,3,270,1973."]
+	,"x4freetext":[" Table 1 of Conf.Proc.73KIEV,3,270,1973."]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"COREL,40342006"
+		,"flag":"COREL", "help":"Data correlated with another data set"
+		,"subent":"40342006"
+		}]
+	,"x4freetext":[" Different analysis, monitor ."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -473,14 +464,14 @@
 	 [1.33,178.2,0.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40284004", "Pointer":" "
- ,"Subent":"40284004", "compiled":20120322
+ ,"Subent":"40284004", "compiled":20200327
  ,"year1":1973, "author1ini":"V.G.", "author1":"Vorob`yeva"
- ,"zTarg1":94, "targ1":"Pu-240", "proj1":"n", "emis1":"F", "MF":1, "MT":458, "nExpectedArgs":1
+ ,"zTarg1":94, "targ1":"Pu-240", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"E", "quant":"E", "quantExpan":"Average kinetic energy of specified particle"
- ,"reacode":"94-PU-240(N,F),,AKE,FF"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Avg.tot.kin.energy of light and heavy fission fr"
+ ,"reacode":"94-PU-240(N,F),(SEC),AKE,LF+HF"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -502,15 +493,9 @@
     ,"dat0":[1.33]
     ,"dat1":[1.33e+6]}
   ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
@@ -531,40 +516,31 @@
 }
    ]
    }
-  ,{"SUBENT":"40284005", "isub":5, "compiled":20120322, "TransID":"4156", "TransDate":20120621
+  ,{"SUBENT":"40284005", "isub":5, "compiled":20200327, "TransID":"4186", "TransDate":20200514
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"94-PU-241(N,F),,AKE,FF"
-	    ,"c4reac":"(N,F),AKE,FF"
+	,"x4code":{"code":"94-PU-241(N,F),(SEC),AKE,LF+HF"
+	    ,"c4reac":"(N,F)(SEC),AKE,LF+HF"
 	    ,"combi":"a"
-	    ,"MF":1
-	    ,"MT":458
 	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"94-PU-241(N,F),,AKE,FF"
+	    {"code":"94-PU-241(N,F),(SEC),AKE,LF+HF"
 		,"Reac":"N,F"
 		,"SF1":"94-PU-241","Targ":{"code":"94-PU-241","nam":"Pu-241","ZA":94241}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF5":"(SEC)"
 		,"SF6":"AKE"
-		,"SF7":"FF"
-		,"SF58":",AKE,FF","Quant":"E","BasicUnits":"EV","QuantHlp":"Average kinetic energy of specified particle"
+		,"SF7":"LF+HF"
+		,"SF58":"(SEC),AKE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Avg.tot.kin.energy of light and heavy fission fr"
 	    }]}
-	}
-      ]
-     ,"FACILITY":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"VDG", "dict":"FACILITY", "idict":18,"hlp":"Van de Graaff"}
-	    ,{"code":"4RUSFEI", "dict":"INSTITUTE", "idict":3,"hlp":"Fiziko-Energeticheskii Inst., Obninsk, Russia"}]
-	,"x4freetext":["  Van-de-Graaff"]
 	}
       ]
      ,"INC-SOURCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"D-D", "dict":"INC-SOURCE", "idict":19,"hlp":"2H(d,n)"}]
-	,"x4freetext":["  Deuteron-deuterium reaction"
-		,"Thermal neutrons were obtained by moderation of"
+	,"x4code":null
+	,"x4freetext":[" Thermal neutrons were obtained by moderation of"
 		,"fast neutrons in paraffin block"]
 	}
       ]
@@ -574,8 +550,16 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" From authors."
-		,"Data at thermal point - Table 1 of C,73KIEV,3,270,1973."
-		,"Data are on Fig.3 of C,73KIEV,3,270,1973."]
+		,"Data at thermal point - Table 1 of"
+		,"Conf.Proc.73KIEV,3,270,1973."
+		,"Data are on Fig.3 of Conf.Proc.73KIEV,3,270,1973."]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"COREL,40342007"
+		,"flag":"COREL", "help":"Data correlated with another data set"
+		,"subent":"40342007"
+		}]
+	,"x4freetext":[" Different analysis, monitor ."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -614,14 +598,14 @@
 	,[2.74,178.64,0.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40284005", "Pointer":" "
- ,"Subent":"40284005", "compiled":20120322
+ ,"Subent":"40284005", "compiled":20200327
  ,"year1":1973, "author1ini":"V.G.", "author1":"Vorob`yeva"
- ,"zTarg1":94, "targ1":"Pu-241", "proj1":"n", "emis1":"F", "MF":1, "MT":458, "nExpectedArgs":1
+ ,"zTarg1":94, "targ1":"Pu-241", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"E", "quant":"E", "quantExpan":"Average kinetic energy of specified particle"
- ,"reacode":"94-PU-241(N,F),,AKE,FF"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Avg.tot.kin.energy of light and heavy fission fr"
+ ,"reacode":"94-PU-241(N,F),(SEC),AKE,LF+HF"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":9
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -643,15 +627,9 @@
     ,"dat0":[2.53e-8,1.33,1.54,1.74,1.94,2.15,2.35,2.55,2.74]
     ,"dat1":[0.0253,1.33e+6,1.54e+6,1.74e+6,1.94e+6,2.15e+6,2.35e+6,2.55e+6,2.74e+6]}
   ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
@@ -672,39 +650,25 @@
 }
    ]
    }
-  ,{"SUBENT":"40284006", "isub":6, "compiled":20120322, "TransID":"4156", "TransDate":20120621
+  ,{"SUBENT":"40284006", "isub":6, "compiled":20200327, "TransID":"4186", "TransDate":20200514
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"94-PU-242(N,F),,AKE,FF"
-	    ,"c4reac":"(N,F),AKE,FF"
+	,"x4code":{"code":"94-PU-242(N,F),(SEC),AKE,LF+HF"
+	    ,"c4reac":"(N,F)(SEC),AKE,LF+HF"
 	    ,"combi":"a"
-	    ,"MF":1
-	    ,"MT":458
 	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"94-PU-242(N,F),,AKE,FF"
+	    {"code":"94-PU-242(N,F),(SEC),AKE,LF+HF"
 		,"Reac":"N,F"
 		,"SF1":"94-PU-242","Targ":{"code":"94-PU-242","nam":"Pu-242","ZA":94242}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF5":"(SEC)"
 		,"SF6":"AKE"
-		,"SF7":"FF"
-		,"SF58":",AKE,FF","Quant":"E","BasicUnits":"EV","QuantHlp":"Average kinetic energy of specified particle"
+		,"SF7":"LF+HF"
+		,"SF58":"(SEC),AKE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Avg.tot.kin.energy of light and heavy fission fr"
 	    }]}
-	}
-      ]
-     ,"FACILITY":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"VDG", "dict":"FACILITY", "idict":18,"hlp":"Van de Graaff"}
-	    ,{"code":"4RUSFEI", "dict":"INSTITUTE", "idict":3,"hlp":"Fiziko-Energeticheskii Inst., Obninsk, Russia"}]
-	,"x4freetext":["  Van-de-Graaff"]
-	}
-      ]
-     ,"INC-SOURCE":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"D-D", "dict":"INC-SOURCE", "idict":19,"hlp":"2H(d,n)"}]
-	,"x4freetext":["  Deuteron-deuterium reaction"]
 	}
       ]
      ,"STATUS":[
@@ -713,8 +677,9 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" From authors."
-		,"Data at 0.7 MeV - Table 1 of C,73KIEV,3,270,1973."
-		,"Data are on Fig.3 of C,73KIEV,3,270,1973."]
+		,"Data at 0.7 MeV - Table 1 of"
+		,"Conf.Proc.73KIEV,3,270,1973."
+		,"Data are on Fig.3 of Conf.Proc.73KIEV,3,270,1973."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -756,14 +721,14 @@
 	,[3.37,178.2,0.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40284006", "Pointer":" "
- ,"Subent":"40284006", "compiled":20120322
+ ,"Subent":"40284006", "compiled":20200327
  ,"year1":1973, "author1ini":"V.G.", "author1":"Vorob`yeva"
- ,"zTarg1":94, "targ1":"Pu-242", "proj1":"n", "emis1":"F", "MF":1, "MT":458, "nExpectedArgs":1
+ ,"zTarg1":94, "targ1":"Pu-242", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"E", "quant":"E", "quantExpan":"Average kinetic energy of specified particle"
- ,"reacode":"94-PU-242(N,F),,AKE,FF"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Avg.tot.kin.energy of light and heavy fission fr"
+ ,"reacode":"94-PU-242(N,F),(SEC),AKE,LF+HF"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":12
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -791,15 +756,9 @@
     ,"dat1":[7.0e+5,1.12e+6,1.73e+6,1.94e+6,2.14e+6,2.37e+6,2.56e+6,2.69e+6,2.85e+6,2.94e+6
 	,3.15e+6,3.37e+6]}
   ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
@@ -929,7 +888,7 @@
  ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Primary fission-product yield"
  ,"reacode":"94-PU-242(0,F)MASS,PRE,FY"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":42
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -971,15 +930,9 @@
 	,161,162]
    ,"dat1eq":true}
   ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
@@ -1147,7 +1100,7 @@
  ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Primary fission-product yield"
  ,"reacode":"94-PU-241(N,F)MASS,PRE,FY"
  ,"compNotes":[]
- ,"wx4data":6
+ ,"wx4data":5
  ,"lx4data":42
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1195,15 +1148,9 @@
 	,161,162]
    ,"dat1eq":true}
   ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
@@ -1367,7 +1314,7 @@
  ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Primary fission-product yield"
  ,"reacode":"94-PU-241(N,F)MASS,PRE,FY"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":41
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1401,15 +1348,9 @@
 	,162]
    ,"dat1eq":true}
   ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
@@ -1552,7 +1493,7 @@
  ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy of reaction product"
  ,"reacode":"94-PU-242(0,F)MASS,,KE"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":42
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1594,15 +1535,9 @@
 	,161,162]
    ,"dat1eq":true}
   ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
@@ -1767,7 +1702,7 @@
  ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy of reaction product"
  ,"reacode":"94-PU-241(N,F)MASS,,KE"
  ,"compNotes":[]
- ,"wx4data":6
+ ,"wx4data":5
  ,"lx4data":42
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1815,15 +1750,9 @@
 	,161,162]
    ,"dat1eq":true}
   ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
@@ -1984,7 +1913,7 @@
  ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy of reaction product"
  ,"reacode":"94-PU-241(N,F)MASS,,KE"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":41
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2018,15 +1947,9 @@
 	,162]
    ,"dat1eq":true}
   ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
@@ -2187,7 +2110,7 @@
  ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Primary fission-product yield"
  ,"reacode":"94-PU-242(N,F)MASS,PRE,FY"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":42
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2221,15 +2144,9 @@
 	,162,163]
    ,"dat1eq":true}
   ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
@@ -2389,7 +2306,7 @@
  ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Primary fission-product yield"
  ,"reacode":"94-PU-242(N,F)MASS,PRE,FY"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":41
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2423,15 +2340,9 @@
 	,163]
    ,"dat1eq":true}
   ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
@@ -2589,7 +2500,7 @@
  ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy of reaction product"
  ,"reacode":"94-PU-242(N,F)MASS,,KE"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":42
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2623,15 +2534,9 @@
 	,162,163]
    ,"dat1eq":true}
   ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
@@ -2788,7 +2693,7 @@
  ,"ReactionType":"E", "quant":"E", "quantExpan":"Kinetic energy of reaction product"
  ,"reacode":"94-PU-242(N,F)MASS,,KE"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":41
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2822,15 +2727,9 @@
 	,163]
    ,"dat1eq":true}
   ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"EN-NRM", "units":"EV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"1", "rank":777.0
-    ,"expansion":"Assumed values"
-    ,"com0":0.0253
-    ,"com1":0.0253}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
+    ,"header":"ASSUM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.0
+    ,"expansion":"Assumed values: assumed"
     ,"com0":172.25
     ,"com1":1.7225e+8}
   ]
