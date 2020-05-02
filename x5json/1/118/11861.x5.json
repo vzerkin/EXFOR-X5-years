@@ -1,9 +1,9 @@
-  {"ENTRY":"11861", "updated":19830919, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"11861", "updated":20200503, "TransID":"1468", "TransDate":20200827, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1955,"a1":"F.L.Ribe+","r1":"J,PR,99,331,1955"
    ,"ref":"Jour: Physical Review, Vol.99, p.331 (1955)"
-   ,"title":"14-Mev (N,Alpha) Cross Sections In Zirconium.Ii."
+   ,"title":"14-MeV (n,alpha) cross sections in zirconium.III."
    ,"x4subents":[
-   {"SUBENT":"11861001", "isub":1, "compiled":19830919, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"11861001", "isub":1, "compiled":20200503, "TransID":"1468", "TransDate":20200827
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,27 +12,26 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,PR,99,331,5507","stdFileName":"J,PR,99,331,1955"
+	,"x4codes":[{"code":"J,PR,99,331,1955","stdFileName":"J,PR,99,331,1955"
 		,"year":1955,"typ":"J","ref":"J,PR","vol":"99","p":"331"
 		,"shortRef":"Jour: Physical Review, Vol.99, p.331 (1955)"}]
 	}
       ]
      ,"AUTHOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"ini":"F.L.","nam":"RIBE"}
-	    ,{"ini":"R.W.","nam":"DAVIS"}]
+	,"x4codes":[{"ini":"F.L.","nam":"Ribe"}
+	    ,{"ini":"R.W.","nam":"Davis"}]
 	}
       ]
      ,"TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["14-MEV (N,ALPHA) CROSS SECTIONS IN ZIRCONIUM.II."]
+	,"x4freetext":["14-MeV (n,alpha) cross sections in zirconium.III."]
 	}
       ]
-     ,"N-SOURCE":[
+     ,"INC-SOURCE":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::D-T"}
-	,"x4freetext":[" T(D,N) SOURCE"]
+	,"x4codes":[{"code":"D-T", "dict":"INC-SOURCE", "idict":19,"hlp":"3H(d,n)"}]
 	}
       ]
      ,"STATUS":[
@@ -40,66 +39,95 @@
 	,"x4codes":[{"code":"SCSRS"
 		,"flag":"SCSRS", "help":"Data converted from SCISRS file"
 		}]
+	,"x4freetext":[" Data correspond to Fig.1, Phys.Rev.99,331,1955"]
 	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":{"code":"760731T", "date":"760731", "act":"T", "dict":"HISTORY", "idict":15
+	,"x4code":{"code":"19760731T", "date":"19760731", "act":"T", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Converted from previous compilation"}
-	,"x4freetext":[" TRANSLATED FROM SCISRS"]
+	,"x4freetext":[" Translated from SCISRS"]
 	}
 	,{"x4pointer":" "
-	,"x4code":{"code":"830919A", "date":"830919", "act":"A", "dict":"HISTORY", "idict":15
+	,"x4code":{"code":"19830919A", "date":"19830919", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" CONVERTED TO REACTION FORMALISM"]
+	,"x4freetext":[" Converted to reaction formalism"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200502A", "date":"20200502", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION corrected, converted to lower"
+		,"  case, minor BIB changes"]
 	}
       ]
     }
    }
-  ,{"SUBENT":"11861002", "isub":2, "compiled":19830919, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"11861002", "isub":2, "compiled":20200503, "TransID":"1468", "TransDate":20200827
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"40-ZR-0(N,A),,DA"
-	    ,"c4reac":"(N,A),DA"
+	,"x4code":{"code":"40-ZR-0(N,X)2-HE-4,PAR,DA"
+	    ,"c4reac":"(N,X)PAR,DA"
 	    ,"combi":"a"
 	    ,"MF":4
-	    ,"MT":107
+	    ,"MT":9000
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"40-ZR-0(N,A),,DA"
-		,"Reac":"N,A"
+	    {"code":"40-ZR-0(N,X)2-HE-4,PAR,DA"
+		,"Reac":"N,X"
 		,"SF1":"40-ZR-0","Targ":{"code":"40-ZR-0","nam":"Zr-0","ZA":40000}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"A"
+		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
+		,"SF5":"PAR"
 		,"SF6":"DA"
-		,"SF58":",DA","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Differential c/s with respect to angle"
+		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
 	    }]}
 	}
       ]
      ,"DETECTOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"TELES", "dict":"DETECTOR", "idict":22,"hlp":"Counter telescope"}]
-	,"x4freetext":["    COUNTER TELESCOPE"]
+	,"x4codes":[{"code":"TELES", "dict":"DETECTOR", "idict":22,"hlp":"Counter telescope"}
+	    ,{"code":"PROPC", "dict":"DETECTOR", "idict":22,"hlp":"Proportional counter"}
+	    ,{"code":"NAICR", "dict":"DETECTOR", "idict":22,"hlp":"Sodium-Iodide crystal"}]
+	,"x4freetext":["    Counter telescope"]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on sources of uncertainties"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20200502A", "date":"20200502", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Changed REACTION (N,A) -> (N,X),PAR, added"
+		," E-MIN, changed COS-CM to COS."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"E-MIN", "units":"MEV", "pointer":" "
+	,"headerHelp":"Lower limit of outgoing particle en. range, lab. sys.", "pFlag":"2000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN"        ]
-	,["MEV"       ]
-	,[" "         ]]
+	 ["EN"        ,"E-MIN"     ]
+	,["MEV"       ,"MEV"       ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [14.1]]}
+	 [14.1,6]]}
     ,"DATA":{"ncols":3, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"COS-CM", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Cosine of angle, c.m.system", "pFlag":"1000001"
+       {"icol":0, "header":"COS", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Cosine of angle, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":1, "header":"DATA", "units":"MB/SR", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -109,7 +137,7 @@
 	,"unitsHelp":"millibarns per steradian","familyCode":"DA","convFc":0.001,"basicUnits":"B/SR"}
       ]
       ,"datacols":[
-	 ["COS-CM"    ,"DATA"      ,"DATA-ERR"  ]
+	 ["COS"       ,"DATA"      ,"DATA-ERR"  ]
 	,["NO-DIM"    ,"MB/SR"     ,"MB/SR"     ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -122,14 +150,14 @@
 	,[-0.42,0.5,0.4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"11861002", "Pointer":" "
- ,"Subent":"11861002", "compiled":19830919
+ ,"Subent":"11861002", "compiled":20200503
  ,"year1":1955, "author1ini":"F.L.", "author1":"Ribe"
- ,"zTarg1":40, "targ1":"Zr-0", "proj1":"n", "emis1":"A", "MF":4, "MT":107, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
- ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
- ,"reacode":"40-ZR-0(N,A),,DA"
- ,"compNotes":["Conversion from C.M. to Lab failed [11861002 ]"]
- ,"wx4data":4
+ ,"zTarg1":40, "targ1":"Zr-0", "proj1":"n", "emis1":"X", "MF":4, "MT":9000, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,E2,ANG)"
+ ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
+ ,"reacode":"40-ZR-0(N,X)2-HE-4,PAR,DA"
+ ,"compNotes":["OPERATION...  Value=Min  Min:E-MIN"]
+ ,"wx4data":5
  ,"lx4data":7
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -150,14 +178,20 @@
     ,"expansion":"Incident energy: energy"
     ,"com0":14.1
     ,"com1":1.41e+7}
-  ,{"ivar":3, "cvar":"x2", "fam":"COS", "ifComm":false, "ifCM":true
-    ,"header":"COS-CM", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"62", "rank":2.1
+  ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":true , "ifCM":false
+    ,"header":"E-MIN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Min", "dataType":"51", "rank":2.2
+    ,"expansion":"Secondary energy: particle energy"
+    ,"com0":6
+    ,"com1":6.0e+6}
+  ,{"ivar":4, "cvar":"x3", "fam":"COS", "ifComm":false, "ifCM":false
+    ,"header":"COS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X3.Value", "dataType":"62", "rank":3.1
     ,"expansion":"Angle: cosine"
     ,"dat0":[0.996,0.97,0.87,0.64,0.34,0,-0.42]
     ,"dat1":[5.12641,14.0699,29.5414,50.2082,70.1231,90,114.835]}
   ]
- ,"wc5data":3
+ ,"wc5data":4
  ,"lc5data":7
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
@@ -170,10 +204,15 @@
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.41e+7,1.41e+7,1.41e+7,1.41e+7,1.41e+7,1.41e+7,1.41e+7]
    }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":true, "units":"NO-DIM"
-      ,"header":"ANG", "dataType":"62", "rank":2.0
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"E2", "ifCM":false, "units":"EV"
+      ,"header":"E2", "dataType":"51", "rank":2.0
+      ,"expansion":"Secondary energy: particle energy"
+      ,"x2":[6.0e+6,6.0e+6,6.0e+6,6.0e+6,6.0e+6,6.0e+6,6.0e+6]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ANG", "dataType":"62", "rank":3.0
       ,"expansion":"Angle: cosine"
-      ,"x2":[5.12641,14.0699,29.5414,50.2082,70.1231,90,114.835]
+      ,"x3":[5.12641,14.0699,29.5414,50.2082,70.1231,90,114.835]
    }
  }
 }
