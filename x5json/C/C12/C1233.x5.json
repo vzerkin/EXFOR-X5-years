@@ -1,9 +1,9 @@
-  {"ENTRY":"C1233", "updated":20050527, "TransID":"C074", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C1233", "updated":20200508, "TransID":"C193", "TransDate":20200916, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2005,"a1":"D.G.Burke+","r1":"J,NP/A,750,185,2005"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.750, p.185 (2005)"
    ,"title":"(t,p) reaction studies of 165Dy and 179Hf"
    ,"x4subents":[
-   {"SUBENT":"C1233001", "isub":1, "compiled":20050527, "TransID":"C074", "TransDate":20050926
+   {"SUBENT":"C1233001", "isub":1, "compiled":20200508, "TransID":"C193", "TransDate":20200916
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -38,17 +38,6 @@
 		," Van de Graaff accelerator"]
 	}
       ]
-     ,"SAMPLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Isotopically enriched Dy2O3 and HfO2. The isotopic"
-		," composition of the dysprosium, as stated by the"
-		," supplier, was 96.85% 163Dy, 1.53% 164Dy, 1.23% 162Dy,"
-		," and 0.36% 161Dy; the hafnium contained 86.49% 177Hf,"
-		," 7.47% 178Hf, 3.11% 180Hf, 1.71% 179Hf, and 1.2% 176Hf."
-		," Density of 170 microg/cm2."]
-	}
-      ]
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"PLATE", "dict":"DETECTOR", "idict":22,"hlp":"Nuclear plates"}]
@@ -65,35 +54,56 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200506A", "date":"20200506", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. All REACTIONs corrected, SAMPLE coding"
+		," modified"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C1233002", "isub":2, "compiled":20050527, "TransID":"C074", "TransDate":20050926
+  ,{"SUBENT":"C1233002", "isub":2, "compiled":20200508, "TransID":"C193", "TransDate":20200916
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"66-DY-165(T,P)66-DY-167,PAR,DA"
+	,"x4code":{"code":"66-DY-163(T,P)66-DY-165,PAR,DA"
 	    ,"c4reac":"(T,P)PAR,DA"
 	    ,"combi":"a"
 	    ,"MF":4
 	    ,"MT":601
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"66-DY-165(T,P)66-DY-167,PAR,DA"
+	    {"code":"66-DY-163(T,P)66-DY-165,PAR,DA"
 		,"Reac":"T,P"
-		,"SF1":"66-DY-165","Targ":{"code":"66-DY-165","nam":"Dy-165","ZA":66165}
+		,"SF1":"66-DY-163","Targ":{"code":"66-DY-163","nam":"Dy-163","ZA":66163}
 		,"SF2":"T","Proj":{"code":"T","nam":"t","ZA":1003}
 		,"SF3":"P"
-		,"SF4":"66-DY-167","Prod":{"code":"66-DY-167","nam":"Dy-167","ZA":66167}
+		,"SF4":"66-DY-165","Prod":{"code":"66-DY-165","nam":"Dy-165","ZA":66165}
 		,"SF5":"PAR"
 		,"SF6":"DA"
 		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
 	    }]}
 	}
       ]
-     ,"EN-SEC":[
+     ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::E-EXC,66-DY-167"}
+	,"x4code":null
+	,"x4freetext":["Isotopically enriched Dy2O3, thickness of about"
+		,"170 microg/cm2. The isotopic composition of the"
+		,"dysprosium, as stated by the supplier, was"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"66-DY-163","ENR":0.9685}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"66-DY-164","ENR":0.0153}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"66-DY-162","ENR":0.0123}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"66-DY-161","ENR":0.0036}
 	}
       ]
      ,"ERR-ANALYS":[
@@ -103,9 +113,9 @@
 	,"x4freetext":[" Statistical error"]
 	}
 	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-SYS"
-	     ,"headerHelp":"Total systematic uncertainty"}
-	,"x4freetext":[" 15 %"]
+	,"x4code":{"header":"ERR-1"
+	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" 15 %  uncertainty in absolute normalization"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"E-EXC-ERR"
@@ -115,8 +125,17 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data read from Table 1"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data read from Table 1"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20200506A", "date":"20200506", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF1 and SF4 corrected"]
 	}
       ]
     }
@@ -125,12 +144,12 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"ERR-SYS", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Total systematic uncertainty", "pFlag":"0009550"
+      ,{"icol":1, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["EN"        ,"ERR-SYS"   ]
+	 ["EN"        ,"ERR-1"     ]
 	,["MEV"       ,"PER-CENT"  ]
 	,[" "         ," "         ]]
       ,"data":[
@@ -174,12 +193,12 @@
 	,[1654,3,30,17,2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1233002", "Pointer":" "
- ,"Subent":"C1233002", "compiled":20050527
+ ,"Subent":"C1233002", "compiled":20200508
  ,"year1":2005, "author1ini":"D.G.", "author1":"Burke"
- ,"zTarg1":66, "targ1":"Dy-165", "proj1":"t", "emis1":"P", "MF":4, "MT":601, "nExpectedArgs":3
+ ,"zTarg1":66, "targ1":"Dy-163", "proj1":"t", "emis1":"P", "MF":4, "MT":601, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,EXC,ANG)"
  ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
- ,"reacode":"66-DY-165(T,P)66-DY-167,PAR,DA"
+ ,"reacode":"66-DY-163(T,P)66-DY-165,PAR,DA"
  ,"compNotes":[]
  ,"wx4data":7
  ,"lx4data":14
@@ -201,7 +220,7 @@
     ,"dat1":[4.0e-7,7.0e-7,5.0e-7,4.0e-7,4.0e-6,1.0e-6,5.0e-7,8.0e-7,1.0e-6,7.0e-7
 	,8.0e-7,8.0e-7,5.0e-7,2.0e-6]}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-SYS", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":15
@@ -273,32 +292,49 @@
 }
    ]
    }
-  ,{"SUBENT":"C1233003", "isub":3, "compiled":20050527, "TransID":"C074", "TransDate":20050926
+  ,{"SUBENT":"C1233003", "isub":3, "compiled":20200508, "TransID":"C193", "TransDate":20200916
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"72-HF-169(T,P)72-HF-171,PAR,DA"
+	,"x4code":{"code":"72-HF-177(T,P)72-HF-179,PAR,DA"
 	    ,"c4reac":"(T,P)PAR,DA"
 	    ,"combi":"a"
 	    ,"MF":4
 	    ,"MT":601
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"72-HF-169(T,P)72-HF-171,PAR,DA"
+	    {"code":"72-HF-177(T,P)72-HF-179,PAR,DA"
 		,"Reac":"T,P"
-		,"SF1":"72-HF-169","Targ":{"code":"72-HF-169","nam":"Hf-169","ZA":72169}
+		,"SF1":"72-HF-177","Targ":{"code":"72-HF-177","nam":"Hf-177","ZA":72177}
 		,"SF2":"T","Proj":{"code":"T","nam":"t","ZA":1003}
 		,"SF3":"P"
-		,"SF4":"72-HF-171","Prod":{"code":"72-HF-171","nam":"Hf-171","ZA":72171}
+		,"SF4":"72-HF-179","Prod":{"code":"72-HF-179","nam":"Hf-179","ZA":72179}
 		,"SF5":"PAR"
 		,"SF6":"DA"
 		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
 	    }]}
 	}
       ]
-     ,"EN-SEC":[
+     ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::E-EXC,72-HF-171"}
+	,"x4code":null
+	,"x4freetext":["Isotopically enriched HfO2, thickness of about"
+		," 170 microg/cm2."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"72-HF-177","ENR":0.8649}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"72-HF-178","ENR":0.0747}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"72-HF-180","ENR":0.0311}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"72-HF-179","ENR":0.0171}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"72-HF-176","ENR":0.012}
 	}
       ]
      ,"ERR-ANALYS":[
@@ -308,9 +344,9 @@
 	,"x4freetext":[" Statistical error"]
 	}
 	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-SYS"
-	     ,"headerHelp":"Total systematic uncertainty"}
-	,"x4freetext":[" 15 %"]
+	,"x4code":{"header":"ERR-1"
+	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" 15 %  uncertainty in absolute normalization"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"E-EXC-ERR"
@@ -320,8 +356,18 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data read from Table 1"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data read from Table 2"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20200506A", "date":"20200506", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF1 and SF4 corrected,"
+		," STATUS corrected"]
 	}
       ]
     }
@@ -330,12 +376,12 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"ERR-SYS", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Total systematic uncertainty", "pFlag":"0009550"
+      ,{"icol":1, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["EN"        ,"ERR-SYS"   ]
+	 ["EN"        ,"ERR-1"     ]
 	,["MEV"       ,"PER-CENT"  ]
 	,[" "         ," "         ]]
       ,"data":[
@@ -395,12 +441,12 @@
 	,[1816,4,30,3,null,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1233003", "Pointer":" "
- ,"Subent":"C1233003", "compiled":20050527
+ ,"Subent":"C1233003", "compiled":20200508
  ,"year1":2005, "author1ini":"D.G.", "author1":"Burke"
- ,"zTarg1":72, "targ1":"Hf-169", "proj1":"t", "emis1":"P", "MF":4, "MT":601, "nExpectedArgs":3
+ ,"zTarg1":72, "targ1":"Hf-177", "proj1":"t", "emis1":"P", "MF":4, "MT":601, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,EXC,ANG)"
  ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
- ,"reacode":"72-HF-169(T,P)72-HF-171,PAR,DA"
+ ,"reacode":"72-HF-177(T,P)72-HF-179,PAR,DA"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":8
  ,"lx4data":27
@@ -436,7 +482,7 @@
 	,null,1.0e-6,null,null,2.0e-6,1.0e-6,2.0e-6,2.0e-6,2.0e-6,null
 	,null,1.0e-6,1.0e-6,null,1.0e-6,1.0e-6,1.0e-6]}
   ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-SYS", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":15
@@ -521,38 +567,53 @@
 }
    ]
    }
-  ,{"SUBENT":"C1233004", "isub":4, "compiled":20050527, "TransID":"C074", "TransDate":20050926
+  ,{"SUBENT":"C1233004", "isub":4, "compiled":20200508, "TransID":"C193", "TransDate":20200916
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"66-DY-165(T,P)66-DY-167,PAR,DA"
+	,"x4code":{"code":"66-DY-163(T,P)66-DY-165,PAR,DA"
 	    ,"c4reac":"(T,P)PAR,DA"
 	    ,"combi":"a"
 	    ,"MF":4
 	    ,"MT":601
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"66-DY-165(T,P)66-DY-167,PAR,DA"
+	    {"code":"66-DY-163(T,P)66-DY-165,PAR,DA"
 		,"Reac":"T,P"
-		,"SF1":"66-DY-165","Targ":{"code":"66-DY-165","nam":"Dy-165","ZA":66165}
+		,"SF1":"66-DY-163","Targ":{"code":"66-DY-163","nam":"Dy-163","ZA":66163}
 		,"SF2":"T","Proj":{"code":"T","nam":"t","ZA":1003}
 		,"SF3":"P"
-		,"SF4":"66-DY-167","Prod":{"code":"66-DY-167","nam":"Dy-167","ZA":66167}
+		,"SF4":"66-DY-165","Prod":{"code":"66-DY-165","nam":"Dy-165","ZA":66165}
 		,"SF5":"PAR"
 		,"SF6":"DA"
 		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
 	    }]}
 	}
       ]
-     ,"EN-SEC":[
+     ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::E-EXC,66-DY-167"}
+	,"x4code":null
+	,"x4freetext":["Isotopically enriched Dy2O3, thickness of about"
+		,"170 microg/cm2. The isotopic composition of the"
+		,"dysprosium, as stated by the supplier, was"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"66-DY-163","ENR":0.9685}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"66-DY-164","ENR":0.0153}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"66-DY-162","ENR":0.0123}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"66-DY-161","ENR":0.0036}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Total error"]
 	}
       ]
@@ -562,6 +623,13 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[" Data read from Fig. 3"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20200506A", "date":"20200506", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF1 and SF4 corrected"]
 	}
       ]
     }
@@ -591,12 +659,12 @@
       ,{"icol":3, "header":"DATA-MAX", "units":"MU-B/SR", "pointer":" "
 	,"headerHelp":"Upper limit of quantity specified under REACTION", "pFlag":"0003000"
 	,"unitsHelp":"microbarns per steradian","familyCode":"DA","convFc":1.0E-6,"basicUnits":"B/SR"}
-      ,{"icol":4, "header":"ERR-T", "units":"MU-B/SR", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":4, "header":"DATA-ERR", "units":"MU-B/SR", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"microbarns per steradian","familyCode":"DA","convFc":1.0E-6,"basicUnits":"B/SR"}
       ]
       ,"datacols":[
-	 ["E-EXC"     ,"ANG"       ,"DATA"      ,"DATA-MAX"  ,"ERR-T"     ]
+	 ["E-EXC"     ,"ANG"       ,"DATA"      ,"DATA-MAX"  ,"DATA-ERR"  ]
 	,["KEV"       ,"ADEG"      ,"MU-B/SR"   ,"MU-B/SR"   ,"MU-B/SR"   ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -652,12 +720,12 @@
 	,[1654,67.7,7.79,null,1.23]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1233004", "Pointer":" "
- ,"Subent":"C1233004", "compiled":20050527
+ ,"Subent":"C1233004", "compiled":20200508
  ,"year1":2005, "author1ini":"D.G.", "author1":"Burke"
- ,"zTarg1":66, "targ1":"Dy-165", "proj1":"t", "emis1":"P", "MF":4, "MT":601, "nExpectedArgs":3
+ ,"zTarg1":66, "targ1":"Dy-163", "proj1":"t", "emis1":"P", "MF":4, "MT":601, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,EXC,ANG)"
  ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
- ,"reacode":"66-DY-165(T,P)66-DY-167,PAR,DA"
+ ,"reacode":"66-DY-163(T,P)66-DY-165,PAR,DA"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":6
  ,"lx4data":50
@@ -691,7 +759,7 @@
 	,null,null,null,null,null,null,null,null,null,null
 	,null,null,9.69e-7,null,null,null,null,null,null,null]}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MU-B/SR", "basicUnits":"B/SR"
+    ,"header":"DATA-ERR", "units":"MU-B/SR", "basicUnits":"B/SR"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.24,1.03,1.11,1.34,0.585,0.513,0.667,0.416,null,25.8
@@ -782,38 +850,55 @@
 }
    ]
    }
-  ,{"SUBENT":"C1233005", "isub":5, "compiled":20050527, "TransID":"C074", "TransDate":20050926
+  ,{"SUBENT":"C1233005", "isub":5, "compiled":20200508, "TransID":"C193", "TransDate":20200916
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"72-HF-169(T,P)72-HF-171,PAR,DA"
+	,"x4code":{"code":"72-HF-177(T,P)72-HF-179,PAR,DA"
 	    ,"c4reac":"(T,P)PAR,DA"
 	    ,"combi":"a"
 	    ,"MF":4
 	    ,"MT":601
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"72-HF-169(T,P)72-HF-171,PAR,DA"
+	    {"code":"72-HF-177(T,P)72-HF-179,PAR,DA"
 		,"Reac":"T,P"
-		,"SF1":"72-HF-169","Targ":{"code":"72-HF-169","nam":"Hf-169","ZA":72169}
+		,"SF1":"72-HF-177","Targ":{"code":"72-HF-177","nam":"Hf-177","ZA":72177}
 		,"SF2":"T","Proj":{"code":"T","nam":"t","ZA":1003}
 		,"SF3":"P"
-		,"SF4":"72-HF-171","Prod":{"code":"72-HF-171","nam":"Hf-171","ZA":72171}
+		,"SF4":"72-HF-179","Prod":{"code":"72-HF-179","nam":"Hf-179","ZA":72179}
 		,"SF5":"PAR"
 		,"SF6":"DA"
 		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
 	    }]}
 	}
       ]
-     ,"EN-SEC":[
+     ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::E-EXC,72-HF-171"}
+	,"x4code":null
+	,"x4freetext":["Isotopically enriched HfO2, thickness of about"
+		," 170 microg/cm2."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"72-HF-177","ENR":0.8649}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"72-HF-178","ENR":0.0747}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"72-HF-180","ENR":0.0311}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"72-HF-179","ENR":0.0171}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"72-HF-176","ENR":0.012}
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Total error"]
 	}
       ]
@@ -823,6 +908,13 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[" Data read from Fig. 4"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20200506A", "date":"20200506", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF1 and SF4 corrected"]
 	}
       ]
     }
@@ -852,12 +944,12 @@
       ,{"icol":3, "header":"DATA-MAX", "units":"MU-B/SR", "pointer":" "
 	,"headerHelp":"Upper limit of quantity specified under REACTION", "pFlag":"0003000"
 	,"unitsHelp":"microbarns per steradian","familyCode":"DA","convFc":1.0E-6,"basicUnits":"B/SR"}
-      ,{"icol":4, "header":"ERR-T", "units":"MU-B/SR", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":4, "header":"DATA-ERR", "units":"MU-B/SR", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"microbarns per steradian","familyCode":"DA","convFc":1.0E-6,"basicUnits":"B/SR"}
       ]
       ,"datacols":[
-	 ["E-EXC"     ,"ANG"       ,"DATA"      ,"DATA-MAX"  ,"ERR-T"     ]
+	 ["E-EXC"     ,"ANG"       ,"DATA"      ,"DATA-MAX"  ,"DATA-ERR"  ]
 	,["KEV"       ,"ADEG"      ,"MU-B/SR"   ,"MU-B/SR"   ,"MU-B/SR"   ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -972,12 +1064,12 @@
 	,[1689,59.9,5.94,null,1.07]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1233005", "Pointer":" "
- ,"Subent":"C1233005", "compiled":20050527
+ ,"Subent":"C1233005", "compiled":20200508
  ,"year1":2005, "author1ini":"D.G.", "author1":"Burke"
- ,"zTarg1":72, "targ1":"Hf-169", "proj1":"t", "emis1":"P", "MF":4, "MT":601, "nExpectedArgs":3
+ ,"zTarg1":72, "targ1":"Hf-177", "proj1":"t", "emis1":"P", "MF":4, "MT":601, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,EXC,ANG)"
  ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
- ,"reacode":"72-HF-169(T,P)72-HF-171,PAR,DA"
+ ,"reacode":"72-HF-177(T,P)72-HF-179,PAR,DA"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":6
  ,"lx4data":109
@@ -1035,7 +1127,7 @@
 	,null,null,null,null,null,null,5.04e-6,null,null,null
 	,null,null,null,null,null,null,null,null,null]}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MU-B/SR", "basicUnits":"B/SR"
+    ,"header":"DATA-ERR", "units":"MU-B/SR", "basicUnits":"B/SR"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[36.8,11.6,3.09,7.8,15.2,18.1,2.77,2.63,7.64,8.66
