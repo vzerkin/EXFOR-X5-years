@@ -1,9 +1,9 @@
-  {"ENTRY":"C0715", "updated":20070501, "TransID":"C079", "TransDate":20070501, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C0715", "updated":20200508, "TransID":"C193", "TransDate":20200916, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1965,"a1":"G.P.Ford+","r1":"J,PR,137,B826,1965"
    ,"ref":"Jour: Physical Review, Vol.137, p.B826 (1965)"
    ,"title":"Fission Mass Yield Dependence on Angular Momentum"
    ,"x4subents":[
-   {"SUBENT":"C0715001", "isub":1, "compiled":20070501, "TransID":"C079", "TransDate":20070501
+   {"SUBENT":"C0715001", "isub":1, "compiled":20200508, "TransID":"C193", "TransDate":20200916
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -31,7 +31,8 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}]
+	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}
+	    ,{"code":"1USALAS", "dict":"INSTITUTE", "idict":3,"hlp":"Los Alamos National Laboratory, NM, United States of America"}]
 	}
       ]
      ,"SAMPLE":[
@@ -43,7 +44,7 @@
       ]
      ,"METHOD":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"RCHEM", "dict":"METHOD", "idict":21,"hlp":"Radiochemical separation"}]
+	,"x4codes":[{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}]
 	}
       ]
      ,"STATUS":[
@@ -66,6 +67,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" DR Reference corrected to follow APS format"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200506A", "date":"20200506", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION code modified in sub.2"]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
@@ -81,22 +87,23 @@
       ,"data":[
 	 [0.17]]}
    }
-  ,{"SUBENT":"C0715002", "isub":2, "compiled":20000815, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0715002", "isub":2, "compiled":20200508, "TransID":"C193", "TransDate":20200916
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"90-TH-232(A,F),CUM,FY"
-	    ,"c4reac":"(A,F)CUM,FY"
+	,"x4code":{"code":"90-TH-232(A,F)ELEM/MASS,CUM,FY"
+	    ,"c4reac":"(A,F)ELEM/MASS,CUM,FY"
 	    ,"combi":"a"
-	    ,"MF":8
-	    ,"MT":459
+	    ,"MF":801
+	    ,"MT":18
 	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"90-TH-232(A,F),CUM,FY"
+	    {"code":"90-TH-232(A,F)ELEM/MASS,CUM,FY"
 		,"Reac":"A,F"
 		,"SF1":"90-TH-232","Targ":{"code":"90-TH-232","nam":"Th-232","ZA":90232}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"ELEM/MASS","Prod":{"code":"ELEM/MASS","nam":"elem/mass"}
 		,"SF5":"CUM"
 		,"SF6":"FY"
 		,"SF58":"CUM,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Cumulative fission-product yield"
@@ -107,13 +114,22 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" See text in reference."]
+	,"x4freetext":[" Total uncertainty"]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from Table I in reference."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table I in reference."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20200506A", "date":"20200506", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added REACTION SF4"]
 	}
       ]
     }
@@ -198,12 +214,12 @@
 	,[29.6,113,47,1.23,0.06]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0715002", "Pointer":" "
- ,"Subent":"C0715002", "compiled":20000815
+ ,"Subent":"C0715002", "compiled":20200508
  ,"year1":1965, "author1ini":"G.P.", "author1":"Ford"
- ,"zTarg1":90, "targ1":"Th-232", "proj1":"a", "emis1":"F", "MF":8, "MT":459, "nExpectedArgs":2
+ ,"zTarg1":90, "targ1":"Th-232", "proj1":"a", "emis1":"F", "MF":801, "MT":18, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Cumulative fission-product yield"
- ,"reacode":"90-TH-232(A,F),CUM,FY"
+ ,"reacode":"90-TH-232(A,F)ELEM/MASS,CUM,FY"
  ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":56
