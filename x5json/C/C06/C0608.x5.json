@@ -1,9 +1,9 @@
-  {"ENTRY":"C0608", "updated":20120102, "TransID":"C114", "TransDate":20120325, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C0608", "updated":20200610, "TransID":"C194", "TransDate":20200925, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1981,"a1":"B.B.Back+","r1":"J,PR/C,23,1105,1981"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.23, p.1105 (1981)"
    ,"title":"Fission of 238U induced by inelastic scattering of 120 MeV alpha particles"
    ,"x4subents":[
-   {"SUBENT":"C0608001", "isub":1, "compiled":20120102, "TransID":"C114", "TransDate":20120325
+   {"SUBENT":"C0608001", "isub":1, "compiled":20200610, "TransID":"C194", "TransDate":20200925
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -14,7 +14,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,PR/C,23,1105,198103","stdFileName":"J,PR_C,23,1105,1981"
+	,"x4codes":[{"code":"J,PR/C,23,1105,1981","stdFileName":"J,PR_C,23,1105,1981"
 		,"year":1981,"typ":"J","ref":"J,PR/C","vol":"23","p":"1105"
 		,"shortRef":"Jour: Physical Review, Part C, Nuclear Physics, Vol.23, p.1105 (1981)"}]
 	}
@@ -109,6 +109,11 @@
 	,"x4freetext":[" SD. Reaction in Subent 2 corrected"
 		,"     according to new EXFOR rules."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200526A", "date":"20200526", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTIONs updated"]
+	}
       ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
@@ -127,23 +132,24 @@
       ,"data":[
 	 [120,16]]}
    }
-  ,{"SUBENT":"C0608002", "isub":2, "compiled":20120102, "TransID":"C114", "TransDate":20120325
+  ,{"SUBENT":"C0608002", "isub":2, "compiled":20200610, "TransID":"C194", "TransDate":20200925
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-238(A,INL+F),PAR/PRE,AKE,LF+HF"
-	    ,"c4reac":"(A,INL+F)PAR/PRE,AKE,LF+HF"
+	,"x4code":{"code":"92-U-238(A,INL+F),ISP/PRE,AKE,LF+HF"
+	    ,"c4reac":"(A,INL+F)ISP/PRE,AKE,LF+HF"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"92-U-238(A,INL+F),PAR/PRE,AKE,LF+HF"
+	    {"code":"92-U-238(A,INL+F),ISP/PRE,AKE,LF+HF"
 		,"Reac":"A,INL+F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"INL+F"
-		,"SF5":"PAR/PRE"
+		,"SF5":"ISP/PRE"
 		,"SF6":"AKE"
 		,"SF7":"LF+HF"
-		,"SF58":"PAR/PRE,AKE,LF+HF","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"ISP/PRE,AKE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Ave. Tot. kin. energy of primary fragm., partial"
 	    }]}
 	}
       ]
@@ -173,6 +179,11 @@
 	,"x4code":{"code":"20120102A", "date":"20120102", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD. Reaction corrected (SF7=FF => LF+HF"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200526A", "date":"20200526", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF5: PAR -> ISP"]
 	}
       ]
     }
@@ -249,33 +260,125 @@
 	,[50.1,171.65]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0608002", "Pointer":" "
- ,"Subent":"C0608002", "compiled":20120102
-,"year1":1981, "author1ini":"B.B.", "author1":"Back"
-, "zTarg1":92, "targ1":"U-238", "proj1":"a", "emis1":"INL+F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"92-U-238(A,INL+F),PAR/PRE,AKE,LF+HF"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"C0608002", "compiled":20200610
+ ,"year1":1981, "author1ini":"B.B.", "author1":"Back"
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"a", "emis1":"INL+F", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,EXC)"
+ ,"ReactionType":"EP", "quant":"E", "quantExpan":"Ave. Tot. kin. energy of primary fragm., partial"
+ ,"reacode":"92-U-238(A,INL+F),ISP/PRE,AKE,LF+HF"
+ ,"compNotes":["Revised column:DATA-ERR,MEV to ERR-SYS,MEV"]
+ ,"wx4data":5
+ ,"lx4data":45
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[174.55,173.65,173.5,172.95,172.45,172.05,171.9,172.35,172.8,172.3
+	,171.6,170.8,170.8,171.85,171.45,171.35,171.4,170.8,170.45,170.75
+	,170.6,170.75,170.65,170.75,171.2,170.75,170.9,171.7,170.85,171.6
+	,171.5,171.95,171.75,171.7,171.3,171.25,172.45,172.2,171.6,172.05
+	,172.25,171.8,171.8,171.75,171.65]
+    ,"dat1":[1.7455e+8,1.7365e+8,1.735e+8,1.7295e+8,1.7245e+8,1.7205e+8,1.719e+8,1.7235e+8,1.728e+8,1.723e+8
+	,1.716e+8,1.708e+8,1.708e+8,1.7185e+8,1.7145e+8,1.7135e+8,1.714e+8,1.708e+8,1.7045e+8,1.7075e+8
+	,1.706e+8,1.7075e+8,1.7065e+8,1.7075e+8,1.712e+8,1.7075e+8,1.709e+8,1.717e+8,1.7085e+8,1.716e+8
+	,1.715e+8,1.7195e+8,1.7175e+8,1.717e+8,1.713e+8,1.7125e+8,1.7245e+8,1.722e+8,1.716e+8,1.7205e+8
+	,1.7225e+8,1.718e+8,1.718e+8,1.7175e+8,1.7165e+8]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.25
+    ,"com1":2.5e+5}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":120
+    ,"com1":1.2e+8}
+  ,{"ivar":3, "cvar":"x2", "fam":"EXC", "ifComm":false, "ifCM":false
+    ,"header":"E-EXC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"53", "rank":2.1
+    ,"expansion":"Secondary energy: excitation energy"
+    ,"dat0":[6,7.1,8,9.1,10.1,11.1,12.1,13.1,14.1,15.1
+	,16.1,17.1,18.1,19.1,20.1,21.1,22.1,23.1,24.1,25.1
+	,26.1,27.1,28.1,29.1,30.1,31.1,32.1,33.1,34.1,35.1
+	,36.1,37.1,38.1,39.1,40.1,41.1,42.1,43.1,44.1,45.1
+	,46.1,47.1,48.1,49.1,50.1]
+    ,"dat1":[6.0e+6,7.1e+6,8.0e+6,9.1e+6,1.01e+7,1.11e+7,1.21e+7,1.31e+7,1.41e+7,1.51e+7
+	,1.61e+7,1.71e+7,1.81e+7,1.91e+7,2.01e+7,2.11e+7,2.21e+7,2.31e+7,2.41e+7,2.51e+7
+	,2.61e+7,2.71e+7,2.81e+7,2.91e+7,3.01e+7,3.11e+7,3.21e+7,3.31e+7,3.41e+7,3.51e+7
+	,3.61e+7,3.71e+7,3.81e+7,3.91e+7,4.01e+7,4.11e+7,4.21e+7,4.31e+7,4.41e+7,4.51e+7
+	,4.61e+7,4.71e+7,4.81e+7,4.91e+7,5.01e+7]}
+  ,{"ivar":4, "cvar":"zzz", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"ZZZ", "dataType":"61", "rank":777.0
+    ,"expansion":"Angle: angle"
+    ,"com0":16
+    ,"com1":16}
+  ]
+ ,"wc5data":3
+ ,"lc5data":45
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.7455e+8,1.7365e+8,1.735e+8,1.7295e+8,1.7245e+8,1.7205e+8,1.719e+8,1.7235e+8,1.728e+8,1.723e+8
+	,1.716e+8,1.708e+8,1.708e+8,1.7185e+8,1.7145e+8,1.7135e+8,1.714e+8,1.708e+8,1.7045e+8,1.7075e+8
+	,1.706e+8,1.7075e+8,1.7065e+8,1.7075e+8,1.712e+8,1.7075e+8,1.709e+8,1.717e+8,1.7085e+8,1.716e+8
+	,1.715e+8,1.7195e+8,1.7175e+8,1.717e+8,1.713e+8,1.7125e+8,1.7245e+8,1.722e+8,1.716e+8,1.7205e+8
+	,1.7225e+8,1.718e+8,1.718e+8,1.7175e+8,1.7165e+8]
+      ,"dy":[2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5
+	,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5
+	,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5
+	,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5
+	,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5]
+      ,"dysys":[2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5
+	,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5
+	,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5
+	,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5
+	,2.5e+5,2.5e+5,2.5e+5,2.5e+5,2.5e+5]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8
+	,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8
+	,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8
+	,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8
+	,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"EXC", "ifCM":false, "units":"EV"
+      ,"header":"EXC", "dataType":"53", "rank":2.0
+      ,"expansion":"Secondary energy: excitation energy"
+      ,"x2":[6.0e+6,7.1e+6,8.0e+6,9.1e+6,1.01e+7,1.11e+7,1.21e+7,1.31e+7,1.41e+7,1.51e+7
+	,1.61e+7,1.71e+7,1.81e+7,1.91e+7,2.01e+7,2.11e+7,2.21e+7,2.31e+7,2.41e+7,2.51e+7
+	,2.61e+7,2.71e+7,2.81e+7,2.91e+7,3.01e+7,3.11e+7,3.21e+7,3.31e+7,3.41e+7,3.51e+7
+	,3.61e+7,3.71e+7,3.81e+7,3.91e+7,4.01e+7,4.11e+7,4.21e+7,4.31e+7,4.41e+7,4.51e+7
+	,4.61e+7,4.71e+7,4.81e+7,4.91e+7,5.01e+7]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"C0608003", "isub":3, "compiled":20110601, "TransID":"C107", "TransDate":20110715
+  ,{"SUBENT":"C0608003", "isub":3, "compiled":20200610, "TransID":"C194", "TransDate":20200925
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-238(A,INL+F)MASS,PAR/PRE,KE"
-	    ,"c4reac":"(A,INL+F)MASS,PAR/PRE,KE"
+	,"x4code":{"code":"92-U-238(A,INL+F)MASS,ISP/PRE,KE,LF+HF"
+	    ,"c4reac":"(A,INL+F)MASS,ISP/PRE,KE,LF+HF"
 	    ,"combi":"a"
+	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"92-U-238(A,INL+F)MASS,PAR/PRE,KE"
+	    {"code":"92-U-238(A,INL+F)MASS,ISP/PRE,KE,LF+HF"
 		,"Reac":"A,INL+F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"INL+F"
 		,"SF4":"MASS","Prod":{"code":"MASS","nam":"mass"}
-		,"SF5":"PAR/PRE"
+		,"SF5":"ISP/PRE"
 		,"SF6":"KE"
-		,"SF58":"PAR/PRE,KE","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF7":"LF+HF"
+		,"SF58":"ISP/PRE,KE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Tot. kin. energy of spec.primary fragm., partial"
 	    }]}
 	}
       ]
@@ -306,6 +409,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" OS. Reaction SF6 changed to KE, Status"
 		," code added."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200526A", "date":"20200526", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF5: PAR -> ISP"]
 	}
       ]
     }
@@ -363,36 +471,117 @@
 	,[159,155.7,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0608003", "Pointer":" "
- ,"Subent":"C0608003", "compiled":20110601
-,"year1":1981, "author1ini":"B.B.", "author1":"Back"
-, "zTarg1":92, "targ1":"U-238", "proj1":"a", "emis1":"INL+F", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"92-U-238(A,INL+F)MASS,PAR/PRE,KE"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"C0608003", "compiled":20200610
+ ,"year1":1981, "author1ini":"B.B.", "author1":"Back"
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"a", "emis1":"INL+F", "MF":0, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 23   7   ", "getYFormulaStr":"y=DATA(EN,EXC,ZAM)"
+ ,"ReactionType":"EP", "quant":"E", "quantExpan":"Tot. kin. energy of spec.primary fragm., partial"
+ ,"reacode":"92-U-238(A,INL+F)MASS,ISP/PRE,KE,LF+HF"
+ ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:E-EXC-MIN, Max:E-EXC-MAX"]
+ ,"wx4data":7
+ ,"lx4data":20
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[157.9,169.3,172.7,179.3,180.5,181,179.8,179.8,177.8,176.6
+	,174.6,172.4,170.4,168.7,167,163.6,162.5,158.3,158,155.7]
+    ,"dat1":[1.579e+8,1.693e+8,1.727e+8,1.793e+8,1.805e+8,1.81e+8,1.798e+8,1.798e+8,1.778e+8,1.766e+8
+	,1.746e+8,1.724e+8,1.704e+8,1.687e+8,1.67e+8,1.636e+8,1.625e+8,1.583e+8,1.58e+8,1.557e+8]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[2.2,1.9,1.5,1,0.7,0.5,0.4,0.4,0.3,0.3
+	,0.3,0.3,0.3,0.4,0.4,0.5,0.5,0.8,0.9,1]
+    ,"dat1":[2.2e+6,1.9e+6,1.5e+6,1.0e+6,7.0e+5,5.0e+5,4.0e+5,4.0e+5,3.0e+5,3.0e+5
+	,3.0e+5,3.0e+5,3.0e+5,4.0e+5,4.0e+5,5.0e+5,5.0e+5,8.0e+5,9.0e+5,1.0e+6]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":120
+    ,"com1":1.2e+8}
+  ,{"ivar":3, "cvar":"x2", "fam":"EXC", "ifComm":true , "ifCM":false
+    ,"header":"E-EXC-MIN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Min", "dataType":"53", "rank":2.2
+    ,"expansion":"Secondary energy: excitation energy"
+    ,"com0":5
+    ,"com1":5.0e+6}
+  ,{"ivar":4, "cvar":"x2", "fam":"EXC", "ifComm":true , "ifCM":false
+    ,"header":"E-EXC-MAX", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Max", "dataType":"53", "rank":2.3
+    ,"expansion":"Secondary energy: excitation energy"
+    ,"com0":12
+    ,"com1":1.2e+7}
+  ,{"ivar":5, "cvar":"x3", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X3.Value", "dataType":"92", "rank":3.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"dat0":[121,123,125,127,129,131,133,135,137,139
+	,141,143,145,147,149,151,153,155,157,159]
+   ,"dat1eq":true}
+  ,{"ivar":6, "cvar":"zzz", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"ZZZ", "dataType":"61", "rank":777.0
+    ,"expansion":"Angle: angle"
+    ,"com0":16
+    ,"com1":16}
+  ]
+ ,"wc5data":4
+ ,"lc5data":20
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"EV"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[1.579e+8,1.693e+8,1.727e+8,1.793e+8,1.805e+8,1.81e+8,1.798e+8,1.798e+8,1.778e+8,1.766e+8
+	,1.746e+8,1.724e+8,1.704e+8,1.687e+8,1.67e+8,1.636e+8,1.625e+8,1.583e+8,1.58e+8,1.557e+8]
+      ,"dy":[2.2e+6,1.9e+6,1.5e+6,1.0e+6,7.0e+5,5.0e+5,4.0e+5,4.0e+5,3.0e+5,3.0e+5
+	,3.0e+5,3.0e+5,3.0e+5,4.0e+5,4.0e+5,5.0e+5,5.0e+5,8.0e+5,9.0e+5,1.0e+6]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8
+	,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8,1.2e+8]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"EXC", "ifCM":false, "units":"EV"
+      ,"header":"EXC", "dataType":"53", "rank":2.0
+      ,"expansion":"Secondary energy: excitation energy"
+      ,"x2":[8.5e+6,8.5e+6,8.5e+6,8.5e+6,8.5e+6,8.5e+6,8.5e+6,8.5e+6,8.5e+6,8.5e+6
+	,8.5e+6,8.5e+6,8.5e+6,8.5e+6,8.5e+6,8.5e+6,8.5e+6,8.5e+6,8.5e+6,8.5e+6]
+      ,"dx2":[3.5e+6,3.5e+6,3.5e+6,3.5e+6,3.5e+6,3.5e+6,3.5e+6,3.5e+6,3.5e+6,3.5e+6
+	,3.5e+6,3.5e+6,3.5e+6,3.5e+6,3.5e+6,3.5e+6,3.5e+6,3.5e+6,3.5e+6,3.5e+6]   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"92", "rank":3.0
+      ,"expansion":"Isotope/particle identification: mass"
+      ,"x3":[121,123,125,127,129,131,133,135,137,139
+	,141,143,145,147,149,151,153,155,157,159]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"C0608004", "isub":4, "compiled":20110601, "TransID":"C107", "TransDate":20110715
+  ,{"SUBENT":"C0608004", "isub":4, "compiled":20200610, "TransID":"C194", "TransDate":20200925
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-238(A,INL+F)MASS,PAR/PRE,FY,,REL"
-	    ,"c4reac":"(A,INL+F)MASS,PAR/PRE,FY,,REL"
+	,"x4code":{"code":"92-U-238(A,INL+F)MASS,ISP/PRE,FY,,REL"
+	    ,"c4reac":"(A,INL+F)MASS,ISP/PRE,FY,,REL"
 	    ,"combi":"a"
 	    ,"MF":600
 	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"92-U-238(A,INL+F)MASS,PAR/PRE,FY,,REL"
+	    {"code":"92-U-238(A,INL+F)MASS,ISP/PRE,FY,,REL"
 		,"Reac":"A,INL+F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"INL+F"
 		,"SF4":"MASS","Prod":{"code":"MASS","nam":"mass"}
-		,"SF5":"PAR/PRE"
+		,"SF5":"ISP/PRE"
 		,"SF6":"FY"
 		,"SF8":"REL"
-		,"SF58":"PAR/PRE,FY","Quant":"FY","BasicUnits":"ARB-UNITS","QuantHlp":"Primary fragm.fission yield for given exc.energ"
+		,"SF58":"ISP/PRE,FY","Quant":"FY","BasicUnits":"ARB-UNITS","QuantHlp":"Pre-neutron-emission fission yield, partial for"
 	    }]}
 	,"x4freetext":[" Counts/channel."]
 	}
@@ -422,6 +611,11 @@
 	,"x4code":{"code":"20110525A", "date":"20110525", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" OS. Status code added."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200526A", "date":"20200526", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" RAECTION SF5: PAR -> ISP"]
 	}
       ]
     }
@@ -810,12 +1004,12 @@
 	,[45,50,158,160,353]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0608004", "Pointer":" "
- ,"Subent":"C0608004", "compiled":20110601
+ ,"Subent":"C0608004", "compiled":20200610
  ,"year1":1981, "author1ini":"B.B.", "author1":"Back"
  ,"zTarg1":92, "targ1":"U-238", "proj1":"a", "emis1":"INL+F", "MF":600, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 23   7   ", "getYFormulaStr":"y=DATA(EN,EXC,ZAM)"
- ,"ReactionType":"FYP", "quant":"FY", "quantExpan":"Primary fragm.fission yield for given exc.energ"
- ,"reacode":"92-U-238(A,INL+F)MASS,PAR/PRE,FY,,REL"
+ ,"ReactionType":"FYP", "quant":"FY", "quantExpan":"Pre-neutron-emission fission yield, partial for"
+ ,"reacode":"92-U-238(A,INL+F)MASS,ISP/PRE,FY,,REL"
  ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:E-EXC-MIN, Max:E-EXC-MAX"
 	,"OPERATION...  Value=(Min+Max)/2  Min:MASS-MIN, Max:MASS-MAX"]
  ,"wx4data":7
