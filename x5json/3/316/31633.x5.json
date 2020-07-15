@@ -1,9 +1,9 @@
-  {"ENTRY":"31633", "updated":20120502, "TransID":"3155", "TransDate":20120618, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"31633", "updated":20200716, "TransID":"3197", "TransDate":20201203, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":2007,"a1":"P.Bem+","r1":"C,2007NICE,2,983,2007"
    ,"ref":"Conf: Conf.on Nucl.Data for Sci. and Technology, Nice 2007, Vol.2, p.983 (2007)"
    ,"title":"Neutron activation experiments on chromium and tantalum in the NPI p-7Li quasi-monoenergetic neutron field"
    ,"x4subents":[
-   {"SUBENT":"31633001", "isub":1, "compiled":20120502, "TransID":"3155", "TransDate":20120618
+   {"SUBENT":"31633001", "isub":1, "compiled":20200716, "TransID":"3197", "TransDate":20201203
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -43,10 +43,13 @@
 	{"x4pointer":" "
 	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}
 	    ,{"code":"3CZRUJF", "dict":"INSTITUTE", "idict":3,"hlp":"Nuclear Physics Institute of Czech Acad. Sci., Rez, Czech Republic"}]
-	,"x4freetext":[" The variable-energy proton beam of"
-		," NPI cyclotron is used for the production of the"
-		," quasi- monoenergetic neutron field using the thin"
-		," lithium target."]
+	}
+      ]
+     ,"INC-SOURCE":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"P-LI7", "dict":"INC-SOURCE", "idict":19,"hlp":"7Li(p,n)"}]
+	,"x4freetext":[" neutron flux density of about 10**9 n/cm2/s"
+		," in peak at 30 MeV neutron energy."]
 	}
       ]
      ,"SAMPLE":[
@@ -72,21 +75,15 @@
 	    ,{"code":"GSPEC", "dict":"METHOD", "idict":21,"hlp":"Gamma ray spectrometry"}]
 	}
       ]
-     ,"INC-SOURCE":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"P-LI7", "dict":"INC-SOURCE", "idict":19,"hlp":"7Li(p,n)"}]
-	,"x4freetext":[" neutron flux density of about 10**9 n/cm2/s"
-		," in peak at 30MeV neutron energy."]
-	}
-      ]
-     ,"COMMENT":[
+     ,"ANALYSIS":[
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["The cross section values could be determined under"
-		," assumptions that the effect comes from the quasi-"
-		," monoenergetic spectrum part only and the cross"
-		," section is constant in the region of quasi-"
-		," monoenergetic peak."]
+		," assumptions that the cross section"
+		," - comes from the quasi-monoenergetic spectrum part"
+		,"   only,"
+		," - is a constant in the region of quasi-monoenergetic"
+		,"   peak."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -114,67 +111,70 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" On. SAMPLE: Free text corrected"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200716A", "date":"20200716", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. Major revision in 002 and 003."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ]
-      ,"datacols":[
-	 ["EN"        ]
-	,["MEV"       ]
-	,[" "         ]]
-      ,"data":[
-	 [35]]}
    }
-  ,{"SUBENT":"31633002", "isub":2, "compiled":20080801, "TransID":"3129", "TransDate":20080904
+  ,{"SUBENT":"31633002", "isub":2, "compiled":20200716, "TransID":"3197", "TransDate":20201203
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"73-TA-181(N,5N)73-TA-177,,SIG"
-	    ,"c4reac":"(N,5N),SIG"
+	,"x4code":{"code":"73-TA-181(N,5N)73-TA-177,,SIG,,SPA"
+	    ,"c4reac":"(N,5N),SIG,,SPA"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":152
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"73-TA-181(N,5N)73-TA-177,,SIG"
+	    {"code":"73-TA-181(N,5N)73-TA-177,,SIG,,SPA"
 		,"Reac":"N,5N"
 		,"SF1":"73-TA-181","Targ":{"code":"73-TA-181","nam":"Ta-181","ZA":73181}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"5N"
 		,"SF4":"73-TA-177","Prod":{"code":"73-TA-177","nam":"Ta-177","ZA":73177}
 		,"SF6":"SIG"
+		,"SF8":"SPA"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20200716A", "date":"20200716", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. REACTION(SF8): SPA added."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":2, "nrows":1
+    ,"DATA":{"ncols":3, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"MB", "pointer":" "
+       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
+	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
+      ,{"icol":2, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ]
-	,["MB"        ,"PER-CENT"  ]
-	,[" "         ," "         ]]
+	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	,["MEV"       ,"MB"        ,"PER-CENT"  ]
+	,[" "         ," "         ," "         ]]
       ,"data":[
-	 [24,12]]}
+	 [35,24,12]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"31633002", "Pointer":" "
- ,"Subent":"31633002", "compiled":20080801
+ ,"Subent":"31633002", "compiled":20200716
  ,"year1":2007, "author1ini":"P.", "author1":"Bem"
- ,"zTarg1":73, "targ1":"Ta-181", "proj1":"n", "emis1":"5N", "MF":3, "MT":152, "nExpectedArgs":1
+ ,"zTarg1":73, "targ1":"Ta-181", "proj1":"n", "emis1":"5N", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"73-TA-181(N,5N)73-TA-177,,SIG"
+ ,"reacode":"73-TA-181(N,5N)73-TA-177,,SIG,,SPA"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":1
@@ -191,12 +191,12 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[12]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
-    ,"com0":35
-    ,"com1":3.5e+7}
+    ,"dat0":[35]
+    ,"dat1":[3.5e+7]}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -215,52 +215,62 @@
 }
    ]
    }
-  ,{"SUBENT":"31633003", "isub":3, "compiled":20080801, "TransID":"3129", "TransDate":20080904
+  ,{"SUBENT":"31633003", "isub":3, "compiled":20200716, "TransID":"3197", "TransDate":20201203
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"24-CR-0(N,X)21-SC-36,,SIG"
-	    ,"c4reac":"(N,X),SIG"
+	,"x4code":{"code":"24-CR-0(N,X)21-SC-47,,SIG,,SPA"
+	    ,"c4reac":"(N,X),SIG,,SPA"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"24-CR-0(N,X)21-SC-36,,SIG"
+	    {"code":"24-CR-0(N,X)21-SC-47,,SIG,,SPA"
 		,"Reac":"N,X"
 		,"SF1":"24-CR-0","Targ":{"code":"24-CR-0","nam":"Cr-0","ZA":24000}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"21-SC-36","Prod":{"code":"21-SC-36","nam":"Sc-36","ZA":21036}
+		,"SF4":"21-SC-47","Prod":{"code":"21-SC-47","nam":"Sc-47","ZA":21047}
 		,"SF6":"SIG"
+		,"SF8":"SPA"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20200716A", "date":"20200716", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. REACTION(SF4,SF5) revised."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":2, "nrows":1
+    ,"DATA":{"ncols":3, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"MB", "pointer":" "
+       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
+	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
+      ,{"icol":2, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ]
-	,["MB"        ,"PER-CENT"  ]
-	,[" "         ," "         ]]
+	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	,["MEV"       ,"MB"        ,"PER-CENT"  ]
+	,[" "         ," "         ," "         ]]
       ,"data":[
-	 [1.5,5]]}
+	 [35,1.5,5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"31633003", "Pointer":" "
- ,"Subent":"31633003", "compiled":20080801
+ ,"Subent":"31633003", "compiled":20200716
  ,"year1":2007, "author1ini":"P.", "author1":"Bem"
- ,"zTarg1":24, "targ1":"Cr-0", "proj1":"n", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
+ ,"zTarg1":24, "targ1":"Cr-0", "proj1":"n", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"24-CR-0(N,X)21-SC-36,,SIG"
+ ,"reacode":"24-CR-0(N,X)21-SC-47,,SIG,,SPA"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":1
@@ -277,12 +287,12 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[5]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
-    ,"com0":35
-    ,"com1":3.5e+7}
+    ,"dat0":[35]
+    ,"dat1":[3.5e+7]}
   ]
  ,"wc5data":2
  ,"lc5data":1
