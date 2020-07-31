@@ -1,9 +1,9 @@
-  {"ENTRY":"20068", "updated":20190909, "TransID":"2282", "TransDate":20191119, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"20068", "updated":20200801, "TransID":"2290", "TransDate":20201008, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1969,"a1":"M.Holmberg","r1":"J,NP/A,129,327,1969"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.129, p.327 (1969)"
    ,"title":"The (n,2n) cross section of H-2 in the energy region 4.0 - 6.5 MeV"
    ,"x4subents":[
-   {"SUBENT":"20068001", "isub":1, "compiled":20190909, "TransID":"2282", "TransDate":20191119
+   {"SUBENT":"20068001", "isub":1, "compiled":20200801, "TransID":"2290", "TransDate":20201008
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -45,7 +45,9 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Carbon and H20 samples were used"]
+	,"x4freetext":[" The D20 sample was located at the centre of the axial"
+		," tube of the large liquid scintillator."
+		," Carbon and H2O samples were used to measure background"]
 	}
       ]
      ,"METHOD":[
@@ -54,7 +56,7 @@
 	,"x4freetext":[" D(2)-O sample located at the centre of a"
 		," large liquid scintillator.  Knowing the time"
 		," correlation between the two capture pulses the number"
-		," of (n,2n) events could Be separated from the randomly"
+		," of (n,2n) events could be separated from the randomly"
 		," distributed background."
 		," Iron collimator, length 1.5 m., 20 cm square with"
 		," a conical hole 10 mm in diameter at the entrance and"
@@ -99,12 +101,11 @@
      ,"CORRECTION":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[" Multiple scattering correction - 9%"
-		,"  At 6 MeV with an estimated error of 2%."
+	,"x4freetext":[" Multiple scattering correction - 9%  at 6 MeV."
 		," Neutron escape along the axial channel of the large"
-		," scintillator tank - 10%."
-		," At 6.0 MeV and a rather arbitrary error of 50% was"
-		," estimated for the correction."
+		," scintillator tank correction to the (n,2n) cross"
+		," section was 10% at 6.0 MeV and a rather arbitrary"
+		," error of 50% was estimated for the correction."
 		," Variation of neutron detector efficiency with neutron"
 		," energy. The correction was 3% at 6 MeV of incident"
 		," neutron energy."]
@@ -114,7 +115,9 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" No information about source of uncertainties"]
+	,"x4freetext":[" Almost no information about source of"
+		," uncertainties. At 6 MeV an estimated error due to"
+		," multiple scattering is 2%."]
 	}
       ]
      ,"STATUS":[
@@ -122,7 +125,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":["  Tbl. 1 from Nucl.Phys.,A127(1969)149"]
+	,"x4freetext":["  Tbl. 1 from Nucl.Phys.,A129(1969)327"]
 	}
       ]
      ,"HISTORY":[
@@ -138,10 +141,15 @@
 		,"BIB updated. Data presentation updated according"
 		,"to the table. COMMENT deleted (info moved to REL-REF)."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200801A", "date":"20200801", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Correction in Subent 002."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"20068002", "isub":2, "compiled":20190909, "TransID":"2282", "TransDate":20191119
+  ,{"SUBENT":"20068002", "isub":2, "compiled":20200801, "TransID":"2290", "TransDate":20201008
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -165,15 +173,15 @@
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4code":{"code":"19710428T", "date":"19710428", "act":"T", "dict":"HISTORY", "idict":15
-	     ,"actHelp":"Converted from previous compilation"}
-	,"x4freetext":["  From NEDADA file"]
-	}
-	,{"x4pointer":" "
 	,"x4code":{"code":"20190909A", "date":"20190909", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: PART-DET deleted. Data presentation"
-		,"updated according to the table."]
+		,"updated according to the table 1."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200801A", "date":"20200801", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Cr. sect. units corrected (b -> mb)."]
 	}
       ]
     }
@@ -182,16 +190,16 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"B", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"B", "pointer":" "
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"B"         ,"B"         ]
+	,["MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [4.1,13,8]
@@ -204,7 +212,7 @@
 	,[6.55,64,7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"20068002", "Pointer":" "
- ,"Subent":"20068002", "compiled":20190909
+ ,"Subent":"20068002", "compiled":20200801
  ,"year1":1969, "author1ini":"M.", "author1":"Holmberg"
  ,"zTarg1":1, "targ1":"H-2", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -215,17 +223,17 @@
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"B", "basicUnits":"B"
+    ,"header":"DATA", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[13,17,25,34,45,61,60,64]
-   ,"dat1eq":true}
+    ,"dat1":[0.013,0.017,0.025,0.034,0.045,0.061,0.06,0.064]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[8,7,6,6,6,7,7,7]
-   ,"dat1eq":true}
+    ,"dat1":[0.008,0.007,0.006,0.006,0.006,0.007,0.007,0.007]}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
@@ -239,8 +247,8 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[13,17,25,34,45,61,60,64]
-      ,"dy":[8,7,6,6,6,7,7,7]   }
+      ,"y":[0.013,0.017,0.025,0.034,0.045,0.061,0.06,0.064]
+      ,"dy":[0.008,0.007,0.006,0.006,0.006,0.007,0.007,0.007]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
