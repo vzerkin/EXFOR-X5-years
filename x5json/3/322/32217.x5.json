@@ -1,9 +1,9 @@
-  {"ENTRY":"32217", "updated":20171228, "TransID":"3181", "TransDate":20180209, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
+  {"ENTRY":"32217", "updated":20200907, "TransID":"3197", "TransDate":20201203, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
    ,"y1":2008,"a1":"O.Gritzay+","r1":"C,2008AKERSL,,549,2008"
    ,"ref":"Conf: 13th Inter.Symp.on Reactor Dosimetry, Akersloot, 2008, p.549 (2008)"
    ,"title":"Measurements of neutron capture cross-section for tantalum at the neutron filtered beams"
    ,"x4subents":[
-   {"SUBENT":"32217001", "isub":1, "compiled":20171228, "TransID":"3181", "TransDate":20180209
+   {"SUBENT":"32217001", "isub":1, "compiled":20200907, "TransID":"3197", "TransDate":20201203
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -42,6 +42,12 @@
 		,"shortRef":"Conf: Int.Conf.Cur.Prob.in Nucl.Phys.Atom.Energ.,Kyiv,2006, p.569 (2006)"}]
 	,"x4freetext":[" first result at 2 keV"]
 	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"W,GRITZAY,20110318","stdFileName":"W,GRITZAY,2011"
+		,"year":2011,"typ":"W","ref":"W","vol":"Gritzay"
+		,"shortRef":"Priv.Comm: Gritzay (2011)"}]
+	,"x4freetext":[" Data with revised uncertainties"]
+	}
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
@@ -57,32 +63,11 @@
 		,"of the reactor."]
 	}
       ]
-     ,"INC-SPECT":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["1)Filter 2 keV. Filter components: 10B, Sc and 60Ni.The"
-		,"main part of the filtered neutron spectrum is a line in"
-		,"the energy range 0.24-3.0 keV. The energy distribution"
-		,"centre of this line is at 1.97 keV; its relative"
-		,"intensity is 95.47% of the entire neutron flux.Besides,"
-		,"in the spectrum there are impurity lines:"
-		,"6.2+7.5 keV(2.93%), 27 keV (0.39%), 43 keV (0.14%), and"
-		,"a group of lines in the 48-66 keV range (1.08%)."
-		,"2)Filter 59 keV. Filter components: 10B, V, S and 58Ni."
-		,"The main part of the filtered neutron spectrum is a"
-		,"line in the energy range 54.8-60.1 keV. The energy"
-		,"distribution centre of this line is at 58.96 keV; its"
-		,"relative intensity is 94.36% of the entire neutron"
-		,"flux. Besides, in the spectrum there are impurity"
-		,"lines: 3 groups of lines in the energy range 1-40 keV"
-		," (0.01%), 70-230 keV (0.11%) and 235-1570 keV (5.52%)."]
-	}
-      ]
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"FNB", "dict":"METHOD", "idict":21,"hlp":"Filtered neutron beam"}
 	    ,{"code":"ACTIV", "dict":"METHOD", "idict":21,"hlp":"Activation"}]
-	,"x4freetext":["Activation of tantalic samples was done"
+	,"x4freetext":[" Activation of tantalic samples was done"
 		,"during 84 hours for 2 keV and 62 + 84 hours for 59 keV,"
 		,"then the targets were removed to the clean zone for the"
 		,"further measurements."]
@@ -118,13 +103,18 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["The tantalic targets were made of natural tantalum foil"
-		,"and the targets had the 28.0 mm diameter. A pile of"
-		,"four 0.2 mm thickness targets and a pile of eight"
-		,"0.1 mm thickness targets were used for measurements"
-		,"with 2 keV and 59 keV filter, respectively. Percentage"
-		,"of the 181Ta in natural tantalum is 99.988%."]
+	,"x4code":{"Nucl":"73-TA-181","ENR":0.99988}
+	,"x4freetext":[" The tantalic targets were made"
+		,"of natural tantalum foil and the targets had the"
+		,"28.0 mm diameter."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"5-B-10","ENR":0.85}
+	,"x4freetext":[" The boron target used to define the"
+		,"neutron flux value, was made of the boric powder,"
+		,"enriched by 10B. This target is placed inside the"
+		,"container  with 28 mm diameter. The thickness of the"
+		,"boron target was 1 mm, weight = 0.6732 g."]
 	}
       ]
      ,"DECAY-DATA":[
@@ -161,12 +151,18 @@
 		,"MCNP-4C for real irradiation conditions."]
 	}
       ]
-     ,"STATUS":[
+     ,"MONITOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" From text"]
+	,"x4code":{"code":"5-B-10(N,A)3-LI-7,PAR,SIG,G"
+		,"reaction":"5-B-10(N,A)3-LI-7,PAR,SIG,G"}
+	,"x4freetext":[" The neutron flux was"
+		,"defined by area of the full absorption peak of gamma"
+		,"rays with 478 keV energy (the excited state of 7Li)."
+		,"Cross sections of the 10B(n,alpha+gamma)7Li* reaction"
+		,"were calculated as mean values of the averaged on a"
+		,"filtered neutron beam shape of the point-wise cross"
+		,"sections, taken from CENDL-2, ENDF/B-VI, JENDL-3.3 and"
+		,"JEF-3.0."]
 	}
       ]
      ,"HISTORY":[
@@ -178,13 +174,13 @@
 	,{"x4pointer":" "
 	,"x4code":{"code":"20101208C", "date":"20101208", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
-	,"x4freetext":["OG: Conference codes and two co-authors were"
-		,"added."]
+	,"x4freetext":[" OG: Conference codes and two co-authors"
+		," were added."]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"code":"20110318A", "date":"20110318", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":["ERR-ANALYS modified and moved to subentries."
+	,"x4freetext":[" ERR-ANALYS modified and moved to subentries"
 		," Data for 2 keV and 59 keV are presented in separate"
 		," subentries."]
 	}
@@ -198,43 +194,62 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" On. REFERENCE: C,2008AKERSL added."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200527A", "date":"20200527", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OG. Replacement of AV by SPA. STATUS added"
+		,"in Sub002-003. EN-MIN, EN-MAX updated. INC-SPECT from"
+		,"Sub001-> in Sub002, 003 and updated."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200907A", "date":"20200907", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OG. MONITOR added. SAMPLE updated."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"32217002", "isub":2, "compiled":20150126, "TransID":"3167", "TransDate":20150130
+  ,{"SUBENT":"32217002", "isub":2, "compiled":20200907, "TransID":"3197", "TransDate":20201203
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"73-TA-181(N,G)73-TA-182,,SIG,,AV"
-	    ,"c4reac":"(N,G),SIG,,AV"
+	,"x4code":{"code":"73-TA-181(N,G)73-TA-182,,SIG,,SPA"
+	    ,"c4reac":"(N,G),SIG,,SPA"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"73-TA-181(N,G)73-TA-182,,SIG,,AV"
+	    {"code":"73-TA-181(N,G)73-TA-182,,SIG,,SPA"
 		,"Reac":"N,G"
 		,"SF1":"73-TA-181","Targ":{"code":"73-TA-181","nam":"Ta-181","ZA":73181}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"73-TA-182","Prod":{"code":"73-TA-182","nam":"Ta-182","ZA":73182}
 		,"SF6":"SIG"
-		,"SF8":"AV"
+		,"SF8":"SPA"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["A pile of four 0.2 mm thickness tantalic targets was"
+		,"used."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
-	,"x4freetext":["Absolute uncertainty of cross section-"
+	,"x4freetext":[" Absolute uncertainty of cross section-"
 		,"it includes the uncertainties of-"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-1"
 	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":["Error in extrapolated cross-section - it"
+	,"x4freetext":[" Error in extrapolated cross-section - it"
 		,"includes the uncertainties of-"
 		,"error in determination of sample activities 1.7-4.4%"
 		,"statistical error in peak area 1.0-5.0%"
@@ -243,12 +258,12 @@
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-2"
 	     ,"headerHelp":"2nd partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":["Error in determination of Ta sample mass 0.011%"]
+	,"x4freetext":[" Error in determination of Ta sample mass 0.011%"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-3"
 	     ,"headerHelp":"3rd partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":["Error in determination of neutron flux - it"
+	,"x4freetext":[" Error in determination of neutron flux - it"
 		,"includes the uncertainties of-"
 		,"error in determination of B sample mass 0.024%"
 		,"error in the B gamma-line efficiency 2.04%"
@@ -259,13 +274,41 @@
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-4"
 	     ,"headerHelp":"4th partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":["Error due to the impure lines in filtered beam"]
+	,"x4freetext":[" Error due to the impure lines in filtered beam"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-5"
 	     ,"headerHelp":"5th partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":["Error due to backward scattering of neutrons by"
+	,"x4freetext":[" Error due to backward scattering of neutrons by"
 		,"the output collimator 0.3%"]
+	}
+      ]
+     ,"INC-SPECT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":[" Filter 2 keV.  Average energy of filtered neutron"
+		," (1.795 (+0.645,-0.724))keV (95% response function),"
+		,"the filter components (g/cm2):"
+		,"Sc-167.6, Ti-10.89, Co-13.07, 10B(85%)-0.2."
+		,"Purity of beam about 95.73%, main parasitic lines:"
+		,"35 keV - 0.35%, 43 keV - 0.55%, 49 keV - 1.23%."
+		,"Neutron flux was 8.9e+06 n/cm2/s. Time of irradiation"
+		,"was 302400 s."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Private communication with Gritzay (2011)"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"SUPPL,32216003"
+		,"flag":"SUPPL", "help":"Supplemental information compiled separately"
+		,"subent":"32216003"
+		}]
+	,"x4freetext":[" Neutron spectrum after filter 2 keV"]
 	}
       ]
      ,"HISTORY":[
@@ -274,6 +317,22 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" VS. DECAY-DATA moved to subent. 001. and"
 		,"                DG added."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200527A", "date":"20200527", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OG. Replacement of AV by SPA. STATUS and"
+		,"INC-SPECT added. EN-MIN, EN-MAX updated."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200907A", "date":"20200907", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OG. MONIT and SAMPLE added."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20201203A", "date":"20201203", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. E-NRM=478 keV added."]
 	}
       ]
     }
@@ -301,40 +360,43 @@
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
 	 [4.7,0.011,2.1,3.8,0.3]]}
-    ,"DATA":{"ncols":5, "nrows":1
+    ,"DATA":{"ncols":6, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-MIN", "units":"KEV", "pointer":" "
+       {"icol":0, "header":"EN-MIN", "units":"KEV", "pointer":" "
 	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"EN-MAX", "units":"KEV", "pointer":" "
+      ,{"icol":1, "header":"EN-MAX", "units":"KEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":3, "header":"DATA", "units":"B", "pointer":" "
+      ,{"icol":2, "header":"DATA", "units":"B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":4, "header":"ERR-T", "units":"B", "pointer":" "
+      ,{"icol":3, "header":"ERR-T", "units":"B", "pointer":" "
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":4, "header":"E-NRM", "units":"KEV", "pointer":" "
+	,"headerHelp":"Energy of outgoing particle used for normalization", "pFlag":"0000000"
+	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
+      ,{"icol":5, "header":"MONIT", "units":"B", "pointer":" "
+	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-MIN"    ,"EN-MAX"    ,"DATA"      ,"ERR-T"     ]
-	,["KEV"       ,"KEV"       ,"KEV"       ,"B"         ,"B"         ]
-	,[" "         ," "         ," "         ," "         ," "         ]]
+	 ["EN-MIN"    ,"EN-MAX"    ,"DATA"      ,"ERR-T"     ,"E-NRM"     ,"MONIT"     ]
+	,["KEV"       ,"KEV"       ,"B"         ,"B"         ,"KEV"       ,"B"         ]
+	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [1.97,0.24,3,6.54,0.42]]}
+	 [0.466,2.903,6.54,0.42,478,13.61]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"32217002", "Pointer":" "
- ,"Subent":"32217002", "compiled":20150126
+ ,"Subent":"32217002", "compiled":20200907
  ,"year1":2008, "author1ini":"O.", "author1":"Gritzay"
  ,"zTarg1":73, "targ1":"Ta-181", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"73-TA-181(N,G)73-TA-182,,SIG,,AV"
- ,"compNotes":[]
- ,"wx4data":10
+ ,"reacode":"73-TA-181(N,G)73-TA-182,,SIG,,SPA"
+ ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
+ ,"wx4data":11
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -380,23 +442,29 @@
     ,"com0":0.3
     ,"com1":0.3}
   ,{"ivar":7, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"41", "rank":1.1
-    ,"expansion":"Incident energy: energy"
-    ,"dat0":[1.97]
-    ,"dat1":[1970]}
-  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MIN", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Min", "dataType":"41", "rank":1.2
     ,"expansion":"Incident energy: energy"
-    ,"dat0":[0.24]
-    ,"dat1":[240]}
-  ,{"ivar":9, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"dat0":[0.466]
+    ,"dat1":[466]}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MAX", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Max", "dataType":"41", "rank":1.3
     ,"expansion":"Incident energy: energy"
-    ,"dat0":[3]
-    ,"dat1":[3000]}
+    ,"dat0":[2.903]
+    ,"dat1":[2903]}
+  ,{"ivar":9, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"E-NRM", "units":"KEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"1", "rank":777.0
+    ,"expansion":"Assumed values"
+    ,"dat0":[478]
+    ,"dat1":[4.78e+5]}
+  ,{"ivar":10, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MONIT", "units":"B", "basicUnits":"B"
+    ,"what":"ZZZ", "dataType":"11", "rank":777.1
+    ,"expansion":"Assumed values: monitor"
+    ,"dat0":[13.61]
+   ,"dat1eq":true}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -410,46 +478,53 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[1970]
-   }
+      ,"x1":[1684.5]
+      ,"dx1":[1218.5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"32217003", "isub":3, "compiled":20150126, "TransID":"3167", "TransDate":20150130
+  ,{"SUBENT":"32217003", "isub":3, "compiled":20200907, "TransID":"3197", "TransDate":20201203
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"73-TA-181(N,G)73-TA-182,,SIG,,AV"
-	    ,"c4reac":"(N,G),SIG,,AV"
+	,"x4code":{"code":"73-TA-181(N,G)73-TA-182,,SIG,,SPA"
+	    ,"c4reac":"(N,G),SIG,,SPA"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"73-TA-181(N,G)73-TA-182,,SIG,,AV"
+	    {"code":"73-TA-181(N,G)73-TA-182,,SIG,,SPA"
 		,"Reac":"N,G"
 		,"SF1":"73-TA-181","Targ":{"code":"73-TA-181","nam":"Ta-181","ZA":73181}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
 		,"SF4":"73-TA-182","Prod":{"code":"73-TA-182","nam":"Ta-182","ZA":73182}
 		,"SF6":"SIG"
-		,"SF8":"AV"
+		,"SF8":"SPA"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["A pile of eight 0.1 mm thickness tantalic targets was"
+		,"used."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
-	,"x4freetext":["Absolute uncertainty of cross section-"
+	,"x4freetext":[" Absolute uncertainty of cross section-"
 		,"it includes the uncertainties of-"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-1"
 	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":["Error in extrapolated cross-section - it"
+	,"x4freetext":[" Error in extrapolated cross-section - it"
 		,"includes the uncertainties of-"
 		,"error in determination of sample activities 1.3-4.4%"
 		,"statistical error in peak area 1.2-21.1%"
@@ -459,12 +534,12 @@
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-2"
 	     ,"headerHelp":"2nd partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":["Error in determination of Ta sample mass 0.057%"]
+	,"x4freetext":[" Error in determination of Ta sample mass 0.057%"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-3"
 	     ,"headerHelp":"3rd partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":["Error in determination of neutron flux - it"
+	,"x4freetext":[" Error in determination of neutron flux - it"
 		,"includes the uncertainties of-"
 		,"error in determination of B sample mass 0.024%"
 		,"error in the B gamma-line efficiency 2.04%"
@@ -474,13 +549,41 @@
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-4"
 	     ,"headerHelp":"4th partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":["Error due to the impure lines in filtered beam"]
+	,"x4freetext":[" Error due to the impure lines in filtered beam"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-5"
 	     ,"headerHelp":"5th partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":["Error due to backward scattering of neutrons by"
+	,"x4freetext":[" Error due to backward scattering of neutrons by"
 		,"the output collimator 3.7%"]
+	}
+      ]
+     ,"INC-SPECT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":[" Filter 59 keV.  Average energy of filtered neutron"
+		," (58.424 (+1.929,-4.535)) keV (95% response function),"
+		,"the filter components (g/cm2): 58Ni - 84.55, S - 157.7,"
+		," V - 17.4, Pb - 2.5, Al - 5.4, 10B - 0.2. The purity of"
+		,"beam was about 97.0%, main parasitic lines:"
+		,"368 keV - 0.62%, 690 keV - 1.29%."
+		,"Neutron flux was 2.62e+06 n/cm2/s. Total time of"
+		,"irradiation was 527040 s."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Private communication with Gritzay (2011)"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"SUPPL,32214004"
+		,"flag":"SUPPL", "help":"Supplemental information compiled separately"
+		,"subent":"32214004"
+		}]
+	,"x4freetext":[" Neutron spectrum after filter 59 keV"]
 	}
       ]
      ,"HISTORY":[
@@ -489,6 +592,22 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" VS. DECAY-DATA moved to subent. 001 and"
 		,"                DG added."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200527A", "date":"20200527", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OG. Replacement of AV by SPA. STATUS and"
+		,"INC-SPECT added. EN-MIN, EN-MAX updated."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200907A", "date":"20200907", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OG. MONIT and SAMPLE added."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20201203A", "date":"20201203", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. E-NRM=478 keV added."]
 	}
       ]
     }
@@ -516,40 +635,43 @@
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
 	 [4.58,0.057,4.48,3.2,3.7]]}
-    ,"DATA":{"ncols":5, "nrows":1
+    ,"DATA":{"ncols":6, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-MIN", "units":"KEV", "pointer":" "
+       {"icol":0, "header":"EN-MIN", "units":"KEV", "pointer":" "
 	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"EN-MAX", "units":"KEV", "pointer":" "
+      ,{"icol":1, "header":"EN-MAX", "units":"KEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":3, "header":"DATA", "units":"B", "pointer":" "
+      ,{"icol":2, "header":"DATA", "units":"B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":4, "header":"ERR-T", "units":"B", "pointer":" "
+      ,{"icol":3, "header":"ERR-T", "units":"B", "pointer":" "
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
+      ,{"icol":4, "header":"E-NRM", "units":"KEV", "pointer":" "
+	,"headerHelp":"Energy of outgoing particle used for normalization", "pFlag":"0000000"
+	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
+      ,{"icol":5, "header":"MONIT", "units":"B", "pointer":" "
+	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-MIN"    ,"EN-MAX"    ,"DATA"      ,"ERR-T"     ]
-	,["KEV"       ,"KEV"       ,"KEV"       ,"B"         ,"B"         ]
-	,[" "         ," "         ," "         ," "         ," "         ]]
+	 ["EN-MIN"    ,"EN-MAX"    ,"DATA"      ,"ERR-T"     ,"E-NRM"     ,"MONIT"     ]
+	,["KEV"       ,"KEV"       ,"B"         ,"B"         ,"KEV"       ,"B"         ]
+	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [58.96,54.8,60.1,0.48,0.039]]}
+	 [33.403,60.125,0.48,0.039,478,2.35]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"32217003", "Pointer":" "
- ,"Subent":"32217003", "compiled":20150126
+ ,"Subent":"32217003", "compiled":20200907
  ,"year1":2008, "author1ini":"O.", "author1":"Gritzay"
  ,"zTarg1":73, "targ1":"Ta-181", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"73-TA-181(N,G)73-TA-182,,SIG,,AV"
- ,"compNotes":[]
- ,"wx4data":10
+ ,"reacode":"73-TA-181(N,G)73-TA-182,,SIG,,SPA"
+ ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
+ ,"wx4data":11
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -595,23 +717,29 @@
     ,"com0":3.7
     ,"com1":3.7}
   ,{"ivar":7, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"41", "rank":1.1
-    ,"expansion":"Incident energy: energy"
-    ,"dat0":[58.96]
-    ,"dat1":[58960]}
-  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MIN", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Min", "dataType":"41", "rank":1.2
     ,"expansion":"Incident energy: energy"
-    ,"dat0":[54.8]
-    ,"dat1":[54800]}
-  ,{"ivar":9, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"dat0":[33.403]
+    ,"dat1":[33403]}
+  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MAX", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Max", "dataType":"41", "rank":1.3
     ,"expansion":"Incident energy: energy"
-    ,"dat0":[60.1]
-    ,"dat1":[60100]}
+    ,"dat0":[60.125]
+    ,"dat1":[60125]}
+  ,{"ivar":9, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"E-NRM", "units":"KEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"1", "rank":777.0
+    ,"expansion":"Assumed values"
+    ,"dat0":[478]
+    ,"dat1":[4.78e+5]}
+  ,{"ivar":10, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MONIT", "units":"B", "basicUnits":"B"
+    ,"what":"ZZZ", "dataType":"11", "rank":777.1
+    ,"expansion":"Assumed values: monitor"
+    ,"dat0":[2.35]
+   ,"dat1eq":true}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -625,8 +753,8 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[58960]
-   }
+      ,"x1":[46764]
+      ,"dx1":[13361]   }
  }
 }
    ]
