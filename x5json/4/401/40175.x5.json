@@ -1,9 +1,9 @@
-  {"ENTRY":"40175", "updated":20150109, "TransID":"4172", "TransDate":20160216, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
+  {"ENTRY":"40175", "updated":20200914, "TransID":"4189", "TransDate":20201112, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
    ,"y1":1968,"a1":"V.V.Ivanenko+","r1":"J,SNP,6,7,1968"
    ,"ref":"Jour: Soviet Journal of Nuclear Physics, Vol.6, p.7 (1968)"
    ,"title":"Cross-sections of the reactions Se-76(n,p),Se-77(n,d), Se-77(n,n+p) and Se-80(n,alpha) with 14.7 MeV neutrons"
    ,"x4subents":[
-   {"SUBENT":"40175001", "isub":1, "compiled":20150109, "TransID":"4172", "TransDate":20160216
+   {"SUBENT":"40175001", "isub":1, "compiled":20200914, "TransID":"4189", "TransDate":20201112
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -68,13 +68,13 @@
      ,"INC-SOURCE":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"D-T", "dict":"INC-SOURCE", "idict":19,"hlp":"3H(d,n)"}]
-	,"x4freetext":["  Neutron flux is 1.0 x 10**10 neutrons/sec/4pi"]
+	,"x4freetext":["  Neutron flux is 1.0 x 10**10 neutrons/sec/4PI"]
 	}
       ]
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"PROPC", "dict":"DETECTOR", "idict":22,"hlp":"Proportional counter"}]
-	,"x4freetext":[" 4pi counter"]
+	,"x4freetext":[" 4PI counter"]
 	}
       ]
      ,"STATUS":[
@@ -113,6 +113,11 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" M.M. Correction in TITLE,STATUS."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20200914A", "date":"20200914", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Code SPSDD was added in .002-.004."]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
@@ -128,7 +133,7 @@
       ,"data":[
 	 [14.7]]}
    }
-  ,{"SUBENT":"40175002", "isub":2, "compiled":20080410, "TransID":"4143", "TransDate":20080721
+  ,{"SUBENT":"40175002", "isub":2, "compiled":20200914, "TransID":"4189", "TransDate":20201112
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -168,32 +173,95 @@
 	, "Radiations":[ {"Type":"B-"}]}]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"SPSDD,40227003"
+		,"flag":"SPSDD", "help":"Data superseded or withdrawn"
+		,"subent":"40227003"
+		}]
+	,"x4freetext":[" Newer publication"]
+	}
+      ]
     }
+    ,"DATA":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"DATA", "units":"MB", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ]
+      ,"datacols":[
+	 ["DATA"      ,"DATA-ERR"  ]
+	,["MB"        ,"MB"        ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [68,8]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"40175002", "Pointer":" "
+ ,"Subent":"40175002", "compiled":20200914
+ ,"year1":1968, "author1ini":"V.V.", "author1":"Ivanenko"
+ ,"zTarg1":34, "targ1":"Se-76", "proj1":"n", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
+ ,"reacode":"34-SE-76(N,P)33-AS-76,,SIG"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MB", "basicUnits":"B"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[68]
+    ,"dat1":[0.068]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[8]
+    ,"dat1":[0.008]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":14.7
+    ,"com1":1.47e+7}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.068]
+      ,"dy":[0.008]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.47e+7]
    }
-  ,{"SUBENT":"40175003", "isub":3, "compiled":20080410, "TransID":"4143", "TransDate":20080721
+ }
+}
+   ]
+   }
+  ,{"SUBENT":"40175003", "isub":3, "compiled":20200914, "TransID":"4189", "TransDate":20201112
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(34-SE-77(N,D)33-AS-76,,SIG)+\n(34-SE-77(N,N+P)33-AS-76,,SIG)"
-	    ,"c4reac":"((N,D),SIG)+((N,N+P),SIG)"
-	    ,"combi":"a","combiQuant":"Cross section"
-	    ,"MF":503
+	,"x4code":{"code":"34-SE-77(N,X)33-AS-76,,SIG"
+	    ,"c4reac":"(N,X),SIG"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"34-SE-77(N,D)33-AS-76,,SIG"
-		,"Reac":"N,D"
+	    {"code":"34-SE-77(N,X)33-AS-76,,SIG"
+		,"Reac":"N,X"
 		,"SF1":"34-SE-77","Targ":{"code":"34-SE-77","nam":"Se-77","ZA":34077}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"D"
-		,"SF4":"33-AS-76","Prod":{"code":"33-AS-76","nam":"As-76","ZA":33076}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"34-SE-77(N,N+P)33-AS-76,,SIG"
-		,"Reac":"N,N+P"
-		,"SF1":"34-SE-77","Targ":{"code":"34-SE-77","nam":"Se-77","ZA":34077}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"33-AS-76","Prod":{"code":"33-AS-76","nam":"As-76","ZA":33076}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -218,9 +286,88 @@
 		," Se-82 content is  1.5 %"]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"SPSDD,40227005"
+		,"flag":"SPSDD", "help":"Data superseded or withdrawn"
+		,"subent":"40227005"
+		}]
+	,"x4freetext":[" Newer publication"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20200914A", "date":"20200914", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Reaction was corrected :"
+		,"  (N,D)+(N,N+P) -> (N,X) - see memo CP-D/999"]
+	}
+      ]
     }
+    ,"DATA":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"DATA", "units":"MB", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ]
+      ,"datacols":[
+	 ["DATA"      ,"DATA-ERR"  ]
+	,["MB"        ,"MB"        ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [12.1,1.6]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"40175003", "Pointer":" "
+ ,"Subent":"40175003", "compiled":20200914
+ ,"year1":1968, "author1ini":"V.V.", "author1":"Ivanenko"
+ ,"zTarg1":34, "targ1":"Se-77", "proj1":"n", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
+ ,"reacode":"34-SE-77(N,X)33-AS-76,,SIG"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MB", "basicUnits":"B"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[12.1]
+    ,"dat1":[0.0121]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[1.6]
+    ,"dat1":[0.0016]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":14.7
+    ,"com1":1.47e+7}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.0121]
+      ,"dy":[0.0016]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.47e+7]
    }
-  ,{"SUBENT":"40175004", "isub":4, "compiled":20080410, "TransID":"4143", "TransDate":20080721
+ }
+}
+   ]
+   }
+  ,{"SUBENT":"40175004", "isub":4, "compiled":20200914, "TransID":"4189", "TransDate":20201112
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -260,7 +407,78 @@
 		," Se-82 content is  9.7  %"]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"SPSDD,40227007"
+		,"flag":"SPSDD", "help":"Data superseded or withdrawn"
+		,"subent":"40227007"
+		}]
+	,"x4freetext":[" Newer publication"]
+	}
+      ]
     }
+    ,"DATA":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"DATA", "units":"MB", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ]
+      ,"datacols":[
+	 ["DATA"      ,"DATA-ERR"  ]
+	,["MB"        ,"MB"        ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [146,22]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"40175004", "Pointer":" "
+ ,"Subent":"40175004", "compiled":20200914
+ ,"year1":1968, "author1ini":"V.V.", "author1":"Ivanenko"
+ ,"zTarg1":34, "targ1":"Se-80", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
+ ,"reacode":"34-SE-80(N,A)32-GE-77,,SIG"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"MB", "basicUnits":"B"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[146]
+    ,"dat1":[0.146]}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[22]
+    ,"dat1":[0.022]}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":14.7
+    ,"com1":1.47e+7}
+  ]
+ ,"wc5data":2
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.146]
+      ,"dy":[0.022]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.47e+7]
+   }
+ }
+}
+   ]
    }
   ]
  }
