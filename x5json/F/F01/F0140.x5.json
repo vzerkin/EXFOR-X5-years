@@ -1,9 +1,9 @@
-  {"ENTRY":"F0140", "updated":20130305, "TransID":"F049", "TransDate":20130411, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
+  {"ENTRY":"F0140", "updated":20201119, "TransID":"F082", "TransDate":20210415, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
    ,"y1":1969,"a1":"V.S.Siksin+","r1":"J,YF,10,1130,1969"
    ,"ref":"Jour: Yadernaya Fizika, Vol.10, p.1130 (1969)"
    ,"title":"An anomaly of proton-beryllium collision near 9Be(p,n)9B threshold."
    ,"x4subents":[
-   {"SUBENT":"F0140001", "isub":1, "compiled":20130305, "TransID":"F049", "TransDate":20130411
+   {"SUBENT":"F0140001", "isub":1, "compiled":20201119, "TransID":"F082", "TransDate":20210415
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -58,21 +58,14 @@
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"SOLST", "dict":"DETECTOR", "idict":22,"hlp":"Solid-state detector"}]
-	,"x4freetext":[" Two surface-barrier detectors. One - monitor"
-		,"at the 45 degr., second - at 70 degr."
+	,"x4freetext":[" Two surface-barrier detectors. One is a monitor"
+		,"at the 45 degr., the second is at 70 degr."
 		,"Threshold neutrons were detected by ZnS(Ag)10B counter."]
 	}
       ]
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"PHD", "dict":"METHOD", "idict":21,"hlp":"Pulse-height discrimination"}]
-	}
-      ]
-     ,"ERR-ANALYS":[
-	{"x4pointer":" "
-	,"x4code":{"header":"EN-ERR-DIG"
-	     ,"headerHelp":"Digitizing error of incident particle energy"}
-	,"x4freetext":[" Energy digitizing error"]
 	}
       ]
      ,"HISTORY":[
@@ -89,8 +82,13 @@
 	,"x4code":{"code":"20130221A", "date":"20130221", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" English translation in REFERENCE was"
-		,"added. ERR-ANALYS in 001 was added. In sub 002 DATA-CM"
-		,"was replaced by DATA. Sub 003 was added."]
+		,"added. ERR-ANALYS in 001 was added. In sub 002"
+		,"DATA-CM was replaced by DATA. Sub 003 was added."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20201119A", "date":"20201119", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Sub 003 corrected."]
 	}
       ]
     }
@@ -336,23 +334,23 @@
 }
    ]
    }
-  ,{"SUBENT":"F0140003", "isub":3, "compiled":20130305, "TransID":"F049", "TransDate":20130411
+  ,{"SUBENT":"F0140003", "isub":3, "compiled":20201119, "TransID":"F082", "TransDate":20210415
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"4-BE-9(P,N)5-B-9,,DA"
-	    ,"c4reac":"(P,N),DA"
+	,"x4code":{"code":"4-BE-9(P,EL)4-BE-9,,DA"
+	    ,"c4reac":"(P,EL),DA"
 	    ,"combi":"a"
 	    ,"MF":4
-	    ,"MT":50
+	    ,"MT":2
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"4-BE-9(P,N)5-B-9,,DA"
-		,"Reac":"P,N"
+	    {"code":"4-BE-9(P,EL)4-BE-9,,DA"
+		,"Reac":"P,EL"
 		,"SF1":"4-BE-9","Targ":{"code":"4-BE-9","nam":"Be-9","ZA":4009}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"N"
-		,"SF4":"5-B-9","Prod":{"code":"5-B-9","nam":"B-9","ZA":5009}
+		,"SF3":"EL","procHlp":"Elastic scattering"
+		,"SF4":"4-BE-9","Prod":{"code":"4-BE-9","nam":"Be-9","ZA":4009}
 		,"SF6":"DA"
 		,"SF58":",DA","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Differential c/s with respect to angle"
 	    }]}
@@ -360,14 +358,18 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-DIG"
-	     ,"headerHelp":"Digitizing error (of DATA)"}
-	,"x4freetext":[" Data digitizing error"]
-	}
-	,{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" Error from the graphic bars"]
+	,"x4freetext":[" Error from the graphic bars consisted of"
+		,"statistical error, error in proton current"
+		,"determination (+ -0.7 %) and multichannel"
+		,"analyser (+ -0.2 %)."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-1", "max":"15."
+	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" Error in determination of target nuclei"
+		,"number."]
 	}
       ]
      ,"STATUS":[
@@ -375,7 +377,15 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":["Fig.3"]
+	,"x4freetext":[" Fig.3"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20201119A", "date":"20201119", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION changed, ERR-ANALYS corrected,"
+		,"number of digits in ERR-DIG changed."]
 	}
       ]
     }
@@ -396,7 +406,7 @@
 	,["ADEG"      ,"MEV"       ,"MB/SR"     ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
-	 [76,1.0E-4,0.11633]]}
+	 [76,1.0E-4,0.12]]}
     ,"DATA":{"ncols":3, "nrows":71
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -487,16 +497,17 @@
 	,[2.0972,203.62,9.6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"F0140003", "Pointer":" "
- ,"Subent":"F0140003", "compiled":20130305
+ ,"Subent":"F0140003", "compiled":20201119
  ,"year1":1969, "author1ini":"V.S.", "author1":"Siksin"
- ,"zTarg1":4, "targ1":"Be-9", "proj1":"p", "emis1":"N", "MF":4, "MT":50, "nExpectedArgs":2
+ ,"zTarg1":4, "targ1":"Be-9", "proj1":"p", "emis1":"EL", "MF":4, "MT":2, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
  ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
- ,"reacode":"4-BE-9(P,N)5-B-9,,DA"
+ ,"reacode":"4-BE-9(P,EL)4-BE-9,,DA"
  ,"compNotes":["Conversion from C.M. to Lab: successful"
+	,"ERR-ANALYS:(ERR-1,,15.)       ADDED AS COMMON:ERR-1,PER-CENT=7.5%"
 	,"Ignored column:ERR-DIG,B/SR (digitizing error)"
 	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
- ,"wx4data":6
+ ,"wx4data":7
  ,"lx4data":71
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":true
@@ -540,12 +551,18 @@
 	,null,null,null,null,null,0.0081,null,0.00753,0.00923,0.00753
 	,0.0096]}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":7.5
+    ,"com1":7.5}
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"ERR-DIG", "units":"MB/SR", "basicUnits":"B/SR"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
-    ,"com0":0.11633
-    ,"com1":1.1633e-4}
-  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+    ,"com0":0.12
+    ,"com1":1.2e-4}
+  ,{"ivar":4, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -565,13 +582,13 @@
 	,2.0856e+6,2.0861e+6,2.0865e+6,2.0866e+6,2.0869e+6,2.0882e+6,2.0893e+6,2.0907e+6,2.0909e+6,2.0915e+6
 	,2.0918e+6,2.0923e+6,2.0925e+6,2.0926e+6,2.093e+6,2.0937e+6,2.0939e+6,2.094e+6,2.0952e+6,2.0954e+6
 	,2.0972e+6]}
-  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
+  ,{"ivar":5, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN-ERR-DIG", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.pErr+-", "dataType":"41", "rank":1.955
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":1.0e-4
     ,"com1":100}
-  ,{"ivar":5, "cvar":"x2", "fam":"ANG", "ifComm":true , "ifCM":true
+  ,{"ivar":6, "cvar":"x2", "fam":"ANG", "ifComm":true , "ifCM":true
     ,"header":"ANG-CM", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X2.Value", "dataType":"61", "rank":2.1
     ,"expansion":"Angle: angle"
@@ -584,22 +601,30 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[1.26536,1.17528,1.23551,1.01652,1.07566,1.04729,1.08085,1.02996,1.08024,1.00133
-	,0.892223,0.9652,0.816521,0.844923,0.867461,0.88962,0.798211,0.719067,0.820998,0.807475
-	,0.827996,0.655129,0.692585,0.746256,0.763138,0.448064,0.667389,0.682662,0.700661,0.735884
-	,0.660589,0.701014,0.646316,0.589417,0.655282,0.695463,0.62671,0.589751,0.564401,0.659293
-	,0.714296,0.631017,0.606552,0.609656,0.616309,0.646456,0.555897,0.584132,0.59019,0.563406
-	,0.597814,0.585158,0.537966,0.57665,0.597773,0.575725,0.609837,0.567899,0.562723,0.524618
-	,0.533042,0.546334,0.531484,0.534404,0.501838,0.488288,0.505682,0.508181,0.477175,0.494772
-	,0.460805]
-      ,"dy":[0.0567771,0.0480278,0.0371964,0.0457631,0.0306017,null,null,null,0.0465282,0.0372222
-	,0.0391051,null,0.0390645,null,null,0.0345343,null,0.0358879,null,null
-	,0.0358326,null,null,null,0.0305432,0.0309274,null,null,null,0.0289513
-	,null,0.0277535,0.0229989,0.0247786,null,0.018097,null,null,0.0257015,null
-	,0.0308503,null,0.0221158,null,null,0.025495,0.0241445,0.0207706,0.0166779,null
-	,0.0247762,null,0.0195449,null,0.0218493,0.0195062,0.021594,0.0188412,0.0220088,0.0250302
-	,null,null,null,null,null,0.0190636,null,0.0176594,0.0213491,0.0173778
-	,0.0217254]   }
+      ,"y":[0.216087,0.202358,0.214467,0.197263,0.213008,0.208761,0.221074,0.21199,0.225107,0.222458
+	,0.198218,0.216795,0.194142,0.204836,0.211303,0.223798,0.209641,0.194271,0.223552,0.22072
+	,0.233215,0.189176,0.200685,0.216237,0.221889,0.131613,0.205683,0.212944,0.219208,0.230909
+	,0.207892,0.229461,0.215508,0.201554,0.225171,0.240712,0.220506,0.207978,0.199494,0.23462
+	,0.257026,0.235779,0.227091,0.230512,0.233934,0.24585,0.218543,0.232861,0.236079,0.228389
+	,0.243523,0.240283,0.222297,0.238653,0.248542,0.24407,0.262614,0.24925,0.24763,0.232668
+	,0.237312,0.244767,0.238707,0.240316,0.22678,0.222522,0.230995,0.232411,0.221267,0.229944
+	,0.218393]
+      ,"dy":[0.00969585,0.00826936,0.00645675,0.00888072,0.00605991,0.0156571,0.0165806,0.0158992,0.00969585,0.00826936
+	,0.00868766,0.0162596,0.00928829,0.0153627,0.0158477,0.00868766,0.0157231,0.00969585,0.0167664,0.016554
+	,0.0100927,0.0141882,0.0150514,0.0162178,0.00888072,0.0090845,0.0154262,0.0159708,0.0164406,0.0090845
+	,0.0155919,0.0090845,0.00766873,0.00847315,0.0168878,0.00626369,0.0165379,0.0155984,0.0090845,0.0175965
+	,0.0111009,0.0176834,0.00828009,0.0172884,0.017545,0.00969585,0.00949207,0.00828009,0.00667126,0.0171292
+	,0.0100927,0.0180213,0.0080763,0.017899,0.0090845,0.00826936,0.00929901,0.00826936,0.00968513,0.0111009
+	,0.0177984,0.0183575,0.017903,0.0180237,0.0170085,0.00868766,0.0173246,0.0080763,0.00989964,0.0080763
+	,0.0102965]
+      ,"dysys":[0.0151103,0.0141503,0.014997,0.013794,0.014895,0.014598,0.015459,0.0148238,0.015741,0.0155558
+	,0.0138608,0.0151598,0.0135758,0.0143235,0.0147758,0.0156495,0.0146595,0.0135848,0.0156322,0.0154343
+	,0.016308,0.0132285,0.0140333,0.0151208,0.015516,0.00920325,0.0143828,0.0148905,0.0153285,0.0161468
+	,0.0145373,0.0160455,0.0150697,0.014094,0.0157455,0.0168323,0.0154193,0.0145433,0.01395,0.0164063
+	,0.017973,0.0164873,0.0158798,0.016119,0.0163583,0.0171915,0.015282,0.0162833,0.0165083,0.0159705
+	,0.0170288,0.0168023,0.0155445,0.0166883,0.0173798,0.017067,0.0183638,0.0174293,0.017316,0.0162698
+	,0.0165945,0.0171158,0.016692,0.0168045,0.015858,0.0155603,0.0161528,0.0162518,0.0154725,0.0160793
+	,0.0152715]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -615,14 +640,14 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
       ,"header":"ANG", "dataType":"61", "rank":2.0
       ,"expansion":"Angle: angle"
-      ,"x2":[28.2,28.3,28.4,29.8,30,30.1,30.4,30.5,30.7,31.5
-	,31.5,31.7,32.5,32.7,32.8,33.3,33.9,34.3,34.4,34.5
-	,34.9,35.3,35.4,35.4,35.4,35.6,36.4,36.5,36.6,36.6
-	,36.7,37.3,37.7,38.1,38.2,38.3,38.6,38.6,38.7,38.8
-	,39,39.7,39.7,39.9,39.9,40,40.6,40.9,40.9,41.2
-	,41.3,41.4,41.5,41.6,41.7,42,42.4,42.7,42.8,43
-	,43,43.2,43.2,43.2,43.3,43.5,43.6,43.6,43.9,43.9
-	,44.4]
+      ,"x2":[70,70,70,70,70,70,70,70,70,70
+	,70,70,70,70,70,70,70,70,70,70
+	,70,70,70,70,70,70,70,70,70,70
+	,70,70,70,70,70,70,70,70,70,70
+	,70,70,70,70,70,70,70,70,70,70
+	,70,70,70,70,70,70,70,70,70,70
+	,70,70,70,70,70,70,70,70,70,70
+	,70]
    }
  }
 }
