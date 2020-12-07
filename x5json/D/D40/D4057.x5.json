@@ -1,9 +1,9 @@
-  {"ENTRY":"D4057", "updated":20120814, "TransID":"D085", "TransDate":20121116, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
+  {"ENTRY":"D4057", "updated":20201208, "TransID":"D129", "TransDate":20210219, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
    ,"y1":1960,"a1":"O.U.Anders+","r1":"J,PR,120,2114,1960"
    ,"ref":"Jour: Physical Review, Vol.120, p.2114 (1960)"
    ,"title":"Absolute (d,a)-reaction cross sections of zirconium, molybdenum, titanium and sulfur"
    ,"x4subents":[
-   {"SUBENT":"D4057001", "isub":1, "compiled":20120814, "TransID":"D085", "TransDate":20121116
+   {"SUBENT":"D4057001", "isub":1, "compiled":20201208, "TransID":"D129", "TransDate":20210219
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -15,7 +15,7 @@
      ,"AUTHOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"ini":"O.U.","nam":"Anders"}
-	    ,{"ini":"W.W.","nam":"Meinke"}]
+	    ,{"ini":"W.","nam":"Wayne Meinke"}]
 	}
       ]
      ,"INSTITUTE":[
@@ -69,8 +69,8 @@
 	,"x4freetext":["The initial bombarding deuteron energy was"
 		," 7.78+/-0.005 MeV."
 		,"The beam current was measured by means of a Faraday-"
-		," cup equiped with secondary electron supressor, and was"
-		," calibrated to counts/Coulomb precisely."
+		," cup equipped with secondary electron suppressor, and"
+		," was calibrated to counts/Coulomb precisely."
 		,"To catch the recoiled reaction products mylar foils"
 		," were used."
 		,"Chemical separation was applied to get the reaction"
@@ -123,6 +123,11 @@
 	,"x4code":{"code":"20120814U", "date":"20120814", "act":"U", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" On. AUTHOR: Andres -> Anders"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20201208A", "date":"20201208", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ON. Major revision in 011."]
 	}
       ]
     }
@@ -1139,7 +1144,7 @@
 }
    ]
    }
-  ,{"SUBENT":"D4057011", "isub":11, "compiled":20060731, "TransID":"D048", "TransDate":20061120
+  ,{"SUBENT":"D4057011", "isub":11, "compiled":20201208, "TransID":"D129", "TransDate":20210219
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1164,18 +1169,24 @@
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"15-P-32", "t12":14.22, "t12units":"D", "t12sec":1228608.0
-	, "Radiations":[ {"Type":"B-", "Energy":[1.71]}]}]
+	, "Radiations":[ {"Type":"B-", "Energy":[1710.0]}]}]
 	}
       ]
      ,"FLAG":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"1."}]
-	,"x4freetext":[" the data point is the average of two independent"
-		,"measurements: 330.3+-7% And 330.+-10%"]
+	,"x4freetext":[" Absolute measurement"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20201208A", "date":"20201208", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: 1.71 -> 1710."]
 	}
       ]
     }
-    ,"DATA":{"ncols":5, "nrows":5
+    ,"DATA":{"ncols":5, "nrows":6
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
@@ -1198,14 +1209,15 @@
 	,["MEV"       ,"MEV"       ,"MB"        ,"PER-CENT"  ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [7.73,0.05,330.15,6.1,1]
+	 [7.73,0.05,330.3,7,1]
+	,[7.73,0.05,330,10,null]
 	,[6.55,0.1,126,10,null]
 	,[5.05,0.1,63,15,null]
 	,[3.15,0.3,39,20,null]
 	,[0.7,0.5,28,30,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4057011", "Pointer":" "
- ,"Subent":"D4057011", "compiled":20060731
+ ,"Subent":"D4057011", "compiled":20201208
  ,"year1":1960, "author1ini":"O.U.", "author1":"Anders"
  ,"zTarg1":16, "targ1":"S-34", "proj1":"d", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1213,52 +1225,52 @@
  ,"reacode":"16-S-34(D,A)15-P-32,,SIG"
  ,"compNotes":[]
  ,"wx4data":5
- ,"lx4data":5
+ ,"lx4data":6
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
     ,"header":"DATA", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[330.15,126,63,39,28]
-    ,"dat1":[0.33015,0.126,0.063,0.039,0.028]}
+    ,"dat0":[330.3,330,126,63,39,28]
+    ,"dat1":[0.3303,0.33,0.126,0.063,0.039,0.028]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
     ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[6.1,10,15,20,30]
+    ,"dat0":[7,10,10,15,20,30]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
-    ,"dat0":[7.73,6.55,5.05,3.15,0.7]
-    ,"dat1":[7.73e+6,6.55e+6,5.05e+6,3.15e+6,7.0e+5]}
+    ,"dat0":[7.73,7.73,6.55,5.05,3.15,0.7]
+    ,"dat1":[7.73e+6,7.73e+6,6.55e+6,5.05e+6,3.15e+6,7.0e+5]}
   ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
-    ,"dat0":[0.05,0.1,0.1,0.3,0.5]
-    ,"dat1":[5.0e+4,1.0e+5,1.0e+5,3.0e+5,5.0e+5]}
+    ,"dat0":[0.05,0.05,0.1,0.1,0.3,0.5]
+    ,"dat1":[5.0e+4,5.0e+4,1.0e+5,1.0e+5,3.0e+5,5.0e+5]}
   ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"ZZZ", "dataType":"01", "rank":777.0
     ,"expansion":"Flags, etc.: flag"
-    ,"dat0":[1,null,null,null,null]
+    ,"dat0":[1,null,null,null,null,null]
    ,"dat1eq":true}
   ]
  ,"wc5data":2
- ,"lc5data":5
+ ,"lc5data":6
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[0.33015,0.126,0.063,0.039,0.028]
-      ,"dy":[0.0201392,0.0126,0.00945,0.0078,0.0084]   }
+      ,"y":[0.3303,0.33,0.126,0.063,0.039,0.028]
+      ,"dy":[0.023121,0.033,0.0126,0.00945,0.0078,0.0084]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[7.73e+6,6.55e+6,5.05e+6,3.15e+6,7.0e+5]
-      ,"dx1":[5.0e+4,1.0e+5,1.0e+5,3.0e+5,5.0e+5]   }
+      ,"x1":[7.73e+6,7.73e+6,6.55e+6,5.05e+6,3.15e+6,7.0e+5]
+      ,"dx1":[5.0e+4,5.0e+4,1.0e+5,1.0e+5,3.0e+5,5.0e+5]   }
  }
 }
    ]
