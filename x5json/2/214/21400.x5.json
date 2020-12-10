@@ -1,18 +1,20 @@
-  {"ENTRY":"21400", "updated":20090215, "TransID":"2207", "TransDate":20090507, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"21400", "updated":20201211, "TransID":"2296", "TransDate":20210303, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1963,"a1":"C.Carles","r1":"J,CR,257,659,1963"
    ,"ref":"Jour: Comptes Rendus, Vol.257, p.659 (1963)"
-   ,"title":"-Measurement of (N,2N) reaction cross sections produced by 14 MeV neutrons -."
+   ,"title":"Measurement of (n,2n) reaction cross sections produced by 14 MeV neutrons"
    ,"x4subents":[
-   {"SUBENT":"21400001", "isub":1, "compiled":20090215, "TransID":"2207", "TransDate":20090507
+   {"SUBENT":"21400001", "isub":1, "compiled":20201211, "TransID":"2296", "TransDate":20210303
     ,"BIB":{
-      "INSTITUTE":[
+      "TITLE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"2FR BOR", "dict":"INSTITUTE", "idict":3,"hlp":"Universite de Bordeaux, France"}]
+	,"x4code":null
+	,"x4freetext":[" Measurement of (n,2n) reaction cross sections"
+		," produced by 14 MeV neutrons"]
 	}
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,CR,257,659,196307","stdFileName":"J,CR,257,659,1963"
+	,"x4codes":[{"code":"J,CR,257,659,1963","stdFileName":"J,CR,257,659,1963"
 		,"year":1963,"typ":"J","ref":"J,CR","vol":"257","p":"659"
 		,"shortRef":"Jour: Comptes Rendus, Vol.257, p.659 (1963)"}]
 	,"x4freetext":[" Table."]
@@ -23,16 +25,15 @@
 	,"x4codes":[{"ini":"C.","nam":"Carles"}]
 	}
       ]
-     ,"TITLE":[
+     ,"INSTITUTE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["-Measurement of (N,2N) reaction cross sections"
-		," produced by 14 MeV neutrons -."]
+	,"x4codes":[{"code":"2FR BOR", "dict":"INSTITUTE", "idict":3,"hlp":"Universite de Bordeaux, France"}]
 	}
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"ACCEL", "dict":"FACILITY", "idict":18,"hlp":"Accelerator"}]
+	,"x4codes":[{"code":"VDG", "dict":"FACILITY", "idict":18,"hlp":"Van de Graaff"}
+	    ,{"code":"2FR BOR", "dict":"INSTITUTE", "idict":3,"hlp":"Universite de Bordeaux, France"}]
 	,"x4freetext":[" Sames, 250 keV accelerator."]
 	}
       ]
@@ -46,17 +47,17 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":[" Neutron intensity 10E+9 neutrons/sec in solid angle"
-		," 4 pi ."]
+		," 4 Pi."]
 	}
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["-Discs, 2.5 cm diameter, 3 mm thick, of metal or"
-		," powder in an aluminum  can, 0.5 mm thick."
-		," For Br - in form of NaBr. For Sb - inform of Sb2-O3 ."
+	,"x4freetext":["  Discs, 2.5 cm diameter, 3 mm thick, of metal or"
+		," powder in an aluminum can, 0.5 mm thick."
+		," For Br - in form of NaBr. For Sb - inform of Sb2-O3."
 		," Copper disk of 2.5 cm diameter , 2mm thick as monitor"
-		," sample; Cu-63 abundance 69.09 % ."]
+		," sample; Cu-63 abundance 69.09%."]
 	}
       ]
      ,"METHOD":[
@@ -116,7 +117,7 @@
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"29-CU-62"
-	, "Radiations":[ {"Type":"B+", "Energy":[0.982]}]}]
+	, "Radiations":[ {"Type":"B+", "Intensity":0.982}]}]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -131,7 +132,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table of reference, page 660."]
+	,"x4freetext":[" Table on p.660 from Comptes Rendus,257(1963)659"]
 	}
       ]
      ,"HISTORY":[
@@ -140,15 +141,17 @@
 	     ,"actHelp":"Compiled at the data center"}
 	}
 	,{"x4pointer":" "
-	,"x4code":{"code":"19800303E", "date":"19800303", "act":"E", "dict":"HISTORY", "idict":15
-	     ,"actHelp":"Transmitted to other data centers"}
-	}
-	,{"x4pointer":" "
 	,"x4code":{"code":"20090215A", "date":"20090215", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" M.M. BIB information was added."
 		," Dates were corrected for 4-digits year."
 		," Free text was corrected to be human-readable."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20201211U", "date":"20201211", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: DECAY-DATA corrected (missed comma"
+		,"before intensity added). EN-RSL -> EN-ERR."]
 	}
       ]
     }
@@ -157,8 +160,8 @@
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL", "units":"MEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Unspecified)", "pFlag":"9220000"
+      ,{"icol":1, "header":"EN-ERR", "units":"MEV", "pointer":" "
+	,"headerHelp":"Uncertainty in incident projectile energy", "pFlag":"9110000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"MONIT", "units":"MB", "pointer":" "
 	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
@@ -168,7 +171,7 @@
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL"    ,"MONIT"     ,"MONIT-ERR" ]
+	 ["EN"        ,"EN-ERR"    ,"MONIT"     ,"MONIT-ERR" ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -280,8 +283,8 @@
     ,"com0":14.1
     ,"com1":1.41e+7}
   ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-RSL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
+    ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.1
     ,"com1":1.0e+5}
@@ -426,8 +429,8 @@
     ,"com0":14.1
     ,"com1":1.41e+7}
   ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-RSL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
+    ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.1
     ,"com1":1.0e+5}
@@ -571,8 +574,8 @@
     ,"com0":14.1
     ,"com1":1.41e+7}
   ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-RSL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
+    ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.1
     ,"com1":1.0e+5}
@@ -608,7 +611,7 @@
 }
    ]
    }
-  ,{"SUBENT":"21400005", "isub":5, "compiled":20090215, "TransID":"2207", "TransDate":20090507
+  ,{"SUBENT":"21400005", "isub":5, "compiled":20201211, "TransID":"2296", "TransDate":20210303
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -633,16 +636,16 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"47-AG-106-G", "t12":24.0, "t12units":"MIN", "t12sec":1440.0
+	,"x4codes":[{"Nucl":"47-AG-106-G"
 	, "Radiations":[ {"Type":"AR", "Energy":[511.0], "Intensity":1.0}]}]
 	}
       ]
-     ,"STATUS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Table of reference."]
+	,"x4code":{"code":"20201211U", "date":"20201211", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: Half-life deleted from the DECAY-DATA"
+		," (not in the article) STATUS deleted (see Subent 001)."]
 	}
       ]
     }
@@ -663,14 +666,14 @@
 	 [818,75]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"21400005", "Pointer":" "
- ,"Subent":"21400005", "compiled":20090215
+ ,"Subent":"21400005", "compiled":20201211
  ,"year1":1963, "author1ini":"C.", "author1":"Carles"
  ,"zTarg1":47, "targ1":"Ag-107", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"47-AG-107(N,2N)47-AG-106-G,,SIG"
  ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=6.96%"]
- ,"DECAY-DATA":{"Nuclide":"47-AG-106-G","HalfLife":"24.0MIN","HalfLife1":""
+ ,"DECAY-DATA":{"Nuclide":"47-AG-106-G","HalfLife":"","HalfLife1":""
 	,"RadiationType":"AR","Ene":511.0,"Ene1":511.0,"Abu":1.0,"Abu1":1.18
 	,"FcCorrDECAY_DATA":0.84745765
 	,"reaction":"47-AG-107(N,2N)47-AG-106-G,,SIG"}
@@ -684,7 +687,7 @@
 	," y=y*a1/a0;                    #[0]#renormalizing CS"
 	,"  #[1]#---Reaction decay-data"
 	,"  #[1]#REACTION   (47-AG-107(N,2N)47-AG-106-G,,SIG)"
-	,"  #[1]#DECAY-DATA (47-AG-106-G,24.0MIN,AR,511.,1.0) #Ix_old=1.0"
+	,"  #[1]#DECAY-DATA (47-AG-106-G,,AR,511.,1.0) #Ix_old=1.0"
 	,"   a1=1.0/1.18;                #[1]#DECAY-DATA: correction to new 511 keV gamma-yield per decay Ag-106-g Ix_new=1.18"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.84745765"
 	," dy=dy*y;                      #to abs. uncertainties"]
@@ -716,8 +719,8 @@
     ,"com0":14.1
     ,"com1":1.41e+7}
   ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-RSL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
+    ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.1
     ,"com1":1.0e+5}
@@ -753,7 +756,7 @@
 }
    ]
    }
-  ,{"SUBENT":"21400006", "isub":6, "compiled":20090215, "TransID":"2207", "TransDate":20090507
+  ,{"SUBENT":"21400006", "isub":6, "compiled":20201211, "TransID":"2296", "TransDate":20210303
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -778,16 +781,16 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"51-SB-120-G", "t12":15.8, "t12units":"MIN", "t12sec":948.0
+	,"x4codes":[{"Nucl":"51-SB-120-G"
 	, "Radiations":[ {"Type":"AR", "Energy":[511.0], "Intensity":1.0}]}]
 	}
       ]
-     ,"STATUS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Table of reference."]
+	,"x4code":{"code":"20201211U", "date":"20201211", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: Half-life deleted from the DECAY-DATA"
+		," (not in the article) STATUS deleted (see Subent 001)."]
 	}
       ]
     }
@@ -808,14 +811,14 @@
 	 [1455,74]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"21400006", "Pointer":" "
- ,"Subent":"21400006", "compiled":20090215
+ ,"Subent":"21400006", "compiled":20201211
  ,"year1":1963, "author1ini":"C.", "author1":"Carles"
  ,"zTarg1":51, "targ1":"Sb-121", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"51-SB-121(N,2N)51-SB-120-G,,SIG"
  ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=6.96%"]
- ,"DECAY-DATA":{"Nuclide":"51-SB-120-G","HalfLife":"15.8MIN","HalfLife1":""
+ ,"DECAY-DATA":{"Nuclide":"51-SB-120-G","HalfLife":"","HalfLife1":""
 	,"RadiationType":"AR","Ene":511.0,"Ene1":511.0,"Abu":1.0,"Abu1":0.82
 	,"FcCorrDECAY_DATA":1.2195122
 	,"reaction":"51-SB-121(N,2N)51-SB-120-G,,SIG"}
@@ -829,7 +832,7 @@
 	," y=y*a1/a0;                    #[0]#renormalizing CS"
 	,"  #[1]#---Reaction decay-data"
 	,"  #[1]#REACTION   (51-SB-121(N,2N)51-SB-120-G,,SIG)"
-	,"  #[1]#DECAY-DATA (51-SB-120-G,15.8MIN,AR,511.,1.0) #Ix_old=1.0"
+	,"  #[1]#DECAY-DATA (51-SB-120-G,,AR,511.,1.0) #Ix_old=1.0"
 	,"   a1=1.0/0.82;                #[1]#DECAY-DATA: correction to new 511 keV gamma-yield per decay Sb-120-g Ix_new=0.82"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.2195122"
 	," dy=dy*y;                      #to abs. uncertainties"]
@@ -861,8 +864,8 @@
     ,"com0":14.1
     ,"com1":1.41e+7}
   ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-RSL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
+    ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.1
     ,"com1":1.0e+5}
