@@ -1,9 +1,9 @@
-  {"ENTRY":"40474", "updated":20180724, "TransID":"4180", "TransDate":20181229, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
+  {"ENTRY":"40474", "updated":20201213, "TransID":"4200", "TransDate":20211112, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
    ,"y1":1978,"a1":"B.I.Fursov+","r1":"J,SJA,44,262,1978"
    ,"ref":"Jour: Soviet Atomic Energy, Vol.44, p.262 (1978)"
    ,"title":"Measurement of the 233U and 241Pu fission cross sections relative to the 235U fission cross section in the neutron energy range 0.024 - 7.4 MeV"
    ,"x4subents":[
-   {"SUBENT":"40474001", "isub":1, "compiled":20180724, "TransID":"4180", "TransDate":20181229
+   {"SUBENT":"40474001", "isub":1, "compiled":20201213, "TransID":"4200", "TransDate":20211112
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -44,7 +44,8 @@
 	,"x4codes":[{"code":"P,YFI-25,10,1977","stdFileName":"R,YFI-25,10,1977"
 		,"year":1977,"typ":"P","ref":"R,YFI-","no":"25","p":"10"
 		,"shortRef":"Prog: Yaderno-Fizicheskie Issledovaniya v SSSR, No.25, p.10 (1977)"}]
-	,"x4freetext":["  Table in primary ref. repeated"]
+	,"x4freetext":["  Table in primary ref. repeated"
+		," INDC(CCP)-171 - table of YFI-25 content"]
 	}
       ]
      ,"REL-REF":[
@@ -54,7 +55,8 @@
 		,"subent":"40501001","author1":"B.I.Fursov+","stdFileName":"C,75KIEV,6,3,1975"
 		,"year":1975,"typ":"C","ref":"C,75KIEV"
 		,"shortRef":"Conf: 3.All Union Conf.on Neutron Phys.,Kiev,9-13 Jun 1975, Vol.6, p.3 (1975)"}]
-	,"x4freetext":[" Experimental details"]
+	,"x4freetext":["  =INDC(CCP)-099,(6),3,1975"
+		," Experimental details"]
 	}
       ]
      ,"FACILITY":[
@@ -119,6 +121,17 @@
 	,"x4code":{"code":"20180724A", "date":"20180724", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. Major revisions in 002-004."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20201213A", "date":"20201213", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. Major revisions in 004-005."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210920U", "date":"20210920", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" M.M. Minor correction of free text in"
+		,"Subents 004, 005."]
 	}
       ]
     }
@@ -657,7 +670,7 @@
 }
    ]
    }
-  ,{"SUBENT":"40474004", "isub":4, "compiled":20180724, "TransID":"4180", "TransDate":20181229
+  ,{"SUBENT":"40474004", "isub":4, "compiled":20201213, "TransID":"4200", "TransDate":20211112
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -699,14 +712,25 @@
 	,"x4codes":[{"code":"IOCH", "dict":"DETECTOR", "idict":22,"hlp":"Ionization chamber"}]
 	}
       ]
-     ,"ANALYSIS":[
+     ,"MONITOR":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Normalized to the glass detector result"]
+	,"x4code":{"code":"(92-U-233(N,F),,SIG)/(92-U-235(N,F),,SIG)"
+		,"reaction":"(92-U-233(N,F),,SIG)/(92-U-235(N,F),,SIG)"}
+	,"x4freetext":[" Normalized to the glass detector result"]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["-Statistical error from scattering of results"
+		," (0.2-1.3% at 0 deg, increasing to 1.3% at 24 keV)"
+		,"-Scattering and laboratory neutron background"
+		," (1.1% at 120 deg)"
+		,"-(d,n) neutron background (<0.8%)"
+		,"-Basic data"
+		," (1.4%,increasing to 2.2-2.4% at the energy rage limit)"]
+	}
+	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Quadrature sum of the following errors:"]
@@ -728,21 +752,6 @@
 	     ,"headerHelp":"4th partial uncertainty, defined under ERR-ANALYS"}
 	,"x4freetext":[" Normalization of the energy curve to the"
 		," reference values                               (0.16%)"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-S", "min":"0.2", "max":"1.3"
-	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
-	,"x4freetext":[" Statistical error            (0.2-1.3%)"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-5", "max":"0.8"
-	     ,"headerHelp":"5th partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" (d,n) neutron background (0.8% at 7.4 MeV)"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-6", "min":"1.4", "max":"2.4"
-	     ,"headerHelp":"6th partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" Basic data                   (1.4-2.4%)"]
 	}
       ]
      ,"STATUS":[
@@ -770,6 +779,11 @@
 	,"x4code":{"code":"20180724A", "date":"20180724", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. DATA corrected at 0.024 and 2.30 MeV."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20201213A", "date":"20201213", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. ANALYSIS -> MONITOR.ERR-ANALYS revised."]
 	}
       ]
     }
@@ -891,17 +905,14 @@
 	,[7.4,183,1.276,1.78]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40474004", "Pointer":" "
- ,"Subent":"40474004", "compiled":20180724
+ ,"Subent":"40474004", "compiled":20201213
  ,"year1":1978, "author1ini":"B.I.", "author1":"Fursov"
  ,"zTarg1":92, "targ1":"U-233", "proj1":"n", "emis1":"F", "MF":203, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section]"
  ,"reacode":"(92-U-233(N,F),,SIG)/(92-U-235(N,F),,SIG)"
- ,"compNotes":["ERR-ANALYS:(ERR-S,0.2,1.3)    ADDED AS COMMON:ERR-S,PER-CENT=0.2%"
-	,"ERR-ANALYS:(ERR-2,0.5,1.8)    ADDED AS COMMON:ERR-2,PER-CENT=0.5%"
-	,"ERR-ANALYS:(ERR-5,,0.8)       ADDED AS COMMON:ERR-5,PER-CENT=0.4%"
-	,"ERR-ANALYS:(ERR-6,1.4,2.4)    ADDED AS COMMON:ERR-6,PER-CENT=1.4%"]
- ,"wx4data":10
+ ,"compNotes":["ERR-ANALYS:(ERR-2,0.5,1.8)    ADDED AS COMMON:ERR-2,PER-CENT=0.5%"]
+ ,"wx4data":7
  ,"lx4data":81
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -933,42 +944,24 @@
 	,1.78]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
-    ,"expansion":"Data: data /Error/"
-    ,"com0":0.2
-    ,"com1":0.2}
-  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":0.5
     ,"com1":0.5}
-  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":1.23
     ,"com1":1.23}
-  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":0.16
     ,"com1":0.16}
-  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
-    ,"expansion":"Data: data /Error/"
-    ,"com0":0.4
-    ,"com1":0.4}
-  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-6", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
-    ,"expansion":"Data: data /Error/"
-    ,"com0":1.4
-    ,"com1":1.4}
-  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":5, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -990,7 +983,7 @@
 	,3.4e+6,3.6e+6,3.8e+6,4.0e+6,4.2e+6,4.4e+6,4.6e+6,4.8e+6,5.0e+6,5.2e+6
 	,5.4e+6,5.6e+6,5.8e+6,6.0e+6,6.2e+6,6.4e+6,6.6e+6,6.8e+6,7.0e+6,7.2e+6
 	,7.4e+6]}
-  ,{"ivar":9, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":6, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-ERR", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
@@ -1037,24 +1030,15 @@
 	,0.020413,0.0228844,0.0218736,0.0211211,0.0212976,0.0209352,0.0209232,0.020356,0.020146,0.020048
 	,0.019877,0.0205048,0.021096,0.0221704,0.02244,0.021112,0.0211282,0.021421,0.0205173,0.0208244
 	,0.0227128]
-      ,"dysys":[0.0264917,0.0266499,0.0264126,0.0269266,0.0279547,0.0286269,0.0291013,0.0294177,0.0298921,0.0310388
-	,0.0316912,0.0325413,0.0333123,0.0330949,0.0333321,0.0334507,0.0333716,0.0333123,0.0333123,0.0333321
-	,0.0332728,0.0332135,0.033253,0.032996,0.0329169,0.0327588,0.032482,0.0322645,0.031711,0.0308213
-	,0.0305248,0.0303073,0.0301294,0.0303271,0.0300701,0.0302678,0.0301096,0.030248,0.0300305,0.0299317
-	,0.0299317,0.0297537,0.0296747,0.0295165,0.0295165,0.0296747,0.0297735,0.029734,0.0297735,0.0296351
-	,0.029734,0.0297142,0.029734,0.029734,0.0298131,0.0296153,0.0297537,0.0296944,0.0295363,0.029477
-	,0.0294572,0.0293781,0.0294177,0.0292002,0.0292397,0.0289432,0.0287257,0.0287455,0.0284489,0.0283105
-	,0.028271,0.0285478,0.0289629,0.0296153,0.0295758,0.028785,0.0280338,0.027322,0.0265115,0.0260568
-	,0.0252264]
-      ,"dystat":[0.00268,0.002696,0.002672,0.002724,0.002828,0.002896,0.002944,0.002976,0.003024,0.00314
-	,0.003206,0.003292,0.00337,0.003348,0.003372,0.003384,0.003376,0.00337,0.00337,0.003372
-	,0.003366,0.00336,0.003364,0.003338,0.00333,0.003314,0.003286,0.003264,0.003208,0.003118
-	,0.003088,0.003066,0.003048,0.003068,0.003042,0.003062,0.003046,0.00306,0.003038,0.003028
-	,0.003028,0.00301,0.003002,0.002986,0.002986,0.003002,0.003012,0.003008,0.003012,0.002998
-	,0.003008,0.003006,0.003008,0.003008,0.003016,0.002996,0.00301,0.003004,0.002988,0.002982
-	,0.00298,0.002972,0.002976,0.002954,0.002958,0.002928,0.002906,0.002908,0.002878,0.002864
-	,0.00286,0.002888,0.00293,0.002996,0.002992,0.002912,0.002836,0.002764,0.002682,0.002636
-	,0.002552]   }
+      ,"dysys":[0.0179205,0.0180275,0.017867,0.0182147,0.0189101,0.0193648,0.0196858,0.0198997,0.0202207,0.0209964
+	,0.0214377,0.0220127,0.0225343,0.0223872,0.0225477,0.0226279,0.0225744,0.0225343,0.0225343,0.0225477
+	,0.0225076,0.0224674,0.0224942,0.0223203,0.0222668,0.0221599,0.0219726,0.0218255,0.0214511,0.0208493
+	,0.0206487,0.0205015,0.0203812,0.0205149,0.0203411,0.0204748,0.0203678,0.0204614,0.0203143,0.0202475
+	,0.0202475,0.0201271,0.0200736,0.0199666,0.0199666,0.0200736,0.0201405,0.0201137,0.0201405,0.0200468
+	,0.0201137,0.0201003,0.0201137,0.0201137,0.0201672,0.0200335,0.0201271,0.020087,0.01998,0.0199399
+	,0.0199265,0.019873,0.0198997,0.0197526,0.0197794,0.0195788,0.0194317,0.019445,0.0192444,0.0191508
+	,0.0191241,0.0193113,0.0195922,0.0200335,0.0200067,0.0194718,0.0189636,0.0184822,0.0179338,0.0176262
+	,0.0170646]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1108,7 +1092,7 @@
 }
    ]
    }
-  ,{"SUBENT":"40474005", "isub":5, "compiled":20180724, "TransID":"4180", "TransDate":20181229
+  ,{"SUBENT":"40474005", "isub":5, "compiled":20201213, "TransID":"4200", "TransDate":20211112
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1150,14 +1134,25 @@
 	,"x4codes":[{"code":"IOCH", "dict":"DETECTOR", "idict":22,"hlp":"Ionization chamber"}]
 	}
       ]
-     ,"ANALYSIS":[
+     ,"MONITOR":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Normalized to the glass detector result"]
+	,"x4code":{"code":"(94-PU-241(N,F),,SIG)/(92-U-235(N,F),,SIG)"
+		,"reaction":"(94-PU-241(N,F),,SIG)/(92-U-235(N,F),,SIG)"}
+	,"x4freetext":[" Normalized to the glass detector result"]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["-Statistical error from scattering of results"
+		," (0.2-1.3% at 0 deg, increasing to 1.3% at 24 keV)"
+		,"-Scattering and laboratory neutron background"
+		," (0.5% at 120 deg)"
+		,"-(d,n) neutron background (<1.15%)"
+		,"-Basic data"
+		," (1.9%,increasing to 2.2-2.4% at the energy rage limit)"]
+	}
+	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
 	,"x4freetext":[" Quadrature sum of the following errors:"]
@@ -1179,22 +1174,6 @@
 	     ,"headerHelp":"4th partial uncertainty, defined under ERR-ANALYS"}
 	,"x4freetext":[" Normalization of the energy curve to the"
 		," reference values                               (0.25%)"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-S", "min":"0.2", "max":"1.3"
-	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
-	,"x4freetext":[" Statistical error            (0.2-1.3%)"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-5", "max":"1.15"
-	     ,"headerHelp":"5th partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" (d,n) neutron background"
-		,"                                     (1.15% at 7.4 MeV)"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-6", "min":"1.9", "max":"2.4"
-	     ,"headerHelp":"6th partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" Basic data                   (1.9-2.4%)"]
 	}
       ]
      ,"STATUS":[
@@ -1222,6 +1201,11 @@
 	,"x4code":{"code":"20180724U", "date":"20180724", "act":"U", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" On. Data checked against the article."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20201213A", "date":"20201213", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. ANALYSIS -> MONITOR.ERR-ANALYS revised."]
 	}
       ]
     }
@@ -1343,17 +1327,14 @@
 	,[7.4,183,1.186,2.16]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40474005", "Pointer":" "
- ,"Subent":"40474005", "compiled":20180724
+ ,"Subent":"40474005", "compiled":20201213
  ,"year1":1978, "author1ini":"B.I.", "author1":"Fursov"
  ,"zTarg1":94, "targ1":"Pu-241", "proj1":"n", "emis1":"F", "MF":203, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section]"
  ,"reacode":"(94-PU-241(N,F),,SIG)/(92-U-235(N,F),,SIG)"
- ,"compNotes":["ERR-ANALYS:(ERR-S,0.2,1.3)    ADDED AS COMMON:ERR-S,PER-CENT=0.2%"
-	,"ERR-ANALYS:(ERR-2,0.5,1.8)    ADDED AS COMMON:ERR-2,PER-CENT=0.5%"
-	,"ERR-ANALYS:(ERR-5,,1.15)      ADDED AS COMMON:ERR-5,PER-CENT=0.575%"
-	,"ERR-ANALYS:(ERR-6,1.9,2.4)    ADDED AS COMMON:ERR-6,PER-CENT=1.9%"]
- ,"wx4data":10
+ ,"compNotes":["ERR-ANALYS:(ERR-2,0.5,1.8)    ADDED AS COMMON:ERR-2,PER-CENT=0.5%"]
+ ,"wx4data":7
  ,"lx4data":81
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1385,42 +1366,24 @@
 	,2.16]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
-    ,"expansion":"Data: data /Error/"
-    ,"com0":0.2
-    ,"com1":0.2}
-  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"ERR-2", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":0.5
     ,"com1":0.5}
-  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+  ,{"ivar":3, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"ERR-3", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":1.68
     ,"com1":1.68}
-  ,{"ivar":5, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+  ,{"ivar":4, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"ERR-4", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
     ,"expansion":"Data: data /Error/"
     ,"com0":0.25
     ,"com1":0.25}
-  ,{"ivar":6, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-5", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
-    ,"expansion":"Data: data /Error/"
-    ,"com0":0.575
-    ,"com1":0.575}
-  ,{"ivar":7, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"ERR-6", "units":"PER-CENT", "basicUnits":"PER-CENT"
-    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
-    ,"expansion":"Data: data /Error/"
-    ,"com0":1.9
-    ,"com1":1.9}
-  ,{"ivar":8, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":5, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -1442,7 +1405,7 @@
 	,3.4e+6,3.6e+6,3.8e+6,4.0e+6,4.2e+6,4.4e+6,4.6e+6,4.8e+6,5.0e+6,5.2e+6
 	,5.4e+6,5.6e+6,5.8e+6,6.0e+6,6.2e+6,6.4e+6,6.6e+6,6.8e+6,7.0e+6,7.2e+6
 	,7.4e+6]}
-  ,{"ivar":9, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":6, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-ERR", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
@@ -1489,24 +1452,15 @@
 	,0.0235336,0.0242487,0.0253342,0.02451,0.024567,0.0247488,0.024605,0.0247345,0.0248491,0.024776
 	,0.0249102,0.025232,0.025004,0.0257438,0.0251929,0.0249163,0.024492,0.0248436,0.0250305,0.0252989
 	,0.0256176]
-      ,"dysys":[0.0345,0.0347394,0.0344734,0.0353778,0.0358034,0.0360694,0.0361758,0.0362556,0.0361758,0.036096
-	,0.0366812,0.0367876,0.0361758,0.0360694,0.0356172,0.0354044,0.0351118,0.0352182,0.0352448,0.035165
-	,0.0358034,0.0352448,0.0351118,0.0350586,0.0354044,0.035963,0.036096,0.036096,0.035564,0.035032
-	,0.034633,0.0344734,0.0346064,0.0350586,0.035431,0.0361758,0.0366546,0.0370802,0.0373994,0.0372132
-	,0.0372132,0.0371866,0.0366812,0.0364684,0.036229,0.035564,0.0352182,0.034766,0.0347394,0.0348458
-	,0.0342872,0.0344202,0.0343138,0.0343404,0.0342872,0.0342074,0.0342074,0.0340744,0.0339946,0.0339148
-	,0.0340212,0.0341276,0.0342074,0.0343138,0.0343936,0.0342872,0.0344468,0.0344468,0.0346064,0.0346862
-	,0.0350586,0.0353246,0.0353778,0.035298,0.0350852,0.0343404,0.0334094,0.0328774,0.0324784,0.0318932
-	,0.0315474]
-      ,"dystat":[0.002594,0.002612,0.002592,0.00266,0.002692,0.002712,0.00272,0.002726,0.00272,0.002714
-	,0.002758,0.002766,0.00272,0.002712,0.002678,0.002662,0.00264,0.002648,0.00265,0.002644
-	,0.002692,0.00265,0.00264,0.002636,0.002662,0.002704,0.002714,0.002714,0.002674,0.002634
-	,0.002604,0.002592,0.002602,0.002636,0.002664,0.00272,0.002756,0.002788,0.002812,0.002798
-	,0.002798,0.002796,0.002758,0.002742,0.002724,0.002674,0.002648,0.002614,0.002612,0.00262
-	,0.002578,0.002588,0.00258,0.002582,0.002578,0.002572,0.002572,0.002562,0.002556,0.00255
-	,0.002558,0.002566,0.002572,0.00258,0.002586,0.002578,0.00259,0.00259,0.002602,0.002608
-	,0.002636,0.002656,0.00266,0.002654,0.002638,0.002582,0.002512,0.002472,0.002442,0.002398
-	,0.002372]   }
+      ,"dysys":[0.0229642,0.0231236,0.0229465,0.0235485,0.0238318,0.0240089,0.0240797,0.0241328,0.0240797,0.0240266
+	,0.0244161,0.0244869,0.0240797,0.0240089,0.0237079,0.0235662,0.0233715,0.0234423,0.02346,0.0234069
+	,0.0238318,0.02346,0.0233715,0.023336,0.0235662,0.023938,0.0240266,0.0240266,0.0236725,0.0233183
+	,0.0230528,0.0229465,0.023035,0.023336,0.0235839,0.0240797,0.0243984,0.0246817,0.0248941,0.0247702
+	,0.0247702,0.0247525,0.0244161,0.0242744,0.0241151,0.0236725,0.0234423,0.0231413,0.0231236,0.0231944
+	,0.0228226,0.0229111,0.0228403,0.022858,0.0228226,0.0227695,0.0227695,0.0226809,0.0226278,0.0225747
+	,0.0226455,0.0227163,0.0227695,0.0228403,0.0228934,0.0228226,0.0229288,0.0229288,0.023035,0.0230882
+	,0.023336,0.0235131,0.0235485,0.0234954,0.0233538,0.022858,0.0222383,0.0218842,0.0216186,0.0212291
+	,0.0209989]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
