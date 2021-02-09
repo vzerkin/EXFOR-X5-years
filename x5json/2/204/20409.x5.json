@@ -1,9 +1,9 @@
-  {"ENTRY":"20409", "updated":20180724, "TransID":"2275", "TransDate":20190423, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"20409", "updated":20210210, "TransID":"2297", "TransDate":20210421, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1976,"a1":"S.Cierjacks+","r1":"C,76ANL,,94,1976"
    ,"ref":"Conf: Meet.Fast Neutr.Cross Sect.of U and Pu,Argonne 1976, p.94 (1976)"
    ,"title":"Measurements of neutron induced fission cross section ratios at the karlsruhe isochronous cyclotron"
    ,"x4subents":[
-   {"SUBENT":"20409001", "isub":1, "compiled":20180724, "TransID":"2275", "TransDate":20190423
+   {"SUBENT":"20409001", "isub":1, "compiled":20210210, "TransID":"2297", "TransDate":20210421
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -39,7 +39,18 @@
 	,"x4codes":[{"code":"W,CIERJACKS,197407","stdFileName":"W,CIERJACKS,1974"
 		,"year":1974,"typ":"W","ref":"W","vol":"Cierjacks"
 		,"shortRef":"Priv.Comm: Cierjacks (1974)"}]
-	,"x4freetext":[" Numerical values."]
+	,"x4freetext":[" Numerical values"]
+	}
+      ]
+     ,"REL-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"N,20943001,B.Leugers+,C,76ANL,,246,1976"
+		,"flag":{"code":"N", "help":" Reference to related data compiled in another entry"}
+		,"subent":"20943001","author1":"B.Leugers+","stdFileName":"C,76ANL,,246,1976"
+		,"year":1976,"typ":"C","ref":"C,76ANL"
+		,"shortRef":"Conf: Meet.Fast Neutr.Cross Sect.of U and Pu,Argonne 1976, p.246 (1976)"}]
+	,"x4freetext":["238U(n,f) and 235U(n,f) absolute data from the same"
+		," experiment"]
 	}
       ]
      ,"FACILITY":[
@@ -63,13 +74,9 @@
       ]
      ,"DETECTOR":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Proton recoil detector for neutron flux measurement"]
-	}
-	,{"x4pointer":" "
 	,"x4codes":[{"code":"SCIN", "dict":"DETECTOR", "idict":22,"hlp":"Scintillation detector"}]
 	,"x4freetext":[" 9 gas scintillation chambers (85% Ar+15% N)"
-		," and NE102 plastic scintillator for promopt gamma"
+		," and NE102 plastic scintillator for prompt gamma"
 		," detection"]
 	}
       ]
@@ -78,10 +85,9 @@
 	,"x4code":null
 	,"x4freetext":["Corrected for"
 		," - time-independent background,"
-		," - detector efficiency,"
-		," - electronic threshold,"
-		," - dead time losses,"
-		," - isotopic impurities."]
+		," - energy-dependent detector efficiency,"
+		," - electronic threshold and dead time,"
+		," - sample mass and isotopic composition"]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -139,10 +145,15 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. Major revisions in 002-003."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210210A", "date":"20210210", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. Major revision in 003."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"20409002", "isub":2, "compiled":20180724, "TransID":"2275", "TransDate":20190423
+  ,{"SUBENT":"20409002", "isub":2, "compiled":20210210, "TransID":"2297", "TransDate":20210421
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -189,17 +200,45 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["238U sample: 235U/238U=0.0001755"
-		,"235U sample: 235U (93.331%), 234U (1.080%), 236U (0.202"
-		,"             238U (5.387%)"]
+	,"x4freetext":["238U sample: 235U/238U composition ratio=0.0001755"
+		,"235U sample: 235U (93.331%), 234U (1.080%),"
+		,"             236U (0.202%),  238U (5.387%)"]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Note added by the editors of C,76ANL,,246,1976:"
+		," The data reported for the ratio of U-238/U-235 and"
+		,"the absolute values for U-238 and for U-235 (basing on"
+		,"the hydrogen reference cross section) are both from a"
+		,"single measurement. However, the normalization of the"
+		,"data is somewhat different for the ratio then it is"
+		,"for the individual cross sections."]
+	}
+	,{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table III in 1976 Argonne conference p94 (1976)"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"COREL,20943002"
+		,"flag":"COREL", "help":"Data correlated with another data set"
+		,"subent":"20943002"
+		}]
+	,"x4freetext":[" 235U(n,f) absolute cross section"
+		," determined with n-p reference cross section from the"
+		," same run."]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"COREL,20943003"
+		,"flag":"COREL", "help":"Data correlated with another data set"
+		,"subent":"20943003"
+		}]
+	,"x4freetext":[" 238U(n,f) absolute cross section"
+		," determined with n-p reference cross section from the"
+		," same run."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -214,6 +253,11 @@
 	,"x4code":{"code":"20180724A", "date":"20180724", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. MONITOR+MONIT-REF added. Data checked."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210210U", "date":"20210210", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" On. STATUS updated."]
 	}
       ]
     }
@@ -345,7 +389,7 @@
 	,[30.413,0.778,5.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"20409002", "Pointer":" "
- ,"Subent":"20409002", "compiled":20180724
+ ,"Subent":"20409002", "compiled":20210210
  ,"year1":1976, "author1ini":"S.", "author1":"Cierjacks"
  ,"zTarg1":92, "targ1":"U-238", "proj1":"n", "emis1":"F", "MF":203, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -557,7 +601,7 @@
 }
    ]
    }
-  ,{"SUBENT":"20409003", "isub":3, "compiled":20180724, "TransID":"2275", "TransDate":20190423
+  ,{"SUBENT":"20409003", "isub":3, "compiled":20210210, "TransID":"2297", "TransDate":20210421
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -601,14 +645,6 @@
 		,"shortRef":"Rept: A.E.R.E. Harwell Reports, No.1996 (1956)"}]
 	}
       ]
-     ,"COMMENT":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["By compiler:"
-		," Uttley et al. (1956) gives 1.15+/-0.05 at 14.1 MeV in"
-		," Table IV of AERE-NP/R-1996,1956."]
-	}
-      ]
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
@@ -622,15 +658,7 @@
      ,"FLAG":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"1."}]
-	,"x4freetext":["Low-energy limit for validity of these data unclear"]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Table IV in 1976 Argonne conference p94 (1976)"]
+	,"x4freetext":[" Low-energy limit for validity of the data unclear"]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -640,11 +668,42 @@
 	,"x4freetext":[" Statistical uncertainty"]
 	}
       ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["By Friedrich Voss (2021-02-23):"
+		," B.Leugers confirmed that each of Pu isotopes was"
+		," measured only once. That means that the 1976 and"
+		," 1978 data are based on the same raw data."
+		,"By compiler:"
+		," Uttley et al. (1956) gives 1.15+/-0.05 at 14.1 MeV in"
+		," Table IV of AERE-NP/R-1996,1956."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table IV in 1976 Argonne conference p94 (1976)"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"SPSDD,20786005"
+		,"flag":"SPSDD", "help":"Data superseded or withdrawn"
+		,"subent":"20786005"
+		}]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20180724A", "date":"20180724", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. MONITOR+MONIT-REF added. Data checked."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210210A", "date":"20210210", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. STATUS=SPSDD added."]
 	}
       ]
     }
@@ -903,7 +962,7 @@
 	,[20.891,1.211,0.5,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"20409003", "Pointer":" "
- ,"Subent":"20409003", "compiled":20180724
+ ,"Subent":"20409003", "compiled":20210210
  ,"year1":1976, "author1ini":"S.", "author1":"Cierjacks"
  ,"zTarg1":94, "targ1":"Pu-239", "proj1":"n", "emis1":"F", "MF":203, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
