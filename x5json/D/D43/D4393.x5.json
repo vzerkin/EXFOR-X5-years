@@ -1,9 +1,9 @@
-  {"ENTRY":"D4393", "updated":20180920, "TransID":"D118", "TransDate":20181204, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
+  {"ENTRY":"D4393", "updated":20210218, "TransID":"D130", "TransDate":20210615, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
    ,"y1":2018,"a1":"Z.Korkulu+","r1":"J,PR/C,97,045803,2018","doi1":"10.1103/PhysRevC.97.045803"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.97, p.045803 (2018)"
    ,"title":"Investigation of alpha-induced reactions on Sb isotopes relevant to the astrophysical gamma-process"
    ,"x4subents":[
-   {"SUBENT":"D4393001", "isub":1, "compiled":20180920, "TransID":"D118", "TransDate":20181204
+   {"SUBENT":"D4393001", "isub":1, "compiled":20210218, "TransID":"D130", "TransDate":20210615
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -53,8 +53,8 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["High purity natural and enriched (99.59%) was was"
-		,"vacuum-evaporated onto 1.8 and 2.5 um Al backing."
+	,"x4freetext":["High purity natural Sb and enriched (99.59%) 121Sb was"
+		,"was vacuum-evaporated onto 1.8 and 2.5 um Al backing."
 		,"Target thickness was measured by RBS and PIXE methods."]
 	}
       ]
@@ -62,6 +62,10 @@
 	{"x4pointer":" "
 	,"x4codes":[{"code":"HPGE", "dict":"DETECTOR", "idict":22,"hlp":"Hyperpure Germanium detector"}]
 	,"x4freetext":["  For gamma-ray counting"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"LEGE", "dict":"DETECTOR", "idict":22,"hlp":"Low energy Germanium Detector"}]
+	,"x4freetext":["  For X-ray counting"]
 	}
       ]
      ,"METHOD":[
@@ -127,6 +131,16 @@
 	,"x4freetext":["statistical uncertainty (2.-14.4%)"]
 	}
       ]
+     ,"FLAG":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"1."}]
+	,"x4freetext":[" data measured with energy degrader"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"2."}]
+	,"x4freetext":[" data measured on enriched target"]
+	}
+      ]
      ,"ADD-RES":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"THEO", "dict":"ADD-RES", "idict":20,"hlp":"Theory"}]
@@ -140,15 +154,11 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" TS"]
 	}
-      ]
-     ,"FLAG":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"1."}]
-	,"x4freetext":[" data measured with energy degrader"]
-	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"2."}]
-	,"x4freetext":[" data measured on enriched target"]
+	,"x4code":{"code":"20210218A", "date":"20210218", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" TS DATA unit MB in subentries 4,5,6 were"
+		,"            changed to MICRO-B."]
 	}
       ]
     }
@@ -562,7 +572,7 @@
 }
    ]
    }
-  ,{"SUBENT":"D4393004", "isub":4, "compiled":20180920, "TransID":"D118", "TransDate":20181204
+  ,{"SUBENT":"D4393004", "isub":4, "compiled":20210218, "TransID":"D130", "TransDate":20210615
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -584,12 +594,6 @@
 	    }]}
 	}
       ]
-     ,"DETECTOR":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"HPGE", "dict":"DETECTOR", "idict":22,"hlp":"Hyperpure Germanium detector"}]
-	,"x4freetext":["  For gamma-ray counting"]
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"53-I-125", "t12":59.4, "t12units":"D", "t12sec":5132160.0
@@ -601,14 +605,21 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 3 of the reference."]
+	,"x4freetext":[" Table3 of the reference."]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"COREL,D4393005"
+	,"x4codes":[{"code":"COREL,D4939005"
 		,"flag":"COREL", "help":"Data correlated with another data set"
-		,"subent":"D4393005"
+		,"subent":"D4939005"
 		}]
-	,"x4freetext":[" Data from X-ray detection"]
+	,"x4freetext":[" Data from X-ray counting"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210218A", "date":"20210218", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" TS MB -> MICRO-B"]
 	}
       ]
     }
@@ -620,12 +631,12 @@
       ,{"icol":1, "header":"EN-ERR", "units":"MEV", "pointer":" "
 	,"headerHelp":"Uncertainty in incident projectile energy", "pFlag":"9110000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
+      ,{"icol":2, "header":"DATA", "units":"MICRO-B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
+	,"unitsHelp":"microbarns","familyCode":"B","convFc":1.0E-6,"basicUnits":"B"}
+      ,{"icol":3, "header":"ERR-T", "units":"MICRO-B", "pointer":" "
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
-	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+	,"unitsHelp":"microbarns","familyCode":"B","convFc":1.0E-6,"basicUnits":"B"}
       ,{"icol":4, "header":"FLAG", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Flag, defined under FLAG.", "pFlag":"0000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
@@ -635,7 +646,7 @@
       ]
       ,"datacols":[
 	 ["EN-CM"     ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ,"FLAG"      ,"FLAG"      ]
-	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ,"NO-DIM"    ,"NO-DIM"    ]
+	,["MEV"       ,"MEV"       ,"MICRO-B"   ,"MICRO-B"   ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
 	 [11.11,0.08,13.3,1.9,null,2]
@@ -646,7 +657,7 @@
 	,[13.54,0.1,147,21,null,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4393004", "Pointer":" "
- ,"Subent":"D4393004", "compiled":20180920
+ ,"Subent":"D4393004", "compiled":20210218
  ,"year1":2018, "author1ini":"Z.", "author1":"Korkulu"
  ,"zTarg1":51, "targ1":"Sb-121", "proj1":"a", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -659,17 +670,17 @@
  ,"lx4data":6
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA", "units":"MICRO-B", "basicUnits":"B"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[13.3,24.4,45.3,70.9,107,147]
-    ,"dat1":[0.0133,0.0244,0.0453,0.0709,0.107,0.147]}
+    ,"dat1":[1.33e-5,2.44e-5,4.53e-5,7.09e-5,1.07e-4,1.47e-4]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"ERR-T", "units":"MICRO-B", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[1.9,4.5,6.6,10.6,15,21]
-    ,"dat1":[0.0019,0.0045,0.0066,0.0106,0.015,0.021]}
+    ,"dat1":[1.9e-6,4.5e-6,6.6e-6,1.06e-5,1.5e-5,2.1e-5]}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
@@ -737,10 +748,10 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[0.0133,0.0244,0.0453,0.0709,0.107,0.147]
-      ,"dy":[0.0019,0.0045,0.0066,0.0106,0.015,0.021]
-      ,"dysys":[0.00182753,0.00335276,0.00622459,0.00974224,0.0147027,0.020199]
-      ,"dystat":[2.66e-4,4.88e-4,9.06e-4,0.001418,0.00214,0.00294]   }
+      ,"y":[1.33e-5,2.44e-5,4.53e-5,7.09e-5,1.07e-4,1.47e-4]
+      ,"dy":[1.9e-6,4.5e-6,6.6e-6,1.06e-5,1.5e-5,2.1e-5]
+      ,"dysys":[1.82753e-6,3.35276e-6,6.22459e-6,9.74224e-6,1.47027e-5,2.0199e-5]
+      ,"dystat":[2.66e-7,4.88e-7,9.06e-7,1.418e-6,2.14e-6,2.94e-6]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":true, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -750,7 +761,7 @@
 }
    ]
    }
-  ,{"SUBENT":"D4393005", "isub":5, "compiled":20180920, "TransID":"D118", "TransDate":20181204
+  ,{"SUBENT":"D4393005", "isub":5, "compiled":20210218, "TransID":"D130", "TransDate":20210615
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -772,12 +783,6 @@
 	    }]}
 	}
       ]
-     ,"DETECTOR":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"LEGE", "dict":"DETECTOR", "idict":22,"hlp":"Low energy Germanium Detector"}]
-	,"x4freetext":["  For X-ray counting"]
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"53-I-125", "t12":59.4, "t12units":"D", "t12sec":5132160.0
@@ -790,14 +795,21 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 3 of the reference."]
+	,"x4freetext":[" Table3 of the reference."]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"COREL,D4393004"
+	,"x4codes":[{"code":"COREL,D4939004"
 		,"flag":"COREL", "help":"Data correlated with another data set"
-		,"subent":"D4393004"
+		,"subent":"D4939004"
 		}]
-	,"x4freetext":[" Data from gamma-ray detection"]
+	,"x4freetext":[" Data from gamma-ray counting"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210218A", "date":"20210218", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" TS MB -> MICRO-B"]
 	}
       ]
     }
@@ -809,12 +821,12 @@
       ,{"icol":1, "header":"EN-ERR", "units":"MEV", "pointer":" "
 	,"headerHelp":"Uncertainty in incident projectile energy", "pFlag":"9110000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
+      ,{"icol":2, "header":"DATA", "units":"MICRO-B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
+	,"unitsHelp":"microbarns","familyCode":"B","convFc":1.0E-6,"basicUnits":"B"}
+      ,{"icol":3, "header":"ERR-T", "units":"MICRO-B", "pointer":" "
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
-	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+	,"unitsHelp":"microbarns","familyCode":"B","convFc":1.0E-6,"basicUnits":"B"}
       ,{"icol":4, "header":"FLAG", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Flag, defined under FLAG.", "pFlag":"0000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
@@ -824,7 +836,7 @@
       ]
       ,"datacols":[
 	 ["EN-CM"     ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ,"FLAG"      ,"FLAG"      ]
-	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ,"NO-DIM"    ,"NO-DIM"    ]
+	,["MEV"       ,"MEV"       ,"MICRO-B"   ,"MICRO-B"   ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
 	 [9.74,0.11,1.48,0.22,1,2]
@@ -835,7 +847,7 @@
 	,[13.05,0.09,115,14,null,2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4393005", "Pointer":" "
- ,"Subent":"D4393005", "compiled":20180920
+ ,"Subent":"D4393005", "compiled":20210218
  ,"year1":2018, "author1ini":"Z.", "author1":"Korkulu"
  ,"zTarg1":51, "targ1":"Sb-121", "proj1":"a", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -848,17 +860,17 @@
  ,"lx4data":6
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA", "units":"MICRO-B", "basicUnits":"B"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[1.48,3.32,5.77,12.5,44.6,115]
-    ,"dat1":[0.00148,0.00332,0.00577,0.0125,0.0446,0.115]}
+    ,"dat1":[1.48e-6,3.32e-6,5.77e-6,1.25e-5,4.46e-5,1.15e-4]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"ERR-T", "units":"MICRO-B", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.22,0.43,0.77,1.6,5.6,14]
-    ,"dat1":[2.2e-4,4.3e-4,7.7e-4,0.0016,0.0056,0.014]}
+    ,"dat1":[2.2e-7,4.3e-7,7.7e-7,1.6e-6,5.6e-6,1.4e-5]}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
@@ -926,10 +938,10 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[0.00148,0.00332,0.00577,0.0125,0.0446,0.115]
-      ,"dy":[2.2e-4,4.3e-4,7.7e-4,0.0016,0.0056,0.014]
-      ,"dysys":[2.03364e-4,4.56195e-4,7.92845e-4,0.0017176,0.0061284,0.0158019]
-      ,"dystat":[2.96e-5,6.64e-5,1.154e-4,2.5e-4,8.92e-4,0.0023]   }
+      ,"y":[1.48e-6,3.32e-6,5.77e-6,1.25e-5,4.46e-5,1.15e-4]
+      ,"dy":[2.2e-7,4.3e-7,7.7e-7,1.6e-6,5.6e-6,1.4e-5]
+      ,"dysys":[2.03364e-7,4.56195e-7,7.92845e-7,1.7176e-6,6.1284e-6,1.58019e-5]
+      ,"dystat":[2.96e-8,6.64e-8,1.154e-7,2.5e-7,8.92e-7,2.3e-6]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":true, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -939,34 +951,26 @@
 }
    ]
    }
-  ,{"SUBENT":"D4393006", "isub":6, "compiled":20180920, "TransID":"D118", "TransDate":20181204
+  ,{"SUBENT":"D4393006", "isub":6, "compiled":20210218, "TransID":"D130", "TransDate":20210615
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"51-SB-121(A,G)53-I-125,,SIG,,AV"
-	    ,"c4reac":"(A,G),SIG,,AV"
+	,"x4code":{"code":"51-SB-121(A,G)53-I-125,,SIG"
+	    ,"c4reac":"(A,G),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":102
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"51-SB-121(A,G)53-I-125,,SIG,,AV"
+	    {"code":"51-SB-121(A,G)53-I-125,,SIG"
 		,"Reac":"A,G"
 		,"SF1":"51-SB-121","Targ":{"code":"51-SB-121","nam":"Sb-121","ZA":51121}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"G"
 		,"SF4":"53-I-125","Prod":{"code":"53-I-125","nam":"I-125","ZA":53125}
 		,"SF6":"SIG"
-		,"SF8":"AV"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
-	}
-      ]
-     ,"ANALYSIS":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Average cross-section values from X-ray and gamma-ray"
-		," detection weighted by their statistical uncertainty"]
 	}
       ]
      ,"DECAY-DATA":[
@@ -982,21 +986,28 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table 3 of the reference. Adopted values."]
+	,"x4freetext":[" Table3 of the reference. Adopted values."]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,D4393004"
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"D4393004"
 		}]
-	,"x4freetext":[" Data from gamma-ray detection"]
+	,"x4freetext":[" Data from X-ray counting"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"DEP,D4393005"
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"D4393005"
 		}]
-	,"x4freetext":[" Data from X-ray detection"]
+	,"x4freetext":[" Data from gamma-ray counting"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210218A", "date":"20210218", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" TS MB -> MICRO-B"]
 	}
       ]
     }
@@ -1008,12 +1019,12 @@
       ,{"icol":1, "header":"EN-ERR", "units":"MEV", "pointer":" "
 	,"headerHelp":"Uncertainty in incident projectile energy", "pFlag":"9110000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
+      ,{"icol":2, "header":"DATA", "units":"MICRO-B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
+	,"unitsHelp":"microbarns","familyCode":"B","convFc":1.0E-6,"basicUnits":"B"}
+      ,{"icol":3, "header":"ERR-T", "units":"MICRO-B", "pointer":" "
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
-	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+	,"unitsHelp":"microbarns","familyCode":"B","convFc":1.0E-6,"basicUnits":"B"}
       ,{"icol":4, "header":"FLAG", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Flag, defined under FLAG.", "pFlag":"0000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
@@ -1023,7 +1034,7 @@
       ]
       ,"datacols":[
 	 ["EN-CM"     ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ,"FLAG"      ,"FLAG"      ]
-	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ,"NO-DIM"    ,"NO-DIM"    ]
+	,["MEV"       ,"MEV"       ,"MICRO-B"   ,"MICRO-B"   ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
 	 [9.74,0.11,1.48,0.22,1,2]
@@ -1037,12 +1048,12 @@
 	,[13.54,0.1,147,21,null,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4393006", "Pointer":" "
- ,"Subent":"D4393006", "compiled":20180920
+ ,"Subent":"D4393006", "compiled":20210218
  ,"year1":2018, "author1ini":"Z.", "author1":"Korkulu"
  ,"zTarg1":51, "targ1":"Sb-121", "proj1":"a", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"51-SB-121(A,G)53-I-125,,SIG,,AV"
+ ,"reacode":"51-SB-121(A,G)53-I-125,,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-S,2.,14.4)    ADDED AS COMMON:ERR-S,PER-CENT=2.0%"
 	,"ERR-ANALYS:(ERR-5,10.9,12.4)  ADDED AS COMMON:ERR-5,PER-CENT=10.9%"
 	,"CONVERTED INC-ENERGY C.M. TO LAB: EN_LAB=EN_CM*1.0331056"]
@@ -1050,17 +1061,17 @@
  ,"lx4data":9
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA", "units":"MICRO-B", "basicUnits":"B"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[1.48,3.32,5.77,12.8,24.4,44.9,70.9,111,147]
-    ,"dat1":[0.00148,0.00332,0.00577,0.0128,0.0244,0.0449,0.0709,0.111,0.147]}
+    ,"dat1":[1.48e-6,3.32e-6,5.77e-6,1.28e-5,2.44e-5,4.49e-5,7.09e-5,1.11e-4,1.47e-4]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"ERR-T", "units":"MICRO-B", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.22,0.43,0.77,1.3,4.5,4.6,10.6,11,21]
-    ,"dat1":[2.2e-4,4.3e-4,7.7e-4,0.0013,0.0045,0.0046,0.0106,0.011,0.021]}
+    ,"dat1":[2.2e-7,4.3e-7,7.7e-7,1.3e-6,4.5e-6,4.6e-6,1.06e-5,1.1e-5,2.1e-5]}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
     ,"header":"ERR-S", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
@@ -1128,10 +1139,10 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[0.00148,0.00332,0.00577,0.0128,0.0244,0.0449,0.0709,0.111,0.147]
-      ,"dy":[2.2e-4,4.3e-4,7.7e-4,0.0013,0.0045,0.0046,0.0106,0.011,0.021]
-      ,"dysys":[2.03364e-4,4.56195e-4,7.92845e-4,0.00175882,0.00335276,0.00616963,0.00974224,0.0152523,0.020199]
-      ,"dystat":[2.96e-5,6.64e-5,1.154e-4,2.56e-4,4.88e-4,8.98e-4,0.001418,0.00222,0.00294]   }
+      ,"y":[1.48e-6,3.32e-6,5.77e-6,1.28e-5,2.44e-5,4.49e-5,7.09e-5,1.11e-4,1.47e-4]
+      ,"dy":[2.2e-7,4.3e-7,7.7e-7,1.3e-6,4.5e-6,4.6e-6,1.06e-5,1.1e-5,2.1e-5]
+      ,"dysys":[2.03364e-7,4.56195e-7,7.92845e-7,1.75882e-6,3.35276e-6,6.16963e-6,9.74224e-6,1.52523e-5,2.0199e-5]
+      ,"dystat":[2.96e-8,6.64e-8,1.154e-7,2.56e-7,4.88e-7,8.98e-7,1.418e-6,2.22e-6,2.94e-6]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":true, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
