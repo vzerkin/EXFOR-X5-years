@@ -1,9 +1,9 @@
-  {"ENTRY":"41528", "updated":20200120, "TransID":"4186", "TransDate":20200514, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
+  {"ENTRY":"41528", "updated":20210316, "TransID":"4195", "TransDate":20210810, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
    ,"y1":2004,"a1":"V.M.Piksaykin+","r1":"R,ISINN-12,342,2004"
    ,"ref":"Conf: Int.Sem.on Interactions of Neutrons with Nuclei, No.12, p.342 (2004)"
    ,"title":"Cumulative yields and average half-life of delayed neutron precursors from neutron induced fission of U-233 ."
    ,"x4subents":[
-   {"SUBENT":"41528001", "isub":1, "compiled":20200120, "TransID":"4186", "TransDate":20200514
+   {"SUBENT":"41528001", "isub":1, "compiled":20210316, "TransID":"4195", "TransDate":20210810
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -48,8 +48,11 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"VDG", "dict":"FACILITY", "idict":18,"hlp":"Van de Graaff"}]
-	,"x4freetext":["    Electrostatic accelerator CG-2.5"]
+	,"x4codes":[{"code":"VDG", "dict":"FACILITY", "idict":18,"hlp":"Van de Graaff"}
+	    ,{"code":"4RUSFEI", "dict":"INSTITUTE", "idict":3,"hlp":"Fiziko-Energeticheskii Inst., Obninsk, Russia"}]
+	,"x4freetext":["    Electrostatic accelerator KG-2.5"
+		," Pneumatic transfer ( from irradiation to measurement"
+		," position) system."]
 	}
       ]
      ,"METHOD":[
@@ -62,38 +65,39 @@
      ,"INC-SOURCE":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"P-T", "dict":"INC-SOURCE", "idict":19,"hlp":"3H(p,n)"}]
-	,"x4freetext":["     T(p,n)"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"D-D", "dict":"INC-SOURCE", "idict":19,"hlp":"2H(d,n)"}]
-	,"x4freetext":["     D(d,n)"]
 	}
       ]
      ,"DETECTOR":[
 	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":[". Neutron detector at measurement position is not"
+		," specified."]
+	}
+	,{"x4pointer":" "
 	,"x4codes":[{"code":"BF3", "dict":"DETECTOR", "idict":22,"hlp":"Boron Trifluoride neutron detector"}]
-	,"x4freetext":[" BF3 neutron flux monitor."]
+	,"x4freetext":[" BF3 neutron flux monitor at irradiation position"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"HE3SP", "dict":"DETECTOR", "idict":22,"hlp":"He-3 spectrometer"}]
-	,"x4freetext":[" He-3 spectrometer."]
+	,"x4freetext":[" At irradiation position"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"FISCH", "dict":"DETECTOR", "idict":22,"hlp":"Fission chamber"}]
-	,"x4freetext":[" Fission chamber."
-		,"   Neutron detector not specified."]
+	,"x4freetext":[" At irradiation position."]
 	}
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,G.Rudstam+,J,AND,53,(1),1,1993"
+	,"x4codes":[{"code":"R,,G.Rudstam+,J,AND,53,1,1993"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
 		,"author1":"G.Rudstam+","stdFileName":"J,AND,53,1,1993"
-		,"year":1993,"typ":"J","ref":"J,AND","vol":"53","issue":"1","p":"1"
-		,"shortRef":"Jour: Atomic Data and Nuclear Data Tables, Vol.53, Issue.1, p.1 (1993)"}]
-	,"x4freetext":[" Reference for"
-		," probability of delayed  neutron emission from Br"
-		," and I ."]
+		,"year":1993,"typ":"J","ref":"J,AND","vol":"53","p":"1"
+		,"shortRef":"Jour: Atomic Data and Nuclear Data Tables, Vol.53, p.1 (1993)"}]
+	,"x4freetext":["Iss.1. Reference for"
+		," probability of delayed neutron emission from Br and I."]
 	}
       ]
      ,"HISTORY":[
@@ -112,10 +116,16 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Subents 002, 003 were corrected"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210316U", "date":"20210316", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" Comma was added in DECAY-DATA of Subents"
+		,"  .002, .003."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"41528002", "isub":2, "compiled":20200120, "TransID":"4186", "TransDate":20200514
+  ,{"SUBENT":"41528002", "isub":2, "compiled":20210316, "TransID":"4195", "TransDate":20210810
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -158,22 +168,22 @@
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Flag":"1", "Nucl":"35-BR-87", "t12":55.69, "t12units":"SEC", "t12sec":55.69
-	, "Radiations":[ {"Type":"DN", "Energy":[0.0252]}]}]
+	, "Radiations":[ {"Type":"DN", "Intensity":0.0252}]}]
 	,"x4freetext":["      2.52+-0.07 %"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"Flag":"2", "Nucl":"35-BR-88", "t12":16.3, "t12units":"SEC", "t12sec":16.3
-	, "Radiations":[ {"Type":"DN", "Energy":[0.0658]}]}]
+	, "Radiations":[ {"Type":"DN", "Intensity":0.0658}]}]
 	,"x4freetext":["      6.58+-0.18 %"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"Flag":"3", "Nucl":"35-BR-89", "t12":4.38, "t12units":"SEC", "t12sec":4.38
-	, "Radiations":[ {"Type":"DN", "Energy":[0.138]}]}]
+	, "Radiations":[ {"Type":"DN", "Intensity":0.138}]}]
 	,"x4freetext":["        13.8+-0.4 %"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"Flag":"4", "Nucl":"35-BR-91", "t12":0.542, "t12units":"SEC", "t12sec":0.542
-	, "Radiations":[ {"Type":"DN", "Energy":[0.2]}]}]
+	, "Radiations":[ {"Type":"DN", "Intensity":0.2}]}]
 	,"x4freetext":["       20.0+-3.0 %"]
 	}
       ]
@@ -281,7 +291,7 @@
 	,[4.72,91,0.066,0.001,4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41528002", "Pointer":" "
- ,"Subent":"41528002", "compiled":20200120
+ ,"Subent":"41528002", "compiled":20210316
  ,"year1":2004, "author1ini":"V.M.", "author1":"Piksaykin"
  ,"zTarg1":92, "targ1":"U-233", "proj1":"n", "emis1":"F", "MF":801, "MT":18, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -386,7 +396,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41528003", "isub":3, "compiled":20200120, "TransID":"4186", "TransDate":20200514
+  ,{"SUBENT":"41528003", "isub":3, "compiled":20210316, "TransID":"4195", "TransDate":20210810
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -429,22 +439,22 @@
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Flag":"5", "Nucl":"53-I-137", "t12":24.5, "t12units":"SEC", "t12sec":24.5
-	, "Radiations":[ {"Type":"DN", "Energy":[0.0714]}]}]
+	, "Radiations":[ {"Type":"DN", "Intensity":0.0714}]}]
 	,"x4freetext":["      7.14+-0.23 %"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"Flag":"6", "Nucl":"53-I-138", "t12":6.46, "t12units":"SEC", "t12sec":6.46
-	, "Radiations":[ {"Type":"DN", "Energy":[0.0546]}]}]
+	, "Radiations":[ {"Type":"DN", "Intensity":0.0546}]}]
 	,"x4freetext":["       5.46+-0.18 %"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"Flag":"7", "Nucl":"53-I-139", "t12":2.3, "t12units":"SEC", "t12sec":2.3
-	, "Radiations":[ {"Type":"DN", "Energy":[0.1]}]}]
+	, "Radiations":[ {"Type":"DN", "Intensity":0.1}]}]
 	,"x4freetext":["        10.0+-0.3 %"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"Flag":"8", "Nucl":"53-I-140", "t12":0.86, "t12units":"SEC", "t12sec":0.86
-	, "Radiations":[ {"Type":"DN", "Energy":[0.093]}]}]
+	, "Radiations":[ {"Type":"DN", "Intensity":0.093}]}]
 	,"x4freetext":["       9.3+-0.1 %"]
 	}
       ]
@@ -552,7 +562,7 @@
 	,[4.72,140,0.018,0.001,8]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41528003", "Pointer":" "
- ,"Subent":"41528003", "compiled":20200120
+ ,"Subent":"41528003", "compiled":20210316
  ,"year1":2004, "author1ini":"V.M.", "author1":"Piksaykin"
  ,"zTarg1":92, "targ1":"U-233", "proj1":"n", "emis1":"F", "MF":801, "MT":18, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
