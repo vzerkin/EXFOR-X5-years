@@ -1,9 +1,9 @@
-  {"ENTRY":"L0107", "updated":20160409, "TransID":"L029", "TransDate":20160804, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"L0107", "updated":20210329, "TransID":"L045", "TransDate":20210626, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1973,"a1":"Yu.Sorokin+","r1":"J,IZV,37,156,1973"
    ,"ref":"Jour: Izv. Rossiiskoi Akademii Nauk, Ser.Fiz., Vol.37, p.156 (1973)"
    ,"title":"Photoneutron cross sections of 206Pb and 208Pb"
    ,"x4subents":[
-   {"SUBENT":"L0107001", "isub":1, "compiled":20160409, "TransID":"L029", "TransDate":20160804
+   {"SUBENT":"L0107001", "isub":1, "compiled":20210329, "TransID":"L045", "TransDate":20210626
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -45,28 +45,16 @@
 		," University"]
 	}
       ]
-     ,"SAMPLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["206Pb, enriched to 91 %, 77.15 g"
-		,"208Pb, enriched to 97 %, 80 g"]
-	}
-      ]
      ,"ANALYSIS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Penfold-Leiss method using 1 MeV step"]
+	,"x4codes":[{"code":"PLA", "dict":"ANALYSIS", "idict":23,"hlp":"Penfold-Leiss method"}]
+	,"x4freetext":[" Penfold-Leiss method using 1 MeV step"]
 	}
       ]
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"BF3", "dict":"DETECTOR", "idict":22,"hlp":"Boron Trifluoride neutron detector"}]
 	,"x4freetext":[" Water moderator and BF3 counters"]
-	}
-      ]
-     ,"PART-DET":[
-	{"x4pointer":" "
-	,"x4codes":["N"]
 	}
       ]
      ,"HISTORY":[
@@ -86,10 +74,16 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" OS. Issue no.in 2nd ref. added."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210327A", "date":"20210327", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION in sub.3 corrected, SAMPLE"
+		," moved to subentries, STATUS corrected in subs.4,5"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"L0107002", "isub":2, "compiled":20060317, "TransID":"L009", "TransDate":20060630
+  ,{"SUBENT":"L0107002", "isub":2, "compiled":20210329, "TransID":"L045", "TransDate":20210626
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -112,6 +106,12 @@
 	    }]}
 	,"x4freetext":[" Photodisintegration cross section: sum of"
 		," (g,n) + (g,2n) + (g,np)+..."]
+	}
+      ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":{"Nucl":"82-PB-206","ENR":0.91}
+	,"x4freetext":[" 206Pb, enriched to 91 %, 77.15 g"]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -283,7 +283,7 @@
 	,[26.9,57,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"L0107002", "Pointer":" "
- ,"Subent":"L0107002", "compiled":20060317
+ ,"Subent":"L0107002", "compiled":20210329
  ,"year1":1973, "author1ini":"Yu.", "author1":"Sorokin"
  ,"zTarg1":82, "targ1":"Pb-206", "proj1":"g", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -450,28 +450,34 @@
 }
    ]
    }
-  ,{"SUBENT":"L0107003", "isub":3, "compiled":20060317, "TransID":"L009", "TransDate":20060630
+  ,{"SUBENT":"L0107003", "isub":3, "compiled":20210329, "TransID":"L045", "TransDate":20210626
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"82-PB-206(G,X)0-NN-1,UNW,SIG,,BRS"
-	    ,"c4reac":"(G,X)UNW,SIG,,BRS"
+	,"x4code":{"code":"82-PB-206(G,X)0-NN-1,,SIG,,BRS"
+	    ,"c4reac":"(G,X),SIG,,BRS"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":201
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"82-PB-206(G,X)0-NN-1,UNW,SIG,,BRS"
+	    {"code":"82-PB-206(G,X)0-NN-1,,SIG,,BRS"
 		,"Reac":"G,X"
 		,"SF1":"82-PB-206","Targ":{"code":"82-PB-206","nam":"Pb-206","ZA":82206}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
-		,"SF5":"UNW"
 		,"SF6":"SIG"
 		,"SF8":"BRS"
-		,"SF58":"UNW,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Unweighted production cross section"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	,"x4freetext":["  Sum of (g,n) + 2(g,2n) + (g,np)+..."]
+	}
+      ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":{"Nucl":"82-PB-206","ENR":0.91}
+	,"x4freetext":[" 206Pb, enriched to 91 %, 77.15 g"]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -487,6 +493,13 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[" Data taken from Fig. 1"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210327A", "date":"20210327", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION corrected (SF5=UNW deleted)"]
 	}
       ]
     }
@@ -701,12 +714,12 @@
 	,[26.8,163,19.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"L0107003", "Pointer":" "
- ,"Subent":"L0107003", "compiled":20060317
+ ,"Subent":"L0107003", "compiled":20210329
  ,"year1":1973, "author1ini":"Yu.", "author1":"Sorokin"
- ,"zTarg1":82, "targ1":"Pb-206", "proj1":"g", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":82, "targ1":"Pb-206", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Unweighted production cross section"
- ,"reacode":"82-PB-206(G,X)0-NN-1,UNW,SIG,,BRS"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
+ ,"reacode":"82-PB-206(G,X)0-NN-1,,SIG,,BRS"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":192
@@ -938,7 +951,7 @@
 }
    ]
    }
-  ,{"SUBENT":"L0107004", "isub":4, "compiled":20060317, "TransID":"L009", "TransDate":20060630
+  ,{"SUBENT":"L0107004", "isub":4, "compiled":20210329, "TransID":"L045", "TransDate":20210626
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -963,6 +976,12 @@
 		," (g,n) + (g,2n) + (g,np)+..."]
 	}
       ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":{"Nucl":"82-PB-208","ENR":0.97}
+	,"x4freetext":[" 208Pb, enriched to 97 %, 80 g"]
+	}
+      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"ERR-S"
@@ -983,7 +1002,7 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[" Data taken from Fig. 1"]
+	,"x4freetext":[" Data taken from Fig. 2"]
 	}
       ]
     }
@@ -1129,7 +1148,7 @@
 	,[26.7,81.6,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"L0107004", "Pointer":" "
- ,"Subent":"L0107004", "compiled":20060317
+ ,"Subent":"L0107004", "compiled":20210329
  ,"year1":1973, "author1ini":"Yu.", "author1":"Sorokin"
  ,"zTarg1":82, "targ1":"Pb-208", "proj1":"g", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1296,7 +1315,7 @@
 }
    ]
    }
-  ,{"SUBENT":"L0107005", "isub":5, "compiled":20060317, "TransID":"L009", "TransDate":20060630
+  ,{"SUBENT":"L0107005", "isub":5, "compiled":20210329, "TransID":"L045", "TransDate":20210626
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1320,6 +1339,12 @@
 	,"x4freetext":["  Sum of (g,n) + 2(g,2n) + (g,np)+..."]
 	}
       ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":{"Nucl":"82-PB-208","ENR":0.97}
+	,"x4freetext":[" 208Pb, enriched to 97 %, 80 g"]
+	}
+      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"ERR-S"
@@ -1332,7 +1357,7 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[" Data taken from Fig. 1"]
+	,"x4freetext":[" Data taken from Fig. 2"]
 	}
       ]
     }
@@ -1552,7 +1577,7 @@
 	,[27,174,22.3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"L0107005", "Pointer":" "
- ,"Subent":"L0107005", "compiled":20060317
+ ,"Subent":"L0107005", "compiled":20210329
  ,"year1":1973, "author1ini":"Yu.", "author1":"Sorokin"
  ,"zTarg1":82, "targ1":"Pb-208", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
