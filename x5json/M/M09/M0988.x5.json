@@ -1,9 +1,9 @@
-  {"ENTRY":"M0988", "updated":20191112, "TransID":"M103", "TransDate":20191223, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
+  {"ENTRY":"M0988", "updated":20210417, "TransID":"M112", "TransDate":20210628, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
    ,"y1":1964,"a1":"V.P.Denisov+","r1":"J,ZET,46,1488,1964"
    ,"ref":"Jour: Zhurnal Eksperimental'noi i Teoret. Fiziki, Vol.46, p.1488 (1964)"
    ,"title":"Cross section for the reaction 13C(gamma,p)12B."
    ,"x4subents":[
-   {"SUBENT":"M0988001", "isub":1, "compiled":20191112, "TransID":"M103", "TransDate":20191223
+   {"SUBENT":"M0988001", "isub":1, "compiled":20210417, "TransID":"M112", "TransDate":20210628
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -87,10 +87,16 @@
 	,"x4freetext":[" Data were compiled at Ruaaia MSU SINP CDFE"
 		," by V.Varlamov."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210417A", "date":"20210417", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by SD and VV: Corrections in"
+		," all SUBENTs."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"M0988002", "isub":2, "compiled":20191112, "TransID":"M103", "TransDate":20191223
+  ,{"SUBENT":"M0988002", "isub":2, "compiled":20210417, "TransID":"M112", "TransDate":20210628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -116,7 +122,7 @@
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"5-B-12", "t12":0.0204, "t12units":"SEC", "t12sec":0.0204
-	, "Radiations":[ {"Type":"B-", "Energy":[0.971]}]}]
+	, "Radiations":[ {"Type":"B-", "Energy":[971.0]}]}]
 	}
       ]
      ,"STATUS":[
@@ -124,7 +130,18 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[" Data from Fig. 1."]
+	,"x4freetext":[" Data from Fig. 1 of"
+		," Zhur.Eksperim.Teor.Fiz.,46(1964)1488."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210417A", "date":"20210417", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by SD and VV: DECAY-DATA (energy"
+		," corrected (muptiplied by 1000.)), STATUS updated,"
+		," SUBENT 003 deleted because the lower and upper"
+		," boundary of the incident energy unknown."]
 	}
       ]
     }
@@ -175,7 +192,7 @@
 	,[31,1.391,0.555]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0988002", "Pointer":" "
- ,"Subent":"M0988002", "compiled":20191112
+ ,"Subent":"M0988002", "compiled":20210417
  ,"year1":1964, "author1ini":"V.P.", "author1":"Denisov"
  ,"zTarg1":6, "targ1":"C-13", "proj1":"g", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -239,108 +256,7 @@
 }
    ]
    }
-  ,{"SUBENT":"M0988003", "isub":3, "compiled":20191112, "TransID":"M103", "TransDate":20191223
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"6-C-13(G,P)5-B-12,,INT,,BRS"
-	    ,"c4reac":"(G,P),INT,,BRS"
-	    ,"combi":"a"
-	    ,"Units":"B*EV"
-	    ,"reacs": [
-	    {"code":"6-C-13(G,P)5-B-12,,INT,,BRS"
-		,"Reac":"G,P"
-		,"SF1":"6-C-13","Targ":{"code":"6-C-13","nam":"C-13","ZA":6013}
-		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"P"
-		,"SF4":"5-B-12","Prod":{"code":"5-B-12","nam":"B-12","ZA":5012}
-		,"SF6":"INT"
-		,"SF8":"BRS"
-		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
-	    }]}
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"DEP,M0988002"
-		,"flag":"DEP", "help":"Dependent data"
-		,"subent":"M0988002"
-		}]
-	,"x4freetext":[" Reaction cross section."]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Data from the text."]
-	}
-      ]
-    }
-    ,"DATA":{"ncols":3, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
-	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MB*MEV", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"millibarns * MeV","familyCode":"B*E","convFc":1000.0,"basicUnits":"B*EV"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"MB*MEV", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"millibarns * MeV","familyCode":"B*E","convFc":1000.0,"basicUnits":"B*EV"}
-      ]
-      ,"datacols":[
-	 ["EN-MAX"    ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"MB*MEV"    ,"MB*MEV"    ]
-	,[" "         ," "         ," "         ]]
-      ,"data":[
-	 [50,72,9]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"M0988003", "Pointer":" "
- ,"Subent":"M0988003", "compiled":20191112
- ,"year1":1964, "author1ini":"V.P.", "author1":"Denisov"
- ,"zTarg1":6, "targ1":"C-13", "proj1":"g", "emis1":"P", "MF":0, "MT":0, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"6-C-13(G,P)5-B-12,,INT,,BRS"
- ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
- ,"wx4data":3
- ,"lx4data":1
- ,"x4data":[
-   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MB*MEV", "basicUnits":"B*EV"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
-    ,"dat0":[72]
-    ,"dat1":[7.2e+4]}
-  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB*MEV", "basicUnits":"B*EV"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
-    ,"expansion":"Data: data /Error/"
-    ,"dat0":[9]
-    ,"dat1":[9000]}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Max", "dataType":"41", "rank":1.3
-    ,"expansion":"Incident energy: energy"
-    ,"dat0":[50]
-    ,"dat1":[5.0e+7]}
-  ]
- ,"wc5data":2
- ,"lc5data":1
- ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B*EV"
-      ,"header":"DATA", "dataType":"21", "rank":0.0
-      ,"expansion":"Data: data"
-      ,"y":[7.2e+4]
-      ,"dy":[9000]   }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
-      ,"header":"EN", "dataType":"41", "rank":1.0
-      ,"expansion":"Incident energy: energy"
-      ,"x1":[5.0e+7]
-   }
- }
-}
-   ]
+  ,{"SUBENT":"M0988003", "isub":3, "compiled":20210417, "TransID":"M112", "TransDate":20210628, "nosubent":true 
    }
   ]
  }
