@@ -1,16 +1,16 @@
-  {"ENTRY":"M0169", "updated":20100506, "TransID":"M053", "TransDate":20100609, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
+  {"ENTRY":"M0169", "updated":20210514, "TransID":"M112", "TransDate":20210628, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
    ,"y1":1962,"a1":"B.A.Bochagov+","r1":"J,ZET,43,1611,1962"
    ,"ref":"Jour: Zhurnal Eksperimental'noi i Teoret. Fiziki, Vol.43, p.1611 (1962)"
-   ,"title":"Energy distributions of photofission fragments from U-238 nuclei for various bremsstrahlung end-point energies."
+   ,"title":"Energy distributions of photofission fragments from U-238 nuclei for bremsstrahlung of different maximum energies"
    ,"x4subents":[
-   {"SUBENT":"M0169001", "isub":1, "compiled":20100506, "TransID":"M053", "TransDate":20100609
+   {"SUBENT":"M0169001", "isub":1, "compiled":20210514, "TransID":"M112", "TransDate":20210628
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Energy distributions of photofission fragments from"
-		,"U-238 nuclei for various bremsstrahlung end-point"
-		,"energies."]
+		," U-238 nuclei for bremsstrahlung of different maximum"
+		," energies"]
 	}
       ]
      ,"AUTHOR":[
@@ -35,7 +35,7 @@
 	,"x4codes":[{"code":"J,JET,16,1135,1963","stdFileName":"J,JET,16,1135,1963"
 		,"year":1963,"typ":"J","ref":"J,JET","vol":"16","p":"1135"
 		,"shortRef":"Jour: Journal of Experimental and Theoretical Physics, Vol.16, p.1135 (1963)"}]
-	,"x4freetext":["  English translation"]
+	,"x4freetext":[" English translation of J,ZET,43,1611,1962."]
 	}
       ]
      ,"FACILITY":[
@@ -49,6 +49,15 @@
 	,"x4codes":[{"code":"BRST", "dict":"INC-SOURCE", "idict":19,"hlp":"Bremsstrahlung"}]
 	}
       ]
+     ,"SAMPLE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["A colloidal film spattered in vacuo with bismuth on"
+		," both sides was used as the target. The thickness of"
+		," 30 ug/cm2. A 100 ug/cm2 layer of uranyl nitrate was"
+		," deposited on one side of the film."]
+	}
+      ]
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"EXTB", "dict":"METHOD", "idict":21,"hlp":"Irradiation with external beam"}
@@ -58,13 +67,6 @@
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"IOCH", "dict":"DETECTOR", "idict":22,"hlp":"Ionization chamber"}]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"CURVE"
-		,"flag":"CURVE", "help":"Data read from a curve"
-		}]
 	}
       ]
      ,"HISTORY":[
@@ -99,30 +101,38 @@
 		," MASS-MIN and MASS-MAX  were substituted by MISC 1 and"
 		," MISC2 in SUBENTS 002 - 007 BRS -> BRA and REL -> MSC."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210514A", "date":"20210514", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by SD and VV: SAMPLE added,"
+		," corrections in all SUBENTs."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"M0169002", "isub":2, "compiled":20100506, "TransID":"M053", "TransDate":20100609
+  ,{"SUBENT":"M0169002", "isub":2, "compiled":20210514, "TransID":"M112", "TransDate":20210628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-238(G,F)MASS,CHN,FY/DE,,BRA/MSC"
-	    ,"c4reac":"(G,F)MASS,CHN,FY/DE,,BRA/MSC"
+	,"x4code":{"code":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
+	    ,"c4reac":"(G,F)SEC,FY/DE,LF+HF,BRA/MSC/REL"
 	    ,"combi":"a"
-	    ,"Units":"PC/FIS/MEV"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"92-U-238(G,F)MASS,CHN,FY/DE,,BRA/MSC"
+	    {"code":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
 		,"Reac":"G,F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF4":"MASS","Prod":{"code":"MASS","nam":"mass"}
-		,"SF5":"CHN"
+		,"SF5":"SEC"
 		,"SF6":"FY/DE"
-		,"SF8":"BRA/MSC"
-		,"SF58":"CHN,FY/DE","Quant":"FY","BasicUnits":"PC/FIS/MEV","QuantHlp":"Total chain yield, fiss.prod.diff.d/d(frag.en)"
+		,"SF7":"LF+HF"
+		,"SF8":"BRA/MSC/REL"
+		,"SF58":"SEC,FY/DE,LF+HF","Quant":"FY","BasicUnits":"ARB-UNITS","QuantHlp":"Diff. secondary fission product yield w.r.t. tot"
 	    }]}
-	,"x4freetext":[" Symmetrical fission."]
+	,"x4freetext":[" No explanation of relative units is given."
+		," Symmetrical fission. TKE distribution."]
 	}
       ]
      ,"COMMENT":[
@@ -139,29 +149,41 @@
 	,"x4freetext":[" Statistical errors given."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Data from Fig.3(a) of Z.Eksperim.Teor.Fiz.,"
+		," 43(1962)1611."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210514A", "date":"20210514", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by SD and VV: SF4=MASS deleted;"
+		," SF5=CHN -> SEC, SF7=LF+HF added; SF8=BRA/MSC ->"
+		," BRA/RELmin REACTION code, STATUS added, BIB updated."]
+	}
+      ]
     }
-    ,"COMMON":{"ncols":3, "nrows":1
+    ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"MASS-MIN", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Lower limit of atomic mass range", "pFlag":"2000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"MASS-MAX", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Upper limit of atomic mass range", "pFlag":"3000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN-MAX"    ,"MASS-MIN"  ,"MASS-MAX"  ]
-	,["MEV"       ,"NO-DIM"    ,"NO-DIM"    ]
-	,[" "         ," "         ," "         ]]
+	 ["EN-MAX"    ]
+	,["MEV"       ]
+	,[" "         ]]
       ,"data":[
-	 [17.5,115,125]]}
+	 [17.5]]}
     ,"DATA":{"ncols":3, "nrows":12
       ,"x4headers":[
-       {"icol":0, "header":"E", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
+       {"icol":0, "header":"TKE", "units":"MEV", "pointer":" "
+	,"headerHelp":"Total kinetic energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -171,7 +193,7 @@
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E"         ,"DATA"      ,"ERR-S"     ]
+	 ["TKE"       ,"DATA"      ,"ERR-S"     ]
 	,["MEV"       ,"ARB-UNITS" ,"ARB-UNITS" ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -189,16 +211,14 @@
 	,[180,8,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0169002", "Pointer":" "
- ,"Subent":"M0169002", "compiled":20100506
+ ,"Subent":"M0169002", "compiled":20210514
  ,"year1":1962, "author1ini":"B.A.", "author1":"Bochagov"
- ,"zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":3
- ,"IndepVarFamilyCode":"0 23   7   ", "getYFormulaStr":"y=DATA(EN,E2,ZAM)"
- ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Total chain yield, fiss.prod.diff.d/d(frag.en)"
- ,"reacode":"92-U-238(G,F)MASS,CHN,FY/DE,,BRA/MSC"
- ,"compNotes":["Ignored column:ERR-S,NO-DIM  expected units:PC/FIS/MEV,PER-CENT"
-	,"OPERATION...  Value=Max  Max:EN-MAX"
-	,"OPERATION...  Value=(Min+Max)/2  Min:MASS-MIN, Max:MASS-MAX"]
- ,"wx4data":6
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":600, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 23   7   ", "getYFormulaStr":"y=y(x1,x2,x3)"
+ ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Diff. secondary fission product yield w.r.t. tot"
+ ,"reacode":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
+ ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
+ ,"wx4data":4
  ,"lx4data":12
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -222,35 +242,26 @@
     ,"com0":17.5
     ,"com1":1.75e+7}
   ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
-    ,"header":"E", "units":"MEV", "basicUnits":"EV"
+    ,"header":"TKE", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"51", "rank":2.1
     ,"expansion":"Secondary energy: particle energy"
     ,"dat0":[122,127,132.5,140,142,147.5,150,155,163,165
 	,172.5,180]
     ,"dat1":[1.22e+8,1.27e+8,1.325e+8,1.4e+8,1.42e+8,1.475e+8,1.5e+8,1.55e+8,1.63e+8,1.65e+8
 	,1.725e+8,1.8e+8]}
-  ,{"ivar":4, "cvar":"x3", "fam":"ZAM", "ifComm":true , "ifCM":false
-    ,"header":"MASS-MIN", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X3.Min", "dataType":"92", "rank":3.2
-    ,"expansion":"Isotope/particle identification: mass"
-    ,"com0":115
-    ,"com1":115}
-  ,{"ivar":5, "cvar":"x3", "fam":"ZAM", "ifComm":true , "ifCM":false
-    ,"header":"MASS-MAX", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X3.Max", "dataType":"92", "rank":3.3
-    ,"expansion":"Isotope/particle identification: mass"
-    ,"com0":125
-    ,"com1":125}
   ]
  ,"wc5data":4
  ,"lc5data":12
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PC/FIS/MEV"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[11,14,20,28,35,50,58,55,53,36
 	,16,8]
-   }
+      ,"dy":[null,null,null,null,null,null,null,8,null,null
+	,null,null]
+      ,"dystat":[null,null,null,null,null,null,null,8,null,null
+	,null,null]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -263,38 +274,33 @@
       ,"x2":[1.22e+8,1.27e+8,1.325e+8,1.4e+8,1.42e+8,1.475e+8,1.5e+8,1.55e+8,1.63e+8,1.65e+8
 	,1.725e+8,1.8e+8]
    }
-   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
-      ,"header":"ZAM", "dataType":"92", "rank":3.0
-      ,"expansion":"Isotope/particle identification: mass"
-      ,"x3":[125,125,125,125,125,125,125,125,125,125
-	,125,125]
-      ,"dx3":[5,5,5,5,5,5,5,5,5,5
-	,5,5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"M0169003", "isub":3, "compiled":20100506, "TransID":"M053", "TransDate":20100609
+  ,{"SUBENT":"M0169003", "isub":3, "compiled":20210514, "TransID":"M112", "TransDate":20210628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-238(G,F)MASS,CHN,FY/DE,,BRA/MSC"
-	    ,"c4reac":"(G,F)MASS,CHN,FY/DE,,BRA/MSC"
+	,"x4code":{"code":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
+	    ,"c4reac":"(G,F)SEC,FY/DE,LF+HF,BRA/MSC/REL"
 	    ,"combi":"a"
-	    ,"Units":"PC/FIS/MEV"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"92-U-238(G,F)MASS,CHN,FY/DE,,BRA/MSC"
+	    {"code":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
 		,"Reac":"G,F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF4":"MASS","Prod":{"code":"MASS","nam":"mass"}
-		,"SF5":"CHN"
+		,"SF5":"SEC"
 		,"SF6":"FY/DE"
-		,"SF8":"BRA/MSC"
-		,"SF58":"CHN,FY/DE","Quant":"FY","BasicUnits":"PC/FIS/MEV","QuantHlp":"Total chain yield, fiss.prod.diff.d/d(frag.en)"
+		,"SF7":"LF+HF"
+		,"SF8":"BRA/MSC/REL"
+		,"SF58":"SEC,FY/DE,LF+HF","Quant":"FY","BasicUnits":"ARB-UNITS","QuantHlp":"Diff. secondary fission product yield w.r.t. tot"
 	    }]}
-	,"x4freetext":[" Symmetrical fission."]
+	,"x4freetext":[" No explanation of relative units is given."
+		," Symmetrical fission. TKE distribution."]
 	}
       ]
      ,"COMMENT":[
@@ -311,29 +317,41 @@
 	,"x4freetext":[" Statistical errors given."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Data from Fig.3(a) of Z.Eksperim.Teor.Fiz.,"
+		," 43(1962)1611."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210514A", "date":"20210514", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by SD and VV: SF4=MASS deleted;"
+		," SF5=CHN -> SEC, SF7=LF+HF added; SF8=BRA/MSC ->"
+		," BRA/REL in REACTION code, STATUS added, BIB updated."]
+	}
+      ]
     }
-    ,"COMMON":{"ncols":3, "nrows":1
+    ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"MASS-MIN", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Lower limit of atomic mass range", "pFlag":"2000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"MASS-MAX", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Upper limit of atomic mass range", "pFlag":"3000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN-MAX"    ,"MASS-MIN"  ,"MASS-MAX"  ]
-	,["MEV"       ,"NO-DIM"    ,"NO-DIM"    ]
-	,[" "         ," "         ," "         ]]
+	 ["EN-MAX"    ]
+	,["MEV"       ]
+	,[" "         ]]
       ,"data":[
-	 [30,115,125]]}
+	 [30]]}
     ,"DATA":{"ncols":3, "nrows":18
       ,"x4headers":[
-       {"icol":0, "header":"E", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
+       {"icol":0, "header":"TKE", "units":"MEV", "pointer":" "
+	,"headerHelp":"Total kinetic energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -343,7 +361,7 @@
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E"         ,"DATA"      ,"ERR-S"     ]
+	 ["TKE"       ,"DATA"      ,"ERR-S"     ]
 	,["MEV"       ,"ARB-UNITS" ,"ARB-UNITS" ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -367,16 +385,14 @@
 	,[190,6,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0169003", "Pointer":" "
- ,"Subent":"M0169003", "compiled":20100506
+ ,"Subent":"M0169003", "compiled":20210514
  ,"year1":1962, "author1ini":"B.A.", "author1":"Bochagov"
- ,"zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":3
- ,"IndepVarFamilyCode":"0 23   7   ", "getYFormulaStr":"y=DATA(EN,E2,ZAM)"
- ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Total chain yield, fiss.prod.diff.d/d(frag.en)"
- ,"reacode":"92-U-238(G,F)MASS,CHN,FY/DE,,BRA/MSC"
- ,"compNotes":["Ignored column:ERR-S,NO-DIM  expected units:PC/FIS/MEV,PER-CENT"
-	,"OPERATION...  Value=Max  Max:EN-MAX"
-	,"OPERATION...  Value=(Min+Max)/2  Min:MASS-MIN, Max:MASS-MAX"]
- ,"wx4data":6
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":600, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 23   7   ", "getYFormulaStr":"y=y(x1,x2,x3)"
+ ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Diff. secondary fission product yield w.r.t. tot"
+ ,"reacode":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
+ ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
+ ,"wx4data":4
  ,"lx4data":18
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -400,35 +416,26 @@
     ,"com0":30
     ,"com1":3.0e+7}
   ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
-    ,"header":"E", "units":"MEV", "basicUnits":"EV"
+    ,"header":"TKE", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"51", "rank":2.1
     ,"expansion":"Secondary energy: particle energy"
     ,"dat0":[102,106,110,115,120,125,130,135,140,145
 	,150,155,160,170,175,180,185,190]
     ,"dat1":[1.02e+8,1.06e+8,1.1e+8,1.15e+8,1.2e+8,1.25e+8,1.3e+8,1.35e+8,1.4e+8,1.45e+8
 	,1.5e+8,1.55e+8,1.6e+8,1.7e+8,1.75e+8,1.8e+8,1.85e+8,1.9e+8]}
-  ,{"ivar":4, "cvar":"x3", "fam":"ZAM", "ifComm":true , "ifCM":false
-    ,"header":"MASS-MIN", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X3.Min", "dataType":"92", "rank":3.2
-    ,"expansion":"Isotope/particle identification: mass"
-    ,"com0":115
-    ,"com1":115}
-  ,{"ivar":5, "cvar":"x3", "fam":"ZAM", "ifComm":true , "ifCM":false
-    ,"header":"MASS-MAX", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X3.Max", "dataType":"92", "rank":3.3
-    ,"expansion":"Isotope/particle identification: mass"
-    ,"com0":125
-    ,"com1":125}
   ]
  ,"wc5data":4
  ,"lc5data":18
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PC/FIS/MEV"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[8,10,15,21,26,32,38,48,57,69
 	,82,88,85,56,35,29,16,6]
-   }
+      ,"dy":[null,null,null,null,null,null,null,null,null,null
+	,null,10,null,null,null,null,null,null]
+      ,"dystat":[null,null,null,null,null,null,null,null,null,null
+	,null,10,null,null,null,null,null,null]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -441,38 +448,33 @@
       ,"x2":[1.02e+8,1.06e+8,1.1e+8,1.15e+8,1.2e+8,1.25e+8,1.3e+8,1.35e+8,1.4e+8,1.45e+8
 	,1.5e+8,1.55e+8,1.6e+8,1.7e+8,1.75e+8,1.8e+8,1.85e+8,1.9e+8]
    }
-   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
-      ,"header":"ZAM", "dataType":"92", "rank":3.0
-      ,"expansion":"Isotope/particle identification: mass"
-      ,"x3":[125,125,125,125,125,125,125,125,125,125
-	,125,125,125,125,125,125,125,125]
-      ,"dx3":[5,5,5,5,5,5,5,5,5,5
-	,5,5,5,5,5,5,5,5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"M0169004", "isub":4, "compiled":20100506, "TransID":"M053", "TransDate":20100609
+  ,{"SUBENT":"M0169004", "isub":4, "compiled":20210514, "TransID":"M112", "TransDate":20210628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-238(G,F)MASS,CHN,FY/DE,,BRA/MSC"
-	    ,"c4reac":"(G,F)MASS,CHN,FY/DE,,BRA/MSC"
+	,"x4code":{"code":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
+	    ,"c4reac":"(G,F)SEC,FY/DE,LF+HF,BRA/MSC/REL"
 	    ,"combi":"a"
-	    ,"Units":"PC/FIS/MEV"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"92-U-238(G,F)MASS,CHN,FY/DE,,BRA/MSC"
+	    {"code":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
 		,"Reac":"G,F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF4":"MASS","Prod":{"code":"MASS","nam":"mass"}
-		,"SF5":"CHN"
+		,"SF5":"SEC"
 		,"SF6":"FY/DE"
-		,"SF8":"BRA/MSC"
-		,"SF58":"CHN,FY/DE","Quant":"FY","BasicUnits":"PC/FIS/MEV","QuantHlp":"Total chain yield, fiss.prod.diff.d/d(frag.en)"
+		,"SF7":"LF+HF"
+		,"SF8":"BRA/MSC/REL"
+		,"SF58":"SEC,FY/DE,LF+HF","Quant":"FY","BasicUnits":"ARB-UNITS","QuantHlp":"Diff. secondary fission product yield w.r.t. tot"
 	    }]}
-	,"x4freetext":[" Symmetrical fission."]
+	,"x4freetext":[" No explanation of relative units is given."
+		," Symmetrical fission. TKE distribution."]
 	}
       ]
      ,"COMMENT":[
@@ -489,29 +491,41 @@
 	,"x4freetext":[" Statistical errors given."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Data from Fig.3(a) of Z.Eksperim.Teor.Fiz.,"
+		," 43(1962)1611."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210514A", "date":"20210514", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by SD and VV: SF4=MASS deleted;"
+		," SF5=CHN -> SEC, SF7=LF+HF added; SF8=BRA/MSC ->"
+		," BRA/REL in REACTION code, STATUS added, BIB updated."]
+	}
+      ]
     }
-    ,"COMMON":{"ncols":3, "nrows":1
+    ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"MASS-MIN", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Lower limit of atomic mass range", "pFlag":"2000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"MASS-MAX", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Upper limit of atomic mass range", "pFlag":"3000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN-MAX"    ,"MASS-MIN"  ,"MASS-MAX"  ]
-	,["MEV"       ,"NO-DIM"    ,"NO-DIM"    ]
-	,[" "         ," "         ," "         ]]
+	 ["EN-MAX"    ]
+	,["MEV"       ]
+	,[" "         ]]
       ,"data":[
-	 [50,115,125]]}
+	 [50]]}
     ,"DATA":{"ncols":3, "nrows":13
       ,"x4headers":[
-       {"icol":0, "header":"E", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
+       {"icol":0, "header":"TKE", "units":"MEV", "pointer":" "
+	,"headerHelp":"Total kinetic energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -521,7 +535,7 @@
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E"         ,"DATA"      ,"ERR-S"     ]
+	 ["TKE"       ,"DATA"      ,"ERR-S"     ]
 	,["MEV"       ,"ARB-UNITS" ,"ARB-UNITS" ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -540,16 +554,14 @@
 	,[190,2,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0169004", "Pointer":" "
- ,"Subent":"M0169004", "compiled":20100506
+ ,"Subent":"M0169004", "compiled":20210514
  ,"year1":1962, "author1ini":"B.A.", "author1":"Bochagov"
- ,"zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":3
- ,"IndepVarFamilyCode":"0 23   7   ", "getYFormulaStr":"y=DATA(EN,E2,ZAM)"
- ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Total chain yield, fiss.prod.diff.d/d(frag.en)"
- ,"reacode":"92-U-238(G,F)MASS,CHN,FY/DE,,BRA/MSC"
- ,"compNotes":["Ignored column:ERR-S,NO-DIM  expected units:PC/FIS/MEV,PER-CENT"
-	,"OPERATION...  Value=Max  Max:EN-MAX"
-	,"OPERATION...  Value=(Min+Max)/2  Min:MASS-MIN, Max:MASS-MAX"]
- ,"wx4data":6
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":600, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 23   7   ", "getYFormulaStr":"y=y(x1,x2,x3)"
+ ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Diff. secondary fission product yield w.r.t. tot"
+ ,"reacode":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
+ ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
+ ,"wx4data":4
  ,"lx4data":13
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -573,35 +585,26 @@
     ,"com0":50
     ,"com1":5.0e+7}
   ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
-    ,"header":"E", "units":"MEV", "basicUnits":"EV"
+    ,"header":"TKE", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"51", "rank":2.1
     ,"expansion":"Secondary energy: particle energy"
     ,"dat0":[122,127.5,133,140,142,147.5,150,155,160,165
 	,173,180,190]
     ,"dat1":[1.22e+8,1.275e+8,1.33e+8,1.4e+8,1.42e+8,1.475e+8,1.5e+8,1.55e+8,1.6e+8,1.65e+8
 	,1.73e+8,1.8e+8,1.9e+8]}
-  ,{"ivar":4, "cvar":"x3", "fam":"ZAM", "ifComm":true , "ifCM":false
-    ,"header":"MASS-MIN", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X3.Min", "dataType":"92", "rank":3.2
-    ,"expansion":"Isotope/particle identification: mass"
-    ,"com0":115
-    ,"com1":115}
-  ,{"ivar":5, "cvar":"x3", "fam":"ZAM", "ifComm":true , "ifCM":false
-    ,"header":"MASS-MAX", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X3.Max", "dataType":"92", "rank":3.3
-    ,"expansion":"Isotope/particle identification: mass"
-    ,"com0":125
-    ,"com1":125}
   ]
  ,"wc5data":4
  ,"lc5data":13
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PC/FIS/MEV"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[10,16,18,25,36,54,60,67,70,45
 	,16,6,2]
-   }
+      ,"dy":[null,null,null,null,null,null,null,null,9,null
+	,null,null,null]
+      ,"dystat":[null,null,null,null,null,null,null,null,9,null
+	,null,null,null]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -614,38 +617,33 @@
       ,"x2":[1.22e+8,1.275e+8,1.33e+8,1.4e+8,1.42e+8,1.475e+8,1.5e+8,1.55e+8,1.6e+8,1.65e+8
 	,1.73e+8,1.8e+8,1.9e+8]
    }
-   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
-      ,"header":"ZAM", "dataType":"92", "rank":3.0
-      ,"expansion":"Isotope/particle identification: mass"
-      ,"x3":[125,125,125,125,125,125,125,125,125,125
-	,125,125,125]
-      ,"dx3":[5,5,5,5,5,5,5,5,5,5
-	,5,5,5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"M0169005", "isub":5, "compiled":20100506, "TransID":"M053", "TransDate":20100609
+  ,{"SUBENT":"M0169005", "isub":5, "compiled":20210514, "TransID":"M112", "TransDate":20210628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-238(G,F)MASS,CHN,FY/DE,,BRA/MSC"
-	    ,"c4reac":"(G,F)MASS,CHN,FY/DE,,BRA/MSC"
+	,"x4code":{"code":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
+	    ,"c4reac":"(G,F)SEC,FY/DE,LF+HF,BRA/MSC/REL"
 	    ,"combi":"a"
-	    ,"Units":"PC/FIS/MEV"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"92-U-238(G,F)MASS,CHN,FY/DE,,BRA/MSC"
+	    {"code":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
 		,"Reac":"G,F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF4":"MASS","Prod":{"code":"MASS","nam":"mass"}
-		,"SF5":"CHN"
+		,"SF5":"SEC"
 		,"SF6":"FY/DE"
-		,"SF8":"BRA/MSC"
-		,"SF58":"CHN,FY/DE","Quant":"FY","BasicUnits":"PC/FIS/MEV","QuantHlp":"Total chain yield, fiss.prod.diff.d/d(frag.en)"
+		,"SF7":"LF+HF"
+		,"SF8":"BRA/MSC/REL"
+		,"SF58":"SEC,FY/DE,LF+HF","Quant":"FY","BasicUnits":"ARB-UNITS","QuantHlp":"Diff. secondary fission product yield w.r.t. tot"
 	    }]}
-	,"x4freetext":[" Symmetrical fission."]
+	,"x4freetext":[" No explanation of relative units is given."
+		," Asymmetric fission. TKE distribution."]
 	}
       ]
      ,"COMMENT":[
@@ -661,36 +659,48 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Data from Fig.3(b) of Z.Eksperim.Teor.Fiz.,"
+		," 43(1962)1611."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210514A", "date":"20210514", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by SD and VV: SF4=MASS deleted;"
+		," SF5=CHN -> SEC, SF7=LF+HF added; SF8=BRA/MSC ->"
+		," BRA/REL in REACTION code, STATUS added, BIB updated."]
+	}
+      ]
     }
-    ,"COMMON":{"ncols":3, "nrows":1
+    ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"MASS-MIN", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Lower limit of atomic mass range", "pFlag":"2000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"MASS-MAX", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Upper limit of atomic mass range", "pFlag":"3000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN-MAX"    ,"MASS-MIN"  ,"MASS-MAX"  ]
-	,["MEV"       ,"NO-DIM"    ,"NO-DIM"    ]
-	,[" "         ," "         ," "         ]]
+	 ["EN-MAX"    ]
+	,["MEV"       ]
+	,[" "         ]]
       ,"data":[
-	 [17.5,115,125]]}
+	 [17.5]]}
     ,"DATA":{"ncols":2, "nrows":13
       ,"x4headers":[
-       {"icol":0, "header":"E", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
+       {"icol":0, "header":"TKE", "units":"MEV", "pointer":" "
+	,"headerHelp":"Total kinetic energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E"         ,"DATA"      ]
+	 ["TKE"       ,"DATA"      ]
 	,["MEV"       ,"ARB-UNITS" ]
 	,[" "         ," "         ]]
       ,"data":[
@@ -709,15 +719,14 @@
 	,[198,20]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0169005", "Pointer":" "
- ,"Subent":"M0169005", "compiled":20100506
+ ,"Subent":"M0169005", "compiled":20210514
  ,"year1":1962, "author1ini":"B.A.", "author1":"Bochagov"
- ,"zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":3
- ,"IndepVarFamilyCode":"0 23   7   ", "getYFormulaStr":"y=DATA(EN,E2,ZAM)"
- ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Total chain yield, fiss.prod.diff.d/d(frag.en)"
- ,"reacode":"92-U-238(G,F)MASS,CHN,FY/DE,,BRA/MSC"
- ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"
-	,"OPERATION...  Value=(Min+Max)/2  Min:MASS-MIN, Max:MASS-MAX"]
- ,"wx4data":5
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":600, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 23   7   ", "getYFormulaStr":"y=y(x1,x2,x3)"
+ ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Diff. secondary fission product yield w.r.t. tot"
+ ,"reacode":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
+ ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
+ ,"wx4data":3
  ,"lx4data":13
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -734,30 +743,18 @@
     ,"com0":17.5
     ,"com1":1.75e+7}
   ,{"ivar":2, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
-    ,"header":"E", "units":"MEV", "basicUnits":"EV"
+    ,"header":"TKE", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"51", "rank":2.1
     ,"expansion":"Secondary energy: particle energy"
     ,"dat0":[112,117,126,145,154,160,164,167,175,180
 	,184,190,198]
     ,"dat1":[1.12e+8,1.17e+8,1.26e+8,1.45e+8,1.54e+8,1.6e+8,1.64e+8,1.67e+8,1.75e+8,1.8e+8
 	,1.84e+8,1.9e+8,1.98e+8]}
-  ,{"ivar":3, "cvar":"x3", "fam":"ZAM", "ifComm":true , "ifCM":false
-    ,"header":"MASS-MIN", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X3.Min", "dataType":"92", "rank":3.2
-    ,"expansion":"Isotope/particle identification: mass"
-    ,"com0":115
-    ,"com1":115}
-  ,{"ivar":4, "cvar":"x3", "fam":"ZAM", "ifComm":true , "ifCM":false
-    ,"header":"MASS-MAX", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X3.Max", "dataType":"92", "rank":3.3
-    ,"expansion":"Isotope/particle identification: mass"
-    ,"com0":125
-    ,"com1":125}
   ]
  ,"wc5data":4
  ,"lc5data":13
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PC/FIS/MEV"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[20,40,60,240,470,550,720,900,740,420
@@ -775,37 +772,33 @@
       ,"x2":[1.12e+8,1.17e+8,1.26e+8,1.45e+8,1.54e+8,1.6e+8,1.64e+8,1.67e+8,1.75e+8,1.8e+8
 	,1.84e+8,1.9e+8,1.98e+8]
    }
-   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
-      ,"header":"ZAM", "dataType":"92", "rank":3.0
-      ,"expansion":"Isotope/particle identification: mass"
-      ,"x3":[125,125,125,125,125,125,125,125,125,125
-	,125,125,125]
-      ,"dx3":[5,5,5,5,5,5,5,5,5,5
-	,5,5,5]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"M0169006", "isub":6, "compiled":20100506, "TransID":"M053", "TransDate":20100609
+  ,{"SUBENT":"M0169006", "isub":6, "compiled":20210514, "TransID":"M112", "TransDate":20210628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-238(G,F),CHN,FY/DE,,BRA/MSC"
-	    ,"c4reac":"(G,F)CHN,FY/DE,,BRA/MSC"
+	,"x4code":{"code":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
+	    ,"c4reac":"(G,F)SEC,FY/DE,LF+HF,BRA/MSC/REL"
 	    ,"combi":"a"
-	    ,"Units":"PC/FIS/MEV"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"92-U-238(G,F),CHN,FY/DE,,BRA/MSC"
+	    {"code":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
 		,"Reac":"G,F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"CHN"
+		,"SF5":"SEC"
 		,"SF6":"FY/DE"
-		,"SF8":"BRA/MSC"
-		,"SF58":"CHN,FY/DE","Quant":"FY","BasicUnits":"PC/FIS/MEV","QuantHlp":"Total chain yield, fiss.prod.diff.d/d(frag.en)"
+		,"SF7":"LF+HF"
+		,"SF8":"BRA/MSC/REL"
+		,"SF58":"SEC,FY/DE,LF+HF","Quant":"FY","BasicUnits":"ARB-UNITS","QuantHlp":"Diff. secondary fission product yield w.r.t. tot"
 	    }]}
-	,"x4freetext":[" Asymmetric fission."]
+	,"x4freetext":[" No explanation of relative units is given."
+		," Asymmetric fission. TKE distribution."]
 	}
       ]
      ,"COMMENT":[
@@ -821,48 +814,48 @@
 	,"x4freetext":["No information."]
 	}
       ]
-     ,"MISC-COL":[
+     ,"STATUS":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MISC1"}]
-	,"x4freetext":[" Maximum  A-number  of  the  first   range   of"
-		," asymmetrical fission - A < 115."]
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Data from Fig.3(b) of Z.Eksperim.Teor.Fiz.,"
+		," 43(1962)1611."]
 	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"MISC2"}]
-	,"x4freetext":[" Minimum  A-number  of  the  second  range   of"
-		," asymmetrical fission - A > 125."]
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210514A", "date":"20210514", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by SD and VV: SF5=CHN -> SEC,"
+		," SF7=LF+HF added; SF8=BRA/MSC -> BRA/REL in REACTION"
+		," code, STATUS added, BIB updated."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":3, "nrows":1
+    ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"MISC1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"MISC2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"2nd miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN-MAX"    ,"MISC1"     ,"MISC2"     ]
-	,["MEV"       ,"NO-DIM"    ,"NO-DIM"    ]
-	,[" "         ," "         ," "         ]]
+	 ["EN-MAX"    ]
+	,["MEV"       ]
+	,[" "         ]]
       ,"data":[
-	 [30,115,125]]}
+	 [30]]}
     ,"DATA":{"ncols":2, "nrows":20
       ,"x4headers":[
-       {"icol":0, "header":"E", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
+       {"icol":0, "header":"TKE", "units":"MEV", "pointer":" "
+	,"headerHelp":"Total kinetic energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E"         ,"DATA"      ]
+	 ["TKE"       ,"DATA"      ]
 	,["MEV"       ,"ARB-UNITS" ]
 	,[" "         ," "         ]]
       ,"data":[
@@ -888,14 +881,14 @@
 	,[210,20]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0169006", "Pointer":" "
- ,"Subent":"M0169006", "compiled":20100506
+ ,"Subent":"M0169006", "compiled":20210514
  ,"year1":1962, "author1ini":"B.A.", "author1":"Bochagov"
- ,"zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":3
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":600, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 23   7   ", "getYFormulaStr":"y=y(x1,x2,x3)"
- ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Total chain yield, fiss.prod.diff.d/d(frag.en)"
- ,"reacode":"92-U-238(G,F),CHN,FY/DE,,BRA/MSC"
+ ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Diff. secondary fission product yield w.r.t. tot"
+ ,"reacode":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
- ,"wx4data":5
+ ,"wx4data":3
  ,"lx4data":20
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -912,30 +905,18 @@
     ,"com0":30
     ,"com1":3.0e+7}
   ,{"ivar":2, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
-    ,"header":"E", "units":"MEV", "basicUnits":"EV"
+    ,"header":"TKE", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"51", "rank":2.1
     ,"expansion":"Secondary energy: particle energy"
     ,"dat0":[105,113,117,126,129,133,142,149,152,156
 	,159,165,168,176,179,181,185,188,193,210]
     ,"dat1":[1.05e+8,1.13e+8,1.17e+8,1.26e+8,1.29e+8,1.33e+8,1.42e+8,1.49e+8,1.52e+8,1.56e+8
 	,1.59e+8,1.65e+8,1.68e+8,1.76e+8,1.79e+8,1.81e+8,1.85e+8,1.88e+8,1.93e+8,2.1e+8]}
-  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MISC1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"09", "rank":777.0
-    ,"expansion":"Flags, etc."
-    ,"com0":115
-    ,"com1":115}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MISC2", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"09", "rank":777.1
-    ,"expansion":"Flags, etc."
-    ,"com0":125
-    ,"com1":125}
   ]
  ,"wc5data":4
  ,"lc5data":20
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PC/FIS/MEV"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[20,80,90,160,180,250,390,580,700,960
@@ -957,26 +938,29 @@
 }
    ]
    }
-  ,{"SUBENT":"M0169007", "isub":7, "compiled":20100506, "TransID":"M053", "TransDate":20100609
+  ,{"SUBENT":"M0169007", "isub":7, "compiled":20210514, "TransID":"M112", "TransDate":20210628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-238(G,F),CHN,FY/DE,,BRA/MSC"
-	    ,"c4reac":"(G,F)CHN,FY/DE,,BRA/MSC"
+	,"x4code":{"code":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
+	    ,"c4reac":"(G,F)SEC,FY/DE,LF+HF,BRA/MSC/REL"
 	    ,"combi":"a"
-	    ,"Units":"PC/FIS/MEV"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"92-U-238(G,F),CHN,FY/DE,,BRA/MSC"
+	    {"code":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
 		,"Reac":"G,F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF5":"CHN"
+		,"SF5":"SEC"
 		,"SF6":"FY/DE"
-		,"SF8":"BRA/MSC"
-		,"SF58":"CHN,FY/DE","Quant":"FY","BasicUnits":"PC/FIS/MEV","QuantHlp":"Total chain yield, fiss.prod.diff.d/d(frag.en)"
+		,"SF7":"LF+HF"
+		,"SF8":"BRA/MSC/REL"
+		,"SF58":"SEC,FY/DE,LF+HF","Quant":"FY","BasicUnits":"ARB-UNITS","QuantHlp":"Diff. secondary fission product yield w.r.t. tot"
 	    }]}
-	,"x4freetext":[" Asymmetric fission."]
+	,"x4freetext":[" No explanation of relative units is given."
+		," Asymmetric fission. TKE distribution."]
 	}
       ]
      ,"COMMENT":[
@@ -992,48 +976,48 @@
 	,"x4freetext":["No information."]
 	}
       ]
-     ,"MISC-COL":[
+     ,"STATUS":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MISC1"}]
-	,"x4freetext":[" Maximum A-number  of  the   first   range   of"
-		," asymmetrical fission - A < 115."]
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Data from Fig.3(b) of Z.Eksperim.Teor.Fiz.,"
+		," 43(1962)1611."]
 	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"MISC2"}]
-	,"x4freetext":[" Minimum A-number  of  the  second   range   of"
-		," asymmetrical fission - A > 125."]
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210514A", "date":"20210514", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by SD and VV: SF5=CHN -> SEC,"
+		," SF7=LF+HF added; SF8=BRA/MSC -> BRA/REL in REACTION"
+		," code, STATUS added, BIB updated."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":3, "nrows":1
+    ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
 	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"MISC1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"MISC2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"2nd miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN-MAX"    ,"MISC1"     ,"MISC2"     ]
-	,["MEV"       ,"NO-DIM"    ,"NO-DIM"    ]
-	,[" "         ," "         ," "         ]]
+	 ["EN-MAX"    ]
+	,["MEV"       ]
+	,[" "         ]]
       ,"data":[
-	 [50,115,125]]}
+	 [50]]}
     ,"DATA":{"ncols":2, "nrows":16
       ,"x4headers":[
-       {"icol":0, "header":"E", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
+       {"icol":0, "header":"TKE", "units":"MEV", "pointer":" "
+	,"headerHelp":"Total kinetic energy", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E"         ,"DATA"      ]
+	 ["TKE"       ,"DATA"      ]
 	,["MEV"       ,"ARB-UNITS" ]
 	,[" "         ," "         ]]
       ,"data":[
@@ -1055,14 +1039,14 @@
 	,[194,80]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0169007", "Pointer":" "
- ,"Subent":"M0169007", "compiled":20100506
+ ,"Subent":"M0169007", "compiled":20210514
  ,"year1":1962, "author1ini":"B.A.", "author1":"Bochagov"
- ,"zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":3
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"g", "emis1":"F", "MF":600, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 23   7   ", "getYFormulaStr":"y=y(x1,x2,x3)"
- ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Total chain yield, fiss.prod.diff.d/d(frag.en)"
- ,"reacode":"92-U-238(G,F),CHN,FY/DE,,BRA/MSC"
+ ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Diff. secondary fission product yield w.r.t. tot"
+ ,"reacode":"92-U-238(G,F),SEC,FY/DE,LF+HF,BRA/MSC/REL"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
- ,"wx4data":5
+ ,"wx4data":3
  ,"lx4data":16
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1079,30 +1063,18 @@
     ,"com0":50
     ,"com1":5.0e+7}
   ,{"ivar":2, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
-    ,"header":"E", "units":"MEV", "basicUnits":"EV"
+    ,"header":"TKE", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"51", "rank":2.1
     ,"expansion":"Secondary energy: particle energy"
     ,"dat0":[120,129,132,133,142,149,152,159,165,168
 	,170,176,179,181,188,194]
     ,"dat1":[1.2e+8,1.29e+8,1.32e+8,1.33e+8,1.42e+8,1.49e+8,1.52e+8,1.59e+8,1.65e+8,1.68e+8
 	,1.7e+8,1.76e+8,1.79e+8,1.81e+8,1.88e+8,1.94e+8]}
-  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MISC1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"09", "rank":777.0
-    ,"expansion":"Flags, etc."
-    ,"com0":115
-    ,"com1":115}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MISC2", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"09", "rank":777.1
-    ,"expansion":"Flags, etc."
-    ,"com0":125
-    ,"com1":125}
   ]
  ,"wc5data":4
  ,"lc5data":16
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PC/FIS/MEV"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[20,100,100,170,200,310,400,660,740,910
