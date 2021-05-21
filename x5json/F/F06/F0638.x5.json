@@ -1,9 +1,9 @@
-  {"ENTRY":"F0638", "updated":20160502, "TransID":"F062", "TransDate":20160701, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
+  {"ENTRY":"F0638", "updated":20210522, "TransID":"F083", "TransDate":20210811, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
    ,"y1":1977,"a1":"W.Gruhle+","r1":"J,ZP/A,283,97,1977"
    ,"ref":"Jour: Zeitschrift fuer Physik A, Hadrons and Nuclei, Vol.283, p.97 (1977)"
    ,"title":"Non statistical reaction contributions in (alpha,n) excitation functions"
    ,"x4subents":[
-   {"SUBENT":"F0638001", "isub":1, "compiled":20160502, "TransID":"F062", "TransDate":20160701
+   {"SUBENT":"F0638001", "isub":1, "compiled":20210522, "TransID":"F083", "TransDate":20210811
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -85,16 +85,6 @@
 	,"x4freetext":[" Standard deviations of the experimental"
 		,"data are below 3%."]
 	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"EN-ERR-DIG"
-	     ,"headerHelp":"Digitizing error of incident particle energy"}
-	,"x4freetext":[" Digitizing error"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-DIG"
-	     ,"headerHelp":"Digitizing error (of DATA)"}
-	,"x4freetext":["    Digitizing error"]
-	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
@@ -107,32 +97,40 @@
 	,"x4freetext":[" SD: EN -> E-EXC-CMP in Subent 002 (energy"
 		,"is given for compound nucleus). MONITOR added."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210522A", "date":"20210522", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: E-EXC-C-NR added."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":5, "nrows":1
+    ,"COMMON":{"ncols":6, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"MONIT", "units":"MB", "pointer":" "
+       {"icol":0, "header":"E-EXC-C-NR", "units":"MEV", "pointer":" "
+	,"headerHelp":"Exc.energy of initial compound nucl. for normalization", "pFlag":"0000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"MONIT", "units":"MB", "pointer":" "
 	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":1, "header":"MONIT-ERR", "units":"MB", "pointer":" "
+      ,{"icol":2, "header":"MONIT-ERR", "units":"MB", "pointer":" "
 	,"headerHelp":"Error in normalization value", "pFlag":"0009550"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"ERR-T", "units":"PER-CENT", "pointer":" "
+      ,{"icol":3, "header":"ERR-T", "units":"PER-CENT", "pointer":" "
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
-      ,{"icol":3, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
+      ,{"icol":4, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
 	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":4, "header":"ERR-DIG", "units":"MB", "pointer":" "
+      ,{"icol":5, "header":"ERR-DIG", "units":"MB", "pointer":" "
 	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["MONIT"     ,"MONIT-ERR" ,"ERR-T"     ,"EN-ERR-DIG","ERR-DIG"   ]
-	,["MB"        ,"MB"        ,"PER-CENT"  ,"MEV"       ,"MB"        ]
-	,[" "         ," "         ," "         ," "         ," "         ]]
+	 ["E-EXC-C-NR","MONIT"     ,"MONIT-ERR" ,"ERR-T"     ,"EN-ERR-DIG","ERR-DIG"   ]
+	,["MEV"       ,"MB"        ,"MB"        ,"PER-CENT"  ,"MEV"       ,"MB"        ]
+	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [71.8,7.2,10,0.01,0.3]]}
+	 [25,71.8,7.2,10,0.01,0.3]]}
    }
   ,{"SUBENT":"F0638002", "isub":2, "compiled":20160502, "TransID":"F062", "TransDate":20160701
     ,"BIB":{
@@ -399,7 +397,7 @@
 	,"CONVERTED E-EXC-CMP TO INC-ENERGY C.M.: EN_CM=[E-EXC-CMP]-[Q.CAPT]; Q.CAPT=9.976301MEV"
 	,"CONVERTED INC-ENERGY C.M. TO LAB: EN_LAB=EN_CM*1.166879"
 	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
- ,"wx4data":8
+ ,"wx4data":9
  ,"lx4data":191
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -521,8 +519,14 @@
     ,"com0":0.01
     ,"com1":1.0e+4}
   ,{"ivar":7, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"E-EXC-C-NR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"1", "rank":777.0
+    ,"expansion":"Assumed values"
+    ,"com0":25
+    ,"com1":2.5e+7}
+  ,{"ivar":8, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT", "units":"MB", "basicUnits":"B"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.0
+    ,"what":"ZZZ", "dataType":"11", "rank":777.1
     ,"expansion":"Assumed values: monitor"
     ,"com0":71.8
     ,"com1":0.0718}
