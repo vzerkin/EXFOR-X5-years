@@ -1,9 +1,9 @@
-  {"ENTRY":"41685", "updated":20200828, "TransID":"4189", "TransDate":20201112, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
+  {"ENTRY":"41685", "updated":20210608, "TransID":"4195", "TransDate":20210810, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
    ,"y1":2020,"a1":"N.A.Fedorov+","r1":"J,BAS,84,367,2020","doi1":"10.3103/S1062873820040085"
    ,"ref":"Jour: Bull.Russian Academy of Sciences - Physics, Vol.84, p.367 (2020)"
    ,"title":"Measuring the yields and angular distributions of gamma quanta from the interaction between 14.1 MeV neutrons and magnesium nuclei"
    ,"x4subents":[
-   {"SUBENT":"41685001", "isub":1, "compiled":20200828, "TransID":"4189", "TransDate":20201112
+   {"SUBENT":"41685001", "isub":1, "compiled":20210608, "TransID":"4195", "TransDate":20210810
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -186,6 +186,11 @@
 	,"x4code":{"code":"20200828U", "date":"20200828", "act":"U", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" DOI was corrected."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210608A", "date":"20210608", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Subents 005,006 were corrected"]
 	}
       ]
     }
@@ -807,17 +812,17 @@
 }
    ]
    }
-  ,{"SUBENT":"41685005", "isub":5, "compiled":20200609, "TransID":"4188", "TransDate":20200827
+  ,{"SUBENT":"41685005", "isub":5, "compiled":20210608, "TransID":"4195", "TransDate":20210810
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"12-MG-24(N,A)10-NE-21,PAR,DA,G,LEG/RSD"
-	    ,"c4reac":"(N,A)PAR,DA,G,LEG/RSD"
+	,"x4code":{"code":"12-MG-24(N,A)10-NE-21,PAR,DA,G,LEG/RS"
+	    ,"c4reac":"(N,A)PAR,DA,G,LEG/RS"
 	    ,"combi":"a"
 	    ,"MF":154
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"12-MG-24(N,A)10-NE-21,PAR,DA,G,LEG/RSD"
+	    {"code":"12-MG-24(N,A)10-NE-21,PAR,DA,G,LEG/RS"
 		,"Reac":"N,A"
 		,"SF1":"12-MG-24","Targ":{"code":"12-MG-24","nam":"Mg-24","ZA":12024}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -826,8 +831,8 @@
 		,"SF5":"PAR"
 		,"SF6":"DA"
 		,"SF7":"G"
-		,"SF8":"LEG/RSD"
-		,"SF58":"PAR,DA,G,LEG/RSD","Quant":"DAP","BasicUnits":"NO-DIM","QuantHlp":"Leg.cf.par.4pi/Sig(90dg)d/dA=1+Sum a(L)P(L)"
+		,"SF8":"LEG/RS"
+		,"SF58":"PAR,DA,G,LEG/RS","Quant":"DAP","BasicUnits":"NO-DIM","QuantHlp":"Leg.coef.partl.4pi/Sig d/dA=1+Sum(a(L)P(L))"
 	    }]}
 	}
       ]
@@ -848,19 +853,6 @@
 	,"x4freetext":["Data of two refs. used for comparison."]
 	}
       ]
-     ,"EN-SEC":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::E,G"}
-	}
-      ]
-     ,"ANALYSIS":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[" Angular distribution was fitted by Legendre"
-		,"polynomials:"
-		,"W(THETA)=1+a2*P2(cos(Theta))+ a4*P4(cos(THETA))"]
-	}
-      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
@@ -876,6 +868,16 @@
 		}]
 	,"x4freetext":[" Table 2 of"
 		,"Bull.Academ.Sci.USSR Phys.Ser.,v.84,is.4,p.367,2020"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210608A", "date":"20210608", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SF8: LEG/RSD -> LEG/RS"
+		,"Formula used to derive Legendre coefficients"
+		,"W(THETA)=1+a2*P2(cos(THETA))+a4*P4(cos(THETA))"
+		,"was deleted according to comment of N.Otsuka (NDS,IAEA)"]
 	}
       ]
     }
@@ -912,12 +914,12 @@
 	,[4,0.02,0.04]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41685005", "Pointer":" "
- ,"Subent":"41685005", "compiled":20200609
+ ,"Subent":"41685005", "compiled":20210608
  ,"year1":2020, "author1ini":"N.A.", "author1":"Fedorov"
  ,"zTarg1":12, "targ1":"Mg-24", "proj1":"n", "emis1":"A", "MF":154, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 23 5     ", "getYFormulaStr":"y=DATA(EN,E2,nCoef)"
- ,"ReactionType":"FLP", "quant":"DAP", "quantExpan":"Leg.cf.par.4pi/Sig(90dg)d/dA=1+Sum a(L)P(L)"
- ,"reacode":"12-MG-24(N,A)10-NE-21,PAR,DA,G,LEG/RSD"
+ ,"ReactionType":"FLP", "quant":"DAP", "quantExpan":"Leg.coef.partl.4pi/Sig d/dA=1+Sum(a(L)P(L))"
+ ,"reacode":"12-MG-24(N,A)10-NE-21,PAR,DA,G,LEG/RS"
  ,"compNotes":[]
  ,"wx4data":5
  ,"lx4data":2
@@ -980,18 +982,18 @@
 }
    ]
    }
-  ,{"SUBENT":"41685006", "isub":6, "compiled":20200609, "TransID":"4188", "TransDate":20200827
+  ,{"SUBENT":"41685006", "isub":6, "compiled":20210608, "TransID":"4195", "TransDate":20210810
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"12-MG-24(N,INL)12-MG-24,PAR,DA,G,LEG/RSD"
-	    ,"c4reac":"(N,INL)PAR,DA,G,LEG/RSD"
+	,"x4code":{"code":"12-MG-24(N,INL)12-MG-24,PAR,DA,G,LEG/RS"
+	    ,"c4reac":"(N,INL)PAR,DA,G,LEG/RS"
 	    ,"combi":"a"
 	    ,"MF":154
 	    ,"MT":4
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"12-MG-24(N,INL)12-MG-24,PAR,DA,G,LEG/RSD"
+	    {"code":"12-MG-24(N,INL)12-MG-24,PAR,DA,G,LEG/RS"
 		,"Reac":"N,INL"
 		,"SF1":"12-MG-24","Targ":{"code":"12-MG-24","nam":"Mg-24","ZA":12024}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -1000,8 +1002,8 @@
 		,"SF5":"PAR"
 		,"SF6":"DA"
 		,"SF7":"G"
-		,"SF8":"LEG/RSD"
-		,"SF58":"PAR,DA,G,LEG/RSD","Quant":"DAP","BasicUnits":"NO-DIM","QuantHlp":"Leg.cf.par.4pi/Sig(90dg)d/dA=1+Sum a(L)P(L)"
+		,"SF8":"LEG/RS"
+		,"SF58":"PAR,DA,G,LEG/RS","Quant":"DAP","BasicUnits":"NO-DIM","QuantHlp":"Leg.coef.partl.4pi/Sig d/dA=1+Sum(a(L)P(L))"
 	    }]}
 	}
       ]
@@ -1022,19 +1024,6 @@
 	,"x4freetext":["Data of two refs. used for comparison."]
 	}
       ]
-     ,"EN-SEC":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::E,G"}
-	}
-      ]
-     ,"ANALYSIS":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":[" Angular distribution was fitted by Legendre"
-		,"polynomials:"
-		,"W(THETA)=1+a2*P2(cos(Theta))+ a4*P4(cos(THETA))"]
-	}
-      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
@@ -1050,6 +1039,16 @@
 		}]
 	,"x4freetext":[" Table 2 of"
 		,"Bull.Academ.Sci.USSR Phys.Ser.,v.84,is.4,p.367,2020"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210608A", "date":"20210608", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SF8: LEG/RSD -> LEG/RS"
+		,"Formula used to derive Legendre coefficients"
+		,"W(THETA)=1+a2*P2(cos(THETA))+a4*P4(cos(THETA))"
+		,"was deleted according to comment of N.Otsuka (NDS,IAEA)"]
 	}
       ]
     }
@@ -1085,12 +1084,12 @@
 	,[4642.2,4,0.25,0.07]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41685006", "Pointer":" "
- ,"Subent":"41685006", "compiled":20200609
+ ,"Subent":"41685006", "compiled":20210608
  ,"year1":2020, "author1ini":"N.A.", "author1":"Fedorov"
  ,"zTarg1":12, "targ1":"Mg-24", "proj1":"n", "emis1":"INL", "MF":154, "MT":4, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 23 5     ", "getYFormulaStr":"y=DATA(EN,E2,nCoef)"
- ,"ReactionType":"FLP", "quant":"DAP", "quantExpan":"Leg.cf.par.4pi/Sig(90dg)d/dA=1+Sum a(L)P(L)"
- ,"reacode":"12-MG-24(N,INL)12-MG-24,PAR,DA,G,LEG/RSD"
+ ,"ReactionType":"FLP", "quant":"DAP", "quantExpan":"Leg.coef.partl.4pi/Sig d/dA=1+Sum(a(L)P(L))"
+ ,"reacode":"12-MG-24(N,INL)12-MG-24,PAR,DA,G,LEG/RS"
  ,"compNotes":[]
  ,"wx4data":5
  ,"lx4data":10
