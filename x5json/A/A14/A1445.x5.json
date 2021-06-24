@@ -1,15 +1,15 @@
-  {"ENTRY":"A1445", "updated":20190625, "TransID":"A092", "TransDate":20191003, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
+  {"ENTRY":"A1445", "updated":20210625, "TransID":"A098", "TransDate":20210917, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
    ,"y1":1971,"a1":"H.Spinka+","r1":"J,NP/A,164,1,1971"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.164, p.1 (1971)"
-   ,"title":"Low-energy cross sections for 7Li(p,alpha)4He and 6Li(p,alpha)3He."
+   ,"title":"Low-energy cross sections for 7Li(p,alpha)4He and 6Li(p,alpha)3He"
    ,"x4subents":[
-   {"SUBENT":"A1445001", "isub":1, "compiled":20190625, "TransID":"A092", "TransDate":20191003
+   {"SUBENT":"A1445001", "isub":1, "compiled":20210625, "TransID":"A098", "TransDate":20210917
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Low-energy cross sections for 7Li(p,alpha)4He and"
-		,"6Li(p,alpha)3He."]
+		,"6Li(p,alpha)3He"]
 	}
       ]
      ,"AUTHOR":[
@@ -96,6 +96,13 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: Major updated in BIB section."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210625A", "date":"20210625", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Energy units modified according to"
+		,"inverse kinematics. Accuracy of digitized"
+		,"data presentation revised."]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
@@ -111,25 +118,24 @@
       ,"data":[
 	 [8]]}
    }
-  ,{"SUBENT":"A1445002", "isub":2, "compiled":20190625, "TransID":"A092", "TransDate":20191003
+  ,{"SUBENT":"A1445002", "isub":2, "compiled":20210625, "TransID":"A098", "TransDate":20210917
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-6(P,HE3)2-HE-4,,DA,A"
-	    ,"c4reac":"(P,HE3),DA,A"
+	,"x4code":{"code":"(1-H-1(3-LI-6,HE3)2-HE-4,,DA)=\n(3-LI-6(P,HE3)2-HE-4,,DA,A)"
+	    ,"c4reac":"(3-LI-6,HE3),DA"
 	    ,"combi":"a"
 	    ,"MF":4
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"3-LI-6(P,HE3)2-HE-4,,DA,A"
-		,"Reac":"P,HE3"
-		,"SF1":"3-LI-6","Targ":{"code":"3-LI-6","nam":"Li-6","ZA":3006}
-		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
+	    {"code":"1-H-1(3-LI-6,HE3)2-HE-4,,DA"
+		,"Reac":"3-LI-6,HE3"
+		,"SF1":"1-H-1","Targ":{"code":"1-H-1","nam":"H-1","ZA":1001}
+		,"SF2":"3-LI-6","Proj":{"code":"3-LI-6","nam":"Li-6","ZA":3006}
 		,"SF3":"HE3"
 		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF6":"DA"
-		,"SF7":"A"
-		,"SF58":",DA,A","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Angular distribution of particle specified"
+		,"SF58":",DA","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Differential c/s with respect to angle"
 	    }]}
 	}
       ]
@@ -151,6 +157,16 @@
 		,"reaction":"3-LI-6(6-C-12,EL)3-LI-6,,DA,,RTH"}
 	}
       ]
+     ,"MISC-COL":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"MISC"}]
+	,"x4freetext":[" 6Li energy"
+		,"Both energies (for H and Li) are given in the article."
+		,"Equivalent proton bombarding energy as calculated from"
+		,"the lithium bombarding energy, the beam energy losses"
+		,"and the masses of Li and H."]
+	}
+      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
@@ -162,7 +178,8 @@
 		,"  * uncertainty in angular position of the elastics"
 		,"    counter;"
 		,"  * uncertainty in energy of the beam in the target"
-		,"    region; etc."]
+		,"    region; etc."
+		," (not included ERR-1)"]
 	}
       ]
      ,"STATUS":[
@@ -177,9 +194,9 @@
 	{"x4pointer":" "
 	,"x4code":{"code":"20190625A", "date":"20190625", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" SD: PART-DET deleted. SF7=A added; SF9=EXP"
-		,"deleted from REACTION code. ANG-ERR -> ANG-ERR-D."
-		,"MONITOR, COMMENT added."]
+	,"x4freetext":[" SD: PART-DET deleted. SF9=EXP deleted from"
+		,"REACTION code. ANG-ERR -> ANG-ERR-D. MONITOR, COMMENT"
+		,"added. MEV -> MEV/A at E col."]
 	}
       ]
     }
@@ -195,11 +212,11 @@
 	,[" "         ]]
       ,"data":[
 	 [0.6]]}
-    ,"DATA":{"ncols":4, "nrows":32
+    ,"DATA":{"ncols":5, "nrows":32
       ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
+       {"icol":0, "header":"EN", "units":"MEV/A", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+	,"unitsHelp":"MeV per mass number","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"ANG-CM", "units":"ADEG", "pointer":" "
 	,"headerHelp":"Angle, c.m. system", "pFlag":"1000001"
 	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
@@ -209,54 +226,58 @@
       ,{"icol":3, "header":"DATA-ERR", "units":"MB/SR", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns per steradian","familyCode":"DA","convFc":0.001,"basicUnits":"B/SR"}
+      ,{"icol":4, "header":"MISC", "units":"MEV", "pointer":" "
+	,"headerHelp":"Miscellaneous Information, defined under MISC-COL.", "pFlag":"0000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN"        ,"ANG-CM"    ,"DATA-CM"   ,"DATA-ERR"  ]
-	,["MEV"       ,"ADEG"      ,"MB/SR"     ,"MB/SR"     ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN"        ,"ANG-CM"    ,"DATA-CM"   ,"DATA-ERR"  ,"MISC"      ]
+	,["MEV/A"     ,"ADEG"      ,"MB/SR"     ,"MB/SR"     ,"MEV"       ]
+	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [0.151,24.7,0.68,0.046]
-	,[0.151,27.7,0.629,0.005]
-	,[0.151,28.7,0.65,0.046]
-	,[0.151,34.1,0.728,0.036]
-	,[0.151,34.7,0.661,0.031]
-	,[0.151,40.6,0.652,0.051]
-	,[0.151,53.4,0.715,0.036]
-	,[0.151,65.3,0.758,0.047]
-	,[0.151,78.6,0.791,0.052]
-	,[0.151,93.1,0.768,0.036]
-	,[0.151,107.9,0.806,0.051]
-	,[0.151,121.3,0.788,0.052]
-	,[0.151,135.7,0.832,0.021]
-	,[0.151,138.8,0.77,0.041]
-	,[0.151,142.7,0.771,0.041]
-	,[0.151,146.7,0.782,0.026]
-	,[0.151,149.7,0.772,0.031]
-	,[0.151,150.6,0.813,0.005]
-	,[0.151,153.7,0.757,0.041]
-	,[0.151,158.6,0.753,0.041]
-	,[0.317,44.7,2.809,0.115]
-	,[0.317,58.4,3.171,0.115]
-	,[0.317,73,3.635,0.128]
-	,[0.317,81.8,3.843,0.102]
-	,[0.317,86.2,3.946,0.102]
-	,[0.317,96,4.205,0.128]
-	,[0.317,112.2,4.416,0.102]
-	,[0.317,128.2,4.269,0.153]
-	,[0.317,146.8,4.723,0.102]
-	,[0.317,153.8,4.713,0.076]
-	,[0.317,159.7,4.741,0.102]
-	,[0.317,164.8,4.577,0.115]]}
+	 [0.151,24.7,0.68,0.046,0.907]
+	,[0.151,27.7,0.629,0.005,0.907]
+	,[0.151,28.7,0.65,0.046,0.907]
+	,[0.151,34.1,0.728,0.036,0.907]
+	,[0.151,34.7,0.661,0.031,0.907]
+	,[0.151,40.6,0.652,0.051,0.907]
+	,[0.151,53.4,0.715,0.036,0.907]
+	,[0.151,65.3,0.758,0.047,0.907]
+	,[0.151,78.6,0.791,0.052,0.907]
+	,[0.151,93.1,0.768,0.036,0.907]
+	,[0.151,107.9,0.806,0.051,0.907]
+	,[0.151,121.3,0.788,0.052,0.907]
+	,[0.151,135.7,0.832,0.021,0.907]
+	,[0.151,138.8,0.77,0.041,0.907]
+	,[0.151,142.7,0.771,0.041,0.907]
+	,[0.151,146.7,0.782,0.026,0.907]
+	,[0.151,149.7,0.772,0.031,0.907]
+	,[0.151,150.6,0.813,0.005,0.907]
+	,[0.151,153.7,0.757,0.041,0.907]
+	,[0.151,158.6,0.753,0.041,0.907]
+	,[0.317,44.7,2.809,0.115,0.907]
+	,[0.317,58.4,3.171,0.115,1.903]
+	,[0.317,73,3.635,0.128,1.903]
+	,[0.317,81.8,3.843,0.102,1.903]
+	,[0.317,86.2,3.946,0.102,1.903]
+	,[0.317,96,4.205,0.128,1.903]
+	,[0.317,112.2,4.416,0.102,1.903]
+	,[0.317,128.2,4.269,0.153,1.903]
+	,[0.317,146.8,4.723,0.102,1.903]
+	,[0.317,153.8,4.713,0.076,1.903]
+	,[0.317,159.7,4.741,0.102,1.903]
+	,[0.317,164.8,4.577,0.115,1.903]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A1445002", "Pointer":" "
- ,"Subent":"A1445002", "compiled":20190625
+ ,"Subent":"A1445002", "compiled":20210625
  ,"year1":1971, "author1ini":"H.", "author1":"Spinka"
- ,"zTarg1":3, "targ1":"Li-6", "proj1":"p", "emis1":"HE3", "MF":4, "MT":0, "nExpectedArgs":2
+ ,"zTarg1":1, "targ1":"H-1", "proj1":"Li-6", "emis1":"HE3", "MF":4, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
- ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Angular distribution of particle specified"
- ,"reacode":"3-LI-6(P,HE3)2-HE-4,,DA,A"
- ,"compNotes":["Conversion from C.M. to Lab: successful"]
- ,"wx4data":6
+ ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
+ ,"reacode":"1-H-1(3-LI-6,HE3)2-HE-4,,DA"
+ ,"compNotes":["Conversion from C.M. to Lab: successful"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*6"]
+ ,"wx4data":7
  ,"lx4data":32
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":true
@@ -290,17 +311,17 @@
     ,"com0":8
     ,"com1":8}
   ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[0.151,0.151,0.151,0.151,0.151,0.151,0.151,0.151,0.151,0.151
 	,0.151,0.151,0.151,0.151,0.151,0.151,0.151,0.151,0.151,0.151
 	,0.317,0.317,0.317,0.317,0.317,0.317,0.317,0.317,0.317,0.317
 	,0.317,0.317]
-    ,"dat1":[1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5
-	,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5
-	,3.17e+5,3.17e+5,3.17e+5,3.17e+5,3.17e+5,3.17e+5,3.17e+5,3.17e+5,3.17e+5,3.17e+5
-	,3.17e+5,3.17e+5]}
+    ,"dat1":[9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5
+	,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5
+	,1.902e+6,1.902e+6,1.902e+6,1.902e+6,1.902e+6,1.902e+6,1.902e+6,1.902e+6,1.902e+6,1.902e+6
+	,1.902e+6,1.902e+6]}
   ,{"ivar":4, "cvar":"x2", "fam":"ANG", "ifComm":false, "ifCM":true
     ,"header":"ANG-CM", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X2.Value", "dataType":"61", "rank":2.1
@@ -316,6 +337,18 @@
     ,"expansion":"Angle: angle /Error/"
     ,"com0":0.6
     ,"com1":0.6}
+  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.907,0.907,0.907,0.907,0.907,0.907,0.907,0.907,0.907,0.907
+	,0.907,0.907,0.907,0.907,0.907,0.907,0.907,0.907,0.907,0.907
+	,0.907,1.903,1.903,1.903,1.903,1.903,1.903,1.903,1.903,1.903
+	,1.903,1.903]
+    ,"dat1":[9.07e+5,9.07e+5,9.07e+5,9.07e+5,9.07e+5,9.07e+5,9.07e+5,9.07e+5,9.07e+5,9.07e+5
+	,9.07e+5,9.07e+5,9.07e+5,9.07e+5,9.07e+5,9.07e+5,9.07e+5,9.07e+5,9.07e+5,9.07e+5
+	,9.07e+5,1.903e+6,1.903e+6,1.903e+6,1.903e+6,1.903e+6,1.903e+6,1.903e+6,1.903e+6,1.903e+6
+	,1.903e+6,1.903e+6]}
   ]
  ,"wc5data":3
  ,"lc5data":32
@@ -323,14 +356,14 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[7.60377e-4,7.01577e-4,7.24346e-4,8.06907e-4,7.32167e-4,7.17185e-4,7.72176e-4,8.01932e-4,8.15214e-4,7.67321e-4
-	,7.79542e-4,7.40895e-4,7.614e-4,7.01033e-4,6.97679e-4,7.03576e-4,6.91837e-4,7.27761e-4,6.75167e-4,6.68241e-4
-	,0.0031937,0.00350238,0.00386722,0.0039867,0.00403998,0.00417672,0.00416832,0.00384197,0.00406028,0.00399876
-	,0.00398669,0.00382566]
-      ,"dy":[5.14373e-5,5.57692e-6,5.12614e-5,3.9902e-5,3.43376e-5,5.60989e-5,3.88788e-5,4.9724e-5,5.35918e-5,3.59682e-5
-	,4.93259e-5,4.88915e-5,1.9218e-5,3.73277e-5,3.7101e-5,2.33926e-5,2.7781e-5,4.47578e-6,3.65678e-5,3.6385e-5
-	,1.30749e-4,1.27018e-4,1.36177e-4,1.05814e-4,1.04429e-4,1.27139e-4,9.62792e-5,1.37695e-4,8.76875e-5,6.44825e-5
-	,8.57714e-5,9.6122e-5]
+      ,"y":[0.00124772,0.00114511,0.00118,0.00129922,0.00117719,0.00113519,0.00116941,0.00114922,0.00107777,9.04604e-4
+	,7.91046e-4,6.36921e-4,5.33562e-4,4.69222e-4,4.40794e-4,4.19334e-4,3.95156e-4,4.10516e-4,3.65279e-4,3.40217e-4
+	,0.0059552,0.00621211,0.00635176,0.00615833,0.0060211,0.00566498,0.00458176,0.00314783,0.00209063,0.00168977
+	,0.00143197,0.00121076]
+      ,"dy":[8.44043e-5,9.10259e-6,8.35076e-5,6.42471e-5,5.52085e-5,8.87955e-5,5.88794e-5,7.12579e-5,7.08518e-5,4.24033e-5
+	,5.00538e-5,4.20303e-5,1.34673e-5,2.49846e-5,2.34404e-5,1.3942e-5,1.58677e-5,2.5247e-6,1.97839e-5,1.85244e-5
+	,2.43805e-4,2.25289e-4,2.23666e-4,1.63453e-4,1.55639e-4,1.72442e-4,1.05829e-4,1.12818e-4,4.51501e-5,2.72486e-5
+	,3.08079e-5,3.04212e-5]
       ,"dysys":[5.44e-5,5.032e-5,5.2e-5,5.824e-5,5.288e-5,5.216e-5,5.72e-5,6.064e-5,6.328e-5,6.144e-5
 	,6.448e-5,6.304e-5,6.656e-5,6.16e-5,6.168e-5,6.256e-5,6.176e-5,6.504e-5,6.056e-5,6.024e-5
 	,2.2472e-4,2.5368e-4,2.908e-4,3.0744e-4,3.1568e-4,3.364e-4,3.5328e-4,3.4152e-4,3.7784e-4,3.7704e-4
@@ -338,18 +371,18 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5
-	,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5,1.51e+5
-	,3.17e+5,3.17e+5,3.17e+5,3.17e+5,3.17e+5,3.17e+5,3.17e+5,3.17e+5,3.17e+5,3.17e+5
-	,3.17e+5,3.17e+5]
+      ,"x1":[9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5
+	,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5,9.06e+5
+	,1.902e+6,1.902e+6,1.902e+6,1.902e+6,1.902e+6,1.902e+6,1.902e+6,1.902e+6,1.902e+6,1.902e+6
+	,1.902e+6,1.902e+6]
    }
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
       ,"header":"ANG", "dataType":"61", "rank":2.0
       ,"expansion":"Angle: angle"
-      ,"x2":[23.3,26.1,27.1,32.2,32.8,38.4,50.6,62.1,75.1,89.5
-	,104.4,118.1,133.1,136.3,140.4,144.6,147.8,148.7,152,157.2
-	,41.3,54.2,68.2,76.8,81.1,90.9,107.3,124,143.8,151.3
-	,157.8,163.3]
+      ,"x2":[18,20.2,21,25,25.4,29.8,39.6,48.9,59.7,72.2
+	,85.9,99.6,116,119.8,124.7,130,134.1,135.3,139.6,146.7
+	,29.5,38.8,49.2,55.6,58.9,66.6,80.4,96.1,118.9,129.4
+	,139.3,148.7]
       ,"dx2":[0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6
 	,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6
 	,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6
@@ -358,11 +391,11 @@
 }
    ]
    }
-  ,{"SUBENT":"A1445003", "isub":3, "compiled":20190625, "TransID":"A092", "TransDate":20191003
+  ,{"SUBENT":"A1445003", "isub":3, "compiled":20210625, "TransID":"A098", "TransDate":20210917
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-7(P,A)2-HE-4,,DA"
+	,"x4code":{"code":"(1-H-1(3-LI-7,A)2-HE-4,,DA)=(3-LI-7(P,A)2-HE-4,,DA)"
 	    ,"c4reac":"(P,A),DA"
 	    ,"combi":"a"
 	    ,"MF":4
@@ -384,6 +417,21 @@
 	{"x4pointer":" "
 	,"x4code":{"code":"3-LI-7(6-C-12,EL)3-LI-7,,DA,,RTH"
 		,"reaction":"3-LI-7(6-C-12,EL)3-LI-7,,DA,,RTH"}
+	}
+      ]
+     ,"MISC-COL":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"MISC"}]
+	,"x4freetext":[" 7Li energy"]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Both energies (for H and Li) are given in the article."
+		,"Equivalent proton bombarding energy as calculated from"
+		,"the lithium bombarding energy, the beam energy losses"
+		,"and the masses of Li and H."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -413,7 +461,8 @@
 	,"x4code":{"code":"20190625A", "date":"20190625", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: PART-DET deleted. SF9=EXP deleted from"
-		,"REACTION code. ANG-ERR -> ANG-ERR-D. MONITOR added."]
+		,"REACTION code. ANG-ERR -> ANG-ERR-D. MONITOR added."
+		,"MEV -> MEV/A at E col. MISC col. added."]
 	}
       ]
     }
@@ -429,11 +478,11 @@
 	,[" "         ]]
       ,"data":[
 	 [0.5]]}
-    ,"DATA":{"ncols":4, "nrows":22
+    ,"DATA":{"ncols":5, "nrows":22
       ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
+       {"icol":0, "header":"EN", "units":"MEV/A", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+	,"unitsHelp":"MeV per mass number","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"ANG-CM", "units":"ADEG", "pointer":" "
 	,"headerHelp":"Angle, c.m. system", "pFlag":"1000001"
 	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
@@ -443,44 +492,48 @@
       ,{"icol":3, "header":"DATA-ERR", "units":"MB/SR", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns per steradian","familyCode":"DA","convFc":0.001,"basicUnits":"B/SR"}
+      ,{"icol":4, "header":"MISC", "units":"MEV", "pointer":" "
+	,"headerHelp":"Miscellaneous Information, defined under MISC-COL.", "pFlag":"0000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN"        ,"ANG-CM"    ,"DATA-CM"   ,"DATA-ERR"  ]
-	,["MEV"       ,"ADEG"      ,"MB/SR"     ,"MB/SR"     ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN"        ,"ANG-CM"    ,"DATA-CM"   ,"DATA-ERR"  ,"MISC"      ]
+	,["MEV/A"     ,"ADEG"      ,"MB/SR"     ,"MB/SR"     ,"MEV"       ]
+	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [0.131,26.04,0.0258,9.0E-4]
-	,[0.131,36.52,0.0254,0.001]
-	,[0.131,53.45,0.024,0.0014]
-	,[0.131,77.58,0.0269,0.0034]
-	,[0.131,78.49,0.0249,0.0011]
-	,[0.272,23.21,0.2497,0.0058]
-	,[0.272,32.76,0.2231,0.0063]
-	,[0.272,46.07,0.2046,0.0053]
-	,[0.272,51.77,0.2018,0.0097]
-	,[0.272,72.64,0.194,0.0116]
-	,[0.272,80.75,0.1698,0.0058]
-	,[0.416,20.68,0.5882,0.0176]
-	,[0.416,29.24,0.5103,0.0176]
-	,[0.416,47.19,0.425,0.0215]
-	,[0.416,68.04,0.3729,0.0215]
-	,[0.416,86.04,0.2661,0.0117]
-	,[0.561,18.13,0.8489,0.0245]
-	,[0.561,26.36,0.7656,0.0319]
-	,[0.561,38.38,0.7707,0.0246]
-	,[0.561,49.02,0.6777,0.0294]
-	,[0.561,63.54,0.5405,0.0294]
-	,[0.561,88.65,0.374,0.0147]]}
+	 [0.131,26,0.0258,9.0E-4,0.913]
+	,[0.131,36.5,0.0254,0.001,0.913]
+	,[0.131,53.5,0.024,0.0014,0.913]
+	,[0.131,77.6,0.0269,0.0034,0.913]
+	,[0.131,78.5,0.0249,0.0011,0.913]
+	,[0.272,23.2,0.2497,0.0058,1.899]
+	,[0.272,32.8,0.2231,0.0063,1.899]
+	,[0.272,46.1,0.2046,0.0053,1.899]
+	,[0.272,51.8,0.2018,0.0097,1.899]
+	,[0.272,72.6,0.194,0.0116,1.899]
+	,[0.272,80.8,0.1698,0.0058,1.899]
+	,[0.416,20.7,0.5882,0.0176,2.913]
+	,[0.416,29.2,0.5103,0.0176,2.913]
+	,[0.416,47.2,0.425,0.0215,2.913]
+	,[0.416,68,0.3729,0.0215,2.913]
+	,[0.416,86,0.2661,0.0117,2.913]
+	,[0.561,18.1,0.8489,0.0245,3.925]
+	,[0.561,26.4,0.7656,0.0319,3.925]
+	,[0.561,38.4,0.7707,0.0246,3.925]
+	,[0.561,49,0.6777,0.0294,3.925]
+	,[0.561,63.5,0.5405,0.0294,3.925]
+	,[0.561,88.7,0.374,0.0147,3.925]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A1445003", "Pointer":" "
- ,"Subent":"A1445003", "compiled":20190625
+ ,"Subent":"A1445003", "compiled":20210625
  ,"year1":1971, "author1ini":"H.", "author1":"Spinka"
  ,"zTarg1":3, "targ1":"Li-7", "proj1":"p", "emis1":"A", "MF":4, "MT":107, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
  ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
  ,"reacode":"3-LI-7(P,A)2-HE-4,,DA"
- ,"compNotes":["Conversion from C.M. to Lab: successful"]
- ,"wx4data":6
+ ,"compNotes":["Conversion from C.M. to Lab: successful"
+	,"CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*1"]
+ ,"wx4data":7
  ,"lx4data":22
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":true
@@ -510,7 +563,7 @@
     ,"com0":8
     ,"com1":8}
   ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[0.131,0.131,0.131,0.131,0.131,0.272,0.272,0.272,0.272,0.272
@@ -523,9 +576,9 @@
     ,"header":"ANG-CM", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X2.Value", "dataType":"61", "rank":2.1
     ,"expansion":"Angle: angle"
-    ,"dat0":[26.04,36.52,53.45,77.58,78.49,23.21,32.76,46.07,51.77,72.64
-	,80.75,20.68,29.24,47.19,68.04,86.04,18.13,26.36,38.38,49.02
-	,63.54,88.65]
+    ,"dat0":[26,36.5,53.5,77.6,78.5,23.2,32.8,46.1,51.8,72.6
+	,80.8,20.7,29.2,47.2,68,86,18.1,26.4,38.4,49
+	,63.5,88.7]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"dx2", "fam":"ANG", "ifComm":true , "ifCM":false
     ,"header":"ANG-ERR-D", "units":"ADEG", "basicUnits":"ADEG"
@@ -533,6 +586,16 @@
     ,"expansion":"Angle: angle /Error/"
     ,"com0":0.5
     ,"com1":0.5}
+  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.913,0.913,0.913,0.913,0.913,1.899,1.899,1.899,1.899,1.899
+	,1.899,2.913,2.913,2.913,2.913,2.913,3.925,3.925,3.925,3.925
+	,3.925,3.925]
+    ,"dat1":[9.13e+5,9.13e+5,9.13e+5,9.13e+5,9.13e+5,1.899e+6,1.899e+6,1.899e+6,1.899e+6,1.899e+6
+	,1.899e+6,2.913e+6,2.913e+6,2.913e+6,2.913e+6,2.913e+6,3.925e+6,3.925e+6,3.925e+6,3.925e+6
+	,3.925e+6,3.925e+6]}
   ]
  ,"wc5data":3
  ,"lc5data":22
@@ -540,12 +603,12 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[2.72495e-5,2.66811e-5,2.49072e-5,2.72926e-5,2.52397e-5,2.7045e-4,2.40133e-4,2.17611e-4,2.13319e-4,1.9965e-4
-	,1.72696e-4,6.49812e-4,5.60347e-4,4.5796e-4,3.8962e-4,2.69272e-4,9.53807e-4,8.55137e-4,8.50261e-4,7.36996e-4
-	,5.73759e-4,3.77324e-4]
-      ,"dy":[9.50566e-7,1.05044e-6,1.45292e-6,3.44962e-6,1.11501e-6,6.28197e-6,6.78098e-6,5.63705e-6,1.02537e-5,1.19379e-5
-	,5.89893e-6,1.94436e-5,1.93261e-5,2.31674e-5,2.2464e-5,1.18395e-5,2.75277e-5,3.56307e-5,2.71395e-5,3.19724e-5
-	,3.12091e-5,1.48307e-5]
+      ,"y":[2.725e-5,2.66815e-5,2.49062e-5,2.7292e-5,2.52394e-5,2.70451e-4,2.40126e-4,2.17605e-4,2.13312e-4,1.99662e-4
+	,1.72683e-4,6.49805e-4,5.60366e-4,4.57954e-4,3.89645e-4,2.69292e-4,9.53824e-4,8.55108e-4,8.50241e-4,7.37018e-4
+	,5.73801e-4,3.77284e-4]
+      ,"dy":[9.50582e-7,1.05045e-6,1.45286e-6,3.44955e-6,1.115e-6,6.282e-6,6.78077e-6,5.63688e-6,1.02534e-5,1.19385e-5
+	,5.89849e-6,1.94433e-5,1.93267e-5,2.31671e-5,2.24655e-5,1.18404e-5,2.75282e-5,3.56295e-5,2.71389e-5,3.19733e-5
+	,3.12114e-5,1.48291e-5]
       ,"dysys":[2.064e-6,2.032e-6,1.92e-6,2.152e-6,1.992e-6,1.9976e-5,1.7848e-5,1.6368e-5,1.6144e-5,1.552e-5
 	,1.3584e-5,4.7056e-5,4.0824e-5,3.4e-5,2.9832e-5,2.1288e-5,6.7912e-5,6.1248e-5,6.1656e-5,5.4216e-5
 	,4.324e-5,2.992e-5]   }
@@ -559,8 +622,8 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
       ,"header":"ANG", "dataType":"61", "rank":2.0
       ,"expansion":"Angle: angle"
-      ,"x2":[25.3,35.5,52.1,75.9,76.8,22.3,31.4,44.3,49.8,70.3
-	,78.3,19.6,27.8,45,65.2,83,17.1,24.8,36.3,46.4
+      ,"x2":[25.2,35.5,52.1,75.9,76.8,22.2,31.5,44.3,49.9,70.2
+	,78.3,19.7,27.8,45,65.2,82.9,17,24.9,36.3,46.4
 	,60.4,85.1]
       ,"dx2":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5
 	,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5
@@ -569,21 +632,21 @@
 }
    ]
    }
-  ,{"SUBENT":"A1445004", "isub":4, "compiled":20190625, "TransID":"A092", "TransDate":20191003
+  ,{"SUBENT":"A1445004", "isub":4, "compiled":20210625, "TransID":"A098", "TransDate":20210917
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-6(P,HE3)2-HE-4,,SIG"
-	    ,"c4reac":"(P,HE3),SIG"
+	,"x4code":{"code":"(1-H-1(3-LI-6,HE3)2-HE-4,,SIG)=\n(3-LI-6(P,HE3)2-HE-4,,SIG)"
+	    ,"c4reac":"(3-LI-6,HE3),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":106
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"3-LI-6(P,HE3)2-HE-4,,SIG"
-		,"Reac":"P,HE3"
-		,"SF1":"3-LI-6","Targ":{"code":"3-LI-6","nam":"Li-6","ZA":3006}
-		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
+	    {"code":"1-H-1(3-LI-6,HE3)2-HE-4,,SIG"
+		,"Reac":"3-LI-6,HE3"
+		,"SF1":"1-H-1","Targ":{"code":"1-H-1","nam":"H-1","ZA":1001}
+		,"SF2":"3-LI-6","Proj":{"code":"3-LI-6","nam":"Li-6","ZA":3006}
 		,"SF3":"HE3"
 		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF6":"SIG"
@@ -598,6 +661,21 @@
 		,"obtained by multiplying the measured points with"
 		,"2Pi*sin(theta). A smooth curve through these values"
 		,"was then numerically integrated."]
+	}
+      ]
+     ,"MISC-COL":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"MISC"}]
+	,"x4freetext":[" 6Li energy"]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Both energies (for H and Li) are given in the article."
+		,"Equivalent proton bombarding energy as calculated from"
+		,"the lithium bombarding energy, the beam energy losses"
+		,"and the masses of Li and H."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -631,15 +709,16 @@
 	,"x4code":{"code":"20190625A", "date":"20190625", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: SF9=EXP deleted from REACTION code."
-		,"ANALYSIS added. BIB updated."]
+		,"ANALYSIS added. BIB updated. MEV -> MEV/A at E col."
+		,"MISC col. added."]
 	}
       ]
     }
-    ,"DATA":{"ncols":4, "nrows":2
+    ,"DATA":{"ncols":5, "nrows":2
       ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
+       {"icol":0, "header":"EN", "units":"MEV/A", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+	,"unitsHelp":"MeV per mass number","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"EN-ERR", "units":"MEV", "pointer":" "
 	,"headerHelp":"Uncertainty in incident projectile energy", "pFlag":"9110000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
@@ -649,24 +728,27 @@
       ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ,{"icol":4, "header":"MISC", "units":"MEV", "pointer":" "
+	,"headerHelp":"Miscellaneous Information, defined under MISC-COL.", "pFlag":"0000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
-	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ,"MISC"      ]
+	,["MEV/A"     ,"MEV"       ,"MB"        ,"MB"        ,"MEV"       ]
+	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [0.151,0.0035,9.8,1]
-	,[0.317,0.004,47,5]]}
+	 [0.151,0.0035,9.8,1,0.907]
+	,[0.317,0.004,47,5,1.903]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A1445004", "Pointer":" "
- ,"Subent":"A1445004", "compiled":20190625
+ ,"Subent":"A1445004", "compiled":20210625
  ,"year1":1971, "author1ini":"H.", "author1":"Spinka"
- ,"zTarg1":3, "targ1":"Li-6", "proj1":"p", "emis1":"HE3", "MF":3, "MT":106, "nExpectedArgs":1
+ ,"zTarg1":1, "targ1":"H-1", "proj1":"Li-6", "emis1":"HE3", "MF":3, "MT":106, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"3-LI-6(P,HE3)2-HE-4,,SIG"
- ,"compNotes":[]
- ,"wx4data":5
+ ,"reacode":"1-H-1(3-LI-6,HE3)2-HE-4,,SIG"
+ ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*6"]
+ ,"wx4data":6
  ,"lx4data":2
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -688,17 +770,23 @@
     ,"com0":8
     ,"com1":8}
   ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[0.151,0.317]
-    ,"dat1":[1.51e+5,3.17e+5]}
+    ,"dat1":[9.06e+5,1.902e+6]}
   ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.0035,0.004]
     ,"dat1":[3500,4000]}
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.907,1.903]
+    ,"dat1":[9.07e+5,1.903e+6]}
   ]
  ,"wc5data":2
  ,"lc5data":2
@@ -712,27 +800,27 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[1.51e+5,3.17e+5]
+      ,"x1":[9.06e+5,1.902e+6]
       ,"dx1":[3500,4000]   }
  }
 }
    ]
    }
-  ,{"SUBENT":"A1445005", "isub":5, "compiled":20190625, "TransID":"A092", "TransDate":20191003
+  ,{"SUBENT":"A1445005", "isub":5, "compiled":20210625, "TransID":"A098", "TransDate":20210917
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-7(P,A)2-HE-4,,SIG"
-	    ,"c4reac":"(P,A),SIG"
+	,"x4code":{"code":"(1-H-1(3-LI-7,A)2-HE-4,,SIG)=(3-LI-7(P,A)2-HE-4,,SIG)"
+	    ,"c4reac":"(3-LI-7,A),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":107
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"3-LI-7(P,A)2-HE-4,,SIG"
-		,"Reac":"P,A"
-		,"SF1":"3-LI-7","Targ":{"code":"3-LI-7","nam":"Li-7","ZA":3007}
-		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
+	    {"code":"1-H-1(3-LI-7,A)2-HE-4,,SIG"
+		,"Reac":"3-LI-7,A"
+		,"SF1":"1-H-1","Targ":{"code":"1-H-1","nam":"H-1","ZA":1001}
+		,"SF2":"3-LI-7","Proj":{"code":"3-LI-7","nam":"Li-7","ZA":3007}
 		,"SF3":"A"
 		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF6":"SIG"
@@ -746,6 +834,21 @@
 	,"x4freetext":[" The 7Li+p total cross sections were obtained"
 		,"by fitting the data with either 2 or 3 even order"
 		,"Legendre polynomials."]
+	}
+      ]
+     ,"MISC-COL":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"MISC"}]
+	,"x4freetext":[" 7Li energy"]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Both energies (for H and Li) are given in the article."
+		,"Equivalent proton bombarding energy as calculated from"
+		,"the lithium bombarding energy, the beam energy losses"
+		,"and the masses of Li and H."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -779,15 +882,16 @@
 	,"x4code":{"code":"20190625A", "date":"20190625", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: SF9=EXP deleted from REACTION code."
-		,"ANALYSIS added. BIB updated."]
+		,"ANALYSIS added. BIB updated. MEV -> MEV/A at E col."
+		,"MISC col. added."]
 	}
       ]
     }
-    ,"DATA":{"ncols":4, "nrows":4
+    ,"DATA":{"ncols":5, "nrows":4
       ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
+       {"icol":0, "header":"EN", "units":"MEV/A", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+	,"unitsHelp":"MeV per mass number","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"EN-ERR", "units":"MEV", "pointer":" "
 	,"headerHelp":"Uncertainty in incident projectile energy", "pFlag":"9110000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
@@ -797,26 +901,29 @@
       ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
+      ,{"icol":4, "header":"MISC", "units":"MEV", "pointer":" "
+	,"headerHelp":"Miscellaneous Information, defined under MISC-COL.", "pFlag":"0000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
-	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ,"MISC"      ]
+	,["MEV/A"     ,"MEV"       ,"MB"        ,"MB"        ,"MEV"       ]
+	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [0.1305,0.0035,0.32,0.04]
-	,[0.2715,0.004,2.46,0.25]
-	,[0.416,0.0035,4.9,0.5]
-	,[0.561,0.003,7.4,0.8]]}
+	 [0.1305,0.0035,0.32,0.04,0.913]
+	,[0.2715,0.004,2.46,0.25,1.899]
+	,[0.416,0.0035,4.9,0.5,2.913]
+	,[0.561,0.003,7.4,0.8,3.925]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A1445005", "Pointer":" "
- ,"Subent":"A1445005", "compiled":20190625
+ ,"Subent":"A1445005", "compiled":20210625
  ,"year1":1971, "author1ini":"H.", "author1":"Spinka"
- ,"zTarg1":3, "targ1":"Li-7", "proj1":"p", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
+ ,"zTarg1":1, "targ1":"H-1", "proj1":"Li-7", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"3-LI-7(P,A)2-HE-4,,SIG"
- ,"compNotes":[]
- ,"wx4data":5
+ ,"reacode":"1-H-1(3-LI-7,A)2-HE-4,,SIG"
+ ,"compNotes":["CONVERT ENERGY/ATOMIC-MASS TO ENERGY: E1=E0*7"]
+ ,"wx4data":6
  ,"lx4data":4
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -838,17 +945,23 @@
     ,"com0":8
     ,"com1":8}
   ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"header":"EN", "units":"MEV/A", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"dat0":[0.1305,0.2715,0.416,0.561]
-    ,"dat1":[1.305e+5,2.715e+5,4.16e+5,5.61e+5]}
+    ,"dat1":[9.135e+5,1.9005e+6,2.912e+6,3.927e+6]}
   ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.0035,0.004,0.0035,0.003]
     ,"dat1":[3500,4000,3500,3000]}
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"MISC", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"09", "rank":777.0
+    ,"expansion":"Flags, etc."
+    ,"dat0":[0.913,1.899,2.913,3.925]
+    ,"dat1":[9.13e+5,1.899e+6,2.913e+6,3.925e+6]}
   ]
  ,"wc5data":2
  ,"lc5data":4
@@ -862,7 +975,7 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[1.305e+5,2.715e+5,4.16e+5,5.61e+5]
+      ,"x1":[9.135e+5,1.9005e+6,2.912e+6,3.927e+6]
       ,"dx1":[3500,4000,3500,3000]   }
  }
 }
