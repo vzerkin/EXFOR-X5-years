@@ -1,9 +1,9 @@
-  {"ENTRY":"A0523", "updated":20170203, "TransID":"A086", "TransDate":20170406, "CenterID":"CAJaD", "Center":"Russian Nuclear Structure and Reaction Data Centre, Kurchatov Institute, Moscow, Russia"
+  {"ENTRY":"A0523", "updated":20210628, "TransID":"A098", "TransDate":20210917, "CenterID":"CAJaD", "Center":"Russian Nuclear Structure and Reaction Data Centre, Kurchatov Institute, Moscow, Russia"
    ,"y1":1993,"a1":"M.Ismail","r1":"J,PRM,40,227,1993"
    ,"ref":"Jour: Pramana, Vol.40, p.227 (1993)"
    ,"title":"Measurement of excitation functions and mean projected recoil ranges of nuclei in alpha-induced reactions on F,Al,V,Co and Re nuclei."
    ,"x4subents":[
-   {"SUBENT":"A0523001", "isub":1, "compiled":20170203, "TransID":"A086", "TransDate":20170406
+   {"SUBENT":"A0523001", "isub":1, "compiled":20210628, "TransID":"A098", "TransDate":20210917
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -82,7 +82,8 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"ERR-T"
 	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
-	,"x4freetext":[" Total error includes:"]
+	,"x4freetext":[" Total error excluding the uncertainties"
+		,"of the nuclear data used in the analysis."]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-1"
@@ -100,8 +101,8 @@
 	,"x4freetext":[" The uncertainty in the detector efficiency."]
 	}
 	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-5"
-	     ,"headerHelp":"5th partial uncertainty, defined under ERR-ANALYS"}
+	,"x4code":{"header":"ERR-4"
+	     ,"headerHelp":"4th partial uncertainty, defined under ERR-ANALYS"}
 	,"x4freetext":[" The uncertainty caused by the large size of the"
 		,"irradiation area and the non-uniformities of the target"
 		,"contribute about 5% to the average error of the cr.sect"]
@@ -109,10 +110,7 @@
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-S", "max":"2."
 	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
-	,"x4freetext":[" Statistical uncertainty"
-		,"However, the above mentioned average error values do"
-		,"not include the uncertainties of the nuclear data"
-		,"used in the analysis."]
+	,"x4freetext":[" Statistical uncertainty"]
 	}
       ]
      ,"HISTORY":[
@@ -133,6 +131,11 @@
 	,"x4code":{"code":"20170203U", "date":"20170203", "act":"U", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" SD: Institute code was corrected."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210628A", "date":"20210628", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Corrections in Subents 004-006,020,021."]
 	}
       ]
     }
@@ -602,22 +605,22 @@
 }
    ]
    }
-  ,{"SUBENT":"A0523004", "isub":4, "compiled":20160317, "TransID":"A084", "TransDate":20160621
+  ,{"SUBENT":"A0523004", "isub":4, "compiled":20210628, "TransID":"A098", "TransDate":20210917
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"9-F-19(A,X)11-NA-22,,SIG"
-	    ,"c4reac":"(A,X),SIG"
+	,"x4code":{"code":"9-F-19(A,N)11-NA-22,,SIG"
+	    ,"c4reac":"(A,N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":9000
+	    ,"MT":4
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"9-F-19(A,X)11-NA-22,,SIG"
-		,"Reac":"A,X"
+	    {"code":"9-F-19(A,N)11-NA-22,,SIG"
+		,"Reac":"A,N"
 		,"SF1":"9-F-19","Targ":{"code":"9-F-19","nam":"F-19","ZA":9019}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF3":"N"
 		,"SF4":"11-NA-22","Prod":{"code":"11-NA-22","nam":"Na-22","ZA":11022}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -645,7 +648,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Tbl.3 from PRM,40,227,1993"]
+	,"x4freetext":[" Tbl.3 from Pramana,40(1993)227"]
 	}
       ]
      ,"HISTORY":[
@@ -653,6 +656,11 @@
 	,"x4code":{"code":"20160216A", "date":"20160216", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: SF5=IND deleted from REACTION code."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210628A", "date":"20210628", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF3=X -> N in REACTION code."]
 	}
       ]
     }
@@ -697,12 +705,12 @@
 	,[31.79,0.23,9.98,0.08]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A0523004", "Pointer":" "
- ,"Subent":"A0523004", "compiled":20160317
+ ,"Subent":"A0523004", "compiled":20210628
  ,"year1":1993, "author1ini":"M.", "author1":"Ismail"
- ,"zTarg1":9, "targ1":"F-19", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
+ ,"zTarg1":9, "targ1":"F-19", "proj1":"a", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"9-F-19(A,X)11-NA-22,,SIG"
+ ,"reacode":"9-F-19(A,N)11-NA-22,,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-S,,2.)        ADDED AS COMMON:ERR-S,PER-CENT=1.0%"]
  ,"wx4data":9
  ,"lx4data":19
@@ -795,22 +803,22 @@
 }
    ]
    }
-  ,{"SUBENT":"A0523005", "isub":5, "compiled":20160317, "TransID":"A084", "TransDate":20160621
+  ,{"SUBENT":"A0523005", "isub":5, "compiled":20210628, "TransID":"A098", "TransDate":20210917
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"23-V-51(A,X)25-MN-54,,SIG"
-	    ,"c4reac":"(A,X),SIG"
+	,"x4code":{"code":"23-V-51(A,N)25-MN-54,,SIG"
+	    ,"c4reac":"(A,N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":9000
+	    ,"MT":4
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"23-V-51(A,X)25-MN-54,,SIG"
-		,"Reac":"A,X"
+	    {"code":"23-V-51(A,N)25-MN-54,,SIG"
+		,"Reac":"A,N"
 		,"SF1":"23-V-51","Targ":{"code":"23-V-51","nam":"V-51","ZA":23051}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF3":"N"
 		,"SF4":"25-MN-54","Prod":{"code":"25-MN-54","nam":"Mn-54","ZA":25054}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -837,7 +845,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Tbl.4 from PRM,40,227,1993"]
+	,"x4freetext":[" Tbl.4 from Pramana,40(1993)227"]
 	}
       ]
      ,"HISTORY":[
@@ -845,6 +853,11 @@
 	,"x4code":{"code":"20160317A", "date":"20160317", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: SF5=IND deleted from REACTION code."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210628A", "date":"20210628", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF3=X -> N in REACTION code."]
 	}
       ]
     }
@@ -884,12 +897,12 @@
 	,[12.08,3.33,13.88,1.11]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A0523005", "Pointer":" "
- ,"Subent":"A0523005", "compiled":20160317
+ ,"Subent":"A0523005", "compiled":20210628
  ,"year1":1993, "author1ini":"M.", "author1":"Ismail"
- ,"zTarg1":23, "targ1":"V-51", "proj1":"a", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
+ ,"zTarg1":23, "targ1":"V-51", "proj1":"a", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"23-V-51(A,X)25-MN-54,,SIG"
+ ,"reacode":"23-V-51(A,N)25-MN-54,,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-S,,2.)        ADDED AS COMMON:ERR-S,PER-CENT=1.0%"]
  ,"wx4data":9
  ,"lx4data":14
@@ -982,21 +995,21 @@
 }
    ]
    }
-  ,{"SUBENT":"A0523006", "isub":6, "compiled":20160317, "TransID":"A084", "TransDate":20160621
+  ,{"SUBENT":"A0523006", "isub":6, "compiled":20210628, "TransID":"A098", "TransDate":20210917
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"23-V-51(A,X)25-MN-52-G,M+,SIG"
-	    ,"c4reac":"(A,X)M+,SIG"
+	,"x4code":{"code":"23-V-51(A,3N)25-MN-52-G,M+,SIG"
+	    ,"c4reac":"(A,3N)M+,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"23-V-51(A,X)25-MN-52-G,M+,SIG"
-		,"Reac":"A,X"
+	    {"code":"23-V-51(A,3N)25-MN-52-G,M+,SIG"
+		,"Reac":"A,3N"
 		,"SF1":"23-V-51","Targ":{"code":"23-V-51","nam":"V-51","ZA":23051}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF3":"3N"
 		,"SF4":"25-MN-52-G","Prod":{"code":"25-MN-52-G","nam":"Mn-52-g","ZA":25052,"ProdM":"G"}
 		,"SF5":"M+"
 		,"SF6":"SIG"
@@ -1026,7 +1039,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Tbl.4 from PRM,40,227,1993"]
+	,"x4freetext":[" Tbl.4 from Pramana,40(1993)227"]
 	}
       ]
      ,"HISTORY":[
@@ -1034,6 +1047,11 @@
 	,"x4code":{"code":"20160216A", "date":"20160216", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: SF5=IND deleted from REACTION code."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210628A", "date":"20210628", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF3=X -> 3N in REACTION code."]
 	}
       ]
     }
@@ -1077,12 +1095,12 @@
 	,[27.55,2.18,1.9,0.15]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A0523006", "Pointer":" "
- ,"Subent":"A0523006", "compiled":20160317
+ ,"Subent":"A0523006", "compiled":20210628
  ,"year1":1993, "author1ini":"M.", "author1":"Ismail"
- ,"zTarg1":23, "targ1":"V-51", "proj1":"a", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":23, "targ1":"V-51", "proj1":"a", "emis1":"3N", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section, incl. form. via isomeric trans."
- ,"reacode":"23-V-51(A,X)25-MN-52-G,M+,SIG"
+ ,"reacode":"23-V-51(A,3N)25-MN-52-G,M+,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-S,,2.)        ADDED AS COMMON:ERR-S,PER-CENT=1.0%"]
  ,"wx4data":9
  ,"lx4data":18
@@ -3505,22 +3523,22 @@
 }
    ]
    }
-  ,{"SUBENT":"A0523020", "isub":20, "compiled":20160317, "TransID":"A084", "TransDate":20160621
+  ,{"SUBENT":"A0523020", "isub":20, "compiled":20210628, "TransID":"A098", "TransDate":20210917
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"75-RE-187(A,X)77-IR-190-G,M+,SIG"
-	    ,"c4reac":"(A,X)M+,SIG"
+	,"x4code":{"code":"75-RE-187(A,N)77-IR-190-G+M1,M+,SIG"
+	    ,"c4reac":"(A,N)M+,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"75-RE-187(A,X)77-IR-190-G,M+,SIG"
-		,"Reac":"A,X"
+	    {"code":"75-RE-187(A,N)77-IR-190-G+M1,M+,SIG"
+		,"Reac":"A,N"
 		,"SF1":"75-RE-187","Targ":{"code":"75-RE-187","nam":"Re-187","ZA":75187}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"77-IR-190-G","Prod":{"code":"77-IR-190-G","nam":"Ir-190-g","ZA":77190,"ProdM":"G"}
+		,"SF3":"N"
+		,"SF4":"77-IR-190-G+M1","Prod":{"code":"77-IR-190-G+M1","nam":"Ir-190-g+m1","ZA":77190,"ProdM":"+"}
 		,"SF5":"M+"
 		,"SF6":"SIG"
 		,"SF58":"M+,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section, incl. form. via isomeric trans."
@@ -3547,7 +3565,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Tbl.6 from PRM,40,227,1993"]
+	,"x4freetext":[" Tbl.6 from Pramana,40(1993)227"]
 	}
       ]
      ,"HISTORY":[
@@ -3556,6 +3574,12 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: SF4=Ir-190 -> Ir-190g, SF5=IND deleted"
 		,"from REACTION code."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210628A", "date":"20210628", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF3=X -> N; SF4=Ir-190g -> Ir-190g+m1"
+		,"in REACTION code."]
 	}
       ]
     }
@@ -3599,12 +3623,12 @@
 	,[24.4,2.51,0.76,0.06]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A0523020", "Pointer":" "
- ,"Subent":"A0523020", "compiled":20160317
+ ,"Subent":"A0523020", "compiled":20210628
  ,"year1":1993, "author1ini":"M.", "author1":"Ismail"
- ,"zTarg1":75, "targ1":"Re-187", "proj1":"a", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":75, "targ1":"Re-187", "proj1":"a", "emis1":"N", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section, incl. form. via isomeric trans."
- ,"reacode":"75-RE-187(A,X)77-IR-190-G,M+,SIG"
+ ,"reacode":"75-RE-187(A,N)77-IR-190-G+M1,M+,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-S,,2.)        ADDED AS COMMON:ERR-S,PER-CENT=1.0%"]
  ,"wx4data":9
  ,"lx4data":18
@@ -3697,26 +3721,25 @@
 }
    ]
    }
-  ,{"SUBENT":"A0523021", "isub":21, "compiled":20160317, "TransID":"A084", "TransDate":20160621
+  ,{"SUBENT":"A0523021", "isub":21, "compiled":20210628, "TransID":"A098", "TransDate":20210917
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"75-RE-187(A,X)77-IR-189,CUM,SIG"
-	    ,"c4reac":"(A,X)CUM,SIG"
+	,"x4code":{"code":"75-RE-187(A,2N)77-IR-189,,SIG"
+	    ,"c4reac":"(A,2N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":9001
+	    ,"MT":16
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"75-RE-187(A,X)77-IR-189,CUM,SIG"
-		,"Reac":"A,X"
+	    {"code":"75-RE-187(A,2N)77-IR-189,,SIG"
+		,"Reac":"A,2N"
 		,"SF1":"75-RE-187","Targ":{"code":"75-RE-187","nam":"Re-187","ZA":75187}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
-		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF3":"2N"
 		,"SF4":"77-IR-189","Prod":{"code":"77-IR-189","nam":"Ir-189","ZA":77189}
-		,"SF5":"CUM"
 		,"SF6":"SIG"
-		,"SF58":"CUM,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cumulative cross section"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
@@ -3739,7 +3762,15 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Tbl.6 from PRM,40,227,1993"]
+	,"x4freetext":[" Tbl.6 from Pramana,40(1993)227"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210628A", "date":"20210628", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF3=X -> 2N; SF5=CUM deleted from"
+		,"REACTION code."]
 	}
       ]
     }
@@ -3782,21 +3813,21 @@
 	,[27.86,2.34,19.57,1.57]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A0523021", "Pointer":" "
- ,"Subent":"A0523021", "compiled":20160317
+ ,"Subent":"A0523021", "compiled":20210628
  ,"year1":1993, "author1ini":"M.", "author1":"Ismail"
- ,"zTarg1":75, "targ1":"Re-187", "proj1":"a", "emis1":"X", "MF":3, "MT":9001, "nExpectedArgs":1
+ ,"zTarg1":75, "targ1":"Re-187", "proj1":"a", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
- ,"reacode":"75-RE-187(A,X)77-IR-189,CUM,SIG"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
+ ,"reacode":"75-RE-187(A,2N)77-IR-189,,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-S,,2.)        ADDED AS COMMON:ERR-S,PER-CENT=1.0%"]
  ,"DECAY-DATA":{"Nuclide":"77-IR-189","HalfLife":"13.10D","HalfLife1":"13.2D"
 	,"RadiationType":"DG","Ene":245.0,"Ene1":245.1,"Abu":0.062,"Abu1":0.06
 	,"FcCorrDECAY_DATA":1.0333333
-	,"reaction":"75-RE-187(A,X)77-IR-189,CUM,SIG"}
- ,"autoCorrNotes":["#Reaction: 75-RE-187(A,X)77-IR-189,CUM,SIG"
+	,"reaction":"75-RE-187(A,2N)77-IR-189,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 75-RE-187(A,2N)77-IR-189,,SIG"
 	," dy=dy/y;                      #to rel. uncertainties"
 	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (75-RE-187(A,X)77-IR-189,CUM,SIG)"
+	,"  #[1]#REACTION   (75-RE-187(A,2N)77-IR-189,,SIG)"
 	,"  #[1]#DECAY-DATA (77-IR-189,13.10D,DG,245.,0.062) #Ix_old=0.062"
 	,"   a1=0.062/0.06;              #[1]#DECAY-DATA: correction to new 245.1 keV gamma-yield per decay Ir-189 Ix_new=0.06"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0333333"
