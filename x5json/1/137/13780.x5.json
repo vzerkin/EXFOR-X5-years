@@ -1,9 +1,9 @@
-  {"ENTRY":"13780", "updated":20200116, "TransID":"1462", "TransDate":20200310, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"13780", "updated":20210731, "TransID":"1485", "TransDate":20211207, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1999,"a1":"E.I.Sharapov+","r1":"J,PR/C,59,1131,1999"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.59, p.1131 (1999)"
    ,"title":"Search for parity violation in 93Nb neutron resonances"
    ,"x4subents":[
-   {"SUBENT":"13780001", "isub":1, "compiled":20200116, "TransID":"1462", "TransDate":20200310
+   {"SUBENT":"13780001", "isub":1, "compiled":20210731, "TransID":"1485", "TransDate":20211207
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -59,7 +59,7 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MESON", "dict":"FACILITY", "idict":18,"hlp":"Meson facility"}
+	,"x4codes":[{"code":"LINAC", "dict":"FACILITY", "idict":18,"hlp":"Linear accelerator"}
 	    ,{"code":"1USALAS", "dict":"INSTITUTE", "idict":3,"hlp":"Los Alamos National Laboratory, NM, United States of America"}]
 	,"x4freetext":[" LANSCE."]
 	}
@@ -115,10 +115,15 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" OS. REACTION in sub.2 changed"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210530A", "date":"20210530", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Correction in sub.2"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"13780002", "isub":2, "compiled":20200116, "TransID":"1462", "TransDate":20200310
+  ,{"SUBENT":"13780002", "isub":2, "compiled":20210731, "TransID":"1485", "TransDate":20211207
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
@@ -202,8 +207,25 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" REACTION 3 modified"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210530A", "date":"20210530", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" POL-BM added"]
+	}
       ]
     }
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"POL-BM", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Beam polarization", "pFlag":"0000000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ]
+      ,"datacols":[
+	 ["POL-BM"    ]
+	,["NO-DIM"    ]
+	,[" "         ]]
+      ,"data":[
+	 [0.7]]}
     ,"DATA":{"ncols":7, "nrows":31
       ,"x4headers":[
        {"icol":0, "header":"DATA", "units":"EV", "pointer":"1"
@@ -266,14 +288,14 @@
 	,[1127,1,null,8,0.64,null,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"137800021", "Pointer":"1"
- ,"Subent":"13780002", "compiled":20200116
+ ,"Subent":"13780002", "compiled":20210731
  ,"year1":1999, "author1ini":"E.I.", "author1":"Sharapov"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"0", "MF":402, "MT":6001, "nExpectedArgs":0
  ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
  ,"ReactionType":"RE", "quant":"RP", "quantExpan":"Resonance energy"
  ,"reacode":"41-NB-93(N,0),,EN"
  ,"compNotes":["OPERATION...  ENERGY=DATA(Resonance Energy)"]
- ,"wx4data":3
+ ,"wx4data":4
  ,"lx4data":31
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -303,6 +325,12 @@
 	,6,null,4,4,null,null,4,5,6,4
 	,null]
    ,"dat1eq":true}
+  ,{"ivar":3, "cvar":"zzz", "fam":"POL", "ifComm":true , "ifCM":false
+    ,"header":"POL-BM", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"ZZZ", "dataType":"84", "rank":777.2
+    ,"expansion":"Other variable: polarization"
+    ,"com0":0.7
+    ,"com1":0.7}
   ]
  ,"wc5data":1
  ,"lc5data":31
@@ -318,14 +346,14 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"137800022", "Pointer":"2"
- ,"Subent":"13780002", "compiled":20200116
+ ,"Subent":"13780002", "compiled":20210731
  ,"year1":1999, "author1ini":"E.I.", "author1":"Sharapov"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"EL", "MF":402, "MT":6022, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
  ,"ReactionType":"RP", "quant":"RP", "quantExpan":"g * resonance width"
  ,"reacode":"41-NB-93(N,EL),,WID,,G"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":6
  ,"lx4data":31
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -379,6 +407,12 @@
 	,6,null,4,4,null,null,4,5,6,4
 	,null]
    ,"dat1eq":true}
+  ,{"ivar":5, "cvar":"zzz", "fam":"POL", "ifComm":true , "ifCM":false
+    ,"header":"POL-BM", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"ZZZ", "dataType":"84", "rank":777.0
+    ,"expansion":"Other variable: polarization"
+    ,"com0":0.7
+    ,"com1":0.7}
   ]
  ,"wc5data":2
  ,"lc5data":31
@@ -405,14 +439,14 @@
  }
 }
 ,{"iDataset":2, "DatasetID":"137800023", "Pointer":"3"
- ,"Subent":"13780002", "compiled":20200116
+ ,"Subent":"13780002", "compiled":20210731
  ,"year1":1999, "author1ini":"E.I.", "author1":"Sharapov"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"TOT", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=y(x1)"
  ,"ReactionType":"PO", "quant":"POL", "quantExpan":"Spin-spin asymmetry for longitud. spin states"
  ,"reacode":"41-NB-93(N,TOT),LON,POL,,DSP/ASY/MSC"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":18
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -443,6 +477,12 @@
     ,"dat0":[5,4,null,3,4,5,null,null,null,5
 	,4,6,null,6,null,4,null,null]
    ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"zzz", "fam":"POL", "ifComm":true , "ifCM":false
+    ,"header":"POL-BM", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"ZZZ", "dataType":"84", "rank":777.2
+    ,"expansion":"Other variable: polarization"
+    ,"com0":0.7
+    ,"com1":0.7}
   ]
  ,"wc5data":2
  ,"lc5data":18
