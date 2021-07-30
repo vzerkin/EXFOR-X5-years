@@ -1,9 +1,9 @@
-  {"ENTRY":"10484", "updated":20040114, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10484", "updated":20210731, "TransID":"1485", "TransDate":20211207, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1970,"a1":"R.W.Fink+","r1":"J,BAP,15,1372(EH6),1970"
    ,"ref":"Jour: Bulletin of the American Physical Society Ser.II, Vol.15, p.1372(EH6) (1970)"
    ,"title":"Some (n,2n), (n,p), and ((n,np)+(n,pn)+(nd)) Activation Cross Sections of Ni58, Cd106, and Sn112 at 14.4 MeV."
    ,"x4subents":[
-   {"SUBENT":"10484001", "isub":1, "compiled":20040114, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"10484001", "isub":1, "compiled":20210731, "TransID":"1485", "TransDate":20211207
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,9 +12,10 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,BAP,15,1372(EH6),197007","stdFileName":"J,BAP,15,1372(EH6),1970"
+	,"x4codes":[{"code":"J,BAP,15,1372(EH6),1970","stdFileName":"J,BAP,15,1372(EH6),1970"
 		,"year":1970,"typ":"J","ref":"J,BAP","vol":"15","p":"1372(EH6)"
 		,"shortRef":"Jour: Bulletin of the American Physical Society Ser.II, Vol.15, p.1372(EH6) (1970)"}]
+	,"x4freetext":[" Abstract only, no experimental details"]
 	}
       ]
      ,"AUTHOR":[
@@ -34,13 +35,11 @@
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"ACTIV", "dict":"METHOD", "idict":21,"hlp":"Activation"}]
-	,"x4freetext":[" Activation"]
 	}
       ]
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"GELI", "dict":"DETECTOR", "idict":22,"hlp":"Germanium-Lithium detector"}]
-	,"x4freetext":[" Ge-Li detector"]
 	}
       ]
      ,"MONITOR":[
@@ -67,8 +66,13 @@
 	,"x4codes":[{"code":"APRVD"
 		,"flag":"APRVD", "help":"Approved by author"
 		}]
-	,"x4freetext":[" Approved by author 1975/7/21."
-		," Data taken from reference text."]
+	,"x4freetext":[" Approved by author 1975/7/21."]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from reference text."]
 	}
       ]
      ,"HISTORY":[
@@ -90,6 +94,12 @@
 	,"x4code":{"code":"20040114A", "date":"20040114", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Converted to new date formats, lower case."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210612A", "date":"20210612", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Reactions in subs.9,10 corrected,"
+		," minor BIB changes"]
 	}
       ]
     }
@@ -771,25 +781,26 @@
 }
    ]
    }
-  ,{"SUBENT":"10484009", "isub":9, "compiled":20040114, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10484009", "isub":9, "compiled":20210731, "TransID":"1485", "TransDate":20211207
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(28-NI-58(N,X)27-CO-57,,SIG)=\n((28-NI-58(N,N+P)27-CO-57,,SIG)+\n(28-NI-58(N,D)27-CO-57,,SIG))"
-	    ,"c4reac":"(N,X),SIG"
+	,"x4code":{"code":"28-NI-58(N,X)27-CO-57,CUM,SIG"
+	    ,"c4reac":"(N,X)CUM,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":9000
+	    ,"MT":9001
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"28-NI-58(N,X)27-CO-57,,SIG"
+	    {"code":"28-NI-58(N,X)27-CO-57,CUM,SIG"
 		,"Reac":"N,X"
 		,"SF1":"28-NI-58","Targ":{"code":"28-NI-58","nam":"Ni-58","ZA":28058}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"27-CO-57","Prod":{"code":"27-CO-57","nam":"Co-57","ZA":27057}
+		,"SF5":"CUM"
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"CUM,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cumulative cross section"
 	    }]}
 	}
       ]
@@ -798,6 +809,12 @@
 	,"x4code":{"code":"20040114A", "date":"20040114", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Reaction updated."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210612A", "date":"20210612", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Reaction corrected: Removed tautology,"
+		," added SF5=CUM"]
 	}
       ]
     }
@@ -821,12 +838,12 @@
 	 [14.4,509,51]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10484009", "Pointer":" "
- ,"Subent":"10484009", "compiled":20040114
+ ,"Subent":"10484009", "compiled":20210731
  ,"year1":1970, "author1ini":"R.W.", "author1":"Fink"
- ,"zTarg1":28, "targ1":"Ni-58", "proj1":"n", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
+ ,"zTarg1":28, "targ1":"Ni-58", "proj1":"n", "emis1":"X", "MF":3, "MT":9001, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"28-NI-58(N,X)27-CO-57,,SIG"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
+ ,"reacode":"28-NI-58(N,X)27-CO-57,CUM,SIG"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":1
@@ -873,25 +890,26 @@
 }
    ]
    }
-  ,{"SUBENT":"10484010", "isub":10, "compiled":20040114, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10484010", "isub":10, "compiled":20210731, "TransID":"1485", "TransDate":20211207
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(50-SN-112(N,X)49-IN-111,,SIG)=\n((50-SN-112(N,N+P)49-IN-111,,SIG)+\n(50-SN-112(N,D)49-IN-111,,SIG))"
-	    ,"c4reac":"(N,X),SIG"
+	,"x4code":{"code":"50-SN-112(N,X)49-IN-111,CUM,SIG"
+	    ,"c4reac":"(N,X)CUM,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":9000
+	    ,"MT":9001
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"50-SN-112(N,X)49-IN-111,,SIG"
+	    {"code":"50-SN-112(N,X)49-IN-111,CUM,SIG"
 		,"Reac":"N,X"
 		,"SF1":"50-SN-112","Targ":{"code":"50-SN-112","nam":"Sn-112","ZA":50112}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"49-IN-111","Prod":{"code":"49-IN-111","nam":"In-111","ZA":49111}
+		,"SF5":"CUM"
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"CUM,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cumulative cross section"
 	    }]}
 	}
       ]
@@ -900,6 +918,12 @@
 	,"x4code":{"code":"20040114A", "date":"20040114", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Reaction updated."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210612A", "date":"20210612", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Reaction corrected: Removed tautology,"
+		," added SF5=CUM"]
 	}
       ]
     }
@@ -923,12 +947,12 @@
 	 [14.4,168,59]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10484010", "Pointer":" "
- ,"Subent":"10484010", "compiled":20040114
+ ,"Subent":"10484010", "compiled":20210731
  ,"year1":1970, "author1ini":"R.W.", "author1":"Fink"
- ,"zTarg1":50, "targ1":"Sn-112", "proj1":"n", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
+ ,"zTarg1":50, "targ1":"Sn-112", "proj1":"n", "emis1":"X", "MF":3, "MT":9001, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"50-SN-112(N,X)49-IN-111,,SIG"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
+ ,"reacode":"50-SN-112(N,X)49-IN-111,CUM,SIG"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":1
