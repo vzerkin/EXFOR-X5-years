@@ -1,9 +1,9 @@
-  {"ENTRY":"10497", "updated":20040114, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10497", "updated":20210731, "TransID":"1485", "TransDate":20211207, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1970,"a1":"W.D.Lu+","r1":"J,PR/C,1,350,1970"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.1, p.350 (1970)"
    ,"title":"Activation Cross Sections for (n,2n) Reactions at 14.4 MeV in the Region Z=40-60. Precision Measurements and Systematics."
    ,"x4subents":[
-   {"SUBENT":"10497001", "isub":1, "compiled":20040114, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"10497001", "isub":1, "compiled":20210731, "TransID":"1485", "TransDate":20211207
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,7 +12,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,PR/C,1,350,197001","stdFileName":"J,PR_C,1,350,1970"
+	,"x4codes":[{"code":"J,PR/C,1,350,1970","stdFileName":"J,PR_C,1,350,1970"
 		,"year":1970,"typ":"J","ref":"J,PR/C","vol":"1","p":"350"
 		,"shortRef":"Jour: Physical Review, Part C, Nuclear Physics, Vol.1, p.350 (1970)"}]
 	}
@@ -42,19 +42,16 @@
      ,"INC-SOURCE":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"D-T", "dict":"INC-SOURCE", "idict":19,"hlp":"3H(d,n)"}]
-	,"x4freetext":[" T(d,n) source"]
 	}
       ]
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"ACTIV", "dict":"METHOD", "idict":21,"hlp":"Activation"}]
-	,"x4freetext":[" Activation"]
 	}
       ]
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"GELI", "dict":"DETECTOR", "idict":22,"hlp":"Germanium-Lithium detector"}]
-	,"x4freetext":[" Ge(Li) detector"]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -74,9 +71,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["No reply to author proof."
-		,"Data taken from Table I in reference."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from Table I in reference."]
 	}
       ]
      ,"HISTORY":[
@@ -98,6 +96,12 @@
 	,"x4code":{"code":"20040114A", "date":"20040114", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Converted to new date formats, lower case."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210612A", "date":"20210612", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Reactions corrected in subentries 21,"
+		,"  36, 39"]
 	}
       ]
     }
@@ -2955,33 +2959,26 @@
 }
    ]
    }
-  ,{"SUBENT":"10497021", "isub":21, "compiled":20040114, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10497021", "isub":21, "compiled":20210731, "TransID":"1485", "TransDate":20211207
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(50-SN-112(N,2N)50-SN-111,,SIG)+\n(50-SN-112(N,N+P)49-IN-111,,SIG)"
-	    ,"c4reac":"((N,2N),SIG)+((N,N+P),SIG)"
-	    ,"combi":"a","combiQuant":"Cross section"
-	    ,"MF":503
+	,"x4code":{"code":"50-SN-112(N,X)49-IN-111,CUM,SIG"
+	    ,"c4reac":"(N,X)CUM,SIG"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":9001
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"50-SN-112(N,2N)50-SN-111,,SIG"
-		,"Reac":"N,2N"
+	    {"code":"50-SN-112(N,X)49-IN-111,CUM,SIG"
+		,"Reac":"N,X"
 		,"SF1":"50-SN-112","Targ":{"code":"50-SN-112","nam":"Sn-112","ZA":50112}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"2N"
-		,"SF4":"50-SN-111","Prod":{"code":"50-SN-111","nam":"Sn-111","ZA":50111}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"50-SN-112(N,N+P)49-IN-111,,SIG"
-		,"Reac":"N,N+P"
-		,"SF1":"50-SN-112","Targ":{"code":"50-SN-112","nam":"Sn-112","ZA":50112}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"49-IN-111","Prod":{"code":"49-IN-111","nam":"In-111","ZA":49111}
+		,"SF5":"CUM"
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"CUM,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cumulative cross section"
 	    }]}
 	}
       ]
@@ -3008,7 +3005,12 @@
 	{"x4pointer":" "
 	,"x4code":{"code":"19860114A", "date":"19860114", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" DECAY-DATA CORRECTED."]
+	,"x4freetext":[" DECAY-DATA corrected."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210612A", "date":"20210612", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION corrected"]
 	}
       ]
     }
@@ -3032,19 +3034,19 @@
 	 [1275,100,100]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10497021", "Pointer":" "
- ,"Subent":"10497021", "compiled":20040114
+ ,"Subent":"10497021", "compiled":20210731
  ,"year1":1970, "author1ini":"W.D.", "author1":"Lu"
- ,"zTarg1":50, "targ1":"Sn-112", "proj1":"n", "emis1":"2N", "MF":503, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":50, "targ1":"Sn-112", "proj1":"n", "emis1":"X", "MF":3, "MT":9001, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(50-SN-112(N,2N)50-SN-111,,SIG)+(50-SN-112(N,N+P)49-IN-111,,SIG)"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
+ ,"reacode":"50-SN-112(N,X)49-IN-111,CUM,SIG"
  ,"compNotes":[]
  ,"DECAY-MON":{"Nuclide":"25-MN-56","HalfLife":"2.576HR","HalfLife1":"2.5789HR"
 	,"RadiationType":"DG","Ene":847.0,"Ene1":846.7638,"Abu":0.9867,"Abu1":0.9885
 	,"FcCorrDECAY_MON":1.0018243
 	,"monitorReaction":"26-FE-56(N,P)25-MN-56,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
-	," #[0]#Reaction: (50-SN-112(N,2N)50-SN-111,,SIG)+(50-SN-112(N,N+P)49-IN-111,,SIG)"
+	," #[0]#Reaction: 50-SN-112(N,X)49-IN-111,CUM,SIG"
 	," #[0]#Monitor:  26-FE-56(N,P)25-MN-56,,SIG"
 	," #[0]#En=1.44E7"
 	," a0=[MONIT];                   #[0]#old monitor point 0.1"
@@ -5218,33 +5220,26 @@
 }
    ]
    }
-  ,{"SUBENT":"10497036", "isub":36, "compiled":20040114, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10497036", "isub":36, "compiled":20210731, "TransID":"1485", "TransDate":20211207
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(56-BA-130(N,2N)56-BA-129,,SIG)+\n(56-BA-130(N,N+P)55-CS-129,,SIG)"
-	    ,"c4reac":"((N,2N),SIG)+((N,N+P),SIG)"
-	    ,"combi":"a","combiQuant":"Cross section"
-	    ,"MF":503
+	,"x4code":{"code":"56-BA-130(N,X)55-CS-129,CUM,SIG"
+	    ,"c4reac":"(N,X)CUM,SIG"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":9001
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"56-BA-130(N,2N)56-BA-129,,SIG"
-		,"Reac":"N,2N"
+	    {"code":"56-BA-130(N,X)55-CS-129,CUM,SIG"
+		,"Reac":"N,X"
 		,"SF1":"56-BA-130","Targ":{"code":"56-BA-130","nam":"Ba-130","ZA":56130}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"2N"
-		,"SF4":"56-BA-129","Prod":{"code":"56-BA-129","nam":"Ba-129","ZA":56129}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"56-BA-130(N,N+P)55-CS-129,,SIG"
-		,"Reac":"N,N+P"
-		,"SF1":"56-BA-130","Targ":{"code":"56-BA-130","nam":"Ba-130","ZA":56130}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"55-CS-129","Prod":{"code":"55-CS-129","nam":"Cs-129","ZA":55129}
+		,"SF5":"CUM"
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"CUM,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cumulative cross section"
 	    }]}
 	}
       ]
@@ -5265,6 +5260,13 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"25-MN-56", "t12":2.576, "t12units":"HR", "t12sec":9273.6
 	, "Radiations":[ {"Type":"DG", "Energy":[847.0], "Intensity":0.9867}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210612A", "date":"20210612", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION corrected"]
 	}
       ]
     }
@@ -5288,19 +5290,19 @@
 	 [1371,70,100]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10497036", "Pointer":" "
- ,"Subent":"10497036", "compiled":20040114
+ ,"Subent":"10497036", "compiled":20210731
  ,"year1":1970, "author1ini":"W.D.", "author1":"Lu"
- ,"zTarg1":56, "targ1":"Ba-130", "proj1":"n", "emis1":"2N", "MF":503, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":56, "targ1":"Ba-130", "proj1":"n", "emis1":"X", "MF":3, "MT":9001, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(56-BA-130(N,2N)56-BA-129,,SIG)+(56-BA-130(N,N+P)55-CS-129,,SIG)"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
+ ,"reacode":"56-BA-130(N,X)55-CS-129,CUM,SIG"
  ,"compNotes":[]
  ,"DECAY-MON":{"Nuclide":"25-MN-56","HalfLife":"2.576HR","HalfLife1":"2.5789HR"
 	,"RadiationType":"DG","Ene":847.0,"Ene1":846.7638,"Abu":0.9867,"Abu1":0.9885
 	,"FcCorrDECAY_MON":1.0018243
 	,"monitorReaction":"26-FE-56(N,P)25-MN-56,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
-	," #[0]#Reaction: (56-BA-130(N,2N)56-BA-129,,SIG)+(56-BA-130(N,N+P)55-CS-129,,SIG)"
+	," #[0]#Reaction: 56-BA-130(N,X)55-CS-129,CUM,SIG"
 	," #[0]#Monitor:  26-FE-56(N,P)25-MN-56,,SIG"
 	," #[0]#En=1.44E7"
 	," a0=[MONIT];                   #[0]#old monitor point 0.1"
@@ -5672,32 +5674,34 @@
 }
    ]
    }
-  ,{"SUBENT":"10497039", "isub":39, "compiled":20040114, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10497039", "isub":39, "compiled":20210731, "TransID":"1485", "TransDate":20211207
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(56-BA-136(N,2N)56-BA-135-M,,SIG)+\n(56-BA-135(N,INL)56-BA-135-M,,SIG)"
-	    ,"c4reac":"((N,2N),SIG)+((N,INL),SIG)"
+	,"x4code":{"code":"(56-BA-136(N,2N)56-BA-135-M,,SIG,,A)+\n(56-BA-135(N,INL)56-BA-135-M,,SIG,,A)"
+	    ,"c4reac":"((N,2N),SIG,,A)+((N,INL),SIG,,A)"
 	    ,"combi":"a","combiQuant":"Cross section"
 	    ,"MF":503
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"56-BA-136(N,2N)56-BA-135-M,,SIG"
+	    {"code":"56-BA-136(N,2N)56-BA-135-M,,SIG,,A"
 		,"Reac":"N,2N"
 		,"SF1":"56-BA-136","Targ":{"code":"56-BA-136","nam":"Ba-136","ZA":56136}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"2N"
 		,"SF4":"56-BA-135-M","Prod":{"code":"56-BA-135-M","nam":"Ba-135-m","ZA":56135,"ProdM":"M"}
 		,"SF6":"SIG"
+		,"SF8":"A"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }
-	    ,{"code":"56-BA-135(N,INL)56-BA-135-M,,SIG"
+	    ,{"code":"56-BA-135(N,INL)56-BA-135-M,,SIG,,A"
 		,"Reac":"N,INL"
 		,"SF1":"56-BA-135","Targ":{"code":"56-BA-135","nam":"Ba-135","ZA":56135}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"INL","procHlp":"Inelastic scattering"
 		,"SF4":"56-BA-135-M","Prod":{"code":"56-BA-135-M","nam":"Ba-135-m","ZA":56135,"ProdM":"M"}
 		,"SF6":"SIG"
+		,"SF8":"A"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
@@ -5718,6 +5722,13 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"25-MN-56", "t12":2.576, "t12units":"HR", "t12sec":9273.6
 	, "Radiations":[ {"Type":"DG", "Energy":[847.0], "Intensity":0.9867}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210612A", "date":"20210612", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added SF8=A to both reactions"]
 	}
       ]
     }
@@ -5741,19 +5752,19 @@
 	 [1149,80,100]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10497039", "Pointer":" "
- ,"Subent":"10497039", "compiled":20040114
+ ,"Subent":"10497039", "compiled":20210731
  ,"year1":1970, "author1ini":"W.D.", "author1":"Lu"
  ,"zTarg1":56, "targ1":"Ba-136", "proj1":"n", "emis1":"2N", "MF":503, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(56-BA-136(N,2N)56-BA-135-M,,SIG)+(56-BA-135(N,INL)56-BA-135-M,,SIG)"
+ ,"reacode":"(56-BA-136(N,2N)56-BA-135-M,,SIG,,A)+(56-BA-135(N,INL)56-BA-135-M,,SIG,,A)"
  ,"compNotes":[]
  ,"DECAY-MON":{"Nuclide":"25-MN-56","HalfLife":"2.576HR","HalfLife1":"2.5789HR"
 	,"RadiationType":"DG","Ene":847.0,"Ene1":846.7638,"Abu":0.9867,"Abu1":0.9885
 	,"FcCorrDECAY_MON":1.0018243
 	,"monitorReaction":"26-FE-56(N,P)25-MN-56,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
-	," #[0]#Reaction: (56-BA-136(N,2N)56-BA-135-M,,SIG)+(56-BA-135(N,INL)56-BA-135-M,,SIG)"
+	," #[0]#Reaction: (56-BA-136(N,2N)56-BA-135-M,,SIG,,A)+(56-BA-135(N,INL)56-BA-135-M,,SIG,,A)"
 	," #[0]#Monitor:  26-FE-56(N,P)25-MN-56,,SIG"
 	," #[0]#En=1.44E7"
 	," a0=[MONIT];                   #[0]#old monitor point 0.1"
