@@ -1,15 +1,15 @@
-  {"ENTRY":"14197", "updated":20081230, "TransID":"1354", "TransDate":20091028, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14197", "updated":20210731, "TransID":"1485", "TransDate":20211207, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1972,"a1":"F.Pleasonton+","r1":"J,PR/C,6,1023,1972"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.6, p.1023 (1972)"
-   ,"title":"Prompt gamma rays emitted in the thermal neutron induced fission of 235U"
+   ,"title":"Prompt gamma rays emitted in the thermal-neutron-induced fission of 235U"
    ,"x4subents":[
-   {"SUBENT":"14197001", "isub":1, "compiled":20081230, "TransID":"1354", "TransDate":20091028
+   {"SUBENT":"14197001", "isub":1, "compiled":20210731, "TransID":"1485", "TransDate":20211207
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Prompt gamma rays emitted in the thermal neutron"
-		,"induced fission of 235U"]
+	,"x4freetext":["Prompt gamma rays emitted in the"
+		,"thermal-neutron-induced fission of 235U"]
 	}
       ]
      ,"AUTHOR":[
@@ -61,10 +61,10 @@
 	{"x4pointer":" "
 	,"x4codes":[{"code":"SIBAR", "dict":"DETECTOR", "idict":22,"hlp":"Silicon surface barrier detector"}]
 	,"x4freetext":[" The fission fragments were detected by two"
-		,"silicon surface barrier detctors. First detector"
+		,"silicon surface barrier detectors. First detector"
 		,"with area of 600 mm2 was placed at a distance of 3.5"
 		,"cm from neutron beam axis was limited by a"
-		,"colllimator with diameter of 7/8 in., the second"
+		,"collimator with diameter of 7/8 in., the second"
 		,"detector with area of 400 mm2 was collimated using"
 		,"collimator with diameter of 5/8 in."]
 	}
@@ -72,7 +72,7 @@
 	,"x4codes":[{"code":"NAICR", "dict":"DETECTOR", "idict":22,"hlp":"Sodium-Iodide crystal"}]
 	,"x4freetext":[" Gamma rays were detected by an NaI(Tl)"
 		,"crystal with diameter of 5 in. and thickness of 4"
-		,"in., placed at a distamce of 89 cm from the target"
+		,"in., placed at a distance of 89 cm from the target"
 		,"center. NaI(Tl) detector was placed in a lead"
 		,"collimator, limiting its solid angle to 1.602E-2 sr."]
 	}
@@ -88,6 +88,11 @@
 	{"x4pointer":" "
 	,"x4code":{"code":"20081230C", "date":"20081230", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210610A", "date":"20210610", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Corrections in subs.3 and 4"]
 	}
       ]
     }
@@ -300,30 +305,29 @@
 }
    ]
    }
-  ,{"SUBENT":"14197003", "isub":3, "compiled":20081230, "TransID":"1354", "TransDate":20091028
+  ,{"SUBENT":"14197003", "isub":3, "compiled":20210731, "TransID":"1485", "TransDate":20211207
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-235(N,F)MASS,PRE,MLT,G,MXW"
-	    ,"c4reac":"(N,F)MASS,PRE,MLT,G,MXW"
+	,"x4code":{"code":"92-U-235(N,F)MASS,PR,FY,G,MXW"
+	    ,"c4reac":"(N,F)MASS,PR,FY,G,MXW"
 	    ,"combi":"a"
 	    ,"Units":"PART/FIS"
 	    ,"reacs": [
-	    {"code":"92-U-235(N,F)MASS,PRE,MLT,G,MXW"
+	    {"code":"92-U-235(N,F)MASS,PR,FY,G,MXW"
 		,"Reac":"N,F"
 		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF4":"MASS","Prod":{"code":"MASS","nam":"mass"}
-		,"SF5":"PRE"
-		,"SF6":"MLT"
+		,"SF5":"PR"
+		,"SF6":"FY"
 		,"SF7":"G"
 		,"SF8":"MXW"
-		,"SF58":"PRE,MLT,G","Quant":"MLT","BasicUnits":"PART/FIS","QuantHlp":"Pre-neutron emisson fiss.gamma multiplicity"
+		,"SF58":"PR,FY,G","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Prompt fis.gamma yields for fis.frag.specified"
 	    }]}
 	,"x4freetext":[" Average gamma ray"
-		," multiplicity per fission."
-		," Variables MASS1, MASS2 are complimentary mass pairs"]
+		," multiplicity per fission."]
 	}
       ]
      ,"STATUS":[
@@ -341,72 +345,76 @@
 	,"x4freetext":[" No information given"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210610A", "date":"20210610", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" MASS2 deleted (redundant), MASS1 -> MASS,"
+		," REACTION SF3-4 changed to PR,FY"]
+	}
+      ]
     }
-    ,"DATA":{"ncols":4, "nrows":35
+    ,"DATA":{"ncols":3, "nrows":34
       ,"x4headers":[
-       {"icol":0, "header":"MASS1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic mass of 1st nuclide", "pFlag":"1000000"
+       {"icol":0, "header":"MASS", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic mass of nuclide", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"MASS2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic mass of 2nd nuclide", "pFlag":"1000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"PRT/FIS", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"PRT/FIS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"PRT/FIS", "pointer":" "
+      ,{"icol":2, "header":"DATA-ERR", "units":"PRT/FIS", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
-	 ["MASS1"     ,"MASS2"     ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"PRT/FIS"   ,"PRT/FIS"   ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["MASS"      ,"DATA"      ,"DATA-ERR"  ]
+	,["NO-DIM"    ,"PRT/FIS"   ,"PRT/FIS"   ]
+	,[" "         ," "         ," "         ]]
       ,"data":[
-	 [124,112,7.54,1.07]
-	,[125,111,5.47,0.71]
-	,[126,110,6.05,0.54]
-	,[127,109,5.38,0.27]
-	,[128,108,5.73,0.23]
-	,[129,107,5.77,0.13]
-	,[130,106,5.87,0.11]
-	,[131,105,5.66,null]
-	,[132,104,5.85,null]
-	,[133,103,5.85,null]
-	,[134,102,5.85,null]
-	,[135,101,5.89,null]
-	,[136,100,5.97,null]
-	,[137,99,6.11,null]
-	,[138,98,6.42,null]
-	,[139,97,6.63,null]
-	,[140,96,6.86,null]
-	,[141,95,6.81,null]
-	,[142,94,6.77,null]
-	,[143,93,7.02,null]
-	,[144,92,7.23,null]
-	,[145,91,7.35,null]
-	,[146,90,7.24,null]
-	,[147,89,7.03,0.06]
-	,[148,88,7.07,0.13]
-	,[149,87,6.8,0.15]
-	,[150,86,6.88,0.19]
-	,[151,85,6.65,0.17]
-	,[152,84,6.37,0.21]
-	,[153,83,6.14,0.25]
-	,[154,82,6.47,0.31]
-	,[155,81,5.82,0.42]
-	,[156,80,5.97,0.59]
-	,[157,79,7.34,0.77]
-	,[null,null,null,null]]}
+	 [124,7.54,1.07]
+	,[125,5.47,0.71]
+	,[126,6.05,0.54]
+	,[127,5.38,0.27]
+	,[128,5.73,0.23]
+	,[129,5.77,0.13]
+	,[130,5.87,0.11]
+	,[131,5.66,null]
+	,[132,5.85,null]
+	,[133,5.85,null]
+	,[134,5.85,null]
+	,[135,5.89,null]
+	,[136,5.97,null]
+	,[137,6.11,null]
+	,[138,6.42,null]
+	,[139,6.63,null]
+	,[140,6.86,null]
+	,[141,6.81,null]
+	,[142,6.77,null]
+	,[143,7.02,null]
+	,[144,7.23,null]
+	,[145,7.35,null]
+	,[146,7.24,null]
+	,[147,7.03,0.06]
+	,[148,7.07,0.13]
+	,[149,6.8,0.15]
+	,[150,6.88,0.19]
+	,[151,6.65,0.17]
+	,[152,6.37,0.21]
+	,[153,6.14,0.25]
+	,[154,6.47,0.31]
+	,[155,5.82,0.42]
+	,[156,5.97,0.59]
+	,[157,7.34,0.77]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14197003", "Pointer":" "
- ,"Subent":"14197003", "compiled":20081230
+ ,"Subent":"14197003", "compiled":20210731
  ,"year1":1972, "author1ini":"F.", "author1":"Pleasonton"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
- ,"ReactionType":"MLT", "quant":"MLT", "quantExpan":"Pre-neutron emisson fiss.gamma multiplicity"
- ,"reacode":"92-U-235(N,F)MASS,PRE,MLT,G,MXW"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Prompt fis.gamma yields for fis.frag.specified"
+ ,"reacode":"92-U-235(N,F)MASS,PR,FY,G,MXW"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":34
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -434,22 +442,13 @@
     ,"com0":0.0253
     ,"com1":0.0253}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"MASS1", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"92", "rank":2.1
     ,"expansion":"Isotope/particle identification: mass"
     ,"dat0":[124,125,126,127,128,129,130,131,132,133
 	,134,135,136,137,138,139,140,141,142,143
 	,144,145,146,147,148,149,150,151,152,153
 	,154,155,156,157]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"MASS2", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"92", "rank":2.1
-    ,"expansion":"Isotope/particle identification: mass"
-    ,"dat0":[112,111,110,109,108,107,106,105,104,103
-	,102,101,100,99,98,97,96,95,94,93
-	,92,91,90,89,88,87,86,85,84,83
-	,82,81,80,79]
    ,"dat1eq":true}
   ]
  ,"wc5data":3
@@ -477,16 +476,16 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"92", "rank":2.0
       ,"expansion":"Isotope/particle identification: mass"
-      ,"x2":[112,111,110,109,108,107,106,105,104,103
-	,102,101,100,99,98,97,96,95,94,93
-	,92,91,90,89,88,87,86,85,84,83
-	,82,81,80,79]
+      ,"x2":[124,125,126,127,128,129,130,131,132,133
+	,134,135,136,137,138,139,140,141,142,143
+	,144,145,146,147,148,149,150,151,152,153
+	,154,155,156,157]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"14197004", "isub":4, "compiled":20081230, "TransID":"1354", "TransDate":20091028
+  ,{"SUBENT":"14197004", "isub":4, "compiled":20210731, "TransID":"1485", "TransDate":20211207
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -507,8 +506,7 @@
 		,"SF8":"MXW"
 		,"SF58":"PRE,KE,G","Quant":"E","BasicUnits":"EV","QuantHlp":"Pre-neutron emiss.fiss.gamma energy"
 	    }]}
-	,"x4freetext":["Average gamma energy per fission"
-		,"Variables MASS1, MASS2 are complimentary mass pairs"]
+	,"x4freetext":["Average gamma energy per fission"]
 	}
       ]
      ,"STATUS":[
@@ -526,71 +524,75 @@
 	,"x4freetext":[" No information given"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210610A", "date":"20210610", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" MASS2 deleted (redundant), MASS1 -> MASS"]
+	}
+      ]
     }
-    ,"DATA":{"ncols":4, "nrows":34
+    ,"DATA":{"ncols":3, "nrows":34
       ,"x4headers":[
-       {"icol":0, "header":"MASS1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic mass of 1st nuclide", "pFlag":"1000000"
+       {"icol":0, "header":"MASS", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic mass of nuclide", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"MASS2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic mass of 2nd nuclide", "pFlag":"1000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"MEV", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"MEV", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"MEV", "pointer":" "
+      ,{"icol":2, "header":"DATA-ERR", "units":"MEV", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["MASS1"     ,"MASS2"     ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"MEV"       ,"MEV"       ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["MASS"      ,"DATA"      ,"DATA-ERR"  ]
+	,["NO-DIM"    ,"MEV"       ,"MEV"       ]
+	,[" "         ," "         ," "         ]]
       ,"data":[
-	 [124,112,0.86,0.18]
-	,[125,111,0.9,0.16]
-	,[126,110,0.94,0.1]
-	,[127,109,1.01,0.08]
-	,[128,108,1.02,0.05]
-	,[129,107,1.02,0.03]
-	,[130,106,1,0.02]
-	,[131,105,1.07,0.02]
-	,[132,104,1.08,0.02]
-	,[133,103,1.09,0.01]
-	,[134,102,1.06,0.01]
-	,[135,101,1.05,0.02]
-	,[136,100,1.03,0.01]
-	,[137,99,1,0.01]
-	,[138,98,0.98,0.01]
-	,[139,97,0.97,0.01]
-	,[140,96,0.97,0.01]
-	,[141,95,0.97,0.01]
-	,[142,94,0.96,0.01]
-	,[143,93,0.95,0.01]
-	,[144,92,0.94,0.01]
-	,[145,91,0.93,0.01]
-	,[146,90,0.94,0.02]
-	,[147,89,0.9,0.02]
-	,[148,88,0.94,0.02]
-	,[149,87,0.92,0.02]
-	,[150,86,0.96,0.03]
-	,[151,85,1,0.04]
-	,[152,84,0.98,0.05]
-	,[153,83,1.06,0.06]
-	,[154,82,1.11,0.09]
-	,[155,81,1.1,0.11]
-	,[156,80,0.99,0.14]
-	,[157,79,1.19,0.21]]}
+	 [124,0.86,0.18]
+	,[125,0.9,0.16]
+	,[126,0.94,0.1]
+	,[127,1.01,0.08]
+	,[128,1.02,0.05]
+	,[129,1.02,0.03]
+	,[130,1,0.02]
+	,[131,1.07,0.02]
+	,[132,1.08,0.02]
+	,[133,1.09,0.01]
+	,[134,1.06,0.01]
+	,[135,1.05,0.02]
+	,[136,1.03,0.01]
+	,[137,1,0.01]
+	,[138,0.98,0.01]
+	,[139,0.97,0.01]
+	,[140,0.97,0.01]
+	,[141,0.97,0.01]
+	,[142,0.96,0.01]
+	,[143,0.95,0.01]
+	,[144,0.94,0.01]
+	,[145,0.93,0.01]
+	,[146,0.94,0.02]
+	,[147,0.9,0.02]
+	,[148,0.94,0.02]
+	,[149,0.92,0.02]
+	,[150,0.96,0.03]
+	,[151,1,0.04]
+	,[152,0.98,0.05]
+	,[153,1.06,0.06]
+	,[154,1.11,0.09]
+	,[155,1.1,0.11]
+	,[156,0.99,0.14]
+	,[157,1.19,0.21]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14197004", "Pointer":" "
- ,"Subent":"14197004", "compiled":20081230
+ ,"Subent":"14197004", "compiled":20210731
  ,"year1":1972, "author1ini":"F.", "author1":"Pleasonton"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
  ,"ReactionType":"E", "quant":"E", "quantExpan":"Pre-neutron emiss.fiss.gamma energy"
  ,"reacode":"92-U-235(N,F)MASS,PRE,KE,G,MXW"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":4
  ,"lx4data":34
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -624,22 +626,13 @@
     ,"com0":0.0253
     ,"com1":0.0253}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"MASS1", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"92", "rank":2.1
     ,"expansion":"Isotope/particle identification: mass"
     ,"dat0":[124,125,126,127,128,129,130,131,132,133
 	,134,135,136,137,138,139,140,141,142,143
 	,144,145,146,147,148,149,150,151,152,153
 	,154,155,156,157]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"MASS2", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"92", "rank":2.1
-    ,"expansion":"Isotope/particle identification: mass"
-    ,"dat0":[112,111,110,109,108,107,106,105,104,103
-	,102,101,100,99,98,97,96,95,94,93
-	,92,91,90,89,88,87,86,85,84,83
-	,82,81,80,79]
    ,"dat1eq":true}
   ]
  ,"wc5data":3
@@ -667,10 +660,10 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"92", "rank":2.0
       ,"expansion":"Isotope/particle identification: mass"
-      ,"x2":[112,111,110,109,108,107,106,105,104,103
-	,102,101,100,99,98,97,96,95,94,93
-	,92,91,90,89,88,87,86,85,84,83
-	,82,81,80,79]
+      ,"x2":[124,125,126,127,128,129,130,131,132,133
+	,134,135,136,137,138,139,140,141,142,143
+	,144,145,146,147,148,149,150,151,152,153
+	,154,155,156,157]
    }
  }
 }
