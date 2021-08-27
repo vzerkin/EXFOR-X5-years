@@ -1,9 +1,9 @@
-  {"ENTRY":"C2393", "updated":20190424, "TransID":"C185", "TransDate":20190924, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C2393", "updated":20210828, "TransID":"C203", "TransDate":20211122, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1951,"a1":"K.-H.Sun+","r1":"J,PR,82,459,1951","doi1":"10.1103/PhysRev.82.459"
    ,"ref":"Jour: Physical Review, Vol.82, p.459 (1951)"
    ,"title":"Excitation Function of Ta181(d,p)Ta182"
    ,"x4subents":[
-   {"SUBENT":"C2393001", "isub":1, "compiled":20190424, "TransID":"C185", "TransDate":20190924
+   {"SUBENT":"C2393001", "isub":1, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -122,20 +122,28 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" BP"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210625A", "date":"20210625", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. EN-NRM added"]
+	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"MONIT", "units":"B", "pointer":" "
+       {"icol":0, "header":"EN-NRM", "units":"MEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy used for normalization", "pFlag":"0000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"MONIT", "units":"B", "pointer":" "
 	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["MONIT"     ]
-	,["B"         ]
-	,[" "         ]]
+	 ["EN-NRM"    ,"MONIT"     ]
+	,["MEV"       ,"B"         ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [0.028]]}
+	 [15,0.028]]}
    }
   ,{"SUBENT":"C2393002", "isub":2, "compiled":20190424, "TransID":"C185", "TransDate":20190924
     ,"BIB":{
@@ -222,7 +230,7 @@
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"73-TA-181(D,P)73-TA-182,,SIG"
  ,"compNotes":[]
- ,"wx4data":3
+ ,"wx4data":4
  ,"lx4data":31
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -247,8 +255,14 @@
 	,1.2398e+7,1.2637e+7,1.2862e+7,1.3144e+7,1.3467e+7,1.3693e+7,1.4059e+7,1.4228e+7,1.4341e+7,1.4834e+7
 	,1.5e+7]}
   ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
+    ,"header":"EN-NRM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"1", "rank":777.0
+    ,"expansion":"Assumed values"
+    ,"com0":15
+    ,"com1":1.5e+7}
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
     ,"header":"MONIT", "units":"B", "basicUnits":"B"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.0
+    ,"what":"ZZZ", "dataType":"11", "rank":777.1
     ,"expansion":"Assumed values: monitor"
     ,"com0":0.028
     ,"com1":0.028}
