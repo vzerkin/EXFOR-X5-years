@@ -1,9 +1,9 @@
-  {"ENTRY":"C1581", "updated":20120701, "TransID":"C120", "TransDate":20121025, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C1581", "updated":20210828, "TransID":"C203", "TransDate":20211122, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2007,"a1":"C.Zeitlin+","r1":"J,PR/C,76,014911,2007"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.76, p.014911 (2007)"
    ,"title":"Fragmentation cross sections of 290 and 400 MeV/nucleon 12C beams on elemental targets"
    ,"x4subents":[
-   {"SUBENT":"C1581001", "isub":1, "compiled":20120701, "TransID":"C120", "TransDate":20121025
+   {"SUBENT":"C1581001", "isub":1, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -83,8 +83,10 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["No information given"]
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information given on sources of"
+		," uncertainties"]
 	}
       ]
      ,"HISTORY":[
@@ -98,6 +100,11 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" SD: Illegal reaction pointer was deleted"
 		,"                from DETECTOR"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Headings in subs.10-45 changed"]
 	}
       ]
     }
@@ -950,11 +957,11 @@
 }
    ]
    }
-  ,{"SUBENT":"C1581010", "isub":10, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581010", "isub":10, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"1-H-1(6-C-12,X)ELEM,,SIG"
+	,"x4code":{"code":"(1-H-1(6-C-12,X)ELEM,,SIG)=(6-C-12(P,X)ELEM,,SIG)"
 	    ,"c4reac":"(6-C-12,X)ELEM,,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
@@ -999,6 +1006,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -1017,11 +1031,11 @@
 	 [290,7.3]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -1037,7 +1051,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1050,7 +1064,7 @@
 	,[1,null,1,9,30,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581010", "Pointer":" "
- ,"Subent":"C1581010", "compiled":20080403
+ ,"Subent":"C1581010", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -1079,16 +1093,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,2,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,null,3,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,2,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -1125,13 +1139,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,3000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,2000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581011", "isub":11, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581011", "isub":11, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1180,6 +1194,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -1198,11 +1219,11 @@
 	 [290,7.3]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -1218,7 +1239,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1231,7 +1252,7 @@
 	,[1,null,1,81,4,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581011", "Pointer":" "
- ,"Subent":"C1581011", "compiled":20080403
+ ,"Subent":"C1581011", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":6, "targ1":"C-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -1260,16 +1281,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,2,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,null,3,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,2,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -1306,13 +1327,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,3000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,2000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581012", "isub":12, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581012", "isub":12, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1361,6 +1382,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -1379,11 +1407,11 @@
 	 [290,7.3]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -1399,7 +1427,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1412,7 +1440,7 @@
 	,[1,null,1,150,10,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581012", "Pointer":" "
- ,"Subent":"C1581012", "compiled":20080403
+ ,"Subent":"C1581012", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":13, "targ1":"Al-27", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -1441,16 +1469,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,2,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,null,3,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,2,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -1487,13 +1515,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,3000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,2000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581013", "isub":13, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581013", "isub":13, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1548,6 +1576,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -1566,11 +1601,11 @@
 	 [290,7.3]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -1586,7 +1621,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1599,7 +1634,7 @@
 	,[1,null,1,217,24,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581013", "Pointer":" "
- ,"Subent":"C1581013", "compiled":20080403
+ ,"Subent":"C1581013", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":29, "targ1":"Cu-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -1628,16 +1663,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,2,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,null,3,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,2,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -1674,13 +1709,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,3000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,2000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581014", "isub":14, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581014", "isub":14, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1729,6 +1764,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -1747,11 +1789,11 @@
 	 [290,7.3]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -1767,7 +1809,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1780,7 +1822,7 @@
 	,[1,null,1,293,67,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581014", "Pointer":" "
- ,"Subent":"C1581014", "compiled":20080403
+ ,"Subent":"C1581014", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":50, "targ1":"Sn-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -1809,16 +1851,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -1855,13 +1897,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581015", "isub":15, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581015", "isub":15, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1910,6 +1952,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -1928,11 +1977,11 @@
 	 [290,7.3]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -1948,7 +1997,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -1961,7 +2010,7 @@
 	,[1,null,1,354,93,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581015", "Pointer":" "
- ,"Subent":"C1581015", "compiled":20080403
+ ,"Subent":"C1581015", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":82, "targ1":"Pb-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -1990,16 +2039,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -2036,17 +2085,17 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581016", "isub":16, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581016", "isub":16, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"1-H-1(6-C-12,X)ELEM,,SIG"
+	,"x4code":{"code":"(1-H-1(6-C-12,X)ELEM,,SIG)=(6-C-12(P,X)ELEM,,SIG)"
 	    ,"c4reac":"(6-C-12,X)ELEM,,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
@@ -2091,6 +2140,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -2109,11 +2165,11 @@
 	 [290,3.9]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -2129,7 +2185,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -2142,7 +2198,7 @@
 	,[1,null,1,12,3,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581016", "Pointer":" "
- ,"Subent":"C1581016", "compiled":20080403
+ ,"Subent":"C1581016", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -2171,16 +2227,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -2217,13 +2273,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581017", "isub":17, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581017", "isub":17, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2272,6 +2328,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -2290,11 +2353,11 @@
 	 [290,3.9]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -2310,7 +2373,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -2323,7 +2386,7 @@
 	,[1,null,1,91,5,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581017", "Pointer":" "
- ,"Subent":"C1581017", "compiled":20080403
+ ,"Subent":"C1581017", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":6, "targ1":"C-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -2352,16 +2415,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -2398,13 +2461,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581018", "isub":18, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581018", "isub":18, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2453,6 +2516,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -2471,11 +2541,11 @@
 	 [290,3.9]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -2491,7 +2561,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -2504,7 +2574,7 @@
 	,[1,null,1,150,6,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581018", "Pointer":" "
- ,"Subent":"C1581018", "compiled":20080403
+ ,"Subent":"C1581018", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":13, "targ1":"Al-27", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -2533,16 +2603,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -2579,13 +2649,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581019", "isub":19, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581019", "isub":19, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2634,6 +2704,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -2652,11 +2729,11 @@
 	 [290,3.9]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -2672,7 +2749,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -2685,7 +2762,7 @@
 	,[1,null,1,195,24,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581019", "Pointer":" "
- ,"Subent":"C1581019", "compiled":20080403
+ ,"Subent":"C1581019", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":29, "targ1":"Cu-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -2714,16 +2791,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -2760,13 +2837,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581020", "isub":20, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581020", "isub":20, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2815,6 +2892,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -2833,11 +2917,11 @@
 	 [290,3.9]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -2853,7 +2937,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -2866,7 +2950,7 @@
 	,[1,null,1,191,12,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581020", "Pointer":" "
- ,"Subent":"C1581020", "compiled":20080403
+ ,"Subent":"C1581020", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":50, "targ1":"Sn-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -2895,16 +2979,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -2941,13 +3025,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581021", "isub":21, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581021", "isub":21, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2996,6 +3080,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -3014,11 +3105,11 @@
 	 [290,3.9]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -3034,7 +3125,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -3047,7 +3138,7 @@
 	,[1,null,1,329,89,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581021", "Pointer":" "
- ,"Subent":"C1581021", "compiled":20080403
+ ,"Subent":"C1581021", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":82, "targ1":"Pb-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -3076,16 +3167,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -3122,17 +3213,17 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581022", "isub":22, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581022", "isub":22, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"1-H-1(6-C-12,X)ELEM,,SIG"
+	,"x4code":{"code":"(1-H-1(6-C-12,X)ELEM,,SIG)=(6-C-12(P,X)ELEM,,SIG)"
 	    ,"c4reac":"(6-C-12,X)ELEM,,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
@@ -3177,6 +3268,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -3195,11 +3293,11 @@
 	 [290,2.5]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -3215,7 +3313,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -3228,7 +3326,7 @@
 	,[1,null,1,26,3,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581022", "Pointer":" "
- ,"Subent":"C1581022", "compiled":20080403
+ ,"Subent":"C1581022", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -3257,16 +3355,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -3303,13 +3401,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581023", "isub":23, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581023", "isub":23, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3358,6 +3456,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -3376,11 +3481,11 @@
 	 [290,2.5]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -3396,7 +3501,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -3409,7 +3514,7 @@
 	,[1,null,1,87,4,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581023", "Pointer":" "
- ,"Subent":"C1581023", "compiled":20080403
+ ,"Subent":"C1581023", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":6, "targ1":"C-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -3438,16 +3543,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -3484,13 +3589,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581024", "isub":24, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581024", "isub":24, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3539,6 +3644,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -3557,11 +3669,11 @@
 	 [290,2.5]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -3577,7 +3689,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -3590,7 +3702,7 @@
 	,[1,null,1,151,11,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581024", "Pointer":" "
- ,"Subent":"C1581024", "compiled":20080403
+ ,"Subent":"C1581024", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":13, "targ1":"Al-27", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -3619,16 +3731,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -3665,13 +3777,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581025", "isub":25, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581025", "isub":25, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3720,6 +3832,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -3738,11 +3857,11 @@
 	 [290,2.5]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -3758,7 +3877,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -3771,7 +3890,7 @@
 	,[1,null,1,158,31,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581025", "Pointer":" "
- ,"Subent":"C1581025", "compiled":20080403
+ ,"Subent":"C1581025", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":29, "targ1":"Cu-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -3800,16 +3919,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -3846,13 +3965,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581026", "isub":26, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581026", "isub":26, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3901,6 +4020,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -3919,11 +4045,11 @@
 	 [290,2.5]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -3939,7 +4065,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -3952,7 +4078,7 @@
 	,[1,null,1,129,6,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581026", "Pointer":" "
- ,"Subent":"C1581026", "compiled":20080403
+ ,"Subent":"C1581026", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":50, "targ1":"Sn-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -3981,16 +4107,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -4027,13 +4153,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581027", "isub":27, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581027", "isub":27, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4082,6 +4208,13 @@
 	,"x4freetext":[" 3 He fragments or Li+He fragments"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -4100,11 +4233,11 @@
 	 [290,2.5]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -4120,7 +4253,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -4133,7 +4266,7 @@
 	,[1,null,1,204,116,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581027", "Pointer":" "
- ,"Subent":"C1581027", "compiled":20080403
+ ,"Subent":"C1581027", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":82, "targ1":"Pb-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -4162,16 +4295,16 @@
     ,"com0":290
     ,"com1":3.48e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,null,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -4208,17 +4341,17 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,3000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581028", "isub":28, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581028", "isub":28, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"1-H-1(6-C-12,X)ELEM,,SIG"
+	,"x4code":{"code":"(1-H-1(6-C-12,X)ELEM,,SIG)=(6-C-12(P,X)ELEM,,SIG)"
 	    ,"c4reac":"(6-C-12,X)ELEM,,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
@@ -4267,6 +4400,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -4285,11 +4425,11 @@
 	 [400,7.3]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -4305,7 +4445,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -4318,7 +4458,7 @@
 	,[1,null,1,19,14,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581028", "Pointer":" "
- ,"Subent":"C1581028", "compiled":20080403
+ ,"Subent":"C1581028", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -4347,16 +4487,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -4393,13 +4533,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581029", "isub":29, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581029", "isub":29, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4452,6 +4592,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -4470,11 +4617,11 @@
 	 [400,7.3]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -4490,7 +4637,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -4503,7 +4650,7 @@
 	,[1,null,1,72,5,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581029", "Pointer":" "
- ,"Subent":"C1581029", "compiled":20080403
+ ,"Subent":"C1581029", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":6, "targ1":"C-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -4532,16 +4679,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -4578,13 +4725,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581030", "isub":30, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581030", "isub":30, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4637,6 +4784,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -4655,11 +4809,11 @@
 	 [400,7.3]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -4675,7 +4829,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -4688,7 +4842,7 @@
 	,[1,null,1,123,17,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581030", "Pointer":" "
- ,"Subent":"C1581030", "compiled":20080403
+ ,"Subent":"C1581030", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":13, "targ1":"Al-27", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -4717,16 +4871,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -4763,13 +4917,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581031", "isub":31, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581031", "isub":31, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4822,6 +4976,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -4840,11 +5001,11 @@
 	 [400,7.3]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -4860,7 +5021,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -4873,7 +5034,7 @@
 	,[1,null,1,239,17,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581031", "Pointer":" "
- ,"Subent":"C1581031", "compiled":20080403
+ ,"Subent":"C1581031", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":29, "targ1":"Cu-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -4902,16 +5063,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -4948,13 +5109,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581032", "isub":32, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581032", "isub":32, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -5007,6 +5168,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -5025,11 +5193,11 @@
 	 [400,7.3]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -5045,7 +5213,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -5058,7 +5226,7 @@
 	,[1,null,1,275,13,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581032", "Pointer":" "
- ,"Subent":"C1581032", "compiled":20080403
+ ,"Subent":"C1581032", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":50, "targ1":"Sn-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -5087,16 +5255,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -5133,13 +5301,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581033", "isub":33, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581033", "isub":33, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -5192,6 +5360,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -5210,11 +5385,11 @@
 	 [400,7.3]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -5230,7 +5405,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -5243,7 +5418,7 @@
 	,[1,null,1,408,26,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581033", "Pointer":" "
- ,"Subent":"C1581033", "compiled":20080403
+ ,"Subent":"C1581033", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":82, "targ1":"Pb-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -5272,16 +5447,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -5318,17 +5493,17 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581034", "isub":34, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581034", "isub":34, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"1-H-1(6-C-12,X)ELEM,,SIG"
+	,"x4code":{"code":"(1-H-1(6-C-12,X)ELEM,,SIG)=(6-C-12(P,X)ELEM,,SIG)"
 	    ,"c4reac":"(6-C-12,X)ELEM,,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
@@ -5377,6 +5552,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -5395,11 +5577,11 @@
 	 [400,3.9]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -5415,7 +5597,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -5428,7 +5610,7 @@
 	,[1,null,1,20,3,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581034", "Pointer":" "
- ,"Subent":"C1581034", "compiled":20080403
+ ,"Subent":"C1581034", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -5457,16 +5639,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -5503,13 +5685,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581035", "isub":35, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581035", "isub":35, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -5562,6 +5744,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -5580,11 +5769,11 @@
 	 [400,3.9]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -5600,7 +5789,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -5613,7 +5802,7 @@
 	,[1,null,1,85,6,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581035", "Pointer":" "
- ,"Subent":"C1581035", "compiled":20080403
+ ,"Subent":"C1581035", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":6, "targ1":"C-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -5642,16 +5831,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -5688,13 +5877,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581036", "isub":36, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581036", "isub":36, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -5747,6 +5936,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -5765,11 +5961,11 @@
 	 [400,3.9]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -5785,7 +5981,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -5798,7 +5994,7 @@
 	,[1,null,1,119,10,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581036", "Pointer":" "
- ,"Subent":"C1581036", "compiled":20080403
+ ,"Subent":"C1581036", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":13, "targ1":"Al-27", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -5827,16 +6023,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -5873,13 +6069,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581037", "isub":37, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581037", "isub":37, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -5932,6 +6128,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -5950,11 +6153,11 @@
 	 [400,3.9]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -5970,7 +6173,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -5983,7 +6186,7 @@
 	,[1,null,1,182,8,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581037", "Pointer":" "
- ,"Subent":"C1581037", "compiled":20080403
+ ,"Subent":"C1581037", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":29, "targ1":"Cu-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -6012,16 +6215,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -6058,13 +6261,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581038", "isub":38, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581038", "isub":38, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -6117,6 +6320,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -6135,11 +6345,11 @@
 	 [400,3.9]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -6155,7 +6365,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -6168,7 +6378,7 @@
 	,[1,null,1,223,14,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581038", "Pointer":" "
- ,"Subent":"C1581038", "compiled":20080403
+ ,"Subent":"C1581038", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":50, "targ1":"Sn-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -6197,16 +6407,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -6243,13 +6453,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581039", "isub":39, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581039", "isub":39, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -6302,6 +6512,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -6320,11 +6537,11 @@
 	 [400,3.9]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -6340,7 +6557,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -6353,7 +6570,7 @@
 	,[1,null,1,289,14,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581039", "Pointer":" "
- ,"Subent":"C1581039", "compiled":20080403
+ ,"Subent":"C1581039", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":82, "targ1":"Pb-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -6382,16 +6599,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -6428,17 +6645,17 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581040", "isub":40, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581040", "isub":40, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"1-H-1(6-C-12,X)ELEM,,SIG"
+	,"x4code":{"code":"(1-H-1(6-C-12,X)ELEM,,SIG)=(6-C-12(P,X)ELEM,,SIG)"
 	    ,"c4reac":"(6-C-12,X)ELEM,,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
@@ -6487,6 +6704,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -6505,11 +6729,11 @@
 	 [400,2.5]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -6525,7 +6749,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -6538,7 +6762,7 @@
 	,[1,null,1,24,2,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581040", "Pointer":" "
- ,"Subent":"C1581040", "compiled":20080403
+ ,"Subent":"C1581040", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":1, "targ1":"H-1", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -6567,16 +6791,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -6613,13 +6837,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581041", "isub":41, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581041", "isub":41, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -6672,6 +6896,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -6690,11 +6921,11 @@
 	 [400,2.5]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -6710,7 +6941,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -6723,7 +6954,7 @@
 	,[1,null,1,77,9,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581041", "Pointer":" "
- ,"Subent":"C1581041", "compiled":20080403
+ ,"Subent":"C1581041", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":6, "targ1":"C-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -6752,16 +6983,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -6798,13 +7029,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581042", "isub":42, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581042", "isub":42, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -6857,6 +7088,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -6875,11 +7113,11 @@
 	 [400,2.5]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -6895,7 +7133,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -6908,7 +7146,7 @@
 	,[1,null,1,100,4,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581042", "Pointer":" "
- ,"Subent":"C1581042", "compiled":20080403
+ ,"Subent":"C1581042", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":13, "targ1":"Al-27", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -6937,16 +7175,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -6983,13 +7221,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581043", "isub":43, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581043", "isub":43, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -7042,6 +7280,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -7060,11 +7305,11 @@
 	 [400,2.5]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -7080,7 +7325,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -7093,7 +7338,7 @@
 	,[1,null,1,145,5,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581043", "Pointer":" "
- ,"Subent":"C1581043", "compiled":20080403
+ ,"Subent":"C1581043", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":29, "targ1":"Cu-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -7122,16 +7367,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -7168,13 +7413,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581044", "isub":44, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581044", "isub":44, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -7227,6 +7472,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -7245,11 +7497,11 @@
 	 [400,2.5]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -7265,7 +7517,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -7278,7 +7530,7 @@
 	,[1,null,1,163,6,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581044", "Pointer":" "
- ,"Subent":"C1581044", "compiled":20080403
+ ,"Subent":"C1581044", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":50, "targ1":"Sn-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -7307,16 +7559,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -7353,13 +7605,13 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1581045", "isub":45, "compiled":20080403, "TransID":"C088", "TransDate":20081218
+  ,{"SUBENT":"C1581045", "isub":45, "compiled":20210828, "TransID":"C203", "TransDate":20211122
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -7412,6 +7664,13 @@
 	,"x4freetext":[" 2 He or 1 Li fragment"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210629A", "date":"20210629", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ELEM1, ELEM2 replaced with ELEMENT"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -7430,11 +7689,11 @@
 	 [400,2.5]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
-       {"icol":0, "header":"ELEM1", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 1st element", "pFlag":"1000000"
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ELEM2", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of 2nd element", "pFlag":"1000000"
+      ,{"icol":1, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ,{"icol":2, "header":"MISC1", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"1st miscellaneous field, defined under MISC-COL", "pFlag":"0000000"
@@ -7450,7 +7709,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEM1"     ,"ELEM2"     ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
+	 ["ELEMENT"   ,"ELEMENT"   ,"MISC1"     ,"DATA"      ,"DATA-ERR"  ,"FLAG"      ]
 	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"MB"        ,"MB"        ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -7463,7 +7722,7 @@
 	,[1,null,1,187,12,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1581045", "Pointer":" "
- ,"Subent":"C1581045", "compiled":20080403
+ ,"Subent":"C1581045", "compiled":20210828
  ,"year1":2007, "author1ini":"C.", "author1":"Zeitlin"
  ,"zTarg1":82, "targ1":"Pb-0", "proj1":"C-12", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -7492,16 +7751,16 @@
     ,"com0":400
     ,"com1":4.8e+9}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM1", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[5,4,4,3,3,2,1]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEM2", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[null,2,null,2,2,null,null]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[5,4,4,3,3,2,1]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"FLAG", "units":"NO-DIM", "basicUnits":"NO-DIM"
@@ -7538,7 +7797,7 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[5000,2000,4000,2000,2000,2000,1000]
+      ,"x2":[5000,4000,4000,3000,3000,2000,1000]
    }
  }
 }
