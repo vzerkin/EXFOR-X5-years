@@ -1,9 +1,9 @@
-  {"ENTRY":"12585", "updated":20200430, "TransID":"1471", "TransDate":20201124, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"12585", "updated":20210920, "TransID":"1487", "TransDate":20220214, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1954,"a1":"C.M.Stevens+","r1":"J,PR,94,974,1954","doi1":"10.1103/PhysRev.94.974"
    ,"ref":"Jour: Physical Review, Vol.94, p.974 (1954)"
    ,"title":"Curium Isotopes 246 and 247 from Pile-Irradiated Plutonium"
    ,"x4subents":[
-   {"SUBENT":"12585001", "isub":1, "compiled":20200430, "TransID":"1471", "TransDate":20201124
+   {"SUBENT":"12585001", "isub":1, "compiled":20210920, "TransID":"1487", "TransDate":20220214
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -97,7 +97,7 @@
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}
-	    ,{"code":"MASSP", "dict":"METHOD", "idict":21,"hlp":"Mass spectrometry of a product"}]
+	    ,{"code":"ASEP", "dict":"METHOD", "idict":21,"hlp":"Off-line mass separation of a product"}]
 	,"x4freetext":[" The curium produced by the irradiation"
 		,"of two plutonium samples (total integrated fluxes"
 		,"4x10**21 and 8x10**21 neutrons) in the Materials"
@@ -145,10 +145,15 @@
 		,"           case and BIB section. Corrections according"
 		,"           last EXFOR rules and Dict."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210901A", "date":"20210901", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Data correction in sub.2"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"12585002", "isub":2, "compiled":20200430, "TransID":"1471", "TransDate":20201124
+  ,{"SUBENT":"12585002", "isub":2, "compiled":20210920, "TransID":"1487", "TransDate":20220214
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -171,11 +176,11 @@
 	    }]}
 	}
       ]
-     ,"ANALYSIS":[
+     ,"METHOD":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Calculated from the relative quantities of Am243 and"
-		,"Cm244 present at the end of the irradiations"]
+	,"x4codes":[{"code":"BURN", "dict":"METHOD", "idict":21,"hlp":"Burn-up"}]
+	,"x4freetext":[" Calculated from the relative quantities of Am243"
+		,"and Cm244 present at the end of the irradiations"]
 	}
       ]
      ,"DECAY-DATA":[
@@ -188,6 +193,13 @@
      ,"ASSUMED":[
 	{"x4pointer":" "
 	,"x4code":{"code":"orig::ASSUM,96-CM-244(N,G)96-CM-245,,SIG"}
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210901A", "date":"20210901", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" DATA-ERR value corrected"]
 	}
       ]
     }
@@ -223,10 +235,10 @@
 	,["MEV"       ,"B"         ,"B"         ,"B"         ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [2.53E-8,115,0,25]]}
+	 [2.53E-8,115,20,25]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"12585002", "Pointer":" "
- ,"Subent":"12585002", "compiled":20200430
+ ,"Subent":"12585002", "compiled":20210920
  ,"year1":1954, "author1ini":"C.M.", "author1":"Stevens"
  ,"zTarg1":95, "targ1":"Am-243", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -246,7 +258,7 @@
     ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[0]
+    ,"dat0":[20]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":false, "ifCM":false
     ,"header":"EN-DUMMY", "units":"MEV", "basicUnits":"EV"
@@ -274,7 +286,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[115]
-      ,"dy":[0]   }
+      ,"dy":[20]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
