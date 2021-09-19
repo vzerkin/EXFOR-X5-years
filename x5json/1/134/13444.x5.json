@@ -1,9 +1,9 @@
-  {"ENTRY":"13444", "updated":20101116, "TransID":"1369", "TransDate":20110117, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"13444", "updated":20210920, "TransID":"1487", "TransDate":20220214, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1976,"a1":"G.P.Ford+","r1":"R,LA-6129,1976"
    ,"ref":"Rept: Los Alamos Scientific Lab. Reports, No.6129 (1976)"
    ,"title":"A compilation of yields from neutron-induced fission of 232Th, 235U, 236U, 237Np, 238U, and 239Pu measured radiochemically at Los Alamos"
    ,"x4subents":[
-   {"SUBENT":"13444001", "isub":1, "compiled":20101116, "TransID":"1369", "TransDate":20110117
+   {"SUBENT":"13444001", "isub":1, "compiled":20210920, "TransID":"1487", "TransDate":20220214
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,13 +12,13 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,LA-6129,197602","stdFileName":"R,LA-6129,1976"
+	,"x4codes":[{"code":"R,LA-6129,1976","stdFileName":"R,LA-6129,1976"
 		,"year":1976,"typ":"R","ref":"R,LA-","no":"6129"
 		,"shortRef":"Rept: Los Alamos Scientific Lab. Reports, No.6129 (1976)"}]
 	,"x4freetext":[" Data compilation"]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,LA-1997,195602","stdFileName":"R,LA-1997,1956"
+	,"x4codes":[{"code":"R,LA-1997,1956","stdFileName":"R,LA-1997,1956"
 		,"year":1956,"typ":"R","ref":"R,LA-","no":"1997"
 		,"shortRef":"Rept: Los Alamos Scientific Lab. Reports, No.1997 (1956)"}]
 	}
@@ -35,6 +35,16 @@
 	,"x4freetext":["A compilation of yields from neutron-induced fission"
 		," of 232Th, 235U, 236U, 237Np, 238U, and 239Pu"
 		," measured radiochemically at Los Alamos"]
+	}
+      ]
+     ,"REL-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"O,13445001,G.P.Ford+,R,LA-6129,1976"
+		,"flag":{"code":"O", "help":" Reference to related data compiled in another entry"}
+		,"subent":"13445001","author1":"G.P.Ford+","stdFileName":"R,LA-6129,1976"
+		,"year":1976,"typ":"R","ref":"R,LA-","no":"6129"
+		,"shortRef":"Rept: Los Alamos Scientific Lab. Reports, No.6129 (1976)"}]
+	,"x4freetext":[" Data for fast reactor neutrons"]
 	}
       ]
      ,"FACILITY":[
@@ -56,7 +66,7 @@
       ]
      ,"METHOD":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"RCHEM", "dict":"METHOD", "idict":21,"hlp":"Radiochemical separation"}]
+	,"x4codes":[{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -71,7 +81,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data taken from La-6129 (CW 14 MeV)."]
+	,"x4freetext":[" Data taken from LA-6129"]
 	}
       ]
      ,"HISTORY":[
@@ -85,6 +95,12 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" VM:Updated to new date formats,lower case."
 		,"            BIB update. Error heading update."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210918A", "date":"20210918", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Important correction in sub.5,"
+		," REL-REF added"]
 	}
       ]
     }
@@ -1019,7 +1035,7 @@
 }
    ]
    }
-  ,{"SUBENT":"13444005", "isub":5, "compiled":20101116, "TransID":"1369", "TransDate":20110117
+  ,{"SUBENT":"13444005", "isub":5, "compiled":20210920, "TransID":"1487", "TransDate":20220214
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
@@ -1108,22 +1124,36 @@
 		,"reaction":"92-U-235(N,F)ELEM/MASS,IND,FY,,MXW"}
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210918A", "date":"20210918", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Data unit of MONIT1 corrected,"
+		," EN-DUM-DN added"]
+	}
+      ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
+    ,"COMMON":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
+       {"icol":0, "header":"EN-NM", "units":"MEV", "pointer":"1"
+	,"headerHelp":"Incident projectile energy, REACTION ratio numerator", "pFlag":"1100000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"EN-DUM-DN", "units":"EV", "pointer":"1"
+	,"headerHelp":"Dummy incident energy, REACTION ratio denominator", "pFlag":"1200000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":2, "header":"EN", "units":"MEV", "pointer":"2"
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"MONIT1", "units":"PC/FIS", "pointer":"2"
+      ,{"icol":3, "header":"MONIT1", "units":"NO-DIM", "pointer":"2"
 	,"headerHelp":"1st normalization value, see MONITOR", "pFlag":"0000000"
-	,"unitsHelp":"particles per 100 fissions","familyCode":"FY","convFc":0.01,"basicUnits":"PART/FIS"}
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN"        ,"MONIT1"    ]
-	,["MEV"       ,"PC/FIS"    ]
-	,[" "         ,"2"         ]]
+	 ["EN-NM"     ,"EN-DUM-DN" ,"EN"        ,"MONIT1"    ]
+	,["MEV"       ,"EV"        ,"MEV"       ,"NO-DIM"    ]
+	,["1"         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
-	 [14.7,0.878]]}
+	 [14.7,0.0253,14.7,0.878]]}
     ,"DATA":{"ncols":6, "nrows":3
       ,"x4headers":[
        {"icol":0, "header":"MASS", "units":"NO-DIM", "pointer":" "
@@ -1155,14 +1185,14 @@
 	,[136,55,46,2.7,0.214,5.308E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"134440051", "Pointer":"1"
- ,"Subent":"13444005", "compiled":20101116
+ ,"Subent":"13444005", "compiled":20210920
  ,"year1":1976, "author1ini":"G.P.", "author1":"Ford"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"Ratio", "quant":"FY", "quantExpan":"Ratio of [Independent fission-product yield]"
  ,"reacode":"((92-U-235(N,F)ELEM/MASS,IND,FY)/(92-U-235(N,F)42-MO-99,CUM,FY))//((92-U-235(N,F)ELEM/MASS,IND,FY,,MXW)/(92-U-235(N,F)42-MO-99,CUM,FY,,MXW))"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":3
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1172,18 +1202,24 @@
     ,"dat0":[44,6,46]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"header":"EN-NM", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value-nm", "dataType":"41", "rank":1.11
     ,"expansion":"Incident energy: energy"
     ,"com0":14.7
     ,"com1":1.47e+7}
-  ,{"ivar":2, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUM-DN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value-dn", "dataType":"43", "rank":1.12
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"dat0":[35,41,55]
    ,"dat1eq":true}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"92", "rank":2.1
     ,"expansion":"Isotope/particle identification: mass"
@@ -1201,7 +1237,7 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
-      ,"x1":[1.47e+7,1.47e+7,1.47e+7]
+      ,"x1":[0.0253,0.0253,0.0253]
    }
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
@@ -1211,7 +1247,7 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"134440052", "Pointer":"2"
- ,"Subent":"13444005", "compiled":20101116
+ ,"Subent":"13444005", "compiled":20210920
  ,"year1":1976, "author1ini":"G.P.", "author1":"Ford"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":801, "MT":18, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -1252,11 +1288,11 @@
     ,"dat0":[82,96,136]
    ,"dat1eq":true}
   ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"MONIT1", "units":"PC/FIS", "basicUnits":"PART/FIS"
+    ,"header":"MONIT1", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"ZZZ", "dataType":"11", "rank":777.0
     ,"expansion":"Assumed values: monitor"
     ,"com0":0.878
-    ,"com1":0.00878}
+    ,"com1":0.878}
   ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"MONIT2", "units":"PC/FIS", "basicUnits":"PART/FIS"
     ,"what":"ZZZ", "dataType":"11", "rank":777.1
