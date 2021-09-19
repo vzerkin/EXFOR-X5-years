@@ -1,9 +1,9 @@
-  {"ENTRY":"14008", "updated":20120810, "TransID":"1385", "TransDate":20121127, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14008", "updated":20210920, "TransID":"1487", "TransDate":20220214, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1992,"a1":"T.M.Hamilton+","r1":"J,PR/C,46,1873,1992"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.46, p.1873 (1992)"
    ,"title":"Spontaneous fission properties of 103-Lr-259"
    ,"x4subents":[
-   {"SUBENT":"14008001", "isub":1, "compiled":20120810, "TransID":"1385", "TransDate":20121127
+   {"SUBENT":"14008001", "isub":1, "compiled":20210920, "TransID":"1487", "TransDate":20220214
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -94,29 +94,34 @@
 	,"x4freetext":[" SD: BIB update. INC-SOURCE deleted."
 		,"  SF7=LF/HF -> LF+HF in REACTION code of Subent  2."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210829A", "date":"20210829", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION corrected in sub.2"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"14008002", "isub":2, "compiled":20120810, "TransID":"1385", "TransDate":20121127
+  ,{"SUBENT":"14008002", "isub":2, "compiled":20210920, "TransID":"1487", "TransDate":20220214
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"103-LR-259(0,F),PRE,DE,LF+HF,REL"
-	    ,"c4reac":"(0,F)PRE,DE,LF+HF,REL"
+	,"x4code":{"code":"103-LR-259(0,F),PRE,FY/DE,LF+HF,REL"
+	    ,"c4reac":"(0,F)PRE,FY/DE,LF+HF,REL"
 	    ,"combi":"a"
 	    ,"MF":600
 	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"103-LR-259(0,F),PRE,DE,LF+HF,REL"
+	    {"code":"103-LR-259(0,F),PRE,FY/DE,LF+HF,REL"
 		,"Reac":"0,F"
 		,"SF1":"103-LR-259","Targ":{"code":"103-LR-259","nam":"Lr-259","ZA":103259}
 		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF5":"PRE"
-		,"SF6":"DE"
+		,"SF6":"FY/DE"
 		,"SF7":"LF+HF"
 		,"SF8":"REL"
-		,"SF58":"PRE,DE,LF+HF","Quant":"DE","BasicUnits":"ARB-UNITS","QuantHlp":"Sum of prim.fragm.en.,total kin.en.spectrum"
+		,"SF58":"PRE,FY/DE,LF+HF","Quant":"FY","BasicUnits":"ARB-UNITS","QuantHlp":"Diff. primary fission product yield w.r.t. total"
 	    }]}
 	,"x4freetext":[" Total kinetic energy distribution"
 		," in units of events/10 MeV"]
@@ -142,6 +147,11 @@
 	,"x4code":{"code":"20120810A", "date":"20120810", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: SF7=LF/HF -> LF+HF in REACTION code."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210829A", "date":"20210829", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF6 corrected"]
 	}
       ]
     }
@@ -176,12 +186,12 @@
 	,[265,0.308,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14008002", "Pointer":" "
- ,"Subent":"14008002", "compiled":20120810
+ ,"Subent":"14008002", "compiled":20210920
  ,"year1":1992, "author1ini":"T.M.", "author1":"Hamilton"
- ,"zTarg1":103, "targ1":"Lr-259", "proj1":"0", "emis1":"F", "MF":600, "MT":0, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0  3       ", "getYFormulaStr":"y=DATA(E2)"
- ,"ReactionType":"DE", "quant":"DE", "quantExpan":"Sum of prim.fragm.en.,total kin.en.spectrum"
- ,"reacode":"103-LR-259(0,F),PRE,DE,LF+HF,REL"
+ ,"zTarg1":103, "targ1":"Lr-259", "proj1":"0", "emis1":"F", "MF":600, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0  3   7   ", "getYFormulaStr":"y=y(x1,x2)"
+ ,"ReactionType":"FYE", "quant":"FY", "quantExpan":"Diff. primary fission product yield w.r.t. total"
+ ,"reacode":"103-LR-259(0,F),PRE,FY/DE,LF+HF,REL"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":12
@@ -209,7 +219,7 @@
     ,"dat1":[1.55e+8,1.64e+8,1.74e+8,1.84e+8,1.94e+8,2.05e+8,2.15e+8,2.25e+8,2.35e+8,2.45e+8
 	,2.55e+8,2.65e+8]}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":12
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
