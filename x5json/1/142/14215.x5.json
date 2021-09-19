@@ -1,9 +1,9 @@
-  {"ENTRY":"14215", "updated":20110519, "TransID":"1372", "TransDate":20110703, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14215", "updated":20210920, "TransID":"1487", "TransDate":20220214, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2007,"a1":"J.Taieb+","r1":"C,2007NICE,1,429,2007"
    ,"ref":"Conf: Conf.on Nucl.Data for Sci. and Technology, Nice 2007, Vol.1, p.429 (2007)"
    ,"title":"Measurement of the average energy and multiplicity of prompt-fission neutrons from 238U(n,f) and 237Np(n,f) from 1 to 200MeV"
    ,"x4subents":[
-   {"SUBENT":"14215001", "isub":1, "compiled":20110519, "TransID":"1372", "TransDate":20110703
+   {"SUBENT":"14215001", "isub":1, "compiled":20210920, "TransID":"1487", "TransDate":20220214
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -54,7 +54,7 @@
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"IOCH", "dict":"DETECTOR", "idict":22,"hlp":"Ionization chamber"}]
-	,"x4freetext":["10 cm long ionisation chamber containing 94"
+	,"x4freetext":["10 cm long ionization chamber containing 94"
 		,"plates where 380 mg of pure actinide (resp. 238U or"
 		,"237Np) were deposited was used for detection of"
 		,"fission fragments and provided a time signal for"
@@ -74,7 +74,7 @@
 	    ,{"code":"PSD", "dict":"METHOD", "idict":21,"hlp":"Pulse-shape discrimination"}]
 	,"x4freetext":["Kinetic energy of the incoming neutrons was"
 		,"measured by time-of-flight defined by linac pulse"
-		,"timing and ionisation chamber time signal. The energy"
+		,"timing and ionization chamber time signal. The energy"
 		,"of fission neutrons was determined by measurement of"
 		,"time between fission chamber event and timing signal"
 		,"from scintillation detector. Pulse-shape analysis"
@@ -108,6 +108,11 @@
 	,"x4code":{"code":"20110515U", "date":"20110515", "act":"U", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" OS. BIB update"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210828A", "date":"20210828", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Correction in sub.4"]
 	}
       ]
     }
@@ -442,24 +447,24 @@
 }
    ]
    }
-  ,{"SUBENT":"14215004", "isub":4, "compiled":20110124, "TransID":"1370", "TransDate":20110301
+  ,{"SUBENT":"14215004", "isub":4, "compiled":20210920, "TransID":"1487", "TransDate":20220214
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"93-NP-237(N,F),PR,KE,N"
-	    ,"c4reac":"(N,F)PR,KE,N"
+	,"x4code":{"code":"93-NP-237(N,F)0-NN-1,PR,KE"
+	    ,"c4reac":"(N,F)PR,KE"
 	    ,"combi":"a"
 	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"93-NP-237(N,F),PR,KE,N"
+	    {"code":"93-NP-237(N,F)0-NN-1,PR,KE"
 		,"Reac":"N,F"
 		,"SF1":"93-NP-237","Targ":{"code":"93-NP-237","nam":"Np-237","ZA":93237}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF5":"PR"
 		,"SF6":"KE"
-		,"SF7":"N"
-		,"SF58":"PR,KE,N","Quant":"E","BasicUnits":"EV","QuantHlp":"Av.kin.energ.of prompt ntr.f.fis.frag.specified"
+		,"SF58":"PR,KE","Quant":"E","BasicUnits":"EV","QuantHlp":"Kin.energy averaged for prompt prod. specified"
 	    }]}
 	}
       ]
@@ -467,7 +472,7 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["380 mg of pure 237NP deposited on 94 plates"
-		,"of the the ionisation chamber"]
+		,"of the ionization chamber"]
 	}
       ]
      ,"STATUS":[
@@ -485,6 +490,11 @@
 	,"x4code":{"code":"20101122A", "date":"20101122", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" OS. REACTION SF6 changed from AKE to KE"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210828A", "date":"20210828", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION code modified"]
 	}
       ]
     }
@@ -540,12 +550,12 @@
 	,[190.07,2.22,0.06]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14215004", "Pointer":" "
- ,"Subent":"14215004", "compiled":20110124
+ ,"Subent":"14215004", "compiled":20210920
  ,"year1":2007, "author1ini":"J.", "author1":"Taieb"
  ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"E", "quant":"E", "quantExpan":"Av.kin.energ.of prompt ntr.f.fis.frag.specified"
- ,"reacode":"93-NP-237(N,F),PR,KE,N"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Kin.energy averaged for prompt prod. specified"
+ ,"reacode":"93-NP-237(N,F)0-NN-1,PR,KE"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":33
