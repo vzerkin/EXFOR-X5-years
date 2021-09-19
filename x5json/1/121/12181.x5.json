@@ -1,9 +1,9 @@
-  {"ENTRY":"12181", "updated":20120820, "TransID":"1385", "TransDate":20121127, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"12181", "updated":20210920, "TransID":"1487", "TransDate":20220214, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1960,"a1":"A.Poularikas+","r1":"R,A-ARK-59,4,1960"
    ,"ref":"Prog: Univ. of Arkansas Reports, No.59, p.4 (1960)"
    ,"title":"Absolute activation cross-sections for 14.8 neutrons"
    ,"x4subents":[
-   {"SUBENT":"12181001", "isub":1, "compiled":20120820, "TransID":"1385", "TransDate":20121127
+   {"SUBENT":"12181001", "isub":1, "compiled":20210920, "TransID":"1487", "TransDate":20220214
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -36,6 +36,14 @@
 	,"x4freetext":[" Activation"]
 	}
       ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information available on source of"
+		," uncertainties"]
+	}
+      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
@@ -65,6 +73,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: Ref. was corrected (ARK-60 => ARK-59)."
 		,"        Title added."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210825A", "date":"20210825", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION corrected in sub.5"]
 	}
       ]
     }
@@ -354,31 +367,22 @@
 }
    ]
    }
-  ,{"SUBENT":"12181005", "isub":5, "compiled":19821012, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"12181005", "isub":5, "compiled":20210920, "TransID":"1487", "TransDate":20220214
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(74-W-186(N,N+P)73-TA-185,,SIG)+\n(74-W-186(N,D)73-TA-185,,SIG)"
-	    ,"c4reac":"((N,N+P),SIG)+((N,D),SIG)"
-	    ,"combi":"a","combiQuant":"Cross section"
+	,"x4code":{"code":"74-W-186(N,X)73-TA-185,,SIG"
+	    ,"c4reac":"(N,X),SIG"
+	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":1003
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"74-W-186(N,N+P)73-TA-185,,SIG"
-		,"Reac":"N,N+P"
+	    {"code":"74-W-186(N,X)73-TA-185,,SIG"
+		,"Reac":"N,X"
 		,"SF1":"74-W-186","Targ":{"code":"74-W-186","nam":"W-186","ZA":74186}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"N+P"
-		,"SF4":"73-TA-185","Prod":{"code":"73-TA-185","nam":"Ta-185","ZA":73185}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"74-W-186(N,D)73-TA-185,,SIG"
-		,"Reac":"N,D"
-		,"SF1":"74-W-186","Targ":{"code":"74-W-186","nam":"W-186","ZA":74186}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"D"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"73-TA-185","Prod":{"code":"73-TA-185","nam":"Ta-185","ZA":73185}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -389,6 +393,13 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"73-TA-185", "t12":45.0, "t12units":"MIN", "t12sec":2700.0
 	, "Radiations":[]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210825A", "date":"20210825", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to X"]
 	}
       ]
     }
@@ -412,12 +423,12 @@
 	 [14.8,0.0015,8.0E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"12181005", "Pointer":" "
- ,"Subent":"12181005", "compiled":19821012
+ ,"Subent":"12181005", "compiled":20210920
  ,"year1":1960, "author1ini":"A.", "author1":"Poularikas"
- ,"zTarg1":74, "targ1":"W-186", "proj1":"n", "emis1":"N+P", "MF":3, "MT":1003, "nExpectedArgs":1
+ ,"zTarg1":74, "targ1":"W-186", "proj1":"n", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(74-W-186(N,N+P)73-TA-185,,SIG)+(74-W-186(N,D)73-TA-185,,SIG)"
+ ,"reacode":"74-W-186(N,X)73-TA-185,,SIG"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":1
