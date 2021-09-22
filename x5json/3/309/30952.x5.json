@@ -1,9 +1,9 @@
-  {"ENTRY":"30952", "updated":20090914, "TransID":"3141", "TransDate":20091223, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
-   ,"y1":1969,"a1":"C.Braun+","r1":"R,IA-1218,93,1969"
-   ,"ref":"Prog: Israel AEC Reports, No.1218, p.93 (1969)"
-   ,"title":"Determination of independent fission yields of short-lived halogens in the thermal fission of 235U"
+  {"ENTRY":"30952", "updated":20210923, "TransID":"3203", "TransDate":20211217, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+   ,"y1":1968,"a1":"C.Braun+","r1":"R,IA-1190,104,1968"
+   ,"ref":"Prog: Israel AEC Reports, No.1190, p.104 (1968)"
+   ,"title":"Separation of short-lived bromine and iodine fission products, and measurement of their nuclear properties"
    ,"x4subents":[
-   {"SUBENT":"30952001", "isub":1, "compiled":20090914, "TransID":"3141", "TransDate":20091223
+   {"SUBENT":"30952001", "isub":1, "compiled":20210923, "TransID":"3203", "TransDate":20211217
     ,"BIB":{
       "AUTHOR":[
 	{"x4pointer":" "
@@ -14,22 +14,15 @@
      ,"TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Determination of independent fission yields of"
-		,"short-lived halogens in the thermal fission of 235U"]
+	,"x4freetext":["Separation of short-lived bromine and iodine fission"
+		,"products, and measurement of their nuclear properties"]
 	}
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"P,IA-1218,93,1969","stdFileName":"R,IA-1218,93,1969"
-		,"year":1969,"typ":"P","ref":"R,IA-","no":"1218","p":"93"
-		,"shortRef":"Prog: Israel AEC Reports, No.1218, p.93 (1969)"}]
-	,"x4freetext":[" Derived inedependent fission yields"]
-	}
-	,{"x4pointer":" "
 	,"x4codes":[{"code":"P,IA-1190,104,1968","stdFileName":"R,IA-1190,104,1968"
 		,"year":1968,"typ":"P","ref":"R,IA-","no":"1190","p":"104"
 		,"shortRef":"Prog: Israel AEC Reports, No.1190, p.104 (1968)"}]
-	,"x4freetext":["  Measured delayed neutron yields"]
 	}
       ]
      ,"INSTITUTE":[
@@ -39,14 +32,22 @@
       ]
      ,"METHOD":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"RCHEM", "dict":"METHOD", "idict":21,"hlp":"Radiochemical separation"}]
+	,"x4codes":[{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"GSPEC", "dict":"METHOD", "idict":21,"hlp":"Gamma ray spectrometry"}]
 	}
       ]
      ,"ANALYSIS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Independent yields were deduced from previoulsly"
-		,"measured delayed neutron yield ratios (2nd reference)"]
+	,"x4codes":[{"code":"DECAY", "dict":"ANALYSIS", "idict":23,"hlp":"Decay curve analysis"}]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information on sources of uncertainties."]
 	}
       ]
      ,"STATUS":[
@@ -57,10 +58,10 @@
 	,"x4freetext":[".Reference 69BRA2"]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"NCHKD"
-		,"flag":"NCHKD", "help":"Authenticity not confirmed"
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":["."]
+	,"x4freetext":[".Table 1 of IA-1218, p93 (1969)."]
 	}
       ]
      ,"HISTORY":[
@@ -87,6 +88,14 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD:Updated to new date formats,lower case."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210923A", "date":"20210923", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. Reference (P,IA-1218,93,1969) deleted."
+		,"            Subentry 002 deleted. Yield derived from"
+		,"            delayed neutron yields ratios."
+		,"            New subentries 003-011 added."]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
@@ -102,16 +111,16 @@
       ,"data":[
 	 [0.0253]]}
    }
-  ,{"SUBENT":"30952002", "isub":2, "compiled":20090914, "TransID":"3141", "TransDate":20091223
+  ,{"SUBENT":"30952002", "isub":2, "compiled":20210923, "TransID":"3203", "TransDate":20211217, "nosubent":true 
+   }
+  ,{"SUBENT":"30952003", "isub":3, "compiled":20210923, "TransID":"3203", "TransDate":20211217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"92-U-235(N,F)ELEM/MASS,IND,FY,,MXW"
-	    ,"c4reac":"(N,F)ELEM/MASS,IND,FY,,MXW"
-	    ,"combi":"a"
-	    ,"MF":801
-	    ,"MT":18
-	    ,"Units":"PART/FIS"
+	,"x4code":{"code":"(92-U-235(N,F)ELEM/MASS,IND,FY,,MXW)/\n(92-U-235(N,F)35-BR-88,IND,FY,,MXW)"
+	    ,"c4reac":"((N,F)ELEM/MASS,IND,FY,,MXW)/((N,F)IND,FY,,MXW)"
+	    ,"combi":"a/a","combiQuant":"Ratio of [Independent fission-product yield]"
+	    ,"Units":"NO-DIM"
 	    ,"reacs": [
 	    {"code":"92-U-235(N,F)ELEM/MASS,IND,FY,,MXW"
 		,"Reac":"N,F"
@@ -123,32 +132,32 @@
 		,"SF6":"FY"
 		,"SF8":"MXW"
 		,"SF58":"IND,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Independent fission-product yield"
+	    }
+	    ,{"code":"92-U-235(N,F)35-BR-88,IND,FY,,MXW"
+		,"Reac":"N,F"
+		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"35-BR-88","Prod":{"code":"35-BR-88","nam":"Br-88","ZA":35088}
+		,"SF5":"IND"
+		,"SF6":"FY"
+		,"SF8":"MXW"
+		,"SF58":"IND,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Independent fission-product yield"
 	    }]}
 	}
       ]
-     ,"MONITOR":[
+     ,"PART-DET":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(MONIT1)92-U-235(N,F)35-BR-87,IND,FY,,MXW"
-		,"heading":"MONIT1"
-		,"reaction":"92-U-235(N,F)35-BR-87,IND,FY,,MXW"}
-	}
-	,{"x4pointer":" "
-	,"x4code":{"code":"(MONIT2)92-U-235(N,F)53-I-137,IND,FY,,MXW"
-		,"heading":"MONIT2"
-		,"reaction":"92-U-235(N,F)53-I-137,IND,FY,,MXW"}
+	,"x4codes":["DG"]
 	}
       ]
-     ,"MONIT-REF":[
+     ,"DETECTOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":",,W,WAHL,1969"
-		,"stdFileName":"W,WAHL,1969"
-		,"year":1969,"typ":"W","ref":"W","vol":"Wahl"
-		,"shortRef":"Priv.Comm: Wahl (1969)"}]
-	,"x4freetext":["  To Amiel"]
+	,"x4codes":[{"code":"GELI", "dict":"DETECTOR", "idict":22,"hlp":"Germanium-Lithium detector"}]
 	}
       ]
     }
-    ,"DATA":{"ncols":8, "nrows":5
+    ,"DATA":{"ncols":4, "nrows":3
       ,"x4headers":[
        {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
@@ -156,59 +165,45 @@
       ,{"icol":1, "header":"MASS", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Atomic mass of nuclide", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"PC/FIS", "pointer":" "
+      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"particles per 100 fissions","familyCode":"FY","convFc":0.01,"basicUnits":"PART/FIS"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"PC/FIS", "pointer":" "
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"particles per 100 fissions","familyCode":"FY","convFc":0.01,"basicUnits":"PART/FIS"}
-      ,{"icol":4, "header":"MONIT1", "units":"PC/FIS", "pointer":" "
-	,"headerHelp":"1st normalization value, see MONITOR", "pFlag":"0000000"
-	,"unitsHelp":"particles per 100 fissions","familyCode":"FY","convFc":0.01,"basicUnits":"PART/FIS"}
-      ,{"icol":5, "header":"MONIT1-ERR", "units":"PC/FIS", "pointer":" "
-	,"headerHelp":"Error in 1st normalization value", "pFlag":"0000000"
-	,"unitsHelp":"particles per 100 fissions","familyCode":"FY","convFc":0.01,"basicUnits":"PART/FIS"}
-      ,{"icol":6, "header":"MONIT2", "units":"PC/FIS", "pointer":" "
-	,"headerHelp":"2nd normalization value, see MONITOR", "pFlag":"0000000"
-	,"unitsHelp":"particles per 100 fissions","familyCode":"FY","convFc":0.01,"basicUnits":"PART/FIS"}
-      ,{"icol":7, "header":"MONIT2-ERR", "units":"PC/FIS", "pointer":" "
-	,"headerHelp":"Error in 2nd normalization value", "pFlag":"0000000"
-	,"unitsHelp":"particles per 100 fissions","familyCode":"FY","convFc":0.01,"basicUnits":"PART/FIS"}
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEMENT"   ,"MASS"      ,"DATA"      ,"DATA-ERR"  ,"MONIT1"    ,"MONIT1-ERR","MONIT2"    ,"MONIT2-ERR"]
-	,["NO-DIM"    ,"NO-DIM"    ,"PC/FIS"    ,"PC/FIS"    ,"PC/FIS"    ,"PC/FIS"    ,"PC/FIS"    ,"PC/FIS"    ]
-	,[" "         ," "         ," "         ," "         ," "         ," "         ," "         ," "         ]]
+	 ["ELEMENT"   ,"MASS"      ,"DATA"      ,"DATA-ERR"  ]
+	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [35,88,2.06,0.67,1.19,0.04,null,null]
-	,[35,89,2.01,0.71,1.19,0.04,null,null]
-	,[35,90,1.1,0.28,1.19,0.04,null,null]
-	,[53,138,3.27,1.11,null,null,3.48,0.15]
-	,[53,139,1.03,0.28,null,null,3.48,0.15]]}
+	 [35,87,0.36,0.02]
+	,[35,89,1.7,0.1]
+	,[35,90,1.6,0.01]]}
   ,"datasets":[
-{"iDataset":0, "DatasetID":"30952002", "Pointer":" "
- ,"Subent":"30952002", "compiled":20090914
- ,"year1":1969, "author1ini":"C.", "author1":"Braun"
- ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":801, "MT":18, "nExpectedArgs":2
+{"iDataset":0, "DatasetID":"30952003", "Pointer":" "
+ ,"Subent":"30952003", "compiled":20210923
+ ,"year1":1968, "author1ini":"C.", "author1":"Braun"
+ ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
- ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Independent fission-product yield"
- ,"reacode":"92-U-235(N,F)ELEM/MASS,IND,FY,,MXW"
+ ,"ReactionType":"Ratio", "quant":"FY", "quantExpan":"Ratio of [Independent fission-product yield]"
+ ,"reacode":"(92-U-235(N,F)ELEM/MASS,IND,FY,,MXW)/(92-U-235(N,F)35-BR-88,IND,FY,,MXW)"
  ,"compNotes":[]
- ,"wx4data":9
- ,"lx4data":5
+ ,"wx4data":5
+ ,"lx4data":3
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"PC/FIS", "basicUnits":"PART/FIS"
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[2.06,2.01,1.1,3.27,1.03]
-    ,"dat1":[0.0206,0.0201,0.011,0.0327,0.0103]}
+    ,"dat0":[0.36,1.7,1.6]
+   ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"PC/FIS", "basicUnits":"PART/FIS"
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[0.67,0.71,0.28,1.11,0.28]
-    ,"dat1":[0.0067,0.0071,0.0028,0.0111,0.0028]}
+    ,"dat0":[0.02,0.1,0.01]
+   ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
     ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
@@ -219,57 +214,1004 @@
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[35,35,35,53,53]
+    ,"dat0":[35,35,35]
    ,"dat1eq":true}
   ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"92", "rank":2.1
     ,"expansion":"Isotope/particle identification: mass"
-    ,"dat0":[88,89,90,138,139]
+    ,"dat0":[87,89,90]
    ,"dat1eq":true}
-  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
-    ,"header":"MONIT1", "units":"PC/FIS", "basicUnits":"PART/FIS"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.0
-    ,"expansion":"Assumed values: monitor"
-    ,"dat0":[1.19,1.19,1.19,null,null]
-    ,"dat1":[0.0119,0.0119,0.0119,null,null]}
-  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
-    ,"header":"MONIT1-ERR", "units":"PC/FIS", "basicUnits":"PART/FIS"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.1
-    ,"expansion":"Assumed values: monitor"
-    ,"dat0":[0.04,0.04,0.04,null,null]
-    ,"dat1":[4.0e-4,4.0e-4,4.0e-4,null,null]}
-  ,{"ivar":7, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
-    ,"header":"MONIT2", "units":"PC/FIS", "basicUnits":"PART/FIS"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.2
-    ,"expansion":"Assumed values: monitor"
-    ,"dat0":[null,null,null,3.48,3.48]
-    ,"dat1":[null,null,null,0.0348,0.0348]}
-  ,{"ivar":8, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
-    ,"header":"MONIT2-ERR", "units":"PC/FIS", "basicUnits":"PART/FIS"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.3
-    ,"expansion":"Assumed values: monitor"
-    ,"dat0":[null,null,null,0.15,0.15]
-    ,"dat1":[null,null,null,0.0015,0.0015]}
   ]
  ,"wc5data":3
- ,"lc5data":5
+ ,"lc5data":3
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[0.0206,0.0201,0.011,0.0327,0.0103]
-      ,"dy":[0.0067,0.0071,0.0028,0.0111,0.0028]   }
+      ,"y":[0.36,1.7,1.6]
+      ,"dy":[0.02,0.1,0.01]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
-      ,"x1":[0.0253,0.0253,0.0253,0.0253,0.0253]
+      ,"x1":[0.0253,0.0253,0.0253]
    }
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[35088,35089,35090,53138,53139]
+      ,"x2":[35087,35089,35090]
    }
+ }
+}
+   ]
+   }
+  ,{"SUBENT":"30952004", "isub":4, "compiled":20210923, "TransID":"3203", "TransDate":20211217
+    ,"BIB":{
+      "REACTION":[
+	{"x4pointer":" "
+	,"x4code":{"code":"(92-U-235(N,F)ELEM/MASS,IND,FY,,MXW)/\n(92-U-235(N,F)53-I-137,IND,FY,,MXW)"
+	    ,"c4reac":"((N,F)ELEM/MASS,IND,FY,,MXW)/((N,F)IND,FY,,MXW)"
+	    ,"combi":"a/a","combiQuant":"Ratio of [Independent fission-product yield]"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"92-U-235(N,F)ELEM/MASS,IND,FY,,MXW"
+		,"Reac":"N,F"
+		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"ELEM/MASS","Prod":{"code":"ELEM/MASS","nam":"elem/mass"}
+		,"SF5":"IND"
+		,"SF6":"FY"
+		,"SF8":"MXW"
+		,"SF58":"IND,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Independent fission-product yield"
+	    }
+	    ,{"code":"92-U-235(N,F)53-I-137,IND,FY,,MXW"
+		,"Reac":"N,F"
+		,"SF1":"92-U-235","Targ":{"code":"92-U-235","nam":"U-235","ZA":92235}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"53-I-137","Prod":{"code":"53-I-137","nam":"I-137","ZA":53137}
+		,"SF5":"IND"
+		,"SF6":"FY"
+		,"SF8":"MXW"
+		,"SF58":"IND,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Independent fission-product yield"
+	    }]}
+	}
+      ]
+     ,"PART-DET":[
+	{"x4pointer":" "
+	,"x4codes":["DG"]
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"GELI", "dict":"DETECTOR", "idict":22,"hlp":"Germanium-Lithium detector"}]
+	}
+      ]
+    }
+    ,"DATA":{"ncols":4, "nrows":2
+      ,"x4headers":[
+       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"MASS", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Atomic mass of nuclide", "pFlag":"1000000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ]
+      ,"datacols":[
+	 ["ELEMENT"   ,"MASS"      ,"DATA"      ,"DATA-ERR"  ]
+	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,[" "         ," "         ," "         ," "         ]]
+      ,"data":[
+	 [53,138,0.49,0.03]
+	,[53,139,0.37,0.02]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"30952004", "Pointer":" "
+ ,"Subent":"30952004", "compiled":20210923
+ ,"year1":1968, "author1ini":"C.", "author1":"Braun"
+ ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
+ ,"ReactionType":"Ratio", "quant":"FY", "quantExpan":"Ratio of [Independent fission-product yield]"
+ ,"reacode":"(92-U-235(N,F)ELEM/MASS,IND,FY,,MXW)/(92-U-235(N,F)53-I-137,IND,FY,,MXW)"
+ ,"compNotes":[]
+ ,"wx4data":5
+ ,"lx4data":2
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.49,0.37]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.03,0.02]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"43", "rank":1.1
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"91", "rank":2.1
+    ,"expansion":"Isotope/particle identification: element"
+    ,"dat0":[53,53]
+   ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"92", "rank":2.1
+    ,"expansion":"Isotope/particle identification: mass"
+    ,"dat0":[138,139]
+   ,"dat1eq":true}
+  ]
+ ,"wc5data":3
+ ,"lc5data":2
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.49,0.37]
+      ,"dy":[0.03,0.02]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
+      ,"header":"SpE", "dataType":"43", "rank":1.0
+      ,"expansion":"Incident energy: spectrum energy"
+      ,"x1":[0.0253,0.0253]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
+      ,"header":"ZAM", "dataType":"91", "rank":2.0
+      ,"expansion":"Isotope/particle identification: element"
+      ,"x2":[53138,53139]
+   }
+ }
+}
+   ]
+   }
+  ,{"SUBENT":"30952005", "isub":5, "compiled":20211217, "TransID":"3203", "TransDate":20211217
+    ,"BIB":{
+      "REACTION":[
+	{"x4pointer":" "
+	,"x4code":{"code":"35-BR-87(0,B-)36-KR-87,,PN"
+	    ,"c4reac":"(0,B-),PN"
+	    ,"combi":"a"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"35-BR-87(0,B-)36-KR-87,,PN"
+		,"Reac":"0,B-"
+		,"SF1":"35-BR-87","Targ":{"code":"35-BR-87","nam":"Br-87","ZA":35087}
+		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
+		,"SF3":"B-"
+		,"SF4":"36-KR-87","Prod":{"code":"36-KR-87","nam":"Kr-87","ZA":36087}
+		,"SF6":"PN"
+		,"SF58":",PN","Quant":"NU","BasicUnits":"NO-DIM","QuantHlp":"Delayed neutron emission probability"
+	    }]}
+	}
+      ]
+     ,"PART-DET":[
+	{"x4pointer":" "
+	,"x4codes":["DN"]
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"BF3", "dict":"DETECTOR", "idict":22,"hlp":"Boron Trifluoride neutron detector"}
+	    ,{"code":"LONGC", "dict":"DETECTOR", "idict":22,"hlp":"Long counter"}]
+	,"x4freetext":[" An array of six BF3 detectors embedded in"
+		," paraffin for delayed neutron measurements."]
+	}
+      ]
+     ,"MONITOR":[
+	{"x4pointer":" "
+	,"x4code":{"code":"35-BR-87(0,B-)36-KR-87,,PN"
+		,"reaction":"35-BR-87(0,B-)36-KR-87,,PN"}
+	}
+      ]
+     ,"MONIT-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":",G.R.Keepin,B,KEEPIN,,121,1965"
+		,"author1":"G.R.Keepin","stdFileName":"C,KEEPIN,,121,1965"
+		,"year":1965,"typ":"B","ref":"C,KEEPIN"
+		,"shortRef":"Book: Keepin, Physics of Nuclear Kinetics, 1965, p.121 (1965)"}]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["By compiler. Assumed dimension n/100dis."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 5 of IA-1190, p104 (1969)."]
+	}
+      ]
+    }
+    ,"DATA":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ]
+      ,"datacols":[
+	 ["DATA"      ,"DATA-ERR"  ]
+	,["NO-DIM"    ,"NO-DIM"    ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [0.024,0.003]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"30952005", "Pointer":" "
+ ,"Subent":"30952005", "compiled":20211217
+ ,"year1":1968, "author1ini":"C.", "author1":"Braun"
+ ,"zTarg1":35, "targ1":"Br-87", "proj1":"0", "emis1":"B-", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"PN", "quant":"NU", "quantExpan":"Delayed neutron emission probability"
+ ,"reacode":"35-BR-87(0,B-)36-KR-87,,PN"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.024]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.003]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"zzz", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"43", "rank":777.0
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ]
+ ,"wc5data":1
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.024]
+      ,"dy":[0.003]   }
+ }
+}
+   ]
+   }
+  ,{"SUBENT":"30952006", "isub":6, "compiled":20211217, "TransID":"3203", "TransDate":20211217
+    ,"BIB":{
+      "REACTION":[
+	{"x4pointer":" "
+	,"x4code":{"code":"35-BR-88(0,B-)36-KR-88,,PN"
+	    ,"c4reac":"(0,B-),PN"
+	    ,"combi":"a"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"35-BR-88(0,B-)36-KR-88,,PN"
+		,"Reac":"0,B-"
+		,"SF1":"35-BR-88","Targ":{"code":"35-BR-88","nam":"Br-88","ZA":35088}
+		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
+		,"SF3":"B-"
+		,"SF4":"36-KR-88","Prod":{"code":"36-KR-88","nam":"Kr-88","ZA":36088}
+		,"SF6":"PN"
+		,"SF58":",PN","Quant":"NU","BasicUnits":"NO-DIM","QuantHlp":"Delayed neutron emission probability"
+	    }]}
+	}
+      ]
+     ,"PART-DET":[
+	{"x4pointer":" "
+	,"x4codes":["DN"]
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"BF3", "dict":"DETECTOR", "idict":22,"hlp":"Boron Trifluoride neutron detector"}
+	    ,{"code":"LONGC", "dict":"DETECTOR", "idict":22,"hlp":"Long counter"}]
+	,"x4freetext":[" An array of six BF3 detectors embedded in"
+		," paraffin for delayed neutron measurements."]
+	}
+      ]
+     ,"MONITOR":[
+	{"x4pointer":" "
+	,"x4code":{"code":"35-BR-87(0,B-)36-KR-87,,PN"
+		,"reaction":"35-BR-87(0,B-)36-KR-87,,PN"}
+	}
+      ]
+     ,"MONIT-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":",G.R.Keepin,B,KEEPIN,,121,1965"
+		,"author1":"G.R.Keepin","stdFileName":"C,KEEPIN,,121,1965"
+		,"year":1965,"typ":"B","ref":"C,KEEPIN"
+		,"shortRef":"Book: Keepin, Physics of Nuclear Kinetics, 1965, p.121 (1965)"}]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["By compiler. Assumed dimension n/100dis."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 5 of IA-1190, p104 (1969)."]
+	}
+      ]
+    }
+    ,"DATA":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ]
+      ,"datacols":[
+	 ["DATA"      ,"DATA-ERR"  ]
+	,["NO-DIM"    ,"NO-DIM"    ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [0.038,0.007]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"30952006", "Pointer":" "
+ ,"Subent":"30952006", "compiled":20211217
+ ,"year1":1968, "author1ini":"C.", "author1":"Braun"
+ ,"zTarg1":35, "targ1":"Br-88", "proj1":"0", "emis1":"B-", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"PN", "quant":"NU", "quantExpan":"Delayed neutron emission probability"
+ ,"reacode":"35-BR-88(0,B-)36-KR-88,,PN"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.038]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.007]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"zzz", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"43", "rank":777.0
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ]
+ ,"wc5data":1
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.038]
+      ,"dy":[0.007]   }
+ }
+}
+   ]
+   }
+  ,{"SUBENT":"30952007", "isub":7, "compiled":20211217, "TransID":"3203", "TransDate":20211217
+    ,"BIB":{
+      "REACTION":[
+	{"x4pointer":" "
+	,"x4code":{"code":"35-BR-89(0,B-)36-KR-89,,PN"
+	    ,"c4reac":"(0,B-),PN"
+	    ,"combi":"a"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"35-BR-89(0,B-)36-KR-89,,PN"
+		,"Reac":"0,B-"
+		,"SF1":"35-BR-89","Targ":{"code":"35-BR-89","nam":"Br-89","ZA":35089}
+		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
+		,"SF3":"B-"
+		,"SF4":"36-KR-89","Prod":{"code":"36-KR-89","nam":"Kr-89","ZA":36089}
+		,"SF6":"PN"
+		,"SF58":",PN","Quant":"NU","BasicUnits":"NO-DIM","QuantHlp":"Delayed neutron emission probability"
+	    }]}
+	}
+      ]
+     ,"PART-DET":[
+	{"x4pointer":" "
+	,"x4codes":["DN"]
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"BF3", "dict":"DETECTOR", "idict":22,"hlp":"Boron Trifluoride neutron detector"}
+	    ,{"code":"LONGC", "dict":"DETECTOR", "idict":22,"hlp":"Long counter"}]
+	,"x4freetext":[" An array of six BF3 detectors embedded in"
+		," paraffin for delayed neutron measurements."]
+	}
+      ]
+     ,"MONITOR":[
+	{"x4pointer":" "
+	,"x4code":{"code":"35-BR-87(0,B-)36-KR-87,,PN"
+		,"reaction":"35-BR-87(0,B-)36-KR-87,,PN"}
+	}
+      ]
+     ,"MONIT-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":",G.R.Keepin,B,KEEPIN,,121,1965"
+		,"author1":"G.R.Keepin","stdFileName":"C,KEEPIN,,121,1965"
+		,"year":1965,"typ":"B","ref":"C,KEEPIN"
+		,"shortRef":"Book: Keepin, Physics of Nuclear Kinetics, 1965, p.121 (1965)"}]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["By compiler. Assumed dimension n/100dis."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 5 of IA-1190, p104 (1969)."]
+	}
+      ]
+    }
+    ,"DATA":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ]
+      ,"datacols":[
+	 ["DATA"      ,"DATA-ERR"  ]
+	,["NO-DIM"    ,"NO-DIM"    ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [0.058,0.013]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"30952007", "Pointer":" "
+ ,"Subent":"30952007", "compiled":20211217
+ ,"year1":1968, "author1ini":"C.", "author1":"Braun"
+ ,"zTarg1":35, "targ1":"Br-89", "proj1":"0", "emis1":"B-", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"PN", "quant":"NU", "quantExpan":"Delayed neutron emission probability"
+ ,"reacode":"35-BR-89(0,B-)36-KR-89,,PN"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.058]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.013]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"zzz", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"43", "rank":777.0
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ]
+ ,"wc5data":1
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.058]
+      ,"dy":[0.013]   }
+ }
+}
+   ]
+   }
+  ,{"SUBENT":"30952008", "isub":8, "compiled":20211217, "TransID":"3203", "TransDate":20211217
+    ,"BIB":{
+      "REACTION":[
+	{"x4pointer":" "
+	,"x4code":{"code":"35-BR-90(0,B-)36-KR-90,,PN"
+	    ,"c4reac":"(0,B-),PN"
+	    ,"combi":"a"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"35-BR-90(0,B-)36-KR-90,,PN"
+		,"Reac":"0,B-"
+		,"SF1":"35-BR-90","Targ":{"code":"35-BR-90","nam":"Br-90","ZA":35090}
+		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
+		,"SF3":"B-"
+		,"SF4":"36-KR-90","Prod":{"code":"36-KR-90","nam":"Kr-90","ZA":36090}
+		,"SF6":"PN"
+		,"SF58":",PN","Quant":"NU","BasicUnits":"NO-DIM","QuantHlp":"Delayed neutron emission probability"
+	    }]}
+	}
+      ]
+     ,"PART-DET":[
+	{"x4pointer":" "
+	,"x4codes":["DN"]
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"BF3", "dict":"DETECTOR", "idict":22,"hlp":"Boron Trifluoride neutron detector"}
+	    ,{"code":"LONGC", "dict":"DETECTOR", "idict":22,"hlp":"Long counter"}]
+	,"x4freetext":[" An array of six BF3 detectors embedded in"
+		," paraffin for delayed neutron measurements."]
+	}
+      ]
+     ,"MONITOR":[
+	{"x4pointer":" "
+	,"x4code":{"code":"35-BR-87(0,B-)36-KR-87,,PN"
+		,"reaction":"35-BR-87(0,B-)36-KR-87,,PN"}
+	}
+      ]
+     ,"MONIT-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":",G.R.Keepin,B,KEEPIN,,121,1965"
+		,"author1":"G.R.Keepin","stdFileName":"C,KEEPIN,,121,1965"
+		,"year":1965,"typ":"B","ref":"C,KEEPIN"
+		,"shortRef":"Book: Keepin, Physics of Nuclear Kinetics, 1965, p.121 (1965)"}]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["By compiler. Assumed dimension n/100dis."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 5 of IA-1190, p104 (1969)."]
+	}
+      ]
+    }
+    ,"DATA":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ]
+      ,"datacols":[
+	 ["DATA"      ,"DATA-ERR"  ]
+	,["NO-DIM"    ,"NO-DIM"    ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [0.079,0.019]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"30952008", "Pointer":" "
+ ,"Subent":"30952008", "compiled":20211217
+ ,"year1":1968, "author1ini":"C.", "author1":"Braun"
+ ,"zTarg1":35, "targ1":"Br-90", "proj1":"0", "emis1":"B-", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"PN", "quant":"NU", "quantExpan":"Delayed neutron emission probability"
+ ,"reacode":"35-BR-90(0,B-)36-KR-90,,PN"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.079]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.019]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"zzz", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"43", "rank":777.0
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ]
+ ,"wc5data":1
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.079]
+      ,"dy":[0.019]   }
+ }
+}
+   ]
+   }
+  ,{"SUBENT":"30952009", "isub":9, "compiled":20211217, "TransID":"3203", "TransDate":20211217
+    ,"BIB":{
+      "REACTION":[
+	{"x4pointer":" "
+	,"x4code":{"code":"53-I-137(0,B-)54-XE-137,,PN"
+	    ,"c4reac":"(0,B-),PN"
+	    ,"combi":"a"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"53-I-137(0,B-)54-XE-137,,PN"
+		,"Reac":"0,B-"
+		,"SF1":"53-I-137","Targ":{"code":"53-I-137","nam":"I-137","ZA":53137}
+		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
+		,"SF3":"B-"
+		,"SF4":"54-XE-137","Prod":{"code":"54-XE-137","nam":"Xe-137","ZA":54137}
+		,"SF6":"PN"
+		,"SF58":",PN","Quant":"NU","BasicUnits":"NO-DIM","QuantHlp":"Delayed neutron emission probability"
+	    }]}
+	}
+      ]
+     ,"PART-DET":[
+	{"x4pointer":" "
+	,"x4codes":["DN"]
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"BF3", "dict":"DETECTOR", "idict":22,"hlp":"Boron Trifluoride neutron detector"}
+	    ,{"code":"LONGC", "dict":"DETECTOR", "idict":22,"hlp":"Long counter"}]
+	,"x4freetext":[" An array of six BF3 detectors embedded in"
+		," paraffin for delayed neutron measurements."]
+	}
+      ]
+     ,"MONITOR":[
+	{"x4pointer":" "
+	,"x4code":{"code":"53-I-137(0,B-)54-XE-137,,PN"
+		,"reaction":"53-I-137(0,B-)54-XE-137,,PN"}
+	}
+      ]
+     ,"MONIT-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":",G.R.Keepin,B,KEEPIN,,121,1965"
+		,"author1":"G.R.Keepin","stdFileName":"C,KEEPIN,,121,1965"
+		,"year":1965,"typ":"B","ref":"C,KEEPIN"
+		,"shortRef":"Book: Keepin, Physics of Nuclear Kinetics, 1965, p.121 (1965)"}]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["By compiler. Assumed dimension n/100dis."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 5 of IA-1190, p104 (1969)."]
+	}
+      ]
+    }
+    ,"DATA":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ]
+      ,"datacols":[
+	 ["DATA"      ,"DATA-ERR"  ]
+	,["NO-DIM"    ,"NO-DIM"    ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [0.048,0.005]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"30952009", "Pointer":" "
+ ,"Subent":"30952009", "compiled":20211217
+ ,"year1":1968, "author1ini":"C.", "author1":"Braun"
+ ,"zTarg1":53, "targ1":"I-137", "proj1":"0", "emis1":"B-", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"PN", "quant":"NU", "quantExpan":"Delayed neutron emission probability"
+ ,"reacode":"53-I-137(0,B-)54-XE-137,,PN"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.048]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.005]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"zzz", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"43", "rank":777.0
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ]
+ ,"wc5data":1
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.048]
+      ,"dy":[0.005]   }
+ }
+}
+   ]
+   }
+  ,{"SUBENT":"30952010", "isub":10, "compiled":20211217, "TransID":"3203", "TransDate":20211217
+    ,"BIB":{
+      "REACTION":[
+	{"x4pointer":" "
+	,"x4code":{"code":"53-I-138(0,B-)54-XE-138,,PN"
+	    ,"c4reac":"(0,B-),PN"
+	    ,"combi":"a"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"53-I-138(0,B-)54-XE-138,,PN"
+		,"Reac":"0,B-"
+		,"SF1":"53-I-138","Targ":{"code":"53-I-138","nam":"I-138","ZA":53138}
+		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
+		,"SF3":"B-"
+		,"SF4":"54-XE-138","Prod":{"code":"54-XE-138","nam":"Xe-138","ZA":54138}
+		,"SF6":"PN"
+		,"SF58":",PN","Quant":"NU","BasicUnits":"NO-DIM","QuantHlp":"Delayed neutron emission probability"
+	    }]}
+	}
+      ]
+     ,"PART-DET":[
+	{"x4pointer":" "
+	,"x4codes":["DN"]
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"BF3", "dict":"DETECTOR", "idict":22,"hlp":"Boron Trifluoride neutron detector"}
+	    ,{"code":"LONGC", "dict":"DETECTOR", "idict":22,"hlp":"Long counter"}]
+	,"x4freetext":[" An array of six BF3 detectors embedded in"
+		," paraffin for delayed neutron measurements."]
+	}
+      ]
+     ,"MONITOR":[
+	{"x4pointer":" "
+	,"x4code":{"code":"53-I-137(0,B-)54-XE-137,,PN"
+		,"reaction":"53-I-137(0,B-)54-XE-137,,PN"}
+	}
+      ]
+     ,"MONIT-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":",G.R.Keepin,B,KEEPIN,,121,1965"
+		,"author1":"G.R.Keepin","stdFileName":"C,KEEPIN,,121,1965"
+		,"year":1965,"typ":"B","ref":"C,KEEPIN"
+		,"shortRef":"Book: Keepin, Physics of Nuclear Kinetics, 1965, p.121 (1965)"}]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["By compiler. Assumed dimension n/100dis."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 5 of IA-1190, p104 (1969)."]
+	}
+      ]
+    }
+    ,"DATA":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ]
+      ,"datacols":[
+	 ["DATA"      ,"DATA-ERR"  ]
+	,["NO-DIM"    ,"NO-DIM"    ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [0.028,0.004]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"30952010", "Pointer":" "
+ ,"Subent":"30952010", "compiled":20211217
+ ,"year1":1968, "author1ini":"C.", "author1":"Braun"
+ ,"zTarg1":53, "targ1":"I-138", "proj1":"0", "emis1":"B-", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"PN", "quant":"NU", "quantExpan":"Delayed neutron emission probability"
+ ,"reacode":"53-I-138(0,B-)54-XE-138,,PN"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.028]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.004]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"zzz", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"43", "rank":777.0
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ]
+ ,"wc5data":1
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.028]
+      ,"dy":[0.004]   }
+ }
+}
+   ]
+   }
+  ,{"SUBENT":"30952011", "isub":11, "compiled":20211217, "TransID":"3203", "TransDate":20211217
+    ,"BIB":{
+      "REACTION":[
+	{"x4pointer":" "
+	,"x4code":{"code":"53-I-139(0,B-)54-XE-139,,PN"
+	    ,"c4reac":"(0,B-),PN"
+	    ,"combi":"a"
+	    ,"Units":"NO-DIM"
+	    ,"reacs": [
+	    {"code":"53-I-139(0,B-)54-XE-139,,PN"
+		,"Reac":"0,B-"
+		,"SF1":"53-I-139","Targ":{"code":"53-I-139","nam":"I-139","ZA":53139}
+		,"SF2":"0","Proj":{"code":"0","nam":"0","ZA":-1}
+		,"SF3":"B-"
+		,"SF4":"54-XE-139","Prod":{"code":"54-XE-139","nam":"Xe-139","ZA":54139}
+		,"SF6":"PN"
+		,"SF58":",PN","Quant":"NU","BasicUnits":"NO-DIM","QuantHlp":"Delayed neutron emission probability"
+	    }]}
+	}
+      ]
+     ,"PART-DET":[
+	{"x4pointer":" "
+	,"x4codes":["DN"]
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"BF3", "dict":"DETECTOR", "idict":22,"hlp":"Boron Trifluoride neutron detector"}
+	    ,{"code":"LONGC", "dict":"DETECTOR", "idict":22,"hlp":"Long counter"}]
+	,"x4freetext":[" An array of six BF3 detectors embedded in"
+		," paraffin for delayed neutron measurements."]
+	}
+      ]
+     ,"MONITOR":[
+	{"x4pointer":" "
+	,"x4code":{"code":"53-I-137(0,B-)54-XE-137,,PN"
+		,"reaction":"53-I-137(0,B-)54-XE-137,,PN"}
+	}
+      ]
+     ,"MONIT-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":",G.R.Keepin,B,KEEPIN,,121,1965"
+		,"author1":"G.R.Keepin","stdFileName":"C,KEEPIN,,121,1965"
+		,"year":1965,"typ":"B","ref":"C,KEEPIN"
+		,"shortRef":"Book: Keepin, Physics of Nuclear Kinetics, 1965, p.121 (1965)"}]
+	}
+      ]
+     ,"COMMENT":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["By compiler. Assumed dimension n/100dis."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 5 of IA-1190, p104 (1969)."]
+	}
+      ]
+    }
+    ,"DATA":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ]
+      ,"datacols":[
+	 ["DATA"      ,"DATA-ERR"  ]
+	,["NO-DIM"    ,"NO-DIM"    ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [0.048,0.01]]}
+  ,"datasets":[
+{"iDataset":0, "DatasetID":"30952011", "Pointer":" "
+ ,"Subent":"30952011", "compiled":20211217
+ ,"year1":1968, "author1ini":"C.", "author1":"Braun"
+ ,"zTarg1":53, "targ1":"I-139", "proj1":"0", "emis1":"B-", "MF":0, "MT":0, "nExpectedArgs":0
+ ,"IndepVarFamilyCode":"0          ", "getYFormulaStr":"y=DATA"
+ ,"ReactionType":"PN", "quant":"NU", "quantExpan":"Delayed neutron emission probability"
+ ,"reacode":"53-I-139(0,B-)54-XE-139,,PN"
+ ,"compNotes":[]
+ ,"wx4data":3
+ ,"lx4data":1
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.048]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.01]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"zzz", "fam":"SpE", "ifComm":true , "ifCM":false
+    ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
+    ,"what":"ZZZ", "dataType":"43", "rank":777.0
+    ,"expansion":"Incident energy: spectrum energy"
+    ,"com0":0.0253
+    ,"com1":0.0253}
+  ]
+ ,"wc5data":1
+ ,"lc5data":1
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.048]
+      ,"dy":[0.01]   }
  }
 }
    ]
