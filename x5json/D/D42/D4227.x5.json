@@ -1,9 +1,9 @@
-  {"ENTRY":"D4227", "updated":20190823, "TransID":"D121", "TransDate":20191003, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
+  {"ENTRY":"D4227", "updated":20210929, "TransID":"D132", "TransDate":20211117, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
    ,"y1":2009,"a1":"A.Hermanne+","r1":"J,NIM/B,267,3293,2009","doi1":"10.1016/j.nimb.2009.07.008"
    ,"ref":"Jour: Nucl. Instrum. Methods in Physics Res., Sect.B, Vol.267, p.3293 (2009)"
    ,"title":"Excitation functions for some W, Ta and Hf radionuclides obtained by deuteron irradiation of 181Ta up to 40 MeV"
    ,"x4subents":[
-   {"SUBENT":"D4227001", "isub":1, "compiled":20190823, "TransID":"D121", "TransDate":20191003
+   {"SUBENT":"D4227001", "isub":1, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -51,7 +51,7 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}
+	,"x4codes":[{"code":"ISOCY", "dict":"FACILITY", "idict":18,"hlp":"Isochronous cyclotron"}
 	    ,{"code":"2JPNTOH", "dict":"INSTITUTE", "idict":3,"hlp":"Tohoku Univ., Sendai, Japan"}]
 	}
 	,{"x4pointer":" "
@@ -106,12 +106,6 @@
 		,"year":2001,"typ":"R","ref":"R,IAEA-NDS-","no":"1211"
 		,"shortRef":"Rept: Nuclear Data Services (Doc. series of NDS), No.1211 (2001)"}]
 	,"x4freetext":["    Chapter 4"]
-	}
-      ]
-     ,"DECAY-DATA":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Decay data were taken from NUDAT database"]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -188,6 +182,12 @@
 	,"x4freetext":[" SD: REACTION code updated according to new"
 		,"EXFOR rules in Subents 008-011. Subents 012-016 deleted"
 		," (info moved to D4141.010-014)."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210927A", "date":"20210927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3=X in subentries 004-006."
+		," SF4: M->M2 in 007.  DECAY-DATA deleted in 001."]
 	}
       ]
     }
@@ -627,22 +627,22 @@
 }
    ]
    }
-  ,{"SUBENT":"D4227004", "isub":4, "compiled":20091012, "TransID":"D071", "TransDate":20100128
+  ,{"SUBENT":"D4227004", "isub":4, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"73-TA-181(D,2N+P)73-TA-180-G,,SIG"
-	    ,"c4reac":"(D,2N+P),SIG"
+	,"x4code":{"code":"73-TA-181(D,X)73-TA-180-G,,SIG"
+	    ,"c4reac":"(D,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":41
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"73-TA-181(D,2N+P)73-TA-180-G,,SIG"
-		,"Reac":"D,2N+P"
+	    {"code":"73-TA-181(D,X)73-TA-180-G,,SIG"
+		,"Reac":"D,X"
 		,"SF1":"73-TA-181","Targ":{"code":"73-TA-181","nam":"Ta-181","ZA":73181}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
-		,"SF3":"2N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"73-TA-180-G","Prod":{"code":"73-TA-180-G","nam":"Ta-180-g","ZA":73180,"ProdM":"G"}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -662,6 +662,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table 2 of reference."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210927A", "date":"20210927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3=X c.f. Memo CP-D/0999."]
 	}
       ]
     }
@@ -715,12 +722,12 @@
 	,[39.8,0.3,163.6,18]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4227004", "Pointer":" "
- ,"Subent":"D4227004", "compiled":20091012
+ ,"Subent":"D4227004", "compiled":20210929
  ,"year1":2009, "author1ini":"A.", "author1":"Hermanne"
- ,"zTarg1":73, "targ1":"Ta-181", "proj1":"d", "emis1":"2N+P", "MF":3, "MT":41, "nExpectedArgs":1
+ ,"zTarg1":73, "targ1":"Ta-181", "proj1":"d", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"73-TA-181(D,2N+P)73-TA-180-G,,SIG"
+ ,"reacode":"73-TA-181(D,X)73-TA-180-G,,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-5,4.,11.0)    ADDED AS COMMON:ERR-5,PER-CENT=4.0%"]
  ,"wx4data":9
  ,"lx4data":28
@@ -824,22 +831,22 @@
 }
    ]
    }
-  ,{"SUBENT":"D4227005", "isub":5, "compiled":20091012, "TransID":"D071", "TransDate":20100128
+  ,{"SUBENT":"D4227005", "isub":5, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"73-TA-181(D,4N+P)73-TA-178-G,,SIG"
-	    ,"c4reac":"(D,4N+P),SIG"
+	,"x4code":{"code":"73-TA-181(D,X)73-TA-178-G,,SIG"
+	    ,"c4reac":"(D,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":156
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"73-TA-181(D,4N+P)73-TA-178-G,,SIG"
-		,"Reac":"D,4N+P"
+	    {"code":"73-TA-181(D,X)73-TA-178-G,,SIG"
+		,"Reac":"D,X"
 		,"SF1":"73-TA-181","Targ":{"code":"73-TA-181","nam":"Ta-181","ZA":73181}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
-		,"SF3":"4N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"73-TA-178-G","Prod":{"code":"73-TA-178-G","nam":"Ta-178-g","ZA":73178,"ProdM":"G"}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -858,6 +865,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table 2 of reference."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210927A", "date":"20210927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3=X c.f. Memo CP-D/0999."]
 	}
       ]
     }
@@ -892,12 +906,12 @@
 	,[39.8,0.3,7.7,1.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4227005", "Pointer":" "
- ,"Subent":"D4227005", "compiled":20091012
+ ,"Subent":"D4227005", "compiled":20210929
  ,"year1":2009, "author1ini":"A.", "author1":"Hermanne"
- ,"zTarg1":73, "targ1":"Ta-181", "proj1":"d", "emis1":"4N+P", "MF":3, "MT":156, "nExpectedArgs":1
+ ,"zTarg1":73, "targ1":"Ta-181", "proj1":"d", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"73-TA-181(D,4N+P)73-TA-178-G,,SIG"
+ ,"reacode":"73-TA-181(D,X)73-TA-178-G,,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-5,4.,11.0)    ADDED AS COMMON:ERR-5,PER-CENT=4.0%"]
  ,"wx4data":9
  ,"lx4data":9
@@ -975,22 +989,22 @@
 }
    ]
    }
-  ,{"SUBENT":"D4227006", "isub":6, "compiled":20091012, "TransID":"D071", "TransDate":20100128
+  ,{"SUBENT":"D4227006", "isub":6, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"73-TA-181(D,N+2P)72-HF-180-M,,SIG"
-	    ,"c4reac":"(D,N+2P),SIG"
+	,"x4code":{"code":"73-TA-181(D,X)72-HF-180-M,,SIG"
+	    ,"c4reac":"(D,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":44
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"73-TA-181(D,N+2P)72-HF-180-M,,SIG"
-		,"Reac":"D,N+2P"
+	    {"code":"73-TA-181(D,X)72-HF-180-M,,SIG"
+		,"Reac":"D,X"
 		,"SF1":"73-TA-181","Targ":{"code":"73-TA-181","nam":"Ta-181","ZA":73181}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
-		,"SF3":"N+2P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"72-HF-180-M","Prod":{"code":"72-HF-180-M","nam":"Hf-180-m","ZA":72180,"ProdM":"M"}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -1010,6 +1024,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table 2 of reference."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210927A", "date":"20210927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3=X c.f. Memo CP-D/0999."]
 	}
       ]
     }
@@ -1048,12 +1069,12 @@
 	,[39.8,0.3,0.35,0.05]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4227006", "Pointer":" "
- ,"Subent":"D4227006", "compiled":20091012
+ ,"Subent":"D4227006", "compiled":20210929
  ,"year1":2009, "author1ini":"A.", "author1":"Hermanne"
- ,"zTarg1":73, "targ1":"Ta-181", "proj1":"d", "emis1":"N+2P", "MF":3, "MT":44, "nExpectedArgs":1
+ ,"zTarg1":73, "targ1":"Ta-181", "proj1":"d", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"73-TA-181(D,N+2P)72-HF-180-M,,SIG"
+ ,"reacode":"73-TA-181(D,X)72-HF-180-M,,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-5,4.,11.0)    ADDED AS COMMON:ERR-5,PER-CENT=4.0%"]
  ,"wx4data":9
  ,"lx4data":13
@@ -1144,23 +1165,23 @@
 }
    ]
    }
-  ,{"SUBENT":"D4227007", "isub":7, "compiled":20091012, "TransID":"D071", "TransDate":20100128
+  ,{"SUBENT":"D4227007", "isub":7, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"73-TA-181(D,X)72-HF-179-M,,SIG"
+	,"x4code":{"code":"73-TA-181(D,X)72-HF-179-M2,,SIG"
 	    ,"c4reac":"(D,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"73-TA-181(D,X)72-HF-179-M,,SIG"
+	    {"code":"73-TA-181(D,X)72-HF-179-M2,,SIG"
 		,"Reac":"D,X"
 		,"SF1":"73-TA-181","Targ":{"code":"73-TA-181","nam":"Ta-181","ZA":73181}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"72-HF-179-M","Prod":{"code":"72-HF-179-M","nam":"Hf-179-m","ZA":72179,"ProdM":"M"}
+		,"SF4":"72-HF-179-M2","Prod":{"code":"72-HF-179-M2","nam":"Hf-179-m2","ZA":72179,"ProdM":"N"}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
@@ -1178,6 +1199,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table 2 of reference."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210927A", "date":"20210927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS.  SF4: M->M2."]
 	}
       ]
     }
@@ -1213,12 +1241,12 @@
 	,[39.8,0.3,0.61,0.26]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4227007", "Pointer":" "
- ,"Subent":"D4227007", "compiled":20091012
+ ,"Subent":"D4227007", "compiled":20210929
  ,"year1":2009, "author1ini":"A.", "author1":"Hermanne"
  ,"zTarg1":73, "targ1":"Ta-181", "proj1":"d", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"73-TA-181(D,X)72-HF-179-M,,SIG"
+ ,"reacode":"73-TA-181(D,X)72-HF-179-M2,,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-5,4.,11.0)    ADDED AS COMMON:ERR-5,PER-CENT=4.0%"]
  ,"wx4data":9
  ,"lx4data":10
