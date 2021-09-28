@@ -1,9 +1,9 @@
-  {"ENTRY":"D5099", "updated":20131111, "TransID":"D092", "TransDate":20140211, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
+  {"ENTRY":"D5099", "updated":20210929, "TransID":"D132", "TransDate":20211117, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
    ,"y1":1962,"a1":"G.B.Andreev+","r1":"J,IZV,26,1134,1962"
    ,"ref":"Jour: Izv. Rossiiskoi Akademii Nauk, Ser.Fiz., Vol.26, p.1134 (1962)"
    ,"title":"Elastic scattering of protons by B10."
    ,"x4subents":[
-   {"SUBENT":"D5099001", "isub":1, "compiled":20131111, "TransID":"D092", "TransDate":20140211
+   {"SUBENT":"D5099001", "isub":1, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -34,7 +34,7 @@
      ,"FACILITY":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"VDG", "dict":"FACILITY", "idict":18,"hlp":"Van de Graaff"}
-	    ,{"code":"4UKRUFT", "dict":"INSTITUTE", "idict":3,"hlp":"Ukrainskiy Fiziko-Tekhnicheskiy Inst., Kharkov, Ukraine"}]
+	    ,{"code":"4UKRKFT", "dict":"INSTITUTE", "idict":3,"hlp":"Kharkovskii Fiziko-Tekhnicheskii Inst., Kharkov, Ukraine"}]
 	}
       ]
      ,"SAMPLE":[
@@ -49,6 +49,11 @@
 	,"x4code":{"code":"20131111C", "date":"20131111", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":["UKRNDC"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210924A", "date":"20210924", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. Unit corrected in 002"]
 	}
       ]
     }
@@ -65,26 +70,25 @@
       ,"data":[
 	 [141]]}
    }
-  ,{"SUBENT":"D5099002", "isub":2, "compiled":20131111, "TransID":"D092", "TransDate":20140211
+  ,{"SUBENT":"D5099002", "isub":2, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"5-B-10(P,EL)5-B-10,,DA,,REL"
-	    ,"c4reac":"(P,EL),DA,,REL"
+	,"x4code":{"code":"5-B-10(P,EL)5-B-10,,DA"
+	    ,"c4reac":"(P,EL),DA"
 	    ,"combi":"a"
-	    ,"MF":604
+	    ,"MF":4
 	    ,"MT":2
-	    ,"Units":"ARB-UNITS"
+	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"5-B-10(P,EL)5-B-10,,DA,,REL"
+	    {"code":"5-B-10(P,EL)5-B-10,,DA"
 		,"Reac":"P,EL"
 		,"SF1":"5-B-10","Targ":{"code":"5-B-10","nam":"B-10","ZA":5010}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"EL","procHlp":"Elastic scattering"
 		,"SF4":"5-B-10","Prod":{"code":"5-B-10","nam":"B-10","ZA":5010}
 		,"SF6":"DA"
-		,"SF8":"REL"
-		,"SF58":",DA","Quant":"DA","BasicUnits":"ARB-UNITS","QuantHlp":"Differential c/s with respect to angle"
+		,"SF58":",DA","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Differential c/s with respect to angle"
 	    }]}
 	}
       ]
@@ -96,19 +100,26 @@
 	,"x4freetext":[" Fig.2 was digitized by GSYS2.2.0."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210924A", "date":"20210924", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. Unit ARB-UNITS -> B/SR"]
+	}
+      ]
     }
     ,"DATA":{"ncols":2, "nrows":32
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"B/SR", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"barns/steradian","familyCode":"DA","convFc":1.0,"basicUnits":"B/SR"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ]
-	,["MEV"       ,"ARB-UNITS" ]
+	,["MEV"       ,"B/SR"      ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [1.03,0.07647]
@@ -145,18 +156,18 @@
 	,[3.5,0.1337]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D5099002", "Pointer":" "
- ,"Subent":"D5099002", "compiled":20131111
+ ,"Subent":"D5099002", "compiled":20210929
  ,"year1":1962, "author1ini":"G.B.", "author1":"Andreev"
- ,"zTarg1":5, "targ1":"B-10", "proj1":"p", "emis1":"EL", "MF":604, "MT":2, "nExpectedArgs":2
+ ,"zTarg1":5, "targ1":"B-10", "proj1":"p", "emis1":"EL", "MF":4, "MT":2, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
  ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
- ,"reacode":"5-B-10(P,EL)5-B-10,,DA,,REL"
- ,"compNotes":[]
+ ,"reacode":"5-B-10(P,EL)5-B-10,,DA"
+ ,"compNotes":["Conversion from C.M. to Lab: successful"]
  ,"wx4data":3
  ,"lx4data":32
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"header":"DATA", "units":"B/SR", "basicUnits":"B/SR"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[0.07647,0.071,0.06771,0.07388,0.08286,0.0965,0.1022,0.1038,0.09496,0.09149
@@ -186,7 +197,7 @@
  ,"wc5data":3
  ,"lc5data":32
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.07647,0.071,0.06771,0.07388,0.08286,0.0965,0.1022,0.1038,0.09496,0.09149
@@ -202,13 +213,13 @@
 	,2.6e+6,2.7e+6,2.8e+6,2.9e+6,3.006e+6,3.1e+6,3.155e+6,3.2e+6,3.255e+6,3.295e+6
 	,3.4e+6,3.5e+6]
    }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":true, "units":"ADEG"
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
       ,"header":"ANG", "dataType":"61", "rank":2.0
       ,"expansion":"Angle: angle"
-      ,"x2":[141,141,141,141,141,141,141,141,141,141
-	,141,141,141,141,141,141,141,141,141,141
-	,141,141,141,141,141,141,141,141,141,141
-	,141,141]
+      ,"x2":[137.1,137.1,137.1,137.1,137.1,137.1,137.1,137.1,137.1,137.1
+	,137.1,137.1,137.1,137.1,137.1,137.1,137.1,137.1,137.1,137.1
+	,137.1,137.1,137.1,137.1,137.1,137.1,137.1,137.1,137.1,137.1
+	,137.1,137.1]
    }
  }
 }
