@@ -1,9 +1,9 @@
-  {"ENTRY":"D5025", "updated":20160518, "TransID":"D104", "TransDate":20160629, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
+  {"ENTRY":"D5025", "updated":20210929, "TransID":"D132", "TransDate":20211117, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
    ,"y1":2004,"a1":"O.K.Gorpinich+","r1":"J,UFZ,49,16,2004"
    ,"ref":"Jour: Ukrainskii Fizichnii Zhurnal, Vol.49, Issue.1, p.16 (2004)"
    ,"title":"Investigation of excited levels of 6Li nucleus from the three-particle 3H(alpha,d+alpha)n reaction"
    ,"x4subents":[
-   {"SUBENT":"D5025001", "isub":1, "compiled":20160518, "TransID":"D104", "TransDate":20160629
+   {"SUBENT":"D5025001", "isub":1, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -71,8 +71,8 @@
 	,"x4codes":[{"code":"TELES", "dict":"DETECTOR", "idict":22,"hlp":"Counter telescope"}
 	    ,{"code":"SI", "dict":"DETECTOR", "idict":22,"hlp":"Silicon detector"}]
 	,"x4freetext":["For double-charge particle registration two"
-		,"silicium E-detectors with thicknesses 100 micro-m and 3"
-		,"mm were used. Coincidence between the pair of"
+		,"silicon E-detectors with thicknesses 100 micro-m and"
+		,"3 mm were used. Coincidence between the pair of"
 		,"telescopes registered with resolution time 10**(-7) s."]
 	}
       ]
@@ -98,7 +98,7 @@
      ,"ADD-RES":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"STRUC", "dict":"ADD-RES", "idict":20,"hlp":"Nuclear structure data"}]
-	,"x4freetext":["Energy and width of the  excited states of"
+	,"x4freetext":["Energy and width of the excited states of"
 		,"6Li were obtained by the proton spectra shape analysis"
 		,"using standard disintegration procedure and chi-square"
 		,"fitting to Gaussian shape of observed peaks. Averaged"
@@ -119,6 +119,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" VS. Ref. UJP,49,16,2004 added."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210927U", "date":"20210927", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. SF7 corrected and ANG-SEC added in 002."]
+	}
       ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
@@ -137,27 +142,35 @@
       ,"data":[
 	 [67.2,0.4]]}
    }
-  ,{"SUBENT":"D5025002", "isub":2, "compiled":20070129, "TransID":"D054", "TransDate":20070822
+  ,{"SUBENT":"D5025002", "isub":2, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"1-H-3(A,N+D)2-HE-4,,DA/DA/DE,A/D/D,REL"
-	    ,"c4reac":"(A,N+D),DA/DA/DE,A/D/D,REL"
+	,"x4code":{"code":"1-H-3(A,N+D)2-HE-4,,DA/DA/DE,D/A/D,REL"
+	    ,"c4reac":"(A,N+D),DA/DA/DE,D/A/D,REL"
 	    ,"combi":"a"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"1-H-3(A,N+D)2-HE-4,,DA/DA/DE,A/D/D,REL"
+	    {"code":"1-H-3(A,N+D)2-HE-4,,DA/DA/DE,D/A/D,REL"
 		,"Reac":"A,N+D"
 		,"SF1":"1-H-3","Targ":{"code":"1-H-3","nam":"H-3","ZA":1003}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"N+D"
 		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF6":"DA/DA/DE"
-		,"SF7":"A/D/D"
+		,"SF7":"D/A/D"
 		,"SF8":"REL"
-		,"SF58":",DA/DA/DE,A/D/D","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":",DA/DA/DE,D/A/D","Quant":"DAE","BasicUnits":"ARB-UNITS","QuantHlp":"Triple diff.cross section d3/dA(*)/dA(*)/dE(*)"
 	    }]}
-	,"x4freetext":["ANG1 is angle between incident beam and alpha-particle,"
-		,"ANG2 is angle between incident beam and deuteron."]
+	}
+      ]
+     ,"ANG-SEC":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG1,A"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG2,D"}
 	}
       ]
      ,"ADD-RES":[
@@ -172,6 +185,14 @@
 		,"subent":"TABLE"
 		}]
 	,"x4freetext":[" Correspond to figure 3."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210927U", "date":"20210927", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. SF7: the first and second particles"
+		," swapped c.f. Memo CP-D/1014 and ANG-SEC added."]
 	}
       ]
     }
@@ -235,13 +256,106 @@
 	,[39.75,8,2.82843]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D5025002", "Pointer":" "
- ,"Subent":"D5025002", "compiled":20070129
-,"year1":2004, "author1ini":"O.K.", "author1":"Gorpinich"
-, "zTarg1":1, "targ1":"H-3", "proj1":"a", "emis1":"N+D", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"1-H-3(A,N+D)2-HE-4,,DA/DA/DE,A/D/D,REL"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D5025002", "compiled":20210929
+ ,"year1":2004, "author1ini":"O.K.", "author1":"Gorpinich"
+ ,"zTarg1":1, "targ1":"H-3", "proj1":"a", "emis1":"N+D", "MF":600, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,E2,ANG)"
+ ,"ReactionType":"D3A", "quant":"DAE", "quantExpan":"Triple diff.cross section d3/dA(*)/dA(*)/dE(*)"
+ ,"reacode":"1-H-3(A,N+D)2-HE-4,,DA/DA/DE,D/A/D,REL"
+ ,"compNotes":[]
+ ,"wx4data":7
+ ,"lx4data":26
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[14,14,20,19,24,26,19,29,28,26
+	,25,23,21,15,17,14,14,14,10,11
+	,7,8,8,8,5,8]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"ERR-S", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[3.74166,3.74166,4.47214,4.3589,4.89898,5.09902,4.3589,5.38516,5.2915,5.09902
+	,5,4.79583,4.58258,3.87298,4.12311,3.74166,3.74166,3.74166,3.16228,3.31662
+	,2.64575,2.82843,2.82843,2.82843,2.23607,2.82843]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":67.2
+    ,"com1":6.72e+7}
+  ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
+    ,"expansion":"Incident energy: energy /Error/"
+    ,"com0":0.4
+    ,"com1":4.0e+5}
+  ,{"ivar":4, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+    ,"header":"E", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"51", "rank":2.1
+    ,"expansion":"Secondary energy: particle energy"
+    ,"dat0":[21,21.75,22.5,23.25,24,24.75,25.5,26.25,27,27.75
+	,28.5,29.25,30,30.75,31.5,32.25,33,33.75,34.5,35.25
+	,36,36.75,37.5,38.25,39,39.75]
+    ,"dat1":[2.1e+7,2.175e+7,2.25e+7,2.325e+7,2.4e+7,2.475e+7,2.55e+7,2.625e+7,2.7e+7,2.775e+7
+	,2.85e+7,2.925e+7,3.0e+7,3.075e+7,3.15e+7,3.225e+7,3.3e+7,3.375e+7,3.45e+7,3.525e+7
+	,3.6e+7,3.675e+7,3.75e+7,3.825e+7,3.9e+7,3.975e+7]}
+  ,{"ivar":5, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG1", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":15
+    ,"com1":15}
+  ,{"ivar":6, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG2", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":27.5
+    ,"com1":27.5}
+  ]
+ ,"wc5data":4
+ ,"lc5data":26
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[14,14,20,19,24,26,19,29,28,26
+	,25,23,21,15,17,14,14,14,10,11
+	,7,8,8,8,5,8]
+      ,"dy":[3.74166,3.74166,4.47214,4.3589,4.89898,5.09902,4.3589,5.38516,5.2915,5.09902
+	,5,4.79583,4.58258,3.87298,4.12311,3.74166,3.74166,3.74166,3.16228,3.31662
+	,2.64575,2.82843,2.82843,2.82843,2.23607,2.82843]
+      ,"dystat":[3.74166,3.74166,4.47214,4.3589,4.89898,5.09902,4.3589,5.38516,5.2915,5.09902
+	,5,4.79583,4.58258,3.87298,4.12311,3.74166,3.74166,3.74166,3.16228,3.31662
+	,2.64575,2.82843,2.82843,2.82843,2.23607,2.82843]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7
+	,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7
+	,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7]
+      ,"dx1":[4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5
+	,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5
+	,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5]   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"E2", "ifCM":false, "units":"EV"
+      ,"header":"E2", "dataType":"51", "rank":2.0
+      ,"expansion":"Secondary energy: particle energy"
+      ,"x2":[2.1e+7,2.175e+7,2.25e+7,2.325e+7,2.4e+7,2.475e+7,2.55e+7,2.625e+7,2.7e+7,2.775e+7
+	,2.85e+7,2.925e+7,3.0e+7,3.075e+7,3.15e+7,3.225e+7,3.3e+7,3.375e+7,3.45e+7,3.525e+7
+	,3.6e+7,3.675e+7,3.75e+7,3.825e+7,3.9e+7,3.975e+7]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
+      ,"expansion":"Angle: angle"
+      ,"x3":[27.5,27.5,27.5,27.5,27.5,27.5,27.5,27.5,27.5,27.5
+	,27.5,27.5,27.5,27.5,27.5,27.5,27.5,27.5,27.5,27.5
+	,27.5,27.5,27.5,27.5,27.5,27.5]
+   }
+ }
 }
    ]
    }
