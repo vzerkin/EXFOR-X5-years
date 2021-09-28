@@ -1,9 +1,9 @@
-  {"ENTRY":"D4094", "updated":20060727, "TransID":"D048", "TransDate":20061120, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
+  {"ENTRY":"D4094", "updated":20210929, "TransID":"D132", "TransDate":20211117, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
    ,"y1":1997,"a1":"F.Szelecsenyi+","r1":"C,97TRIEST,2,1483,1997"
    ,"ref":"Conf: Conf.on Nucl.Data for Sci.and Techn., Trieste 1997, Vol.2, p.1483 (1997)"
    ,"title":"Study of the 197Au(p,pn)M1,M2,G196Au and 197Au(P,N)197MHg Reactions and Their Application for Proton Beam Monitoring in Radioisotope Production"
    ,"x4subents":[
-   {"SUBENT":"D4094001", "isub":1, "compiled":20060727, "TransID":"D048", "TransDate":20061120
+   {"SUBENT":"D4094001", "isub":1, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -15,14 +15,14 @@
       ]
      ,"AUTHOR":[
 	{"x4pointer":" "
-	,"x4codes":[{"ini":"F.","nam":"SZELECSENYI"}
-	    ,{"ini":"S.","nam":"TAKACS"}
-	    ,{"ini":"A.","nam":"FENYVESI"}
-	    ,{"ini":"Z.","nam":"SZUCS"}
-	    ,{"ini":"F.","nam":"TARKANYI"}
-	    ,{"ini":"S-J.","nam":"HESELIUS"}
-	    ,{"ini":"J.","nam":"BERGMAN"}
-	    ,{"ini":"E.","nam":"BOOTHE"}]
+	,"x4codes":[{"ini":"F.","nam":"Szelecsenyi"}
+	    ,{"ini":"S.","nam":"Takacs"}
+	    ,{"ini":"A.","nam":"Fenyvesi"}
+	    ,{"ini":"Z.","nam":"Szucs"}
+	    ,{"ini":"F.","nam":"Tarkanyi"}
+	    ,{"ini":"S-J.","nam":"Heselius"}
+	    ,{"ini":"J.","nam":"Bergman"}
+	    ,{"ini":"E.","nam":"Boothe"}]
 	}
       ]
      ,"INSTITUTE":[
@@ -47,7 +47,7 @@
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}
 	    ,{"code":"2GERJUL", "dict":"INSTITUTE", "idict":3,"hlp":"Forschungszentrum Juelich, Juelich, Germany"}]
-	,"x4freetext":[", Cv 28 Cyclotron, Juelich, Germany"]
+	,"x4freetext":[", CV 28 Cyclotron, Juelich, Germany"]
 	}
       ]
      ,"SAMPLE":[
@@ -80,9 +80,17 @@
 		,"energy was +-0.2 MeV."]
 	}
 	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
-	,"x4freetext":[" Total error is given, varied from 8 to 15%"]
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" Total error is given, varied from 8 to 15%."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"APRVD"
+		,"flag":"APRVD", "help":"Approved by author"
+		}]
+	,"x4freetext":[" Approved by S. Takacs."]
 	}
       ]
      ,"HISTORY":[
@@ -91,29 +99,42 @@
 	     ,"actHelp":"Compiled at the data center"}
 	}
 	,{"x4pointer":" "
+	,"x4code":{"code":"20210927A", "date":"20210927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3=X in 002 c.f. Memo CP-D/0999."
+		,"ERR-T -> DATA-ERR in all subentries. Coded information"
+		,"added in STATUS in subentries 002-003. Approved in 001."]
+	}
+	,{"x4pointer":" "
 	,"x4code":{"code":"20060727A", "date":"20060727", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Ref. corrected."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210927A", "date":"20210927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3=X in 002. ERR-T -> DATA-ERR in"
+		," 001-003. STATUS: code added in 001-003."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"D4094002", "isub":2, "compiled":20010917, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D4094002", "isub":2, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(P,N+P)79-AU-196,,SIG"
-	    ,"c4reac":"(P,N+P),SIG"
+	,"x4code":{"code":"79-AU-197(P,X)79-AU-196,,SIG"
+	    ,"c4reac":"(P,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":28
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"79-AU-197(P,N+P)79-AU-196,,SIG"
-		,"Reac":"P,N+P"
+	    {"code":"79-AU-197(P,X)79-AU-196,,SIG"
+		,"Reac":"P,X"
 		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"79-AU-196","Prod":{"code":"79-AU-196","nam":"Au-196","ZA":79196}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -122,15 +143,25 @@
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-196", "t12":6.183, "t12units":"D", "t12sec":534211.2
+	,"x4codes":[{"Nucl":"79-AU-196-G", "t12":6.183, "t12units":"D", "t12sec":534211.2
 	, "Radiations":[ {"Type":"DG", "Energy":[355.58], "Intensity":0.87}]}]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data were taken from Table 1 of the original paper"
-		,"approved by S. Takacs."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data were taken from Table 1 of"
+		," Conf.on Nucl.Data for Sci.and Techn., Trieste 1997"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210927A", "date":"20210927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3=X c.f. Memo CP-D/0999."
+		,"ERR-T -> DATA-ERR. Coded information added in STATUS"]
 	}
       ]
     }
@@ -145,12 +176,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -180,12 +211,12 @@
 	,[18.3,0.2,19.9,2.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4094002", "Pointer":" "
- ,"Subent":"D4094002", "compiled":20010917
+ ,"Subent":"D4094002", "compiled":20210929
  ,"year1":1997, "author1ini":"F.", "author1":"Szelecsenyi"
- ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"N+P", "MF":3, "MT":28, "nExpectedArgs":1
+ ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"79-AU-197(P,N+P)79-AU-196,,SIG"
+ ,"reacode":"79-AU-197(P,X)79-AU-196,,SIG"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":24
@@ -201,7 +232,7 @@
 	,0.00313,0.00526,0.00521,0.0044,0.00681,0.00652,0.0088,0.0075,0.0119,0.0131
 	,0.015,0.0198,0.0215,0.0199]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.04,0.06,0.08,0.1,0.17,0.12,0.19,0.35,0.42,0.37
@@ -256,7 +287,7 @@
 }
    ]
    }
-  ,{"SUBENT":"D4094003", "isub":3, "compiled":20010917, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D4094003", "isub":3, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -286,9 +317,19 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data were taken from Table 2 of the original paper"
-		,"approved by S. Takacs."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data were taken from Table 2 of"
+		," Conf.on Nucl.Data for Sci.and Techn., Trieste 1997"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210927A", "date":"20210927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. ERR-T -> DATA-ERR."
+		,"             Coded information added in STATUS."]
 	}
       ]
     }
@@ -303,12 +344,12 @@
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":3, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"EN-ERR"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -384,7 +425,7 @@
 	,[18.3,0.2,12.9,1.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4094003", "Pointer":" "
- ,"Subent":"D4094003", "compiled":20010917
+ ,"Subent":"D4094003", "compiled":20210929
  ,"year1":1997, "author1ini":"F.", "author1":"Szelecsenyi"
  ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -425,7 +466,7 @@
 	,0.0251,0.0258,0.0244,0.0199,0.0213,0.0196,0.0172,0.0188,0.0188,0.0173
 	,0.0166,0.0168,0.015,0.0149,0.0153,0.0143,0.0133,0.0139,0.0123,0.0129]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.001,0.01,0.02,0.07,0.05,0.25,0.24,0.39,0.28,0.32
