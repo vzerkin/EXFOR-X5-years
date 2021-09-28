@@ -1,9 +1,9 @@
-  {"ENTRY":"D4334", "updated":20160505, "TransID":"D104", "TransDate":20160629, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
+  {"ENTRY":"D4334", "updated":20210929, "TransID":"D132", "TransDate":20211117, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
    ,"y1":2016,"a1":"F.Tarkanyi+","r1":"J,ARI,110,109,2016","doi1":"10.1016/j.apradiso.2016.01.007"
    ,"ref":"Jour: Applied Radiation and Isotopes, Vol.110, p.109 (2016)"
    ,"title":"Excitation functions for (d,x) reactions on 133Cs up to Ed=40 MeV"
    ,"x4subents":[
-   {"SUBENT":"D4334001", "isub":1, "compiled":20160505, "TransID":"D104", "TransDate":20160629
+   {"SUBENT":"D4334001", "isub":1, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -41,7 +41,7 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}
+	,"x4codes":[{"code":"ISOCY", "dict":"FACILITY", "idict":18,"hlp":"Isochronous cyclotron"}
 	    ,{"code":"2JPNTOH", "dict":"INSTITUTE", "idict":3,"hlp":"Tohoku Univ., Sendai, Japan"}]
 	}
       ]
@@ -67,7 +67,7 @@
 		,"holder equipped with a suppressor of secondary"
 		,"electrons."
 		,"The activities of the produced radionuclides were"
-		,"measured nondestructively, without physical separation"
+		,"measured non-destructively, without physical separation"
 		,"of target and covering foils and without chemical"
 		,"separation."
 		,"The source-detector distance was kept large enough to"
@@ -101,12 +101,6 @@
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"HPGE", "dict":"DETECTOR", "idict":22,"hlp":"Hyperpure Germanium detector"}]
-	}
-      ]
-     ,"DECAY-DATA":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Decay data were taken from NuDat2.6 database."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -168,6 +162,12 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" TS"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210927A", "date":"20210927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3 corrected in 002-004."
+		,"                DECAY-DATA in 001 deleted."]
+	}
       ]
     }
     ,"COMMON":{"ncols":3, "nrows":1
@@ -189,22 +189,22 @@
       ,"data":[
 	 [7,5,5]]}
    }
-  ,{"SUBENT":"D4334002", "isub":2, "compiled":20160505, "TransID":"D104", "TransDate":20160629
+  ,{"SUBENT":"D4334002", "isub":2, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"55-CS-133(D,X)56-BA-133-M,,SIG"
-	    ,"c4reac":"(D,X),SIG"
+	,"x4code":{"code":"55-CS-133(D,2N)56-BA-133-M,,SIG"
+	    ,"c4reac":"(D,2N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":9000
+	    ,"MT":16
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"55-CS-133(D,X)56-BA-133-M,,SIG"
-		,"Reac":"D,X"
+	    {"code":"55-CS-133(D,2N)56-BA-133-M,,SIG"
+		,"Reac":"D,2N"
 		,"SF1":"55-CS-133","Targ":{"code":"55-CS-133","nam":"Cs-133","ZA":55133}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
-		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF3":"2N"
 		,"SF4":"56-BA-133-M","Prod":{"code":"56-BA-133-M","nam":"Ba-133-m","ZA":56133,"ProdM":"M"}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -223,6 +223,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data are taken from Table2 of the article."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210927A", "date":"20210927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3 X -> 2N c.f. Memo CP-D/1017."]
 	}
       ]
     }
@@ -258,12 +265,12 @@
 	,[38.9,0.3,50.9,4.9]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4334002", "Pointer":" "
- ,"Subent":"D4334002", "compiled":20160505
+ ,"Subent":"D4334002", "compiled":20210929
  ,"year1":2016, "author1ini":"F.", "author1":"Tarkanyi"
- ,"zTarg1":55, "targ1":"Cs-133", "proj1":"d", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
+ ,"zTarg1":55, "targ1":"Cs-133", "proj1":"d", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"55-CS-133(D,X)56-BA-133-M,,SIG"
+ ,"reacode":"55-CS-133(D,2N)56-BA-133-M,,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-S,0.1,10.0)   ADDED AS COMMON:ERR-S,PER-CENT=0.1%"
 	,"ERR-ANALYS:(ERR-4,1.0,3.0)    ADDED AS COMMON:ERR-4,PER-CENT=1.0%"]
  ,"wx4data":9
@@ -343,21 +350,21 @@
 }
    ]
    }
-  ,{"SUBENT":"D4334003", "isub":3, "compiled":20160505, "TransID":"D104", "TransDate":20160629
+  ,{"SUBENT":"D4334003", "isub":3, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"55-CS-133(D,X)56-BA-133-G,M+,SIG"
-	    ,"c4reac":"(D,X)M+,SIG"
+	,"x4code":{"code":"55-CS-133(D,2N)56-BA-133-G,M+,SIG"
+	    ,"c4reac":"(D,2N)M+,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"55-CS-133(D,X)56-BA-133-G,M+,SIG"
-		,"Reac":"D,X"
+	    {"code":"55-CS-133(D,2N)56-BA-133-G,M+,SIG"
+		,"Reac":"D,2N"
 		,"SF1":"55-CS-133","Targ":{"code":"55-CS-133","nam":"Cs-133","ZA":55133}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
-		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF3":"2N"
 		,"SF4":"56-BA-133-G","Prod":{"code":"56-BA-133-G","nam":"Ba-133-g","ZA":56133,"ProdM":"G"}
 		,"SF5":"M+"
 		,"SF6":"SIG"
@@ -380,6 +387,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data are taken from Table2 of the article."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210927A", "date":"20210927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3 X -> 2N c.f. Memo CP-D/1017."]
 	}
       ]
     }
@@ -411,12 +425,12 @@
 	,[30.2,0.5,52.2,11.9]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4334003", "Pointer":" "
- ,"Subent":"D4334003", "compiled":20160505
+ ,"Subent":"D4334003", "compiled":20210929
  ,"year1":2016, "author1ini":"F.", "author1":"Tarkanyi"
- ,"zTarg1":55, "targ1":"Cs-133", "proj1":"d", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":55, "targ1":"Cs-133", "proj1":"d", "emis1":"2N", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section, incl. form. via isomeric trans."
- ,"reacode":"55-CS-133(D,X)56-BA-133-G,M+,SIG"
+ ,"reacode":"55-CS-133(D,2N)56-BA-133-G,M+,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-S,0.1,10.0)   ADDED AS COMMON:ERR-S,PER-CENT=0.1%"
 	,"ERR-ANALYS:(ERR-4,1.0,3.0)    ADDED AS COMMON:ERR-4,PER-CENT=1.0%"]
  ,"wx4data":9
@@ -496,21 +510,22 @@
 }
    ]
    }
-  ,{"SUBENT":"D4334004", "isub":4, "compiled":20160505, "TransID":"D104", "TransDate":20160629
+  ,{"SUBENT":"D4334004", "isub":4, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"55-CS-133(D,X)56-BA-131-G,M+,SIG"
-	    ,"c4reac":"(D,X)M+,SIG"
+	,"x4code":{"code":"55-CS-133(D,4N)56-BA-131-G,M+,SIG"
+	    ,"c4reac":"(D,4N)M+,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":37
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"55-CS-133(D,X)56-BA-131-G,M+,SIG"
-		,"Reac":"D,X"
+	    {"code":"55-CS-133(D,4N)56-BA-131-G,M+,SIG"
+		,"Reac":"D,4N"
 		,"SF1":"55-CS-133","Targ":{"code":"55-CS-133","nam":"Cs-133","ZA":55133}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
-		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF3":"4N"
 		,"SF4":"56-BA-131-G","Prod":{"code":"56-BA-131-G","nam":"Ba-131-g","ZA":56131,"ProdM":"G"}
 		,"SF5":"M+"
 		,"SF6":"SIG"
@@ -533,6 +548,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data are taken from Table2 of the article."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210927A", "date":"20210927", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3 X -> 4N c.f. Memo CP-D/1017."]
 	}
       ]
     }
@@ -564,12 +586,12 @@
 	,[38.9,0.3,666.1,72.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4334004", "Pointer":" "
- ,"Subent":"D4334004", "compiled":20160505
+ ,"Subent":"D4334004", "compiled":20210929
  ,"year1":2016, "author1ini":"F.", "author1":"Tarkanyi"
- ,"zTarg1":55, "targ1":"Cs-133", "proj1":"d", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":55, "targ1":"Cs-133", "proj1":"d", "emis1":"4N", "MF":3, "MT":37, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section, incl. form. via isomeric trans."
- ,"reacode":"55-CS-133(D,X)56-BA-131-G,M+,SIG"
+ ,"reacode":"55-CS-133(D,4N)56-BA-131-G,M+,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-S,0.1,10.0)   ADDED AS COMMON:ERR-S,PER-CENT=0.1%"
 	,"ERR-ANALYS:(ERR-4,1.0,3.0)    ADDED AS COMMON:ERR-4,PER-CENT=1.0%"]
  ,"wx4data":9
