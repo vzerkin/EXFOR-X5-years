@@ -1,9 +1,9 @@
-  {"ENTRY":"D0523", "updated":20090122, "TransID":"D068", "TransDate":20090721, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"D0523", "updated":20210929, "TransID":"D132", "TransDate":20211117, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":1989,"a1":"H.J.Brede+","r1":"J,NIM/A,274,332,1989"
    ,"ref":"Jour: Nucl. Instrum. Methods in Physics Res., Sect.A, Vol.274, p.332 (1989)"
    ,"title":"Neutron yields from thick Be targets bombarded with deuterons or protons"
    ,"x4subents":[
-   {"SUBENT":"D0523001", "isub":1, "compiled":20090122, "TransID":"D068", "TransDate":20090721
+   {"SUBENT":"D0523001", "isub":1, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -91,12 +91,12 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["The quadratic summation of all contributions"
 		,"results in a total uncertainty of 4.5% for neutron"
 		,"energies above 5 MeV, 6% at E-n = 1 MeV and 10.5 %"
-		,"at E-n = 400 keV. It icludes:"
+		,"at E-n = 400 keV. It includes:"
 		,"  * statistical uncertainties"
 		,"  * uncertainty in the determination of the beam"
 		,"    charge on the Be target"
@@ -120,27 +120,35 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":["LV, SD"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210928A", "date":"20210928", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF2 corrected in 005."
+		,"                ERR-T -> DATA-ERR in 001-005"
+		,"      SF5-SF8 corrected to new dictionary in 002-005"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"D0523002", "isub":2, "compiled":20090122, "TransID":"D068", "TransDate":20090721
+  ,{"SUBENT":"D0523002", "isub":2, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"4-BE-9(D,X)0-NN-1,PAR,TTY/PY/DA"
-	    ,"c4reac":"(D,X)PAR,TTY/PY/DA"
+	,"x4code":{"code":"4-BE-9(D,X)0-NN-1,PAR,PY/DA,,TT/CH"
+	    ,"c4reac":"(D,X)PAR,PY/DA,,TT/CH"
 	    ,"combi":"a"
 	    ,"Units":"PRD/MUC/SR"
 	    ,"reacs": [
-	    {"code":"4-BE-9(D,X)0-NN-1,PAR,TTY/PY/DA"
+	    {"code":"4-BE-9(D,X)0-NN-1,PAR,PY/DA,,TT/CH"
 		,"Reac":"D,X"
 		,"SF1":"4-BE-9","Targ":{"code":"4-BE-9","nam":"Be-9","ZA":4009}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF5":"PAR"
-		,"SF6":"TTY/PY/DA"
-		,"SF58":"PAR,TTY/PY/DA","Quant":"TTD","BasicUnits":"PRD/MUC/SR","QuantHlp":"Ptl.Thk-targ.prd.yld(fct.of inc.beamcurr.)d/dA"
+		,"SF6":"PY/DA"
+		,"SF8":"TT/CH"
+		,"SF58":"PAR,PY/DA,,TT/CH","Quant":"TTD","BasicUnits":"PRD/MUC/SR","QuantHlp":"Ptl.dif.prod.yld.d/dA for thick targ.per e.chrg."
 	    }]}
 	}
       ]
@@ -157,6 +165,14 @@
 	,"x4code":null
 	,"x4freetext":["The values En represent the mean neutron energy of"
 		,"the energy binning."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210928A", "date":"20210928", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. ERR-T -> DATA-ERR"
+		," PAR,TTY/PY/DA (Obsolete) -> PAR,PY/DA,,TT/CH"]
 	}
       ]
     }
@@ -183,12 +199,12 @@
       ,{"icol":2, "header":"DATA", "units":"PRD/MUC/SR", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"products/micro-Coulomb/sr","familyCode":"YDAC","convFc":1.0,"basicUnits":"PRD/MUC/SR"}
-      ,{"icol":3, "header":"ERR-T", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["EN"        ,"E"         ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"E"         ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"PRD/MUC/SR","PER-CENT"  ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -809,12 +825,12 @@
 	,[13.54,18.5,600000,4.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0523002", "Pointer":" "
- ,"Subent":"D0523002", "compiled":20090122
+ ,"Subent":"D0523002", "compiled":20210929
  ,"year1":1989, "author1ini":"H.J.", "author1":"Brede"
  ,"zTarg1":4, "targ1":"Be-9", "proj1":"d", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,E2,ANG)"
- ,"ReactionType":"TDP", "quant":"TTD", "quantExpan":"Ptl.Thk-targ.prd.yld(fct.of inc.beamcurr.)d/dA"
- ,"reacode":"4-BE-9(D,X)0-NN-1,PAR,TTY/PY/DA"
+ ,"ReactionType":"TAP", "quant":"TTD", "quantExpan":"Ptl.dif.prod.yld.d/dA for thick targ.per e.chrg."
+ ,"reacode":"4-BE-9(D,X)0-NN-1,PAR,PY/DA,,TT/CH"
  ,"compNotes":[]
  ,"wx4data":5
  ,"lx4data":615
@@ -887,7 +903,7 @@
 	,5.56e+7,4.67e+7,3.04e+7,1.26e+7,6.0e+5]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[null,null,null,null,null,null,null,null,null,null
@@ -1548,24 +1564,25 @@
 }
    ]
    }
-  ,{"SUBENT":"D0523003", "isub":3, "compiled":20090122, "TransID":"D068", "TransDate":20090721
+  ,{"SUBENT":"D0523003", "isub":3, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"4-BE-9(D,X)0-NN-1,PAR,TTY/PY/DA"
-	    ,"c4reac":"(D,X)PAR,TTY/PY/DA"
+	,"x4code":{"code":"4-BE-9(D,X)0-NN-1,PAR,PY/DA,,TT/CH"
+	    ,"c4reac":"(D,X)PAR,PY/DA,,TT/CH"
 	    ,"combi":"a"
 	    ,"Units":"PRD/MUC/SR"
 	    ,"reacs": [
-	    {"code":"4-BE-9(D,X)0-NN-1,PAR,TTY/PY/DA"
+	    {"code":"4-BE-9(D,X)0-NN-1,PAR,PY/DA,,TT/CH"
 		,"Reac":"D,X"
 		,"SF1":"4-BE-9","Targ":{"code":"4-BE-9","nam":"Be-9","ZA":4009}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF5":"PAR"
-		,"SF6":"TTY/PY/DA"
-		,"SF58":"PAR,TTY/PY/DA","Quant":"TTD","BasicUnits":"PRD/MUC/SR","QuantHlp":"Ptl.Thk-targ.prd.yld(fct.of inc.beamcurr.)d/dA"
+		,"SF6":"PY/DA"
+		,"SF8":"TT/CH"
+		,"SF58":"PAR,PY/DA,,TT/CH","Quant":"TTD","BasicUnits":"PRD/MUC/SR","QuantHlp":"Ptl.dif.prod.yld.d/dA for thick targ.per e.chrg."
 	    }]}
 	}
       ]
@@ -1582,6 +1599,14 @@
 	,"x4code":null
 	,"x4freetext":["The values En represent the mean neutron energy of"
 		,"the energy binning."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210928A", "date":"20210928", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. ERR-T -> DATA-ERR"
+		," PAR,TTY/PY/DA (Obsolete) -> PAR,PY/DA,,TT/CH"]
 	}
       ]
     }
@@ -1608,12 +1633,12 @@
       ,{"icol":2, "header":"DATA", "units":"PRD/MUC/SR", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"products/micro-Coulomb/sr","familyCode":"YDAC","convFc":1.0,"basicUnits":"PRD/MUC/SR"}
-      ,{"icol":3, "header":"ERR-T", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["ANG"       ,"E"         ,"DATA"      ,"ERR-T"     ]
+	 ["ANG"       ,"E"         ,"DATA"      ,"DATA-ERR"  ]
 	,["ADEG"      ,"MEV"       ,"PRD/MUC/SR","PER-CENT"  ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -2308,12 +2333,12 @@
 	,[150,11.25,700000,4.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0523003", "Pointer":" "
- ,"Subent":"D0523003", "compiled":20090122
+ ,"Subent":"D0523003", "compiled":20210929
  ,"year1":1989, "author1ini":"H.J.", "author1":"Brede"
  ,"zTarg1":4, "targ1":"Be-9", "proj1":"d", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,E2,ANG)"
- ,"ReactionType":"TDP", "quant":"TTD", "quantExpan":"Ptl.Thk-targ.prd.yld(fct.of inc.beamcurr.)d/dA"
- ,"reacode":"4-BE-9(D,X)0-NN-1,PAR,TTY/PY/DA"
+ ,"ReactionType":"TAP", "quant":"TTD", "quantExpan":"Ptl.dif.prod.yld.d/dA for thick targ.per e.chrg."
+ ,"reacode":"4-BE-9(D,X)0-NN-1,PAR,PY/DA,,TT/CH"
  ,"compNotes":[]
  ,"wx4data":5
  ,"lx4data":689
@@ -2393,7 +2418,7 @@
 	,1.62e+7,1.34e+7,1.09e+7,9.4e+6,9.9e+6,7.3e+6,6.2e+6,3.6e+6,7.0e+5]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[null,null,null,null,null,null,null,null,null,null
@@ -3056,24 +3081,25 @@
 }
    ]
    }
-  ,{"SUBENT":"D0523004", "isub":4, "compiled":20090122, "TransID":"D068", "TransDate":20090721
+  ,{"SUBENT":"D0523004", "isub":4, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"4-BE-9(P,X)0-NN-1,PAR,TTY/PY/DA"
-	    ,"c4reac":"(P,X)PAR,TTY/PY/DA"
+	,"x4code":{"code":"4-BE-9(P,X)0-NN-1,PAR,PY/DA,,TT/CH"
+	    ,"c4reac":"(P,X)PAR,PY/DA,,TT/CH"
 	    ,"combi":"a"
 	    ,"Units":"PRD/MUC/SR"
 	    ,"reacs": [
-	    {"code":"4-BE-9(P,X)0-NN-1,PAR,TTY/PY/DA"
+	    {"code":"4-BE-9(P,X)0-NN-1,PAR,PY/DA,,TT/CH"
 		,"Reac":"P,X"
 		,"SF1":"4-BE-9","Targ":{"code":"4-BE-9","nam":"Be-9","ZA":4009}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF5":"PAR"
-		,"SF6":"TTY/PY/DA"
-		,"SF58":"PAR,TTY/PY/DA","Quant":"TTD","BasicUnits":"PRD/MUC/SR","QuantHlp":"Ptl.Thk-targ.prd.yld(fct.of inc.beamcurr.)d/dA"
+		,"SF6":"PY/DA"
+		,"SF8":"TT/CH"
+		,"SF58":"PAR,PY/DA,,TT/CH","Quant":"TTD","BasicUnits":"PRD/MUC/SR","QuantHlp":"Ptl.dif.prod.yld.d/dA for thick targ.per e.chrg."
 	    }]}
 	}
       ]
@@ -3090,6 +3116,14 @@
 	,"x4code":null
 	,"x4freetext":["The values En represent the mean neutron energy of"
 		,"the energy binning."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210928A", "date":"20210928", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. ERR-T -> DATA-ERR"
+		," PAR,TTY/PY/DA (Obsolete) -> PAR,PY/DA,,TT/CH"]
 	}
       ]
     }
@@ -3116,12 +3150,12 @@
       ,{"icol":2, "header":"DATA", "units":"PRD/MUC/SR", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"products/micro-Coulomb/sr","familyCode":"YDAC","convFc":1.0,"basicUnits":"PRD/MUC/SR"}
-      ,{"icol":3, "header":"ERR-T", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["EN"        ,"E"         ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"E"         ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"PRD/MUC/SR","PER-CENT"  ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -3634,12 +3668,12 @@
 	,[22.01,20.5,2.1E7,4.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0523004", "Pointer":" "
- ,"Subent":"D0523004", "compiled":20090122
+ ,"Subent":"D0523004", "compiled":20210929
  ,"year1":1989, "author1ini":"H.J.", "author1":"Brede"
  ,"zTarg1":4, "targ1":"Be-9", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,E2,ANG)"
- ,"ReactionType":"TDP", "quant":"TTD", "quantExpan":"Ptl.Thk-targ.prd.yld(fct.of inc.beamcurr.)d/dA"
- ,"reacode":"4-BE-9(P,X)0-NN-1,PAR,TTY/PY/DA"
+ ,"ReactionType":"TAP", "quant":"TTD", "quantExpan":"Ptl.dif.prod.yld.d/dA for thick targ.per e.chrg."
+ ,"reacode":"4-BE-9(P,X)0-NN-1,PAR,PY/DA,,TT/CH"
  ,"compNotes":[]
  ,"wx4data":5
  ,"lx4data":507
@@ -3701,7 +3735,7 @@
 	,4.28e+8,4.19e+8,3.96e+8,3.51e+8,3.4e+8,2.95e+8,2.1e+7]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[null,null,null,null,null,null,null,null,null,null
@@ -4252,24 +4286,25 @@
 }
    ]
    }
-  ,{"SUBENT":"D0523005", "isub":5, "compiled":20090122, "TransID":"D068", "TransDate":20090721
+  ,{"SUBENT":"D0523005", "isub":5, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"4-BE-9(D,X)0-NN-1,PAR,TTY/PY/DA"
-	    ,"c4reac":"(D,X)PAR,TTY/PY/DA"
+	,"x4code":{"code":"4-BE-9(P,X)0-NN-1,PAR,PY/DA,,TT/CH"
+	    ,"c4reac":"(P,X)PAR,PY/DA,,TT/CH"
 	    ,"combi":"a"
 	    ,"Units":"PRD/MUC/SR"
 	    ,"reacs": [
-	    {"code":"4-BE-9(D,X)0-NN-1,PAR,TTY/PY/DA"
-		,"Reac":"D,X"
+	    {"code":"4-BE-9(P,X)0-NN-1,PAR,PY/DA,,TT/CH"
+		,"Reac":"P,X"
 		,"SF1":"4-BE-9","Targ":{"code":"4-BE-9","nam":"Be-9","ZA":4009}
-		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
+		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF5":"PAR"
-		,"SF6":"TTY/PY/DA"
-		,"SF58":"PAR,TTY/PY/DA","Quant":"TTD","BasicUnits":"PRD/MUC/SR","QuantHlp":"Ptl.Thk-targ.prd.yld(fct.of inc.beamcurr.)d/dA"
+		,"SF6":"PY/DA"
+		,"SF8":"TT/CH"
+		,"SF58":"PAR,PY/DA,,TT/CH","Quant":"TTD","BasicUnits":"PRD/MUC/SR","QuantHlp":"Ptl.dif.prod.yld.d/dA for thick targ.per e.chrg."
 	    }]}
 	}
       ]
@@ -4286,6 +4321,14 @@
 	,"x4code":null
 	,"x4freetext":["The values En represent the mean neutron energy of"
 		,"the energy binning."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210928A", "date":"20210928", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF2: D -> P; ERR-T -> DATA-ERR."
+		," PAR,TTY/PY/DA (Obsolete) -> PAR,PY/DA,,TT/CH"]
 	}
       ]
     }
@@ -4312,12 +4355,12 @@
       ,{"icol":2, "header":"DATA", "units":"PRD/MUC/SR", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"products/micro-Coulomb/sr","familyCode":"YDAC","convFc":1.0,"basicUnits":"PRD/MUC/SR"}
-      ,{"icol":3, "header":"ERR-T", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":3, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["ANG"       ,"E"         ,"DATA"      ,"ERR-T"     ]
+	 ["ANG"       ,"E"         ,"DATA"      ,"DATA-ERR"  ]
 	,["ADEG"      ,"MEV"       ,"PRD/MUC/SR","PER-CENT"  ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -4832,12 +4875,12 @@
 	,[135,11.75,400000,4.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0523005", "Pointer":" "
- ,"Subent":"D0523005", "compiled":20090122
+ ,"Subent":"D0523005", "compiled":20210929
  ,"year1":1989, "author1ini":"H.J.", "author1":"Brede"
- ,"zTarg1":4, "targ1":"Be-9", "proj1":"d", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":3
+ ,"zTarg1":4, "targ1":"Be-9", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,E2,ANG)"
- ,"ReactionType":"TDP", "quant":"TTD", "quantExpan":"Ptl.Thk-targ.prd.yld(fct.of inc.beamcurr.)d/dA"
- ,"reacode":"4-BE-9(D,X)0-NN-1,PAR,TTY/PY/DA"
+ ,"ReactionType":"TAP", "quant":"TTD", "quantExpan":"Ptl.dif.prod.yld.d/dA for thick targ.per e.chrg."
+ ,"reacode":"4-BE-9(P,X)0-NN-1,PAR,PY/DA,,TT/CH"
  ,"compNotes":[]
  ,"wx4data":5
  ,"lx4data":509
@@ -4899,7 +4942,7 @@
 	,2.82e+7,2.43e+7,2.02e+7,1.69e+7,1.17e+7,1.13e+7,1.0e+7,3.5e+6,4.0e+5]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[null,null,null,null,null,null,null,null,null,null
