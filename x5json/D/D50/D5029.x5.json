@@ -1,9 +1,9 @@
-  {"ENTRY":"D5029", "updated":20101028, "TransID":"D074", "TransDate":20110307, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
+  {"ENTRY":"D5029", "updated":20210929, "TransID":"D132", "TransDate":20211117, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
    ,"y1":2006,"a1":"Yu.Pavlenko+","r1":"J,YFE,7,16,2006"
    ,"ref":"Jour: Yaderna Fizika ta Energetika, Vol.7, Issue.2/18, p.16 (2006)"
    ,"title":"Experimental study of the excited states of helium isotopes in the reactions 7Li(d, (3,4,6)He) at deuteron energy of 37 MeV"
    ,"x4subents":[
-   {"SUBENT":"D5029001", "isub":1, "compiled":20101028, "TransID":"D074", "TransDate":20110307
+   {"SUBENT":"D5029001", "isub":1, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -56,7 +56,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TELES", "dict":"DETECTOR", "idict":22,"hlp":"Counter telescope"}
 	    ,{"code":"SI", "dict":"DETECTOR", "idict":22,"hlp":"Silicon detector"}]
-	,"x4freetext":["Four silicium deltaE-E telescopes."
+	,"x4freetext":[" Four silicon deltaE-E telescopes."
 		,"Thicknesses: deltaE-detectors-50 micro-m, E-detectors-"
 		,"550 micro-m."]
 	}
@@ -104,6 +104,12 @@
 	,"x4code":{"code":"20100721A", "date":"20100721", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: ref.code on ZNJD was corrected on NFE."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210924U", "date":"20210924", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. SF7 corrected and ANG-SEC added in"
+		,"                004-005."]
 	}
       ]
     }
@@ -861,29 +867,37 @@
 }
    ]
    }
-  ,{"SUBENT":"D5029004", "isub":4, "compiled":20061219, "TransID":"D054", "TransDate":20070822
+  ,{"SUBENT":"D5029004", "isub":4, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-7(D,D+T)2-HE-4,,DA/DA/DE,A/T/A,REL"
-	    ,"c4reac":"(D,D+T),DA/DA/DE,A/T/A,REL"
+	,"x4code":{"code":"3-LI-7(D,D+T)2-HE-4,,DA/DA/DE,T/A/A,REL"
+	    ,"c4reac":"(D,D+T),DA/DA/DE,T/A/A,REL"
 	    ,"combi":"a"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"3-LI-7(D,D+T)2-HE-4,,DA/DA/DE,A/T/A,REL"
+	    {"code":"3-LI-7(D,D+T)2-HE-4,,DA/DA/DE,T/A/A,REL"
 		,"Reac":"D,D+T"
 		,"SF1":"3-LI-7","Targ":{"code":"3-LI-7","nam":"Li-7","ZA":3007}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"D+T"
 		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF6":"DA/DA/DE"
-		,"SF7":"A/T/A"
+		,"SF7":"T/A/A"
 		,"SF8":"REL"
-		,"SF58":",DA/DA/DE,A/T/A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":",DA/DA/DE,T/A/A","Quant":"DAE","BasicUnits":"ARB-UNITS","QuantHlp":"Triple diff.cross section d3/dA(*)/dA(*)/dE(*)"
 	    }]}
-	,"x4freetext":["ANG1 is angle between incident beam and alpha-particle,"
-		,"ANG2 is angle between incident beam and triton."
-		,"Alpha-particle spectrum corresponds to alpha-triton"
+	,"x4freetext":["Alpha-particle spectrum corresponds to alpha-triton"
 		,"coincidences."]
+	}
+      ]
+     ,"ANG-SEC":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG1,A"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG2,T"}
 	}
       ]
      ,"STATUS":[
@@ -893,6 +907,14 @@
 		,"subent":"TABLE"
 		}]
 	,"x4freetext":[" Correspond to figure 9a."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210924U", "date":"20210924", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. SF7: the first and second particles"
+		,"swapped (c.f. Memo CP-D/1014) and ANG-SEC added."]
 	}
       ]
     }
@@ -1003,39 +1025,182 @@
 	,[25.109,1,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D5029004", "Pointer":" "
- ,"Subent":"D5029004", "compiled":20061219
-,"year1":2006, "author1ini":"Yu.", "author1":"Pavlenko"
-, "zTarg1":3, "targ1":"Li-7", "proj1":"d", "emis1":"D+T", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"3-LI-7(D,D+T)2-HE-4,,DA/DA/DE,A/T/A,REL"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D5029004", "compiled":20210929
+ ,"year1":2006, "author1ini":"Yu.", "author1":"Pavlenko"
+ ,"zTarg1":3, "targ1":"Li-7", "proj1":"d", "emis1":"D+T", "MF":600, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,E2,ANG)"
+ ,"ReactionType":"D3A", "quant":"DAE", "quantExpan":"Triple diff.cross section d3/dA(*)/dA(*)/dE(*)"
+ ,"reacode":"3-LI-7(D,D+T)2-HE-4,,DA/DA/DE,T/A/A,REL"
+ ,"compNotes":[]
+ ,"wx4data":6
+ ,"lx4data":73
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[13,14,15,11,21,30,43,47,74,88
+	,131,149,141,141,96,71,42,28,11,9
+	,10,8,13,11,8,6,15,16,8,11
+	,14,9,11,17,14,12,13,20,7,12
+	,11,13,12,12,13,14,12,11,5,18
+	,20,11,13,12,19,13,11,7,9,8
+	,13,14,6,19,21,21,31,42,27,14
+	,6,1,1]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"ERR-S", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[3.60556,3.74166,3.87298,3.31662,4.58258,5.47722,6.55744,6.85566,8.60232,9.38084
+	,11.4455,12.2066,11.8743,11.8743,9.79796,8.42614,6.48074,5.2915,3.31662,3
+	,3.16228,2.82842,3.60555,3.31662,2.82843,2.44949,3.87298,4,2.82843,3.31662
+	,3.74166,3,3.31662,4.12311,3.74166,3.4641,3.60555,4.47214,2.64575,3.4641
+	,3.31662,3.60555,3.4641,3.4641,3.60555,3.74166,3.4641,3.31662,2.23607,4.24264
+	,4.47214,3.31662,3.60555,3.4641,4.3589,3.60555,3.31662,2.64575,3,2.82843
+	,3.60555,3.74166,2.44949,4.3589,4.58258,4.58258,5.56776,6.48074,5.19615,3.74166
+	,2.44949,1,1]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":37
+    ,"com1":3.7e+7}
+  ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+    ,"header":"E", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"51", "rank":2.1
+    ,"expansion":"Secondary energy: particle energy"
+    ,"dat0":[12.7394,12.9112,13.083,13.2548,13.4266,13.5984,13.7702,13.942,14.1138,14.2856
+	,14.4574,14.6292,14.801,14.9728,15.1446,15.3164,15.4882,15.66,15.8318,16.0036
+	,16.1754,16.3472,16.519,16.6908,16.8626,17.0344,17.2062,17.378,17.5498,17.7216
+	,17.8934,18.0652,18.237,18.4088,18.5806,18.7524,18.9242,19.096,19.2678,19.4396
+	,19.6114,19.7832,19.955,20.1268,20.2986,20.4704,20.6422,20.814,20.9858,21.1576
+	,21.3294,21.5012,21.673,21.8448,22.0166,22.1884,22.3602,22.532,22.7038,22.8756
+	,23.0474,23.2192,23.391,23.5628,23.7346,23.9064,24.0782,24.25,24.4218,24.5936
+	,24.7654,24.9372,25.109]
+    ,"dat1":[1.27394e+7,1.29112e+7,1.3083e+7,1.32548e+7,1.34266e+7,1.35984e+7,1.37702e+7,1.3942e+7,1.41138e+7,1.42856e+7
+	,1.44574e+7,1.46292e+7,1.4801e+7,1.49728e+7,1.51446e+7,1.53164e+7,1.54882e+7,1.566e+7,1.58318e+7,1.60036e+7
+	,1.61754e+7,1.63472e+7,1.6519e+7,1.66908e+7,1.68626e+7,1.70344e+7,1.72062e+7,1.7378e+7,1.75498e+7,1.77216e+7
+	,1.78934e+7,1.80652e+7,1.8237e+7,1.84088e+7,1.85806e+7,1.87524e+7,1.89242e+7,1.9096e+7,1.92678e+7,1.94396e+7
+	,1.96114e+7,1.97832e+7,1.9955e+7,2.01268e+7,2.02986e+7,2.04704e+7,2.06422e+7,2.0814e+7,2.09858e+7,2.11576e+7
+	,2.13294e+7,2.15012e+7,2.1673e+7,2.18448e+7,2.20166e+7,2.21884e+7,2.23602e+7,2.2532e+7,2.27038e+7,2.28756e+7
+	,2.30474e+7,2.32192e+7,2.3391e+7,2.35628e+7,2.37346e+7,2.39064e+7,2.40782e+7,2.425e+7,2.44218e+7,2.45936e+7
+	,2.47654e+7,2.49372e+7,2.5109e+7]}
+  ,{"ivar":4, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG1", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":45
+    ,"com1":45}
+  ,{"ivar":5, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG2", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":79
+    ,"com1":79}
+  ]
+ ,"wc5data":4
+ ,"lc5data":73
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[13,14,15,11,21,30,43,47,74,88
+	,131,149,141,141,96,71,42,28,11,9
+	,10,8,13,11,8,6,15,16,8,11
+	,14,9,11,17,14,12,13,20,7,12
+	,11,13,12,12,13,14,12,11,5,18
+	,20,11,13,12,19,13,11,7,9,8
+	,13,14,6,19,21,21,31,42,27,14
+	,6,1,1]
+      ,"dy":[3.60556,3.74166,3.87298,3.31662,4.58258,5.47722,6.55744,6.85566,8.60232,9.38084
+	,11.4455,12.2066,11.8743,11.8743,9.79796,8.42614,6.48074,5.2915,3.31662,3
+	,3.16228,2.82842,3.60555,3.31662,2.82843,2.44949,3.87298,4,2.82843,3.31662
+	,3.74166,3,3.31662,4.12311,3.74166,3.4641,3.60555,4.47214,2.64575,3.4641
+	,3.31662,3.60555,3.4641,3.4641,3.60555,3.74166,3.4641,3.31662,2.23607,4.24264
+	,4.47214,3.31662,3.60555,3.4641,4.3589,3.60555,3.31662,2.64575,3,2.82843
+	,3.60555,3.74166,2.44949,4.3589,4.58258,4.58258,5.56776,6.48074,5.19615,3.74166
+	,2.44949,1,1]
+      ,"dystat":[3.60556,3.74166,3.87298,3.31662,4.58258,5.47722,6.55744,6.85566,8.60232,9.38084
+	,11.4455,12.2066,11.8743,11.8743,9.79796,8.42614,6.48074,5.2915,3.31662,3
+	,3.16228,2.82842,3.60555,3.31662,2.82843,2.44949,3.87298,4,2.82843,3.31662
+	,3.74166,3,3.31662,4.12311,3.74166,3.4641,3.60555,4.47214,2.64575,3.4641
+	,3.31662,3.60555,3.4641,3.4641,3.60555,3.74166,3.4641,3.31662,2.23607,4.24264
+	,4.47214,3.31662,3.60555,3.4641,4.3589,3.60555,3.31662,2.64575,3,2.82843
+	,3.60555,3.74166,2.44949,4.3589,4.58258,4.58258,5.56776,6.48074,5.19615,3.74166
+	,2.44949,1,1]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"E2", "ifCM":false, "units":"EV"
+      ,"header":"E2", "dataType":"51", "rank":2.0
+      ,"expansion":"Secondary energy: particle energy"
+      ,"x2":[1.27394e+7,1.29112e+7,1.3083e+7,1.32548e+7,1.34266e+7,1.35984e+7,1.37702e+7,1.3942e+7,1.41138e+7,1.42856e+7
+	,1.44574e+7,1.46292e+7,1.4801e+7,1.49728e+7,1.51446e+7,1.53164e+7,1.54882e+7,1.566e+7,1.58318e+7,1.60036e+7
+	,1.61754e+7,1.63472e+7,1.6519e+7,1.66908e+7,1.68626e+7,1.70344e+7,1.72062e+7,1.7378e+7,1.75498e+7,1.77216e+7
+	,1.78934e+7,1.80652e+7,1.8237e+7,1.84088e+7,1.85806e+7,1.87524e+7,1.89242e+7,1.9096e+7,1.92678e+7,1.94396e+7
+	,1.96114e+7,1.97832e+7,1.9955e+7,2.01268e+7,2.02986e+7,2.04704e+7,2.06422e+7,2.0814e+7,2.09858e+7,2.11576e+7
+	,2.13294e+7,2.15012e+7,2.1673e+7,2.18448e+7,2.20166e+7,2.21884e+7,2.23602e+7,2.2532e+7,2.27038e+7,2.28756e+7
+	,2.30474e+7,2.32192e+7,2.3391e+7,2.35628e+7,2.37346e+7,2.39064e+7,2.40782e+7,2.425e+7,2.44218e+7,2.45936e+7
+	,2.47654e+7,2.49372e+7,2.5109e+7]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
+      ,"expansion":"Angle: angle"
+      ,"x3":[79,79,79,79,79,79,79,79,79,79
+	,79,79,79,79,79,79,79,79,79,79
+	,79,79,79,79,79,79,79,79,79,79
+	,79,79,79,79,79,79,79,79,79,79
+	,79,79,79,79,79,79,79,79,79,79
+	,79,79,79,79,79,79,79,79,79,79
+	,79,79,79,79,79,79,79,79,79,79
+	,79,79,79]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"D5029005", "isub":5, "compiled":20061219, "TransID":"D054", "TransDate":20070822
+  ,{"SUBENT":"D5029005", "isub":5, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-7(D,D+T)2-HE-4,,DA/DA/DE,A/D/A,REL"
-	    ,"c4reac":"(D,D+T),DA/DA/DE,A/D/A,REL"
+	,"x4code":{"code":"3-LI-7(D,D+T)2-HE-4,,DA/DA/DE,D/A/A,REL"
+	    ,"c4reac":"(D,D+T),DA/DA/DE,D/A/A,REL"
 	    ,"combi":"a"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"3-LI-7(D,D+T)2-HE-4,,DA/DA/DE,A/D/A,REL"
+	    {"code":"3-LI-7(D,D+T)2-HE-4,,DA/DA/DE,D/A/A,REL"
 		,"Reac":"D,D+T"
 		,"SF1":"3-LI-7","Targ":{"code":"3-LI-7","nam":"Li-7","ZA":3007}
 		,"SF2":"D","Proj":{"code":"D","nam":"d","ZA":1002}
 		,"SF3":"D+T"
 		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF6":"DA/DA/DE"
-		,"SF7":"A/D/A"
+		,"SF7":"D/A/A"
 		,"SF8":"REL"
-		,"SF58":",DA/DA/DE,A/D/A","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":",DA/DA/DE,D/A/A","Quant":"DAE","BasicUnits":"ARB-UNITS","QuantHlp":"Triple diff.cross section d3/dA(*)/dA(*)/dE(*)"
 	    }]}
-	,"x4freetext":["ANG1 is angle between incident beam and alpha-particle,"
-		,"ANG2 is angle between incident beam and deuteron."
-		,"Alpha-particle spectrum corresponds to alpha-deuteron"
+	,"x4freetext":["Alpha-particle spectrum corresponds to alpha-deuteron"
 		,"coincidences."]
+	}
+      ]
+     ,"ANG-SEC":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG1,A"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG2,D"}
 	}
       ]
      ,"STATUS":[
@@ -1045,6 +1210,14 @@
 		,"subent":"TABLE"
 		}]
 	,"x4freetext":[" Correspond to figure 9b."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210924U", "date":"20210924", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. SF7: the first and second particles"
+		,"swapped (c.f. Memo CP-D/1014) and ANG-SEC added."]
 	}
       ]
     }
@@ -1159,13 +1332,148 @@
 	,[24.9372,1,1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D5029005", "Pointer":" "
- ,"Subent":"D5029005", "compiled":20061219
-,"year1":2006, "author1ini":"Yu.", "author1":"Pavlenko"
-, "zTarg1":3, "targ1":"Li-7", "proj1":"d", "emis1":"D+T", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"3-LI-7(D,D+T)2-HE-4,,DA/DA/DE,A/D/A,REL"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D5029005", "compiled":20210929
+ ,"year1":2006, "author1ini":"Yu.", "author1":"Pavlenko"
+ ,"zTarg1":3, "targ1":"Li-7", "proj1":"d", "emis1":"D+T", "MF":600, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,E2,ANG)"
+ ,"ReactionType":"D3A", "quant":"DAE", "quantExpan":"Triple diff.cross section d3/dA(*)/dA(*)/dE(*)"
+ ,"reacode":"3-LI-7(D,D+T)2-HE-4,,DA/DA/DE,D/A/A,REL"
+ ,"compNotes":[]
+ ,"wx4data":6
+ ,"lx4data":77
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[6,23,24,34,20,33,38,51,57,57
+	,46,51,34,21,22,22,17,16,19,16
+	,14,12,11,11,6,7,11,11,8,7
+	,6,4,2,4,4,4,1,9,6,7
+	,6,1,8,7,13,7,13,11,9,6
+	,12,11,13,11,14,18,10,15,12,12
+	,13,10,4,12,6,11,9,16,12,20
+	,26,36,29,20,7,11,1]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"ERR-S", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[2.4495,4.7958,4.899,5.831,4.4721,5.7446,6.1644,7.1414,7.5498,7.5498
+	,6.7823,7.1414,5.831,4.5826,4.6904,4.6904,4.1231,4,4.3589,4
+	,3.7417,3.4641,3.3166,3.3166,2.4495,2.6458,3.3166,3.3166,2.8284,2.6458
+	,2.4495,2,1.4142,2,2,2,1,3,2.4495,2.6458
+	,2.4495,1,2.8284,2.6458,3.6056,2.6458,3.6056,3.3166,3,2.4495
+	,3.4641,3.3166,3.6056,3.3166,3.7417,4.2426,3.1623,3.873,3.4641,3.4641
+	,3.6056,3.1623,2,3.4641,2.4495,3.3166,3,4,3.4641,4.4721
+	,5.099,6,5.3852,4.4721,2.6458,3.3166,1]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":37
+    ,"com1":3.7e+7}
+  ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+    ,"header":"E", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"51", "rank":2.1
+    ,"expansion":"Secondary energy: particle energy"
+    ,"dat0":[11.8804,12.0522,12.224,12.3958,12.5676,12.7394,12.9112,13.083,13.2548,13.4266
+	,13.5984,13.7702,13.942,14.1138,14.2856,14.4574,14.6292,14.801,14.9728,15.1446
+	,15.3164,15.4882,15.66,15.8318,16.0036,16.1754,16.3472,16.519,16.6908,16.8626
+	,17.0344,17.2062,17.378,17.5498,17.7216,17.8934,18.0652,18.237,18.4088,18.5806
+	,18.7524,18.9242,19.096,19.2678,19.4396,19.6114,19.7832,19.955,20.1268,20.2986
+	,20.4704,20.6422,20.814,20.9858,21.1576,21.3294,21.5012,21.673,21.8448,22.0166
+	,22.1884,22.3602,22.532,22.7038,22.8756,23.0474,23.2192,23.391,23.5628,23.7346
+	,23.9064,24.0782,24.25,24.4218,24.5936,24.7654,24.9372]
+    ,"dat1":[1.18804e+7,1.20522e+7,1.2224e+7,1.23958e+7,1.25676e+7,1.27394e+7,1.29112e+7,1.3083e+7,1.32548e+7,1.34266e+7
+	,1.35984e+7,1.37702e+7,1.3942e+7,1.41138e+7,1.42856e+7,1.44574e+7,1.46292e+7,1.4801e+7,1.49728e+7,1.51446e+7
+	,1.53164e+7,1.54882e+7,1.566e+7,1.58318e+7,1.60036e+7,1.61754e+7,1.63472e+7,1.6519e+7,1.66908e+7,1.68626e+7
+	,1.70344e+7,1.72062e+7,1.7378e+7,1.75498e+7,1.77216e+7,1.78934e+7,1.80652e+7,1.8237e+7,1.84088e+7,1.85806e+7
+	,1.87524e+7,1.89242e+7,1.9096e+7,1.92678e+7,1.94396e+7,1.96114e+7,1.97832e+7,1.9955e+7,2.01268e+7,2.02986e+7
+	,2.04704e+7,2.06422e+7,2.0814e+7,2.09858e+7,2.11576e+7,2.13294e+7,2.15012e+7,2.1673e+7,2.18448e+7,2.20166e+7
+	,2.21884e+7,2.23602e+7,2.2532e+7,2.27038e+7,2.28756e+7,2.30474e+7,2.32192e+7,2.3391e+7,2.35628e+7,2.37346e+7
+	,2.39064e+7,2.40782e+7,2.425e+7,2.44218e+7,2.45936e+7,2.47654e+7,2.49372e+7]}
+  ,{"ivar":4, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG1", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":45
+    ,"com1":45}
+  ,{"ivar":5, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG2", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":79
+    ,"com1":79}
+  ]
+ ,"wc5data":4
+ ,"lc5data":77
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[6,23,24,34,20,33,38,51,57,57
+	,46,51,34,21,22,22,17,16,19,16
+	,14,12,11,11,6,7,11,11,8,7
+	,6,4,2,4,4,4,1,9,6,7
+	,6,1,8,7,13,7,13,11,9,6
+	,12,11,13,11,14,18,10,15,12,12
+	,13,10,4,12,6,11,9,16,12,20
+	,26,36,29,20,7,11,1]
+      ,"dy":[2.4495,4.7958,4.899,5.831,4.4721,5.7446,6.1644,7.1414,7.5498,7.5498
+	,6.7823,7.1414,5.831,4.5826,4.6904,4.6904,4.1231,4,4.3589,4
+	,3.7417,3.4641,3.3166,3.3166,2.4495,2.6458,3.3166,3.3166,2.8284,2.6458
+	,2.4495,2,1.4142,2,2,2,1,3,2.4495,2.6458
+	,2.4495,1,2.8284,2.6458,3.6056,2.6458,3.6056,3.3166,3,2.4495
+	,3.4641,3.3166,3.6056,3.3166,3.7417,4.2426,3.1623,3.873,3.4641,3.4641
+	,3.6056,3.1623,2,3.4641,2.4495,3.3166,3,4,3.4641,4.4721
+	,5.099,6,5.3852,4.4721,2.6458,3.3166,1]
+      ,"dystat":[2.4495,4.7958,4.899,5.831,4.4721,5.7446,6.1644,7.1414,7.5498,7.5498
+	,6.7823,7.1414,5.831,4.5826,4.6904,4.6904,4.1231,4,4.3589,4
+	,3.7417,3.4641,3.3166,3.3166,2.4495,2.6458,3.3166,3.3166,2.8284,2.6458
+	,2.4495,2,1.4142,2,2,2,1,3,2.4495,2.6458
+	,2.4495,1,2.8284,2.6458,3.6056,2.6458,3.6056,3.3166,3,2.4495
+	,3.4641,3.3166,3.6056,3.3166,3.7417,4.2426,3.1623,3.873,3.4641,3.4641
+	,3.6056,3.1623,2,3.4641,2.4495,3.3166,3,4,3.4641,4.4721
+	,5.099,6,5.3852,4.4721,2.6458,3.3166,1]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7
+	,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7,3.7e+7]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"E2", "ifCM":false, "units":"EV"
+      ,"header":"E2", "dataType":"51", "rank":2.0
+      ,"expansion":"Secondary energy: particle energy"
+      ,"x2":[1.18804e+7,1.20522e+7,1.2224e+7,1.23958e+7,1.25676e+7,1.27394e+7,1.29112e+7,1.3083e+7,1.32548e+7,1.34266e+7
+	,1.35984e+7,1.37702e+7,1.3942e+7,1.41138e+7,1.42856e+7,1.44574e+7,1.46292e+7,1.4801e+7,1.49728e+7,1.51446e+7
+	,1.53164e+7,1.54882e+7,1.566e+7,1.58318e+7,1.60036e+7,1.61754e+7,1.63472e+7,1.6519e+7,1.66908e+7,1.68626e+7
+	,1.70344e+7,1.72062e+7,1.7378e+7,1.75498e+7,1.77216e+7,1.78934e+7,1.80652e+7,1.8237e+7,1.84088e+7,1.85806e+7
+	,1.87524e+7,1.89242e+7,1.9096e+7,1.92678e+7,1.94396e+7,1.96114e+7,1.97832e+7,1.9955e+7,2.01268e+7,2.02986e+7
+	,2.04704e+7,2.06422e+7,2.0814e+7,2.09858e+7,2.11576e+7,2.13294e+7,2.15012e+7,2.1673e+7,2.18448e+7,2.20166e+7
+	,2.21884e+7,2.23602e+7,2.2532e+7,2.27038e+7,2.28756e+7,2.30474e+7,2.32192e+7,2.3391e+7,2.35628e+7,2.37346e+7
+	,2.39064e+7,2.40782e+7,2.425e+7,2.44218e+7,2.45936e+7,2.47654e+7,2.49372e+7]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
+      ,"expansion":"Angle: angle"
+      ,"x3":[79,79,79,79,79,79,79,79,79,79
+	,79,79,79,79,79,79,79,79,79,79
+	,79,79,79,79,79,79,79,79,79,79
+	,79,79,79,79,79,79,79,79,79,79
+	,79,79,79,79,79,79,79,79,79,79
+	,79,79,79,79,79,79,79,79,79,79
+	,79,79,79,79,79,79,79,79,79,79
+	,79,79,79,79,79,79,79]
+   }
+ }
 }
    ]
    }
