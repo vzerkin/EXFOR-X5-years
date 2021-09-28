@@ -1,9 +1,9 @@
-  {"ENTRY":"D0052", "updated":20060727, "TransID":"D048", "TransDate":20061120, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"D0052", "updated":20210929, "TransID":"D132", "TransDate":20211117, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":1989,"a1":"F.Tarkanyi+","r1":"R,ATOMKI-AR-1989,2,1989"
    ,"ref":"Rept: Atomki Annual Reports, No.1989, p.2 (1989)"
    ,"title":"Investigation of the Ni-58(p,p+n)Ni-57 monitor reaction"
    ,"x4subents":[
-   {"SUBENT":"D0052001", "isub":1, "compiled":20060727, "TransID":"D048", "TransDate":20061120
+   {"SUBENT":"D0052001", "isub":1, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -24,7 +24,7 @@
 	,"x4freetext":[" first two authors"]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"3CZRUJV", "dict":"INSTITUTE", "idict":3,"hlp":"Research Centre Rez, Husinec-Rez, Czech Republic"}]
+	,"x4codes":[{"code":"3CZRUJF", "dict":"INSTITUTE", "idict":3,"hlp":"Nuclear Physics Institute of Czech Acad. Sci., Rez, Czech Republic"}]
 	,"x4freetext":[" last author"]
 	}
       ]
@@ -46,17 +46,17 @@
 	{"x4pointer":" "
 	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}
 	    ,{"code":"3HUNDEB", "dict":"INSTITUTE", "idict":3,"hlp":"Institute for Nuclear Research (ATOMKI), Debrecen, Hungary"}]
-	,"x4freetext":[" MGC-20E cyclo. for 18 MeV"]
+	,"x4freetext":[" MGC-20E cyclotron for 18 MeV"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}
-	    ,{"code":"3CSRUJV", "dict":"INSTITUTE", "idict":3,"hlp":"Inst.of Nucl.Res., Rez u Prahy, Czechoslovakia"}]
-	,"x4freetext":[" U-120M cyclo. for 30 and 22 MeV"]
+	    ,{"code":"3CZRUJF", "dict":"INSTITUTE", "idict":3,"hlp":"Nuclear Physics Institute of Czech Acad. Sci., Rez, Czech Republic"}]
+	,"x4freetext":[" U-120M cyclotron for 30 and 22 MeV"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}
 	    ,{"code":"2GERJUL", "dict":"INSTITUTE", "idict":3,"hlp":"Forschungszentrum Juelich, Juelich, Germany"}]
-	,"x4freetext":[" CV-28 cyclo. for 22 MeV"]
+	,"x4freetext":[" CV-28 cyclotron for 22 MeV"]
 	}
       ]
      ,"INC-SOURCE":[
@@ -91,15 +91,19 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":null
+	,"x4code":{"header":"DATA-ERR", "min":"10.", "max":"15."
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["the errors in cross sections were estimated to be"
 		,"10 - 15 percent"]
 	}
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["data taken from atomki,annual report,1989,pag3,table 1"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from atomki,annual report,1989,pag3,"
+		,"table 1."]
 	}
       ]
      ,"HISTORY":[
@@ -111,27 +115,33 @@
 	,{"x4pointer":" "
 	,"x4code":{"code":"20060726A", "date":"20060726", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" BIB section upgrated"]
+	,"x4freetext":[" BIB section upgraded"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210928A", "date":"20210928", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3=X in 002. 3CSRUJV -> 3CZRUJF"
+		,"            ERR-ANALYS: coded information added."]
 	}
       ]
     }
    }
-  ,{"SUBENT":"D0052002", "isub":2, "compiled":20060727, "TransID":"D048", "TransDate":20061120
+  ,{"SUBENT":"D0052002", "isub":2, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-58(P,N+P)28-NI-57,,SIG"
-	    ,"c4reac":"(P,N+P),SIG"
+	,"x4code":{"code":"28-NI-58(P,X)28-NI-57,,SIG"
+	    ,"c4reac":"(P,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":28
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"28-NI-58(P,N+P)28-NI-57,,SIG"
-		,"Reac":"P,N+P"
+	    {"code":"28-NI-58(P,X)28-NI-57,,SIG"
+		,"Reac":"P,X"
 		,"SF1":"28-NI-58","Targ":{"code":"28-NI-58","nam":"Ni-58","ZA":28058}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"N+P"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"28-NI-57","Prod":{"code":"28-NI-57","nam":"Ni-57","ZA":28057}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -151,6 +161,11 @@
 	,"x4code":{"code":"19900515U", "date":"19900515", "act":"U", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" VOF.-compiler`s note added.-"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210928A", "date":"20210928", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3=X c.f. Memo CP-D/0999."]
 	}
       ]
     }
@@ -210,14 +225,15 @@
 	,[29.6,251]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0052002", "Pointer":" "
- ,"Subent":"D0052002", "compiled":20060727
+ ,"Subent":"D0052002", "compiled":20210929
  ,"year1":1989, "author1ini":"F.", "author1":"Tarkanyi"
- ,"zTarg1":28, "targ1":"Ni-58", "proj1":"p", "emis1":"N+P", "MF":3, "MT":28, "nExpectedArgs":1
+ ,"zTarg1":28, "targ1":"Ni-58", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"28-NI-58(P,N+P)28-NI-57,,SIG"
- ,"compNotes":[]
- ,"wx4data":2
+ ,"reacode":"28-NI-58(P,X)28-NI-57,,SIG"
+ ,"compNotes":["ERR-ANALYS:(DATA-ERR,10.,15.) ADDED AS COMMON:DATA-ERR,PER-CENT=10.0%"
+	,"Revised column:DATA-ERR,PER-CENT to ERR-SYS,PER-CENT"]
+ ,"wx4data":3
  ,"lx4data":40
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -232,7 +248,13 @@
 	,0.1,0.119,0.111,0.141,0.129,0.148,0.149,0.167,0.176,0.174
 	,0.171,0.198,0.19,0.193,0.191,0.223,0.208,0.225,0.22,0.247
 	,0.253,0.262,0.273,0.272,0.27,0.282,0.267,0.259,0.244,0.251]}
-  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"com0":10
+    ,"com1":10}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
@@ -255,7 +277,14 @@
 	,0.1,0.119,0.111,0.141,0.129,0.148,0.149,0.167,0.176,0.174
 	,0.171,0.198,0.19,0.193,0.191,0.223,0.208,0.225,0.22,0.247
 	,0.253,0.262,0.273,0.272,0.27,0.282,0.267,0.259,0.244,0.251]
-   }
+      ,"dy":[3.6e-4,5.6e-4,7.4e-4,0.00223,0.00231,0.00295,0.00565,0.00647,0.00676,0.0082
+	,0.01,0.0119,0.0111,0.0141,0.0129,0.0148,0.0149,0.0167,0.0176,0.0174
+	,0.0171,0.0198,0.019,0.0193,0.0191,0.0223,0.0208,0.0225,0.022,0.0247
+	,0.0253,0.0262,0.0273,0.0272,0.027,0.0282,0.0267,0.0259,0.0244,0.0251]
+      ,"dysys":[3.6e-4,5.6e-4,7.4e-4,0.00223,0.00231,0.00295,0.00565,0.00647,0.00676,0.0082
+	,0.01,0.0119,0.0111,0.0141,0.0129,0.0148,0.0149,0.0167,0.0176,0.0174
+	,0.0171,0.0198,0.019,0.0193,0.0191,0.0223,0.0208,0.0225,0.022,0.0247
+	,0.0253,0.0262,0.0273,0.0272,0.027,0.0282,0.0267,0.0259,0.0244,0.0251]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
