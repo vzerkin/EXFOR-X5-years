@@ -1,9 +1,9 @@
-  {"ENTRY":"D5023", "updated":20180214, "TransID":"D114", "TransDate":20180316, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
+  {"ENTRY":"D5023", "updated":20210929, "TransID":"D132", "TransDate":20211117, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
    ,"y1":2004,"a1":"O.K.Gorpinich+","r1":"J,VAT/I,,(5/44),31,2004"
    ,"ref":"Jour: Vopr.Atomn.Nauki i Tekhn.,Ser.Yad..Fiz..Issledo., Issue.5/44, p.31 (2004)"
    ,"title":"Observation of ground state of 4H in 3H(a,He3+t)n reaction"
    ,"x4subents":[
-   {"SUBENT":"D5023001", "isub":1, "compiled":20180214, "TransID":"D114", "TransDate":20180316
+   {"SUBENT":"D5023001", "isub":1, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -95,35 +95,48 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" On. REFERENCE corrected."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210927U", "date":"20210927", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. SF7 corrected and ANG-SEC added in 002."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"D5023002", "isub":2, "compiled":20061123, "TransID":"D050", "TransDate":20070306
+  ,{"SUBENT":"D5023002", "isub":2, "compiled":20210929, "TransID":"D132", "TransDate":20211117
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"1-H-3(A,N+T)2-HE-3,,DA/DA/DE,HE3/T/N,REL"
-	    ,"c4reac":"(A,N+T),DA/DA/DE,HE3/T/N,REL"
+	,"x4code":{"code":"1-H-3(A,N+T)2-HE-3,,DA/DA/DE,T/HE3/N+T,REL"
+	    ,"c4reac":"(A,N+T),DA/DA/DE,T/HE3/N+T,REL"
 	    ,"combi":"a"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"1-H-3(A,N+T)2-HE-3,,DA/DA/DE,HE3/T/N,REL"
+	    {"code":"1-H-3(A,N+T)2-HE-3,,DA/DA/DE,T/HE3/N+T,REL"
 		,"Reac":"A,N+T"
 		,"SF1":"1-H-3","Targ":{"code":"1-H-3","nam":"H-3","ZA":1003}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"N+T"
 		,"SF4":"2-HE-3","Prod":{"code":"2-HE-3","nam":"He-3","ZA":2003}
 		,"SF6":"DA/DA/DE"
-		,"SF7":"HE3/T/N"
+		,"SF7":"T/HE3/N+T"
 		,"SF8":"REL"
-		,"SF58":",DA/DA/DE,HE3/T/N","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":",DA/DA/DE,T/HE3/N+T","Quant":"DAE","BasicUnits":"ARB-UNITS","QuantHlp":"Triple diff.cs d3/dA(*)/dA(*)/dE(rel.en.*-*)"
 	    }]}
-	,"x4freetext":["ANG1 is angle between incident beam and He3,"
-		,"ANG2 is angle between incident beam and tritium."]
 	}
       ]
      ,"EN-SEC":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::E-EXC,1-H-4"}
+	,"x4code":{"code":"orig::E-RL,N+T"}
+	}
+      ]
+     ,"ANG-SEC":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG1,HE3"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG2,T"}
 	}
       ]
      ,"ADD-RES":[
@@ -133,7 +146,7 @@
 		,"obtained from He3-tritium coincidence matrix and with"
 		,"the spectra shape analysis by using the Breit-Wigner"
 		,"formula:"
-		,"energy = (3.22+-0.25) MeV,width = (2.93+-1.09)MeV."]
+		,"energy = (3.22+-0.25) MeV, width = (2.93+-1.09)MeV."]
 	}
       ]
      ,"STATUS":[
@@ -143,6 +156,15 @@
 		,"subent":"TABLE"
 		}]
 	,"x4freetext":[" Correspond to figure 3."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210927U", "date":"20210927", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. SF7: the places of the first and second"
+		,"particles swapped c.f. Memo CP-D/1014 and ANG-SEC"
+		," added."]
 	}
       ]
     }
@@ -169,8 +191,8 @@
 	 [67.2,0.4,15,27.5]]}
     ,"DATA":{"ncols":3, "nrows":20
       ,"x4headers":[
-       {"icol":0, "header":"E-EXC", "units":"MEV", "pointer":" "
-	,"headerHelp":"Excitation energy", "pFlag":"1000000"
+       {"icol":0, "header":"E-RL", "units":"MEV", "pointer":" "
+	,"headerHelp":"Relative energy of outgoing particles", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -180,7 +202,7 @@
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["E-EXC"     ,"DATA"      ,"ERR-S"     ]
+	 ["E-RL"      ,"DATA"      ,"ERR-S"     ]
 	,["MEV"       ,"ARB-UNITS" ,"ARB-UNITS" ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -206,13 +228,95 @@
 	,[6.35,0.107,0.04358]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D5023002", "Pointer":" "
- ,"Subent":"D5023002", "compiled":20061123
-,"year1":2004, "author1ini":"O.K.", "author1":"Gorpinich"
-, "zTarg1":1, "targ1":"H-3", "proj1":"a", "emis1":"N+T", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"1-H-3(A,N+T)2-HE-3,,DA/DA/DE,HE3/T/N,REL"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"D5023002", "compiled":20210929
+ ,"year1":2004, "author1ini":"O.K.", "author1":"Gorpinich"
+ ,"zTarg1":1, "targ1":"H-3", "proj1":"a", "emis1":"N+T", "MF":600, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,E2,ANG)"
+ ,"ReactionType":"D3A", "quant":"DAE", "quantExpan":"Triple diff.cs d3/dA(*)/dA(*)/dE(rel.en.*-*)"
+ ,"reacode":"1-H-3(A,N+T)2-HE-3,,DA/DA/DE,T/HE3/N+T,REL"
+ ,"compNotes":[]
+ ,"wx4data":7
+ ,"lx4data":20
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.292,0.415,0.473,0.449,0.517,0.473,0.415,0.418,0.292,0.179
+	,0.237,0.292,0.345,0.168,0.162,0.206,0.335,0.257,0.174,0.107]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"ERR-S", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.119,0.147,0.167,0.159,0.172,0.167,0.147,0.158,0.119,0.103
+	,0.118,0.131,0.141,0.09702,0.09365,0.103,0.127,0.105,0.07792,0.04358]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":67.2
+    ,"com1":6.72e+7}
+  ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-ERR", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Err+-", "dataType":"41", "rank":1.911
+    ,"expansion":"Incident energy: energy /Error/"
+    ,"com0":0.4
+    ,"com1":4.0e+5}
+  ,{"ivar":4, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+    ,"header":"E-RL", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"51", "rank":2.1
+    ,"expansion":"Secondary energy: particle energy"
+    ,"dat0":[1.97,2.34,2.7,3.05,3.38,3.7,4.01,4.3,4.58,4.84
+	,5.08,5.31,5.52,5.7,5.87,6.02,6.14,6.23,6.31,6.35]
+    ,"dat1":[1.97e+6,2.34e+6,2.7e+6,3.05e+6,3.38e+6,3.7e+6,4.01e+6,4.3e+6,4.58e+6,4.84e+6
+	,5.08e+6,5.31e+6,5.52e+6,5.7e+6,5.87e+6,6.02e+6,6.14e+6,6.23e+6,6.31e+6,6.35e+6]}
+  ,{"ivar":5, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG1", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":15
+    ,"com1":15}
+  ,{"ivar":6, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG2", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":27.5
+    ,"com1":27.5}
+  ]
+ ,"wc5data":4
+ ,"lc5data":20
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.292,0.415,0.473,0.449,0.517,0.473,0.415,0.418,0.292,0.179
+	,0.237,0.292,0.345,0.168,0.162,0.206,0.335,0.257,0.174,0.107]
+      ,"dy":[0.119,0.147,0.167,0.159,0.172,0.167,0.147,0.158,0.119,0.103
+	,0.118,0.131,0.141,0.09702,0.09365,0.103,0.127,0.105,0.07792,0.04358]
+      ,"dystat":[0.119,0.147,0.167,0.159,0.172,0.167,0.147,0.158,0.119,0.103
+	,0.118,0.131,0.141,0.09702,0.09365,0.103,0.127,0.105,0.07792,0.04358]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7
+	,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7,6.72e+7]
+      ,"dx1":[4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5
+	,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5,4.0e+5]   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"E2", "ifCM":false, "units":"EV"
+      ,"header":"E2", "dataType":"51", "rank":2.0
+      ,"expansion":"Secondary energy: particle energy"
+      ,"x2":[1.97e+6,2.34e+6,2.7e+6,3.05e+6,3.38e+6,3.7e+6,4.01e+6,4.3e+6,4.58e+6,4.84e+6
+	,5.08e+6,5.31e+6,5.52e+6,5.7e+6,5.87e+6,6.02e+6,6.14e+6,6.23e+6,6.31e+6,6.35e+6]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
+      ,"expansion":"Angle: angle"
+      ,"x3":[27.5,27.5,27.5,27.5,27.5,27.5,27.5,27.5,27.5,27.5
+	,27.5,27.5,27.5,27.5,27.5,27.5,27.5,27.5,27.5,27.5]
+   }
+ }
 }
    ]
    }
