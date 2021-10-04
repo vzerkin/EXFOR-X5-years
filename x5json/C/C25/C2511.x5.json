@@ -1,9 +1,9 @@
-  {"ENTRY":"C2511", "updated":20200311, "TransID":"C195", "TransDate":20201027, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C2511", "updated":20211005, "TransID":"C206", "TransDate":20220127, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2020,"a1":"Q.Liu+","r1":"J,PR/C,101,025808,2020"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.101, p.025808 (2020)"
    ,"title":"Low-energy cross-section measurement of the 10B(alpha,n)13N reaction and its impact on neutron production in first-generation stars"
    ,"x4subents":[
-   {"SUBENT":"C2511001", "isub":1, "compiled":20200311, "TransID":"C195", "TransDate":20201027
+   {"SUBENT":"C2511001", "isub":1, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -81,15 +81,6 @@
 		,"thickness of the target was (0.70+-0.03)mu-g/cm2."]
 	}
       ]
-     ,"DETECTOR":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"HPGE", "dict":"DETECTOR", "idict":22,"hlp":"Hyperpure Germanium detector"}]
-	,"x4freetext":[" High-purity germanium detector with a relative"
-		,"efficiency of 54% was used for gamma ray measurement."
-		,"HPGe detector was placed at 130deg at the distance of"
-		,"21.5 cm."]
-	}
-      ]
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"PSD", "dict":"METHOD", "idict":21,"hlp":"Pulse-shape discrimination"}]
@@ -100,6 +91,11 @@
 	,"x4code":{"code":"20200311C", "date":"20200311", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" Compiled by S.H."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210928A", "date":"20210928", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION modified in subs.4-6"]
 	}
       ]
     }
@@ -655,18 +651,17 @@
 }
    ]
    }
-  ,{"SUBENT":"C2511004", "isub":4, "compiled":20200311, "TransID":"C195", "TransDate":20201027
+  ,{"SUBENT":"C2511004", "isub":4, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"5-B-10(A,P)6-C-13,PAR,DA"
-	    ,"c4reac":"(A,P)PAR,DA"
+	,"x4code":{"code":"5-B-10(A,P)6-C-13,PAR,DA,G"
+	    ,"c4reac":"(A,P)PAR,DA,G"
 	    ,"combi":"a"
 	    ,"MF":4
-	    ,"MT":601
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"5-B-10(A,P)6-C-13,PAR,DA"
+	    {"code":"5-B-10(A,P)6-C-13,PAR,DA,G"
 		,"Reac":"A,P"
 		,"SF1":"5-B-10","Targ":{"code":"5-B-10","nam":"B-10","ZA":5010}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
@@ -674,15 +669,25 @@
 		,"SF4":"6-C-13","Prod":{"code":"6-C-13","nam":"C-13","ZA":6013}
 		,"SF5":"PAR"
 		,"SF6":"DA"
-		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
+		,"SF7":"G"
+		,"SF58":"PAR,DA,G","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial angular distr. of particle specified"
 	    }]}
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"HPGE", "dict":"DETECTOR", "idict":22,"hlp":"Hyperpure Germanium detector"}]
+	,"x4freetext":[" High-purity germanium detector with a relative"
+		,"efficiency of 54% was used for gamma ray measurement."
+		,"HPGe detector was placed at 130deg at the distance of"
+		,"21.5 cm."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"ERR-SYS"
 	     ,"headerHelp":"Total systematic uncertainty"}
-	,"x4freetext":[" Overal systematic uncertainty"]
+	,"x4freetext":[" Overall systematic uncertainty"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-T"
@@ -698,15 +703,22 @@
 	,"x4freetext":[" Data taken from tab. 3 of the reference"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210928A", "date":"20210928", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF7 added, LVL-NUMB -> E-LVL"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":4, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"ERR-SYS", "units":"PER-CENT", "pointer":" "
 	,"headerHelp":"Total systematic uncertainty", "pFlag":"0009550"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
-      ,{"icol":1, "header":"LVL-NUMB", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Level number", "pFlag":"1000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"E-LVL", "units":"MEV", "pointer":" "
+	,"headerHelp":"Level energy", "pFlag":"1000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"ANG", "units":"ADEG", "pointer":" "
 	,"headerHelp":"Angle, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
@@ -715,11 +727,11 @@
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["ERR-SYS"   ,"LVL-NUMB"  ,"ANG"       ,"EN-ERR"    ]
-	,["PER-CENT"  ,"NO-DIM"    ,"ADEG"      ,"KEV"       ]
+	 ["ERR-SYS"   ,"E-LVL"     ,"ANG"       ,"EN-ERR"    ]
+	,["PER-CENT"  ,"MEV"       ,"ADEG"      ,"KEV"       ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [8,1,130,2]]}
+	 [8,3.089,130,2]]}
     ,"DATA":{"ncols":3, "nrows":67
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -806,12 +818,12 @@
 	,[1.665,2.59E-4,5.0E-5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C2511004", "Pointer":" "
- ,"Subent":"C2511004", "compiled":20200311
+ ,"Subent":"C2511004", "compiled":20211005
  ,"year1":2020, "author1ini":"Q.", "author1":"Liu"
- ,"zTarg1":5, "targ1":"B-10", "proj1":"a", "emis1":"P", "MF":4, "MT":601, "nExpectedArgs":3
- ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVN,ANG)"
- ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
- ,"reacode":"5-B-10(A,P)6-C-13,PAR,DA"
+ ,"zTarg1":5, "targ1":"B-10", "proj1":"a", "emis1":"P", "MF":4, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
+ ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial angular distr. of particle specified"
+ ,"reacode":"5-B-10(A,P)6-C-13,PAR,DA,G"
  ,"compNotes":[]
  ,"wx4data":7
  ,"lx4data":67
@@ -870,12 +882,12 @@
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":2
     ,"com1":2000}
-  ,{"ivar":5, "cvar":"x2", "fam":"LVN", "ifComm":true , "ifCM":false
-    ,"header":"LVL-NUMB", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"57", "rank":2.1
-    ,"expansion":"Secondary energy: level number"
-    ,"com0":1
-    ,"com1":1}
+  ,{"ivar":5, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
+    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"52", "rank":2.1
+    ,"expansion":"Secondary energy: level energy"
+    ,"com0":3.089
+    ,"com1":3.089e+6}
   ,{"ivar":6, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
     ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X3.Value", "dataType":"61", "rank":3.1
@@ -927,16 +939,16 @@
 	,2000,2000,2000,2000,2000,2000,2000,2000,2000,2000
 	,2000,2000,2000,2000,2000,2000,2000,2000,2000,2000
 	,2000,2000,2000,2000,2000,2000,2000]   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVN", "ifCM":false, "units":"NO-DIM"
-      ,"header":"LVN", "dataType":"57", "rank":2.0
-      ,"expansion":"Secondary energy: level number"
-      ,"x2":[1,1,1,1,1,1,1,1,1,1
-	,1,1,1,1,1,1,1,1,1,1
-	,1,1,1,1,1,1,1,1,1,1
-	,1,1,1,1,1,1,1,1,1,1
-	,1,1,1,1,1,1,1,1,1,1
-	,1,1,1,1,1,1,1,1,1,1
-	,1,1,1,1,1,1,1]
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
+      ,"header":"LVL", "dataType":"52", "rank":2.0
+      ,"expansion":"Secondary energy: level energy"
+      ,"x2":[3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6
+	,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6
+	,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6
+	,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6
+	,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6
+	,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6
+	,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6,3.089e+6]
    }
    ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
       ,"header":"ANG", "dataType":"61", "rank":3.0
@@ -953,18 +965,17 @@
 }
    ]
    }
-  ,{"SUBENT":"C2511005", "isub":5, "compiled":20200311, "TransID":"C195", "TransDate":20201027
+  ,{"SUBENT":"C2511005", "isub":5, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"5-B-10(A,P)6-C-13,PAR,DA"
-	    ,"c4reac":"(A,P)PAR,DA"
+	,"x4code":{"code":"5-B-10(A,P)6-C-13,PAR,DA,G"
+	    ,"c4reac":"(A,P)PAR,DA,G"
 	    ,"combi":"a"
 	    ,"MF":4
-	    ,"MT":601
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"5-B-10(A,P)6-C-13,PAR,DA"
+	    {"code":"5-B-10(A,P)6-C-13,PAR,DA,G"
 		,"Reac":"A,P"
 		,"SF1":"5-B-10","Targ":{"code":"5-B-10","nam":"B-10","ZA":5010}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
@@ -972,15 +983,25 @@
 		,"SF4":"6-C-13","Prod":{"code":"6-C-13","nam":"C-13","ZA":6013}
 		,"SF5":"PAR"
 		,"SF6":"DA"
-		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
+		,"SF7":"G"
+		,"SF58":"PAR,DA,G","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial angular distr. of particle specified"
 	    }]}
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"HPGE", "dict":"DETECTOR", "idict":22,"hlp":"Hyperpure Germanium detector"}]
+	,"x4freetext":[" High-purity germanium detector with a relative"
+		,"efficiency of 54% was used for gamma ray measurement."
+		,"HPGe detector was placed at 130deg at the distance of"
+		,"21.5 cm."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"ERR-SYS"
 	     ,"headerHelp":"Total systematic uncertainty"}
-	,"x4freetext":[" Overal systematic uncertainty"]
+	,"x4freetext":[" Overall systematic uncertainty"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-T"
@@ -996,15 +1017,22 @@
 	,"x4freetext":[" Data taken from tab. 3 of the reference"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210928A", "date":"20210928", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF7 added, LVL-NUMB -> E-LVL"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":4, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"ERR-SYS", "units":"PER-CENT", "pointer":" "
 	,"headerHelp":"Total systematic uncertainty", "pFlag":"0009550"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
-      ,{"icol":1, "header":"LVL-NUMB", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Level number", "pFlag":"1000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"E-LVL", "units":"MEV", "pointer":" "
+	,"headerHelp":"Level energy", "pFlag":"1000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"ANG", "units":"ADEG", "pointer":" "
 	,"headerHelp":"Angle, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
@@ -1013,11 +1041,11 @@
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["ERR-SYS"   ,"LVL-NUMB"  ,"ANG"       ,"EN-ERR"    ]
-	,["PER-CENT"  ,"NO-DIM"    ,"ADEG"      ,"KEV"       ]
+	 ["ERR-SYS"   ,"E-LVL"     ,"ANG"       ,"EN-ERR"    ]
+	,["PER-CENT"  ,"MEV"       ,"ADEG"      ,"KEV"       ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [8,2,130,2]]}
+	 [8,3.684,130,2]]}
     ,"DATA":{"ncols":3, "nrows":53
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -1090,12 +1118,12 @@
 	,[1.665,3.39E-4,6.0E-5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C2511005", "Pointer":" "
- ,"Subent":"C2511005", "compiled":20200311
+ ,"Subent":"C2511005", "compiled":20211005
  ,"year1":2020, "author1ini":"Q.", "author1":"Liu"
- ,"zTarg1":5, "targ1":"B-10", "proj1":"a", "emis1":"P", "MF":4, "MT":601, "nExpectedArgs":3
- ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVN,ANG)"
- ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
- ,"reacode":"5-B-10(A,P)6-C-13,PAR,DA"
+ ,"zTarg1":5, "targ1":"B-10", "proj1":"a", "emis1":"P", "MF":4, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
+ ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial angular distr. of particle specified"
+ ,"reacode":"5-B-10(A,P)6-C-13,PAR,DA,G"
  ,"compNotes":[]
  ,"wx4data":7
  ,"lx4data":53
@@ -1150,12 +1178,12 @@
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":2
     ,"com1":2000}
-  ,{"ivar":5, "cvar":"x2", "fam":"LVN", "ifComm":true , "ifCM":false
-    ,"header":"LVL-NUMB", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"57", "rank":2.1
-    ,"expansion":"Secondary energy: level number"
-    ,"com0":2
-    ,"com1":2}
+  ,{"ivar":5, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
+    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"52", "rank":2.1
+    ,"expansion":"Secondary energy: level energy"
+    ,"com0":3.684
+    ,"com1":3.684e+6}
   ,{"ivar":6, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
     ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X3.Value", "dataType":"61", "rank":3.1
@@ -1202,15 +1230,15 @@
 	,2000,2000,2000,2000,2000,2000,2000,2000,2000,2000
 	,2000,2000,2000,2000,2000,2000,2000,2000,2000,2000
 	,2000,2000,2000]   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVN", "ifCM":false, "units":"NO-DIM"
-      ,"header":"LVN", "dataType":"57", "rank":2.0
-      ,"expansion":"Secondary energy: level number"
-      ,"x2":[2,2,2,2,2,2,2,2,2,2
-	,2,2,2,2,2,2,2,2,2,2
-	,2,2,2,2,2,2,2,2,2,2
-	,2,2,2,2,2,2,2,2,2,2
-	,2,2,2,2,2,2,2,2,2,2
-	,2,2,2]
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
+      ,"header":"LVL", "dataType":"52", "rank":2.0
+      ,"expansion":"Secondary energy: level energy"
+      ,"x2":[3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6
+	,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6
+	,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6
+	,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6
+	,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6,3.684e+6
+	,3.684e+6,3.684e+6,3.684e+6]
    }
    ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
       ,"header":"ANG", "dataType":"61", "rank":3.0
@@ -1226,18 +1254,17 @@
 }
    ]
    }
-  ,{"SUBENT":"C2511006", "isub":6, "compiled":20200311, "TransID":"C195", "TransDate":20201027
+  ,{"SUBENT":"C2511006", "isub":6, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"5-B-10(A,P)6-C-13,PAR,DA"
-	    ,"c4reac":"(A,P)PAR,DA"
+	,"x4code":{"code":"5-B-10(A,P)6-C-13,PAR,DA,G"
+	    ,"c4reac":"(A,P)PAR,DA,G"
 	    ,"combi":"a"
 	    ,"MF":4
-	    ,"MT":601
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"5-B-10(A,P)6-C-13,PAR,DA"
+	    {"code":"5-B-10(A,P)6-C-13,PAR,DA,G"
 		,"Reac":"A,P"
 		,"SF1":"5-B-10","Targ":{"code":"5-B-10","nam":"B-10","ZA":5010}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
@@ -1245,15 +1272,25 @@
 		,"SF4":"6-C-13","Prod":{"code":"6-C-13","nam":"C-13","ZA":6013}
 		,"SF5":"PAR"
 		,"SF6":"DA"
-		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
+		,"SF7":"G"
+		,"SF58":"PAR,DA,G","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial angular distr. of particle specified"
 	    }]}
+	}
+      ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"HPGE", "dict":"DETECTOR", "idict":22,"hlp":"Hyperpure Germanium detector"}]
+	,"x4freetext":[" High-purity germanium detector with a relative"
+		,"efficiency of 54% was used for gamma ray measurement."
+		,"HPGe detector was placed at 130deg at the distance of"
+		,"21.5 cm."]
 	}
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"ERR-SYS"
 	     ,"headerHelp":"Total systematic uncertainty"}
-	,"x4freetext":[" Overal systematic uncertainty"]
+	,"x4freetext":[" Overall systematic uncertainty"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-T"
@@ -1269,15 +1306,22 @@
 	,"x4freetext":[" Data taken from tab. 3 of the reference"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210928A", "date":"20210928", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF7 added, LVL-NUMB -> E-LVL"]
+	}
+      ]
     }
     ,"COMMON":{"ncols":4, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"ERR-SYS", "units":"PER-CENT", "pointer":" "
 	,"headerHelp":"Total systematic uncertainty", "pFlag":"0009550"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
-      ,{"icol":1, "header":"LVL-NUMB", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Level number", "pFlag":"1000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"E-LVL", "units":"MEV", "pointer":" "
+	,"headerHelp":"Level energy", "pFlag":"1000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"ANG", "units":"ADEG", "pointer":" "
 	,"headerHelp":"Angle, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
@@ -1286,11 +1330,11 @@
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["ERR-SYS"   ,"LVL-NUMB"  ,"ANG"       ,"EN-ERR"    ]
-	,["PER-CENT"  ,"NO-DIM"    ,"ADEG"      ,"KEV"       ]
+	 ["ERR-SYS"   ,"E-LVL"     ,"ANG"       ,"EN-ERR"    ]
+	,["PER-CENT"  ,"MEV"       ,"ADEG"      ,"KEV"       ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [8,3,130,2]]}
+	 [8,3.854,130,2]]}
     ,"DATA":{"ncols":3, "nrows":67
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -1377,12 +1421,12 @@
 	,[1.665,0.00757,0.00114]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C2511006", "Pointer":" "
- ,"Subent":"C2511006", "compiled":20200311
+ ,"Subent":"C2511006", "compiled":20211005
  ,"year1":2020, "author1ini":"Q.", "author1":"Liu"
- ,"zTarg1":5, "targ1":"B-10", "proj1":"a", "emis1":"P", "MF":4, "MT":601, "nExpectedArgs":3
- ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVN,ANG)"
- ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
- ,"reacode":"5-B-10(A,P)6-C-13,PAR,DA"
+ ,"zTarg1":5, "targ1":"B-10", "proj1":"a", "emis1":"P", "MF":4, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
+ ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial angular distr. of particle specified"
+ ,"reacode":"5-B-10(A,P)6-C-13,PAR,DA,G"
  ,"compNotes":[]
  ,"wx4data":7
  ,"lx4data":67
@@ -1441,12 +1485,12 @@
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":2
     ,"com1":2000}
-  ,{"ivar":5, "cvar":"x2", "fam":"LVN", "ifComm":true , "ifCM":false
-    ,"header":"LVL-NUMB", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"57", "rank":2.1
-    ,"expansion":"Secondary energy: level number"
-    ,"com0":3
-    ,"com1":3}
+  ,{"ivar":5, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
+    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"52", "rank":2.1
+    ,"expansion":"Secondary energy: level energy"
+    ,"com0":3.854
+    ,"com1":3.854e+6}
   ,{"ivar":6, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
     ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X3.Value", "dataType":"61", "rank":3.1
@@ -1498,16 +1542,16 @@
 	,2000,2000,2000,2000,2000,2000,2000,2000,2000,2000
 	,2000,2000,2000,2000,2000,2000,2000,2000,2000,2000
 	,2000,2000,2000,2000,2000,2000,2000]   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVN", "ifCM":false, "units":"NO-DIM"
-      ,"header":"LVN", "dataType":"57", "rank":2.0
-      ,"expansion":"Secondary energy: level number"
-      ,"x2":[3,3,3,3,3,3,3,3,3,3
-	,3,3,3,3,3,3,3,3,3,3
-	,3,3,3,3,3,3,3,3,3,3
-	,3,3,3,3,3,3,3,3,3,3
-	,3,3,3,3,3,3,3,3,3,3
-	,3,3,3,3,3,3,3,3,3,3
-	,3,3,3,3,3,3,3]
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
+      ,"header":"LVL", "dataType":"52", "rank":2.0
+      ,"expansion":"Secondary energy: level energy"
+      ,"x2":[3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6
+	,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6
+	,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6
+	,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6
+	,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6
+	,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6
+	,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6,3.854e+6]
    }
    ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
       ,"header":"ANG", "dataType":"61", "rank":3.0
