@@ -1,9 +1,9 @@
-  {"ENTRY":"C0062", "updated":20040310, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C0062", "updated":20211005, "TransID":"C206", "TransDate":20220127, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1965,"a1":"L.Valentin","r1":"J,NP,62,81,1965"
    ,"ref":"Jour: Nuclear Physics, Vol.62, p.81 (1965)"
-   ,"title":"Reactions (p,n) et (p,pn) induites a moyenne energie sur des noyaux legers"
+   ,"title":"(p,n) and (p,pn) reactions of light nuclei at intermediate energies"
    ,"x4subents":[
-   {"SUBENT":"C0062001", "isub":1, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"C0062001", "isub":1, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -15,6 +15,7 @@
 	,"x4codes":[{"code":"J,NP,62,81,1965","stdFileName":"J,NP,62,81,1965"
 		,"year":1965,"typ":"J","ref":"J,NP","vol":"62","p":"81"
 		,"shortRef":"Jour: Nuclear Physics, Vol.62, p.81 (1965)"}]
+	,"x4freetext":[" in French"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"J,PL,7,163,1963","stdFileName":"J,PL,7,163,1963"
@@ -31,8 +32,8 @@
      ,"TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Reactions (p,n) et (p,pn) induites a moyenne energie"
-		," sur des noyaux legers"]
+	,"x4freetext":[" (p,n) and (p,pn) reactions of light nuclei at"
+		," intermediate energies"]
 	}
       ]
      ,"FACILITY":[
@@ -48,9 +49,9 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,STROMINGER+,J,RMP,30,585,1958"
+	,"x4codes":[{"code":"R,,D.Strominger+,J,RMP,30,585,1958"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"STROMINGER+","stdFileName":"J,RMP,30,585,1958"
+		,"author1":"D.Strominger+","stdFileName":"J,RMP,30,585,1958"
 		,"year":1958,"typ":"J","ref":"J,RMP","vol":"30","p":"585"
 		,"shortRef":"Jour: Review of Modern Physics., Vol.30, p.585 (1958)"}]
 	,"x4freetext":[" Decay data"]
@@ -61,10 +62,12 @@
 	,"x4codes":[{"code":"THEO", "dict":"ADD-RES", "idict":20,"hlp":"Theory"}]
 	}
       ]
-     ,"STATUS":[
+     ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from table in article, except where noted."]
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" Estimated errors do not include"
+		," uncertainties of the monitor reactions"]
 	}
       ]
      ,"HISTORY":[
@@ -94,6 +97,12 @@
 	,"x4freetext":[" Converted to new date formats; monitor"
 		," information moved to appropriate subentries."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210905A", "date":"20210905", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Added ERR-ANALYS, updated STATUS,"
+		," corrected REACTION in sub.10, BIB updates"]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
@@ -109,7 +118,7 @@
       ,"data":[
 	 [1]]}
    }
-  ,{"SUBENT":"C0062002", "isub":2, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062002", "isub":2, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -133,14 +142,16 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["99% enriched metal."]
+	,"x4code":{"Nucl":"3-LI-7","ENR":0.99}
+	,"x4freetext":[" 99% enriched metal."]
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"4-BE-7", "t12":53.5, "t12units":"HR", "t12sec":192600.0
-	, "Radiations":[ {"Type":"G", "Energy":[480.0], "Intensity":0.103}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[480.0], "Intensity":0.103}]}]
+	,"x4freetext":[" Comment by compiler: Be-7 half-life is 53 days."
+		," Possible misprint in paper (days -> hours)"]
 	}
       ]
      ,"MONITOR":[
@@ -152,8 +163,8 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT),BLOOM+,J,PRL,3,98,1959"
-		,"subent":"MONIT)","author1":"BLOOM+","stdFileName":"J,PRL,3,98,1959"
+	,"x4codes":[{"code":"MONIT),S.D.Bloom+,J,PRL,3,98,1959"
+		,"subent":"MONIT)","author1":"S.D.Bloom+","stdFileName":"J,PRL,3,98,1959"
 		,"year":1959,"typ":"J","ref":"J,PRL","vol":"3","p":"98"
 		,"shortRef":"Jour: Physical Review Letters, Vol.3, p.98 (1959)"}]
 	}
@@ -162,6 +173,14 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":[" Preliminary results 0.3b lower."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 1, Nucl.Phys.62,81,1965"]
 	}
       ]
     }
@@ -188,13 +207,25 @@
 	 [155,3.8,0.2,11]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062002", "Pointer":" "
- ,"Subent":"C0062002", "compiled":20040310
+ ,"Subent":"C0062002", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":3, "targ1":"Li-7", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"3-LI-7(P,N)4-BE-7,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"4-BE-7","HalfLife":"53.5HR","HalfLife1":"53.22D"
+	,"RadiationType":"DG","Ene":480.0,"Ene1":477.6035,"Abu":0.103,"Abu1":0.1044
+	,"FcCorrDECAY_DATA":0.98659
+	,"reaction":"3-LI-7(P,N)4-BE-7,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 3-LI-7(P,N)4-BE-7,,SIG"
+	," dy=dy/y;                      #to rel. uncertainties"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (3-LI-7(P,N)4-BE-7,,SIG)"
+	,"  #[1]#DECAY-DATA (4-BE-7,53.5HR,DG,480.,.103) #Ix_old=0.103"
+	,"   a1=0.103/0.1044;            #[1]#DECAY-DATA: correction to new 477.6035 keV gamma-yield per decay Be-7 Ix_new=0.1044"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.98659"
+	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
@@ -246,7 +277,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0062003", "isub":3, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062003", "isub":3, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -270,14 +301,14 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["96.5% enriched powder"]
+	,"x4code":{"Nucl":"5-B-10","ENR":0.965}
+	,"x4freetext":[" 96.5% enriched powder"]
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"6-C-10", "t12":19.0, "t12units":"SEC", "t12sec":19.0
-	, "Radiations":[ {"Type":"G", "Energy":[720.0], "Intensity":1.0}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[720.0], "Intensity":1.0}]}]
 	}
       ]
      ,"MONITOR":[
@@ -289,10 +320,18 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT)B0101000,CRANDALL+,J,PR,101,329,1956"
-		,"subent":"MONIT)B0101000","author1":"CRANDALL+","stdFileName":"J,PR,101,329,1956"
+	,"x4codes":[{"code":"MONIT)B0101000,W.E.Crandall+,J,PR,101,329,1956"
+		,"subent":"MONIT)B0101000","author1":"W.E.Crandall+","stdFileName":"J,PR,101,329,1956"
 		,"year":1956,"typ":"J","ref":"J,PR","vol":"101","p":"329"
 		,"shortRef":"Jour: Physical Review, Vol.101, p.329 (1956)"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 1, Nucl.Phys.62,81,1965"]
 	}
       ]
     }
@@ -319,7 +358,7 @@
 	 [155,0.65,0.1,42]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062003", "Pointer":" "
- ,"Subent":"C0062003", "compiled":20040310
+ ,"Subent":"C0062003", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":5, "targ1":"B-10", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -377,7 +416,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0062004", "isub":4, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062004", "isub":4, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -401,14 +440,14 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["98.9% enriched powder"]
+	,"x4code":{"Nucl":"5-B-11","ENR":0.989}
+	,"x4freetext":[" 98.9% enriched powder"]
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"6-C-11", "t12":20.3, "t12units":"MIN", "t12sec":1218.0
-	, "Radiations":[ {"Type":"AR", "Energy":[511.0], "Intensity":1.0}]}]
+	, "Radiations":[ {"Type":"AR", "Energy":[511.0]}]}]
 	}
       ]
      ,"MONITOR":[
@@ -420,10 +459,18 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT)B0101000,CRANDALL+,J,PR,101,329,1956"
-		,"subent":"MONIT)B0101000","author1":"CRANDALL+","stdFileName":"J,PR,101,329,1956"
+	,"x4codes":[{"code":"MONIT)B0101000,W.E.Crandall+,J,PR,101,329,1956"
+		,"subent":"MONIT)B0101000","author1":"W.E.Crandall+","stdFileName":"J,PR,101,329,1956"
 		,"year":1956,"typ":"J","ref":"J,PR","vol":"101","p":"329"
 		,"shortRef":"Jour: Physical Review, Vol.101, p.329 (1956)"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 1, Nucl.Phys.62,81,1965"]
 	}
       ]
     }
@@ -452,25 +499,13 @@
 	,[155,3.5,0.2,42]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062004", "Pointer":" "
- ,"Subent":"C0062004", "compiled":20040310
+ ,"Subent":"C0062004", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":5, "targ1":"B-11", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"5-B-11(P,N)6-C-11,,SIG"
  ,"compNotes":[]
- ,"DECAY-DATA":{"Nuclide":"6-C-11","HalfLife":"20.3MIN","HalfLife1":""
-	,"RadiationType":"AR","Ene":511.0,"Ene1":511.0,"Abu":1.0,"Abu1":1.995
-	,"FcCorrDECAY_DATA":1.0025063
-	,"reaction":"5-B-11(P,N)6-C-11,,SIG"}
- ,"autoCorrNotes":["#Reaction: 5-B-11(P,N)6-C-11,,SIG"
-	," dy=dy/y;                      #to rel. uncertainties"
-	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (5-B-11(P,N)6-C-11,,SIG)"
-	,"  #[1]#DECAY-DATA (6-C-11,20.3MIN,AR,511.,1.) #Ix_old=2.0"
-	,"   a1=2.0/1.995;               #[1]#DECAY-DATA: correction to new 511 keV gamma-yield per decay C-11 Ix_new=1.995"
-	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0025063"
-	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":5
  ,"lx4data":3
  ,"x4data":[
@@ -522,7 +557,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0062005", "isub":5, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062005", "isub":5, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -547,13 +582,13 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["53% enriched graphite powder"]
+	,"x4freetext":["5(6-C-13,ENR=0.53) 53% enriched graphite powder"]
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"7-N-13", "t12":10.0, "t12units":"MIN", "t12sec":600.0
-	, "Radiations":[ {"Type":"AR", "Energy":[511.0], "Intensity":1.0}]}]
+	, "Radiations":[ {"Type":"AR", "Energy":[511.0]}]}]
 	}
       ]
      ,"MONITOR":[
@@ -565,10 +600,18 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT)B0101000,CRANDALL+,J,PR,101,329,1956"
-		,"subent":"MONIT)B0101000","author1":"CRANDALL+","stdFileName":"J,PR,101,329,1956"
+	,"x4codes":[{"code":"MONIT)B0101000,W.E.Crandall+,J,PR,101,329,1956"
+		,"subent":"MONIT)B0101000","author1":"W.E.Crandall+","stdFileName":"J,PR,101,329,1956"
 		,"year":1956,"typ":"J","ref":"J,PR","vol":"101","p":"329"
 		,"shortRef":"Jour: Physical Review, Vol.101, p.329 (1956)"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 1, Nucl.Phys.62,81,1965"]
 	}
       ]
     }
@@ -595,25 +638,13 @@
 	 [155,1.9,0.2,42]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062005", "Pointer":" "
- ,"Subent":"C0062005", "compiled":20040310
+ ,"Subent":"C0062005", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":6, "targ1":"C-13", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-13(P,N)7-N-13,,SIG"
  ,"compNotes":[]
- ,"DECAY-DATA":{"Nuclide":"7-N-13","HalfLife":"10.0MIN","HalfLife1":""
-	,"RadiationType":"AR","Ene":511.0,"Ene1":511.0,"Abu":1.0,"Abu1":1.9963601
-	,"FcCorrDECAY_DATA":1.0018233
-	,"reaction":"6-C-13(P,N)7-N-13,,SIG"}
- ,"autoCorrNotes":["#Reaction: 6-C-13(P,N)7-N-13,,SIG"
-	," dy=dy/y;                      #to rel. uncertainties"
-	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (6-C-13(P,N)7-N-13,,SIG)"
-	,"  #[1]#DECAY-DATA (7-N-13,10.0MIN,AR,511.,1.) #Ix_old=2.0"
-	,"   a1=2.0/1.9963601;           #[1]#DECAY-DATA: correction to new 511 keV gamma-yield per decay N-13 Ix_new=1.9963601"
-	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0018233"
-	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
@@ -665,7 +696,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0062006", "isub":6, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062006", "isub":6, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -708,10 +739,18 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT)B0101000,CRANDALL+,J,PR,101,329,1956"
-		,"subent":"MONIT)B0101000","author1":"CRANDALL+","stdFileName":"J,PR,101,329,1956"
+	,"x4codes":[{"code":"MONIT)B0101000,W.E.Crandall+,J,PR,101,329,1956"
+		,"subent":"MONIT)B0101000","author1":"W.E.Crandall+","stdFileName":"J,PR,101,329,1956"
 		,"year":1956,"typ":"J","ref":"J,PR","vol":"101","p":"329"
 		,"shortRef":"Jour: Physical Review, Vol.101, p.329 (1956)"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 1, Nucl.Phys.62,81,1965"]
 	}
       ]
     }
@@ -738,7 +777,7 @@
 	 [155,0.075,0.01,11]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062006", "Pointer":" "
- ,"Subent":"C0062006", "compiled":20040310
+ ,"Subent":"C0062006", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":7, "targ1":"N-14", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -796,7 +835,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0062007", "isub":7, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062007", "isub":7, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -827,7 +866,7 @@
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"10-NE-19", "t12":17.5, "t12units":"SEC", "t12sec":17.5
-	, "Radiations":[ {"Type":"AR", "Energy":[511.0], "Intensity":1.0}]}]
+	, "Radiations":[ {"Type":"AR", "Energy":[511.0]}]}]
 	}
       ]
      ,"MONITOR":[
@@ -839,10 +878,18 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT)B0101000,CRANDALL+,J,PR,101,329,1956"
-		,"subent":"MONIT)B0101000","author1":"CRANDALL+","stdFileName":"J,PR,101,329,1956"
+	,"x4codes":[{"code":"MONIT)B0101000,W.E.Crandall+,J,PR,101,329,1956"
+		,"subent":"MONIT)B0101000","author1":"W.E.Crandall+","stdFileName":"J,PR,101,329,1956"
 		,"year":1956,"typ":"J","ref":"J,PR","vol":"101","p":"329"
 		,"shortRef":"Jour: Physical Review, Vol.101, p.329 (1956)"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 1, Nucl.Phys.62,81,1965"]
 	}
       ]
     }
@@ -869,7 +916,7 @@
 	 [155,4,2,42]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062007", "Pointer":" "
- ,"Subent":"C0062007", "compiled":20040310
+ ,"Subent":"C0062007", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":9, "targ1":"F-19", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -927,7 +974,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0062008", "isub":8, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062008", "isub":8, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -951,14 +998,16 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["97.6% enriched metal"]
+	,"x4code":{"Nucl":"22-TI-48","ENR":0.976}
+	,"x4freetext":[" 97.6% enriched metal"]
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"23-V-48", "t12":16.0, "t12units":"HR", "t12sec":57600.0
 	, "Radiations":[ {"Type":"G", "Energy":[1310.0], "Intensity":0.98}]}]
+	,"x4freetext":[" Comment by compiler: V-48 half-life is 16 days."
+		," Possible misprint in paper (days -> hours)"]
 	}
       ]
      ,"MONITOR":[
@@ -970,10 +1019,25 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT),BLOOM+,J,PRL,3,98,1959"
-		,"subent":"MONIT)","author1":"BLOOM+","stdFileName":"J,PRL,3,98,1959"
+	,"x4codes":[{"code":"MONIT),S.D.Bloom+,J,PRL,3,98,1959"
+		,"subent":"MONIT)","author1":"S.D.Bloom+","stdFileName":"J,PRL,3,98,1959"
 		,"year":1959,"typ":"J","ref":"J,PRL","vol":"3","p":"98"
 		,"shortRef":"Jour: Physical Review Letters, Vol.3, p.98 (1959)"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 1, Nucl.Phys.62,81,1965"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210905A", "date":"20210905", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added comment to DECAY-DATA"]
 	}
       ]
     }
@@ -1000,7 +1064,7 @@
 	 [155,3.2,0.5,11]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062008", "Pointer":" "
- ,"Subent":"C0062008", "compiled":20040310
+ ,"Subent":"C0062008", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":22, "targ1":"Ti-48", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1058,7 +1122,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0062009", "isub":9, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062009", "isub":9, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1090,6 +1154,8 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"24-CR-51", "t12":28.0, "t12units":"HR", "t12sec":100800.0
 	, "Radiations":[ {"Type":"G", "Energy":[323.0], "Intensity":0.09}]}]
+	,"x4freetext":[" Comment by compiler: Cr-51 half-life is 28 days."
+		," Possible misprint in paper (days -> hours)"]
 	}
       ]
      ,"MONITOR":[
@@ -1101,10 +1167,25 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT),BLOOM+,J,PRL,3,98,1959"
-		,"subent":"MONIT)","author1":"BLOOM+","stdFileName":"J,PRL,3,98,1959"
+	,"x4codes":[{"code":"MONIT),S.D.Bloom+,J,PRL,3,98,1959"
+		,"subent":"MONIT)","author1":"S.D.Bloom+","stdFileName":"J,PRL,3,98,1959"
 		,"year":1959,"typ":"J","ref":"J,PRL","vol":"3","p":"98"
 		,"shortRef":"Jour: Physical Review Letters, Vol.3, p.98 (1959)"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 1, Nucl.Phys.62,81,1965"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210905A", "date":"20210905", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added comment to DECAY-DATA"]
 	}
       ]
     }
@@ -1131,7 +1212,7 @@
 	 [155,4.8,0.7,11]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062009", "Pointer":" "
- ,"Subent":"C0062009", "compiled":20040310
+ ,"Subent":"C0062009", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":23, "targ1":"V-51", "proj1":"p", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1189,22 +1270,22 @@
 }
    ]
    }
-  ,{"SUBENT":"C0062010", "isub":10, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062010", "isub":10, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"24-CR-52(P,N)25-MN-52,(M),SIG"
+	,"x4code":{"code":"24-CR-52(P,N)25-MN-52-G,(M),SIG"
 	    ,"c4reac":"(P,N)(M),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"24-CR-52(P,N)25-MN-52,(M),SIG"
+	    {"code":"24-CR-52(P,N)25-MN-52-G,(M),SIG"
 		,"Reac":"P,N"
 		,"SF1":"24-CR-52","Targ":{"code":"24-CR-52","nam":"Cr-52","ZA":24052}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"N"
-		,"SF4":"25-MN-52","Prod":{"code":"25-MN-52","nam":"Mn-52","ZA":25052}
+		,"SF4":"25-MN-52-G","Prod":{"code":"25-MN-52-G","nam":"Mn-52-g","ZA":25052,"ProdM":"G"}
 		,"SF5":"(M)"
 		,"SF6":"SIG"
 		,"SF58":"(M),SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section (uncert.if isomeric trans.incl)"
@@ -1213,8 +1294,8 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["99.9% enriched metal."]
+	,"x4code":{"Nucl":"24-CR-52","ENR":0.999}
+	,"x4freetext":[" 99.9% enriched metal."]
 	}
       ]
      ,"DECAY-DATA":[
@@ -1225,6 +1306,8 @@
 	,{"x4pointer":" "
 	,"x4codes":[{"Nucl":"25-MN-52-G", "t12":5.6, "t12units":"HR", "t12sec":20160.0
 	, "Radiations":[ {"Type":"G", "Energy":[1450.0], "Intensity":1.0}]}]
+	,"x4freetext":[" Comment by compiler: Mn-52g half-life is 5.6 days."
+		," Possible misprint in paper (days -> hours)"]
 	}
       ]
      ,"MONITOR":[
@@ -1243,16 +1326,32 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT1)B0101000,CRANDALL+,J,PR,101,329,1956"
-		,"subent":"MONIT1)B0101000","author1":"CRANDALL+","stdFileName":"J,PR,101,329,1956"
+	,"x4codes":[{"code":"MONIT1)B0101000,W.E.Crandall+,J,PR,101,329,1956"
+		,"subent":"MONIT1)B0101000","author1":"W.E.Crandall+","stdFileName":"J,PR,101,329,1956"
 		,"year":1956,"typ":"J","ref":"J,PR","vol":"101","p":"329"
 		,"shortRef":"Jour: Physical Review, Vol.101, p.329 (1956)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT2),BLOOM+,J,PRL,3,98,1959"
-		,"subent":"MONIT2)","author1":"BLOOM+","stdFileName":"J,PRL,3,98,1959"
+	,"x4codes":[{"code":"MONIT2),S.D.Bloom+,J,PRL,3,98,1959"
+		,"subent":"MONIT2)","author1":"S.D.Bloom+","stdFileName":"J,PRL,3,98,1959"
 		,"year":1959,"typ":"J","ref":"J,PRL","vol":"3","p":"98"
 		,"shortRef":"Jour: Physical Review Letters, Vol.3, p.98 (1959)"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 1, Nucl.Phys.62,81,1965"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210905A", "date":"20210905", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added -G to REACTION SF4,"
+		," added comment to DECAY-DATA"]
 	}
       ]
     }
@@ -1282,12 +1381,12 @@
 	 [155,3.9,0.6,42,11]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062010", "Pointer":" "
- ,"Subent":"C0062010", "compiled":20040310
+ ,"Subent":"C0062010", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":24, "targ1":"Cr-52", "proj1":"p", "emis1":"N", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS+", "quant":"CS", "quantExpan":"Cross section (uncert.if isomeric trans.incl)"
- ,"reacode":"24-CR-52(P,N)25-MN-52,(M),SIG"
+ ,"reacode":"24-CR-52(P,N)25-MN-52-G,(M),SIG"
  ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":1
@@ -1346,7 +1445,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0062011", "isub":11, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062011", "isub":11, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1371,7 +1470,7 @@
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"6-C-11", "t12":20.3, "t12units":"MIN", "t12sec":1218.0
-	, "Radiations":[ {"Type":"AR", "Energy":[511.0], "Intensity":1.0}]}]
+	, "Radiations":[ {"Type":"AR", "Energy":[511.0]}]}]
 	}
       ]
      ,"MONITOR":[
@@ -1383,10 +1482,18 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT)B0101000,CRANDALL+,J,PR,101,329,1956"
-		,"subent":"MONIT)B0101000","author1":"CRANDALL+","stdFileName":"J,PR,101,329,1956"
+	,"x4codes":[{"code":"MONIT)B0101000,W.E.Crandall+,J,PR,101,329,1956"
+		,"subent":"MONIT)B0101000","author1":"W.E.Crandall+","stdFileName":"J,PR,101,329,1956"
 		,"year":1956,"typ":"J","ref":"J,PR","vol":"101","p":"329"
 		,"shortRef":"Jour: Physical Review, Vol.101, p.329 (1956)"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 2, Nucl.Phys.62,81,1965"]
 	}
       ]
      ,"HISTORY":[
@@ -1432,25 +1539,13 @@
 	 [5700,29.8,1.6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062011", "Pointer":" "
- ,"Subent":"C0062011", "compiled":20040310
+ ,"Subent":"C0062011", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":6, "targ1":"C-12", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"6-C-12(P,X)6-C-11,,SIG"
  ,"compNotes":[]
- ,"DECAY-DATA":{"Nuclide":"6-C-11","HalfLife":"20.3MIN","HalfLife1":""
-	,"RadiationType":"AR","Ene":511.0,"Ene1":511.0,"Abu":1.0,"Abu1":1.995
-	,"FcCorrDECAY_DATA":1.0025063
-	,"reaction":"6-C-12(P,X)6-C-11,,SIG"}
- ,"autoCorrNotes":["#Reaction: 6-C-12(P,X)6-C-11,,SIG"
-	," dy=dy/y;                      #to rel. uncertainties"
-	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (6-C-12(P,X)6-C-11,,SIG)"
-	,"  #[1]#DECAY-DATA (6-C-11,20.3MIN,AR,511.,1.) #Ix_old=2.0"
-	,"   a1=2.0/1.995;               #[1]#DECAY-DATA: correction to new 511 keV gamma-yield per decay C-11 Ix_new=1.995"
-	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0025063"
-	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":6
  ,"lx4data":1
  ,"x4data":[
@@ -1508,7 +1603,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0062012", "isub":12, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062012", "isub":12, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1539,7 +1634,7 @@
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"7-N-13", "t12":10.0, "t12units":"MIN", "t12sec":600.0
-	, "Radiations":[ {"Type":"AR", "Energy":[511.0], "Intensity":1.0}]}]
+	, "Radiations":[ {"Type":"AR", "Energy":[511.0]}]}]
 	}
       ]
      ,"MONITOR":[
@@ -1551,10 +1646,18 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT),BLOOM+,J,PRL,3,98,1959"
-		,"subent":"MONIT)","author1":"BLOOM+","stdFileName":"J,PRL,3,98,1959"
+	,"x4codes":[{"code":"MONIT),S.D.Bloom+,J,PRL,3,98,1959"
+		,"subent":"MONIT)","author1":"S.D.Bloom+","stdFileName":"J,PRL,3,98,1959"
 		,"year":1959,"typ":"J","ref":"J,PRL","vol":"3","p":"98"
 		,"shortRef":"Jour: Physical Review Letters, Vol.3, p.98 (1959)"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 2, Nucl.Phys.62,81,1965"]
 	}
       ]
      ,"HISTORY":[
@@ -1589,25 +1692,13 @@
 	,[5700,7.3,0.7,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062012", "Pointer":" "
- ,"Subent":"C0062012", "compiled":20040310
+ ,"Subent":"C0062012", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":7, "targ1":"N-14", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"7-N-14(P,X)7-N-13,,SIG"
  ,"compNotes":[]
- ,"DECAY-DATA":{"Nuclide":"7-N-13","HalfLife":"10.0MIN","HalfLife1":""
-	,"RadiationType":"AR","Ene":511.0,"Ene1":511.0,"Abu":1.0,"Abu1":1.9963601
-	,"FcCorrDECAY_DATA":1.0018233
-	,"reaction":"7-N-14(P,X)7-N-13,,SIG"}
- ,"autoCorrNotes":["#Reaction: 7-N-14(P,X)7-N-13,,SIG"
-	," dy=dy/y;                      #to rel. uncertainties"
-	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (7-N-14(P,X)7-N-13,,SIG)"
-	,"  #[1]#DECAY-DATA (7-N-13,10.0MIN,AR,511.,1.) #Ix_old=2.0"
-	,"   a1=2.0/1.9963601;           #[1]#DECAY-DATA: correction to new 511 keV gamma-yield per decay N-13 Ix_new=1.9963601"
-	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0018233"
-	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":5
  ,"lx4data":2
  ,"x4data":[
@@ -1659,7 +1750,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0062013", "isub":13, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062013", "isub":13, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1690,7 +1781,7 @@
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"8-O-15", "t12":124.0, "t12units":"SEC", "t12sec":124.0
-	, "Radiations":[ {"Type":"AR", "Energy":[511.0], "Intensity":1.0}]}]
+	, "Radiations":[ {"Type":"AR", "Energy":[511.0]}]}]
 	}
       ]
      ,"MONITOR":[
@@ -1702,10 +1793,18 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT)B0101000,CRANDALL+,J,PR,101,329,1956"
-		,"subent":"MONIT)B0101000","author1":"CRANDALL+","stdFileName":"J,PR,101,329,1956"
+	,"x4codes":[{"code":"MONIT)B0101000,W.E.Crandall+,J,PR,101,329,1956"
+		,"subent":"MONIT)B0101000","author1":"W.E.Crandall+","stdFileName":"J,PR,101,329,1956"
 		,"year":1956,"typ":"J","ref":"J,PR","vol":"101","p":"329"
 		,"shortRef":"Jour: Physical Review, Vol.101, p.329 (1956)"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 2, Nucl.Phys.62,81,1965"]
 	}
       ]
      ,"HISTORY":[
@@ -1740,25 +1839,13 @@
 	,[5700,34,5,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062013", "Pointer":" "
- ,"Subent":"C0062013", "compiled":20040310
+ ,"Subent":"C0062013", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":8, "targ1":"O-16", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"8-O-16(P,X)8-O-15,,SIG"
  ,"compNotes":[]
- ,"DECAY-DATA":{"Nuclide":"8-O-15","HalfLife":"124.SEC","HalfLife1":""
-	,"RadiationType":"AR","Ene":511.0,"Ene1":511.0,"Abu":1.0,"Abu1":1.9977001
-	,"FcCorrDECAY_DATA":1.0011513
-	,"reaction":"8-O-16(P,X)8-O-15,,SIG"}
- ,"autoCorrNotes":["#Reaction: 8-O-16(P,X)8-O-15,,SIG"
-	," dy=dy/y;                      #to rel. uncertainties"
-	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (8-O-16(P,X)8-O-15,,SIG)"
-	,"  #[1]#DECAY-DATA (8-O-15,124.SEC,AR,511.,1.) #Ix_old=2.0"
-	,"   a1=2.0/1.9977001;           #[1]#DECAY-DATA: correction to new 511 keV gamma-yield per decay O-15 Ix_new=1.9977001"
-	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0011513"
-	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":5
  ,"lx4data":2
  ,"x4data":[
@@ -1810,7 +1897,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0062014", "isub":14, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062014", "isub":14, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1841,7 +1928,7 @@
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"9-F-18", "t12":109.7, "t12units":"MIN", "t12sec":6582.0
-	, "Radiations":[ {"Type":"AR", "Energy":[511.0], "Intensity":0.97}]}]
+	, "Radiations":[ {"Type":"AR", "Energy":[511.0]}]}]
 	}
       ]
      ,"MONITOR":[
@@ -1853,10 +1940,18 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT),BLOOM+,J,PRL,3,98,1959"
-		,"subent":"MONIT)","author1":"BLOOM+","stdFileName":"J,PRL,3,98,1959"
+	,"x4codes":[{"code":"MONIT),S.D.Bloom+,J,PRL,3,98,1959"
+		,"subent":"MONIT)","author1":"S.D.Bloom+","stdFileName":"J,PRL,3,98,1959"
 		,"year":1959,"typ":"J","ref":"J,PRL","vol":"3","p":"98"
 		,"shortRef":"Jour: Physical Review Letters, Vol.3, p.98 (1959)"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 2, Nucl.Phys.62,81,1965"]
 	}
       ]
      ,"HISTORY":[
@@ -1891,25 +1986,13 @@
 	,[5700,19,2,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062014", "Pointer":" "
- ,"Subent":"C0062014", "compiled":20040310
+ ,"Subent":"C0062014", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":9, "targ1":"F-19", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"9-F-19(P,X)9-F-18,,SIG"
  ,"compNotes":[]
- ,"DECAY-DATA":{"Nuclide":"9-F-18","HalfLife":"109.7MIN","HalfLife1":""
-	,"RadiationType":"AR","Ene":511.0,"Ene1":511.0,"Abu":0.97,"Abu1":1.9346001
-	,"FcCorrDECAY_DATA":1.0027913
-	,"reaction":"9-F-19(P,X)9-F-18,,SIG"}
- ,"autoCorrNotes":["#Reaction: 9-F-19(P,X)9-F-18,,SIG"
-	," dy=dy/y;                      #to rel. uncertainties"
-	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (9-F-19(P,X)9-F-18,,SIG)"
-	,"  #[1]#DECAY-DATA (9-F-18,109.7MIN,AR,511.,0.97) #Ix_old=1.94"
-	,"   a1=1.94/1.9346001;          #[1]#DECAY-DATA: correction to new 511 keV gamma-yield per decay F-18 Ix_new=1.9346001"
-	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0027913"
-	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":5
  ,"lx4data":2
  ,"x4data":[
@@ -1961,7 +2044,7 @@
 }
    ]
    }
-  ,{"SUBENT":"C0062015", "isub":15, "compiled":20040310, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0062015", "isub":15, "compiled":20211005, "TransID":"C206", "TransDate":20220127
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1986,7 +2069,7 @@
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"11-NA-22", "t12":2.6, "t12units":"YR", "t12sec":8.2048016E7
-	, "Radiations":[ {"Type":"AR", "Energy":[511.0], "Intensity":0.905}]}]
+	, "Radiations":[ {"Type":"AR", "Energy":[511.0]}]}]
 	}
       ]
      ,"MONITOR":[
@@ -1998,10 +2081,18 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"MONIT),BLOOM+,J,PRL,3,98,1959"
-		,"subent":"MONIT)","author1":"BLOOM+","stdFileName":"J,PRL,3,98,1959"
+	,"x4codes":[{"code":"MONIT),S.D.Bloom+,J,PRL,3,98,1959"
+		,"subent":"MONIT)","author1":"S.D.Bloom+","stdFileName":"J,PRL,3,98,1959"
 		,"year":1959,"typ":"J","ref":"J,PRL","vol":"3","p":"98"
 		,"shortRef":"Jour: Physical Review Letters, Vol.3, p.98 (1959)"}]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table 2, Nucl.Phys.62,81,1965"]
 	}
       ]
      ,"HISTORY":[
@@ -2036,25 +2127,13 @@
 	,[5700,31,5,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0062015", "Pointer":" "
- ,"Subent":"C0062015", "compiled":20040310
+ ,"Subent":"C0062015", "compiled":20211005
  ,"year1":1965, "author1ini":"L.", "author1":"Valentin"
  ,"zTarg1":11, "targ1":"Na-23", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"11-NA-23(P,X)11-NA-22,,SIG"
  ,"compNotes":[]
- ,"DECAY-DATA":{"Nuclide":"11-NA-22","HalfLife":"2.60YR","HalfLife1":""
-	,"RadiationType":"AR","Ene":511.0,"Ene1":511.0,"Abu":0.905,"Abu1":1.8075999
-	,"FcCorrDECAY_DATA":1.0013278
-	,"reaction":"11-NA-23(P,X)11-NA-22,,SIG"}
- ,"autoCorrNotes":["#Reaction: 11-NA-23(P,X)11-NA-22,,SIG"
-	," dy=dy/y;                      #to rel. uncertainties"
-	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   (11-NA-23(P,X)11-NA-22,,SIG)"
-	,"  #[1]#DECAY-DATA (11-NA-22,2.60YR,AR,511.,0.905) #Ix_old=1.81"
-	,"   a1=1.81/1.8075999;          #[1]#DECAY-DATA: correction to new 511 keV gamma-yield per decay Na-22 Ix_new=1.8075999"
-	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0013278"
-	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":5
  ,"lx4data":2
  ,"x4data":[
