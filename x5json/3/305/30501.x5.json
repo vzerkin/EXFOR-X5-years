@@ -1,9 +1,9 @@
-  {"ENTRY":"30501", "updated":20110816, "TransID":"3151", "TransDate":20110817, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"30501", "updated":20211005, "TransID":"3202", "TransDate":20211116, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":1972,"a1":"B.V.Thirumala rao+","r1":"J,JP/A,5,468,1972"
    ,"ref":"Jour: Jour. of Physics, Part A (Mathematical+General), Vol.5, p.468 (1972)"
    ,"title":"Neutron capture cross sections at 25 keV"
    ,"x4subents":[
-   {"SUBENT":"30501001", "isub":1, "compiled":20110816, "TransID":"3151", "TransDate":20110817
+   {"SUBENT":"30501001", "isub":1, "compiled":20211005, "TransID":"3202", "TransDate":20211116
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -25,7 +25,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,JP/A,5,468,197203","stdFileName":"J,JP_A,5,468,1972"
+	,"x4codes":[{"code":"J,JP/A,5,468,1972","stdFileName":"J,JP_A,5,468,1972"
 		,"year":1972,"typ":"J","ref":"J,JP/A","vol":"5","p":"468"
 		,"shortRef":"Jour: Jour. of Physics, Part A (Mathematical+General), Vol.5, p.468 (1972)"}]
 	}
@@ -134,7 +134,12 @@
 	,{"x4pointer":" "
 	,"x4code":{"code":"20110816A", "date":"20110816", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" On. MONIT-REF  corrected."]
+	,"x4freetext":[" On. MONIT-REF corrected."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20210930A", "date":"20210930", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF4 corrected in 005."]
 	}
       ]
     }
@@ -710,22 +715,22 @@
 }
    ]
    }
-  ,{"SUBENT":"30501005", "isub":5, "compiled":20090312, "TransID":"3137", "TransDate":20090724
+  ,{"SUBENT":"30501005", "isub":5, "compiled":20211005, "TransID":"3202", "TransDate":20211116
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"52-TE-130(N,G)52-TE-131,M+,SIG"
+	,"x4code":{"code":"52-TE-130(N,G)52-TE-131-G,M+,SIG"
 	    ,"c4reac":"(N,G)M+,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"52-TE-130(N,G)52-TE-131,M+,SIG"
+	    {"code":"52-TE-130(N,G)52-TE-131-G,M+,SIG"
 		,"Reac":"N,G"
 		,"SF1":"52-TE-130","Targ":{"code":"52-TE-130","nam":"Te-130","ZA":52130}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"G"
-		,"SF4":"52-TE-131","Prod":{"code":"52-TE-131","nam":"Te-131","ZA":52131}
+		,"SF4":"52-TE-131-G","Prod":{"code":"52-TE-131-G","nam":"Te-131-g","ZA":52131,"ProdM":"G"}
 		,"SF5":"M+"
 		,"SF6":"SIG"
 		,"SF58":"M+,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section, incl. form. via isomeric trans."
@@ -743,6 +748,13 @@
 	,"x4code":{"code":"(MONIT2)52-TE-130(N,G)52-TE-131,M+,SIG,,MXW"
 		,"heading":"MONIT2"
 		,"reaction":"52-TE-130(N,G)52-TE-131,M+,SIG,,MXW"}
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20210930A", "date":"20210930", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF4: -G added c.f. Memo CP-D/1023."]
 	}
       ]
     }
@@ -769,8 +781,8 @@
        {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL", "units":"KEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Unspecified)", "pFlag":"9220000"
+      ,{"icol":1, "header":"EN-RSL-HW", "units":"KEV", "pointer":" "
+	,"headerHelp":"Incident projectile energy resolution (Half width)", "pFlag":"9330000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -780,19 +792,19 @@
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL"    ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"EN-RSL-HW" ,"DATA"      ,"DATA-ERR"  ]
 	,["KEV"       ,"KEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
 	 [25,5,15,4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30501005", "Pointer":" "
- ,"Subent":"30501005", "compiled":20090312
+ ,"Subent":"30501005", "compiled":20211005
  ,"year1":1972, "author1ini":"B.V.", "author1":"Thirumala rao"
  ,"zTarg1":52, "targ1":"Te-130", "proj1":"n", "emis1":"G", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section, incl. form. via isomeric trans."
- ,"reacode":"52-TE-130(N,G)52-TE-131,M+,SIG"
+ ,"reacode":"52-TE-130(N,G)52-TE-131-G,M+,SIG"
  ,"compNotes":[]
  ,"wx4data":12
  ,"lx4data":1
@@ -816,8 +828,8 @@
     ,"dat0":[25]
     ,"dat1":[2.5e+4]}
   ,{"ivar":3, "cvar":"dx1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN-RSL", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
+    ,"header":"EN-RSL-HW", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X1.hRes+-", "dataType":"41", "rank":1.933
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[5]
     ,"dat1":[5000]}
@@ -882,7 +894,7 @@
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[2.5e+4]
-      ,"dx1":[5000]   }
+      ,"dx1":[1.0e+4]   }
  }
 }
    ]
