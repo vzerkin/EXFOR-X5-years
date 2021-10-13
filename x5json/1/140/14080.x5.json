@@ -1,11 +1,24 @@
-  {"ENTRY":"14080", "updated":20140416, "TransID":"1401", "TransDate":20141111, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"14080", "updated":20211014, "TransID":"1489", "TransDate":20220307, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1970,"a1":"R.P.Schuman+","r1":"R,IN-1317,39,1970"
    ,"ref":"Prog: Idaho Nuclear Corp. Reports, No.1317, p.39 (1970)"
    ,"title":"Activation cross section measurements using the 2.0 keV Sc filtered and 25 keV Fe filtered neutron beams"
    ,"x4subents":[
-   {"SUBENT":"14080001", "isub":1, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+   {"SUBENT":"14080001", "isub":1, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
-      "INSTITUTE":[
+      "TITLE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Activation cross section measurements using the 2.0 keV"
+		," Sc filtered and 25 keV Fe filtered neutron beams"]
+	}
+      ]
+     ,"AUTHOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"ini":"R.P.","nam":"Schuman"}
+	    ,{"ini":"R.L.","nam":"Tromp"}]
+	}
+      ]
+     ,"INSTITUTE":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"1USAMTR", "dict":"INSTITUTE", "idict":3,"hlp":"Idaho Nuclear Corp., Idaho Falls, ID, United States of America"}]
 	}
@@ -17,36 +30,21 @@
 		,"shortRef":"Prog: Idaho Nuclear Corp. Reports, No.1317, p.39 (1970)"}]
 	}
       ]
-     ,"AUTHOR":[
-	{"x4pointer":" "
-	,"x4codes":[{"ini":"R.P.","nam":"Schuman"}
-	    ,{"ini":"R.L.","nam":"Tromp"}]
-	}
-      ]
-     ,"TITLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Activation cross section measurements using the 2.0 keV"
-		," Sc filtered and 25 keV Fe filtered neutron beams"]
-	}
-      ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"REAC", "dict":"FACILITY", "idict":18,"hlp":"Reactor"}]
+	,"x4codes":[{"code":"REAC", "dict":"FACILITY", "idict":18,"hlp":"Reactor"}
+	    ,{"code":"1USAMTR", "dict":"INSTITUTE", "idict":3,"hlp":"Idaho Nuclear Corp., Idaho Falls, ID, United States of America"}]
 	,"x4freetext":[" MTR reactor"]
-	}
-      ]
-     ,"INC-SOURCE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Sc and Fe filtered"]
 	}
       ]
      ,"METHOD":[
 	{"x4pointer":" "
+	,"x4codes":[{"code":"FNB", "dict":"METHOD", "idict":21,"hlp":"Filtered neutron beam"}]
+	,"x4freetext":[" Sc and Fe filtered"]
+	}
+	,{"x4pointer":" "
 	,"x4codes":[{"code":"ACTIV", "dict":"METHOD", "idict":21,"hlp":"Activation"}
-	    ,{"code":"STTA", "dict":"METHOD", "idict":21,"hlp":"Stacked target irradiation"}
-	    ,{"code":"FNB", "dict":"METHOD", "idict":21,"hlp":"Filtered neutron beam"}]
+	    ,{"code":"STTA", "dict":"METHOD", "idict":21,"hlp":"Stacked target irradiation"}]
 	}
       ]
      ,"SAMPLE":[
@@ -60,9 +58,16 @@
 	,"x4codes":[{"code":"NAICR", "dict":"DETECTOR", "idict":22,"hlp":"Sodium-Iodide crystal"}]
 	}
       ]
-     ,"PART-DET":[
+     ,"MONITOR":[
 	{"x4pointer":" "
-	,"x4codes":["G"]
+	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
+		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
+	}
+      ]
+     ,"DECAY-MON":[
+	{"x4pointer":" "
+	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
+	, "Radiations":[ {"Type":"DG", "Energy":[412.0], "Intensity":0.96}]}]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -83,790 +88,34 @@
 	,"x4freetext":[" SD:REACTION code corrected in Subents 11,12"
 		," EN-RSL -> EN-RSL-FW changed in Subents 2-39."]
 	}
-      ]
-    }
-   }
-  ,{"SUBENT":"14080002", "isub":2, "compiled":20140416, "TransID":"1401", "TransDate":20141111
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"(29-CU-63(N,G)29-CU-64,,SIG,,TT)/\n(29-CU-63(N,G)29-CU-64,,SIG)"
-	    ,"c4reac":"((N,G),SIG,,TT)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section for thick target]"
-	    ,"MF":203
-	    ,"MT":102
-	    ,"Units":"NO-DIM"
-	    ,"reacs": [
-	    {"code":"29-CU-63(N,G)29-CU-64,,SIG,,TT"
-		,"Reac":"N,G"
-		,"SF1":"29-CU-63","Targ":{"code":"29-CU-63","nam":"Cu-63","ZA":29063}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"G"
-		,"SF4":"29-CU-64","Prod":{"code":"29-CU-64","nam":"Cu-64","ZA":29064}
-		,"SF6":"SIG"
-		,"SF8":"TT"
-		,"SF58":",SIG,,TT","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section for thick target"
-	    }
-	    ,{"code":"29-CU-63(N,G)29-CU-64,,SIG"
-		,"Reac":"N,G"
-		,"SF1":"29-CU-63","Targ":{"code":"29-CU-63","nam":"Cu-63","ZA":29063}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"G"
-		,"SF4":"29-CU-64","Prod":{"code":"29-CU-64","nam":"Cu-64","ZA":29064}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }]}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. MONITOR and DECAY-MON moved to 001."
+		," DECAY-DATA corrected in 008-039"]
 	}
-      ]
-     ,"DECAY-DATA":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"29-CU-64", "t12":12.8, "t12units":"HR", "t12sec":46080.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.511], "Intensity":0.38}]}]
-	}
-      ]
-     ,"SAMPLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Thickness of 653 mg/cm2 (metal)"]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Data taken from Table 2 of IN-1317,39,1970"]
+	,{"x4pointer":" "
+	,"x4code":{"code":"20211014D", "date":"20211014", "act":"D", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Entry or subentry deleted"}
+	,"x4freetext":[" On. 002-007 deleted (thick/thin target"
+		,"                cross section ratios)."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-FW", "units":"KEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ]
-      ,"datacols":[
-	 ["EN"        ,"EN-RSL-FW" ]
-	,["KEV"       ,"KEV"       ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [25,2]]}
-    ,"DATA":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["DATA"      ]
-	,["NO-DIM"    ]
-	,[" "         ]]
-      ,"data":[
-	 [0.9]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"14080002", "Pointer":" "
- ,"Subent":"14080002", "compiled":20140416
- ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
- ,"zTarg1":29, "targ1":"Cu-63", "proj1":"n", "emis1":"G", "MF":203, "MT":102, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section for thick target]"
- ,"reacode":"(29-CU-63(N,G)29-CU-64,,SIG,,TT)/(29-CU-63(N,G)29-CU-64,,SIG)"
- ,"compNotes":[]
- ,"wx4data":3
- ,"lx4data":1
- ,"x4data":[
-   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
-    ,"dat0":[0.9]
-   ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"41", "rank":1.1
-    ,"expansion":"Incident energy: energy"
-    ,"com0":25
-    ,"com1":2.5e+4}
-  ,{"ivar":2, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-RSL-FW", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
-    ,"expansion":"Incident energy: energy /Error/"
-    ,"com0":2
-    ,"com1":2000}
-  ]
- ,"wc5data":2
- ,"lc5data":1
- ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
-      ,"header":"DATA", "dataType":"21", "rank":0.0
-      ,"expansion":"Data: data"
-      ,"y":[0.9]
    }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
-      ,"header":"EN", "dataType":"41", "rank":1.0
-      ,"expansion":"Incident energy: energy"
-      ,"x1":[2.5e+4]
-      ,"dx1":[2000]   }
- }
- ,"c5mon":{"m0ref":"[MONIT]/au197ng", "m1ref":"recom/cu63ng"
-      ,"enNorm":[2.5e+4] }
-}
-   ]
+  ,{"SUBENT":"14080002", "isub":2, "compiled":20211014, "TransID":"1489", "TransDate":20220307, "nosubent":true 
    }
-  ,{"SUBENT":"14080003", "isub":3, "compiled":20140416, "TransID":"1401", "TransDate":20141111
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"(29-CU-65(N,G)29-CU-66,,SIG,,TT)/\n(29-CU-63(N,G)29-CU-64,,SIG)"
-	    ,"c4reac":"((N,G),SIG,,TT)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section for thick target]"
-	    ,"MF":203
-	    ,"MT":102
-	    ,"Units":"NO-DIM"
-	    ,"reacs": [
-	    {"code":"29-CU-65(N,G)29-CU-66,,SIG,,TT"
-		,"Reac":"N,G"
-		,"SF1":"29-CU-65","Targ":{"code":"29-CU-65","nam":"Cu-65","ZA":29065}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"G"
-		,"SF4":"29-CU-66","Prod":{"code":"29-CU-66","nam":"Cu-66","ZA":29066}
-		,"SF6":"SIG"
-		,"SF8":"TT"
-		,"SF58":",SIG,,TT","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section for thick target"
-	    }
-	    ,{"code":"29-CU-63(N,G)29-CU-64,,SIG"
-		,"Reac":"N,G"
-		,"SF1":"29-CU-63","Targ":{"code":"29-CU-63","nam":"Cu-63","ZA":29063}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"G"
-		,"SF4":"29-CU-64","Prod":{"code":"29-CU-64","nam":"Cu-64","ZA":29064}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }]}
-	}
-      ]
-     ,"DECAY-DATA":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"29-CU-66", "t12":5.1, "t12units":"MIN", "t12sec":306.0
-	, "Radiations":[ {"Type":"DG", "Energy":[1.039], "Intensity":0.09}]}]
-	}
-      ]
-     ,"SAMPLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Thickness of 653 mg/cm2 (metal)"]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Data taken from Table 2 of IN-1317,39,1970"]
-	}
-      ]
-    }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-FW", "units":"KEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ]
-      ,"datacols":[
-	 ["EN"        ,"EN-RSL-FW" ]
-	,["KEV"       ,"KEV"       ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [25,2]]}
-    ,"DATA":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["DATA"      ]
-	,["NO-DIM"    ]
-	,[" "         ]]
-      ,"data":[
-	 [0.63]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"14080003", "Pointer":" "
- ,"Subent":"14080003", "compiled":20140416
- ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
- ,"zTarg1":29, "targ1":"Cu-65", "proj1":"n", "emis1":"G", "MF":203, "MT":102, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section for thick target]"
- ,"reacode":"(29-CU-65(N,G)29-CU-66,,SIG,,TT)/(29-CU-63(N,G)29-CU-64,,SIG)"
- ,"compNotes":[]
- ,"wx4data":3
- ,"lx4data":1
- ,"x4data":[
-   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
-    ,"dat0":[0.63]
-   ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"41", "rank":1.1
-    ,"expansion":"Incident energy: energy"
-    ,"com0":25
-    ,"com1":2.5e+4}
-  ,{"ivar":2, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-RSL-FW", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
-    ,"expansion":"Incident energy: energy /Error/"
-    ,"com0":2
-    ,"com1":2000}
-  ]
- ,"wc5data":2
- ,"lc5data":1
- ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
-      ,"header":"DATA", "dataType":"21", "rank":0.0
-      ,"expansion":"Data: data"
-      ,"y":[0.63]
+  ,{"SUBENT":"14080003", "isub":3, "compiled":20211014, "TransID":"1489", "TransDate":20220307, "nosubent":true 
    }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
-      ,"header":"EN", "dataType":"41", "rank":1.0
-      ,"expansion":"Incident energy: energy"
-      ,"x1":[2.5e+4]
-      ,"dx1":[2000]   }
- }
- ,"c5mon":{"m0ref":"[MONIT]/au197ng", "m1ref":"recom/cu63ng"
-      ,"enNorm":[2.5e+4] }
-}
-   ]
+  ,{"SUBENT":"14080004", "isub":4, "compiled":20211014, "TransID":"1489", "TransDate":20220307, "nosubent":true 
    }
-  ,{"SUBENT":"14080004", "isub":4, "compiled":20140416, "TransID":"1401", "TransDate":20141111
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"(48-CD-114(N,G)48-CD-115,,SIG,,TT)/\n(29-CU-63(N,G)29-CU-64,,SIG)"
-	    ,"c4reac":"((N,G),SIG,,TT)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section for thick target]"
-	    ,"MF":203
-	    ,"MT":102
-	    ,"Units":"NO-DIM"
-	    ,"reacs": [
-	    {"code":"48-CD-114(N,G)48-CD-115,,SIG,,TT"
-		,"Reac":"N,G"
-		,"SF1":"48-CD-114","Targ":{"code":"48-CD-114","nam":"Cd-114","ZA":48114}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"G"
-		,"SF4":"48-CD-115","Prod":{"code":"48-CD-115","nam":"Cd-115","ZA":48115}
-		,"SF6":"SIG"
-		,"SF8":"TT"
-		,"SF58":",SIG,,TT","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section for thick target"
-	    }
-	    ,{"code":"29-CU-63(N,G)29-CU-64,,SIG"
-		,"Reac":"N,G"
-		,"SF1":"29-CU-63","Targ":{"code":"29-CU-63","nam":"Cu-63","ZA":29063}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"G"
-		,"SF4":"29-CU-64","Prod":{"code":"29-CU-64","nam":"Cu-64","ZA":29064}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }]}
-	}
-      ]
-     ,"DECAY-DATA":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"48-CD-115-G", "t12":53.5, "t12units":"HR", "t12sec":192600.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.490,0.535], "Intensity":0.36}]}]
-	}
-      ]
-     ,"SAMPLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Thickness of 443 mg/cm2 (metal)"]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Data taken from Table 2 of IN-1317,39,1970"]
-	}
-      ]
-    }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-FW", "units":"KEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ]
-      ,"datacols":[
-	 ["EN"        ,"EN-RSL-FW" ]
-	,["KEV"       ,"KEV"       ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [25,2]]}
-    ,"DATA":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["DATA"      ]
-	,["NO-DIM"    ]
-	,[" "         ]]
-      ,"data":[
-	 [2.5]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"14080004", "Pointer":" "
- ,"Subent":"14080004", "compiled":20140416
- ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
- ,"zTarg1":48, "targ1":"Cd-114", "proj1":"n", "emis1":"G", "MF":203, "MT":102, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section for thick target]"
- ,"reacode":"(48-CD-114(N,G)48-CD-115,,SIG,,TT)/(29-CU-63(N,G)29-CU-64,,SIG)"
- ,"compNotes":[]
- ,"wx4data":3
- ,"lx4data":1
- ,"x4data":[
-   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
-    ,"dat0":[2.5]
-   ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"41", "rank":1.1
-    ,"expansion":"Incident energy: energy"
-    ,"com0":25
-    ,"com1":2.5e+4}
-  ,{"ivar":2, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-RSL-FW", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
-    ,"expansion":"Incident energy: energy /Error/"
-    ,"com0":2
-    ,"com1":2000}
-  ]
- ,"wc5data":2
- ,"lc5data":1
- ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
-      ,"header":"DATA", "dataType":"21", "rank":0.0
-      ,"expansion":"Data: data"
-      ,"y":[2.5]
+  ,{"SUBENT":"14080005", "isub":5, "compiled":20211014, "TransID":"1489", "TransDate":20220307, "nosubent":true 
    }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
-      ,"header":"EN", "dataType":"41", "rank":1.0
-      ,"expansion":"Incident energy: energy"
-      ,"x1":[2.5e+4]
-      ,"dx1":[2000]   }
- }
- ,"c5mon":{"m0ref":"[MONIT]/au197ng", "m1ref":"recom/cu63ng"
-      ,"enNorm":[2.5e+4] }
-}
-   ]
+  ,{"SUBENT":"14080006", "isub":6, "compiled":20211014, "TransID":"1489", "TransDate":20220307, "nosubent":true 
    }
-  ,{"SUBENT":"14080005", "isub":5, "compiled":20140416, "TransID":"1401", "TransDate":20141111
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"(48-CD-110(N,G)48-CD-111-M,,SIG,,TT)/\n(29-CU-63(N,G)29-CU-64,,SIG)"
-	    ,"c4reac":"((N,G),SIG,,TT)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section for thick target]"
-	    ,"MF":203
-	    ,"MT":102
-	    ,"Units":"NO-DIM"
-	    ,"reacs": [
-	    {"code":"48-CD-110(N,G)48-CD-111-M,,SIG,,TT"
-		,"Reac":"N,G"
-		,"SF1":"48-CD-110","Targ":{"code":"48-CD-110","nam":"Cd-110","ZA":48110}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"G"
-		,"SF4":"48-CD-111-M","Prod":{"code":"48-CD-111-M","nam":"Cd-111-m","ZA":48111,"ProdM":"M"}
-		,"SF6":"SIG"
-		,"SF8":"TT"
-		,"SF58":",SIG,,TT","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section for thick target"
-	    }
-	    ,{"code":"29-CU-63(N,G)29-CU-64,,SIG"
-		,"Reac":"N,G"
-		,"SF1":"29-CU-63","Targ":{"code":"29-CU-63","nam":"Cu-63","ZA":29063}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"G"
-		,"SF4":"29-CU-64","Prod":{"code":"29-CU-64","nam":"Cu-64","ZA":29064}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }]}
-	}
-      ]
-     ,"DECAY-DATA":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"48-CD-111-M", "t12":48.6, "t12units":"MIN", "t12sec":2916.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.247], "Intensity":0.94}]}]
-	}
-      ]
-     ,"SAMPLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Thickness of 443 mg/cm2 (metal)"]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Data taken from Table 2 of IN-1317,39,1970"]
-	}
-      ]
-    }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-FW", "units":"KEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ]
-      ,"datacols":[
-	 ["EN"        ,"EN-RSL-FW" ]
-	,["KEV"       ,"KEV"       ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [25,2]]}
-    ,"DATA":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["DATA"      ]
-	,["NO-DIM"    ]
-	,[" "         ]]
-      ,"data":[
-	 [0.43]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"14080005", "Pointer":" "
- ,"Subent":"14080005", "compiled":20140416
- ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
- ,"zTarg1":48, "targ1":"Cd-110", "proj1":"n", "emis1":"G", "MF":203, "MT":102, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section for thick target]"
- ,"reacode":"(48-CD-110(N,G)48-CD-111-M,,SIG,,TT)/(29-CU-63(N,G)29-CU-64,,SIG)"
- ,"compNotes":[]
- ,"wx4data":3
- ,"lx4data":1
- ,"x4data":[
-   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
-    ,"dat0":[0.43]
-   ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"41", "rank":1.1
-    ,"expansion":"Incident energy: energy"
-    ,"com0":25
-    ,"com1":2.5e+4}
-  ,{"ivar":2, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-RSL-FW", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
-    ,"expansion":"Incident energy: energy /Error/"
-    ,"com0":2
-    ,"com1":2000}
-  ]
- ,"wc5data":2
- ,"lc5data":1
- ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
-      ,"header":"DATA", "dataType":"21", "rank":0.0
-      ,"expansion":"Data: data"
-      ,"y":[0.43]
+  ,{"SUBENT":"14080007", "isub":7, "compiled":20211014, "TransID":"1489", "TransDate":20220307, "nosubent":true 
    }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
-      ,"header":"EN", "dataType":"41", "rank":1.0
-      ,"expansion":"Incident energy: energy"
-      ,"x1":[2.5e+4]
-      ,"dx1":[2000]   }
- }
- ,"c5mon":{"m0ref":"[MONIT]/au197ng", "m1ref":"recom/cu63ng"
-      ,"enNorm":[2.5e+4] }
-}
-   ]
-   }
-  ,{"SUBENT":"14080006", "isub":6, "compiled":20140416, "TransID":"1401", "TransDate":20141111
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"(49-IN-115(N,G)49-IN-116-M1,,SIG,,TT)/\n(29-CU-63(N,G)29-CU-64,,SIG)"
-	    ,"c4reac":"((N,G),SIG,,TT)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section for thick target]"
-	    ,"MF":203
-	    ,"MT":102
-	    ,"Units":"NO-DIM"
-	    ,"reacs": [
-	    {"code":"49-IN-115(N,G)49-IN-116-M1,,SIG,,TT"
-		,"Reac":"N,G"
-		,"SF1":"49-IN-115","Targ":{"code":"49-IN-115","nam":"In-115","ZA":49115}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"G"
-		,"SF4":"49-IN-116-M1","Prod":{"code":"49-IN-116-M1","nam":"In-116-m1","ZA":49116,"ProdM":"M"}
-		,"SF6":"SIG"
-		,"SF8":"TT"
-		,"SF58":",SIG,,TT","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section for thick target"
-	    }
-	    ,{"code":"29-CU-63(N,G)29-CU-64,,SIG"
-		,"Reac":"N,G"
-		,"SF1":"29-CU-63","Targ":{"code":"29-CU-63","nam":"Cu-63","ZA":29063}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"G"
-		,"SF4":"29-CU-64","Prod":{"code":"29-CU-64","nam":"Cu-64","ZA":29064}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }]}
-	}
-      ]
-     ,"DECAY-DATA":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"49-IN-116-M1", "t12":54.0, "t12units":"MIN", "t12sec":3240.0
-	, "Radiations":[ {"Type":"DG", "Energy":[1.293], "Intensity":0.8}]}]
-	}
-      ]
-     ,"SAMPLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Thickness of 101 mg/cm2 (metal)"]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Data taken from Table 2 of IN-1317,39,1970"]
-	}
-      ]
-    }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-FW", "units":"KEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ]
-      ,"datacols":[
-	 ["EN"        ,"EN-RSL-FW" ]
-	,["KEV"       ,"KEV"       ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [25,2]]}
-    ,"DATA":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["DATA"      ]
-	,["NO-DIM"    ]
-	,[" "         ]]
-      ,"data":[
-	 [13]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"14080006", "Pointer":" "
- ,"Subent":"14080006", "compiled":20140416
- ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
- ,"zTarg1":49, "targ1":"In-115", "proj1":"n", "emis1":"G", "MF":203, "MT":102, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section for thick target]"
- ,"reacode":"(49-IN-115(N,G)49-IN-116-M1,,SIG,,TT)/(29-CU-63(N,G)29-CU-64,,SIG)"
- ,"compNotes":[]
- ,"wx4data":3
- ,"lx4data":1
- ,"x4data":[
-   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
-    ,"dat0":[13]
-   ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"41", "rank":1.1
-    ,"expansion":"Incident energy: energy"
-    ,"com0":25
-    ,"com1":2.5e+4}
-  ,{"ivar":2, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-RSL-FW", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
-    ,"expansion":"Incident energy: energy /Error/"
-    ,"com0":2
-    ,"com1":2000}
-  ]
- ,"wc5data":2
- ,"lc5data":1
- ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
-      ,"header":"DATA", "dataType":"21", "rank":0.0
-      ,"expansion":"Data: data"
-      ,"y":[13]
-   }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
-      ,"header":"EN", "dataType":"41", "rank":1.0
-      ,"expansion":"Incident energy: energy"
-      ,"x1":[2.5e+4]
-      ,"dx1":[2000]   }
- }
- ,"c5mon":{"m0ref":"[MONIT]/au197ng", "m1ref":"recom/cu63ng"
-      ,"enNorm":[2.5e+4] }
-}
-   ]
-   }
-  ,{"SUBENT":"14080007", "isub":7, "compiled":20140416, "TransID":"1401", "TransDate":20141111
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"(79-AU-197(N,G)79-AU-198,,SIG,,TT)/\n(29-CU-63(N,G)29-CU-64,,SIG)"
-	    ,"c4reac":"((N,G),SIG,,TT)/((N,G),SIG)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section for thick target]"
-	    ,"MF":203
-	    ,"MT":102
-	    ,"Units":"NO-DIM"
-	    ,"reacs": [
-	    {"code":"79-AU-197(N,G)79-AU-198,,SIG,,TT"
-		,"Reac":"N,G"
-		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"G"
-		,"SF4":"79-AU-198","Prod":{"code":"79-AU-198","nam":"Au-198","ZA":79198}
-		,"SF6":"SIG"
-		,"SF8":"TT"
-		,"SF58":",SIG,,TT","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section for thick target"
-	    }
-	    ,{"code":"29-CU-63(N,G)29-CU-64,,SIG"
-		,"Reac":"N,G"
-		,"SF1":"29-CU-63","Targ":{"code":"29-CU-63","nam":"Cu-63","ZA":29063}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"G"
-		,"SF4":"29-CU-64","Prod":{"code":"29-CU-64","nam":"Cu-64","ZA":29064}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }]}
-	}
-      ]
-     ,"DECAY-DATA":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
-	}
-      ]
-     ,"SAMPLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Thickness of 246 mg/cm2 (metal)"]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Data taken from Table 2 of IN-1317,39,1970"]
-	}
-      ]
-    }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"KEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"EN-RSL-FW", "units":"KEV", "pointer":" "
-	,"headerHelp":"Incident projectile energy resolution (Full width)", "pFlag":"9220000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
-      ]
-      ,"datacols":[
-	 ["EN"        ,"EN-RSL-FW" ]
-	,["KEV"       ,"KEV"       ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [25,2]]}
-    ,"DATA":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["DATA"      ]
-	,["NO-DIM"    ]
-	,[" "         ]]
-      ,"data":[
-	 [14]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"14080007", "Pointer":" "
- ,"Subent":"14080007", "compiled":20140416
- ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
- ,"zTarg1":79, "targ1":"Au-197", "proj1":"n", "emis1":"G", "MF":203, "MT":102, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section for thick target]"
- ,"reacode":"(79-AU-197(N,G)79-AU-198,,SIG,,TT)/(29-CU-63(N,G)29-CU-64,,SIG)"
- ,"compNotes":[]
- ,"wx4data":3
- ,"lx4data":1
- ,"x4data":[
-   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
-    ,"dat0":[14]
-   ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"41", "rank":1.1
-    ,"expansion":"Incident energy: energy"
-    ,"com0":25
-    ,"com1":2.5e+4}
-  ,{"ivar":2, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-RSL-FW", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X1.Resl+-", "dataType":"41", "rank":1.922
-    ,"expansion":"Incident energy: energy /Error/"
-    ,"com0":2
-    ,"com1":2000}
-  ]
- ,"wc5data":2
- ,"lc5data":1
- ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
-      ,"header":"DATA", "dataType":"21", "rank":0.0
-      ,"expansion":"Data: data"
-      ,"y":[14]
-   }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
-      ,"header":"EN", "dataType":"41", "rank":1.0
-      ,"expansion":"Incident energy: energy"
-      ,"x1":[2.5e+4]
-      ,"dx1":[2000]   }
- }
- ,"c5mon":{"m0ref":"[MONIT]/au197ng", "m1ref":"recom/cu63ng"
-      ,"enNorm":[2.5e+4] }
-}
-   ]
-   }
-  ,{"SUBENT":"14080008", "isub":8, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080008", "isub":8, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -888,22 +137,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"11-NA-24", "t12":14.96, "t12units":"HR", "t12sec":53856.0
-	, "Radiations":[ {"Type":"DG", "Energy":[2.754], "Intensity":1.0}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[2754.0], "Intensity":1.0}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -918,6 +155,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -953,20 +197,38 @@
 	 [0.015]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080008", "Pointer":" "
- ,"Subent":"14080008", "compiled":20140416
+ ,"Subent":"14080008", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":11, "targ1":"Na-23", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"11-NA-23(N,G)11-NA-24,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"11-NA-24","HalfLife":"14.96HR","HalfLife1":"14.997HR"
+	,"RadiationType":"DG","Ene":2754.0,"Ene1":2754.007,"Abu":1.0,"Abu1":0.99855
+	,"FcCorrDECAY_DATA":1.0014521
+	,"reaction":"11-NA-23(N,G)11-NA-24,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 11-NA-23(N,G)11-NA-24,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (11-NA-23(N,G)11-NA-24,,SIG)"
+	,"  #[1]#DECAY-DATA (11-NA-24,14.96HR,DG,2754.,1.00) #Ix_old=1.0"
+	,"   a1=1.0/0.99855;             #[1]#DECAY-DATA: correction to new 2754.007 keV gamma-yield per decay Na-24 Ix_new=0.99855"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0014521"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -1015,7 +277,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080009", "isub":9, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080009", "isub":9, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1037,22 +299,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"19-K-42", "t12":12.36, "t12units":"HR", "t12sec":44496.0
-	, "Radiations":[ {"Type":"DG", "Energy":[1.524], "Intensity":0.18}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[1524.0], "Intensity":0.18}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -1067,6 +317,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -1102,20 +359,38 @@
 	 [0.3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080009", "Pointer":" "
- ,"Subent":"14080009", "compiled":20140416
+ ,"Subent":"14080009", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":19, "targ1":"K-41", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"19-K-41(N,G)19-K-42,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"19-K-42","HalfLife":"12.36HR","HalfLife1":"12.355HR"
+	,"RadiationType":"DG","Ene":1524.0,"Ene1":1524.6,"Abu":0.18,"Abu1":0.1808
+	,"FcCorrDECAY_DATA":0.99557525
+	,"reaction":"19-K-41(N,G)19-K-42,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 19-K-41(N,G)19-K-42,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (19-K-41(N,G)19-K-42,,SIG)"
+	,"  #[1]#DECAY-DATA (19-K-42,12.36HR,DG,1524.,0.18) #Ix_old=0.18"
+	,"   a1=0.18/0.1808;             #[1]#DECAY-DATA: correction to new 1524.6 keV gamma-yield per decay K-42 Ix_new=0.1808"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.99557525"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -1164,7 +439,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080010", "isub":10, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080010", "isub":10, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1186,22 +461,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"25-MN-56", "t12":2.576, "t12units":"HR", "t12sec":9273.6
-	, "Radiations":[ {"Type":"DG", "Energy":[0.847], "Intensity":0.99}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[847.0], "Intensity":0.99}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -1216,6 +479,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -1251,20 +521,38 @@
 	 [0.36]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080010", "Pointer":" "
- ,"Subent":"14080010", "compiled":20140416
+ ,"Subent":"14080010", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":25, "targ1":"Mn-55", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"25-MN-55(N,G)25-MN-56,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"25-MN-56","HalfLife":"2.576HR","HalfLife1":"2.5789HR"
+	,"RadiationType":"DG","Ene":847.0,"Ene1":846.7638,"Abu":0.99,"Abu1":0.9885
+	,"FcCorrDECAY_DATA":1.0015174
+	,"reaction":"25-MN-55(N,G)25-MN-56,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 25-MN-55(N,G)25-MN-56,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (25-MN-55(N,G)25-MN-56,,SIG)"
+	,"  #[1]#DECAY-DATA (25-MN-56,2.576HR,DG,847.,0.99) #Ix_old=0.99"
+	,"   a1=0.99/0.9885;             #[1]#DECAY-DATA: correction to new 846.7638 keV gamma-yield per decay Mn-56 Ix_new=0.9885"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0015174"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -1313,7 +601,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080011", "isub":11, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080011", "isub":11, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1335,22 +623,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"27-CO-60-G", "t12":5.263, "t12units":"YR", "t12sec":1.66084128E8
-	, "Radiations":[ {"Type":"DG", "Energy":[1.332], "Intensity":1.0}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[1332.0], "Intensity":1.0}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -1379,6 +655,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD:SF1=Co-60 -> Co-59, SF3=INL -> G,"
 		,"in REACTION code."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -1414,20 +695,29 @@
 	 [0.13]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080011", "Pointer":" "
- ,"Subent":"14080011", "compiled":20140416
+ ,"Subent":"14080011", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":27, "targ1":"Co-59", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"27-CO-59(N,G)27-CO-60,,SIG"
  ,"compNotes":[]
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 27-CO-59(N,G)27-CO-60,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -1476,7 +766,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080012", "isub":12, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080012", "isub":12, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1498,22 +788,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"27-CO-60-M", "t12":10.47, "t12units":"MIN", "t12sec":628.2
-	, "Radiations":[ {"Type":"DG", "Energy":[0.059], "Intensity":0.021}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[59.0], "Intensity":0.021}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -1536,6 +814,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD:SF1=Co-60 -> Co-59, SF3=INL -> G,"
 		,"in REACTION code."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -1571,20 +854,38 @@
 	 [0.096]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080012", "Pointer":" "
- ,"Subent":"14080012", "compiled":20140416
+ ,"Subent":"14080012", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":27, "targ1":"Co-59", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"27-CO-59(N,G)27-CO-60-M,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"27-CO-60-M","HalfLife":"10.47MIN","HalfLife1":"10.467M"
+	,"RadiationType":"DG","Ene":59.0,"Ene1":58.603,"Abu":0.021,"Abu1":0.0207
+	,"FcCorrDECAY_DATA":1.0144928
+	,"reaction":"27-CO-59(N,G)27-CO-60-M,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 27-CO-59(N,G)27-CO-60-M,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (27-CO-59(N,G)27-CO-60-M,,SIG)"
+	,"  #[1]#DECAY-DATA (27-CO-60-M,10.47MIN,DG,59.,0.021) #Ix_old=0.021"
+	,"   a1=0.021/0.0207;            #[1]#DECAY-DATA: correction to new 58.603 keV gamma-yield per decay Co-60-m Ix_new=0.0207"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0144928"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -1633,7 +934,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080013", "isub":13, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080013", "isub":13, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1655,22 +956,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"29-CU-64", "t12":12.8, "t12units":"HR", "t12sec":46080.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.511], "Intensity":0.38}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[511.0], "Intensity":0.38}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -1685,6 +974,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -1720,7 +1016,7 @@
 	 [0.48]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080013", "Pointer":" "
- ,"Subent":"14080013", "compiled":20140416
+ ,"Subent":"14080013", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":29, "targ1":"Cu-63", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1728,9 +1024,13 @@
  ,"reacode":"29-CU-63(N,G)29-CU-64,,SIG"
  ,"compNotes":[]
  ,"DECAY-DATA":{"Nuclide":"29-CU-64","HalfLife":"12.8HR","HalfLife1":""
-	,"RadiationType":"DG","Ene":0.511,"Ene1":511.0,"Abu":0.38,"Abu1":0.352
+	,"RadiationType":"DG","Ene":511.0,"Ene1":511.0,"Abu":0.38,"Abu1":0.352
 	,"FcCorrDECAY_DATA":1.0795455
 	,"reaction":"29-CU-63(N,G)29-CU-64,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 29-CU-63(N,G)29-CU-64,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
@@ -1740,9 +1040,14 @@
 	," y=y*a1/a0;                    #[0]#renormalizing CS"
 	,"  #[1]#---Reaction decay-data"
 	,"  #[1]#REACTION   (29-CU-63(N,G)29-CU-64,,SIG)"
-	,"  #[1]#DECAY-DATA (29-CU-64,12.8HR,DG,0.511,0.38) #Ix_old=0.38"
+	,"  #[1]#DECAY-DATA (29-CU-64,12.8HR,DG,511.,0.38) #Ix_old=0.38"
 	,"   a1=0.38/0.352;              #[1]#DECAY-DATA: correction to new 511 keV gamma-yield per decay Cu-64 Ix_new=0.352"
-	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0795455"]
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0795455"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -1791,7 +1096,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080014", "isub":14, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080014", "isub":14, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1813,22 +1118,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"30-ZN-65", "t12":245.0, "t12units":"D", "t12sec":2.1168E7
-	, "Radiations":[ {"Type":"DG", "Energy":[1.115], "Intensity":0.49}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[1115.0], "Intensity":0.49}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -1843,6 +1136,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -1878,20 +1178,38 @@
 	 [0.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080014", "Pointer":" "
- ,"Subent":"14080014", "compiled":20140416
+ ,"Subent":"14080014", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":30, "targ1":"Zn-64", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"30-ZN-64(N,G)30-ZN-65,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"30-ZN-65","HalfLife":"245.D","HalfLife1":"243.93D"
+	,"RadiationType":"DG","Ene":1115.0,"Ene1":1115.539,"Abu":0.49,"Abu1":0.5004
+	,"FcCorrDECAY_DATA":0.97921664
+	,"reaction":"30-ZN-64(N,G)30-ZN-65,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 30-ZN-64(N,G)30-ZN-65,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (30-ZN-64(N,G)30-ZN-65,,SIG)"
+	,"  #[1]#DECAY-DATA (30-ZN-65,245.D,DG,1115.,0.49) #Ix_old=0.49"
+	,"   a1=0.49/0.5004;             #[1]#DECAY-DATA: correction to new 1115.539 keV gamma-yield per decay Zn-65 Ix_new=0.5004"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.97921664"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -1940,7 +1258,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080015", "isub":15, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080015", "isub":15, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1962,22 +1280,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"29-CU-66", "t12":5.1, "t12units":"MIN", "t12sec":306.0
-	, "Radiations":[ {"Type":"DG", "Energy":[1.039], "Intensity":0.09}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[1039.0], "Intensity":0.09}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -1992,6 +1298,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -2027,20 +1340,38 @@
 	 [0.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080015", "Pointer":" "
- ,"Subent":"14080015", "compiled":20140416
+ ,"Subent":"14080015", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":29, "targ1":"Cu-65", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"29-CU-65(N,G)29-CU-66,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"29-CU-66","HalfLife":"5.1MIN","HalfLife1":"5.12M"
+	,"RadiationType":"DG","Ene":1039.0,"Ene1":1039.2,"Abu":0.09,"Abu1":0.0923
+	,"FcCorrDECAY_DATA":0.9750813
+	,"reaction":"29-CU-65(N,G)29-CU-66,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 29-CU-65(N,G)29-CU-66,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (29-CU-65(N,G)29-CU-66,,SIG)"
+	,"  #[1]#DECAY-DATA (29-CU-66,5.1MIN,DG,1039.,0.09) #Ix_old=0.09"
+	,"   a1=0.09/0.0923;             #[1]#DECAY-DATA: correction to new 1039.2 keV gamma-yield per decay Cu-66 Ix_new=0.0923"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.9750813"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -2089,7 +1420,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080016", "isub":16, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080016", "isub":16, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2111,22 +1442,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"30-ZN-69-M", "t12":13.8, "t12units":"HR", "t12sec":49680.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.439], "Intensity":0.95}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[439.0], "Intensity":0.95}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -2141,6 +1460,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -2176,20 +1502,38 @@
 	 [0.022]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080016", "Pointer":" "
- ,"Subent":"14080016", "compiled":20140416
+ ,"Subent":"14080016", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":30, "targ1":"Zn-68", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"30-ZN-68(N,G)30-ZN-69-M,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"30-ZN-69-M","HalfLife":"13.8HR","HalfLife1":"13.756HR"
+	,"RadiationType":"DG","Ene":439.0,"Ene1":438.634,"Abu":0.95,"Abu1":0.9485
+	,"FcCorrDECAY_DATA":1.0015814
+	,"reaction":"30-ZN-68(N,G)30-ZN-69-M,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 30-ZN-68(N,G)30-ZN-69-M,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (30-ZN-68(N,G)30-ZN-69-M,,SIG)"
+	,"  #[1]#DECAY-DATA (30-ZN-69-M,13.8HR,DG,439.,0.95) #Ix_old=0.95"
+	,"   a1=0.95/0.9485;             #[1]#DECAY-DATA: correction to new 438.634 keV gamma-yield per decay Zn-69-m Ix_new=0.9485"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0015814"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -2238,7 +1582,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080017", "isub":17, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080017", "isub":17, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2260,22 +1604,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"35-BR-80-M", "t12":4.38, "t12units":"HR", "t12sec":15768.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.037], "Intensity":0.36}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[37.0], "Intensity":0.36}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -2290,6 +1622,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -2325,20 +1664,38 @@
 	 [1.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080017", "Pointer":" "
- ,"Subent":"14080017", "compiled":20140416
+ ,"Subent":"14080017", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":35, "targ1":"Br-79", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"35-BR-79(N,G)35-BR-80-M,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"35-BR-80-M","HalfLife":"4.38HR","HalfLife1":"4.4205HR"
+	,"RadiationType":"DG","Ene":37.0,"Ene1":37.052,"Abu":0.36,"Abu1":0.391
+	,"FcCorrDECAY_DATA":0.92071617
+	,"reaction":"35-BR-79(N,G)35-BR-80-M,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 35-BR-79(N,G)35-BR-80-M,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (35-BR-79(N,G)35-BR-80-M,,SIG)"
+	,"  #[1]#DECAY-DATA (35-BR-80-M,4.38HR,DG,37.,0.36) #Ix_old=0.36"
+	,"   a1=0.36/0.391;              #[1]#DECAY-DATA: correction to new 37.052 keV gamma-yield per decay Br-80-m Ix_new=0.391"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.92071617"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -2387,7 +1744,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080018", "isub":18, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080018", "isub":18, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2409,22 +1766,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"35-BR-82-G", "t12":35.34, "t12units":"HR", "t12sec":127224.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.777], "Intensity":0.83}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[777.0], "Intensity":0.83}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -2439,6 +1784,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -2474,20 +1826,38 @@
 	 [1.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080018", "Pointer":" "
- ,"Subent":"14080018", "compiled":20140416
+ ,"Subent":"14080018", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":35, "targ1":"Br-81", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"35-BR-81(N,G)35-BR-82,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"35-BR-82-G","HalfLife":"35.34HR","HalfLife1":"35.282HR"
+	,"RadiationType":"DG","Ene":777.0,"Ene1":776.511,"Abu":0.83,"Abu1":0.836
+	,"FcCorrDECAY_DATA":0.99282295
+	,"reaction":"35-BR-81(N,G)35-BR-82,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 35-BR-81(N,G)35-BR-82,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (35-BR-81(N,G)35-BR-82,,SIG)"
+	,"  #[1]#DECAY-DATA (35-BR-82-G,35.34HR,DG,777.,0.83) #Ix_old=0.83"
+	,"   a1=0.83/0.836;              #[1]#DECAY-DATA: correction to new 776.511 keV gamma-yield per decay Br-82-g Ix_new=0.836"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.99282295"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -2536,7 +1906,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080019", "isub":19, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080019", "isub":19, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2558,22 +1928,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"40-ZR-95", "t12":65.5, "t12units":"D", "t12sec":5659200.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.724,0.756], "Intensity":0.98}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[724.0,756.0], "Intensity":0.98}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -2588,6 +1946,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -2623,20 +1988,29 @@
 	 [0.095]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080019", "Pointer":" "
- ,"Subent":"14080019", "compiled":20140416
+ ,"Subent":"14080019", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":40, "targ1":"Zr-94", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"40-ZR-94(N,G)40-ZR-95,,SIG"
  ,"compNotes":[]
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 40-ZR-94(N,G)40-ZR-95,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -2685,7 +2059,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080020", "isub":20, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080020", "isub":20, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2707,22 +2081,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"40-ZR-97", "t12":17.0, "t12units":"HR", "t12sec":61200.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.665], "Intensity":0.98}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[665.0], "Intensity":0.98}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -2737,6 +2099,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -2772,20 +2141,29 @@
 	 [0.079]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080020", "Pointer":" "
- ,"Subent":"14080020", "compiled":20140416
+ ,"Subent":"14080020", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":40, "targ1":"Zr-96", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"40-ZR-96(N,G)40-ZR-97,,SIG"
  ,"compNotes":[]
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 40-ZR-96(N,G)40-ZR-97,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -2834,7 +2212,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080021", "isub":21, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080021", "isub":21, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -2856,22 +2234,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"44-RU-97", "t12":2.88, "t12units":"D", "t12sec":248832.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.215], "Intensity":0.91}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[215.0], "Intensity":0.91}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -2886,6 +2252,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -2921,20 +2294,38 @@
 	 [0.48]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080021", "Pointer":" "
- ,"Subent":"14080021", "compiled":20140416
+ ,"Subent":"14080021", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":44, "targ1":"Ru-96", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"44-RU-96(N,G)44-RU-97,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"44-RU-97","HalfLife":"2.88D","HalfLife1":"2.83D"
+	,"RadiationType":"DG","Ene":215.0,"Ene1":215.7,"Abu":0.91,"Abu1":0.8562
+	,"FcCorrDECAY_DATA":1.0628358
+	,"reaction":"44-RU-96(N,G)44-RU-97,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 44-RU-96(N,G)44-RU-97,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (44-RU-96(N,G)44-RU-97,,SIG)"
+	,"  #[1]#DECAY-DATA (44-RU-97,2.88D,DG,215.,0.91) #Ix_old=0.91"
+	,"   a1=0.91/0.8562;             #[1]#DECAY-DATA: correction to new 215.7 keV gamma-yield per decay Ru-97 Ix_new=0.8562"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0628358"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -2983,7 +2374,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080022", "isub":22, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080022", "isub":22, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3005,22 +2396,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"44-RU-103", "t12":39.5, "t12units":"D", "t12sec":3412800.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.497], "Intensity":0.88}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[497.0], "Intensity":0.88}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -3035,6 +2414,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -3070,20 +2456,38 @@
 	 [0.79]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080022", "Pointer":" "
- ,"Subent":"14080022", "compiled":20140416
+ ,"Subent":"14080022", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":44, "targ1":"Ru-102", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"44-RU-102(N,G)44-RU-103,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"44-RU-103","HalfLife":"39.5D","HalfLife1":"39.247D"
+	,"RadiationType":"DG","Ene":497.0,"Ene1":497.085,"Abu":0.88,"Abu1":0.91
+	,"FcCorrDECAY_DATA":0.9670329
+	,"reaction":"44-RU-102(N,G)44-RU-103,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 44-RU-102(N,G)44-RU-103,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (44-RU-102(N,G)44-RU-103,,SIG)"
+	,"  #[1]#DECAY-DATA (44-RU-103,39.5D,DG,497.,0.88) #Ix_old=0.88"
+	,"   a1=0.88/0.91;               #[1]#DECAY-DATA: correction to new 497.085 keV gamma-yield per decay Ru-103 Ix_new=0.91"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.9670329"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -3132,7 +2536,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080023", "isub":23, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080023", "isub":23, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3154,22 +2558,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"45-RH-104-M", "t12":4.41, "t12units":"MIN", "t12sec":264.6
-	, "Radiations":[ {"Type":"DG", "Energy":[0.051], "Intensity":0.47}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[51.0], "Intensity":0.47}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -3184,6 +2576,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -3219,20 +2618,38 @@
 	 [0.13]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080023", "Pointer":" "
- ,"Subent":"14080023", "compiled":20140416
+ ,"Subent":"14080023", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":45, "targ1":"Rh-103", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"45-RH-103(N,G)45-RH-104-M,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"45-RH-104-M","HalfLife":"4.41MIN","HalfLife1":"4.34M"
+	,"RadiationType":"DG","Ene":51.0,"Ene1":51.4225,"Abu":0.47,"Abu1":0.48277
+	,"FcCorrDECAY_DATA":0.9735485
+	,"reaction":"45-RH-103(N,G)45-RH-104-M,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 45-RH-103(N,G)45-RH-104-M,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (45-RH-103(N,G)45-RH-104-M,,SIG)"
+	,"  #[1]#DECAY-DATA (45-RH-104-M,4.41MIN,DG,51.,0.47) #Ix_old=0.47"
+	,"   a1=0.47/0.48277;            #[1]#DECAY-DATA: correction to new 51.4225 keV gamma-yield per decay Rh-104-m Ix_new=0.48277"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.9735485"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -3281,7 +2698,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080024", "isub":24, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080024", "isub":24, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3303,22 +2720,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"44-RU-105", "t12":4.44, "t12units":"HR", "t12sec":15984.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.726], "Intensity":0.48}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[726.0], "Intensity":0.48}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -3333,6 +2738,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -3368,20 +2780,38 @@
 	 [0.84]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080024", "Pointer":" "
- ,"Subent":"14080024", "compiled":20140416
+ ,"Subent":"14080024", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":44, "targ1":"Ru-104", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"44-RU-104(N,G)44-RU-105,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"44-RU-105","HalfLife":"4.44HR","HalfLife1":"4.439HR"
+	,"RadiationType":"DG","Ene":726.0,"Ene1":724.211,"Abu":0.48,"Abu1":0.478
+	,"FcCorrDECAY_DATA":1.0041841
+	,"reaction":"44-RU-104(N,G)44-RU-105,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 44-RU-104(N,G)44-RU-105,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (44-RU-104(N,G)44-RU-105,,SIG)"
+	,"  #[1]#DECAY-DATA (44-RU-105,4.44HR,DG,726.,0.48) #Ix_old=0.48"
+	,"   a1=0.48/0.478;              #[1]#DECAY-DATA: correction to new 724.211 keV gamma-yield per decay Ru-105 Ix_new=0.478"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0041841"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -3430,7 +2860,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080025", "isub":25, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080025", "isub":25, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3452,22 +2882,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"48-CD-111-M", "t12":48.6, "t12units":"MIN", "t12sec":2916.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.247], "Intensity":0.94}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[247.0], "Intensity":0.94}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -3482,6 +2900,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -3517,20 +2942,29 @@
 	 [0.11]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080025", "Pointer":" "
- ,"Subent":"14080025", "compiled":20140416
+ ,"Subent":"14080025", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":48, "targ1":"Cd-110", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"48-CD-110(N,G)48-CD-111-M,,SIG"
  ,"compNotes":[]
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 48-CD-110(N,G)48-CD-111-M,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -3579,7 +3013,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080026", "isub":26, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080026", "isub":26, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3601,22 +3035,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"48-CD-115-G", "t12":53.5, "t12units":"HR", "t12sec":192600.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.535], "Intensity":0.26}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[535.0], "Intensity":0.26}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -3631,6 +3053,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -3666,20 +3095,29 @@
 	 [0.76]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080026", "Pointer":" "
- ,"Subent":"14080026", "compiled":20140416
+ ,"Subent":"14080026", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":48, "targ1":"Cd-114", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"48-CD-114(N,G)48-CD-115,,SIG"
  ,"compNotes":[]
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 48-CD-114(N,G)48-CD-115,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -3728,7 +3166,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080027", "isub":27, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080027", "isub":27, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3750,22 +3188,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"49-IN-116-M1", "t12":54.0, "t12units":"MIN", "t12sec":3240.0
-	, "Radiations":[ {"Type":"DG", "Energy":[1.293], "Intensity":0.8}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[1293.0], "Intensity":0.8}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -3780,6 +3206,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -3815,20 +3248,38 @@
 	 [1.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080027", "Pointer":" "
- ,"Subent":"14080027", "compiled":20140416
+ ,"Subent":"14080027", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":49, "targ1":"In-115", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"49-IN-115(N,G)49-IN-116-M1,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"49-IN-116-M1","HalfLife":"54.0MIN","HalfLife1":"54.29M"
+	,"RadiationType":"DG","Ene":1293.0,"Ene1":1293.56,"Abu":0.8,"Abu1":0.848
+	,"FcCorrDECAY_DATA":0.9433963
+	,"reaction":"49-IN-115(N,G)49-IN-116-M1,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 49-IN-115(N,G)49-IN-116-M1,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (49-IN-115(N,G)49-IN-116-M1,,SIG)"
+	,"  #[1]#DECAY-DATA (49-IN-116-M1,54.0MIN,DG,1293.,0.80) #Ix_old=0.8"
+	,"   a1=0.8/0.848;               #[1]#DECAY-DATA: correction to new 1293.56 keV gamma-yield per decay In-116-m1 Ix_new=0.848"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.9433963"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -3877,7 +3328,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080028", "isub":28, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080028", "isub":28, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3899,22 +3350,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"51-SB-122-G", "t12":2.77, "t12units":"D", "t12sec":239328.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.564], "Intensity":0.66}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[564.0], "Intensity":0.66}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -3929,6 +3368,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -3964,20 +3410,38 @@
 	 [2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080028", "Pointer":" "
- ,"Subent":"14080028", "compiled":20140416
+ ,"Subent":"14080028", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":51, "targ1":"Sb-121", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"51-SB-121(N,G)51-SB-122,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"51-SB-122-G","HalfLife":"2.77D","HalfLife1":"2.7238D"
+	,"RadiationType":"DG","Ene":564.0,"Ene1":564.24,"Abu":0.66,"Abu1":0.7068
+	,"FcCorrDECAY_DATA":0.93378615
+	,"reaction":"51-SB-121(N,G)51-SB-122,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 51-SB-121(N,G)51-SB-122,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (51-SB-121(N,G)51-SB-122,,SIG)"
+	,"  #[1]#DECAY-DATA (51-SB-122-G,2.77D,DG,564.,0.66) #Ix_old=0.66"
+	,"   a1=0.66/0.7068;             #[1]#DECAY-DATA: correction to new 564.24 keV gamma-yield per decay Sb-122-g Ix_new=0.7068"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.93378615"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -4026,7 +3490,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080029", "isub":29, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080029", "isub":29, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4048,22 +3512,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"51-SB-124-G", "t12":60.4, "t12units":"D", "t12sec":5218560.0
-	, "Radiations":[ {"Type":"DG", "Energy":[1.692], "Intensity":0.5}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[1692.0], "Intensity":0.5}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -4078,6 +3530,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -4113,20 +3572,38 @@
 	 [1.6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080029", "Pointer":" "
- ,"Subent":"14080029", "compiled":20140416
+ ,"Subent":"14080029", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":51, "targ1":"Sb-123", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"51-SB-123(N,G)51-SB-124,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"51-SB-124-G","HalfLife":"60.4D","HalfLife1":"60.2D"
+	,"RadiationType":"DG","Ene":1692.0,"Ene1":1690.971,"Abu":0.5,"Abu1":0.4757
+	,"FcCorrDECAY_DATA":1.0510826
+	,"reaction":"51-SB-123(N,G)51-SB-124,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 51-SB-123(N,G)51-SB-124,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (51-SB-123(N,G)51-SB-124,,SIG)"
+	,"  #[1]#DECAY-DATA (51-SB-124-G,60.4D,DG,1692.,0.50) #Ix_old=0.5"
+	,"   a1=0.5/0.4757;              #[1]#DECAY-DATA: correction to new 1690.971 keV gamma-yield per decay Sb-124-g Ix_new=0.4757"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0510826"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -4175,7 +3652,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080030", "isub":30, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080030", "isub":30, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4197,22 +3674,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"55-CS-134-G", "t12":2.05, "t12units":"YR", "t12sec":6.4691708E7
-	, "Radiations":[ {"Type":"DG", "Energy":[0.796,0.802], "Intensity":0.98}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[796.0,802.0], "Intensity":0.98}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -4227,6 +3692,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -4262,20 +3734,38 @@
 	 [2.4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080030", "Pointer":" "
- ,"Subent":"14080030", "compiled":20140416
+ ,"Subent":"14080030", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":55, "targ1":"Cs-133", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"55-CS-133(N,G)55-CS-134,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"55-CS-134-G","HalfLife":"2.05YR","HalfLife1":"2.0652YR"
+	,"RadiationType":"DG","Ene":796.0,"Ene1":795.864,"Abu":0.98,"Abu1":0.8546
+	,"FcCorrDECAY_DATA":1.1467353
+	,"reaction":"55-CS-133(N,G)55-CS-134,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 55-CS-133(N,G)55-CS-134,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (55-CS-133(N,G)55-CS-134,,SIG)"
+	,"  #[1]#DECAY-DATA (55-CS-134-G,2.05YR,DG,796./802.,0.98) #Ix_old=0.98"
+	,"   a1=0.98/0.8546;             #[1]#DECAY-DATA: correction to new 795.864 keV gamma-yield per decay Cs-134-g Ix_new=0.8546"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.1467353"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -4324,7 +3814,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080031", "isub":31, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080031", "isub":31, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4346,22 +3836,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"55-CS-134-M", "t12":2.09, "t12units":"HR", "t12sec":7524.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.128], "Intensity":0.14}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[128.0], "Intensity":0.14}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -4376,6 +3854,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -4411,20 +3896,38 @@
 	 [0.32]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080031", "Pointer":" "
- ,"Subent":"14080031", "compiled":20140416
+ ,"Subent":"14080031", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":55, "targ1":"Cs-133", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"55-CS-133(N,G)55-CS-134-M,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"55-CS-134-M","HalfLife":"2.09HR","HalfLife1":"2.912HR"
+	,"RadiationType":"DG","Ene":128.0,"Ene1":127.502,"Abu":0.14,"Abu1":0.126
+	,"FcCorrDECAY_DATA":1.111111
+	,"reaction":"55-CS-133(N,G)55-CS-134-M,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 55-CS-133(N,G)55-CS-134-M,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (55-CS-133(N,G)55-CS-134-M,,SIG)"
+	,"  #[1]#DECAY-DATA (55-CS-134-M,2.09HR,DG,128.,0.14) #Ix_old=0.14"
+	,"   a1=0.14/0.126;              #[1]#DECAY-DATA: correction to new 127.502 keV gamma-yield per decay Cs-134-m Ix_new=0.126"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.111111"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -4473,7 +3976,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080032", "isub":32, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080032", "isub":32, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4495,22 +3998,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"57-LA-140", "t12":40.2, "t12units":"HR", "t12sec":144720.0
-	, "Radiations":[ {"Type":"DG", "Energy":[1.596], "Intensity":0.96}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[1596.0], "Intensity":0.96}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -4525,6 +4016,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -4560,20 +4058,38 @@
 	 [0.23]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080032", "Pointer":" "
- ,"Subent":"14080032", "compiled":20140416
+ ,"Subent":"14080032", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":57, "targ1":"La-139", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"57-LA-139(N,G)57-LA-140,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"57-LA-140","HalfLife":"40.2HR","HalfLife1":"1.67858D"
+	,"RadiationType":"DG","Ene":1596.0,"Ene1":1596.21,"Abu":0.96,"Abu1":0.954
+	,"FcCorrDECAY_DATA":1.0062892
+	,"reaction":"57-LA-139(N,G)57-LA-140,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 57-LA-139(N,G)57-LA-140,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (57-LA-139(N,G)57-LA-140,,SIG)"
+	,"  #[1]#DECAY-DATA (57-LA-140,40.2HR,DG,1596.,0.96) #Ix_old=0.96"
+	,"   a1=0.96/0.954;              #[1]#DECAY-DATA: correction to new 1596.21 keV gamma-yield per decay La-140 Ix_new=0.954"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0062892"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -4622,7 +4138,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080033", "isub":33, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080033", "isub":33, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4644,22 +4160,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"65-TB-160", "t12":72.3, "t12units":"D", "t12sec":6246720.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.62], "Intensity":0.62}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[620.0], "Intensity":0.62}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -4674,6 +4178,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -4709,20 +4220,29 @@
 	 [12]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080033", "Pointer":" "
- ,"Subent":"14080033", "compiled":20140416
+ ,"Subent":"14080033", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":65, "targ1":"Tb-159", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"65-TB-159(N,G)65-TB-160,,SIG"
  ,"compNotes":[]
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 65-TB-159(N,G)65-TB-160,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -4771,7 +4291,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080034", "isub":34, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080034", "isub":34, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4793,22 +4313,11 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"73-TA-182-G", "t12":115.0, "t12units":"D", "t12sec":9936000.0
-	, "Radiations":[ {"Type":"DG", "Energy":[1.0], "Intensity":1.0}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Intensity":1.0}]}]
+	,"x4freetext":[" Egamma > 1 MeV"]
 	}
       ]
      ,"SAMPLE":[
@@ -4823,6 +4332,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy moved to free text."]
 	}
       ]
     }
@@ -4858,20 +4374,29 @@
 	 [6.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080034", "Pointer":" "
- ,"Subent":"14080034", "compiled":20140416
+ ,"Subent":"14080034", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":73, "targ1":"Ta-181", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"73-TA-181(N,G)73-TA-182,,SIG"
  ,"compNotes":[]
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 73-TA-181(N,G)73-TA-182,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -4920,7 +4445,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080035", "isub":35, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080035", "isub":35, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -4942,22 +4467,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"77-IR-192-G", "t12":74.2, "t12units":"D", "t12sec":6410880.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.317], "Intensity":0.81}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[317.0], "Intensity":0.81}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -4972,6 +4485,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -5007,20 +4527,38 @@
 	 [10]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080035", "Pointer":" "
- ,"Subent":"14080035", "compiled":20140416
+ ,"Subent":"14080035", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":77, "targ1":"Ir-191", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"77-IR-191(N,G)77-IR-192,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"77-IR-192-G","HalfLife":"74.2D","HalfLife1":"73.829D"
+	,"RadiationType":"DG","Ene":317.0,"Ene1":316.5062,"Abu":0.81,"Abu1":0.8286
+	,"FcCorrDECAY_DATA":0.97755253
+	,"reaction":"77-IR-191(N,G)77-IR-192,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 77-IR-191(N,G)77-IR-192,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (77-IR-191(N,G)77-IR-192,,SIG)"
+	,"  #[1]#DECAY-DATA (77-IR-192-G,74.2D,DG,317.,0.81) #Ix_old=0.81"
+	,"   a1=0.81/0.8286;             #[1]#DECAY-DATA: correction to new 316.50618 keV gamma-yield per decay Ir-192-g Ix_new=0.8286"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.97755253"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -5069,7 +4607,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080036", "isub":36, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080036", "isub":36, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -5091,22 +4629,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"77-IR-194-G", "t12":17.4, "t12units":"HR", "t12sec":62640.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.328], "Intensity":0.19}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[328.0], "Intensity":0.19}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -5121,6 +4647,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -5156,20 +4689,38 @@
 	 [7.6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080036", "Pointer":" "
- ,"Subent":"14080036", "compiled":20140416
+ ,"Subent":"14080036", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":77, "targ1":"Ir-193", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"77-IR-193(N,G)77-IR-194,,SIG"
  ,"compNotes":[]
+ ,"DECAY-DATA":{"Nuclide":"77-IR-194-G","HalfLife":"17.4HR","HalfLife1":"19.18HR"
+	,"RadiationType":"DG","Ene":328.0,"Ene1":328.467,"Abu":0.19,"Abu1":0.131
+	,"FcCorrDECAY_DATA":1.4503816
+	,"reaction":"77-IR-193(N,G)77-IR-194,,SIG"}
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 77-IR-193(N,G)77-IR-194,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (77-IR-193(N,G)77-IR-194,,SIG)"
+	,"  #[1]#DECAY-DATA (77-IR-194-G,17.4HR,DG,328.,0.19) #Ix_old=0.19"
+	,"   a1=0.19/0.131;              #[1]#DECAY-DATA: correction to new 328.467 keV gamma-yield per decay Ir-194-g Ix_new=0.131"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.4503816"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -5218,7 +4769,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080037", "isub":37, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080037", "isub":37, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -5240,22 +4791,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"91-PA-233", "t12":27.2, "t12units":"D", "t12sec":2350080.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.311], "Intensity":0.34}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[311.0], "Intensity":0.34}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -5270,6 +4809,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -5305,20 +4851,29 @@
 	 [2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080037", "Pointer":" "
- ,"Subent":"14080037", "compiled":20140416
+ ,"Subent":"14080037", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":90, "targ1":"Th-232", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"90-TH-232(N,G)90-TH-233,,SIG"
  ,"compNotes":[]
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 90-TH-232(N,G)90-TH-233,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -5367,7 +4922,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080038", "isub":38, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080038", "isub":38, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -5388,18 +4943,6 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
-	}
-      ]
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
@@ -5412,6 +4955,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -5447,20 +4997,29 @@
 	 [6.4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080038", "Pointer":" "
- ,"Subent":"14080038", "compiled":20140416
+ ,"Subent":"14080038", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"92-U-235(N,F),,SIG"
  ,"compNotes":[]
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 92-U-235(N,F),,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
@@ -5509,7 +5068,7 @@
 }
    ]
    }
-  ,{"SUBENT":"14080039", "isub":39, "compiled":20140416, "TransID":"1401", "TransDate":20141111
+  ,{"SUBENT":"14080039", "isub":39, "compiled":20211014, "TransID":"1489", "TransDate":20220307
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -5531,22 +5090,10 @@
 	    }]}
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(N,G)79-AU-198,,SIG"
-		,"reaction":"79-AU-197(N,G)79-AU-198,,SIG"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"93-NP-239", "t12":2.35, "t12units":"D", "t12sec":203040.0
-	, "Radiations":[ {"Type":"DG", "Energy":[0.228], "Intensity":0.118}]}]
-	}
-      ]
-     ,"DECAY-MON":[
-	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-198-G", "t12":2.697, "t12units":"D", "t12sec":233020.8
-	, "Radiations":[ {"Type":"DG", "Energy":[0.412], "Intensity":0.96}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[228.0], "Intensity":0.118}]}]
 	}
       ]
      ,"SAMPLE":[
@@ -5561,6 +5108,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Data taken from Table 3 of IN-1317,39,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211014A", "date":"20211014", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. DECAY-DATA: Energy multiplied by 1000."]
 	}
       ]
     }
@@ -5596,20 +5150,29 @@
 	 [1.6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"14080039", "Pointer":" "
- ,"Subent":"14080039", "compiled":20140416
+ ,"Subent":"14080039", "compiled":20211014
  ,"year1":1970, "author1ini":"R.P.", "author1":"Schuman"
  ,"zTarg1":92, "targ1":"U-238", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"92-U-238(N,G)92-U-239,,SIG"
  ,"compNotes":[]
+ ,"DECAY-MON":{"Nuclide":"79-AU-198-G","HalfLife":"2.697D","HalfLife1":"2.6941D"
+	,"RadiationType":"DG","Ene":412.0,"Ene1":411.80206,"Abu":0.96,"Abu1":0.9562
+	,"FcCorrDECAY_MON":0.9960417
+	,"monitorReaction":"79-AU-197(N,G)79-AU-198,,SIG"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
 	," #[0]#Reaction: 92-U-238(N,G)92-U-239,,SIG"
 	," #[0]#Monitor:  79-AU-197(N,G)79-AU-198,,SIG"
 	," #[0]#En=2000.0"
 	," a0=[MONIT];                   #[0]#old monitor point 4.8"
 	," a1=recom$au197ng[EN];         #[0]#new monitor point [0.002MeV]"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"]
+	," y=y*a1/a0;                    #[0]#renormalizing CS"
+	,"  #[2]#---Monitor decay-data"
+	,"  #[2]#MONITOR    (79-AU-197(N,G)79-AU-198,,SIG)"
+	,"  #[2]#DECAY-MON  (79-AU-198-G,2.697D,DG,412.,0.96) #Im_old=0.96"
+	,"   a2=0.9562/0.96;             #[2]#DECAY-MON: correction to new 411.80205 keV gamma-yield per decay Au-198-g Im_new=0.9562"
+	,"   y=y*a2;                     #[2]#Renorm.factor: a2=0.9960417"]
  ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
