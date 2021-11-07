@@ -1,9 +1,9 @@
-  {"ENTRY":"30911", "updated":20090913, "TransID":"3141", "TransDate":20091223, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"30911", "updated":20211108, "TransID":"3203", "TransDate":20211217, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":1985,"a1":"B.S.Tomar+","r1":"J,RCA,39,1,1985"
    ,"ref":"Jour: Radiochimica Acta, Vol.39, p.1 (1985)"
    ,"title":"Fission fragment angular momentum: independent isomeric yield ratio of Cs-138 in thermal neutron induced fission of U-233, Pu-239 and Pu-241."
    ,"x4subents":[
-   {"SUBENT":"30911001", "isub":1, "compiled":20090913, "TransID":"3141", "TransDate":20091223
+   {"SUBENT":"30911001", "isub":1, "compiled":20211108, "TransID":"3203", "TransDate":20211217
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -34,6 +34,12 @@
 		,"year":1985,"typ":"J","ref":"J,RCA","vol":"39","p":"1"
 		,"shortRef":"Jour: Radiochimica Acta, Vol.39, p.1 (1985)"}]
 	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"P,BARC-1381,7,1987","stdFileName":"R,BARC-1381,7,1987"
+		,"year":1987,"typ":"P","ref":"R,BARC-","no":"1381","p":"7"
+		,"shortRef":"Prog: B.A.R.C., Trombay report series, No.1381, p.7 (1987)"}]
+	,"x4freetext":[" The same values given."]
+	}
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
@@ -57,7 +63,7 @@
       ]
      ,"METHOD":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"RCHEM", "dict":"METHOD", "idict":21,"hlp":"Radiochemical separation"}]
+	,"x4codes":[{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}]
 	}
       ]
      ,"DETECTOR":[
@@ -88,11 +94,15 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
-	,"x4freetext":[" The values reported are the means of three"
-		,"measurements. The error on an individual measurement"
-		,"is the compounded error due to:"
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" Precision in the mean of three measurements."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-1"
+	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
+	,"x4freetext":[" The error on an individual measurement, about"
+		,"15%, is the compounded error due to:"
 		,"   * counting statistics,"
 		,"   * abundances of gamma lines,"
 		,"   * the FCY value of Xe-138,"
@@ -121,22 +131,31 @@
 	,"x4freetext":[" SD:Updated to new date formats,lower case."
 		,"Detector was changed, cosmetic reduction."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20211018U", "date":"20211018", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. Reference BARC-1381,7,1987 added."
+		,"            ERR-ANALYS corrected."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-DUMMY", "units":"EV", "pointer":" "
 	,"headerHelp":"Dummy incident proj. energy, for broad spectrum", "pFlag":"1000000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
+	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["EN-DUMMY"  ]
-	,["EV"        ]
-	,[" "         ]]
+	 ["EN-DUMMY"  ,"ERR-1"     ]
+	,["EV"        ,"PER-CENT"  ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [0.0253]]}
+	 [0.0253,15]]}
    }
-  ,{"SUBENT":"30911002", "isub":2, "compiled":20090913, "TransID":"3141", "TransDate":20091223
+  ,{"SUBENT":"30911002", "isub":2, "compiled":20211108, "TransID":"3203", "TransDate":20211217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -170,32 +189,39 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[1436.0]}]}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211018U", "date":"20211018", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. ERR-T -> DATA-ERR."]
+	}
+      ]
     }
     ,"DATA":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ERR-T", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"ERR-T"     ]
+	 ["DATA"      ,"DATA-ERR"  ]
 	,["NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [0.72,0.04]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30911002", "Pointer":" "
- ,"Subent":"30911002", "compiled":20090913
+ ,"Subent":"30911002", "compiled":20211108
  ,"year1":1985, "author1ini":"B.S.", "author1":"Tomar"
  ,"zTarg1":92, "targ1":"U-233", "proj1":"n", "emis1":"F", "MF":208, "MT":454, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
  ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Independent fission-product yield ratio"
  ,"reacode":"92-U-233(N,F)55-CS-138-M/T,IND,FY/RAT,,MXW"
  ,"compNotes":[]
- ,"wx4data":6
+ ,"wx4data":7
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -205,30 +231,36 @@
     ,"dat0":[0.72]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.04]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":15
+    ,"com1":15}
+  ,{"ivar":3, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
     ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
     ,"expansion":"Incident energy: spectrum energy"
     ,"com0":0.0253
     ,"com1":0.0253}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"com0":55
     ,"com1":55}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+  ,{"ivar":5, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
     ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"92", "rank":2.1
     ,"expansion":"Isotope/particle identification: mass"
     ,"com0":138
     ,"com1":138}
-  ,{"ivar":5, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+  ,{"ivar":6, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
     ,"header":"ISOMER", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"93", "rank":2.1
     ,"expansion":"Isotope/particle identification: isomer"
@@ -242,7 +274,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.72]
-      ,"dy":[0.04]   }
+      ,"dy":[0.04]
+      ,"dysys":[0.108]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
@@ -257,7 +290,7 @@
 }
    ]
    }
-  ,{"SUBENT":"30911003", "isub":3, "compiled":20090913, "TransID":"3141", "TransDate":20091223
+  ,{"SUBENT":"30911003", "isub":3, "compiled":20211108, "TransID":"3203", "TransDate":20211217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -291,32 +324,39 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[1436.0]}]}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211018U", "date":"20211018", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. ERR-T -> DATA-ERR."]
+	}
+      ]
     }
     ,"DATA":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ERR-T", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"ERR-T"     ]
+	 ["DATA"      ,"DATA-ERR"  ]
 	,["NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [0.67,0.06]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30911003", "Pointer":" "
- ,"Subent":"30911003", "compiled":20090913
+ ,"Subent":"30911003", "compiled":20211108
  ,"year1":1985, "author1ini":"B.S.", "author1":"Tomar"
  ,"zTarg1":94, "targ1":"Pu-239", "proj1":"n", "emis1":"F", "MF":208, "MT":454, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
  ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Independent fission-product yield ratio"
  ,"reacode":"94-PU-239(N,F)55-CS-138-M/T,IND,FY/RAT,,MXW"
  ,"compNotes":[]
- ,"wx4data":6
+ ,"wx4data":7
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -326,30 +366,36 @@
     ,"dat0":[0.67]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.06]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":15
+    ,"com1":15}
+  ,{"ivar":3, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
     ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
     ,"expansion":"Incident energy: spectrum energy"
     ,"com0":0.0253
     ,"com1":0.0253}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"com0":55
     ,"com1":55}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+  ,{"ivar":5, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
     ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"92", "rank":2.1
     ,"expansion":"Isotope/particle identification: mass"
     ,"com0":138
     ,"com1":138}
-  ,{"ivar":5, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+  ,{"ivar":6, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
     ,"header":"ISOMER", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"93", "rank":2.1
     ,"expansion":"Isotope/particle identification: isomer"
@@ -363,7 +409,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.67]
-      ,"dy":[0.06]   }
+      ,"dy":[0.06]
+      ,"dysys":[0.1005]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
@@ -378,7 +425,7 @@
 }
    ]
    }
-  ,{"SUBENT":"30911004", "isub":4, "compiled":20090913, "TransID":"3141", "TransDate":20091223
+  ,{"SUBENT":"30911004", "isub":4, "compiled":20211108, "TransID":"3203", "TransDate":20211217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -412,32 +459,39 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[1436.0]}]}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211018U", "date":"20211018", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. ERR-T -> DATA-ERR."]
+	}
+      ]
     }
     ,"DATA":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"ERR-T", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":1, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"ERR-T"     ]
+	 ["DATA"      ,"DATA-ERR"  ]
 	,["NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ]]
       ,"data":[
 	 [0.65,0.11]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30911004", "Pointer":" "
- ,"Subent":"30911004", "compiled":20090913
+ ,"Subent":"30911004", "compiled":20211108
  ,"year1":1985, "author1ini":"B.S.", "author1":"Tomar"
  ,"zTarg1":94, "targ1":"Pu-241", "proj1":"n", "emis1":"F", "MF":208, "MT":454, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
  ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Independent fission-product yield ratio"
  ,"reacode":"94-PU-241(N,F)55-CS-138-M/T,IND,FY/RAT,,MXW"
  ,"compNotes":[]
- ,"wx4data":6
+ ,"wx4data":7
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -447,30 +501,36 @@
     ,"dat0":[0.65]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.11]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-1", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":15
+    ,"com1":15}
+  ,{"ivar":3, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
     ,"header":"EN-DUMMY", "units":"EV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
     ,"expansion":"Incident energy: spectrum energy"
     ,"com0":0.0253
     ,"com1":0.0253}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
     ,"com0":55
     ,"com1":55}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+  ,{"ivar":5, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
     ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"92", "rank":2.1
     ,"expansion":"Isotope/particle identification: mass"
     ,"com0":138
     ,"com1":138}
-  ,{"ivar":5, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
+  ,{"ivar":6, "cvar":"x2", "fam":"ZAM", "ifComm":true , "ifCM":false
     ,"header":"ISOMER", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"93", "rank":2.1
     ,"expansion":"Isotope/particle identification: isomer"
@@ -484,7 +544,8 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[0.65]
-      ,"dy":[0.11]   }
+      ,"dy":[0.11]
+      ,"dysys":[0.0975]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
