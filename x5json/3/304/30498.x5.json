@@ -1,9 +1,9 @@
-  {"ENTRY":"30498", "updated":20100303, "TransID":"3144", "TransDate":20100603, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"30498", "updated":20211108, "TransID":"3203", "TransDate":20211217, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":1979,"a1":"B.Krishnarajulu+","r1":"J,JP/G,5,319,1979"
    ,"ref":"Jour: Jour. of Physics, Part G (Nucl.and Part.Phys.), Vol.5, p.319 (1979)"
    ,"title":"Light-charged-particle emission in keV neutron-induced fission of Pu-239."
    ,"x4subents":[
-   {"SUBENT":"30498001", "isub":1, "compiled":20100303, "TransID":"3144", "TransDate":20100603
+   {"SUBENT":"30498001", "isub":1, "compiled":20211108, "TransID":"3203", "TransDate":20211217
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,15 +12,21 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,JP/G,5,319,197902","stdFileName":"J,JP_G,5,319,1979"
+	,"x4codes":[{"code":"J,JP/G,5,319,1979","stdFileName":"J,JP_G,5,319,1979"
 		,"year":1979,"typ":"J","ref":"J,JP/G","vol":"5","p":"319"
 		,"shortRef":"Jour: Jour. of Physics, Part G (Nucl.and Part.Phys.), Vol.5, p.319 (1979)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"C,77PUNE,2,240,197712","stdFileName":"C,77PUNE,2,240,1977"
+	,"x4codes":[{"code":"C,77PUNE,2,240,1977","stdFileName":"C,77PUNE,2,240,1977"
 		,"year":1977,"typ":"C","ref":"C,77PUNE"
 		,"shortRef":"Conf: 20.Nucl.Phys.and Solid State Phys.Symp.,Poona 1977, Vol.2, p.240 (1977)"}]
 	,"x4freetext":[" Abstract with graphs."]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"P,BARC-990,75,1978","stdFileName":"R,BARC-990,75,1978"
+		,"year":1978,"typ":"P","ref":"R,BARC-","no":"990","p":"75"
+		,"shortRef":"Prog: B.A.R.C., Trombay report series, No.990, p.75 (1978)"}]
+	,"x4freetext":[" report, no data."]
 	}
       ]
      ,"AUTHOR":[
@@ -56,9 +62,9 @@
       ]
      ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["880 micrograms/cm2 Pu-239 foil,purity=96.97%, active"
-		,"area=3 cm2."]
+	,"x4code":{"Nucl":"94-PU-239","ENR":0.9697}
+	,"x4freetext":[" 880 ug/cm2 Pu-239 foil,"
+		," purity=96.97%, active area=3 cm2."]
 	}
       ]
      ,"METHOD":[
@@ -66,12 +72,12 @@
 	,"x4codes":[{"code":"COINC", "dict":"METHOD", "idict":21,"hlp":"Coincidence"}]
 	,"x4freetext":[".of fission fragments and LCP."
 		,"The natural alphas and fission fragments were stopped"
-		,"in an alu-foil before reaching the LCP-detector."]
+		,"in an Al foil before reaching the LCP-detector."]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"PHD", "dict":"METHOD", "idict":21,"hlp":"Pulse-height discrimination"}]
 	,"x4freetext":[".on the fission side,cutoff energy = approx 6MeV,"
-		,"on the LCP-side, cutoff energy = 8MeV."
+		,"on the LCP-side, cut-off energy = 8MeV."
 		,"Before and after each fast-neutron run, thermal runs"
 		,"were performed to check the detector performance and"
 		,"for normalization of the LCP-spectra."]
@@ -86,7 +92,9 @@
 	,"x4codes":[{"code":"SIBAR", "dict":"DETECTOR", "idict":22,"hlp":"Silicon surface barrier detector"}]
 	,"x4freetext":[".Surface-barrier,diameter=2cm,depletion depth="
 		,"400micro-m,mounted inside the ionization chamber, to"
-		,"detect light charged particles (`LCP`)."]
+		,"detect light charged particles (`LCP`)."
+		,"A low intensity Ac-227 source was used for energy"
+		,"calibration."]
 	}
       ]
      ,"ANALYSIS":[
@@ -101,19 +109,12 @@
 		,"were obtained through this assumption."]
 	}
       ]
-     ,"MONITOR":[
-	{"x4pointer":" "
-	,"x4code":{"code":""}
-	,"x4freetext":["A low intensity Ac-227 source was used for energy-"
-		,"calibration."]
-	}
-      ]
      ,"CORRECTION":[
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["The observed spectra were corrected for chance coinc."
 		,"Using singles LCP-spectra, then for energy losses in"
-		,"the source,gas and alu-foil."]
+		,"the source, gas and Al foil."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -148,6 +149,12 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: REACTION code in Subent 002 was changed"
 		,"    according to EXFOR rules."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20211025U", "date":"20211025", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" VS. Reference BARC-990,75,1978 added."
+		,"            MONITOR text moved to DETECTOR (SIBAR)."]
 	}
       ]
     }
