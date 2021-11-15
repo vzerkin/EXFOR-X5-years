@@ -1,9 +1,9 @@
-  {"ENTRY":"30981", "updated":20090918, "TransID":"3141", "TransDate":20091223, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"30981", "updated":20211116, "TransID":"3203", "TransDate":20211217, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":1985,"a1":"A.V.R.Reddy+","r1":"C,85JAIPUR,2,28,1985"
    ,"ref":"Conf: Symp.on Nucl.Phys.,Jaipur,16-20 Dec.1985, Vol.2, p.28 (1985)"
    ,"title":"Isotopic yield distribution of iodine in the reactor neutron induced fusion of Np-237"
    ,"x4subents":[
-   {"SUBENT":"30981001", "isub":1, "compiled":20090918, "TransID":"3141", "TransDate":20091223
+   {"SUBENT":"30981001", "isub":1, "compiled":20211116, "TransID":"3203", "TransDate":20211217
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -29,9 +29,14 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"C,85JAIPUR,2,28,198512","stdFileName":"C,85JAIPUR,2,28,1985"
+	,"x4codes":[{"code":"C,85JAIPUR,2,28,1985","stdFileName":"C,85JAIPUR,2,28,1985"
 		,"year":1985,"typ":"C","ref":"C,85JAIPUR"
 		,"shortRef":"Conf: Symp.on Nucl.Phys.,Jaipur,16-20 Dec.1985, Vol.2, p.28 (1985)"}]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"P,BARC-1381,44,1987","stdFileName":"R,BARC-1381,44,1987"
+		,"year":1987,"typ":"P","ref":"R,BARC-","no":"1381","p":"44"
+		,"shortRef":"Prog: B.A.R.C., Trombay report series, No.1381, p.44 (1987)"}]
 	}
       ]
      ,"SAMPLE":[
@@ -57,7 +62,7 @@
       ]
      ,"METHOD":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"RCHEM", "dict":"METHOD", "idict":21,"hlp":"Radiochemical separation"}
+	,"x4codes":[{"code":"CHSEP", "dict":"METHOD", "idict":21,"hlp":"Chemical separation of products"}
 	    ,{"code":"RELFY", "dict":"METHOD", "idict":21,"hlp":"Relative fission yield measurement"}]
 	}
       ]
@@ -76,21 +81,7 @@
      ,"INC-SPECT":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["No information given, probably a fission neutron"
-		,"spectrum."]
-	}
-      ]
-     ,"ERR-ANALYS":[
-	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
-	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" Total errors are propagated errors within"
-		,"one sigma, they include errors in:"
-		,"   * counting statistics,"
-		,"   * detector efficiency,"
-		,"   * abundances of gamma lines,"
-		,"   * decay constants and"
-		,"   * times of irradiation and cooling."]
+	,"x4freetext":["The 237Np target covered with 1 mm cadmium foil."]
 	}
       ]
      ,"HISTORY":[
@@ -117,43 +108,37 @@
 	,"x4freetext":[" SD:Updated to new date formats,lower case."
 		," OS. Added FIS to REACTION  SF8."]
 	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Data are taken from Table 1 and 2 of p. 29 of"
-		,"contributed papers, Symposium on Nuclear Physics 1985,"
-		,"University of Rajasthan, Jaipur, December 16-20, 1985."]
+	,{"x4pointer":" "
+	,"x4code":{"code":"20211013A", "date":"20211013", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. Reference BARC-1381,44,1987 added."
+		,"                Major corrections in 002-005."]
 	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"EN-DUMMY", "units":"MEV", "pointer":" "
-	,"headerHelp":"Dummy incident proj. energy, for broad spectrum", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+       {"icol":0, "header":"EN-MIN", "units":"EV", "pointer":" "
+	,"headerHelp":"Lower limit of incident projectile energy range", "pFlag":"2000000"
+	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN-DUMMY"  ]
-	,["MEV"       ]
+	 ["EN-MIN"    ]
+	,["EV"        ]
 	,[" "         ]]
       ,"data":[
-	 [1.5]]}
+	 [0.55]]}
    }
-  ,{"SUBENT":"30981002", "isub":2, "compiled":20090918, "TransID":"3141", "TransDate":20091223
+  ,{"SUBENT":"30981002", "isub":2, "compiled":20211116, "TransID":"3203", "TransDate":20211217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"93-NP-237(N,F)ELEM/MASS,IND,FY,,FIS/REL"
-	    ,"c4reac":"(N,F)ELEM/MASS,IND,FY,,FIS/REL"
-	    ,"combi":"a"
-	    ,"MF":608
-	    ,"MT":454
-	    ,"Units":"ARB-UNITS"
+	,"x4code":{"code":"(93-NP-237(N,F)ELEM/MASS,IND,FY,,EPI)/\n(93-NP-237(N,F)53-I-135,IND,FY,,EPI)"
+	    ,"c4reac":"((N,F)ELEM/MASS,IND,FY,,EPI)/((N,F)IND,FY,,EPI)"
+	    ,"combi":"a/a","combiQuant":"Ratio of [Independent fission-product yield]"
+	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"93-NP-237(N,F)ELEM/MASS,IND,FY,,FIS/REL"
+	    {"code":"93-NP-237(N,F)ELEM/MASS,IND,FY,,EPI"
 		,"Reac":"N,F"
 		,"SF1":"93-NP-237","Targ":{"code":"93-NP-237","nam":"Np-237","ZA":93237}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -161,13 +146,47 @@
 		,"SF4":"ELEM/MASS","Prod":{"code":"ELEM/MASS","nam":"elem/mass"}
 		,"SF5":"IND"
 		,"SF6":"FY"
-		,"SF8":"FIS/REL"
-		,"SF58":"IND,FY","Quant":"FY","BasicUnits":"ARB-UNITS","QuantHlp":"Independent fission-product yield"
+		,"SF8":"EPI"
+		,"SF58":"IND,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Independent fission-product yield"
+	    }
+	    ,{"code":"93-NP-237(N,F)53-I-135,IND,FY,,EPI"
+		,"Reac":"N,F"
+		,"SF1":"93-NP-237","Targ":{"code":"93-NP-237","nam":"Np-237","ZA":93237}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"53-I-135","Prod":{"code":"53-I-135","nam":"I-135","ZA":53135}
+		,"SF5":"IND"
+		,"SF6":"FY"
+		,"SF8":"EPI"
+		,"SF58":"IND,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Independent fission-product yield"
 	    }]}
 	}
       ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" Total errors are propagated errors within"
+		,"one sigma, they include errors in:"
+		,"   * counting statistics,"
+		,"   * detector efficiency,"
+		,"   * abundances of gamma lines,"
+		,"   * decay constants and"
+		,"   * times of irradiation and cooling."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data are taken from Table 1 of Symposium on"
+		,"Nuclear  Physics 1985, University of Rajasthan, Jaipur,"
+		,"December 16-20, 1985."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":4, "nrows":5
+    ,"DATA":{"ncols":4, "nrows":4
       ,"x4headers":[
        {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
@@ -175,100 +194,97 @@
       ,{"icol":1, "header":"MASS", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Atomic mass of nuclide", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
+      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"ARB-UNITS", "pointer":" "
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
 	 ["ELEMENT"   ,"MASS"      ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"ARB-UNITS" ,"ARB-UNITS" ]
+	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
 	 [53,131,0.0349,0.012]
 	,[53,132,0.0885,0.011]
 	,[53,133,0.311,0.04]
-	,[53,134,0.466,0.041]
-	,[53,135,1,0]]}
+	,[53,134,0.466,0.041]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30981002", "Pointer":" "
- ,"Subent":"30981002", "compiled":20090918
+ ,"Subent":"30981002", "compiled":20211116
  ,"year1":1985, "author1ini":"A.V.R.", "author1":"Reddy"
- ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":608, "MT":454, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
- ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Independent fission-product yield"
- ,"reacode":"93-NP-237(N,F)ELEM/MASS,IND,FY,,FIS/REL"
- ,"compNotes":[]
+ ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
+ ,"ReactionType":"Ratio", "quant":"FY", "quantExpan":"Ratio of [Independent fission-product yield]"
+ ,"reacode":"(93-NP-237(N,F)ELEM/MASS,IND,FY,,EPI)/(93-NP-237(N,F)53-I-135,IND,FY,,EPI)"
+ ,"compNotes":["OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":5
- ,"lx4data":5
+ ,"lx4data":4
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[0.0349,0.0885,0.311,0.466,1]
+    ,"dat0":[0.0349,0.0885,0.311,0.466]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[0.012,0.011,0.04,0.041,0]
+    ,"dat0":[0.012,0.011,0.04,0.041]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
-    ,"header":"EN-DUMMY", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"43", "rank":1.1
-    ,"expansion":"Incident energy: spectrum energy"
-    ,"com0":1.5
-    ,"com1":1.5e+6}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"expansion":"Incident energy: energy"
+    ,"com0":0.55
+    ,"com1":0.55}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[53,53,53,53,53]
+    ,"dat0":[53,53,53,53]
    ,"dat1eq":true}
   ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"92", "rank":2.1
     ,"expansion":"Isotope/particle identification: mass"
-    ,"dat0":[131,132,133,134,135]
+    ,"dat0":[131,132,133,134]
    ,"dat1eq":true}
   ]
  ,"wc5data":3
- ,"lc5data":5
+ ,"lc5data":4
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[0.0349,0.0885,0.311,0.466,1]
-      ,"dy":[0.012,0.011,0.04,0.041,0]   }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
-      ,"header":"SpE", "dataType":"43", "rank":1.0
-      ,"expansion":"Incident energy: spectrum energy"
-      ,"x1":[1.5e+6,1.5e+6,1.5e+6,1.5e+6,1.5e+6]
+      ,"y":[0.0349,0.0885,0.311,0.466]
+      ,"dy":[0.012,0.011,0.04,0.041]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[0.55,0.55,0.55,0.55]
    }
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[53131,53132,53133,53134,53135]
+      ,"x2":[53131,53132,53133,53134]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"30981003", "isub":3, "compiled":20090918, "TransID":"3141", "TransDate":20091223
+  ,{"SUBENT":"30981003", "isub":3, "compiled":20211116, "TransID":"3203", "TransDate":20211217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"93-NP-237(N,F)ELEM/MASS,CUM,FY,,FIS/REL"
-	    ,"c4reac":"(N,F)ELEM/MASS,CUM,FY,,FIS/REL"
-	    ,"combi":"a"
-	    ,"MF":608
-	    ,"MT":459
-	    ,"Units":"ARB-UNITS"
+	,"x4code":{"code":"(93-NP-237(N,F)ELEM/MASS,CUM,FY,,EPI)/\n(93-NP-237(N,F)53-I-135,CUM,FY,,EPI)"
+	    ,"c4reac":"((N,F)ELEM/MASS,CUM,FY,,EPI)/((N,F)CUM,FY,,EPI)"
+	    ,"combi":"a/a","combiQuant":"Ratio of [Cumulative fission-product yield]"
+	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"93-NP-237(N,F)ELEM/MASS,CUM,FY,,FIS/REL"
+	    {"code":"93-NP-237(N,F)ELEM/MASS,CUM,FY,,EPI"
 		,"Reac":"N,F"
 		,"SF1":"93-NP-237","Targ":{"code":"93-NP-237","nam":"Np-237","ZA":93237}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -276,13 +292,47 @@
 		,"SF4":"ELEM/MASS","Prod":{"code":"ELEM/MASS","nam":"elem/mass"}
 		,"SF5":"CUM"
 		,"SF6":"FY"
-		,"SF8":"FIS/REL"
-		,"SF58":"CUM,FY","Quant":"FY","BasicUnits":"ARB-UNITS","QuantHlp":"Cumulative fission-product yield"
+		,"SF8":"EPI"
+		,"SF58":"CUM,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Cumulative fission-product yield"
+	    }
+	    ,{"code":"93-NP-237(N,F)53-I-135,CUM,FY,,EPI"
+		,"Reac":"N,F"
+		,"SF1":"93-NP-237","Targ":{"code":"93-NP-237","nam":"Np-237","ZA":93237}
+		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
+		,"SF3":"F","procHlp":"Fission"
+		,"SF4":"53-I-135","Prod":{"code":"53-I-135","nam":"I-135","ZA":53135}
+		,"SF5":"CUM"
+		,"SF6":"FY"
+		,"SF8":"EPI"
+		,"SF58":"CUM,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Cumulative fission-product yield"
 	    }]}
 	}
       ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" Total errors are propagated errors within"
+		,"one sigma, they include errors in:"
+		,"   * counting statistics,"
+		,"   * detector efficiency,"
+		,"   * abundances of gamma lines,"
+		,"   * decay constants and"
+		,"   * times of irradiation and cooling."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data are taken from Table 2 of Symposium on"
+		,"Nuclear  Physics 1985, University of Rajasthan, Jaipur,"
+		,"December 16-20, 1985."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":4, "nrows":5
+    ,"DATA":{"ncols":4, "nrows":4
       ,"x4headers":[
        {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
@@ -290,100 +340,99 @@
       ,{"icol":1, "header":"MASS", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Atomic mass of nuclide", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
+      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"ARB-UNITS", "pointer":" "
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
 	 ["ELEMENT"   ,"MASS"      ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"ARB-UNITS" ,"ARB-UNITS" ]
+	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
 	 [52,131,0.872,0.075]
 	,[52,132,0.628,0.06]
 	,[52,133,0.56,0.03]
-	,[52,134,0.616,0.04]
-	,[53,135,1,0]]}
+	,[52,134,0.616,0.04]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30981003", "Pointer":" "
- ,"Subent":"30981003", "compiled":20090918
+ ,"Subent":"30981003", "compiled":20211116
  ,"year1":1985, "author1ini":"A.V.R.", "author1":"Reddy"
- ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":608, "MT":459, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
- ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Cumulative fission-product yield"
- ,"reacode":"93-NP-237(N,F)ELEM/MASS,CUM,FY,,FIS/REL"
- ,"compNotes":[]
+ ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
+ ,"ReactionType":"Ratio", "quant":"FY", "quantExpan":"Ratio of [Cumulative fission-product yield]"
+ ,"reacode":"(93-NP-237(N,F)ELEM/MASS,CUM,FY,,EPI)/(93-NP-237(N,F)53-I-135,CUM,FY,,EPI)"
+ ,"compNotes":["OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":5
- ,"lx4data":5
+ ,"lx4data":4
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[0.872,0.628,0.56,0.616,1]
+    ,"dat0":[0.872,0.628,0.56,0.616]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
-    ,"dat0":[0.075,0.06,0.03,0.04,0]
+    ,"dat0":[0.075,0.06,0.03,0.04]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
-    ,"header":"EN-DUMMY", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"43", "rank":1.1
-    ,"expansion":"Incident energy: spectrum energy"
-    ,"com0":1.5
-    ,"com1":1.5e+6}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"expansion":"Incident energy: energy"
+    ,"com0":0.55
+    ,"com1":0.55}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
     ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[52,52,52,52,53]
+    ,"dat0":[52,52,52,52]
    ,"dat1eq":true}
   ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"92", "rank":2.1
     ,"expansion":"Isotope/particle identification: mass"
-    ,"dat0":[131,132,133,134,135]
+    ,"dat0":[131,132,133,134]
    ,"dat1eq":true}
   ]
  ,"wc5data":3
- ,"lc5data":5
+ ,"lc5data":4
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[0.872,0.628,0.56,0.616,1]
-      ,"dy":[0.075,0.06,0.03,0.04,0]   }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
-      ,"header":"SpE", "dataType":"43", "rank":1.0
-      ,"expansion":"Incident energy: spectrum energy"
-      ,"x1":[1.5e+6,1.5e+6,1.5e+6,1.5e+6,1.5e+6]
+      ,"y":[0.872,0.628,0.56,0.616]
+      ,"dy":[0.075,0.06,0.03,0.04]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[0.55,0.55,0.55,0.55]
    }
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[52131,52132,52133,52134,53135]
+      ,"x2":[52131,52132,52133,52134]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"30981004", "isub":4, "compiled":20090918, "TransID":"3141", "TransDate":20091223
+  ,{"SUBENT":"30981004", "isub":4, "compiled":20211116, "TransID":"3203", "TransDate":20211217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(93-NP-237(N,F)ELEM/MASS,CUM,FY,,FIS)/\n(93-NP-237(N,F)MASS,CHN,FY,,FIS)"
-	    ,"c4reac":"((N,F)ELEM/MASS,CUM,FY,,FIS)/((N,F)MASS,CHN,FY,,FIS)"
-	    ,"combi":"a/a","combiQuant":"Ratio of [Cumulative fission-product yield]"
-	    ,"MF":802
-	    ,"MT":18
+	,"x4code":{"code":"93-NP-237(N,F)ELEM/MASS,CUM,FY,,FRC/EPI"
+	    ,"c4reac":"(N,F)ELEM/MASS,CUM,FY,,FRC/EPI"
+	    ,"combi":"a"
+	    ,"MF":8
+	    ,"MT":459
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"93-NP-237(N,F)ELEM/MASS,CUM,FY,,FIS"
+	    {"code":"93-NP-237(N,F)ELEM/MASS,CUM,FY,,FRC/EPI"
 		,"Reac":"N,F"
 		,"SF1":"93-NP-237","Targ":{"code":"93-NP-237","nam":"Np-237","ZA":93237}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -391,40 +440,45 @@
 		,"SF4":"ELEM/MASS","Prod":{"code":"ELEM/MASS","nam":"elem/mass"}
 		,"SF5":"CUM"
 		,"SF6":"FY"
-		,"SF8":"FIS"
-		,"SF58":"CUM,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Cumulative fission-product yield"
-	    }
-	    ,{"code":"93-NP-237(N,F)MASS,CHN,FY,,FIS"
-		,"Reac":"N,F"
-		,"SF1":"93-NP-237","Targ":{"code":"93-NP-237","nam":"Np-237","ZA":93237}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"F","procHlp":"Fission"
-		,"SF4":"MASS","Prod":{"code":"MASS","nam":"mass"}
-		,"SF5":"CHN"
-		,"SF6":"FY"
-		,"SF8":"FIS"
-		,"SF58":"CHN,FY","Quant":"FY","BasicUnits":"PART/FIS","QuantHlp":"Total chain yield of fission products"
+		,"SF8":"FRC/EPI"
+		,"SF58":"CUM,FY,,FRC","Quant":"FY","BasicUnits":"NO-DIM","QuantHlp":"Fractional cumulative fission product yield"
 	    }]}
-	}
-      ]
-     ,"RESULT":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::FRCUM"}
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"DEP,30981003"
-		,"flag":"DEP", "help":"Dependent data"
-		,"subent":"30981003"
-		}]
-	,"x4freetext":[" Deduced from cumulative yields."]
 	}
       ]
      ,"COMMENT":[
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["No information of chain yields."]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" Total errors are propagated errors within"
+		,"one sigma, they include errors in:"
+		,"   * counting statistics,"
+		,"   * detector efficiency,"
+		,"   * abundances of gamma lines,"
+		,"   * decay constants and"
+		,"   * times of irradiation and cooling."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data are taken from Table 2 of Symposium on"
+		,"Nuclear  Physics 1985, University of Rajasthan, Jaipur,"
+		,"December 16-20, 1985."]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"DEP,30981003"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"30981003"
+		}]
+	,"x4freetext":[" Deduced from cumulative yields."]
 	}
       ]
      ,"HISTORY":[
@@ -463,13 +517,13 @@
 	,[53,135,0.91,0.02]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30981004", "Pointer":" "
- ,"Subent":"30981004", "compiled":20090918
+ ,"Subent":"30981004", "compiled":20211116
  ,"year1":1985, "author1ini":"A.V.R.", "author1":"Reddy"
- ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":802, "MT":18, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
- ,"ReactionType":"Ratio", "quant":"FY", "quantExpan":"Ratio of [Cumulative fission-product yield]"
- ,"reacode":"(93-NP-237(N,F)ELEM/MASS,CUM,FY,,FIS)/(93-NP-237(N,F)MASS,CHN,FY,,FIS)"
- ,"compNotes":[]
+ ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":8, "MT":459, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
+ ,"ReactionType":"FY", "quant":"FY", "quantExpan":"Fractional cumulative fission product yield"
+ ,"reacode":"93-NP-237(N,F)ELEM/MASS,CUM,FY,,FRC/EPI"
+ ,"compNotes":["OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":5
  ,"lx4data":5
  ,"x4data":[
@@ -485,12 +539,12 @@
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.076,0.061,0.031,0.042,0.02]
    ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
-    ,"header":"EN-DUMMY", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"43", "rank":1.1
-    ,"expansion":"Incident energy: spectrum energy"
-    ,"com0":1.5
-    ,"com1":1.5e+6}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"expansion":"Incident energy: energy"
+    ,"com0":0.55
+    ,"com1":0.55}
   ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
@@ -512,10 +566,10 @@
       ,"expansion":"Data: data"
       ,"y":[0.962,0.876,0.802,0.569,0.91]
       ,"dy":[0.076,0.061,0.031,0.042,0.02]   }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
-      ,"header":"SpE", "dataType":"43", "rank":1.0
-      ,"expansion":"Incident energy: spectrum energy"
-      ,"x1":[1.5e+6,1.5e+6,1.5e+6,1.5e+6,1.5e+6]
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[0.55,0.55,0.55,0.55,0.55]
    }
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
@@ -526,25 +580,42 @@
 }
    ]
    }
-  ,{"SUBENT":"30981005", "isub":5, "compiled":20090918, "TransID":"3141", "TransDate":20091223
+  ,{"SUBENT":"30981005", "isub":5, "compiled":20211116, "TransID":"3203", "TransDate":20211217
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"93-NP-237(N,F)ELEM,,AP,,FIS"
-	    ,"c4reac":"(N,F)ELEM,,AP,,FIS"
+	,"x4code":{"code":"93-NP-237(N,F)ELEM,,AP,,EPI"
+	    ,"c4reac":"(N,F)ELEM,,AP,,EPI"
 	    ,"combi":"a"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"93-NP-237(N,F)ELEM,,AP,,FIS"
+	    {"code":"93-NP-237(N,F)ELEM,,AP,,EPI"
 		,"Reac":"N,F"
 		,"SF1":"93-NP-237","Targ":{"code":"93-NP-237","nam":"Np-237","ZA":93237}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"F","procHlp":"Fission"
 		,"SF4":"ELEM","Prod":{"code":"ELEM","nam":"elem"}
 		,"SF6":"AP"
-		,"SF8":"FIS"
+		,"SF8":"EPI"
 		,"SF58":",AP","Quant":"ZAP","BasicUnits":"NO-DIM","QuantHlp":"Most probable mass of fission products"
 	    }]}
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"DEP,30981004"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"30981004"
+		}]
+	,"x4freetext":[" Fractional cumulative yield"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data are taken from Table 3 of Symposium on"
+		,"Nuclear  Physics 1985, University of Rajasthan, Jaipur,"
+		,"December 16-20, 1985."]
 	}
       ]
     }
@@ -565,13 +636,13 @@
 	 [53,134.44]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"30981005", "Pointer":" "
- ,"Subent":"30981005", "compiled":20090918
+ ,"Subent":"30981005", "compiled":20211116
  ,"year1":1985, "author1ini":"A.V.R.", "author1":"Reddy"
  ,"zTarg1":93, "targ1":"Np-237", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(SpE,ZAM)"
+ ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"AP", "quant":"ZAP", "quantExpan":"Most probable mass of fission products"
- ,"reacode":"93-NP-237(N,F)ELEM,,AP,,FIS"
- ,"compNotes":[]
+ ,"reacode":"93-NP-237(N,F)ELEM,,AP,,EPI"
+ ,"compNotes":["OPERATION...  Value=Min  Min:EN-MIN"]
  ,"wx4data":3
  ,"lx4data":1
  ,"x4data":[
@@ -581,12 +652,12 @@
     ,"expansion":"Data: data"
     ,"dat0":[134.44]
    ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"x1", "fam":"SpE", "ifComm":true , "ifCM":false
-    ,"header":"EN-DUMMY", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"43", "rank":1.1
-    ,"expansion":"Incident energy: spectrum energy"
-    ,"com0":1.5
-    ,"com1":1.5e+6}
+  ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-MIN", "units":"EV", "basicUnits":"EV"
+    ,"what":"X1.Min", "dataType":"41", "rank":1.2
+    ,"expansion":"Incident energy: energy"
+    ,"com0":0.55
+    ,"com1":0.55}
   ,{"ivar":2, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X2.Value", "dataType":"91", "rank":2.1
@@ -602,10 +673,10 @@
       ,"expansion":"Data: data"
       ,"y":[134.44]
    }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
-      ,"header":"SpE", "dataType":"43", "rank":1.0
-      ,"expansion":"Incident energy: spectrum energy"
-      ,"x1":[1.5e+6]
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[0.55]
    }
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
