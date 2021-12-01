@@ -1,9 +1,9 @@
-  {"ENTRY":"31110", "updated":20090921, "TransID":"3142", "TransDate":20100126, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"31110", "updated":20211202, "TransID":"3204", "TransDate":20220112, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":1962,"a1":"E.Weigold+","r1":"J,NP,32,106,1962"
    ,"ref":"Jour: Nuclear Physics, Vol.32, p.106 (1962)"
    ,"title":"Some activation measurements and a comparison with theoretical (n,2n) cross sections and isomeric cross section ratios."
    ,"x4subents":[
-   {"SUBENT":"31110001", "isub":1, "compiled":20090921, "TransID":"3142", "TransDate":20100126
+   {"SUBENT":"31110001", "isub":1, "compiled":20211202, "TransID":"3204", "TransDate":20220112
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -49,8 +49,8 @@
       ]
      ,"MONIT-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"31107001,Glover+,J,NP,29,309,1962"
-		,"subent":"31107001","author1":"Glover+","stdFileName":"J,NP,29,309,1962"
+	,"x4codes":[{"code":"31107001,R.N.Glover+,J,NP,29,309,1962"
+		,"subent":"31107001","author1":"R.N.Glover+","stdFileName":"J,NP,29,309,1962"
 		,"year":1962,"typ":"J","ref":"J,NP","vol":"29","p":"309"
 		,"shortRef":"Jour: Nuclear Physics, Vol.29, p.309 (1962)"}]
 	,"x4freetext":["Also, experimental details descibed in this ref."]
@@ -126,6 +126,11 @@
 		,"                                  J,NP,29,309,1962"
 		," Status info changed."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20211201A", "date":"20211201", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. MONIT value deleted in 002 and 004."]
+	}
       ]
     }
     ,"COMMON":{"ncols":2, "nrows":1
@@ -144,7 +149,7 @@
       ,"data":[
 	 [6,2]]}
    }
-  ,{"SUBENT":"31110002", "isub":2, "compiled":20090921, "TransID":"3142", "TransDate":20100126
+  ,{"SUBENT":"31110002", "isub":2, "compiled":20211202, "TransID":"3204", "TransDate":20220112
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -186,8 +191,15 @@
 	,"x4freetext":[" Data from text on p.110 of reference"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211201A", "date":"20211201", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. MONIT value deleted."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":5, "nrows":1
+    ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
@@ -201,19 +213,16 @@
       ,{"icol":3, "header":"ERR-T", "units":"B", "pointer":" "
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":4, "header":"MONIT", "units":"MB", "pointer":" "
-	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
-	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL"    ,"DATA"      ,"ERR-T"     ,"MONIT"     ]
-	,["MEV"       ,"MEV"       ,"B"         ,"B"         ,"MB"        ]
-	,[" "         ," "         ," "         ," "         ," "         ]]
+	 ["EN"        ,"EN-RSL"    ,"DATA"      ,"ERR-T"     ]
+	,["MEV"       ,"MEV"       ,"B"         ,"B"         ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [14.7,0.3,2.0E-5,5.0E-6,550]]}
+	 [14.7,0.3,2.0E-5,5.0E-6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"31110002", "Pointer":" "
- ,"Subent":"31110002", "compiled":20090921
+ ,"Subent":"31110002", "compiled":20211202
  ,"year1":1962, "author1ini":"E.", "author1":"Weigold"
  ,"zTarg1":16, "targ1":"S-32", "proj1":"n", "emis1":"T", "MF":3, "MT":105, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -221,16 +230,7 @@
  ,"reacode":"16-S-32(N,T)15-P-30,,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-S,0.5,4.)     ADDED AS COMMON:ERR-S,PER-CENT=0.5%"
 	,"ERR-ANALYS:(ERR-3,3.,4.)      ADDED AS COMMON:ERR-3,PER-CENT=3.0%"]
- ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
-	," #[0]#Reaction: 16-S-32(N,T)15-P-30,,SIG"
-	," #[0]#Monitor:  29-CU-63(N,2N)29-CU-62,,SIG"
-	," #[0]#En=1.47E7"
-	," a0=[MONIT];                   #[0]#old monitor point 0.55"
-	," a1=recom$cu63n2n[EN];         #[0]#new monitor point [14.7MeV]"
-	," dy=dy/y;                      #to rel. uncertainties"
-	," y=y*a1/a0;                    #[0]#renormalizing CS"
-	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":9
+ ,"wx4data":8
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -281,12 +281,6 @@
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.3]
     ,"dat1":[3.0e+5]}
-  ,{"ivar":8, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
-    ,"header":"MONIT", "units":"MB", "basicUnits":"B"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.0
-    ,"expansion":"Assumed values: monitor"
-    ,"dat0":[550]
-    ,"dat1":[0.55]}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -304,12 +298,6 @@
       ,"x1":[1.47e+7]
       ,"dx1":[3.0e+5]   }
  }
- ,"c5mon":{"m0ref":"[MONIT]/cu63n2n", "m1ref":"recom/cu63n2n"
-      ,"enNorm":[1.47e+7]
-      ,"m0":[0.55]
-      ,"m1":[0.537956]
-      ,"dm1":[0.00626265]
-      ,"Fc0":[0.978102] }
 }
    ]
    }
@@ -444,7 +432,7 @@
 }
    ]
    }
-  ,{"SUBENT":"31110004", "isub":4, "compiled":20090921, "TransID":"3142", "TransDate":20100126
+  ,{"SUBENT":"31110004", "isub":4, "compiled":20211202, "TransID":"3204", "TransDate":20220112
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -486,8 +474,15 @@
 	,"x4freetext":[" Data from Table 1 of reference"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211201A", "date":"20211201", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. MONIT value deleted."]
+	}
+      ]
     }
-    ,"DATA":{"ncols":5, "nrows":5
+    ,"DATA":{"ncols":4, "nrows":5
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
@@ -501,23 +496,20 @@
       ,{"icol":3, "header":"ERR-T", "units":"PER-CENT", "pointer":" "
 	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
-      ,{"icol":4, "header":"MONIT", "units":"MB", "pointer":" "
-	,"headerHelp":"Normalization value for reaction given under MONITOR", "pFlag":"0000000"
-	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL"    ,"DATA"      ,"ERR-T"     ,"MONIT"     ]
-	,["MEV"       ,"MEV"       ,"B"         ,"PER-CENT"  ,"MB"        ]
-	,[" "         ," "         ," "         ," "         ," "         ]]
+	 ["EN"        ,"EN-RSL"    ,"DATA"      ,"ERR-T"     ]
+	,["MEV"       ,"MEV"       ,"B"         ,"PER-CENT"  ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [13.86,0.1,0.727,8,550]
-	,[14.11,0.1,0.776,8,null]
-	,[14.37,0.15,0.767,8,null]
-	,[14.59,0.2,0.823,8,null]
-	,[14.77,0.25,0.827,8,null]]}
+	 [13.86,0.1,0.727,8]
+	,[14.11,0.1,0.776,8]
+	,[14.37,0.15,0.767,8]
+	,[14.59,0.2,0.823,8]
+	,[14.77,0.25,0.827,8]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"31110004", "Pointer":" "
- ,"Subent":"31110004", "compiled":20090921
+ ,"Subent":"31110004", "compiled":20211202
  ,"year1":1962, "author1ini":"E.", "author1":"Weigold"
  ,"zTarg1":27, "targ1":"Co-59", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -525,15 +517,7 @@
  ,"reacode":"27-CO-59(N,2N)27-CO-58,,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-S,0.5,4.)     ADDED AS COMMON:ERR-S,PER-CENT=0.5%"
 	,"ERR-ANALYS:(ERR-3,3.,4.)      ADDED AS COMMON:ERR-3,PER-CENT=3.0%"]
- ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
-	," #[0]#Reaction: 27-CO-59(N,2N)27-CO-58,,SIG"
-	," #[0]#Monitor:  29-CU-65(N,2N)29-CU-64,,SIG"
-	," m0: [EN,MONIT];               #[0]#old monitor(energy)"
-	," m1: recom$cu65n2n;            #[0]#new monitor(energy)"
-	," dy=dy/y;                      #to rel. uncertainties"
-	," y=y/m0*m1;                    #[0]#renormalizing CS"
-	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":9
+ ,"wx4data":8
  ,"lx4data":5
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -584,12 +568,6 @@
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.1,0.1,0.15,0.2,0.25]
     ,"dat1":[1.0e+5,1.0e+5,1.5e+5,2.0e+5,2.5e+5]}
-  ,{"ivar":8, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
-    ,"header":"MONIT", "units":"MB", "basicUnits":"B"
-    ,"what":"ZZZ", "dataType":"11", "rank":777.0
-    ,"expansion":"Assumed values: monitor"
-    ,"dat0":[550,null,null,null,null]
-    ,"dat1":[0.55,null,null,null,null]}
   ]
  ,"wc5data":2
  ,"lc5data":5
@@ -607,12 +585,6 @@
       ,"x1":[1.386e+7,1.411e+7,1.437e+7,1.459e+7,1.477e+7]
       ,"dx1":[1.0e+5,1.0e+5,1.5e+5,2.0e+5,2.5e+5]   }
  }
- ,"c5mon":{"m0ref":"[EN,MONIT]/cu65n2n", "m1ref":"recom/cu65n2n"
-      ,"enNorm":[1.386e+7,1.411e+7,1.437e+7,1.459e+7,1.477e+7]
-      ,"m0":[0.55,0.55,0.55,0.55,0.55]
-      ,"m1":[0.857144,0.891057,0.922094,0.945418,0.962699]
-      ,"dm1":[0.013199,0.0133569,0.0137474,0.0142621,0.0148166]
-      ,"Fc0":[1.55844,1.6201,1.67653,1.71894,1.75036] }
 }
    ]
    }
@@ -879,7 +851,7 @@
       ,"x1":[1.386e+7,1.411e+7,1.437e+7,1.459e+7,1.477e+7]
       ,"dx1":[1.0e+5,1.0e+5,1.5e+5,2.0e+5,2.5e+5]   }
  }
- ,"c5mon":{"m0ref":"[EN,MONIT]/cu65n2n", "m1ref":"recom/cu65n2n"
+ ,"c5mon":{"m0ref":"exfor/11645007_cu65n2n", "m1ref":"recom/cu65n2n"
       ,"enNorm":[1.386e+7,1.411e+7,1.437e+7,1.459e+7,1.477e+7]
       ,"m1":[0.857144,0.891057,0.922094,0.945418,0.962699]
       ,"dm1":[0.013199,0.0133569,0.0137474,0.0142621,0.0148166] }
