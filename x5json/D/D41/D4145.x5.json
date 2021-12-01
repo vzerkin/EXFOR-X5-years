@@ -1,9 +1,9 @@
-  {"ENTRY":"D4145", "updated":20130228, "TransID":"D087", "TransDate":20130408, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
+  {"ENTRY":"D4145", "updated":20211202, "TransID":"D133", "TransDate":20220112, "CenterID":"ATOMKI", "Center":"ATOMKI Nuclear Reaction Data Group, Debrecen, Hungary"
    ,"y1":2003,"a1":"Z.Kovacs+","r1":"J,JLCR,46,S267,2003"
    ,"ref":"Jour: J.of Labelled Compounds and Radiopharmaceut., Vol.46, p.S267 (2003)"
    ,"title":"Cross sections of proton induced reactions on nitrogen: Determination of 14-O and 13-N contaminants in 11-C production."
    ,"x4subents":[
-   {"SUBENT":"D4145001", "isub":1, "compiled":20130228, "TransID":"D087", "TransDate":20130408
+   {"SUBENT":"D4145001", "isub":1, "compiled":20211202, "TransID":"D133", "TransDate":20220112
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -88,8 +88,8 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":["Total error of the data were up to 15-20%."]
 	}
       ]
@@ -104,34 +104,30 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" VS. BIB section updated."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20211202A", "date":"20211202", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3=X in 002."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"D4145002", "isub":2, "compiled":20040601, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"D4145002", "isub":2, "compiled":20211202, "TransID":"D133", "TransDate":20220112
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(7-N-14(P,N+P)7-N-13,,SIG)+(7-N-14(P,D)7-N-13,,SIG)"
-	    ,"c4reac":"((P,N+P),SIG)+((P,D),SIG)"
-	    ,"combi":"a","combiQuant":"Cross section"
+	,"x4code":{"code":"7-N-14(P,X)7-N-13,,SIG"
+	    ,"c4reac":"(P,X),SIG"
+	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":1003
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"7-N-14(P,N+P)7-N-13,,SIG"
-		,"Reac":"P,N+P"
+	    {"code":"7-N-14(P,X)7-N-13,,SIG"
+		,"Reac":"P,X"
 		,"SF1":"7-N-14","Targ":{"code":"7-N-14","nam":"N-14","ZA":7014}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"N+P"
-		,"SF4":"7-N-13","Prod":{"code":"7-N-13","nam":"N-13","ZA":7013}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"7-N-14(P,D)7-N-13,,SIG"
-		,"Reac":"P,D"
-		,"SF1":"7-N-14","Targ":{"code":"7-N-14","nam":"N-14","ZA":7014}
-		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"D"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"7-N-13","Prod":{"code":"7-N-13","nam":"N-13","ZA":7013}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -146,8 +142,17 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Numerical data were received from Z. Kovacs"]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Numerical data were received from Z. Kovacs"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211202A", "date":"20211202", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VS. SF3=X."]
 	}
       ]
     }
@@ -159,12 +164,12 @@
       ,{"icol":1, "header":"DATA", "units":"MB", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
-      ,{"icol":2, "header":"ERR-T", "units":"MB", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":2, "header":"DATA-ERR", "units":"MB", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"millibarns","familyCode":"B","convFc":0.001,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"ERR-T"     ]
+	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MB"        ,"MB"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -174,12 +179,12 @@
 	,[25.62,34.2,2.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D4145002", "Pointer":" "
- ,"Subent":"D4145002", "compiled":20040601
+ ,"Subent":"D4145002", "compiled":20211202
  ,"year1":2003, "author1ini":"Z.", "author1":"Kovacs"
- ,"zTarg1":7, "targ1":"N-14", "proj1":"p", "emis1":"N+P", "MF":3, "MT":1003, "nExpectedArgs":1
+ ,"zTarg1":7, "targ1":"N-14", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(7-N-14(P,N+P)7-N-13,,SIG)+(7-N-14(P,D)7-N-13,,SIG)"
+ ,"reacode":"7-N-14(P,X)7-N-13,,SIG"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":4
@@ -191,7 +196,7 @@
     ,"dat0":[37.4,39.9,37.6,34.2]
     ,"dat1":[0.0374,0.0399,0.0376,0.0342]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"ERR-T", "units":"MB", "basicUnits":"B"
+    ,"header":"DATA-ERR", "units":"MB", "basicUnits":"B"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[2.2,2.4,2.3,2.1]
