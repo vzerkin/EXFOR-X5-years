@@ -1,9 +1,9 @@
-  {"ENTRY":"F1184", "updated":20200331, "TransID":"F081", "TransDate":20201008, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
+  {"ENTRY":"F1184", "updated":20211215, "TransID":"F094", "TransDate":20230309, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
    ,"y1":1967,"a1":"V.Yu.Gonchar+","r1":"J,SNP,5,843,1967"
    ,"ref":"Jour: Soviet Journal of Nuclear Physics, Vol.5, p.843 (1967)"
    ,"title":"Diffraction scattering of 40-MeV alpha particles by complex nuclei"
    ,"x4subents":[
-   {"SUBENT":"F1184001", "isub":1, "compiled":20200331, "TransID":"F081", "TransDate":20201008
+   {"SUBENT":"F1184001", "isub":1, "compiled":20211215, "TransID":"F094", "TransDate":20230309
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -83,6 +83,14 @@
 	,"x4freetext":[" 58Ni data"]
 	}
       ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":["   Error from the graphic bars. No source"
+		,"of uncertainty is given."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130422C", "date":"20130422", "act":"C", "dict":"HISTORY", "idict":15
@@ -91,13 +99,18 @@
 	,{"x4pointer":" "
 	,"x4code":{"code":"20200331D", "date":"20200331", "act":"D", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Entry or subentry deleted"}
-	,"x4freetext":[" On. 003(=D8015.002), 004(=D8015.003),"
+	,"x4freetext":[" On. 003(= D8015.002), 004(= D8015.003),"
 		," 005(=F0668.004) deleted."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20211215A", "date":"20211215", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. Major revision in 002."]
 	}
       ]
     }
    }
-  ,{"SUBENT":"F1184002", "isub":2, "compiled":20130422, "TransID":"F051", "TransDate":20130809
+  ,{"SUBENT":"F1184002", "isub":2, "compiled":20211215, "TransID":"F094", "TransDate":20230309
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -127,22 +140,35 @@
 	,"x4freetext":[" Fig.3"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20211215A", "date":"20211215", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. EN and ANG-ERR restored."]
+	}
+      ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
+    ,"COMMON":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"ANG-ERR-D", "units":"ADEG", "pointer":" "
+       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
+	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"ANG-ERR", "units":"ADEG", "pointer":" "
+	,"headerHelp":"Angle error", "pFlag":"9110000"
+	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
+      ,{"icol":2, "header":"ANG-ERR-D", "units":"ADEG", "pointer":" "
 	,"headerHelp":"Digitizing error of angle", "pFlag":"9550000"
 	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
-      ,{"icol":1, "header":"ERR-DIG", "units":"PER-CENT", "pointer":" "
+      ,{"icol":3, "header":"ERR-DIG", "units":"PER-CENT", "pointer":" "
 	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["ANG-ERR-D" ,"ERR-DIG"   ]
-	,["ADEG"      ,"PER-CENT"  ]
-	,[" "         ," "         ]]
+	 ["EN"        ,"ANG-ERR"   ,"ANG-ERR-D" ,"ERR-DIG"   ]
+	,["MEV"       ,"ADEG"      ,"ADEG"      ,"PER-CENT"  ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [0.123,0.018]]}
+	 [40,0.4,0.123,0.018]]}
     ,"DATA":{"ncols":3, "nrows":49
       ,"x4headers":[
        {"icol":0, "header":"ANG-CM", "units":"ADEG", "pointer":" "
@@ -211,14 +237,15 @@
 	,[62.837,0.3648,0.0423]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"F1184002", "Pointer":" "
- ,"Subent":"F1184002", "compiled":20130422
+ ,"Subent":"F1184002", "compiled":20211215
  ,"year1":1967, "author1ini":"V.Yu.", "author1":"Gonchar"
  ,"zTarg1":32, "targ1":"Ge-0", "proj1":"a", "emis1":"EL", "MF":4, "MT":2, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=y(x1,x2)"
+ ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
  ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
  ,"reacode":"32-GE-0(A,EL)32-GE-0,,DA"
- ,"compNotes":["Ignored column:ERR-DIG,PER-CENT (digitizing error)"]
- ,"wx4data":5
+ ,"compNotes":["Conversion from C.M. to Lab: successful"
+	,"Ignored column:ERR-DIG,PER-CENT (digitizing error)"]
+ ,"wx4data":7
  ,"lx4data":49
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":true
@@ -255,7 +282,13 @@
     ,"expansion":"Data: data /Error/"
     ,"com0":0.018
     ,"com1":0.018}
-  ,{"ivar":3, "cvar":"x2", "fam":"ANG", "ifComm":false, "ifCM":true
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":40
+    ,"com1":4.0e+7}
+  ,{"ivar":4, "cvar":"x2", "fam":"ANG", "ifComm":false, "ifCM":true
     ,"header":"ANG-CM", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X2.Value", "dataType":"61", "rank":2.1
     ,"expansion":"Angle: angle"
@@ -265,7 +298,13 @@
 	,41.803,42.864,43.936,44.97,46.026,47.03,48.36,49.338,50.372,51.503
 	,52.517,53.358,54.351,55.402,56.447,57.146,58.359,60.504,62.837]
    ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"dx2", "fam":"ANG", "ifComm":true , "ifCM":false
+  ,{"ivar":5, "cvar":"dx2", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG-ERR", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X2.Err+-", "dataType":"61", "rank":2.911
+    ,"expansion":"Angle: angle /Error/"
+    ,"com0":0.4
+    ,"com1":0.4}
+  ,{"ivar":6, "cvar":"dx2", "fam":"ANG", "ifComm":true , "ifCM":false
     ,"header":"ANG-ERR-D", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X2.pErr+-", "dataType":"61", "rank":2.955
     ,"expansion":"Angle: angle /Error/"
@@ -275,32 +314,41 @@
  ,"wc5data":3
  ,"lc5data":49
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":true, "units":"B/SR"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[3.6776,3.2389,1.8514,1.3551,0.84149,0.72648,0.56488,0.4053,0.25643,0.18014
-	,0.1651,0.13663,0.12048,0.10598,0.10133,0.087375,0.068065,0.050824,0.032216,0.017302
-	,0.0119,0.011615,0.01182,0.014764,0.015336,0.013498,0.01074,0.0062551,0.0039673,0.0030867
-	,0.002453,0.0026534,0.0029906,0.0029189,0.0030932,0.0026688,0.0021182,0.0016491,0.0016096,0.0011535
-	,0.001037,9.328e-4,7.724e-4,8.018e-4,8.155e-4,8.304e-4,8.268e-4,5.327e-4,3.648e-4]
-      ,"dy":[0.42673,0.25566,0.14614,0.13161,0.097182,0.070957,0.065544,0.039587,0.020241,0.010773
-	,0.016126,0.010707,0.007205,0.01041,0.0098976,0.0085342,0.0066481,0.0058972,0.0025429,0.00169
-	,0.0013743,0.0011345,9.33e-4,0.0017131,9.172e-4,0.0013184,0.0012462,4.902e-4,3.875e-4,3.582e-4
-	,3.287e-4,2.094e-4,2.921e-4,2.851e-4,2.442e-4,2.607e-4,2.069e-4,1.914e-4,1.271e-4,1.338e-4
-	,1.203e-4,9.11e-5,7.54e-5,7.83e-5,9.46e-5,6.55e-5,6.53e-5,5.2e-5,4.23e-5]   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":true, "units":"ADEG"
+      ,"y":[4.08794,3.59914,2.05655,1.50471,0.93405,0.806102,0.626409,0.449274,0.284038,0.199429
+	,0.182632,0.151028,0.133119,0.116991,0.111776,0.096298,0.0749697,0.055929,0.0354249,0.0190055
+	,0.0130587,0.0127339,0.0129481,0.016156,0.0167674,0.0147401,0.0117206,0.00681459,0.00431859,0.0033557
+	,0.00266377,0.00287781,0.00323938,0.00315773,0.00334189,0.0028797,0.00228165,0.00177406,0.00172916,0.00123727
+	,0.00111074,9.97944e-4,8.25169e-4,8.55272e-4,8.68549e-4,8.83497e-4,8.78058e-4,5.63858e-4,3.84715e-4]
+      ,"dy":[0.474344,0.284095,0.162334,0.146141,0.107872,0.0787339,0.0726833,0.0438821,0.0224202,0.0119265
+	,0.0178384,0.0118353,0.00796086,0.0114915,0.0109179,0.00940574,0.0073225,0.00648954,0.00279619,0.00185639
+	,0.00150811,0.00124379,0.00102204,0.00187462,0.00100281,0.00143972,0.00135998,5.34046e-4,4.21812e-4,3.89416e-4
+	,3.56943e-4,2.2711e-4,3.16399e-4,3.08427e-4,2.63834e-4,2.81301e-4,2.22866e-4,2.05903e-4,1.36541e-4,1.43516e-4
+	,1.28854e-4,9.74621e-5,8.05512e-5,8.35219e-5,1.00754e-4,6.96882e-5,6.93484e-5,5.50416e-5,4.46092e-5]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7
+	,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7
+	,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7
+	,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7
+	,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7,4.0e+7]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
       ,"header":"ANG", "dataType":"61", "rank":2.0
       ,"expansion":"Angle: angle"
-      ,"x2":[10.337,11.346,12.419,13.381,14.302,15.132,16.457,17.241,18.687,19.638
-	,21.004,22.171,22.833,24.189,25.219,26.396,27.2,28.341,29.267,30.498
-	,31.618,32.653,33.525,34.622,35.5,36.682,37.318,38.917,39.669,40.82
-	,41.803,42.864,43.936,44.97,46.026,47.03,48.36,49.338,50.372,51.503
-	,52.517,53.358,54.351,55.402,56.447,57.146,58.359,60.504,62.837]
-      ,"dx2":[0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123
-	,0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123
-	,0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123
-	,0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123
-	,0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123,0.123]   }
+      ,"x2":[9.8,10.8,11.8,12.7,13.6,14.3,15.6,16.4,17.7,18.6
+	,19.9,21,21.7,23,23.9,25.1,25.8,26.9,27.8,29
+	,30,31,31.9,32.9,33.7,34.9,35.5,37,37.7,38.8
+	,39.8,40.8,41.8,42.8,43.8,44.8,46.1,47,48,49.1
+	,50.1,50.9,51.9,52.9,53.9,54.6,55.7,57.8,60.1]
+      ,"dx2":[0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4
+	,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4
+	,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4
+	,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4
+	,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4]   }
  }
 }
    ]
