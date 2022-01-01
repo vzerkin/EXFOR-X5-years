@@ -1,9 +1,9 @@
-  {"ENTRY":"23591", "updated":20210228, "TransID":"2299", "TransDate":20210603, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"23591", "updated":20220102, "TransID":"2307", "TransDate":20220317, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1987,"a1":"Ch.Straede+","r1":"J,NP/A,462,85,1987"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.462, p.85 (1987)"
    ,"title":"235U(n,f) fragment mass-, kinetic energy- and angular distributions for incident neutron energies between thermal and 6 MeV"
    ,"x4subents":[
-   {"SUBENT":"23591001", "isub":1, "compiled":20210228, "TransID":"2299", "TransDate":20210603
+   {"SUBENT":"23591001", "isub":1, "compiled":20220102, "TransID":"2307", "TransDate":20220317
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -522,6 +522,11 @@
 	,"x4code":{"code":"20210228C", "date":"20210228", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":["  M.M."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220102A", "date":"20220102", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Correction in Subent 005."]
 	}
       ]
     }
@@ -3009,7 +3014,7 @@
 }
    ]
    }
-  ,{"SUBENT":"23591005", "isub":5, "compiled":20210228, "TransID":"2299", "TransDate":20210603
+  ,{"SUBENT":"23591005", "isub":5, "compiled":20220102, "TransID":"2307", "TransDate":20220317
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -3035,7 +3040,7 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":[" Yields were normaliezed to 100 % at each outgoing"
-		,"energy ."]
+		,"energy."]
 	}
       ]
      ,"EN-SEC":[
@@ -3064,20 +3069,28 @@
 	,"x4freetext":[" Fig.11 of Nucl.Phys.Sect.A,v.462,p.85,1987"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220102A", "date":"20220102", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: E-ERR-HW -> E-RSL-HW."]
+	}
+      ]
     }
     ,"COMMON":{"ncols":3, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-DUMMY", "units":"EV", "pointer":" "
 	,"headerHelp":"Dummy incident proj. energy, for broad spectrum", "pFlag":"1000000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"E-ERR-HW", "units":"MEV", "pointer":" ", "unknownHeader":true
+      ,{"icol":1, "header":"E-RSL-HW", "units":"MEV", "pointer":" "
+	,"headerHelp":"Outgoing particle energy resolution (half width)", "pFlag":"9330000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":2, "header":"ERR-DIG", "units":"PC/FIS", "pointer":" "
 	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
 	,"unitsHelp":"particles per 100 fissions","familyCode":"FY","convFc":0.01,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
-	 ["EN-DUMMY"  ,"E-ERR-HW"  ,"ERR-DIG"   ]
+	 ["EN-DUMMY"  ,"E-RSL-HW"  ,"ERR-DIG"   ]
 	,["EV"        ,"MEV"       ,"PC/FIS"    ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -3365,7 +3378,7 @@
 	,[115,109,0.084,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"23591005", "Pointer":" "
- ,"Subent":"23591005", "compiled":20210228
+ ,"Subent":"23591005", "compiled":20220102
  ,"year1":1987, "author1ini":"Ch.", "author1":"Straede"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 23   7   ", "getYFormulaStr":"y=DATA(SpE,E2,ZAM)"
@@ -3561,7 +3574,13 @@
 	,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8
 	,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8
 	,1.15e+8]}
-  ,{"ivar":5, "cvar":"x3", "fam":"ZAM", "ifComm":false, "ifCM":false
+  ,{"ivar":5, "cvar":"dx2", "fam":"E2", "ifComm":true , "ifCM":false
+    ,"header":"E-RSL-HW", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.hRes+-", "dataType":"51", "rank":2.933
+    ,"expansion":"Secondary energy: particle energy /Error/"
+    ,"com0":0.5
+    ,"com1":5.0e+5}
+  ,{"ivar":6, "cvar":"x3", "fam":"ZAM", "ifComm":false, "ifCM":false
     ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
     ,"what":"X3.Value", "dataType":"92", "rank":3.1
     ,"expansion":"Isotope/particle identification: mass"
@@ -3593,12 +3612,6 @@
 	,99,100,101,102,103,104,105,106,107,108
 	,109]
    ,"dat1eq":true}
-  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":true , "ifCM":false
-    ,"header":"E-ERR-HW", "units":"MEV", "basicUnits":"EV"
-    ,"what":"ZZZ", "dataType":"null", "rank":777.0
-    ,"expansion":""
-    ,"com0":0.5
-    ,"com1":5.0e+5}
   ]
  ,"wc5data":4
  ,"lc5data":261
@@ -3721,7 +3734,33 @@
 	,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8
 	,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8,1.15e+8
 	,1.15e+8]
-   }
+      ,"dx2":[1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6,1.0e+6
+	,1.0e+6]   }
    ,"x3":{"icvar":3, "cvar":"x3", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"92", "rank":3.0
       ,"expansion":"Isotope/particle identification: mass"
