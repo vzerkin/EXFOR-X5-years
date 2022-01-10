@@ -1,9 +1,9 @@
-  {"ENTRY":"O0842", "updated":20200113, "TransID":"O073", "TransDate":20200301, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O0842", "updated":20220111, "TransID":"O087", "TransDate":20220504, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":2000,"a1":"J.Adam+","r1":"C,2000STPETR,,301,2000"
    ,"ref":"Conf: Conf.Nucl.Spectr.Nucl.Struct.,St.Petersbg.,June 2000, p.301 (2000)"
    ,"title":"Results of investigation of proton-nuclear reactions on radioactive Np-237"
    ,"x4subents":[
-   {"SUBENT":"O0842001", "isub":1, "compiled":20200113, "TransID":"O073", "TransDate":20200301
+   {"SUBENT":"O0842001", "isub":1, "compiled":20220111, "TransID":"O087", "TransDate":20220504
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -116,6 +116,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: Corrections in Subents 002, 006, 007,"
 		,"017, 020,025, 027, 028, 033, 035, 040, 049."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220111A", "date":"20220111", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Corrections in Subent 014."]
 	}
       ]
     }
@@ -1565,35 +1570,27 @@
 }
    ]
    }
-  ,{"SUBENT":"O0842014", "isub":14, "compiled":20131017, "TransID":"O051", "TransDate":20140415
+  ,{"SUBENT":"O0842014", "isub":14, "compiled":20220111, "TransID":"O087", "TransDate":20220504
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"93-NP-237(P,X)41-NB-95,M+,SIG"
-	    ,"c4reac":"(P,X)M+,SIG"
+	,"x4code":{"code":"93-NP-237(P,X)41-NB-95-G,CUM,SIG"
+	    ,"c4reac":"(P,X)CUM,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":9001
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"93-NP-237(P,X)41-NB-95,M+,SIG"
+	    {"code":"93-NP-237(P,X)41-NB-95-G,CUM,SIG"
 		,"Reac":"P,X"
 		,"SF1":"93-NP-237","Targ":{"code":"93-NP-237","nam":"Np-237","ZA":93237}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"41-NB-95","Prod":{"code":"41-NB-95","nam":"Nb-95","ZA":41095}
-		,"SF5":"M+"
+		,"SF4":"41-NB-95-G","Prod":{"code":"41-NB-95-G","nam":"Nb-95-g","ZA":41095,"ProdM":"G"}
+		,"SF5":"CUM"
 		,"SF6":"SIG"
-		,"SF58":"M+,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section, incl. form. via isomeric trans."
+		,"SF58":"CUM,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cumulative cross section"
 	    }]}
-	}
-      ]
-     ,"COMMENT":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["*By Compiler*. Original text contains \"-Nb-95,Cum\"."
-		,"It is a misprint, as cumulative cross section of  Nb-95"
-		,"can not be less than cumulative cross section of Zr-95."
-		,"Probably \"-Nb-95,M+\" was obtained."]
 	}
       ]
      ,"STATUS":[
@@ -1602,6 +1599,14 @@
 		,"flag":"SPSDD", "help":"Data superseded or withdrawn"
 		,"subent":"O0989004"
 		}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220111A", "date":"20220111", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=Nb-95 -> Nb-95-G; SF5=M+ -> CUM in"
+		,"REACTION code."]
 	}
       ]
     }
@@ -1628,15 +1633,15 @@
 	 [660,21.05,2,10.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O0842014", "Pointer":" "
- ,"Subent":"O0842014", "compiled":20131017
+ ,"Subent":"O0842014", "compiled":20220111
  ,"year1":2000, "author1ini":"J.", "author1":"Adam"
- ,"zTarg1":93, "targ1":"Np-237", "proj1":"p", "emis1":"X", "MF":3, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":93, "targ1":"Np-237", "proj1":"p", "emis1":"X", "MF":3, "MT":9001, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section, incl. form. via isomeric trans."
- ,"reacode":"93-NP-237(P,X)41-NB-95,M+,SIG"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cumulative cross section"
+ ,"reacode":"93-NP-237(P,X)41-NB-95-G,CUM,SIG"
  ,"compNotes":[]
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
-	," #[0]#Reaction: 93-NP-237(P,X)41-NB-95,M+,SIG"
+	," #[0]#Reaction: 93-NP-237(P,X)41-NB-95-G,CUM,SIG"
 	," #[0]#Monitor:  13-AL-27(P,X)11-NA-24,,SIG"
 	," #[0]#En=6.6E8"
 	," a0=[MONIT];                   #[0]#old monitor point 0.0102"
