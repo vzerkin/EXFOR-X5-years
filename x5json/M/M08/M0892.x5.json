@@ -1,9 +1,9 @@
-  {"ENTRY":"M0892", "updated":20150204, "TransID":"M077", "TransDate":20150413, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
+  {"ENTRY":"M0892", "updated":20220124, "TransID":"M117", "TransDate":20220401, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
    ,"y1":1990,"a1":"A.D.Antonov+","r1":"J,YF,51,305,1990"
    ,"ref":"Jour: Yadernaya Fizika, Vol.51, p.305 (1990)"
    ,"title":"Studies of photonuclear reactions with emission of alpha particles in the region of the giant dipole resonance."
    ,"x4subents":[
-   {"SUBENT":"M0892001", "isub":1, "compiled":20150204, "TransID":"M077", "TransDate":20150413
+   {"SUBENT":"M0892001", "isub":1, "compiled":20220124, "TransID":"M117", "TransDate":20220401
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -77,11 +77,18 @@
 		,"reaction":"29-CU-65(G,N)29-CU-64,,SIG,,BRS"}
 	}
       ]
-     ,"REL-REF":[
+     ,"ANALYSIS":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"E,M0273007,L.Katz+,J,CJP,29,518,1951"
-		,"flag":{"code":"E", "help":" Reference to related data compiled in another entry"}
-		,"subent":"M0273007","author1":"L.Katz+","stdFileName":"J,CJP,29,518,1951"
+	,"x4code":null
+	,"x4freetext":["Integrated  cross  section  derived  from  the  yield"
+		," assuming that the cross section is a constant of the"
+		," incident energy."]
+	}
+      ]
+     ,"MONIT-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"MONIT)M0273007,L.Katz+,J,CJP,29,518,1951"
+		,"subent":"MONIT)M0273007","author1":"L.Katz+","stdFileName":"J,CJP,29,518,1951"
 		,"year":1951,"typ":"J","ref":"J,CJP","vol":"29","p":"518"
 		,"shortRef":"Jour: Canadian Journal of Physics, Vol.29, p.518 (1951)"}]
 	,"x4freetext":[" Cross section for 65Cu(g,n) reaction."]
@@ -102,26 +109,33 @@
 	,"x4freetext":[" Data  were compiled at the RUSSIA MSU INP"
 		," CDFE by V.Varlamov."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220124A", "date":"20220124", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REL-REF ->"
+		," MONIT-REF in SUBENT 001 REL-REF in SUBENTS 008 - 011,"
+		," ANALYSIS in SUBENTs 002 - 007, STATUS."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"M0892002", "isub":2, "compiled":20150204, "TransID":"M077", "TransDate":20150413
+  ,{"SUBENT":"M0892002", "isub":2, "compiled":20220124, "TransID":"M117", "TransDate":20220401
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"23-V-51(G,A)21-SC-47,,INT,,BRA"
-	    ,"c4reac":"(G,A),INT,,BRA"
+	,"x4code":{"code":"23-V-51(G,A)21-SC-47,,INT,,BRS"
+	    ,"c4reac":"(G,A),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"23-V-51(G,A)21-SC-47,,INT,,BRA"
+	    {"code":"23-V-51(G,A)21-SC-47,,INT,,BRS"
 		,"Reac":"G,A"
 		,"SF1":"23-V-51","Targ":{"code":"23-V-51","nam":"V-51","ZA":23051}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"A"
 		,"SF4":"21-SC-47","Prod":{"code":"21-SC-47","nam":"Sc-47","ZA":21047}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
 	}
@@ -144,12 +158,28 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"CRITIQUE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["DATA are in MeV-mb, not in MeV-b as in the article"
+		," table 3 (from  Filip Kondev (2022-01-26))."]
+	}
+      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data from tables 3 and 1."]
+	,"x4freetext":[" Data from tables 3 and 1 of"
+		," Sov.Nucl.Phys.,51(1990)193."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220124A", "date":"20220124", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: DATA substituted,"
+		," INT,,BRA -> INT,,BRS, STATUS."]
 	}
       ]
     }
@@ -167,15 +197,15 @@
 	,["MEV"       ,"MB*MEV"    ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [25,4800]]}
+	 [25,4.8]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0892002", "Pointer":" "
- ,"Subent":"M0892002", "compiled":20150204
+ ,"Subent":"M0892002", "compiled":20220124
  ,"year1":1990, "author1ini":"A.D.", "author1":"Antonov"
  ,"zTarg1":23, "targ1":"V-51", "proj1":"g", "emis1":"A", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"23-V-51(G,A)21-SC-47,,INT,,BRA"
+ ,"reacode":"23-V-51(G,A)21-SC-47,,INT,,BRS"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -184,8 +214,8 @@
     ,"header":"DATA", "units":"MB*MEV", "basicUnits":"B*EV"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[4800]
-    ,"dat1":[4.8e+6]}
+    ,"dat0":[4.8]
+    ,"dat1":[4800]}
   ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Max", "dataType":"41", "rank":1.3
@@ -199,7 +229,7 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B*EV"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[4.8e+6]
+      ,"y":[4800]
    }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
@@ -210,23 +240,23 @@
 }
    ]
    }
-  ,{"SUBENT":"M0892003", "isub":3, "compiled":20150204, "TransID":"M077", "TransDate":20150413
+  ,{"SUBENT":"M0892003", "isub":3, "compiled":20220124, "TransID":"M117", "TransDate":20220401
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"29-CU-65(G,A)27-CO-61,,INT,,BRA"
-	    ,"c4reac":"(G,A),INT,,BRA"
+	,"x4code":{"code":"29-CU-65(G,A)27-CO-61,,INT,,BRS"
+	    ,"c4reac":"(G,A),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"29-CU-65(G,A)27-CO-61,,INT,,BRA"
+	    {"code":"29-CU-65(G,A)27-CO-61,,INT,,BRS"
 		,"Reac":"G,A"
 		,"SF1":"29-CU-65","Targ":{"code":"29-CU-65","nam":"Cu-65","ZA":29065}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"A"
 		,"SF4":"27-CO-61","Prod":{"code":"27-CO-61","nam":"Co-61","ZA":27061}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
 	}
@@ -249,12 +279,28 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"CRITIQUE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["DATA are in MeV-mb, not in MeV-b as in the article"
+		," table 3 (from  Filip Kondev (2022-01-26))."]
+	}
+      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data from tables 3 and 1."]
+	,"x4freetext":[" Data from tables 3 and 1 of"
+		," Sov.Nucl.Phys.,51(1990)193."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220124A", "date":"20220124", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: DATA substituted,"
+		," INT,,BRA -> INT,,BRS, STATUS."]
 	}
       ]
     }
@@ -272,15 +318,15 @@
 	,["MEV"       ,"MB*MEV"    ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [25,9200]]}
+	 [25,9.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0892003", "Pointer":" "
- ,"Subent":"M0892003", "compiled":20150204
+ ,"Subent":"M0892003", "compiled":20220124
  ,"year1":1990, "author1ini":"A.D.", "author1":"Antonov"
  ,"zTarg1":29, "targ1":"Cu-65", "proj1":"g", "emis1":"A", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"29-CU-65(G,A)27-CO-61,,INT,,BRA"
+ ,"reacode":"29-CU-65(G,A)27-CO-61,,INT,,BRS"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -289,8 +335,8 @@
     ,"header":"DATA", "units":"MB*MEV", "basicUnits":"B*EV"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[9200]
-    ,"dat1":[9.2e+6]}
+    ,"dat0":[9.2]
+    ,"dat1":[9200]}
   ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Max", "dataType":"41", "rank":1.3
@@ -304,7 +350,7 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B*EV"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[9.2e+6]
+      ,"y":[9200]
    }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
@@ -315,23 +361,23 @@
 }
    ]
    }
-  ,{"SUBENT":"M0892004", "isub":4, "compiled":20150204, "TransID":"M077", "TransDate":20150413
+  ,{"SUBENT":"M0892004", "isub":4, "compiled":20220124, "TransID":"M117", "TransDate":20220401
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"32-GE-76(G,A)30-ZN-72,,INT,,BRA"
-	    ,"c4reac":"(G,A),INT,,BRA"
+	,"x4code":{"code":"32-GE-76(G,A)30-ZN-72,,INT,,BRS"
+	    ,"c4reac":"(G,A),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"32-GE-76(G,A)30-ZN-72,,INT,,BRA"
+	    {"code":"32-GE-76(G,A)30-ZN-72,,INT,,BRS"
 		,"Reac":"G,A"
 		,"SF1":"32-GE-76","Targ":{"code":"32-GE-76","nam":"Ge-76","ZA":32076}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"A"
 		,"SF4":"30-ZN-72","Prod":{"code":"30-ZN-72","nam":"Zn-72","ZA":30072}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
 	}
@@ -339,7 +385,7 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":{"Nucl":"32-GE-76","ENR":0.76}
-	,"x4freetext":[" GEO."]
+	,"x4freetext":[" GeO."]
 	}
       ]
      ,"DECAY-DATA":[
@@ -354,12 +400,28 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"CRITIQUE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["DATA are in MeV-mb, not in MeV-b as in the article"
+		," table 3 (from  Filip Kondev (2022-01-26))."]
+	}
+      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data from tables 3 and 1."]
+	,"x4freetext":[" Data from tables 3 and 1 of"
+		," Sov.Nucl.Phys.,51(1990)193."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220124A", "date":"20220124", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: DATA substituted,"
+		," INT,,BRA -> INT,,BRS, STATUS."]
 	}
       ]
     }
@@ -377,15 +439,15 @@
 	,["MEV"       ,"MB*MEV"    ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [25,1300]]}
+	 [25,1.3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0892004", "Pointer":" "
- ,"Subent":"M0892004", "compiled":20150204
+ ,"Subent":"M0892004", "compiled":20220124
  ,"year1":1990, "author1ini":"A.D.", "author1":"Antonov"
  ,"zTarg1":32, "targ1":"Ge-76", "proj1":"g", "emis1":"A", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"32-GE-76(G,A)30-ZN-72,,INT,,BRA"
+ ,"reacode":"32-GE-76(G,A)30-ZN-72,,INT,,BRS"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -394,8 +456,8 @@
     ,"header":"DATA", "units":"MB*MEV", "basicUnits":"B*EV"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[1300]
-    ,"dat1":[1.3e+6]}
+    ,"dat0":[1.3]
+    ,"dat1":[1300]}
   ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Max", "dataType":"41", "rank":1.3
@@ -409,7 +471,7 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B*EV"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[1.3e+6]
+      ,"y":[1300]
    }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
@@ -420,23 +482,23 @@
 }
    ]
    }
-  ,{"SUBENT":"M0892005", "isub":5, "compiled":20150204, "TransID":"M077", "TransDate":20150413
+  ,{"SUBENT":"M0892005", "isub":5, "compiled":20220124, "TransID":"M117", "TransDate":20220401
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"41-NB-93(G,A)39-Y-89-M,,INT,,BRA"
-	    ,"c4reac":"(G,A),INT,,BRA"
+	,"x4code":{"code":"41-NB-93(G,A)39-Y-89-M,,INT,,BRS"
+	    ,"c4reac":"(G,A),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"41-NB-93(G,A)39-Y-89-M,,INT,,BRA"
+	    {"code":"41-NB-93(G,A)39-Y-89-M,,INT,,BRS"
 		,"Reac":"G,A"
 		,"SF1":"41-NB-93","Targ":{"code":"41-NB-93","nam":"Nb-93","ZA":41093}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"A"
 		,"SF4":"39-Y-89-M","Prod":{"code":"39-Y-89-M","nam":"Y-89-m","ZA":39089,"ProdM":"M"}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
 	}
@@ -444,7 +506,7 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":{"Nucl":"41-NB-93","ENR":1.0}
-	,"x4freetext":[" NBO."]
+	,"x4freetext":[" NbO."]
 	}
       ]
      ,"DECAY-DATA":[
@@ -459,12 +521,28 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"CRITIQUE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["DATA are in MeV-mb, not in MeV-b as in the article"
+		," table 3 (from  Filip Kondev (2022-01-26))."]
+	}
+      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data from tables 3 and 1."]
+	,"x4freetext":[" Data from tables 3 and 1 of"
+		," Sov.Nucl.Phys.,51(1990)193."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220124A", "date":"20220124", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: DATA substituted,"
+		," INT,,BRA -> INT,,BRS, STATUS."]
 	}
       ]
     }
@@ -482,15 +560,15 @@
 	,["MEV"       ,"MB*MEV"    ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [25,1200]]}
+	 [25,1.2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0892005", "Pointer":" "
- ,"Subent":"M0892005", "compiled":20150204
+ ,"Subent":"M0892005", "compiled":20220124
  ,"year1":1990, "author1ini":"A.D.", "author1":"Antonov"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"g", "emis1":"A", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"41-NB-93(G,A)39-Y-89-M,,INT,,BRA"
+ ,"reacode":"41-NB-93(G,A)39-Y-89-M,,INT,,BRS"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -499,8 +577,8 @@
     ,"header":"DATA", "units":"MB*MEV", "basicUnits":"B*EV"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[1200]
-    ,"dat1":[1.2e+6]}
+    ,"dat0":[1.2]
+    ,"dat1":[1200]}
   ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Max", "dataType":"41", "rank":1.3
@@ -514,7 +592,7 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B*EV"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[1.2e+6]
+      ,"y":[1200]
    }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
@@ -525,23 +603,23 @@
 }
    ]
    }
-  ,{"SUBENT":"M0892006", "isub":6, "compiled":20150204, "TransID":"M077", "TransDate":20150413
+  ,{"SUBENT":"M0892006", "isub":6, "compiled":20220124, "TransID":"M117", "TransDate":20220401
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"68-ER-170(G,A)66-DY-166,,INT,,BRA"
-	    ,"c4reac":"(G,A),INT,,BRA"
+	,"x4code":{"code":"68-ER-170(G,A)66-DY-166,,INT,,BRS"
+	    ,"c4reac":"(G,A),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"68-ER-170(G,A)66-DY-166,,INT,,BRA"
+	    {"code":"68-ER-170(G,A)66-DY-166,,INT,,BRS"
 		,"Reac":"G,A"
 		,"SF1":"68-ER-170","Targ":{"code":"68-ER-170","nam":"Er-170","ZA":68170}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"A"
 		,"SF4":"66-DY-166","Prod":{"code":"66-DY-166","nam":"Dy-166","ZA":66166}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
 	}
@@ -549,7 +627,7 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":{"Nucl":"68-ER-170","ENR":0.98}
-	,"x4freetext":[" ER2O3."]
+	,"x4freetext":[" Er2O3."]
 	}
       ]
      ,"DECAY-DATA":[
@@ -564,12 +642,28 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"CRITIQUE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["DATA are in MeV-mb, not in MeV-b as in the article"
+		," table 3 (from  Filip Kondev (2022-01-26))."]
+	}
+      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data from tables 3 and 1."]
+	,"x4freetext":[" Data from tables 3 and 1 of"
+		," Sov.Nucl.Phys.,51(1990)193."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220124A", "date":"20220124", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: DATA substituted,"
+		," INT,,BRA -> INT,,BRS, STATUS."]
 	}
       ]
     }
@@ -587,15 +681,15 @@
 	,["MEV"       ,"MB*MEV"    ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [25,500]]}
+	 [25,0.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0892006", "Pointer":" "
- ,"Subent":"M0892006", "compiled":20150204
+ ,"Subent":"M0892006", "compiled":20220124
  ,"year1":1990, "author1ini":"A.D.", "author1":"Antonov"
  ,"zTarg1":68, "targ1":"Er-170", "proj1":"g", "emis1":"A", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"68-ER-170(G,A)66-DY-166,,INT,,BRA"
+ ,"reacode":"68-ER-170(G,A)66-DY-166,,INT,,BRS"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -604,8 +698,8 @@
     ,"header":"DATA", "units":"MB*MEV", "basicUnits":"B*EV"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[500]
-    ,"dat1":[5.0e+5]}
+    ,"dat0":[0.5]
+    ,"dat1":[500]}
   ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Max", "dataType":"41", "rank":1.3
@@ -619,7 +713,7 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B*EV"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[5.0e+5]
+      ,"y":[500]
    }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
@@ -630,23 +724,23 @@
 }
    ]
    }
-  ,{"SUBENT":"M0892007", "isub":7, "compiled":20150204, "TransID":"M077", "TransDate":20150413
+  ,{"SUBENT":"M0892007", "isub":7, "compiled":20220124, "TransID":"M117", "TransDate":20220401
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"73-TA-181(G,A)71-LU-177-G,,INT,,BRA"
-	    ,"c4reac":"(G,A),INT,,BRA"
+	,"x4code":{"code":"73-TA-181(G,A)71-LU-177-G,,INT,,BRS"
+	    ,"c4reac":"(G,A),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"73-TA-181(G,A)71-LU-177-G,,INT,,BRA"
+	    {"code":"73-TA-181(G,A)71-LU-177-G,,INT,,BRS"
 		,"Reac":"G,A"
 		,"SF1":"73-TA-181","Targ":{"code":"73-TA-181","nam":"Ta-181","ZA":73181}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"A"
 		,"SF4":"71-LU-177-G","Prod":{"code":"71-LU-177-G","nam":"Lu-177-g","ZA":71177,"ProdM":"G"}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
 	}
@@ -654,7 +748,7 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":{"Nucl":"73-TA-181","ENR":0.999}
-	,"x4freetext":[" Natural tantalun."]
+	,"x4freetext":[" Natural tantalum."]
 	}
       ]
      ,"DECAY-DATA":[
@@ -669,12 +763,28 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"CRITIQUE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["DATA are in MeV-mb, not in MeV-b as in the article"
+		," table 3 (from  Filip Kondev (2022-01-26))."]
+	}
+      ]
      ,"STATUS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data from tables 3 and 1."]
+	,"x4freetext":[" Data from tables 3 and 1 of"
+		," Sov.Nucl.Phys.,51(1990)193."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220124A", "date":"20220124", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: DATA substituted,"
+		," INT,,BRA -> INT,,BRS, STATUS."]
 	}
       ]
     }
@@ -692,15 +802,15 @@
 	,["MEV"       ,"MB*MEV"    ]
 	,[" "         ," "         ]]
       ,"data":[
-	 [25,60]]}
+	 [25,0.06]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0892007", "Pointer":" "
- ,"Subent":"M0892007", "compiled":20150204
+ ,"Subent":"M0892007", "compiled":20220124
  ,"year1":1990, "author1ini":"A.D.", "author1":"Antonov"
  ,"zTarg1":73, "targ1":"Ta-181", "proj1":"g", "emis1":"A", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"73-TA-181(G,A)71-LU-177-G,,INT,,BRA"
+ ,"reacode":"73-TA-181(G,A)71-LU-177-G,,INT,,BRS"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -709,8 +819,8 @@
     ,"header":"DATA", "units":"MB*MEV", "basicUnits":"B*EV"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
-    ,"dat0":[60]
-    ,"dat1":[6.0e+4]}
+    ,"dat0":[0.06]
+    ,"dat1":[60]}
   ,{"ivar":1, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
     ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Max", "dataType":"41", "rank":1.3
@@ -724,7 +834,7 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B*EV"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[6.0e+4]
+      ,"y":[60]
    }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
@@ -735,7 +845,7 @@
 }
    ]
    }
-  ,{"SUBENT":"M0892008", "isub":8, "compiled":20150204, "TransID":"M077", "TransDate":20150413
+  ,{"SUBENT":"M0892008", "isub":8, "compiled":20220124, "TransID":"M117", "TransDate":20220401
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -772,8 +882,8 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"E,,V.E.Zhuchko,J,YF,25,299,1977"
-		,"flag":{"code":"E", "help":" Reference to related data compiled in another entry"}
+	,"x4codes":[{"code":"M,,V.E.Zhuchko,J,YF,25,299,1977"
+		,"flag":{"code":"M", "help":" Reference to related data compiled in another entry"}
 		,"author1":"V.E.Zhuchko","stdFileName":"J,YF,25,299,1977"
 		,"year":1977,"typ":"J","ref":"J,YF","vol":"25","p":"299"
 		,"shortRef":"Jour: Yadernaya Fizika, Vol.25, p.299 (1977)"}]
@@ -791,7 +901,15 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[" Data from Fig. 1, curve 1."]
+	,"x4freetext":[" Data from Fig. 1, curve 1 of"
+		," Sov.Nucl.Phys.,51(1990)193."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220124U", "date":"20220124", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REL-REF, STATUS."]
 	}
       ]
     }
@@ -843,7 +961,7 @@
 	,[24.555,27.3861]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0892008", "Pointer":" "
- ,"Subent":"M0892008", "compiled":20150204
+ ,"Subent":"M0892008", "compiled":20220124
  ,"year1":1990, "author1ini":"A.D.", "author1":"Antonov"
  ,"zTarg1":29, "targ1":"Cu-65", "proj1":"g", "emis1":"N", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -901,7 +1019,7 @@
 }
    ]
    }
-  ,{"SUBENT":"M0892009", "isub":9, "compiled":20150204, "TransID":"M077", "TransDate":20150413
+  ,{"SUBENT":"M0892009", "isub":9, "compiled":20220124, "TransID":"M117", "TransDate":20220401
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -939,8 +1057,8 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"E,,V.E.Zhuchko,J,YF,25,299,1977"
-		,"flag":{"code":"E", "help":" Reference to related data compiled in another entry"}
+	,"x4codes":[{"code":"M,,V.E.Zhuchko,J,YF,25,299,1977"
+		,"flag":{"code":"M", "help":" Reference to related data compiled in another entry"}
 		,"author1":"V.E.Zhuchko","stdFileName":"J,YF,25,299,1977"
 		,"year":1977,"typ":"J","ref":"J,YF","vol":"25","p":"299"
 		,"shortRef":"Jour: Yadernaya Fizika, Vol.25, p.299 (1977)"}]
@@ -959,7 +1077,15 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[" Data from Fig. 1, curve 2."]
+	,"x4freetext":[" Data from Fig. 1, curve 2 of"
+		," Sov.Nucl.Phys.,51(1990)193."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220124U", "date":"20220124", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REL-REF, STATUS."]
 	}
       ]
     }
@@ -1004,7 +1130,7 @@
 	,[24.573,0.3581,0.2143,0.092]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0892009", "Pointer":" "
- ,"Subent":"M0892009", "compiled":20150204
+ ,"Subent":"M0892009", "compiled":20220124
  ,"year1":1990, "author1ini":"A.D.", "author1":"Antonov"
  ,"zTarg1":23, "targ1":"V-51", "proj1":"g", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1067,7 +1193,7 @@
 }
    ]
    }
-  ,{"SUBENT":"M0892010", "isub":10, "compiled":20150204, "TransID":"M077", "TransDate":20150413
+  ,{"SUBENT":"M0892010", "isub":10, "compiled":20220124, "TransID":"M117", "TransDate":20220401
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1093,7 +1219,7 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":{"Nucl":"32-GE-76","ENR":0.76}
-	,"x4freetext":[" GEO."]
+	,"x4freetext":[" GeO."]
 	}
       ]
      ,"ANALYSIS":[
@@ -1105,8 +1231,8 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"E,,V.E.Zhuchko,J,YF,25,299,1977"
-		,"flag":{"code":"E", "help":" Reference to related data compiled in another entry"}
+	,"x4codes":[{"code":"M,,V.E.Zhuchko,J,YF,25,299,1977"
+		,"flag":{"code":"M", "help":" Reference to related data compiled in another entry"}
 		,"author1":"V.E.Zhuchko","stdFileName":"J,YF,25,299,1977"
 		,"year":1977,"typ":"J","ref":"J,YF","vol":"25","p":"299"
 		,"shortRef":"Jour: Yadernaya Fizika, Vol.25, p.299 (1977)"}]
@@ -1125,7 +1251,15 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[" Data from Fig. 1, curve 3."]
+	,"x4freetext":[" Data from Fig. 1, curve 3 of"
+		," Sov.Nucl.Phys.,51(1990)193."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220124U", "date":"20220124", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REL-REF, STATUS."]
 	}
       ]
     }
@@ -1164,7 +1298,7 @@
 	,[24.0564,0.1262,0.0643,0.0315]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0892010", "Pointer":" "
- ,"Subent":"M0892010", "compiled":20150204
+ ,"Subent":"M0892010", "compiled":20220124
  ,"year1":1990, "author1ini":"A.D.", "author1":"Antonov"
  ,"zTarg1":32, "targ1":"Ge-76", "proj1":"g", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1227,7 +1361,7 @@
 }
    ]
    }
-  ,{"SUBENT":"M0892011", "isub":11, "compiled":20150204, "TransID":"M077", "TransDate":20150413
+  ,{"SUBENT":"M0892011", "isub":11, "compiled":20220124, "TransID":"M117", "TransDate":20220401
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -1253,7 +1387,7 @@
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":{"Nucl":"68-ER-170","ENR":0.98}
-	,"x4freetext":[" ER2O3."]
+	,"x4freetext":[" Er2O3."]
 	}
       ]
      ,"ANALYSIS":[
@@ -1265,8 +1399,8 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"E,,V.E.Zhuchko,J,YF,25,299,1977"
-		,"flag":{"code":"E", "help":" Reference to related data compiled in another entry"}
+	,"x4codes":[{"code":"M,,V.E.Zhuchko,J,YF,25,299,1977"
+		,"flag":{"code":"M", "help":" Reference to related data compiled in another entry"}
 		,"author1":"V.E.Zhuchko","stdFileName":"J,YF,25,299,1977"
 		,"year":1977,"typ":"J","ref":"J,YF","vol":"25","p":"299"
 		,"shortRef":"Jour: Yadernaya Fizika, Vol.25, p.299 (1977)"}]
@@ -1285,7 +1419,15 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[" Data from Fig. 1, curve 4."]
+	,"x4freetext":[" Data from Fig. 1, curve 4 of"
+		," Sov.Nucl.Phys.,51(1990)193."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220124U", "date":"20220124", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REL-REF, STATUS."]
 	}
       ]
     }
@@ -1329,7 +1471,7 @@
 	,[24.684,0.034,0.0154,0.0087]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0892011", "Pointer":" "
- ,"Subent":"M0892011", "compiled":20150204
+ ,"Subent":"M0892011", "compiled":20220124
  ,"year1":1990, "author1ini":"A.D.", "author1":"Antonov"
  ,"zTarg1":68, "targ1":"Er-170", "proj1":"g", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
