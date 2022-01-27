@@ -1,9 +1,9 @@
-  {"ENTRY":"M0216", "updated":20130607, "TransID":"M067", "TransDate":20130819, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
+  {"ENTRY":"M0216", "updated":20220128, "TransID":"M119", "TransDate":20220816, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
    ,"y1":1964,"a1":"S.Costa+","r1":"J,PL,11,324,1964"
    ,"ref":"Jour: Physics Letters, Vol.11, p.324 (1964)"
    ,"title":"Photoneutrons from medium elements up to 80 MeV photon energy."
    ,"x4subents":[
-   {"SUBENT":"M0216001", "isub":1, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+   {"SUBENT":"M0216001", "isub":1, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -18,7 +18,14 @@
 	    ,{"ini":"F.","nam":"Ferroni"}
 	    ,{"ini":"S.","nam":"Ferroni"}
 	    ,{"ini":"C.","nam":"Molino"}
-	    ,{"ini":"R.","nam":"Molvano"}]
+	    ,{"ini":"R.","nam":"Malvano"}]
+	}
+      ]
+     ,"REFERENCE":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"J,PL,11,324,1964","stdFileName":"J,PL,11,324,1964"
+		,"year":1964,"typ":"J","ref":"J,PL","vol":"11","p":"324"
+		,"shortRef":"Jour: Physics Letters, Vol.11, p.324 (1964)"}]
 	}
       ]
      ,"INSTITUTE":[
@@ -27,13 +34,6 @@
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"2ITYGVA", "dict":"INSTITUTE", "idict":3,"hlp":"Universita degli Studi di Genova + INFN Genova, Italy"}]
-	}
-      ]
-     ,"REFERENCE":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"J,PL,11,324,1964","stdFileName":"J,PL,11,324,1964"
-		,"year":1964,"typ":"J","ref":"J,PL","vol":"11","p":"324"
-		,"shortRef":"Jour: Physics Letters, Vol.11, p.324 (1964)"}]
 	}
       ]
      ,"FACILITY":[
@@ -60,11 +60,6 @@
 	,"x4codes":[{"code":"BF3", "dict":"DETECTOR", "idict":22,"hlp":"Boron Trifluoride neutron detector"}]
 	}
       ]
-     ,"PART-DET":[
-	{"x4pointer":" "
-	,"x4codes":["N"]
-	}
-      ]
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
@@ -87,15 +82,9 @@
 	,"x4code":null
 	,"x4freetext":["Photoneutron cross   sections   for   several   light"
 		," elements versus g-ray energy  and  integrated  cross"
-		," sections at the range 0 - 80 MeV were measured."]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Data from Tab. 1."]
+		," sections at the range 0 - 80 MeV were measured."
+		,"Data presented are the results of multiplication"
+		," SIGMA x 60NZ/A both presented in Table 1."]
 	}
       ]
      ,"HISTORY":[
@@ -116,28 +105,41 @@
 		," COMMON),  NOSUBENT   for  SUBENTs  024 - 031 because"
 		," there are no data for EXFOR, dates, lowercase."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: AUTHOR, PART-DET,"
+		," COMMENT, STATUS, REACTION."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"M0216002", "isub":2, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216002", "isub":2, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"24-CR-0(G,X)0-NN-1,,INT,,BRA"
-	    ,"c4reac":"(G,X),INT,,BRA"
+	,"x4code":{"code":"24-CR-0(G,X)0-NN-1,,INT,,BRS,DERIV"
+	    ,"c4reac":"(G,X),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"24-CR-0(G,X)0-NN-1,,INT,,BRA"
+	    {"code":"24-CR-0(G,X)0-NN-1,,INT,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"24-CR-0","Targ":{"code":"24-CR-0","nam":"Cr-0","ZA":24000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Integration of Lorentzian."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -154,12 +156,27 @@
 		," 1.21 and 2.1 multiplied by 777 mb*MeV."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: SIG -> INT,"
 		," COMMON, DATA"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: ANALYSIS,"
+		," REACTION, STATUS, INT,,BRA -> INT,,BRS."]
 	}
       ]
     }
@@ -193,12 +210,12 @@
 	,[80,1631.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216002", "Pointer":" "
- ,"Subent":"M0216002", "compiled":20130607
+ ,"Subent":"M0216002", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":24, "targ1":"Cr-0", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"24-CR-0(G,X)0-NN-1,,INT,,BRA"
+ ,"reacode":"24-CR-0(G,X)0-NN-1,,INT,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":3
  ,"lx4data":2
@@ -240,25 +257,32 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216003", "isub":3, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216003", "isub":3, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"25-MN-55(G,X)0-NN-1,,INT,,BRA"
-	    ,"c4reac":"(G,X),INT,,BRA"
+	,"x4code":{"code":"25-MN-55(G,X)0-NN-1,,INT,,BRS,DERIV"
+	    ,"c4reac":"(G,X),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"25-MN-55(G,X)0-NN-1,,INT,,BRA"
+	    {"code":"25-MN-55(G,X)0-NN-1,,INT,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"25-MN-55","Targ":{"code":"25-MN-55","nam":"Mn-55","ZA":25055}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Integration of Lorentzian."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -275,12 +299,27 @@
 		," 1.52 and 2.33 multiplied by 818 mb*MeV."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: SIG -> INT,"
 		," COMMON, DATA"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: ANALYSIS,"
+		," REACTION, STATUS, INT,,BRA -> INT,,BRS."]
 	}
       ]
     }
@@ -314,12 +353,12 @@
 	,[80,1905.94]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216003", "Pointer":" "
- ,"Subent":"M0216003", "compiled":20130607
+ ,"Subent":"M0216003", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":25, "targ1":"Mn-55", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"25-MN-55(G,X)0-NN-1,,INT,,BRA"
+ ,"reacode":"25-MN-55(G,X)0-NN-1,,INT,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":3
  ,"lx4data":2
@@ -361,25 +400,32 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216004", "isub":4, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216004", "isub":4, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"26-FE-0(G,X)0-NN-1,,INT,,BRA"
-	    ,"c4reac":"(G,X),INT,,BRA"
+	,"x4code":{"code":"26-FE-0(G,X)0-NN-1,,INT,,BRS,DERIV"
+	    ,"c4reac":"(G,X),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"26-FE-0(G,X)0-NN-1,,INT,,BRA"
+	    {"code":"26-FE-0(G,X)0-NN-1,,INT,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"26-FE-0","Targ":{"code":"26-FE-0","nam":"Fe-0","ZA":26000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Integration of Lorentzian."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -396,12 +442,27 @@
 		," 0.88 and 1.46 multiplied by 832 mb*MeV."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: SIG -> INT,"
 		," COMMON, DATA"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: ANALYSIS,"
+		," REACTION, STATUS, INT,,BRA -> INT,,BRS."]
 	}
       ]
     }
@@ -435,12 +496,12 @@
 	,[80,1214.72]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216004", "Pointer":" "
- ,"Subent":"M0216004", "compiled":20130607
+ ,"Subent":"M0216004", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":26, "targ1":"Fe-0", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"26-FE-0(G,X)0-NN-1,,INT,,BRA"
+ ,"reacode":"26-FE-0(G,X)0-NN-1,,INT,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":3
  ,"lx4data":2
@@ -482,25 +543,32 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216005", "isub":5, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216005", "isub":5, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"27-CO-59(G,X)0-NN-1,,INT,,BRA"
-	    ,"c4reac":"(G,X),INT,,BRA"
+	,"x4code":{"code":"27-CO-59(G,X)0-NN-1,,INT,,BRS,DERIV"
+	    ,"c4reac":"(G,X),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"27-CO-59(G,X)0-NN-1,,INT,,BRA"
+	    {"code":"27-CO-59(G,X)0-NN-1,,INT,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"27-CO-59","Targ":{"code":"27-CO-59","nam":"Co-59","ZA":27059}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Integration of Lorentzian."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -517,12 +585,27 @@
 		," 1.08 and 1.82 multiplied by 878 mb*MeV."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: SIG -> INT,"
 		," COMMON, DATA"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: ANALYSIS,"
+		," REACTION, STATUS, INT,,BRA -> INT,,BRS."]
 	}
       ]
     }
@@ -556,12 +639,12 @@
 	,[80,1597.96]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216005", "Pointer":" "
- ,"Subent":"M0216005", "compiled":20130607
+ ,"Subent":"M0216005", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":27, "targ1":"Co-59", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"27-CO-59(G,X)0-NN-1,,INT,,BRA"
+ ,"reacode":"27-CO-59(G,X)0-NN-1,,INT,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":3
  ,"lx4data":2
@@ -603,25 +686,32 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216006", "isub":6, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216006", "isub":6, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-0(G,X)0-NN-1,,INT,,BRA"
-	    ,"c4reac":"(G,X),INT,,BRA"
+	,"x4code":{"code":"28-NI-0(G,X)0-NN-1,,INT,,BRS,DERIV"
+	    ,"c4reac":"(G,X),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"28-NI-0(G,X)0-NN-1,,INT,,BRA"
+	    {"code":"28-NI-0(G,X)0-NN-1,,INT,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"28-NI-0","Targ":{"code":"28-NI-0","nam":"Ni-0","ZA":28000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Integration of Lorentzian."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -638,12 +728,27 @@
 		," 0.55 and 1.07 multiplied by 879 mb*MeV."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: SIG -> INT,"
 		," COMMON, DATA"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: ANALYSIS,"
+		," REACTION, STATUS, INT,,BRA -> INT,,BRS."]
 	}
       ]
     }
@@ -677,12 +782,12 @@
 	,[80,940.53]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216006", "Pointer":" "
- ,"Subent":"M0216006", "compiled":20130607
+ ,"Subent":"M0216006", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":28, "targ1":"Ni-0", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"28-NI-0(G,X)0-NN-1,,INT,,BRA"
+ ,"reacode":"28-NI-0(G,X)0-NN-1,,INT,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":3
  ,"lx4data":2
@@ -724,25 +829,32 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216007", "isub":7, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216007", "isub":7, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"29-CU-0(G,X)0-NN-1,,INT,,BRA"
-	    ,"c4reac":"(G,X),INT,,BRA"
+	,"x4code":{"code":"29-CU-0(G,X)0-NN-1,,INT,,BRS,DERIV"
+	    ,"c4reac":"(G,X),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"29-CU-0(G,X)0-NN-1,,INT,,BRA"
+	    {"code":"29-CU-0(G,X)0-NN-1,,INT,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"29-CU-0","Targ":{"code":"29-CU-0","nam":"Cu-0","ZA":29000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Integration of Lorentzian."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -759,12 +871,27 @@
 		," 1.06 and 1.99 multiplied by 947 mb*MeV."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: SIG -> INT,"
 		," COMMON, DATA"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: ANALYSIS,"
+		," REACTION, STATUS, INT,,BRA -> INT,,BRS."]
 	}
       ]
     }
@@ -798,12 +925,12 @@
 	,[80,1884.53]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216007", "Pointer":" "
- ,"Subent":"M0216007", "compiled":20130607
+ ,"Subent":"M0216007", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":29, "targ1":"Cu-0", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"29-CU-0(G,X)0-NN-1,,INT,,BRA"
+ ,"reacode":"29-CU-0(G,X)0-NN-1,,INT,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":3
  ,"lx4data":2
@@ -845,25 +972,32 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216008", "isub":8, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216008", "isub":8, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"30-ZN-0(G,X)0-NN-1,,INT,,BRA"
-	    ,"c4reac":"(G,X),INT,,BRA"
+	,"x4code":{"code":"30-ZN-0(G,X)0-NN-1,,INT,,BRS,DERIV"
+	    ,"c4reac":"(G,X),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"30-ZN-0(G,X)0-NN-1,,INT,,BRA"
+	    {"code":"30-ZN-0(G,X)0-NN-1,,INT,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"30-ZN-0","Targ":{"code":"30-ZN-0","nam":"Zn-0","ZA":30000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Integration of Lorentzian."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -880,12 +1014,27 @@
 		," 0.94 and 1.68 multiplied by 975 mb*MeV."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: SIG -> INT,"
 		," COMMON, DATA"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: ANALYSIS,"
+		," REACTION, STATUS, INT,,BRA -> INT,,BRS."]
 	}
       ]
     }
@@ -919,12 +1068,12 @@
 	,[80,1638]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216008", "Pointer":" "
- ,"Subent":"M0216008", "compiled":20130607
+ ,"Subent":"M0216008", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":30, "targ1":"Zn-0", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"30-ZN-0(G,X)0-NN-1,,INT,,BRA"
+ ,"reacode":"30-ZN-0(G,X)0-NN-1,,INT,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":3
  ,"lx4data":2
@@ -966,25 +1115,32 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216009", "isub":9, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216009", "isub":9, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"31-GA-0(G,X)0-NN-1,,INT,,BRA"
-	    ,"c4reac":"(G,X),INT,,BRA"
+	,"x4code":{"code":"31-GA-0(G,X)0-NN-1,,INT,,BRS,DERIV"
+	    ,"c4reac":"(G,X),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"31-GA-0(G,X)0-NN-1,,INT,,BRA"
+	    {"code":"31-GA-0(G,X)0-NN-1,,INT,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"31-GA-0","Targ":{"code":"31-GA-0","nam":"Ga-0","ZA":31000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Integration of Lorentzian."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -1001,12 +1157,27 @@
 		," 1.29 and 2.18 multiplied by 1034 mb*MeV."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: SIG -> INT,"
 		," COMMON, DATA"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: ANALYSIS,"
+		," REACTION, STATUS, INT,,BRA -> INT,,BRS."]
 	}
       ]
     }
@@ -1040,12 +1211,12 @@
 	,[80,2254.12]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216009", "Pointer":" "
- ,"Subent":"M0216009", "compiled":20130607
+ ,"Subent":"M0216009", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":31, "targ1":"Ga-0", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"31-GA-0(G,X)0-NN-1,,INT,,BRA"
+ ,"reacode":"31-GA-0(G,X)0-NN-1,,INT,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":3
  ,"lx4data":2
@@ -1087,25 +1258,32 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216010", "isub":10, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216010", "isub":10, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"32-GE-0(G,X)0-NN-1,,INT,,BRA"
-	    ,"c4reac":"(G,X),INT,,BRA"
+	,"x4code":{"code":"32-GE-0(G,X)0-NN-1,,INT,,BRS,DERIV"
+	    ,"c4reac":"(G,X),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"32-GE-0(G,X)0-NN-1,,INT,,BRA"
+	    {"code":"32-GE-0(G,X)0-NN-1,,INT,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"32-GE-0","Targ":{"code":"32-GE-0","nam":"Ge-0","ZA":32000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Integration of Lorentzian."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -1122,12 +1300,27 @@
 		," 1.35 and 2.29 multiplied by 1064 mb*MeV."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: SIG -> INT,"
 		," COMMON, DATA"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: ANALYSIS,"
+		," REACTION, STATUS, INT,,BRA -> INT,,BRS."]
 	}
       ]
     }
@@ -1161,12 +1354,12 @@
 	,[80,2436.56]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216010", "Pointer":" "
- ,"Subent":"M0216010", "compiled":20130607
+ ,"Subent":"M0216010", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":32, "targ1":"Ge-0", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"32-GE-0(G,X)0-NN-1,,INT,,BRA"
+ ,"reacode":"32-GE-0(G,X)0-NN-1,,INT,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":3
  ,"lx4data":2
@@ -1208,25 +1401,32 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216011", "isub":11, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216011", "isub":11, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"33-AS-75(G,X)0-NN-1,,INT,,BRA"
-	    ,"c4reac":"(G,X),INT,,BRA"
+	,"x4code":{"code":"33-AS-75(G,X)0-NN-1,,INT,,BRS,DERIV"
+	    ,"c4reac":"(G,X),INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"33-AS-75(G,X)0-NN-1,,INT,,BRA"
+	    {"code":"33-AS-75(G,X)0-NN-1,,INT,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"33-AS-75","Targ":{"code":"33-AS-75","nam":"As-75","ZA":33075}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Integration of Lorentzian."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -1243,12 +1443,27 @@
 		," 1.22 and 2.18 multiplied by 1109 mb*MeV."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: SIG -> INT,"
 		," COMMON, DATA"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: ANALYSIS,"
+		," REACTION, STATUS, INT,,BRA -> INT,,BRS."]
 	}
       ]
     }
@@ -1282,12 +1497,12 @@
 	,[80,2417.62]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216011", "Pointer":" "
- ,"Subent":"M0216011", "compiled":20130607
+ ,"Subent":"M0216011", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":33, "targ1":"As-75", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"33-AS-75(G,X)0-NN-1,,INT,,BRA"
+ ,"reacode":"33-AS-75(G,X)0-NN-1,,INT,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":3
  ,"lx4data":2
@@ -1329,18 +1544,18 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216012", "isub":12, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216012", "isub":12, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"24-CR-0(G,X)0-NN-1,,SIG,,BRS"
+	,"x4code":{"code":"24-CR-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 	    ,"c4reac":"(G,X),SIG,,BRS"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":201
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"24-CR-0(G,X)0-NN-1,,SIG,,BRS"
+	    {"code":"24-CR-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"24-CR-0","Targ":{"code":"24-CR-0","nam":"Cr-0","ZA":24000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
@@ -1348,8 +1563,15 @@
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"SIG"
 		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Cross section Lorentzian fitting."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -1358,11 +1580,26 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: BRA -> BRS."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION,"
+		," ANALYSIS, STATUS."]
 	}
       ]
     }
@@ -1383,12 +1620,12 @@
 	 [18.5,97]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216012", "Pointer":" "
- ,"Subent":"M0216012", "compiled":20130607
+ ,"Subent":"M0216012", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":24, "targ1":"Cr-0", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"24-CR-0(G,X)0-NN-1,,SIG,,BRS"
+ ,"reacode":"24-CR-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -1423,18 +1660,18 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216013", "isub":13, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216013", "isub":13, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"25-MN-55(G,X)0-NN-1,,SIG,,BRS"
+	,"x4code":{"code":"25-MN-55(G,X)0-NN-1,,SIG,,BRS,DERIV"
 	    ,"c4reac":"(G,X),SIG,,BRS"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":201
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"25-MN-55(G,X)0-NN-1,,SIG,,BRS"
+	    {"code":"25-MN-55(G,X)0-NN-1,,SIG,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"25-MN-55","Targ":{"code":"25-MN-55","nam":"Mn-55","ZA":25055}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
@@ -1442,8 +1679,15 @@
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"SIG"
 		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Cross section Lorentzian fitting."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -1452,11 +1696,26 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: BRA -> BRS."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION,"
+		," ANALYSIS, STATUS."]
 	}
       ]
     }
@@ -1477,12 +1736,12 @@
 	 [18.5,114]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216013", "Pointer":" "
- ,"Subent":"M0216013", "compiled":20130607
+ ,"Subent":"M0216013", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":25, "targ1":"Mn-55", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"25-MN-55(G,X)0-NN-1,,SIG,,BRS"
+ ,"reacode":"25-MN-55(G,X)0-NN-1,,SIG,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -1517,18 +1776,18 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216014", "isub":14, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216014", "isub":14, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"28-NI-0(G,X)0-NN-1,,SIG,,BRS"
+	,"x4code":{"code":"28-NI-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 	    ,"c4reac":"(G,X),SIG,,BRS"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":201
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"28-NI-0(G,X)0-NN-1,,SIG,,BRS"
+	    {"code":"28-NI-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"28-NI-0","Targ":{"code":"28-NI-0","nam":"Ni-0","ZA":28000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
@@ -1536,8 +1795,15 @@
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"SIG"
 		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Cross section Lorentzian fitting."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -1546,11 +1812,26 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: BRA -> BRS."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION,"
+		," ANALYSIS, STATUS."]
 	}
       ]
     }
@@ -1571,12 +1852,12 @@
 	 [18.5,56]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216014", "Pointer":" "
- ,"Subent":"M0216014", "compiled":20130607
+ ,"Subent":"M0216014", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":28, "targ1":"Ni-0", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"28-NI-0(G,X)0-NN-1,,SIG,,BRS"
+ ,"reacode":"28-NI-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -1611,18 +1892,18 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216015", "isub":15, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216015", "isub":15, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"26-FE-0(G,X)0-NN-1,,SIG,,BRS"
+	,"x4code":{"code":"26-FE-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 	    ,"c4reac":"(G,X),SIG,,BRS"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":201
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"26-FE-0(G,X)0-NN-1,,SIG,,BRS"
+	    {"code":"26-FE-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"26-FE-0","Targ":{"code":"26-FE-0","nam":"Fe-0","ZA":26000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
@@ -1630,8 +1911,15 @@
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"SIG"
 		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Cross section Lorentzian fitting."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -1640,11 +1928,26 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: BRA -> BRS."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION,"
+		," ANALYSIS, STATUS."]
 	}
       ]
     }
@@ -1665,12 +1968,12 @@
 	 [17.5,75]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216015", "Pointer":" "
- ,"Subent":"M0216015", "compiled":20130607
+ ,"Subent":"M0216015", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":26, "targ1":"Fe-0", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"26-FE-0(G,X)0-NN-1,,SIG,,BRS"
+ ,"reacode":"26-FE-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -1705,18 +2008,18 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216016", "isub":16, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216016", "isub":16, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"27-CO-59(G,X)0-NN-1,,SIG,,BRS"
+	,"x4code":{"code":"27-CO-59(G,X)0-NN-1,,SIG,,BRS,DERIV"
 	    ,"c4reac":"(G,X),SIG,,BRS"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":201
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"27-CO-59(G,X)0-NN-1,,SIG,,BRS"
+	    {"code":"27-CO-59(G,X)0-NN-1,,SIG,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"27-CO-59","Targ":{"code":"27-CO-59","nam":"Co-59","ZA":27059}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
@@ -1724,8 +2027,15 @@
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"SIG"
 		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Cross section Lorentzian fitting."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -1734,11 +2044,26 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: BRA -> BRS."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION,"
+		," ANALYSIS, STATUS."]
 	}
       ]
     }
@@ -1759,12 +2084,12 @@
 	 [17.5,92]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216016", "Pointer":" "
- ,"Subent":"M0216016", "compiled":20130607
+ ,"Subent":"M0216016", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":27, "targ1":"Co-59", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"27-CO-59(G,X)0-NN-1,,SIG,,BRS"
+ ,"reacode":"27-CO-59(G,X)0-NN-1,,SIG,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -1799,18 +2124,18 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216017", "isub":17, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216017", "isub":17, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"29-CU-0(G,X)0-NN-1,,SIG,,BRS"
+	,"x4code":{"code":"29-CU-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 	    ,"c4reac":"(G,X),SIG,,BRS"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":201
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"29-CU-0(G,X)0-NN-1,,SIG,,BRS"
+	    {"code":"29-CU-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"29-CU-0","Targ":{"code":"29-CU-0","nam":"Cu-0","ZA":29000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
@@ -1818,8 +2143,15 @@
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"SIG"
 		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Cross section Lorentzian fitting."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -1828,11 +2160,26 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: BRA -> BRS."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION,"
+		," ANALYSIS, STATUS."]
 	}
       ]
     }
@@ -1853,12 +2200,12 @@
 	 [17.5,98]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216017", "Pointer":" "
- ,"Subent":"M0216017", "compiled":20130607
+ ,"Subent":"M0216017", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":29, "targ1":"Cu-0", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"29-CU-0(G,X)0-NN-1,,SIG,,BRS"
+ ,"reacode":"29-CU-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -1893,18 +2240,18 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216018", "isub":18, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216018", "isub":18, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"30-ZN-0(G,X)0-NN-1,,SIG,,BRS"
+	,"x4code":{"code":"30-ZN-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 	    ,"c4reac":"(G,X),SIG,,BRS"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":201
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"30-ZN-0(G,X)0-NN-1,,SIG,,BRS"
+	    {"code":"30-ZN-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"30-ZN-0","Targ":{"code":"30-ZN-0","nam":"Zn-0","ZA":30000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
@@ -1912,8 +2259,15 @@
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"SIG"
 		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Cross section Lorentzian fitting."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -1922,11 +2276,26 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: BRA -> BRS."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION,"
+		," ANALYSIS, STATUS."]
 	}
       ]
     }
@@ -1947,12 +2316,12 @@
 	 [17.5,96]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216018", "Pointer":" "
- ,"Subent":"M0216018", "compiled":20130607
+ ,"Subent":"M0216018", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":30, "targ1":"Zn-0", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"30-ZN-0(G,X)0-NN-1,,SIG,,BRS"
+ ,"reacode":"30-ZN-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -1987,18 +2356,18 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216019", "isub":19, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216019", "isub":19, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"31-GA-0(G,X)0-NN-1,,SIG,,BRS"
+	,"x4code":{"code":"31-GA-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 	    ,"c4reac":"(G,X),SIG,,BRS"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":201
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"31-GA-0(G,X)0-NN-1,,SIG,,BRS"
+	    {"code":"31-GA-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"31-GA-0","Targ":{"code":"31-GA-0","nam":"Ga-0","ZA":31000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
@@ -2006,8 +2375,15 @@
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"SIG"
 		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Cross section Lorentzian fitting."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -2016,11 +2392,26 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: BRA -> BRS."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION,"
+		," ANALYSIS, STATUS."]
 	}
       ]
     }
@@ -2041,12 +2432,12 @@
 	 [17.5,156]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216019", "Pointer":" "
- ,"Subent":"M0216019", "compiled":20130607
+ ,"Subent":"M0216019", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":31, "targ1":"Ga-0", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"31-GA-0(G,X)0-NN-1,,SIG,,BRS"
+ ,"reacode":"31-GA-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -2081,18 +2472,18 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216020", "isub":20, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216020", "isub":20, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"32-GE-0(G,X)0-NN-1,,SIG,,BRS"
+	,"x4code":{"code":"32-GE-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 	    ,"c4reac":"(G,X),SIG,,BRS"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":201
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"32-GE-0(G,X)0-NN-1,,SIG,,BRS"
+	    {"code":"32-GE-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"32-GE-0","Targ":{"code":"32-GE-0","nam":"Ge-0","ZA":32000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
@@ -2100,8 +2491,15 @@
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"SIG"
 		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Cross section Lorentzian fitting."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -2110,11 +2508,26 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: BRA -> BRS."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION,"
+		," ANALYSIS, STATUS."]
 	}
       ]
     }
@@ -2135,12 +2548,12 @@
 	 [17.5,158]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216020", "Pointer":" "
- ,"Subent":"M0216020", "compiled":20130607
+ ,"Subent":"M0216020", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":32, "targ1":"Ge-0", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"32-GE-0(G,X)0-NN-1,,SIG,,BRS"
+ ,"reacode":"32-GE-0(G,X)0-NN-1,,SIG,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -2175,18 +2588,18 @@
 }
    ]
    }
-  ,{"SUBENT":"M0216021", "isub":21, "compiled":20130607, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0216021", "isub":21, "compiled":20220128, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"33-AS-75(G,X)0-NN-1,,SIG,,BRS"
+	,"x4code":{"code":"33-AS-75(G,X)0-NN-1,,SIG,,BRS,DERIV"
 	    ,"c4reac":"(G,X),SIG,,BRS"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":201
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"33-AS-75(G,X)0-NN-1,,SIG,,BRS"
+	    {"code":"33-AS-75(G,X)0-NN-1,,SIG,,BRS,DERIV"
 		,"Reac":"G,X"
 		,"SF1":"33-AS-75","Targ":{"code":"33-AS-75","nam":"As-75","ZA":33075}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
@@ -2194,8 +2607,15 @@
 		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"SIG"
 		,"SF8":"BRS"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Cross section Lorentzian fitting."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -2204,11 +2624,26 @@
 	,"x4freetext":["No information."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from Tab. 1"
+		," of Phys.Lett.,11(1964),324."]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130607A", "date":"20130607", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by   V.Varlamov: BRA -> BRS."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220128A", "date":"20220128", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION,"
+		," ANALYSIS, STATUS."]
 	}
       ]
     }
@@ -2229,12 +2664,12 @@
 	 [17.5,127]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0216021", "Pointer":" "
- ,"Subent":"M0216021", "compiled":20130607
+ ,"Subent":"M0216021", "compiled":20220128
  ,"year1":1964, "author1ini":"S.", "author1":"Costa"
  ,"zTarg1":33, "targ1":"As-75", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"33-AS-75(G,X)0-NN-1,,SIG,,BRS"
+ ,"reacode":"33-AS-75(G,X)0-NN-1,,SIG,,BRS,DERIV"
  ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"]
  ,"wx4data":2
  ,"lx4data":1
