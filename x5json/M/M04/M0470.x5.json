@@ -1,9 +1,9 @@
-  {"ENTRY":"M0470", "updated":20130624, "TransID":"M067", "TransDate":20130819, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
+  {"ENTRY":"M0470", "updated":20220130, "TransID":"M119", "TransDate":20220816, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
    ,"y1":1965,"a1":"J.R.Stewart+","r1":"J,PR,138,B372,1965","doi1":"10.1103/PhysRev.138.B372"
    ,"ref":"Jour: Physical Review, Vol.138, p.B372 (1965)"
    ,"title":"Photodisintegration of He-3."
    ,"x4subents":[
-   {"SUBENT":"M0470001", "isub":1, "compiled":20130624, "TransID":"M067", "TransDate":20130819
+   {"SUBENT":"M0470001", "isub":1, "compiled":20220130, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -40,7 +40,8 @@
       ]
      ,"INC-SOURCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"BRST", "dict":"INC-SOURCE", "idict":19,"hlp":"Bremsstrahlung"}]
+	,"x4codes":[{"code":"BRST", "dict":"INC-SOURCE", "idict":19,"hlp":"Bremsstrahlung"}
+	    ,{"code":"KINDT", "dict":"INC-SOURCE", "idict":19,"hlp":"Kinematically determined"}]
 	}
       ]
      ,"METHOD":[
@@ -68,14 +69,6 @@
 		," of  either 0.00014 or 0.00050 inches filled with 0.5"
 		," and 1.33 atm,  respectively,  of He-3. Both the He-2"
 		," and He-3 gases were to be better than 99.5% pure."]
-	}
-      ]
-     ,"PART-DET":[
-	{"x4pointer":" "
-	,"x4codes":["P"]
-	}
-	,{"x4pointer":" "
-	,"x4codes":["D"]
 	}
       ]
      ,"DETECTOR":[
@@ -146,13 +139,6 @@
 	,"x4freetext":[" The  estimate systematic  error is about 10%."]
 	}
       ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	}
-      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"19910218C", "date":"19910218", "act":"C", "dict":"HISTORY", "idict":15
@@ -170,41 +156,59 @@
 	,"x4freetext":[" Corrected   by   V.Varlamov:    REACTION,"
 		," COMMON, ERR-ANALYS."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220130A", "date":"20220130", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: INC-SOURCE,"
+		," PART-DET, STATUS, REACTION, COMMON REACTION."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
+       {"icol":0, "header":"ANG", "units":"ADEG", "pointer":" "
+	,"headerHelp":"Angle, laboratory system", "pFlag":"1000000"
+	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
+      ,{"icol":1, "header":"ERR-1", "units":"PER-CENT", "pointer":" "
 	,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS", "pFlag":"0009550"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["ERR-1"     ]
-	,["PER-CENT"  ]
-	,[" "         ]]
+	 ["ANG"       ,"ERR-1"     ]
+	,["ADEG"      ,"PER-CENT"  ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [10]]}
+	 [90,10]]}
    }
-  ,{"SUBENT":"M0470002", "isub":2, "compiled":20130624, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0470002", "isub":2, "compiled":20220130, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"2-HE-3(G,P)1-H-2,,DA,,BRS"
-	    ,"c4reac":"(G,P),DA,,BRS"
+	,"x4code":{"code":"2-HE-3(G,P)1-H-2,,DA"
+	    ,"c4reac":"(G,P),DA"
 	    ,"combi":"a"
 	    ,"MF":4
+	    ,"MT":103
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"2-HE-3(G,P)1-H-2,,DA,,BRS"
+	    {"code":"2-HE-3(G,P)1-H-2,,DA"
 		,"Reac":"G,P"
 		,"SF1":"2-HE-3","Targ":{"code":"2-HE-3","nam":"He-3","ZA":2003}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"P"
 		,"SF4":"1-H-2","Prod":{"code":"1-H-2","nam":"H-2","ZA":1002}
 		,"SF6":"DA"
-		,"SF8":"BRS"
 		,"SF58":",DA","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Differential c/s with respect to angle"
 	    }]}
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from table"
+		," of Phys.Rev.,138(1965)B372."]
 	}
       ]
      ,"HISTORY":[
@@ -213,20 +217,14 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by  V.Varlamov:  BRA -> BRS."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220130A", "date":"20220130", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: BRS deleted,"
+		," NOCOMMON, STATUS."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ANG", "units":"ADEG", "pointer":" "
-	,"headerHelp":"Angle, laboratory system", "pFlag":"1000000"
-	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
-      ]
-      ,"datacols":[
-	 ["ANG"       ]
-	,["ADEG"      ]
-	,[" "         ]]
-      ,"data":[
-	 [90]]}
     ,"DATA":{"ncols":4, "nrows":14
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -263,12 +261,12 @@
 	,[46.1,6.1,10,7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0470002", "Pointer":" "
- ,"Subent":"M0470002", "compiled":20130624
+ ,"Subent":"M0470002", "compiled":20220130
  ,"year1":1965, "author1ini":"J.R.", "author1":"Stewart"
- ,"zTarg1":2, "targ1":"He-3", "proj1":"g", "emis1":"P", "MF":4, "MT":0, "nExpectedArgs":2
+ ,"zTarg1":2, "targ1":"He-3", "proj1":"g", "emis1":"P", "MF":4, "MT":103, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
  ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
- ,"reacode":"2-HE-3(G,P)1-H-2,,DA,,BRS"
+ ,"reacode":"2-HE-3(G,P)1-H-2,,DA"
  ,"compNotes":[]
  ,"wx4data":6
  ,"lx4data":14
@@ -347,24 +345,24 @@
 }
    ]
    }
-  ,{"SUBENT":"M0470003", "isub":3, "compiled":20130624, "TransID":"M067", "TransDate":20130819
+  ,{"SUBENT":"M0470003", "isub":3, "compiled":20220130, "TransID":"M119", "TransDate":20220816
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"2-HE-3(G,P)1-H-2,,INT,,BRA"
-	    ,"c4reac":"(G,P),INT,,BRA"
+	,"x4code":{"code":"2-HE-3(G,P)1-H-2,,INT/DA,,4PI"
+	    ,"c4reac":"(G,P),INT/DA,,4PI"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"2-HE-3(G,P)1-H-2,,INT,,BRA"
+	    {"code":"2-HE-3(G,P)1-H-2,,INT/DA,,4PI"
 		,"Reac":"G,P"
 		,"SF1":"2-HE-3","Targ":{"code":"2-HE-3","nam":"He-3","ZA":2003}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"P"
 		,"SF4":"1-H-2","Prod":{"code":"1-H-2","nam":"H-2","ZA":1002}
-		,"SF6":"INT"
-		,"SF8":"BRA"
-		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
+		,"SF6":"INT/DA"
+		,"SF8":"4PI"
+		,"SF58":",INT/DA,,4PI","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"4pi * integral over inc.energy of ang.distr."
 	    }]}
 	}
       ]
@@ -372,8 +370,7 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Total integrated  cross  section  was  obtained  from"
-		," 90-degrees differential cross section by assuming an"
-		," isotropic angular distribution."]
+		," 90-degrees differential cross section."]
 	}
       ]
      ,"STATUS":[
@@ -384,12 +381,24 @@
 		}]
 	,"x4freetext":[" Reaction cross section."]
 	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data from text"
+		," of Phys.Rev.,138(1965)B372."]
+	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20130624A", "date":"20130624", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected  by V.Varlamov: STATUS."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220130A", "date":"20220130", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION, STATUS."]
 	}
       ]
     }
@@ -416,14 +425,14 @@
 	 [0,46,16.5,10]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0470003", "Pointer":" "
- ,"Subent":"M0470003", "compiled":20130624
+ ,"Subent":"M0470003", "compiled":20220130
  ,"year1":1965, "author1ini":"J.R.", "author1":"Stewart"
- ,"zTarg1":2, "targ1":"He-3", "proj1":"g", "emis1":"P", "MF":0, "MT":0, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"2-HE-3(G,P)1-H-2,,INT,,BRA"
+ ,"zTarg1":2, "targ1":"He-3", "proj1":"g", "emis1":"P", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
+ ,"ReactionType":"IT4", "quant":"INT", "quantExpan":"4pi * integral over inc.energy of ang.distr."
+ ,"reacode":"2-HE-3(G,P)1-H-2,,INT/DA,,4PI"
  ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:EN-MIN, Max:EN-MAX"]
- ,"wx4data":5
+ ,"wx4data":6
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -456,8 +465,14 @@
     ,"expansion":"Incident energy: energy"
     ,"dat0":[46]
     ,"dat1":[4.6e+7]}
+  ,{"ivar":5, "cvar":"x2", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X2.Value", "dataType":"61", "rank":2.1
+    ,"expansion":"Angle: angle"
+    ,"com0":90
+    ,"com1":90}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":1
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B*EV"
@@ -471,6 +486,11 @@
       ,"expansion":"Incident energy: energy"
       ,"x1":[2.3e+7]
       ,"dx1":[2.3e+7]   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":2.0
+      ,"expansion":"Angle: angle"
+      ,"x2":[90]
+   }
  }
 }
    ]
