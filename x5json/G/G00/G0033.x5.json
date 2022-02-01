@@ -1,9 +1,9 @@
-  {"ENTRY":"G0033", "updated":20120821, "TransID":"G026", "TransDate":20130510, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"G0033", "updated":20220202, "TransID":"G049", "TransDate":20230116, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":2012,"a1":"C.Plaisir+","r1":"J,EPJ/A,48,68,2012"
    ,"ref":"Jour: European Physical Journal A: Hadrons and Nuclei, Vol.48, p.68 (2012)"
    ,"title":"Measurement of the 85Rb(g,n)84mRb cross-section in the energy range 10-19 MeV with bremsstrahlung photons"
    ,"x4subents":[
-   {"SUBENT":"G0033001", "isub":1, "compiled":20120821, "TransID":"G026", "TransDate":20130510
+   {"SUBENT":"G0033001", "isub":1, "compiled":20220202, "TransID":"G049", "TransDate":20230116
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -60,6 +60,13 @@
 		," 100 um thick)"]
 	}
       ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Absolute photon flux determined by measured electron"
+		," charge and GEANT4 simulation"]
+	}
+      ]
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"NAICR", "dict":"DETECTOR", "idict":22,"hlp":"Sodium-Iodide crystal"}]
@@ -73,14 +80,6 @@
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"ACTIV", "dict":"METHOD", "idict":21,"hlp":"Activation"}]
-	}
-      ]
-     ,"ANALYSIS":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Determination of parameters by chi-squares"
-		," minimisation assuming the single (84mRb) or double"
-		," (196Au and 62Cu) Lorentzian form"]
 	}
       ]
      ,"ADD-RES":[
@@ -107,29 +106,42 @@
 	     ,"actHelp":"Data received at the data center"}
 	,"x4freetext":[" Received by e-mail from F.Hannachi"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220202A", "date":"20220202", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. Major revisions in 002-004."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"G0033002", "isub":2, "compiled":20120821, "TransID":"G026", "TransDate":20130510
+  ,{"SUBENT":"G0033002", "isub":2, "compiled":20220202, "TransID":"G049", "TransDate":20230116
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(G,N)79-AU-196,,SIG"
+	,"x4code":{"code":"79-AU-197(G,N)79-AU-196,,SIG,,,DERIV"
 	    ,"c4reac":"(G,N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":4
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"79-AU-197(G,N)79-AU-196,,SIG"
+	    {"code":"79-AU-197(G,N)79-AU-196,,SIG,,,DERIV"
 		,"Reac":"G,N"
 		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"N"
 		,"SF4":"79-AU-196","Prod":{"code":"79-AU-196","nam":"Au-196","ZA":79196}
 		,"SF6":"SIG"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Determination of parameters by chi-squares"
+		," minimisation assuming the double Lorentzian form"]
 	}
       ]
      ,"DECAY-DATA":[
@@ -145,6 +157,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Plotted in Fig.4 of Eur.Phys.J.A48(2012)68"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220202A", "date":"20220202", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. REACTION(SF9): DERIV added."]
 	}
       ]
     }
@@ -268,12 +287,12 @@
 	,[20,40.2,4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"G0033002", "Pointer":" "
- ,"Subent":"G0033002", "compiled":20120821
+ ,"Subent":"G0033002", "compiled":20220202
  ,"year1":2012, "author1ini":"C.", "author1":"Plaisir"
  ,"zTarg1":79, "targ1":"Au-197", "proj1":"g", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"79-AU-197(G,N)79-AU-196,,SIG"
+ ,"reacode":"79-AU-197(G,N)79-AU-196,,SIG,,,DERIV"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":101
@@ -404,26 +423,34 @@
 }
    ]
    }
-  ,{"SUBENT":"G0033003", "isub":3, "compiled":20120821, "TransID":"G026", "TransDate":20130510
+  ,{"SUBENT":"G0033003", "isub":3, "compiled":20220202, "TransID":"G049", "TransDate":20230116
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"29-CU-63(G,N)29-CU-62,,SIG"
+	,"x4code":{"code":"29-CU-63(G,N)29-CU-62,,SIG,,,DERIV"
 	    ,"c4reac":"(G,N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":4
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"29-CU-63(G,N)29-CU-62,,SIG"
+	    {"code":"29-CU-63(G,N)29-CU-62,,SIG,,,DERIV"
 		,"Reac":"G,N"
 		,"SF1":"29-CU-63","Targ":{"code":"29-CU-63","nam":"Cu-63","ZA":29063}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"N"
 		,"SF4":"29-CU-62","Prod":{"code":"29-CU-62","nam":"Cu-62","ZA":29062}
 		,"SF6":"SIG"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Determination of parameters by chi-squares"
+		," minimisation assuming the double Lorentzian form"]
 	}
       ]
      ,"DECAY-DATA":[
@@ -444,6 +471,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Plotted in Fig.5 of Eur.Phys.J.A48(2012)68"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220202A", "date":"20220202", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. REACTION(SF9): DERIV added."]
 	}
       ]
     }
@@ -547,12 +581,12 @@
 	,[19,64.7,6.5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"G0033003", "Pointer":" "
- ,"Subent":"G0033003", "compiled":20120821
+ ,"Subent":"G0033003", "compiled":20220202
  ,"year1":2012, "author1ini":"C.", "author1":"Plaisir"
  ,"zTarg1":29, "targ1":"Cu-63", "proj1":"g", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"29-CU-63(G,N)29-CU-62,,SIG"
+ ,"reacode":"29-CU-63(G,N)29-CU-62,,SIG,,,DERIV"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":81
@@ -665,26 +699,34 @@
 }
    ]
    }
-  ,{"SUBENT":"G0033004", "isub":4, "compiled":20120821, "TransID":"G026", "TransDate":20130510
+  ,{"SUBENT":"G0033004", "isub":4, "compiled":20220202, "TransID":"G049", "TransDate":20230116
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"37-RB-85(G,N)37-RB-84-M,,SIG"
+	,"x4code":{"code":"37-RB-85(G,N)37-RB-84-M,,SIG,,,DERIV"
 	    ,"c4reac":"(G,N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":4
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"37-RB-85(G,N)37-RB-84-M,,SIG"
+	    {"code":"37-RB-85(G,N)37-RB-84-M,,SIG,,,DERIV"
 		,"Reac":"G,N"
 		,"SF1":"37-RB-85","Targ":{"code":"37-RB-85","nam":"Rb-85","ZA":37085}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"N"
 		,"SF4":"37-RB-84-M","Prod":{"code":"37-RB-84-M","nam":"Rb-84-m","ZA":37084,"ProdM":"M"}
 		,"SF6":"SIG"
+		,"SF9":"DERIV","sf9Hlp":"Derived data"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Determination of parameters by chi-squares"
+		," minimisation assuming the single Lorentzian form"]
 	}
       ]
      ,"DECAY-DATA":[
@@ -700,6 +742,13 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Plotted in Fig.6 of Eur.Phys.J.A48(2012)68"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220202A", "date":"20220202", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" On. REACTION(SF9): DERIV added."]
 	}
       ]
     }
@@ -801,12 +850,12 @@
 	,[18.9,20.5,2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"G0033004", "Pointer":" "
- ,"Subent":"G0033004", "compiled":20120821
+ ,"Subent":"G0033004", "compiled":20220202
  ,"year1":2012, "author1ini":"C.", "author1":"Plaisir"
  ,"zTarg1":37, "targ1":"Rb-85", "proj1":"g", "emis1":"N", "MF":3, "MT":4, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"37-RB-85(G,N)37-RB-84-M,,SIG"
+ ,"reacode":"37-RB-85(G,N)37-RB-84-M,,SIG,,,DERIV"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":79
