@@ -1,9 +1,9 @@
-  {"ENTRY":"M0795", "updated":20151226, "TransID":"M081", "TransDate":20160311, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
+  {"ENTRY":"M0795", "updated":20220210, "TransID":"M118", "TransDate":20220628, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
    ,"y1":2010,"a1":"A.N.Ermakov+","r1":"J,YF,73,767,2010"
    ,"ref":"Jour: Yadernaya Fizika, Vol.73, p.767 (2010)"
    ,"title":"Photodisintegration of heavy nuclei in the energy region above the Giant Dipole Resonance."
    ,"x4subents":[
-   {"SUBENT":"M0795001", "isub":1, "compiled":20151226, "TransID":"M081", "TransDate":20160311
+   {"SUBENT":"M0795001", "isub":1, "compiled":20220210, "TransID":"M118", "TransDate":20220628
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -69,7 +69,7 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Natural Bi target (100% of 209Bi)."
-		,"Natural Tl  (29.5%  of  203Ti  and 70.5%  of 205Tl) in"
+		," Natural Tl (29.5%  of  203Ti  and 70.5%  of 205Tl) in"
 		," Tl-2(SO-4)."]
 	}
       ]
@@ -92,13 +92,6 @@
 	,"x4codes":[{"code":"DECAY", "dict":"ANALYSIS", "idict":23,"hlp":"Decay curve analysis"}]
 	,"x4freetext":[" Gamma-quanta  energy  spectrum  lines"
 		," data and decay curves data for reaction separation."]
-	}
-      ]
-     ,"ERR-ANALYS":[
-	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
-	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" Root-mean-square errors."]
 	}
       ]
      ,"STATUS":[
@@ -128,6 +121,15 @@
 	,"x4freetext":[" Corrected by SD and VV: REL-REF, ANALYSIS,"
 		," DECAY-DATA in SUBENT 004."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220210A", "date":"20220210", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: ERR-ANALYS moved"
+		," into SUBENTs 002, 004 - 007, ANALYSIS and BRA -> BRS"
+		," in REACTION of SUBENTS 007, SUBENTs 005 - 006 deleted"
+		," because no data for EXFOR, new DATA in SUBENT 002,"
+		," REACTION, STATUS."]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
@@ -143,37 +145,44 @@
       ,"data":[
 	 [67.7]]}
    }
-  ,{"SUBENT":"M0795002", "isub":2, "compiled":20101027, "TransID":"M055", "TransDate":20110117
+  ,{"SUBENT":"M0795002", "isub":2, "compiled":20220210, "TransID":"M118", "TransDate":20220628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(81-TL-203(G,X)ELEM/MASS,,SIG,,BRA)/\n(81-TL-203(G,N)81-TL-202,,SIG,,BRA)"
-	    ,"c4reac":"((G,X)ELEM/MASS,,SIG,,BRA)/((G,N),SIG,,BRA)"
+	,"x4code":{"code":"(81-TL-0(G,X)ELEM/MASS,,SIG,,BRS)/\n(81-TL-0(G,X)81-TL-202,,SIG,,BRS)"
+	    ,"c4reac":"((G,X)ELEM/MASS,,SIG,,BRS)/((G,X),SIG,,BRS)"
 	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"81-TL-203(G,X)ELEM/MASS,,SIG,,BRA"
+	    {"code":"81-TL-0(G,X)ELEM/MASS,,SIG,,BRS"
 		,"Reac":"G,X"
-		,"SF1":"81-TL-203","Targ":{"code":"81-TL-203","nam":"Tl-203","ZA":81203}
+		,"SF1":"81-TL-0","Targ":{"code":"81-TL-0","nam":"Tl-0","ZA":81000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"ELEM/MASS","Prod":{"code":"ELEM/MASS","nam":"elem/mass"}
 		,"SF6":"SIG"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }
-	    ,{"code":"81-TL-203(G,N)81-TL-202,,SIG,,BRA"
-		,"Reac":"G,N"
-		,"SF1":"81-TL-203","Targ":{"code":"81-TL-203","nam":"Tl-203","ZA":81203}
+	    ,{"code":"81-TL-0(G,X)81-TL-202,,SIG,,BRS"
+		,"Reac":"G,X"
+		,"SF1":"81-TL-0","Targ":{"code":"81-TL-0","nam":"Tl-0","ZA":81000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-202","Prod":{"code":"81-TL-202","nam":"Tl-202","ZA":81202}
 		,"SF6":"SIG"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	,"x4freetext":[" Reaction  identified   via  gamma-decay  lines   and"
 		," curves."]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" Root-mean-square errors."]
 	}
       ]
      ,"DECAY-DATA":[
@@ -194,11 +203,15 @@
 	, "Radiations":[]}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"Nucl":"81-TL-198", "t12":5.3, "t12units":"HR", "t12sec":19080.0
+	,"x4codes":[{"Nucl":"81-TL-198-G", "t12":5.3, "t12units":"HR", "t12sec":19080.0
 	, "Radiations":[]}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"Nucl":"81-TL-197", "t12":2.84, "t12units":"HR", "t12sec":10224.0
+	,"x4codes":[{"Nucl":"81-TL-198-M", "t12":1.87, "t12units":"HR", "t12sec":6732.0
+	, "Radiations":[]}]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"Nucl":"81-TL-197-G", "t12":2.84, "t12units":"HR", "t12sec":10224.0
 	, "Radiations":[]}]
 	}
       ]
@@ -207,47 +220,59 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data from Table 5."]
+	,"x4freetext":[" Data presented in Table 5 of"
+		," Phys.At.Nucl.73(2010)737."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220201A", "date":"20220201", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION,"
+		," DECAY-DATA (81-TL-197-G), STATUS, DATA substituted."]
 	}
       ]
     }
-    ,"DATA":{"ncols":4, "nrows":7
+    ,"DATA":{"ncols":5, "nrows":7
       ,"x4headers":[
        {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"MASS", "units":"NO-DIM", "pointer":" "
+      ,{"icol":1, "header":"ISOMER", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Isomer for nuclide given", "pFlag":"1000000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":2, "header":"MASS", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Atomic mass of nuclide", "pFlag":"1000000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":" "
+      ,{"icol":3, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+      ,{"icol":4, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ELEMENT"   ,"MASS"      ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["ELEMENT"   ,"ISOMER"    ,"MASS"      ,"DATA"      ,"DATA-ERR"  ]
+	,["NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ,"NO-DIM"    ]
+	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [81,202,1,0.03]
-	,[81,201,0.18,0.06]
-	,[81,200,0.029,0.003]
-	,[81,199,0.011,0.002]
-	,[81,198,0.004,0.001]
-	,[81,197,0.0012,5.0E-4]
-	,[80,203,0.0035,0.0012]]}
+	 [81,null,202,1,0.03]
+	,[81,null,201,0.18,0.06]
+	,[81,null,200,0.029,0.003]
+	,[81,null,199,0.011,0.002]
+	,[81,1,198,0.004,0.001]
+	,[81,null,197,0.0012,5.0E-4]
+	,[80,null,203,0.0035,0.0012]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0795002", "Pointer":" "
- ,"Subent":"M0795002", "compiled":20101027
+ ,"Subent":"M0795002", "compiled":20220210
  ,"year1":2010, "author1ini":"A.N.", "author1":"Ermakov"
- ,"zTarg1":81, "targ1":"Tl-203", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":2
+ ,"zTarg1":81, "targ1":"Tl-0", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section]"
- ,"reacode":"(81-TL-203(G,X)ELEM/MASS,,SIG,,BRA)/(81-TL-203(G,N)81-TL-202,,SIG,,BRA)"
+ ,"reacode":"(81-TL-0(G,X)ELEM/MASS,,SIG,,BRS)/(81-TL-0(G,X)81-TL-202,,SIG,,BRS)"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
- ,"wx4data":5
+ ,"wx4data":6
  ,"lx4data":7
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -280,6 +305,12 @@
     ,"expansion":"Isotope/particle identification: mass"
     ,"dat0":[202,201,200,199,198,197,203]
    ,"dat1eq":true}
+  ,{"ivar":5, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
+    ,"header":"ISOMER", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"93", "rank":2.1
+    ,"expansion":"Isotope/particle identification: isomer"
+    ,"dat0":[null,null,null,null,1,null,null]
+   ,"dat1eq":true}
   ]
  ,"wc5data":3
  ,"lc5data":7
@@ -297,26 +328,26 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
       ,"header":"ZAM", "dataType":"91", "rank":2.0
       ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[81202,81201,81200,81199,81198,81197,80203]
+      ,"x2":[81202,81201,81200,81199,81198.1,81197,80203]
    }
  }
- ,"c5mon":{"m0ref":"[MONIT]/al27px", "m1ref":"recom/tl203gn"
+ ,"c5mon":{"m0ref":"[MONIT]/al27px", "m1ref":"recom/tl0gx"
       ,"enNorm":[6.77e+7,6.77e+7,6.77e+7,6.77e+7,6.77e+7,6.77e+7,6.77e+7] }
 }
    ]
    }
-  ,{"SUBENT":"M0795003", "isub":3, "compiled":20111117, "TransID":"M061", "TransDate":20120131
+  ,{"SUBENT":"M0795003", "isub":3, "compiled":20220210, "TransID":"M118", "TransDate":20220628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(81-TL-205(G,X)80-HG-203,,SIG,,BRA)/\n(81-TL-203(G,N)81-TL-202,,SIG,,BRA)"
-	    ,"c4reac":"((G,X),SIG,,BRA)/((G,N),SIG,,BRA)"
+	,"x4code":{"code":"(81-TL-0(G,X)80-HG-203,,SIG,,BRA)/\n(81-TL-0(G,X)81-TL-202,,SIG,,BRA)"
+	    ,"c4reac":"((G,X),SIG,,BRA)/((G,X),SIG,,BRA)"
 	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section]"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"81-TL-205(G,X)80-HG-203,,SIG,,BRA"
+	    {"code":"81-TL-0(G,X)80-HG-203,,SIG,,BRA"
 		,"Reac":"G,X"
-		,"SF1":"81-TL-205","Targ":{"code":"81-TL-205","nam":"Tl-205","ZA":81205}
+		,"SF1":"81-TL-0","Targ":{"code":"81-TL-0","nam":"Tl-0","ZA":81000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"80-HG-203","Prod":{"code":"80-HG-203","nam":"Hg-203","ZA":80203}
@@ -324,11 +355,11 @@
 		,"SF8":"BRA"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }
-	    ,{"code":"81-TL-203(G,N)81-TL-202,,SIG,,BRA"
-		,"Reac":"G,N"
-		,"SF1":"81-TL-203","Targ":{"code":"81-TL-203","nam":"Tl-203","ZA":81203}
+	    ,{"code":"81-TL-0(G,X)81-TL-202,,SIG,,BRA"
+		,"Reac":"G,X"
+		,"SF1":"81-TL-0","Targ":{"code":"81-TL-0","nam":"Tl-0","ZA":81000}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"81-TL-202","Prod":{"code":"81-TL-202","nam":"Tl-202","ZA":81202}
 		,"SF6":"SIG"
 		,"SF8":"BRA"
@@ -349,12 +380,20 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data from Table 5."]
+	,"x4freetext":[" Data presented in Table 5 of"
+		," Phys.At.Nucl.73(2010)737."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220201A", "date":"20220201", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION, STATUS."]
 	}
       ]
     }
    }
-  ,{"SUBENT":"M0795004", "isub":4, "compiled":20151226, "TransID":"M081", "TransDate":20160311
+  ,{"SUBENT":"M0795004", "isub":4, "compiled":20220210, "TransID":"M118", "TransDate":20220628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -383,6 +422,13 @@
 		,"SF8":"BRA"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" Root-mean-square errors."]
 	}
       ]
      ,"DECAY-DATA":[
@@ -416,7 +462,8 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data from Table 6 of YF,73,767,2010"]
+	,"x4freetext":[" Data presented in Table 6 of"
+		," Phys.At.Nucl.73(2010)737."]
 	}
       ]
      ,"CRITIQUE":[
@@ -433,6 +480,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Corrected by SD and VV: DECAY-DATA (Tl-202"
 		," -> Bi-202, 83-BI-203-G)."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220201U", "date":"20220201", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: STATUS."]
 	}
       ]
     }
@@ -464,7 +516,7 @@
 	,[83,202,1.2E-4,6.0E-5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0795004", "Pointer":" "
- ,"Subent":"M0795004", "compiled":20151226
+ ,"Subent":"M0795004", "compiled":20220210
  ,"year1":2010, "author1ini":"A.N.", "author1":"Ermakov"
  ,"zTarg1":83, "targ1":"Bi-209", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -529,328 +581,44 @@
 }
    ]
    }
-  ,{"SUBENT":"M0795005", "isub":5, "compiled":20080424, "TransID":"M055", "TransDate":20110117
+  ,{"SUBENT":"M0795005", "isub":5, "compiled":20220210, "TransID":"M118", "TransDate":20220628, "nosubent":true 
+   }
+  ,{"SUBENT":"M0795006", "isub":6, "compiled":20220210, "TransID":"M118", "TransDate":20220628, "nosubent":true 
+   }
+  ,{"SUBENT":"M0795007", "isub":7, "compiled":20220210, "TransID":"M118", "TransDate":20220628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"81-TL-203(G,N)ELEM/MASS,,INT,,BRA,DERIV"
-	    ,"c4reac":"(G,N)ELEM/MASS,,INT,,BRA"
+	,"x4code":{"code":"83-BI-209(G,N)ELEM/MASS,,INT,,BRS"
+	    ,"c4reac":"(G,N)ELEM/MASS,,INT,,BRS"
 	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"81-TL-203(G,N)ELEM/MASS,,INT,,BRA,DERIV"
-		,"Reac":"G,N"
-		,"SF1":"81-TL-203","Targ":{"code":"81-TL-203","nam":"Tl-203","ZA":81203}
-		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N"
-		,"SF4":"ELEM/MASS","Prod":{"code":"ELEM/MASS","nam":"elem/mass"}
-		,"SF6":"INT"
-		,"SF8":"BRA"
-		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
-	    }]}
-	}
-      ]
-     ,"COMMENT":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Absolute values  of  integrated  cross  sections  were"
-		," obtained from relative yields using normalization  to"
-		," the evaluated (g,n), (g,2n) and (g,3n) reaction cross"
-		," sections and  multiparticle  photonuclear   reactions"
-		," cross sections   calculated   in   modern   model  of"
-		," photonuclear reactions."]
-	}
-      ]
-     ,"REL-REF":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,V.V.VARLAMOV+,J,YK,2003,(1-2),48,2003"
-		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"V.V.VARLAMOV+","stdFileName":"J,YK,,(1-2),48,2003"
-		,"year":2003,"typ":"J","ref":"J,YK","vol":"","issue":"1-2","p":"48"
-		,"shortRef":"Jour: Vop.At.Nauki i Tekhn.,Ser.Yaderno-Reak.Konstanty, Issue.1-2, p.48 (2003)"}]
-	,"x4freetext":["Evaluated data."]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,,B.S.ISHKHANOV+,J,FCY,38,460,2007"
-		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"B.S.ISHKHANOV+","stdFileName":"J,FCY,38,460,2007"
-		,"year":2007,"typ":"J","ref":"J,FCY","vol":"38","p":"460"
-		,"shortRef":"Jour: Fizika Elementarnykh Chastic i Atomnogo Yadra, Vol.38, p.460 (2007)"}]
-	,"x4freetext":["Calculated data."]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Data from Table 7."]
-	}
-      ]
-    }
-    ,"DATA":{"ncols":4, "nrows":6
-      ,"x4headers":[
-       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"MASS", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic mass of nuclide", "pFlag":"1000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"MB*MEV", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"millibarns * MeV","familyCode":"B*E","convFc":1000.0,"basicUnits":"B*EV"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"MB*MEV", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"millibarns * MeV","familyCode":"B*E","convFc":1000.0,"basicUnits":"B*EV"}
-      ]
-      ,"datacols":[
-	 ["ELEMENT"   ,"MASS"      ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"MB*MEV"    ,"MB*MEV"    ]
-	,[" "         ," "         ," "         ," "         ]]
-      ,"data":[
-	 [81,202,2280,70]
-	,[81,201,790,260]
-	,[81,200,225,25]
-	,[81,199,200,35]
-	,[81,198,112,30]
-	,[81,197,56,23]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"M0795005", "Pointer":" "
- ,"Subent":"M0795005", "compiled":20080424
- ,"year1":2010, "author1ini":"A.N.", "author1":"Ermakov"
- ,"zTarg1":81, "targ1":"Tl-203", "proj1":"g", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
- ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"81-TL-203(G,N)ELEM/MASS,,INT,,BRA,DERIV"
- ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
- ,"wx4data":5
- ,"lx4data":6
- ,"x4data":[
-   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MB*MEV", "basicUnits":"B*EV"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
-    ,"dat0":[2280,790,225,200,112,56]
-    ,"dat1":[2.28e+6,7.9e+5,2.25e+5,2.0e+5,1.12e+5,5.6e+4]}
-  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB*MEV", "basicUnits":"B*EV"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
-    ,"expansion":"Data: data /Error/"
-    ,"dat0":[70,260,25,35,30,23]
-    ,"dat1":[7.0e+4,2.6e+5,2.5e+4,3.5e+4,3.0e+4,2.3e+4]}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Max", "dataType":"41", "rank":1.3
-    ,"expansion":"Incident energy: energy"
-    ,"com0":67.7
-    ,"com1":6.77e+7}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[81,81,81,81,81,81]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"92", "rank":2.1
-    ,"expansion":"Isotope/particle identification: mass"
-    ,"dat0":[202,201,200,199,198,197]
-   ,"dat1eq":true}
-  ]
- ,"wc5data":3
- ,"lc5data":6
- ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B*EV"
-      ,"header":"DATA", "dataType":"21", "rank":0.0
-      ,"expansion":"Data: data"
-      ,"y":[2.28e+6,7.9e+5,2.25e+5,2.0e+5,1.12e+5,5.6e+4]
-      ,"dy":[7.0e+4,2.6e+5,2.5e+4,3.5e+4,3.0e+4,2.3e+4]   }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
-      ,"header":"EN", "dataType":"41", "rank":1.0
-      ,"expansion":"Incident energy: energy"
-      ,"x1":[6.77e+7,6.77e+7,6.77e+7,6.77e+7,6.77e+7,6.77e+7]
-   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
-      ,"header":"ZAM", "dataType":"91", "rank":2.0
-      ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[81202,81201,81200,81199,81198,81197]
-   }
- }
-}
-   ]
-   }
-  ,{"SUBENT":"M0795006", "isub":6, "compiled":20080424, "TransID":"M055", "TransDate":20110117
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"81-TL-205(G,N)ELEM/MASS,,INT,,BRA,DERIV"
-	    ,"c4reac":"(G,N)ELEM/MASS,,INT,,BRA"
-	    ,"combi":"a"
-	    ,"Units":"B*EV"
-	    ,"reacs": [
-	    {"code":"81-TL-205(G,N)ELEM/MASS,,INT,,BRA,DERIV"
-		,"Reac":"G,N"
-		,"SF1":"81-TL-205","Targ":{"code":"81-TL-205","nam":"Tl-205","ZA":81205}
-		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N"
-		,"SF4":"ELEM/MASS","Prod":{"code":"ELEM/MASS","nam":"elem/mass"}
-		,"SF6":"INT"
-		,"SF8":"BRA"
-		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
-	    }]}
-	}
-      ]
-     ,"COMMENT":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Absolute values  of  integrated  cross  sections  were"
-		," obtained from relative yields using normalization  to"
-		," the evaluated (g,n), (g,2n) and (g,3n) reaction cross"
-		," sections and  multiparticle  photonuclear   reactions"
-		," cross sections   calculated   in   modern   model  of"
-		," photonuclear reactions."]
-	}
-      ]
-     ,"REL-REF":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,V.V.VARLAMOV+,J,YK,2003,(1-2),48,2003"
-		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"V.V.VARLAMOV+","stdFileName":"J,YK,,(1-2),48,2003"
-		,"year":2003,"typ":"J","ref":"J,YK","vol":"","issue":"1-2","p":"48"
-		,"shortRef":"Jour: Vop.At.Nauki i Tekhn.,Ser.Yaderno-Reak.Konstanty, Issue.1-2, p.48 (2003)"}]
-	,"x4freetext":["Evaluated data."]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,,B.S.ISHKHANOV+,J,FCY,38,460,2007"
-		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"B.S.ISHKHANOV+","stdFileName":"J,FCY,38,460,2007"
-		,"year":2007,"typ":"J","ref":"J,FCY","vol":"38","p":"460"
-		,"shortRef":"Jour: Fizika Elementarnykh Chastic i Atomnogo Yadra, Vol.38, p.460 (2007)"}]
-	,"x4freetext":["Calculated data."]
-	}
-      ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"TABLE"
-		,"flag":"TABLE", "help":"Data presented by authors"
-		}]
-	,"x4freetext":[" Data from Table 7."]
-	}
-      ]
-    }
-    ,"DATA":{"ncols":4, "nrows":7
-      ,"x4headers":[
-       {"icol":0, "header":"ELEMENT", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic number of element", "pFlag":"1000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":1, "header":"MASS", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Atomic mass of nuclide", "pFlag":"1000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA", "units":"MB*MEV", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"millibarns * MeV","familyCode":"B*E","convFc":1000.0,"basicUnits":"B*EV"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"MB*MEV", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"millibarns * MeV","familyCode":"B*E","convFc":1000.0,"basicUnits":"B*EV"}
-      ]
-      ,"datacols":[
-	 ["ELEMENT"   ,"MASS"      ,"DATA"      ,"DATA-ERR"  ]
-	,["NO-DIM"    ,"NO-DIM"    ,"MB*MEV"    ,"MB*MEV"    ]
-	,[" "         ," "         ," "         ," "         ]]
-      ,"data":[
-	 [81,204,2240,70]
-	,[81,203,920,150]
-	,[81,202,240,20]
-	,[81,201,206,50]
-	,[81,200,126,30]
-	,[81,199,71,20]
-	,[80,203,29,7]]}
-  ,"datasets":[
-{"iDataset":0, "DatasetID":"M0795006", "Pointer":" "
- ,"Subent":"M0795006", "compiled":20080424
- ,"year1":2010, "author1ini":"A.N.", "author1":"Ermakov"
- ,"zTarg1":81, "targ1":"Tl-205", "proj1":"g", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
- ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"81-TL-205(G,N)ELEM/MASS,,INT,,BRA,DERIV"
- ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
- ,"wx4data":5
- ,"lx4data":7
- ,"x4data":[
-   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MB*MEV", "basicUnits":"B*EV"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
-    ,"dat0":[2240,920,240,206,126,71,29]
-    ,"dat1":[2.24e+6,9.2e+5,2.4e+5,2.06e+5,1.26e+5,7.1e+4,2.9e+4]}
-  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB*MEV", "basicUnits":"B*EV"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
-    ,"expansion":"Data: data /Error/"
-    ,"dat0":[70,150,20,50,30,20,7]
-    ,"dat1":[7.0e+4,1.5e+5,2.0e+4,5.0e+4,3.0e+4,2.0e+4,7000]}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
-    ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Max", "dataType":"41", "rank":1.3
-    ,"expansion":"Incident energy: energy"
-    ,"com0":67.7
-    ,"com1":6.77e+7}
-  ,{"ivar":3, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"ELEMENT", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"91", "rank":2.1
-    ,"expansion":"Isotope/particle identification: element"
-    ,"dat0":[81,81,81,81,81,81,80]
-   ,"dat1eq":true}
-  ,{"ivar":4, "cvar":"x2", "fam":"ZAM", "ifComm":false, "ifCM":false
-    ,"header":"MASS", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"X2.Value", "dataType":"92", "rank":2.1
-    ,"expansion":"Isotope/particle identification: mass"
-    ,"dat0":[204,203,202,201,200,199,203]
-   ,"dat1eq":true}
-  ]
- ,"wc5data":3
- ,"lc5data":7
- ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B*EV"
-      ,"header":"DATA", "dataType":"21", "rank":0.0
-      ,"expansion":"Data: data"
-      ,"y":[2.24e+6,9.2e+5,2.4e+5,2.06e+5,1.26e+5,7.1e+4,2.9e+4]
-      ,"dy":[7.0e+4,1.5e+5,2.0e+4,5.0e+4,3.0e+4,2.0e+4,7000]   }
-   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
-      ,"header":"EN", "dataType":"41", "rank":1.0
-      ,"expansion":"Incident energy: energy"
-      ,"x1":[6.77e+7,6.77e+7,6.77e+7,6.77e+7,6.77e+7,6.77e+7,6.77e+7]
-   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ZAM", "ifCM":false, "units":"NO-DIM"
-      ,"header":"ZAM", "dataType":"91", "rank":2.0
-      ,"expansion":"Isotope/particle identification: element"
-      ,"x2":[81204,81203,81202,81201,81200,81199,80203]
-   }
- }
-}
-   ]
-   }
-  ,{"SUBENT":"M0795007", "isub":7, "compiled":20080424, "TransID":"M055", "TransDate":20110117
-    ,"BIB":{
-      "REACTION":[
-	{"x4pointer":" "
-	,"x4code":{"code":"83-BI-209(G,N)ELEM/MASS,,INT,,BRA"
-	    ,"c4reac":"(G,N)ELEM/MASS,,INT,,BRA"
-	    ,"combi":"a"
-	    ,"Units":"B*EV"
-	    ,"reacs": [
-	    {"code":"83-BI-209(G,N)ELEM/MASS,,INT,,BRA"
+	    {"code":"83-BI-209(G,N)ELEM/MASS,,INT,,BRS"
 		,"Reac":"G,N"
 		,"SF1":"83-BI-209","Targ":{"code":"83-BI-209","nam":"Bi-209","ZA":83209}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"N"
 		,"SF4":"ELEM/MASS","Prod":{"code":"ELEM/MASS","nam":"elem/mass"}
 		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
+	}
+      ]
+     ,"ANALYSIS":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["Integrated cross section derives from the yield"
+		," assuming that the bremsstrahlung spectrum is a"
+		," iconstant of the incident energy."]
+	}
+      ]
+     ,"ERR-ANALYS":[
+	{"x4pointer":" "
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" Root-mean-square errors."]
 	}
       ]
      ,"COMMENT":[
@@ -866,20 +634,20 @@
       ]
      ,"REL-REF":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"R,,V.V.VARLAMOV+,J,YK,2003,(1-2),48,2003"
+	,"x4codes":[{"code":"R,,V.V.Varlamov+,J,YK,2003,(1-2),48,2003"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"V.V.VARLAMOV+","stdFileName":"J,YK,,(1-2),48,2003"
+		,"author1":"V.V.Varlamov+","stdFileName":"J,YK,,(1-2),48,2003"
 		,"year":2003,"typ":"J","ref":"J,YK","vol":"","issue":"1-2","p":"48"
 		,"shortRef":"Jour: Vop.At.Nauki i Tekhn.,Ser.Yaderno-Reak.Konstanty, Issue.1-2, p.48 (2003)"}]
-	,"x4freetext":["Evaluated data."]
+	,"x4freetext":[" Evaluated data."]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"R,,B.S.ISHKHANOV+,J,FCY,38,460,2007"
+	,"x4codes":[{"code":"R,,B.S.Ishkhanov+,J,FCY,38,460,2007"
 		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
-		,"author1":"B.S.ISHKHANOV+","stdFileName":"J,FCY,38,460,2007"
+		,"author1":"B.S.Ishkhanov+","stdFileName":"J,FCY,38,460,2007"
 		,"year":2007,"typ":"J","ref":"J,FCY","vol":"38","p":"460"
 		,"shortRef":"Jour: Fizika Elementarnykh Chastic i Atomnogo Yadra, Vol.38, p.460 (2007)"}]
-	,"x4freetext":["Calculated data."]
+	,"x4freetext":[" Calculated data."]
 	}
       ]
      ,"STATUS":[
@@ -887,7 +655,16 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data from Table 7."]
+	,"x4freetext":[" Data presented in Table 7 of"
+		," Phys.At.Nucl.73(2010)737."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220201A", "date":"20220201", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: ANALYSIS,"
+		," INT,,BRA -> INT,,BRS, STATUS."]
 	}
       ]
     }
@@ -919,12 +696,12 @@
 	,[83,203,106,30]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0795007", "Pointer":" "
- ,"Subent":"M0795007", "compiled":20080424
+ ,"Subent":"M0795007", "compiled":20220210
  ,"year1":2010, "author1ini":"A.N.", "author1":"Ermakov"
  ,"zTarg1":83, "targ1":"Bi-209", "proj1":"g", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"83-BI-209(G,N)ELEM/MASS,,INT,,BRA"
+ ,"reacode":"83-BI-209(G,N)ELEM/MASS,,INT,,BRS"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":5
  ,"lx4data":6
