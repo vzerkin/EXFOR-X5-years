@@ -1,9 +1,9 @@
-  {"ENTRY":"M0814", "updated":20110609, "TransID":"M059", "TransDate":20110921, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
+  {"ENTRY":"M0814", "updated":20220210, "TransID":"M118", "TransDate":20220628, "CenterID":"CDFE", "Center":"Centre for Photonuclear Experiments Data, Moscow State University, Russia"
    ,"y1":1969,"a1":"G.P.Antropov+","r1":"J,IZV,33,700,1969"
    ,"ref":"Jour: Izv. Rossiiskoi Akademii Nauk, Ser.Fiz., Vol.33, p.700 (1969)"
    ,"title":"Photoneutron cross sections of 90Zr and 91Zr."
    ,"x4subents":[
-   {"SUBENT":"M0814001", "isub":1, "compiled":20110609, "TransID":"M059", "TransDate":20110921
+   {"SUBENT":"M0814001", "isub":1, "compiled":20220210, "TransID":"M118", "TransDate":20220628
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -83,40 +83,38 @@
 	,"x4freetext":[" Data were compiled  at the  MSU SINP CDFE"
 		," by V.Varlamov."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220210A", "date":"20220210", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: STATUS,"
+		," REACTION."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"M0814002", "isub":2, "compiled":20110609, "TransID":"M059", "TransDate":20110921
+  ,{"SUBENT":"M0814002", "isub":2, "compiled":20220210, "TransID":"M118", "TransDate":20220628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(40-ZR-90(G,N)40-ZR-89,,SIG,,BRS)+\n(40-ZR-90(G,N+P)39-Y-88,,SIG,,BRS)"
-	    ,"c4reac":"((G,N),SIG,,BRS)+((G,N+P),SIG,,BRS)"
-	    ,"combi":"a","combiQuant":"Cross section"
-	    ,"MF":503
+	,"x4code":{"code":"40-ZR-90(G,X)0-NN-1,,SIG,,BRS"
+	    ,"c4reac":"(G,X),SIG,,BRS"
+	    ,"combi":"a"
+	    ,"MF":3
+	    ,"MT":201
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(G,N)40-ZR-89,,SIG,,BRS"
-		,"Reac":"G,N"
+	    {"code":"40-ZR-90(G,X)0-NN-1,,SIG,,BRS"
+		,"Reac":"G,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N"
-		,"SF4":"40-ZR-89","Prod":{"code":"40-ZR-89","nam":"Zr-89","ZA":40089}
-		,"SF6":"SIG"
-		,"SF8":"BRS"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"40-ZR-90(G,N+P)39-Y-88,,SIG,,BRS"
-		,"Reac":"G,N+P"
-		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
-		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N+P"
-		,"SF4":"39-Y-88","Prod":{"code":"39-Y-88","nam":"Y-88","ZA":39088}
+		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"SIG"
 		,"SF8":"BRS"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
-	,"x4freetext":[" Threshold of reaction (g,np) is equal to 19.8 MeV,"
+	,"x4freetext":[" Sum of reactions (g,n) and (g,np)."
+		," Threshold of reaction (g,np) is equal to 19.8 MeV,"
 		," that of reaction (g,2n) - to 21.3 MeV."]
 	}
       ]
@@ -132,7 +130,15 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[" Data from the Fig 1a."]
+	,"x4freetext":[" Data from the Fig 1a of"
+		," Bull.Russ.Acad.Sci.:Phys.33(1970)645."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220201A", "date":"20220201", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION, STATUS."]
 	}
       ]
     }
@@ -176,12 +182,12 @@
 	,[22,-18.65,20.27]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0814002", "Pointer":" "
- ,"Subent":"M0814002", "compiled":20110609
+ ,"Subent":"M0814002", "compiled":20220210
  ,"year1":1969, "author1ini":"G.P.", "author1":"Antropov"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"g", "emis1":"N", "MF":503, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(40-ZR-90(G,N)40-ZR-89,,SIG,,BRS)+(40-ZR-90(G,N+P)39-Y-88,,SIG,,BRS)"
+ ,"reacode":"40-ZR-90(G,X)0-NN-1,,SIG,,BRS"
  ,"compNotes":[]
  ,"wx4data":3
  ,"lx4data":21
@@ -240,7 +246,7 @@
 }
    ]
    }
-  ,{"SUBENT":"M0814003", "isub":3, "compiled":20110609, "TransID":"M059", "TransDate":20110921
+  ,{"SUBENT":"M0814003", "isub":3, "compiled":20220210, "TransID":"M118", "TransDate":20220628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -278,7 +284,15 @@
 	,"x4codes":[{"code":"CURVE"
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
-	,"x4freetext":[" Data from the Fig 1b."]
+	,"x4freetext":[" Data from the Fig 1b of"
+		," Bull.Russ.Acad.Sci.:Phys.33(1970)645."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220201A", "date":"20220201", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION, STATUS."]
 	}
       ]
     }
@@ -321,7 +335,7 @@
 	,[21.5,82.59,14.54]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0814003", "Pointer":" "
- ,"Subent":"M0814003", "compiled":20110609
+ ,"Subent":"M0814003", "compiled":20220210
  ,"year1":1969, "author1ini":"G.P.", "author1":"Antropov"
  ,"zTarg1":40, "targ1":"Zr-91", "proj1":"g", "emis1":"X", "MF":3, "MT":201, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -376,35 +390,26 @@
 }
    ]
    }
-  ,{"SUBENT":"M0814004", "isub":4, "compiled":20110609, "TransID":"M059", "TransDate":20110921
+  ,{"SUBENT":"M0814004", "isub":4, "compiled":20220210, "TransID":"M118", "TransDate":20220628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(40-ZR-90(G,N)40-ZR-89,,INT,,BRA)+\n(40-ZR-90(G,N+P)39-Y-88,,INT,,BRA)"
-	    ,"c4reac":"((G,N),INT,,BRA)+((G,N+P),INT,,BRA)"
-	    ,"combi":"a","combiQuant":"Cross-section integral over incident energy"
+	,"x4code":{"code":"40-ZR-90(G,X)0-NN-1,,INT,,BRS"
+	    ,"c4reac":"(G,X),INT,,BRS"
+	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"40-ZR-90(G,N)40-ZR-89,,INT,,BRA"
-		,"Reac":"G,N"
+	    {"code":"40-ZR-90(G,X)0-NN-1,,INT,,BRS"
+		,"Reac":"G,X"
 		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N"
-		,"SF4":"40-ZR-89","Prod":{"code":"40-ZR-89","nam":"Zr-89","ZA":40089}
+		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"INT"
-		,"SF8":"BRA"
-		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
-	    }
-	    ,{"code":"40-ZR-90(G,N+P)39-Y-88,,INT,,BRA"
-		,"Reac":"G,N+P"
-		,"SF1":"40-ZR-90","Targ":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
-		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N+P"
-		,"SF4":"39-Y-88","Prod":{"code":"39-Y-88","nam":"Y-88","ZA":39088}
-		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
+	,"x4freetext":["Sum of reactions (g,n) and (g,np)."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -418,7 +423,16 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data from the Table 1."]
+	,"x4freetext":[" Data from the Table 1 of"
+		," Bull.Russ.Acad.Sci.:Phys.33(1970)645."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220201A", "date":"20220201", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION,"
+		," INT,,BRA -> INT,,BRS, STATUS."]
 	}
       ]
     }
@@ -439,12 +453,12 @@
 	 [22.5,1270]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0814004", "Pointer":" "
- ,"Subent":"M0814004", "compiled":20110609
+ ,"Subent":"M0814004", "compiled":20220210
  ,"year1":1969, "author1ini":"G.P.", "author1":"Antropov"
- ,"zTarg1":40, "targ1":"Zr-90", "proj1":"g", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-90", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"(40-ZR-90(G,N)40-ZR-89,,INT,,BRA)+(40-ZR-90(G,N+P)39-Y-88,,INT,,BRA)"
+ ,"reacode":"40-ZR-90(G,X)0-NN-1,,INT,,BRS"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":2
  ,"lx4data":1
@@ -479,33 +493,23 @@
 }
    ]
    }
-  ,{"SUBENT":"M0814005", "isub":5, "compiled":20110609, "TransID":"M059", "TransDate":20110921
+  ,{"SUBENT":"M0814005", "isub":5, "compiled":20220210, "TransID":"M118", "TransDate":20220628
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(40-ZR-91(G,N)40-ZR-90,,INT,,BRA)+\n(40-ZR-91(G,N+P)39-Y-89,,INT,,BRA)"
-	    ,"c4reac":"((G,N),INT,,BRA)+((G,N+P),INT,,BRA)"
-	    ,"combi":"a","combiQuant":"Cross-section integral over incident energy"
+	,"x4code":{"code":"40-ZR-91(G,X)0-NN-1,,INT,,BRS"
+	    ,"c4reac":"(G,X),INT,,BRS"
+	    ,"combi":"a"
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"40-ZR-91(G,N)40-ZR-90,,INT,,BRA"
-		,"Reac":"G,N"
+	    {"code":"40-ZR-91(G,X)0-NN-1,,INT,,BRS"
+		,"Reac":"G,X"
 		,"SF1":"40-ZR-91","Targ":{"code":"40-ZR-91","nam":"Zr-91","ZA":40091}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N"
-		,"SF4":"40-ZR-90","Prod":{"code":"40-ZR-90","nam":"Zr-90","ZA":40090}
+		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF4":"0-NN-1","Prod":{"code":"0-NN-1","nam":"Nn-1","ZA":1}
 		,"SF6":"INT"
-		,"SF8":"BRA"
-		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
-	    }
-	    ,{"code":"40-ZR-91(G,N+P)39-Y-89,,INT,,BRA"
-		,"Reac":"G,N+P"
-		,"SF1":"40-ZR-91","Targ":{"code":"40-ZR-91","nam":"Zr-91","ZA":40091}
-		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
-		,"SF3":"N+P"
-		,"SF4":"39-Y-89","Prod":{"code":"39-Y-89","nam":"Y-89","ZA":39089}
-		,"SF6":"INT"
-		,"SF8":"BRA"
+		,"SF8":"BRS"
 		,"SF58":",INT","Quant":"INT","BasicUnits":"B*EV","QuantHlp":"Cross-section integral over incident energy"
 	    }]}
 	}
@@ -518,10 +522,25 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
+	,"x4codes":[{"code":"DEP,M0814003"
+		,"flag":"DEP", "help":"Dependent data"
+		,"subent":"M0814003"
+		}]
+	}
+	,{"x4pointer":" "
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data from the Table 1."]
+	,"x4freetext":[" Data from the Table 1 of"
+		," Bull.Russ.Acad.Sci.:Phys.33(1970)645."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220201A", "date":"20220201", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected by V.Varlamov: REACTION,"
+		," INT,,BRA -> INT,,BRS, STATUS."]
 	}
       ]
     }
@@ -542,12 +561,12 @@
 	 [22.5,1420]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"M0814005", "Pointer":" "
- ,"Subent":"M0814005", "compiled":20110609
+ ,"Subent":"M0814005", "compiled":20220210
  ,"year1":1969, "author1ini":"G.P.", "author1":"Antropov"
- ,"zTarg1":40, "targ1":"Zr-91", "proj1":"g", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":40, "targ1":"Zr-91", "proj1":"g", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"INT", "quant":"INT", "quantExpan":"Cross-section integral over incident energy"
- ,"reacode":"(40-ZR-91(G,N)40-ZR-90,,INT,,BRA)+(40-ZR-91(G,N+P)39-Y-89,,INT,,BRA)"
+ ,"reacode":"40-ZR-91(G,X)0-NN-1,,INT,,BRS"
  ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":2
  ,"lx4data":1
