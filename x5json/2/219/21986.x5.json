@@ -1,9 +1,9 @@
-  {"ENTRY":"21986", "updated":20151128, "TransID":"2247", "TransDate":20160502, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"21986", "updated":20220219, "TransID":"2310", "TransDate":20220713, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1985,"a1":"S.Chiba+","r1":"J,NST,22,771,1985"
    ,"ref":"Jour: Jour. of Nuclear Science and Technology, Vol.22, p.771 (1985)"
    ,"title":"Double-differential neutron emission cross sections of 6Li and 7Li at incident neutron energies of 4.2, 5.4, 6.0 and 14.2 MeV"
    ,"x4subents":[
-   {"SUBENT":"21986001", "isub":1, "compiled":20151128, "TransID":"2247", "TransDate":20160502
+   {"SUBENT":"21986001", "isub":1, "compiled":20220219, "TransID":"2310", "TransDate":20220713
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -182,6 +182,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. Major revisions in 002,010,018,029,"
 		," 031-033,035-037,039-040,042-043,051,061,075,078,081"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220219A", "date":"20220219", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Corrections in Subents 041,042,082,083."]
 	}
       ]
     }
@@ -4836,26 +4841,25 @@
 }
    ]
    }
-  ,{"SUBENT":"21986041", "isub":41, "compiled":20151128, "TransID":"2247", "TransDate":20160502
+  ,{"SUBENT":"21986041", "isub":41, "compiled":20220219, "TransID":"2310", "TransDate":20220713
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-6(N,2N)3-LI-5,PAR,DA"
-	    ,"c4reac":"(N,2N)PAR,DA"
+	,"x4code":{"code":"3-LI-6(N,2N)3-LI-5,,DA"
+	    ,"c4reac":"(N,2N),DA"
 	    ,"combi":"a"
 	    ,"MF":4
 	    ,"MT":16
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"3-LI-6(N,2N)3-LI-5,PAR,DA"
+	    {"code":"3-LI-6(N,2N)3-LI-5,,DA"
 		,"Reac":"N,2N"
 		,"SF1":"3-LI-6","Targ":{"code":"3-LI-6","nam":"Li-6","ZA":3006}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"2N"
 		,"SF4":"3-LI-5","Prod":{"code":"3-LI-5","nam":"Li-5","ZA":3005}
-		,"SF5":"PAR"
 		,"SF6":"DA"
-		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
+		,"SF58":",DA","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Differential c/s with respect to angle"
 	    }]}
 	}
       ]
@@ -4905,9 +4909,16 @@
 	     ,"actHelp":"Entry or subentry deleted"}
 	,"x4freetext":[" On. Superseded."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220219A", "date":"20220219", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF5=PAR deleted from REACTION code."
+		,"E-LVL deleted. (according to the fig.11 of"
+		,"                         Nucl.Sci.Techn.,22(1985)771)."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":4, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
@@ -4915,19 +4926,13 @@
       ,{"icol":1, "header":"EN-RSL", "units":"MEV", "pointer":" "
 	,"headerHelp":"Incident projectile energy resolution (Unspecified)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"E-LVL", "units":"MEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":3, "header":"E-LVL", "units":"MEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL"    ,"E-LVL"     ,"E-LVL"     ]
-	,["MEV"       ,"MEV"       ,"MEV"       ,"MEV"       ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN"        ,"EN-RSL"    ]
+	,["MEV"       ,"MEV"       ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [14.2,0.2,3.696,5.663]]}
+	 [14.2,0.2]]}
     ,"DATA":{"ncols":3, "nrows":10
       ,"x4headers":[
        {"icol":0, "header":"ANG", "units":"ADEG", "pointer":" "
@@ -4957,14 +4962,14 @@
 	,[150,0.005579,0.002819]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"21986041", "Pointer":" "
- ,"Subent":"21986041", "compiled":20151128
+ ,"Subent":"21986041", "compiled":20220219
  ,"year1":1985, "author1ini":"S.", "author1":"Chiba"
- ,"zTarg1":3, "targ1":"Li-6", "proj1":"n", "emis1":"2N", "MF":4, "MT":16, "nExpectedArgs":3
- ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
- ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
- ,"reacode":"3-LI-6(N,2N)3-LI-5,PAR,DA"
- ,"compNotes":["LVL: SELECT SMALLEST AND LARGEST VALUES"]
- ,"wx4data":7
+ ,"zTarg1":3, "targ1":"Li-6", "proj1":"n", "emis1":"2N", "MF":4, "MT":16, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
+ ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
+ ,"reacode":"3-LI-6(N,2N)3-LI-5,,DA"
+ ,"compNotes":[]
+ ,"wx4data":5
  ,"lx4data":10
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -4991,26 +4996,14 @@
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.2
     ,"com1":2.0e+5}
-  ,{"ivar":4, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
-    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
-    ,"com0":3.696
-    ,"com1":3.696e+6}
-  ,{"ivar":5, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
-    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
-    ,"com0":5.663
-    ,"com1":5.663e+6}
-  ,{"ivar":6, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"x2", "fam":"ANG", "ifComm":false, "ifCM":false
     ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
-    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"what":"X2.Value", "dataType":"61", "rank":2.1
     ,"expansion":"Angle: angle"
     ,"dat0":[30,37.5,43.12,50,60,75,104.21,120,135,150]
    ,"dat1eq":true}
   ]
- ,"wc5data":4
+ ,"wc5data":3
  ,"lc5data":10
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
@@ -5023,39 +5016,34 @@
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.42e+7,1.42e+7,1.42e+7,1.42e+7,1.42e+7,1.42e+7,1.42e+7,1.42e+7,1.42e+7,1.42e+7]
       ,"dx1":[2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5]   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
-      ,"header":"LVL", "dataType":"52", "rank":2.0
-      ,"expansion":"Secondary energy: level energy"
-      ,"x2":[5.663e+6,5.663e+6,5.663e+6,5.663e+6,5.663e+6,5.663e+6,5.663e+6,5.663e+6,5.663e+6,5.663e+6]
-   }
-   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
-      ,"header":"ANG", "dataType":"61", "rank":3.0
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":2.0
       ,"expansion":"Angle: angle"
-      ,"x3":[30,37.5,43.12,50,60,75,104.21,120,135,150]
+      ,"x2":[30,37.5,43.12,50,60,75,104.21,120,135,150]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"21986042", "isub":42, "compiled":20151128, "TransID":"2247", "TransDate":20160502
+  ,{"SUBENT":"21986042", "isub":42, "compiled":20220219, "TransID":"2310", "TransDate":20220713
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-6(N,2N)3-LI-5,PAR,SIG"
-	    ,"c4reac":"(N,2N)PAR,SIG"
+	,"x4code":{"code":"3-LI-6(N,2N)3-LI-5,,SIG"
+	    ,"c4reac":"(N,2N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":16
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"3-LI-6(N,2N)3-LI-5,PAR,SIG"
+	    {"code":"3-LI-6(N,2N)3-LI-5,,SIG"
 		,"Reac":"N,2N"
 		,"SF1":"3-LI-6","Targ":{"code":"3-LI-6","nam":"Li-6","ZA":3006}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"2N"
 		,"SF4":"3-LI-5","Prod":{"code":"3-LI-5","nam":"Li-5","ZA":3005}
-		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
@@ -5105,9 +5093,15 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. Superseded."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220219A", "date":"20220219", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF5=PAR deleted from REACTION code."
+		,"E-LVL deleted. (according to the Table)."]
+	}
       ]
     }
-    ,"DATA":{"ncols":6, "nrows":1
+    ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
@@ -5115,35 +5109,29 @@
       ,{"icol":1, "header":"EN-RSL", "units":"MEV", "pointer":" "
 	,"headerHelp":"Incident projectile energy resolution (Unspecified)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"E-LVL", "units":"MEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":3, "header":"E-LVL", "units":"MEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":4, "header":"DATA", "units":"B", "pointer":" "
+      ,{"icol":2, "header":"DATA", "units":"B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":5, "header":"DATA-ERR", "units":"B", "pointer":" "
+      ,{"icol":3, "header":"DATA-ERR", "units":"B", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL"    ,"E-LVL"     ,"E-LVL"     ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"MEV"       ,"MEV"       ,"MEV"       ,"B"         ,"B"         ]
-	,[" "         ," "         ," "         ," "         ," "         ," "         ]]
+	 ["EN"        ,"EN-RSL"    ,"DATA"      ,"DATA-ERR"  ]
+	,["MEV"       ,"MEV"       ,"B"         ,"B"         ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [14.2,0.2,3.696,5.663,0.08,0.008]]}
+	 [14.2,0.2,0.08,0.008]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"21986042", "Pointer":" "
- ,"Subent":"21986042", "compiled":20151128
+ ,"Subent":"21986042", "compiled":20220219
  ,"year1":1985, "author1ini":"S.", "author1":"Chiba"
- ,"zTarg1":3, "targ1":"Li-6", "proj1":"n", "emis1":"2N", "MF":3, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"3-LI-6(N,2N)3-LI-5,PAR,SIG"
- ,"compNotes":["LVL: SELECT SMALLEST AND LARGEST VALUES"]
- ,"wx4data":6
+ ,"zTarg1":3, "targ1":"Li-6", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
+ ,"reacode":"3-LI-6(N,2N)3-LI-5,,SIG"
+ ,"compNotes":[]
+ ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -5170,20 +5158,8 @@
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.2]
     ,"dat1":[2.0e+5]}
-  ,{"ivar":4, "cvar":"x2", "fam":"LVL", "ifComm":false, "ifCM":false
-    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
-    ,"dat0":[3.696]
-    ,"dat1":[3.696e+6]}
-  ,{"ivar":5, "cvar":"x2", "fam":"LVL", "ifComm":false, "ifCM":false
-    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
-    ,"dat0":[5.663]
-    ,"dat1":[5.663e+6]}
   ]
- ,"wc5data":3
+ ,"wc5data":2
  ,"lc5data":1
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
@@ -5196,11 +5172,6 @@
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.42e+7]
       ,"dx1":[2.0e+5]   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
-      ,"header":"LVL", "dataType":"52", "rank":2.0
-      ,"expansion":"Secondary energy: level energy"
-      ,"x2":[5.663e+6]
-   }
  }
 }
    ]
@@ -9157,26 +9128,25 @@
 }
    ]
    }
-  ,{"SUBENT":"21986082", "isub":82, "compiled":20151128, "TransID":"2247", "TransDate":20160502
+  ,{"SUBENT":"21986082", "isub":82, "compiled":20220219, "TransID":"2310", "TransDate":20220713
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-7(N,2N)3-LI-6,PAR,DA"
-	    ,"c4reac":"(N,2N)PAR,DA"
+	,"x4code":{"code":"3-LI-7(N,2N)3-LI-6,,DA"
+	    ,"c4reac":"(N,2N),DA"
 	    ,"combi":"a"
 	    ,"MF":4
 	    ,"MT":16
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"3-LI-7(N,2N)3-LI-6,PAR,DA"
+	    {"code":"3-LI-7(N,2N)3-LI-6,,DA"
 		,"Reac":"N,2N"
 		,"SF1":"3-LI-7","Targ":{"code":"3-LI-7","nam":"Li-7","ZA":3007}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"2N"
 		,"SF4":"3-LI-6","Prod":{"code":"3-LI-6","nam":"Li-6","ZA":3006}
-		,"SF5":"PAR"
 		,"SF6":"DA"
-		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
+		,"SF58":",DA","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Differential c/s with respect to angle"
 	    }]}
 	}
       ]
@@ -9223,9 +9193,16 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" On. STATUS revised."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220219A", "date":"20220219", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF5=PAR deleted from REACTION code."
+		,"E-LVL deleted. (according to the fig.12 of"
+		,"                         Nucl.Sci.Techn.,22(1985)771)."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":5, "nrows":1
+    ,"COMMON":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
@@ -9233,22 +9210,13 @@
       ,{"icol":1, "header":"EN-RSL", "units":"MEV", "pointer":" "
 	,"headerHelp":"Incident projectile energy resolution (Unspecified)", "pFlag":"9220000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"E-LVL", "units":"MEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":3, "header":"E-LVL", "units":"MEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":4, "header":"E-LVL", "units":"MEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["EN"        ,"EN-RSL"    ,"E-LVL"     ,"E-LVL"     ,"E-LVL"     ]
-	,["MEV"       ,"MEV"       ,"MEV"       ,"MEV"       ,"MEV"       ]
-	,[" "         ," "         ," "         ," "         ," "         ]]
+	 ["EN"        ,"EN-RSL"    ]
+	,["MEV"       ,"MEV"       ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [14.2,0.2,7.252,8.723,11.91]]}
+	 [14.2,0.2]]}
     ,"DATA":{"ncols":3, "nrows":10
       ,"x4headers":[
        {"icol":0, "header":"ANG", "units":"ADEG", "pointer":" "
@@ -9278,14 +9246,14 @@
 	,[150,0.009119,0.001962]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"21986082", "Pointer":" "
- ,"Subent":"21986082", "compiled":20151128
+ ,"Subent":"21986082", "compiled":20220219
  ,"year1":1985, "author1ini":"S.", "author1":"Chiba"
- ,"zTarg1":3, "targ1":"Li-7", "proj1":"n", "emis1":"2N", "MF":4, "MT":16, "nExpectedArgs":3
- ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
- ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
- ,"reacode":"3-LI-7(N,2N)3-LI-6,PAR,DA"
- ,"compNotes":["LVL: SELECT SMALLEST AND LARGEST VALUES"]
- ,"wx4data":8
+ ,"zTarg1":3, "targ1":"Li-7", "proj1":"n", "emis1":"2N", "MF":4, "MT":16, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
+ ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
+ ,"reacode":"3-LI-7(N,2N)3-LI-6,,DA"
+ ,"compNotes":[]
+ ,"wx4data":5
  ,"lx4data":10
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -9312,32 +9280,14 @@
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.2
     ,"com1":2.0e+5}
-  ,{"ivar":4, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
-    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
-    ,"com0":8.723
-    ,"com1":8.723e+6}
-  ,{"ivar":5, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
-    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
-    ,"com0":7.252
-    ,"com1":7.252e+6}
-  ,{"ivar":6, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
-    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
-    ,"com0":11.91
-    ,"com1":1.191e+7}
-  ,{"ivar":7, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"x2", "fam":"ANG", "ifComm":false, "ifCM":false
     ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
-    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"what":"X2.Value", "dataType":"61", "rank":2.1
     ,"expansion":"Angle: angle"
     ,"dat0":[30,37.5,43.12,50,60,75,104.21,120,135,150]
    ,"dat1eq":true}
   ]
- ,"wc5data":4
+ ,"wc5data":3
  ,"lc5data":10
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
@@ -9350,39 +9300,34 @@
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.42e+7,1.42e+7,1.42e+7,1.42e+7,1.42e+7,1.42e+7,1.42e+7,1.42e+7,1.42e+7,1.42e+7]
       ,"dx1":[2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5]   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
-      ,"header":"LVL", "dataType":"52", "rank":2.0
-      ,"expansion":"Secondary energy: level energy"
-      ,"x2":[1.191e+7,1.191e+7,1.191e+7,1.191e+7,1.191e+7,1.191e+7,1.191e+7,1.191e+7,1.191e+7,1.191e+7]
-   }
-   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
-      ,"header":"ANG", "dataType":"61", "rank":3.0
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":2.0
       ,"expansion":"Angle: angle"
-      ,"x3":[30,37.5,43.12,50,60,75,104.21,120,135,150]
+      ,"x2":[30,37.5,43.12,50,60,75,104.21,120,135,150]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"21986083", "isub":83, "compiled":20151128, "TransID":"2247", "TransDate":20160502
+  ,{"SUBENT":"21986083", "isub":83, "compiled":20220219, "TransID":"2310", "TransDate":20220713
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-7(N,2N)3-LI-6,PAR,SIG"
-	    ,"c4reac":"(N,2N)PAR,SIG"
+	,"x4code":{"code":"3-LI-7(N,2N)3-LI-6,,SIG"
+	    ,"c4reac":"(N,2N),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
+	    ,"MT":16
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"3-LI-7(N,2N)3-LI-6,PAR,SIG"
+	    {"code":"3-LI-7(N,2N)3-LI-6,,SIG"
 		,"Reac":"N,2N"
 		,"SF1":"3-LI-7","Targ":{"code":"3-LI-7","nam":"Li-7","ZA":3007}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"2N"
 		,"SF4":"3-LI-6","Prod":{"code":"3-LI-6","nam":"Li-6","ZA":3006}
-		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
@@ -9429,26 +9374,14 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" On. STATUS revised."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220219A", "date":"20220219", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF5=PAR deleted from REACTION code."
+		,"E-LVL deleted. (according to the Table)."]
+	}
       ]
     }
-    ,"COMMON":{"ncols":3, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"E-LVL", "units":"MEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"E-LVL", "units":"MEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"E-LVL", "units":"MEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ]
-      ,"datacols":[
-	 ["E-LVL"     ,"E-LVL"     ,"E-LVL"     ]
-	,["MEV"       ,"MEV"       ,"MEV"       ]
-	,[" "         ," "         ," "         ]]
-      ,"data":[
-	 [7.252,8.723,11.91]]}
     ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -9472,14 +9405,14 @@
 	 [14.2,0.2,0.074,0.006]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"21986083", "Pointer":" "
- ,"Subent":"21986083", "compiled":20151128
+ ,"Subent":"21986083", "compiled":20220219
  ,"year1":1985, "author1ini":"S.", "author1":"Chiba"
- ,"zTarg1":3, "targ1":"Li-7", "proj1":"n", "emis1":"2N", "MF":3, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"3-LI-7(N,2N)3-LI-6,PAR,SIG"
- ,"compNotes":["LVL: SELECT SMALLEST AND LARGEST VALUES"]
- ,"wx4data":7
+ ,"zTarg1":3, "targ1":"Li-7", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
+ ,"reacode":"3-LI-7(N,2N)3-LI-6,,SIG"
+ ,"compNotes":[]
+ ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -9506,26 +9439,8 @@
     ,"expansion":"Incident energy: energy /Error/"
     ,"dat0":[0.2]
     ,"dat1":[2.0e+5]}
-  ,{"ivar":4, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
-    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
-    ,"com0":8.723
-    ,"com1":8.723e+6}
-  ,{"ivar":5, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
-    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
-    ,"com0":7.252
-    ,"com1":7.252e+6}
-  ,{"ivar":6, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
-    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
-    ,"com0":11.91
-    ,"com1":1.191e+7}
   ]
- ,"wc5data":3
+ ,"wc5data":2
  ,"lc5data":1
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
@@ -9538,11 +9453,6 @@
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.42e+7]
       ,"dx1":[2.0e+5]   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
-      ,"header":"LVL", "dataType":"52", "rank":2.0
-      ,"expansion":"Secondary energy: level energy"
-      ,"x2":[1.191e+7]
-   }
  }
 }
    ]
