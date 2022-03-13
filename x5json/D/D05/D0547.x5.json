@@ -1,16 +1,16 @@
-  {"ENTRY":"D0547", "updated":20190821, "TransID":"D121", "TransDate":20191003, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
+  {"ENTRY":"D0547", "updated":20220314, "TransID":"D136", "TransDate":20220530, "CenterID":"NDS", "Center":"IAEA Nuclear Data Section, Vienna, Austria"
    ,"y1":2009,"a1":"L.Daraban+","r1":"J,ARI,67,506,2009"
    ,"ref":"Jour: Applied Radiation and Isotopes, Vol.67, p.506 (2009)"
    ,"title":"Study of the excitation function for the deuteron induced reaction on 64Ni(d,2n) for the production of the medical radioisotope 64Cu"
    ,"x4subents":[
-   {"SUBENT":"D0547001", "isub":1, "compiled":20190821, "TransID":"D121", "TransDate":20191003
+   {"SUBENT":"D0547001", "isub":1, "compiled":20220314, "TransID":"D136", "TransDate":20220530
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Study of the excitation function for the deuteron"
-		," induced reaction on 64Ni(d,2n) for the production of"
-		," the medical radioisotope 64Cu"]
+		,"induced reaction on 64Ni(d,2n) for the production of"
+		,"the medical radioisotope 64Cu"]
 	}
       ]
      ,"AUTHOR":[
@@ -175,6 +175,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: REACTION code updated according to new"
 		,"EXFOR rules in Subent 004."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220314A", "date":"20220314", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VT, Revision in 003"]
 	}
       ]
     }
@@ -360,7 +365,7 @@
 }
    ]
    }
-  ,{"SUBENT":"D0547003", "isub":3, "compiled":20081207, "TransID":"D065", "TransDate":20090407
+  ,{"SUBENT":"D0547003", "isub":3, "compiled":20220314, "TransID":"D136", "TransDate":20220530
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -385,9 +390,15 @@
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"29-CU-64", "t12":12.7, "t12units":"HR", "t12sec":45720.0
-	, "Radiations":[ {"Type":"B+", "Intensity":0.385}
-			,{"Type":"B+", "Intensity":0.18}
-			,{"Type":"EC", "Intensity":0.435}]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[1345.84], "Intensity":0.00473}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220314A", "date":"20220314", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VT, DECAY-DATA: radiation fields replaced"
+		,"with DG,1345.84,0.00473"]
 	}
       ]
     }
@@ -424,13 +435,25 @@
 	,[6.2,0.8,145,14.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"D0547003", "Pointer":" "
- ,"Subent":"D0547003", "compiled":20081207
+ ,"Subent":"D0547003", "compiled":20220314
  ,"year1":2009, "author1ini":"L.", "author1":"Daraban"
  ,"zTarg1":28, "targ1":"Ni-64", "proj1":"d", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"28-NI-64(D,2N)29-CU-64,,SIG"
  ,"compNotes":["ERR-ANALYS:(ERR-5,2.,8.)      ADDED AS COMMON:ERR-5,PER-CENT=2.0%"]
+ ,"DECAY-DATA":{"Nuclide":"29-CU-64","HalfLife":"12.7HR","HalfLife1":"12.701HR"
+	,"RadiationType":"DG","Ene":1345.84,"Ene1":1345.77,"Abu":0.00473,"Abu1":0.00475
+	,"FcCorrDECAY_DATA":0.9957895
+	,"reaction":"28-NI-64(D,2N)29-CU-64,,SIG"}
+ ,"autoCorrNotes":["#Reaction: 28-NI-64(D,2N)29-CU-64,,SIG"
+	," dy=dy/y;                      #to rel. uncertainties"
+	,"  #[1]#---Reaction decay-data"
+	,"  #[1]#REACTION   (28-NI-64(D,2N)29-CU-64,,SIG)"
+	,"  #[1]#DECAY-DATA (29-CU-64,12.7HR,DG,1345.84,0.00473) #Ix_old=0.00473"
+	,"   a1=0.00473/0.00475;         #[1]#DECAY-DATA: correction to new 1345.77 keV gamma-yield per decay Cu-64 Ix_new=0.00475"
+	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.9957895"
+	," dy=dy*y;                      #to abs. uncertainties"]
  ,"wx4data":9
  ,"lx4data":11
  ,"x4data":[
