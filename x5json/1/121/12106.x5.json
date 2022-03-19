@@ -1,9 +1,9 @@
-  {"ENTRY":"12106", "updated":20051128, "TransID":"1338", "TransDate":20060313, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"12106", "updated":20220320, "TransID":"1494", "TransDate":20220624, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1950,"a1":"M.G.Inghram+","r1":"J,PR,79,271,1950"
    ,"ref":"Jour: Physical Review, Vol.79, p.271 (1950)"
    ,"title":"U235 Fission yields in the rare earth region."
    ,"x4subents":[
-   {"SUBENT":"12106001", "isub":1, "compiled":20051128, "TransID":"1338", "TransDate":20060313
+   {"SUBENT":"12106001", "isub":1, "compiled":20220320, "TransID":"1494", "TransDate":20220624
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -33,7 +33,8 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"SPECM", "dict":"FACILITY", "idict":18,"hlp":"Mass spectrometer"}]
+	,"x4codes":[{"code":"SPECM", "dict":"FACILITY", "idict":18,"hlp":"Mass spectrometer"}
+	    ,{"code":"1USAANL", "dict":"INSTITUTE", "idict":3,"hlp":"Argonne National Laboratory, Argonne, IL, United States of America"}]
 	}
       ]
      ,"INC-SPECT":[
@@ -43,11 +44,11 @@
 		," information)"]
 	}
       ]
-     ,"STATUS":[
+     ,"SAMPLE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"SCSRS"
-		,"flag":"SCSRS", "help":"Data converted from SCISRS file"
-		}]
+	,"x4code":null
+	,"x4freetext":["Fission product samples obtained from Oak Ridge"
+		,"National Laboratory"]
 	}
       ]
      ,"HISTORY":[
@@ -59,7 +60,7 @@
 	,{"x4pointer":" "
 	,"x4code":{"code":"19821012A", "date":"19821012", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" converted to reaction formalism"]
+	,"x4freetext":[" Converted to reaction formalism"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"code":"20051128C", "date":"20051128", "act":"C", "dict":"HISTORY", "idict":15
@@ -67,10 +68,17 @@
 	,"x4freetext":[" DR Format updated and subentries 6 to 8"
 		,"             added from entry 13352"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220305A", "date":"20220305", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. DATA-ERR deleted in subs. 2-4(not found"
+		," in paper or given as 0); corrected STATUS, added"
+		," SAMPLE"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"12106002", "isub":2, "compiled":19821012, "TransID":"1338", "TransDate":20060313
+  ,{"SUBENT":"12106002", "isub":2, "compiled":20220320, "TransID":"1494", "TransDate":20220624
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -93,8 +101,23 @@
 	    }]}
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text p.273, Phys.Rev.79,271,1950"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220305A", "date":"20220305", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Deleted DATA-ERR (not in paper)"]
+	}
+      ]
     }
-    ,"DATA":{"ncols":3, "nrows":1
+    ,"DATA":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-DUMMY", "units":"MEV", "pointer":" "
 	,"headerHelp":"Dummy incident proj. energy, for broad spectrum", "pFlag":"1000000"
@@ -102,26 +125,23 @@
       ,{"icol":1, "header":"DATA", "units":"B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"B", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN-DUMMY"  ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"B"         ,"B"         ]
-	,[" "         ," "         ," "         ]]
+	 ["EN-DUMMY"  ,"DATA"      ]
+	,["MEV"       ,"B"         ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [2.53E-8,47000,2000]]}
+	 [2.53E-8,47000]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"12106002", "Pointer":" "
- ,"Subent":"12106002", "compiled":19821012
+ ,"Subent":"12106002", "compiled":20220320
  ,"year1":1950, "author1ini":"M.G.", "author1":"Inghram"
  ,"zTarg1":62, "targ1":"Sm-149", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"62-SM-149(N,G)62-SM-150,,SIG,,SPA"
  ,"compNotes":[]
- ,"wx4data":3
+ ,"wx4data":2
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -130,13 +150,7 @@
     ,"expansion":"Data: data"
     ,"dat0":[4.7e+4]
    ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
-    ,"expansion":"Data: data /Error/"
-    ,"dat0":[2000]
-   ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":false, "ifCM":false
+  ,{"ivar":1, "cvar":"x1", "fam":"SpE", "ifComm":false, "ifCM":false
     ,"header":"EN-DUMMY", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
     ,"expansion":"Incident energy: spectrum energy"
@@ -150,7 +164,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[4.7e+4]
-      ,"dy":[2000]   }
+   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
@@ -160,7 +174,7 @@
 }
    ]
    }
-  ,{"SUBENT":"12106003", "isub":3, "compiled":19821012, "TransID":"1338", "TransDate":20060313
+  ,{"SUBENT":"12106003", "isub":3, "compiled":20220320, "TransID":"1494", "TransDate":20220624
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -183,8 +197,23 @@
 	    }]}
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text p.274, Phys.Rev.79,271,1950"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220305A", "date":"20220305", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Deleted DATA-ERR (=0)"]
+	}
+      ]
     }
-    ,"DATA":{"ncols":3, "nrows":1
+    ,"DATA":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-DUMMY", "units":"MEV", "pointer":" "
 	,"headerHelp":"Dummy incident proj. energy, for broad spectrum", "pFlag":"1000000"
@@ -192,26 +221,23 @@
       ,{"icol":1, "header":"DATA", "units":"B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"B", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN-DUMMY"  ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"B"         ,"B"         ]
-	,[" "         ," "         ," "         ]]
+	 ["EN-DUMMY"  ,"DATA"      ]
+	,["MEV"       ,"B"         ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [2.53E-8,41000,0]]}
+	 [2.53E-8,41000]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"12106003", "Pointer":" "
- ,"Subent":"12106003", "compiled":19821012
+ ,"Subent":"12106003", "compiled":20220320
  ,"year1":1950, "author1ini":"M.G.", "author1":"Inghram"
  ,"zTarg1":64, "targ1":"Gd-155", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"64-GD-155(N,G)64-GD-156,,SIG,,SPA"
  ,"compNotes":[]
- ,"wx4data":3
+ ,"wx4data":2
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -220,13 +246,7 @@
     ,"expansion":"Data: data"
     ,"dat0":[4.1e+4]
    ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
-    ,"expansion":"Data: data /Error/"
-    ,"dat0":[0]
-   ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":false, "ifCM":false
+  ,{"ivar":1, "cvar":"x1", "fam":"SpE", "ifComm":false, "ifCM":false
     ,"header":"EN-DUMMY", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
     ,"expansion":"Incident energy: spectrum energy"
@@ -240,7 +260,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[4.1e+4]
-      ,"dy":[0]   }
+   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
@@ -250,7 +270,7 @@
 }
    ]
    }
-  ,{"SUBENT":"12106004", "isub":4, "compiled":19821012, "TransID":"1338", "TransDate":20060313
+  ,{"SUBENT":"12106004", "isub":4, "compiled":20220320, "TransID":"1494", "TransDate":20220624
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -273,8 +293,23 @@
 	    }]}
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text p.274, Phys.Rev.79,271,1950"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220305A", "date":"20220305", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Deleted DATA-ERR (=0)"]
+	}
+      ]
     }
-    ,"DATA":{"ncols":3, "nrows":1
+    ,"DATA":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-DUMMY", "units":"MEV", "pointer":" "
 	,"headerHelp":"Dummy incident proj. energy, for broad spectrum", "pFlag":"1000000"
@@ -282,26 +317,23 @@
       ,{"icol":1, "header":"DATA", "units":"B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"B", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["EN-DUMMY"  ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"B"         ,"B"         ]
-	,[" "         ," "         ," "         ]]
+	 ["EN-DUMMY"  ,"DATA"      ]
+	,["MEV"       ,"B"         ]
+	,[" "         ," "         ]]
       ,"data":[
-	 [2.53E-8,59500,0]]}
+	 [2.53E-8,59500]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"12106004", "Pointer":" "
- ,"Subent":"12106004", "compiled":19821012
+ ,"Subent":"12106004", "compiled":20220320
  ,"year1":1950, "author1ini":"M.G.", "author1":"Inghram"
  ,"zTarg1":64, "targ1":"Gd-157", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
  ,"reacode":"64-GD-157(N,G)64-GD-158,,SIG,,SPA"
  ,"compNotes":[]
- ,"wx4data":3
+ ,"wx4data":2
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -310,13 +342,7 @@
     ,"expansion":"Data: data"
     ,"dat0":[59500]
    ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"B", "basicUnits":"B"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
-    ,"expansion":"Data: data /Error/"
-    ,"dat0":[0]
-   ,"dat1eq":true}
-  ,{"ivar":2, "cvar":"x1", "fam":"SpE", "ifComm":false, "ifCM":false
+  ,{"ivar":1, "cvar":"x1", "fam":"SpE", "ifComm":false, "ifCM":false
     ,"header":"EN-DUMMY", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"43", "rank":1.1
     ,"expansion":"Incident energy: spectrum energy"
@@ -330,7 +356,7 @@
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[59500]
-      ,"dy":[0]   }
+   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"SpE", "ifCM":false, "units":"EV"
       ,"header":"SpE", "dataType":"43", "rank":1.0
       ,"expansion":"Incident energy: spectrum energy"
@@ -340,7 +366,7 @@
 }
    ]
    }
-  ,{"SUBENT":"12106005", "isub":5, "compiled":19821012, "TransID":"1338", "TransDate":20060313
+  ,{"SUBENT":"12106005", "isub":5, "compiled":20220320, "TransID":"1494", "TransDate":20220624
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -363,6 +389,14 @@
 	    }]}
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text p.273, Phys.Rev.79,271,1950"]
+	}
+      ]
     }
     ,"DATA":{"ncols":2, "nrows":1
       ,"x4headers":[
@@ -381,7 +415,7 @@
 	 [0.0253,7200]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"12106005", "Pointer":" "
- ,"Subent":"12106005", "compiled":19821012
+ ,"Subent":"12106005", "compiled":20220320
  ,"year1":1950, "author1ini":"M.G.", "author1":"Inghram"
  ,"zTarg1":62, "targ1":"Sm-151", "proj1":"n", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -421,7 +455,7 @@
 }
    ]
    }
-  ,{"SUBENT":"12106006", "isub":6, "compiled":20051128, "TransID":"1338", "TransDate":20060313
+  ,{"SUBENT":"12106006", "isub":6, "compiled":20220320, "TransID":"1494", "TransDate":20220624
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -456,6 +490,12 @@
 	,"x4code":null
 	,"x4freetext":["144Nd = 4.64% not coded. Inconsistent with later"
 		," measurements (deleted according to B.F.Rider)"]
+	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Table I, Phys.Rev.79,271,1950"]
 	}
       ]
     }
@@ -497,7 +537,7 @@
 	,[150,0.658]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"12106006", "Pointer":" "
- ,"Subent":"12106006", "compiled":20051128
+ ,"Subent":"12106006", "compiled":20220320
  ,"year1":1950, "author1ini":"M.G.", "author1":"Inghram"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":801, "MT":18, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -560,7 +600,7 @@
 }
    ]
    }
-  ,{"SUBENT":"12106007", "isub":7, "compiled":20051128, "TransID":"1338", "TransDate":20060313
+  ,{"SUBENT":"12106007", "isub":7, "compiled":20220320, "TransID":"1494", "TransDate":20220624
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -596,6 +636,12 @@
 	,"x4freetext":["154Sm = 0.0908% not coded. Inconsistent with later"
 		," measurements (deleted according TO B.F.Rider)"]
 	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text p.273, Phys.Rev.79,271,1950"]
+	}
       ]
     }
     ,"DATA":{"ncols":3, "nrows":1
@@ -618,7 +664,7 @@
 	 [0.0253,0.279,1.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"12106007", "Pointer":" "
- ,"Subent":"12106007", "compiled":20051128
+ ,"Subent":"12106007", "compiled":20220320
  ,"year1":1950, "author1ini":"M.G.", "author1":"Inghram"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":8, "MT":459, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
@@ -681,7 +727,7 @@
 }
    ]
    }
-  ,{"SUBENT":"12106008", "isub":8, "compiled":20051128, "TransID":"1338", "TransDate":20060313
+  ,{"SUBENT":"12106008", "isub":8, "compiled":20220320, "TransID":"1494", "TransDate":20220624
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -718,6 +764,12 @@
 		," measurements (deleted according to B.F.Rider)"
 		,"156Gd not coded; author says presumed to be known"]
 	}
+	,{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Text p.274, Phys.Rev.79,271,1950"]
+	}
       ]
     }
     ,"DATA":{"ncols":3, "nrows":1
@@ -740,7 +792,7 @@
 	 [0.0253,0.0084,0.05]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"12106008", "Pointer":" "
- ,"Subent":"12106008", "compiled":20051128
+ ,"Subent":"12106008", "compiled":20220320
  ,"year1":1950, "author1ini":"M.G.", "author1":"Inghram"
  ,"zTarg1":92, "targ1":"U-235", "proj1":"n", "emis1":"F", "MF":8, "MT":459, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2    7   ", "getYFormulaStr":"y=DATA(EN,ZAM)"
