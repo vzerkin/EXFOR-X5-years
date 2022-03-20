@@ -1,9 +1,9 @@
-  {"ENTRY":"A0126", "updated":20200531, "TransID":"A095", "TransDate":20200629, "CenterID":"CAJaD", "Center":"Russian Nuclear Structure and Reaction Data Centre, Kurchatov Institute, Moscow, Russia"
+  {"ENTRY":"A0126", "updated":20220321, "TransID":"A099", "TransDate":20220704, "CenterID":"CAJaD", "Center":"Russian Nuclear Structure and Reaction Data Centre, Kurchatov Institute, Moscow, Russia"
    ,"y1":2000,"a1":"S.Harissopulos+","r1":"J,EPJ/A,9,479,2000"
    ,"ref":"Jour: European Physical Journal A: Hadrons and Nuclei, Vol.9, p.479 (2000)"
    ,"title":"The 27-Al(p,gamma)28-Si reaction: direct capture cross-section and resonance strengths at Ep=0.2-1.12 MeV."
    ,"x4subents":[
-   {"SUBENT":"A0126001", "isub":1, "compiled":20200531, "TransID":"A095", "TransDate":20200629
+   {"SUBENT":"A0126001", "isub":1, "compiled":20220321, "TransID":"A099", "TransDate":20220704
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -53,7 +53,7 @@
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"VDGT", "dict":"FACILITY", "idict":18,"hlp":"Tandem van de Graaff"}
 	    ,{"code":"2GRCATH", "dict":"INSTITUTE", "idict":3,"hlp":"NCSR Demokritos, Aghia Paraskevi, Athens, Greece"}]
-	,"x4freetext":[" 5.5  MV  tandem accelerator"
+	,"x4freetext":[" 5.5 MV tandem accelerator"
 		,"    Ep = 850, 980, 1070, and 1155 keV (at Athens)"]
 	}
       ]
@@ -144,7 +144,12 @@
 		,"The accuracy of data presentation revised. PART-DET,"
 		,"COMMENT deleted. Subent 002 deleted (no quantity code"
 		,"for the yield over a resonance; data moved to"
-		,"Subent 003 under  MISC(-ERR))."]
+		,"Subent 003 under MISC(-ERR))."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220321A", "date":"20220321", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Corrections in Subent 002."]
 	}
       ]
     }
@@ -373,38 +378,34 @@
 }
    ]
    }
-  ,{"SUBENT":"A0126004", "isub":4, "compiled":20200531, "TransID":"A095", "TransDate":20200629
+  ,{"SUBENT":"A0126004", "isub":4, "compiled":20220321, "TransID":"A099", "TransDate":20220704
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"13-AL-27(P,G)14-SI-28,,SIG,,SFC"
-	    ,"c4reac":"(P,G),SIG,,SFC"
+	,"x4code":{"code":"13-AL-27(P,G)14-SI-28,DI,SIG,,SFC"
+	    ,"c4reac":"(P,G)DI,SIG,,SFC"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":102
 	    ,"Units":"B*EV"
 	    ,"reacs": [
-	    {"code":"13-AL-27(P,G)14-SI-28,,SIG,,SFC"
+	    {"code":"13-AL-27(P,G)14-SI-28,DI,SIG,,SFC"
 		,"Reac":"P,G"
 		,"SF1":"13-AL-27","Targ":{"code":"13-AL-27","nam":"Al-27","ZA":13027}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"G"
 		,"SF4":"14-SI-28","Prod":{"code":"14-SI-28","nam":"Si-28","ZA":14028}
+		,"SF5":"DI"
 		,"SF6":"SIG"
 		,"SF8":"SFC"
-		,"SF58":",SIG,,SFC","Quant":"CS","BasicUnits":"B*EV","QuantHlp":"S-factor"
+		,"SF58":"DI,SIG,,SFC","Quant":"CS","BasicUnits":"B*EV","QuantHlp":"S-factor, direct interaction contribution"
 	    }]}
 	}
       ]
-     ,"COMMENT":[
+     ,"ANALYSIS":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["- by authors - the measurements were made between"
-		,"resonances.  Therefore the data regarding to direct"
-		,"capture."
-		,"The values given for Ecm = 816 and 942 keV are the"
-		,"weighted average of the two values hat have been"
-		,"measured independently, in Bochum and Athens."]
+	,"x4freetext":[" Resonance contribution is subtracted from the"
+		," measured total S-factor"]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -426,8 +427,13 @@
 	{"x4pointer":" "
 	,"x4code":{"code":"20200531A", "date":"20200531", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" SD: SF6=SGV -> SFC; SF9=EXP deleted from"
-		,"REACTION code. ERR-T -> DATA-ERR."]
+	,"x4freetext":[" SD: SF5=DI added; SF6=SGV -> SFC; SF9=EXP"
+		,"deleted from REACTION code. ERR-T -> DATA-ERR."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220321A", "date":"20220321", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF5=DI added to REACTION code."]
 	}
       ]
     }
@@ -462,12 +468,12 @@
 	,[1112,70,70,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"A0126004", "Pointer":" "
- ,"Subent":"A0126004", "compiled":20200531
+ ,"Subent":"A0126004", "compiled":20220321
  ,"year1":2000, "author1ini":"S.", "author1":"Harissopulos"
- ,"zTarg1":13, "targ1":"Al-27", "proj1":"p", "emis1":"G", "MF":3, "MT":102, "nExpectedArgs":1
+ ,"zTarg1":13, "targ1":"Al-27", "proj1":"p", "emis1":"G", "MF":3, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS+", "quant":"CS", "quantExpan":"S-factor"
- ,"reacode":"13-AL-27(P,G)14-SI-28,,SIG,,SFC"
+ ,"ReactionType":"CS+", "quant":"CS", "quantExpan":"S-factor, direct interaction contribution"
+ ,"reacode":"13-AL-27(P,G)14-SI-28,DI,SIG,,SFC"
  ,"compNotes":["OPERATION...DATA  CONVERTED S-FACTORS TO BARNS"
 	,"OPERATION...  Value=Max  Max:DATA-MAX"
 	,"OPERATION...ERROR CONVERTED S-FACTORS TO BARNS"
