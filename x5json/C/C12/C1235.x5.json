@@ -1,9 +1,9 @@
-  {"ENTRY":"C1235", "updated":20050531, "TransID":"C074", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C1235", "updated":20220530, "TransID":"C213", "TransDate":20220823, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1999,"a1":"K.O.Yildiz+","r1":"J,PR/C,60,028801,1999"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.60, p.028801 (1999)"
    ,"title":"Thick target yields of 26Alg.s. from the 16O(16O,x)26Alg.s. and 16O(14N,x)26Alg.s. reactions"
    ,"x4subents":[
-   {"SUBENT":"C1235001", "isub":1, "compiled":20050531, "TransID":"C074", "TransDate":20050926
+   {"SUBENT":"C1235001", "isub":1, "compiled":20220530, "TransID":"C213", "TransDate":20220823
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -64,41 +64,45 @@
 	,"x4freetext":[" Ge detector with the detector BGO shield"]
 	}
       ]
+     ,"DECAY-DATA":[
+	{"x4pointer":" "
+	,"x4codes":[{"Nucl":"13-AL-26-G"
+	, "Radiations":[ {"Type":"DG", "Energy":[1809.0], "Intensity":0.997}]}]
+	}
+      ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20050531C", "date":"20050531", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" DR"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220421A", "date":"20220421", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTIONs and units corrected"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C1235002", "isub":2, "compiled":20050531, "TransID":"C074", "TransDate":20050926
+  ,{"SUBENT":"C1235002", "isub":2, "compiled":20220530, "TransID":"C213", "TransDate":20220823
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"8-O-16(8-O-16,X)13-AL-26,PAR,PY,,TT/REL"
-	    ,"c4reac":"(8-O-16,X)PAR,PY,,TT/REL"
+	,"x4code":{"code":"8-O-16(8-O-16,X)13-AL-26-G,,PY,,TT"
+	    ,"c4reac":"(8-O-16,X),PY,,TT"
 	    ,"combi":"a"
-	    ,"MF":600
-	    ,"Units":"ARB-UNITS"
+	    ,"Units":"GAM/PART"
 	    ,"reacs": [
-	    {"code":"8-O-16(8-O-16,X)13-AL-26,PAR,PY,,TT/REL"
+	    {"code":"8-O-16(8-O-16,X)13-AL-26-G,,PY,,TT"
 		,"Reac":"8-O-16,X"
 		,"SF1":"8-O-16","Targ":{"code":"8-O-16","nam":"O-16","ZA":8016}
 		,"SF2":"8-O-16","Proj":{"code":"8-O-16","nam":"O-16","ZA":8016}
 		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"13-AL-26","Prod":{"code":"13-AL-26","nam":"Al-26","ZA":13026}
-		,"SF5":"PAR"
+		,"SF4":"13-AL-26-G","Prod":{"code":"13-AL-26-G","nam":"Al-26-g","ZA":13026,"ProdM":"G"}
 		,"SF6":"PY"
-		,"SF8":"TT/REL"
-		,"SF58":"PAR,PY,,TT","Quant":"TTP","BasicUnits":"ARB-UNITS","QuantHlp":"Partial product yield for thick target"
+		,"SF8":"TT"
+		,"SF58":",PY,,TT","Quant":"TT","BasicUnits":"GAM/PART","QuantHlp":"Prod.yield for thick target,no.of nucl./inc."
 	    }]}
-	}
-      ]
-     ,"EN-SEC":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::E-EXC,13-AL-26"}
 	}
       ]
      ,"ERR-ANALYS":[
@@ -116,34 +120,30 @@
 	,"x4freetext":[" Data read from Fig. 2"]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"E-EXC", "units":"MEV", "pointer":" "
-	,"headerHelp":"Excitation energy", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220421A", "date":"20220421", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Deleted PAR and REL from REACTION,"
+		," changed units to PRD/INC, deleted E-EXC"]
+	}
       ]
-      ,"datacols":[
-	 ["E-EXC"     ]
-	,["MEV"       ]
-	,[" "         ]]
-      ,"data":[
-	 [0]]}
+    }
     ,"DATA":{"ncols":3, "nrows":4
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"PRD/INC", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"ARB-UNITS", "pointer":" "
+	,"unitsHelp":"products/incident projectile","familyCode":"YLD","convFc":1.0,"basicUnits":"GAM/PART"}
+      ,{"icol":2, "header":"DATA-ERR", "units":"PRD/INC", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"products/incident projectile","familyCode":"YLD","convFc":1.0,"basicUnits":"GAM/PART"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"ARB-UNITS" ,"ARB-UNITS" ]
+	,["MEV"       ,"PRD/INC"   ,"PRD/INC"   ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [84.9,3.5E-5,3.78E-6]
@@ -152,24 +152,24 @@
 	,[149,5.98E-5,7.38E-6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1235002", "Pointer":" "
- ,"Subent":"C1235002", "compiled":20050531
+ ,"Subent":"C1235002", "compiled":20220530
  ,"year1":1999, "author1ini":"K.O.", "author1":"Yildiz"
- ,"zTarg1":8, "targ1":"O-16", "proj1":"O-16", "emis1":"X", "MF":600, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,EXC)"
- ,"ReactionType":"TTP", "quant":"TTP", "quantExpan":"Partial product yield for thick target"
- ,"reacode":"8-O-16(8-O-16,X)13-AL-26,PAR,PY,,TT/REL"
+ ,"zTarg1":8, "targ1":"O-16", "proj1":"O-16", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Prod.yield for thick target,no.of nucl./inc."
+ ,"reacode":"8-O-16(8-O-16,X)13-AL-26-G,,PY,,TT"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":3
  ,"lx4data":4
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"header":"DATA", "units":"PRD/INC", "basicUnits":"GAM/PART"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[3.5e-5,5.21e-5,5.58e-5,5.98e-5]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"header":"DATA-ERR", "units":"PRD/INC", "basicUnits":"GAM/PART"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[3.78e-6,5.11e-6,6.25e-6,7.38e-6]
@@ -180,17 +180,11 @@
     ,"expansion":"Incident energy: energy"
     ,"dat0":[84.9,109,134,149]
     ,"dat1":[8.49e+7,1.09e+8,1.34e+8,1.49e+8]}
-  ,{"ivar":3, "cvar":"x2", "fam":"EXC", "ifComm":true , "ifCM":false
-    ,"header":"E-EXC", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"53", "rank":2.1
-    ,"expansion":"Secondary energy: excitation energy"
-    ,"com0":0
-    ,"com1":0}
   ]
- ,"wc5data":3
+ ,"wc5data":2
  ,"lc5data":4
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"GAM/PART"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[3.5e-5,5.21e-5,5.58e-5,5.98e-5]
@@ -200,41 +194,29 @@
       ,"expansion":"Incident energy: energy"
       ,"x1":[8.49e+7,1.09e+8,1.34e+8,1.49e+8]
    }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"EXC", "ifCM":false, "units":"EV"
-      ,"header":"EXC", "dataType":"53", "rank":2.0
-      ,"expansion":"Secondary energy: excitation energy"
-      ,"x2":[0,0,0,0]
-   }
  }
 }
    ]
    }
-  ,{"SUBENT":"C1235003", "isub":3, "compiled":20050531, "TransID":"C074", "TransDate":20050926
+  ,{"SUBENT":"C1235003", "isub":3, "compiled":20220530, "TransID":"C213", "TransDate":20220823
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"8-O-16(7-N-14,X)13-AL-26,PAR,PY,,TT/REL"
-	    ,"c4reac":"(7-N-14,X)PAR,PY,,TT/REL"
+	,"x4code":{"code":"8-O-16(7-N-14,X)13-AL-26-G,,PY,,TT"
+	    ,"c4reac":"(7-N-14,X),PY,,TT"
 	    ,"combi":"a"
-	    ,"MF":600
-	    ,"Units":"ARB-UNITS"
+	    ,"Units":"GAM/PART"
 	    ,"reacs": [
-	    {"code":"8-O-16(7-N-14,X)13-AL-26,PAR,PY,,TT/REL"
+	    {"code":"8-O-16(7-N-14,X)13-AL-26-G,,PY,,TT"
 		,"Reac":"7-N-14,X"
 		,"SF1":"8-O-16","Targ":{"code":"8-O-16","nam":"O-16","ZA":8016}
 		,"SF2":"7-N-14","Proj":{"code":"7-N-14","nam":"N-14","ZA":7014}
 		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"13-AL-26","Prod":{"code":"13-AL-26","nam":"Al-26","ZA":13026}
-		,"SF5":"PAR"
+		,"SF4":"13-AL-26-G","Prod":{"code":"13-AL-26-G","nam":"Al-26-g","ZA":13026,"ProdM":"G"}
 		,"SF6":"PY"
-		,"SF8":"TT/REL"
-		,"SF58":"PAR,PY,,TT","Quant":"TTP","BasicUnits":"ARB-UNITS","QuantHlp":"Partial product yield for thick target"
+		,"SF8":"TT"
+		,"SF58":",PY,,TT","Quant":"TT","BasicUnits":"GAM/PART","QuantHlp":"Prod.yield for thick target,no.of nucl./inc."
 	    }]}
-	}
-      ]
-     ,"EN-SEC":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::E-EXC,13-AL-26"}
 	}
       ]
      ,"ERR-ANALYS":[
@@ -252,57 +234,53 @@
 	,"x4freetext":[" Data read from Fig. 2"]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"E-EXC", "units":"MEV", "pointer":" "
-	,"headerHelp":"Excitation energy", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220421A", "date":"20220421", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Deleted PAR and REL from REACTION,"
+		," changed units to PRD/INC, deleted E-EXC"]
+	}
       ]
-      ,"datacols":[
-	 ["E-EXC"     ]
-	,["MEV"       ]
-	,[" "         ]]
-      ,"data":[
-	 [0]]}
+    }
     ,"DATA":{"ncols":3, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"ARB-UNITS", "pointer":" "
+      ,{"icol":1, "header":"DATA", "units":"PRD/INC", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
-	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"DATA-ERR", "units":"ARB-UNITS", "pointer":" "
+	,"unitsHelp":"products/incident projectile","familyCode":"YLD","convFc":1.0,"basicUnits":"GAM/PART"}
+      ,{"icol":2, "header":"DATA-ERR", "units":"PRD/INC", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
-	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+	,"unitsHelp":"products/incident projectile","familyCode":"YLD","convFc":1.0,"basicUnits":"GAM/PART"}
       ]
       ,"datacols":[
 	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"ARB-UNITS" ,"ARB-UNITS" ]
+	,["MEV"       ,"PRD/INC"   ,"PRD/INC"   ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
 	 [115,2.34E-5,3.74E-6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1235003", "Pointer":" "
- ,"Subent":"C1235003", "compiled":20050531
+ ,"Subent":"C1235003", "compiled":20220530
  ,"year1":1999, "author1ini":"K.O.", "author1":"Yildiz"
- ,"zTarg1":8, "targ1":"O-16", "proj1":"N-14", "emis1":"X", "MF":600, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,EXC)"
- ,"ReactionType":"TTP", "quant":"TTP", "quantExpan":"Partial product yield for thick target"
- ,"reacode":"8-O-16(7-N-14,X)13-AL-26,PAR,PY,,TT/REL"
+ ,"zTarg1":8, "targ1":"O-16", "proj1":"N-14", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
+ ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Prod.yield for thick target,no.of nucl./inc."
+ ,"reacode":"8-O-16(7-N-14,X)13-AL-26-G,,PY,,TT"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":3
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"header":"DATA", "units":"PRD/INC", "basicUnits":"GAM/PART"
     ,"what":"Y.Value", "dataType":"21", "rank":0.1
     ,"expansion":"Data: data"
     ,"dat0":[2.34e-5]
    ,"dat1eq":true}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"header":"DATA-ERR", "units":"PRD/INC", "basicUnits":"GAM/PART"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"dat0":[3.74e-6]
@@ -313,17 +291,11 @@
     ,"expansion":"Incident energy: energy"
     ,"dat0":[115]
     ,"dat1":[1.15e+8]}
-  ,{"ivar":3, "cvar":"x2", "fam":"EXC", "ifComm":true , "ifCM":false
-    ,"header":"E-EXC", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"53", "rank":2.1
-    ,"expansion":"Secondary energy: excitation energy"
-    ,"com0":0
-    ,"com1":0}
   ]
- ,"wc5data":3
+ ,"wc5data":2
  ,"lc5data":1
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"GAM/PART"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
       ,"y":[2.34e-5]
@@ -332,11 +304,6 @@
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.15e+8]
-   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"EXC", "ifCM":false, "units":"EV"
-      ,"header":"EXC", "dataType":"53", "rank":2.0
-      ,"expansion":"Secondary energy: excitation energy"
-      ,"x2":[0]
    }
  }
 }
