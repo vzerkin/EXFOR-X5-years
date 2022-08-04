@@ -1,9 +1,9 @@
-  {"ENTRY":"C1021", "updated":20140930, "TransID":"C145", "TransDate":20150112, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C1021", "updated":20220805, "TransID":"C216", "TransDate":20230104, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1962,"a1":"C.D.Goodman+","r1":"J,PR,127,574,1962","doi1":"10.1103/PhysRev.127.574"
    ,"ref":"Jour: Physical Review, Vol.127, p.574 (1962)"
    ,"title":"Single-Particle Neutron Bound States in Iron Isotopes and in Cobalt Studied with (p,d) Reactions"
    ,"x4subents":[
-   {"SUBENT":"C1021001", "isub":1, "compiled":20140930, "TransID":"C145", "TransDate":20150112
+   {"SUBENT":"C1021001", "isub":1, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -44,11 +44,6 @@
 	,"x4codes":[{"code":"SIBAR", "dict":"DETECTOR", "idict":22,"hlp":"Silicon surface barrier detector"}]
 	,"x4freetext":[" Surface-barrier counter, 0.004-in. wafer of"
 		,"silicon."]
-	}
-      ]
-     ,"PART-DET":[
-	{"x4pointer":" "
-	,"x4codes":["P","D"]
 	}
       ]
      ,"METHOD":[
@@ -144,6 +139,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" BP: Updated to entry, added doi, digitized"
 		,"           Figs. 1-15."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220721A", "date":"20220721", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION corrected in sub.5"]
 	}
       ]
     }
@@ -913,23 +913,23 @@
 }
    ]
    }
-  ,{"SUBENT":"C1021005", "isub":5, "compiled":20140930, "TransID":"C145", "TransDate":20150112
+  ,{"SUBENT":"C1021005", "isub":5, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"26-FE-56(P,X)1-H-2,PAR,DA"
-	    ,"c4reac":"(P,X)PAR,DA"
+	,"x4code":{"code":"26-FE-56(P,D)26-FE-55,PAR,DA"
+	    ,"c4reac":"(P,D)PAR,DA"
 	    ,"combi":"a"
 	    ,"MF":4
-	    ,"MT":9000
+	    ,"MT":651
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"26-FE-56(P,X)1-H-2,PAR,DA"
-		,"Reac":"P,X"
+	    {"code":"26-FE-56(P,D)26-FE-55,PAR,DA"
+		,"Reac":"P,D"
 		,"SF1":"26-FE-56","Targ":{"code":"26-FE-56","nam":"Fe-56","ZA":26056}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"1-H-2","Prod":{"code":"1-H-2","nam":"H-2","ZA":1002}
+		,"SF3":"D"
+		,"SF4":"26-FE-55","Prod":{"code":"26-FE-55","nam":"Fe-55","ZA":26055}
 		,"SF5":"PAR"
 		,"SF6":"DA"
 		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
@@ -950,6 +950,13 @@
 		,"flag":"CURVE", "help":"Data read from a curve"
 		}]
 	,"x4freetext":[" Figs. 8-9, page 578."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220721A", "date":"20220721", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Reaction (p,x)H-2 changed to (p,d)Fe-55"]
 	}
       ]
     }
@@ -1002,13 +1009,13 @@
 	,[1.4,81.82,0.1191,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1021005", "Pointer":" "
- ,"Subent":"C1021005", "compiled":20140930
+ ,"Subent":"C1021005", "compiled":20220805
  ,"year1":1962, "author1ini":"C.D.", "author1":"Goodman"
- ,"zTarg1":26, "targ1":"Fe-56", "proj1":"p", "emis1":"X", "MF":4, "MT":9000, "nExpectedArgs":3
+ ,"zTarg1":26, "targ1":"Fe-56", "proj1":"p", "emis1":"D", "MF":4, "MT":651, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
  ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
- ,"reacode":"26-FE-56(P,X)1-H-2,PAR,DA"
- ,"compNotes":["Conversion from C.M. to Lab failed [C1021005 ]"
+ ,"reacode":"26-FE-56(P,D)26-FE-55,PAR,DA"
+ ,"compNotes":["Conversion from C.M. to Lab: successful"
 	,"ERR-ANALYS:(ERR-S,,10.)       ADDED AS COMMON:ERR-S,PER-CENT=5.0%"]
  ,"wx4data":9
  ,"lx4data":27
@@ -1085,15 +1092,15 @@
  ,"wc5data":4
  ,"lc5data":27
  ,"c5data":{
-    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":true, "units":"B/SR"
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[9.17e-4,8.897e-4,0.001163,0.001129,0.001673,0.001509,0.00219,0.001804,0.001613,6.808e-4
-	,5.117e-4,5.24e-4,5.869e-4,0.0102,0.009163,0.00856,0.005115,0.001955,0.001791,8.56e-4
-	,0.00103,0.00125,0.001433,3.24e-4,4.421e-4,3.209e-4,1.191e-4]
-      ,"dy":[6.61258e-5,8.713e-5,6.966e-5,6.769e-5,1.20642e-4,1.08816e-4,1.57923e-4,1.30088e-4,1.16315e-4,3.421e-5
-	,3.68992e-5,3.77862e-5,4.2322e-5,7.35532e-4,6.60753e-4,6.1727e-4,1.95e-4,1.40977e-4,1.29151e-4,6.1727e-5
-	,4.882e-5,9.01388e-5,1.03335e-4,2.3364e-5,2.097e-5,2.31404e-5,8.58842e-6]
+      ,"y":[9.77724e-4,9.48043e-4,0.00123922,0.00120092,0.00177584,0.00160153,0.00231818,0.00190334,0.00169622,7.10286e-4
+	,5.28917e-4,5.35792e-4,5.99919e-4,0.0108768,0.00976454,0.00912196,0.00544086,0.00207521,0.00190112,9.06147e-4
+	,0.00108714,0.00131471,0.00150703,3.37978e-4,4.56945e-4,3.28144e-4,1.20432e-4]
+      ,"dy":[7.05047e-5,9.28436e-5,7.42251e-5,7.2002e-5,1.28058e-4,1.15488e-4,1.67166e-4,1.37252e-4,1.22316e-4,3.56917e-5
+	,3.81408e-5,3.86365e-5,4.32608e-5,7.84336e-4,7.04131e-4,6.57794e-4,2.07423e-4,1.49645e-4,1.37092e-4,6.53432e-5
+	,5.15283e-5,9.48047e-5,1.08673e-4,2.43719e-5,2.16741e-5,2.36628e-5,8.68444e-6]
       ,"dysys":[4.76487e-5,4.62302e-5,6.04313e-5,5.86646e-5,8.69316e-5,7.84099e-5,1.13796e-4,9.37386e-5,8.38139e-5,3.53754e-5
 	,2.65887e-5,2.72278e-5,3.04962e-5,5.30008e-4,4.76123e-4,4.44791e-4,2.65783e-4,1.01585e-4,9.30631e-5,4.44791e-5
 	,5.35204e-5,6.49519e-5,7.44609e-5,1.68355e-5,2.29722e-5,1.66745e-5,6.18862e-6]
@@ -1114,12 +1121,12 @@
 	,0,0,0,1.4e+6,1.4e+6,1.4e+6,1.4e+6,1.4e+6,1.4e+6,1.4e+6
 	,1.4e+6,1.4e+6,1.4e+6,1.4e+6,1.4e+6,1.4e+6,1.4e+6]
    }
-   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":true, "units":"ADEG"
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
       ,"header":"ANG", "dataType":"61", "rank":3.0
       ,"expansion":"Angle: angle"
-      ,"x3":[13.309,15.56,15.693,20.791,25.713,26.019,31.092,36.501,41.304,51.251
-	,61.312,71.803,72.095,12.8,15.32,15.32,20.78,25.68,25.68,31
-	,35.9,41.08,41.22,51.44,61.38,71.74,81.82]
+      ,"x3":[12.9,15.1,15.2,20.1,24.9,25.2,30.1,35.4,40.1,49.8
+	,59.7,70,70.3,12.4,14.8,14.8,20.1,24.9,24.9,30
+	,34.8,39.9,40,50,59.7,69.9,79.9]
    }
  }
 }
