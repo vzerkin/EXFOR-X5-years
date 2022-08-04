@@ -1,9 +1,9 @@
-  {"ENTRY":"C1784", "updated":20100526, "TransID":"C101", "TransDate":20100918, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C1784", "updated":20220805, "TransID":"C216", "TransDate":20230104, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2010,"a1":"L.Erikson+","r1":"J,PR/C,81,045808,2010"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.81, p.045808 (2010)"
    ,"title":"First direct measurement of the 23Mg(p,gamma)24Al reaction"
    ,"x4subents":[
-   {"SUBENT":"C1784001", "isub":1, "compiled":20100526, "TransID":"C101", "TransDate":20100918
+   {"SUBENT":"C1784001", "isub":1, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -124,6 +124,11 @@
 	,"x4code":{"code":"20100526C", "date":"20100526", "act":"C", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" Compiled by S.H."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220724A", "date":"20220724", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION corrected in sub.3"]
 	}
       ]
     }
@@ -394,25 +399,24 @@
 }
    ]
    }
-  ,{"SUBENT":"C1784003", "isub":3, "compiled":20100526, "TransID":"C101", "TransDate":20100918
+  ,{"SUBENT":"C1784003", "isub":3, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"12-MG-23(P,G)13-AL-24,PAR,SGV,,,DERIV"
-	    ,"c4reac":"(P,G)PAR,SGV"
+	,"x4code":{"code":"12-MG-23(P,G)13-AL-24,,SGV,,,DERIV"
+	    ,"c4reac":"(P,G),SGV"
 	    ,"combi":"a"
 	    ,"Units":"CM3/SEC"
 	    ,"reacs": [
-	    {"code":"12-MG-23(P,G)13-AL-24,PAR,SGV,,,DERIV"
+	    {"code":"12-MG-23(P,G)13-AL-24,,SGV,,,DERIV"
 		,"Reac":"P,G"
 		,"SF1":"12-MG-23","Targ":{"code":"12-MG-23","nam":"Mg-23","ZA":12023}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"G"
 		,"SF4":"13-AL-24","Prod":{"code":"13-AL-24","nam":"Al-24","ZA":13024}
-		,"SF5":"PAR"
 		,"SF6":"SGV"
 		,"SF9":"DERIV","sf9Hlp":"Derived data"
-		,"SF58":"PAR,SGV","Quant":"RR","BasicUnits":"CM3/SEC","QuantHlp":"Partial thermonuclear reaction rate"
+		,"SF58":",SGV","Quant":"RR","BasicUnits":"CM3/SEC","QuantHlp":"Thermonuclear reaction rate"
 	    }]}
 	}
       ]
@@ -428,11 +432,6 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"C1784002"
 		}]
-	}
-      ]
-     ,"EN-SEC":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::E-LVL,13-AL-24"}
 	}
       ]
      ,"MISC-COL":[
@@ -460,19 +459,14 @@
 		,"properties measured in this work."]
 	}
       ]
-    }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"E-LVL", "units":"KEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
-	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220724A", "date":"20220724", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF5=PAR and E-LVL deleted"]
+	}
       ]
-      ,"datacols":[
-	 ["E-LVL"     ]
-	,["KEV"       ]
-	,[" "         ]]
-      ,"data":[
-	 [473]]}
+    }
     ,"DATA":{"ncols":6, "nrows":40
       ,"x4headers":[
        {"icol":0, "header":"KT", "units":"K9", "pointer":" "
@@ -541,14 +535,14 @@
 	,[1.5,77.82,46.79,119.6,33.58,168.7]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1784003", "Pointer":" "
- ,"Subent":"C1784003", "compiled":20100526
+ ,"Subent":"C1784003", "compiled":20220805
  ,"year1":2010, "author1ini":"L.", "author1":"Erikson"
- ,"zTarg1":12, "targ1":"Mg-23", "proj1":"p", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(SpT,LVL)"
- ,"ReactionType":"RRP", "quant":"RR", "quantExpan":"Partial thermonuclear reaction rate"
- ,"reacode":"12-MG-23(P,G)13-AL-24,PAR,SGV,,,DERIV"
+ ,"zTarg1":12, "targ1":"Mg-23", "proj1":"p", "emis1":"G", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpT)"
+ ,"ReactionType":"RR", "quant":"RR", "quantExpan":"Thermonuclear reaction rate"
+ ,"reacode":"12-MG-23(P,G)13-AL-24,,SGV,,,DERIV"
  ,"compNotes":[]
- ,"wx4data":7
+ ,"wx4data":6
  ,"lx4data":40
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -575,13 +569,7 @@
 	,2.0e+8,2.1e+8,2.2e+8,2.3e+8,2.4e+8,2.5e+8,2.6e+8,2.7e+8,2.8e+8,2.9e+8
 	,3.0e+8,3.2e+8,3.4e+8,3.6e+8,3.8e+8,4.0e+8,4.5e+8,5.0e+8,5.5e+8,6.0e+8
 	,6.5e+8,7.0e+8,7.5e+8,8.0e+8,8.5e+8,9.0e+8,9.5e+8,1.0e+9,1.25e+9,1.5e+9]}
-  ,{"ivar":2, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
-    ,"header":"E-LVL", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
-    ,"com0":473
-    ,"com1":4.73e+5}
-  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+  ,{"ivar":2, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"MISC1", "units":"CM3/S/MOL", "basicUnits":"CM3/S/MOL"
     ,"what":"ZZZ", "dataType":"09", "rank":777.0
     ,"expansion":"Flags, etc."
@@ -593,7 +581,7 @@
 	,4.25596e-32,1.52438e-31,4.75413e-31,1.34653e-30,3.48215e-30,8.37078e-30,1.87143e-29,3.96869e-29,7.83941e-29,1.50129e-28
 	,2.67513e-28,7.87594e-28,2.03914e-27,4.65948e-27,9.71914e-27,1.87641e-26,7.54051e-26,2.24837e-25,5.42997e-25,1.11655e-24
 	,2.03084e-24,3.3958e-24,5.1676e-24,7.59863e-24,1.03037e-23,1.36114e-23,1.76681e-23,2.19191e-23,4.82719e-23,7.76967e-23]}
-  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+  ,{"ivar":3, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"MISC2", "units":"CM3/S/MOL", "basicUnits":"CM3/S/MOL"
     ,"what":"ZZZ", "dataType":"09", "rank":777.1
     ,"expansion":"Flags, etc."
@@ -605,7 +593,7 @@
 	,9.7673e-32,3.45392e-31,1.08732e-30,3.11351e-30,8.17318e-30,1.96442e-29,4.4353e-29,9.31231e-29,1.86811e-28,3.53197e-28
 	,6.44954e-28,1.90132e-27,4.87036e-27,1.13e-26,2.36793e-26,4.58973e-26,1.86479e-25,5.56779e-25,1.34221e-24,2.78639e-24
 	,5.12609e-24,8.47041e-24,1.31316e-23,1.90464e-23,2.60207e-23,3.5054e-23,4.42036e-23,5.55783e-23,1.2366e-22,1.98601e-22]}
-  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"MISC3", "units":"CM3/S/MOL", "basicUnits":"CM3/S/MOL"
     ,"what":"ZZZ", "dataType":"09", "rank":777.2
     ,"expansion":"Flags, etc."
@@ -617,7 +605,7 @@
 	,3.1268e-32,1.09762e-31,3.47219e-31,9.79386e-31,2.54395e-30,6.09086e-30,1.356e-29,2.85447e-29,5.73717e-29,1.09496e-28
 	,1.95113e-28,5.77702e-28,1.47821e-27,3.43732e-27,7.07722e-27,1.39153e-26,5.52628e-26,1.64809e-25,3.94544e-25,8.13997e-25
 	,1.46177e-24,2.46258e-24,3.7661e-24,5.56447e-24,7.59531e-24,9.93003e-24,1.27862e-23,1.60309e-23,3.49378e-23,5.57609e-23]}
-  ,{"ivar":6, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+  ,{"ivar":5, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
     ,"header":"MISC4", "units":"CM3/S/MOL", "basicUnits":"CM3/S/MOL"
     ,"what":"ZZZ", "dataType":"09", "rank":777.3
     ,"expansion":"Flags, etc."
@@ -630,7 +618,7 @@
 	,9.08481e-28,2.71e-27,6.85969e-27,1.61089e-26,3.35927e-26,6.57076e-26,2.62199e-25,7.83443e-25,1.92291e-24,3.94046e-24
 	,7.25324e-24,1.20987e-23,1.85482e-23,2.68509e-23,3.67311e-23,4.92682e-23,6.16725e-23,7.89919e-23,1.75851e-22,2.80133e-22]}
   ]
- ,"wc5data":3
+ ,"wc5data":2
  ,"lc5data":40
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"CM3/SEC"
@@ -648,14 +636,6 @@
 	,2.0e+8,2.1e+8,2.2e+8,2.3e+8,2.4e+8,2.5e+8,2.6e+8,2.7e+8,2.8e+8,2.9e+8
 	,3.0e+8,3.2e+8,3.4e+8,3.6e+8,3.8e+8,4.0e+8,4.5e+8,5.0e+8,5.5e+8,6.0e+8
 	,6.5e+8,7.0e+8,7.5e+8,8.0e+8,8.5e+8,9.0e+8,9.5e+8,1.0e+9,1.25e+9,1.5e+9]
-   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
-      ,"header":"LVL", "dataType":"52", "rank":2.0
-      ,"expansion":"Secondary energy: level energy"
-      ,"x2":[4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5
-	,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5
-	,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5
-	,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5,4.73e+5]
    }
  }
 }
