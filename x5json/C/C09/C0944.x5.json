@@ -1,9 +1,9 @@
-  {"ENTRY":"C0944", "updated":20040106, "TransID":"0000", "TransDate":20050926, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C0944", "updated":20220805, "TransID":"C216", "TransDate":20230104, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1952,"a1":"C.J.Avery+","r1":"J,PR,87,216(Q8),1952"
    ,"ref":"Jour: Physical Review, Vol.87, p.216(Q8) (1952)"
    ,"title":"Nuclear Reactions in Cobalt and Arsenic"
    ,"x4subents":[
-   {"SUBENT":"C0944001", "isub":1, "compiled":20040106, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"C0944001", "isub":1, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -32,9 +32,10 @@
       ]
      ,"FACILITY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}]
-	,"x4freetext":[" No information in reference, but from other"
-		," works, most likely a cyclotron."]
+	,"x4codes":[{"code":"CYCLO", "dict":"FACILITY", "idict":18,"hlp":"Cyclotron"}
+	    ,{"code":"1USAOHO", "dict":"INSTITUTE", "idict":3,"hlp":"Ohio University, Athens, OH, United States of America"}]
+	,"x4freetext":[" No information in reference, but from"
+		," other works, most likely a cyclotron."]
 	}
       ]
      ,"METHOD":[
@@ -58,8 +59,10 @@
       ]
      ,"STATUS":[
 	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Data taken from text of reference."]
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" Data taken from text of reference."]
 	}
       ]
      ,"HISTORY":[
@@ -68,23 +71,28 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" VM"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220801A", "date":"20220801", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTIONs modified in subs.2,3"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C0944002", "isub":2, "compiled":20040106, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0944002", "isub":2, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"26-FE-58(P,X)27-CO-58-G/M,,SIG/RAT"
-	    ,"c4reac":"(P,X),SIG/RAT"
+	,"x4code":{"code":"26-FE-58(P,N)27-CO-58-G/M,,SIG/RAT"
+	    ,"c4reac":"(P,N),SIG/RAT"
 	    ,"combi":"a"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"26-FE-58(P,X)27-CO-58-G/M,,SIG/RAT"
-		,"Reac":"P,X"
+	    {"code":"26-FE-58(P,N)27-CO-58-G/M,,SIG/RAT"
+		,"Reac":"P,N"
 		,"SF1":"26-FE-58","Targ":{"code":"26-FE-58","nam":"Fe-58","ZA":26058}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF3":"N"
 		,"SF4":"27-CO-58-G/M","Prod":{"code":"27-CO-58-G/M","nam":"Co-58-g/m","ZA":27058,"ProdM":"/"}
 		,"SF6":"SIG/RAT"
 		,"SF58":",SIG/RAT","Quant":"CS","BasicUnits":"NO-DIM","QuantHlp":"Cross section ratio"
@@ -96,6 +104,9 @@
 	,"x4code":null
 	,"x4freetext":["Fe2O3 sample, enriched to 42.0% 58Fe."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"26-FE-58","ENR":0.42}
+	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
@@ -105,6 +116,13 @@
 	,{"x4pointer":" "
 	,"x4codes":[{"Nucl":"27-CO-58-M", "t12":9.0, "t12units":"HR", "t12sec":32400.0
 	, "Radiations":[ {"Type":"XR"}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220801A", "date":"20220801", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to N"]
 	}
       ]
     }
@@ -125,12 +143,12 @@
 	 [6.3,8]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0944002", "Pointer":" "
- ,"Subent":"C0944002", "compiled":20040106
+ ,"Subent":"C0944002", "compiled":20220805
  ,"year1":1952, "author1ini":"C.J.", "author1":"Avery"
- ,"zTarg1":26, "targ1":"Fe-58", "proj1":"p", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":26, "targ1":"Fe-58", "proj1":"p", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section ratio"
- ,"reacode":"26-FE-58(P,X)27-CO-58-G/M,,SIG/RAT"
+ ,"reacode":"26-FE-58(P,N)27-CO-58-G/M,,SIG/RAT"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":1
@@ -165,31 +183,31 @@
 }
    ]
    }
-  ,{"SUBENT":"C0944003", "isub":3, "compiled":20040106, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"C0944003", "isub":3, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(26-FE-58(P,X)27-CO-56,,SIG)/\n(26-FE-58(P,X)27-CO-58-M,,SIG)"
-	    ,"c4reac":"((P,X),SIG)/((P,X),SIG)"
+	,"x4code":{"code":"(26-FE-58(P,3N)27-CO-56,,SIG)/\n(26-FE-58(P,N)27-CO-58-M,,SIG)"
+	    ,"c4reac":"((P,3N),SIG)/((P,N),SIG)"
 	    ,"combi":"a/a","combiQuant":"Ratio of [Cross section]"
 	    ,"MF":203
-	    ,"MT":9000
+	    ,"MT":17
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"26-FE-58(P,X)27-CO-56,,SIG"
-		,"Reac":"P,X"
+	    {"code":"26-FE-58(P,3N)27-CO-56,,SIG"
+		,"Reac":"P,3N"
 		,"SF1":"26-FE-58","Targ":{"code":"26-FE-58","nam":"Fe-58","ZA":26058}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF3":"3N"
 		,"SF4":"27-CO-56","Prod":{"code":"27-CO-56","nam":"Co-56","ZA":27056}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }
-	    ,{"code":"26-FE-58(P,X)27-CO-58-M,,SIG"
-		,"Reac":"P,X"
+	    ,{"code":"26-FE-58(P,N)27-CO-58-M,,SIG"
+		,"Reac":"P,N"
 		,"SF1":"26-FE-58","Targ":{"code":"26-FE-58","nam":"Fe-58","ZA":26058}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
-		,"SF3":"X","procHlp":"Process unspecified"
+		,"SF3":"N"
 		,"SF4":"27-CO-58-M","Prod":{"code":"27-CO-58-M","nam":"Co-58-m","ZA":27058,"ProdM":"M"}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
@@ -201,6 +219,9 @@
 	,"x4code":null
 	,"x4freetext":["Fe2O3 sample, enriched to 42.0% 58Fe."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"Nucl":"26-FE-58","ENR":0.42}
+	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
@@ -210,6 +231,13 @@
 	,{"x4pointer":" "
 	,"x4codes":[{"Nucl":"27-CO-58-M", "t12":9.0, "t12units":"HR", "t12sec":32400.0
 	, "Radiations":[ {"Type":"XR"}]}]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220801A", "date":"20220801", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 changed to 3N and N, resp."]
 	}
       ]
     }
@@ -230,12 +258,12 @@
 	 [6.3,0.6]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C0944003", "Pointer":" "
- ,"Subent":"C0944003", "compiled":20040106
+ ,"Subent":"C0944003", "compiled":20220805
  ,"year1":1952, "author1ini":"C.J.", "author1":"Avery"
- ,"zTarg1":26, "targ1":"Fe-58", "proj1":"p", "emis1":"X", "MF":203, "MT":9000, "nExpectedArgs":1
+ ,"zTarg1":26, "targ1":"Fe-58", "proj1":"p", "emis1":"3N", "MF":203, "MT":17, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"Ratio", "quant":"CS", "quantExpan":"Ratio of [Cross section]"
- ,"reacode":"(26-FE-58(P,X)27-CO-56,,SIG)/(26-FE-58(P,X)27-CO-58-M,,SIG)"
+ ,"reacode":"(26-FE-58(P,3N)27-CO-56,,SIG)/(26-FE-58(P,N)27-CO-58-M,,SIG)"
  ,"compNotes":[]
  ,"wx4data":2
  ,"lx4data":1
@@ -267,7 +295,7 @@
       ,"x1":[6.3e+6]
    }
  }
- ,"c5mon":{"m0ref":"[MONIT]/al27px", "m1ref":"recom/fe58px"
+ ,"c5mon":{"m0ref":"[MONIT]/al27px", "m1ref":"recom/fe58pn"
       ,"enNorm":[6.3e+6] }
 }
    ]
