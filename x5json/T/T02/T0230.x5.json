@@ -1,9 +1,9 @@
-  {"ENTRY":"T0230", "updated":20071109, "TransID":"Y004", "TransDate":20080124, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
+  {"ENTRY":"T0230", "updated":20220805, "TransID":"C216", "TransDate":20230104, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
    ,"y1":1965,"a1":"D.E.Blatchley+","r1":"J,NP,61,641,1965"
    ,"ref":"Jour: Nuclear Physics, Vol.61, p.641 (1965)"
-   ,"title":"Alpha-gamma angular correlation studies of the reactions 28Si(a,a`gamma(1.77)) and 16O(a,a`gammma(6.13)"
+   ,"title":"Alpha-gamma angular correlation studies of the reactions 28Si(a,a`gamma(1.77)) and 16O(a,a`gammma(6.13))"
    ,"x4subents":[
-   {"SUBENT":"T0230001", "isub":1, "compiled":20071109, "TransID":"Y004", "TransDate":20080124
+   {"SUBENT":"T0230001", "isub":1, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -28,7 +28,7 @@
 	,"x4code":null
 	,"x4freetext":["Alpha-gamma angular correlation studies of the"
 		," reactions 28Si(a,a`gamma(1.77)) and"
-		," 16O(a,a`gammma(6.13)"]
+		," 16O(a,a`gammma(6.13))"]
 	}
       ]
      ,"FACILITY":[
@@ -73,6 +73,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Reference corrected"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220725A", "date":"20220725", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION in subs.2,7 modified"]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
@@ -88,26 +93,36 @@
       ,"data":[
 	 [22.5]]}
    }
-  ,{"SUBENT":"T0230002", "isub":2, "compiled":20040811, "TransID":"T018", "TransDate":20050926
+  ,{"SUBENT":"T0230002", "isub":2, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"14-SI-28(A,INL)14-SI-28,,DA/DA,A/G,REL"
-	    ,"c4reac":"(A,INL),DA/DA,A/G,REL"
+	,"x4code":{"code":"14-SI-28(A,INL)14-SI-28,,DA/DA,G/A,REL"
+	    ,"c4reac":"(A,INL),DA/DA,G/A,REL"
 	    ,"combi":"a"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"14-SI-28(A,INL)14-SI-28,,DA/DA,A/G,REL"
+	    {"code":"14-SI-28(A,INL)14-SI-28,,DA/DA,G/A,REL"
 		,"Reac":"A,INL"
 		,"SF1":"14-SI-28","Targ":{"code":"14-SI-28","nam":"Si-28","ZA":14028}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"INL","procHlp":"Inelastic scattering"
 		,"SF4":"14-SI-28","Prod":{"code":"14-SI-28","nam":"Si-28","ZA":14028}
 		,"SF6":"DA/DA"
-		,"SF7":"A/G"
+		,"SF7":"G/A"
 		,"SF8":"REL"
-		,"SF58":",DA/DA,A/G","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":",DA/DA,G/A","Quant":"DA","BasicUnits":"ARB-UNITS","QuantHlp":"Angular correlation betw.specified particles"
 	    }]}
 	,"x4freetext":["  Data given as number of coincidence counts."]
+	}
+      ]
+     ,"ANG-SEC":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG1,G"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG2,A"}
 	}
       ]
      ,"ERR-ANALYS":[
@@ -141,6 +156,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" REACTION data headings updated, data units"
 		,"          corrected; digitizing errors added to COMMON"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220725A", "date":"20220725", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Particle sequence in REACTION SF7 changed"]
 	}
       ]
     }
@@ -214,13 +234,109 @@
 	,[51,140,80,12]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"T0230002", "Pointer":" "
- ,"Subent":"T0230002", "compiled":20040811
-,"year1":1965, "author1ini":"D.E.", "author1":"Blatchley"
-, "zTarg1":14, "targ1":"Si-28", "proj1":"a", "emis1":"INL", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"14-SI-28(A,INL)14-SI-28,,DA/DA,A/G,REL"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"T0230002", "compiled":20220805
+ ,"year1":1965, "author1ini":"D.E.", "author1":"Blatchley"
+ ,"zTarg1":14, "targ1":"Si-28", "proj1":"a", "emis1":"INL", "MF":600, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
+ ,"ReactionType":"DAA", "quant":"DA", "quantExpan":"Angular correlation betw.specified particles"
+ ,"reacode":"14-SI-28(A,INL)14-SI-28,,DA/DA,G/A,REL"
+ ,"compNotes":["Ignored column:ERR-DIG,NO-DIM (digitizing error)"]
+ ,"wx4data":7
+ ,"lx4data":33
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[236,158,75,53,67,116,195,263,253,214
+	,128,91,100,90,83,66,56,54,66,69
+	,74,95,148,95,65,38,81,106,132,154
+	,180,121,80]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"ERR-S", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[17,16,11,13,11,15,15,21,16,16
+	,16,12,12,11,11,10,8,9,13,10
+	,12,11,14,12,10,12,11,13,11,16
+	,18,12,12]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-DIG", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":22.5
+    ,"com1":2.25e+7}
+  ,{"ivar":4, "cvar":"x2", "fam":"ANG", "ifComm":false, "ifCM":false
+    ,"header":"ANG1", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X2.Value", "dataType":"61", "rank":2.1
+    ,"expansion":"Angle: angle"
+    ,"dat0":[33.5,33.5,33.5,33.5,33.5,33.5,33.5,33.5,33.5,33.5
+	,33.5,43.5,43.5,43.5,43.5,43.5,43.5,43.5,43.5,43.5
+	,43.5,43.5,51,51,51,51,51,51,51,51
+	,51,51,51]
+   ,"dat1eq":true}
+  ,{"ivar":5, "cvar":"x2", "fam":"ANG", "ifComm":false, "ifCM":false
+    ,"header":"ANG2", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X2.Value", "dataType":"61", "rank":2.1
+    ,"expansion":"Angle: angle"
+    ,"dat0":[40,50,60,70,80,90,100,110,120,130
+	,140,40,50,60,70,80,90,100,110,120
+	,130,140,40,50,60,70,80,90,100,110
+	,120,130,140]
+   ,"dat1eq":true}
+  ,{"ivar":6, "cvar":"dx2", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG-ERR-D", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X2.pErr+-", "dataType":"61", "rank":2.955
+    ,"expansion":"Angle: angle /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ]
+ ,"wc5data":3
+ ,"lc5data":33
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[236,158,75,53,67,116,195,263,253,214
+	,128,91,100,90,83,66,56,54,66,69
+	,74,95,148,95,65,38,81,106,132,154
+	,180,121,80]
+      ,"dy":[17,16,11,13,11,15,15,21,16,16
+	,16,12,12,11,11,10,8,9,13,10
+	,12,11,14,12,10,12,11,13,11,16
+	,18,12,12]
+      ,"dystat":[17,16,11,13,11,15,15,21,16,16
+	,16,12,12,11,11,10,8,9,13,10
+	,12,11,14,12,10,12,11,13,11,16
+	,18,12,12]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7
+	,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7
+	,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7
+	,2.25e+7,2.25e+7,2.25e+7]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":2.0
+      ,"expansion":"Angle: angle"
+      ,"x2":[40,50,60,70,80,90,100,110,120,130
+	,140,40,50,60,70,80,90,100,110,120
+	,130,140,40,50,60,70,80,90,100,110
+	,120,130,140]
+      ,"dx2":[1,1,1,1,1,1,1,1,1,1
+	,1,1,1,1,1,1,1,1,1,1
+	,1,1,1,1,1,1,1,1,1,1
+	,1,1,1]   }
+ }
 }
    ]
    }
@@ -1191,15 +1307,17 @@
 }
    ]
    }
-  ,{"SUBENT":"T0230007", "isub":7, "compiled":20040811, "TransID":"T018", "TransDate":20050926
+  ,{"SUBENT":"T0230007", "isub":7, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"8-O-16(A,INL)8-O-16,PAR,DA/DA,A/G,REL"
-	    ,"c4reac":"(A,INL)PAR,DA/DA,A/G,REL"
+	,"x4code":{"code":"8-O-16(A,INL)8-O-16,PAR,DA/DA,G/A,REL"
+	    ,"c4reac":"(A,INL)PAR,DA/DA,G/A,REL"
 	    ,"combi":"a"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"8-O-16(A,INL)8-O-16,PAR,DA/DA,A/G,REL"
+	    {"code":"8-O-16(A,INL)8-O-16,PAR,DA/DA,G/A,REL"
 		,"Reac":"A,INL"
 		,"SF1":"8-O-16","Targ":{"code":"8-O-16","nam":"O-16","ZA":8016}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
@@ -1207,9 +1325,9 @@
 		,"SF4":"8-O-16","Prod":{"code":"8-O-16","nam":"O-16","ZA":8016}
 		,"SF5":"PAR"
 		,"SF6":"DA/DA"
-		,"SF7":"A/G"
+		,"SF7":"G/A"
 		,"SF8":"REL"
-		,"SF58":"PAR,DA/DA,A/G","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"PAR,DA/DA,G/A","Quant":"DA","BasicUnits":"ARB-UNITS","QuantHlp":"Partial double diff.cross sect. d2/dA(*)/dA(*)"
 	    }]}
 	,"x4freetext":["  Data given as number of coincidence counts."]
 	}
@@ -1217,6 +1335,14 @@
      ,"EN-SEC":[
 	{"x4pointer":" "
 	,"x4code":{"code":"orig::E,G"}
+	}
+      ]
+     ,"ANG-SEC":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG1,G"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG2,A"}
 	}
       ]
      ,"ERR-ANALYS":[
@@ -1250,6 +1376,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" REACTION data headings updated, data units"
 		,"          corrected; digitizing errors added to COMMON"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220725A", "date":"20220725", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Particle sequence in REACTION SF7 changed"]
 	}
       ]
     }
@@ -1351,13 +1482,145 @@
 	,[81,140,126,13]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"T0230007", "Pointer":" "
- ,"Subent":"T0230007", "compiled":20040811
-,"year1":1965, "author1ini":"D.E.", "author1":"Blatchley"
-, "zTarg1":8, "targ1":"O-16", "proj1":"a", "emis1":"INL", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"8-O-16(A,INL)8-O-16,PAR,DA/DA,A/G,REL"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"T0230007", "compiled":20220805
+ ,"year1":1965, "author1ini":"D.E.", "author1":"Blatchley"
+ ,"zTarg1":8, "targ1":"O-16", "proj1":"a", "emis1":"INL", "MF":600, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,E2,ANG)"
+ ,"ReactionType":"D2P", "quant":"DA", "quantExpan":"Partial double diff.cross sect. d2/dA(*)/dA(*)"
+ ,"reacode":"8-O-16(A,INL)8-O-16,PAR,DA/DA,G/A,REL"
+ ,"compNotes":["Ignored column:ERR-DIG,NO-DIM (digitizing error)"]
+ ,"wx4data":8
+ ,"lx4data":58
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[110,63,38,68,94,110,110,103,100,59
+	,34,44,69,90,96,103,92,68,34,52
+	,86,107,147,161,104,95,74,50,59,53
+	,80,113,146,162,144,130,98,90,84,104
+	,128,153,143,147,94,107,56,85,113,156
+	,195,211,195,166,100,53,82,126]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"ERR-S", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[12,11,10,10,13,13,13,13,12,10
+	,8,9,11,13,10,12,10,10,9,10
+	,10,13,13,10,10,13,10,11,9,10
+	,12,14,11,14,14,15,13,11,9,13
+	,15,15,14,14,14,14,8,12,11,14
+	,17,18,17,15,12,10,11,13]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-DIG", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":2
+    ,"com1":2}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":22.5
+    ,"com1":2.25e+7}
+  ,{"ivar":4, "cvar":"x2", "fam":"E2", "ifComm":true , "ifCM":false
+    ,"header":"E", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"51", "rank":2.1
+    ,"expansion":"Secondary energy: particle energy"
+    ,"com0":6.13
+    ,"com1":6.13e+6}
+  ,{"ivar":5, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
+    ,"header":"ANG1", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"dat0":[36,36,36,36,36,36,36,36,36,36
+	,36,36,36,36,48,48,48,48,48,48
+	,48,48,48,48,48,48,48,48,48,70
+	,70,70,70,70,70,70,70,70,70,70
+	,70,70,70,81,81,81,81,81,81,81
+	,81,81,81,81,81,81,81,81]
+   ,"dat1eq":true}
+  ,{"ivar":6, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
+    ,"header":"ANG2", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"dat0":[40,50,60,70,80,85,90,100,105,110
+	,120,130,135,140,40,50,55,60,70,80
+	,90,95,100,100,110,120,125,130,140,40
+	,50,60,65,70,80,90,95,100,110,115
+	,120,130,140,40,50,50,60,70,75,80
+	,85,90,100,105,110,119,129,140]
+   ,"dat1eq":true}
+  ,{"ivar":7, "cvar":"dx3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG-ERR-D", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.pErr+-", "dataType":"61", "rank":3.955
+    ,"expansion":"Angle: angle /Error/"
+    ,"com0":1
+    ,"com1":1}
+  ]
+ ,"wc5data":4
+ ,"lc5data":58
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"ARB-UNITS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[110,63,38,68,94,110,110,103,100,59
+	,34,44,69,90,96,103,92,68,34,52
+	,86,107,147,161,104,95,74,50,59,53
+	,80,113,146,162,144,130,98,90,84,104
+	,128,153,143,147,94,107,56,85,113,156
+	,195,211,195,166,100,53,82,126]
+      ,"dy":[12,11,10,10,13,13,13,13,12,10
+	,8,9,11,13,10,12,10,10,9,10
+	,10,13,13,10,10,13,10,11,9,10
+	,12,14,11,14,14,15,13,11,9,13
+	,15,15,14,14,14,14,8,12,11,14
+	,17,18,17,15,12,10,11,13]
+      ,"dystat":[12,11,10,10,13,13,13,13,12,10
+	,8,9,11,13,10,12,10,10,9,10
+	,10,13,13,10,10,13,10,11,9,10
+	,12,14,11,14,14,15,13,11,9,13
+	,15,15,14,14,14,14,8,12,11,14
+	,17,18,17,15,12,10,11,13]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7
+	,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7
+	,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7
+	,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7
+	,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7
+	,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7,2.25e+7]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"E2", "ifCM":false, "units":"EV"
+      ,"header":"E2", "dataType":"51", "rank":2.0
+      ,"expansion":"Secondary energy: particle energy"
+      ,"x2":[6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6
+	,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6
+	,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6
+	,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6
+	,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6
+	,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6,6.13e+6]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
+      ,"expansion":"Angle: angle"
+      ,"x3":[40,50,60,70,80,85,90,100,105,110
+	,120,130,135,140,40,50,55,60,70,80
+	,90,95,100,100,110,120,125,130,140,40
+	,50,60,65,70,80,90,95,100,110,115
+	,120,130,140,40,50,50,60,70,75,80
+	,85,90,100,105,110,119,129,140]
+      ,"dx3":[1,1,1,1,1,1,1,1,1,1
+	,1,1,1,1,1,1,1,1,1,1
+	,1,1,1,1,1,1,1,1,1,1
+	,1,1,1,1,1,1,1,1,1,1
+	,1,1,1,1,1,1,1,1,1,1
+	,1,1,1,1,1,1,1,1]   }
+ }
 }
    ]
    }
