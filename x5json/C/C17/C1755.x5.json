@@ -1,9 +1,9 @@
-  {"ENTRY":"C1755", "updated":20091119, "TransID":"C098", "TransDate":20100531, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C1755", "updated":20220805, "TransID":"C216", "TransDate":20230104, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":2009,"a1":"C.M.Deibel+","r1":"J,PR/C,80,035806,2009"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.80, p.035806 (2009)"
    ,"title":"Toward an experimentally determined 26Alm(p,g)27Si reaction rate in ONe novae"
    ,"x4subents":[
-   {"SUBENT":"C1755001", "isub":1, "compiled":20091119, "TransID":"C098", "TransDate":20100531
+   {"SUBENT":"C1755001", "isub":1, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -103,8 +103,8 @@
       ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4code":{"header":"ERR-T"
-	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Total uncertainty. Main source of"
 		,"uncertainty was background determination in the total"
 		,"focal-plane spectrum, which was much larger than any"
@@ -117,37 +117,48 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":["Compiled by S.H."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220725A", "date":"20220725", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION in subs.2,3 modified. ERR-T"
+		," changed to DATA-ERR"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C1755002", "isub":2, "compiled":20091119, "TransID":"C098", "TransDate":20100531
+  ,{"SUBENT":"C1755002", "isub":2, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"14-SI-28(HE3,A+P)13-AL-26-M,SEQ/PAR,DA/DA,A/P,REL"
-	    ,"c4reac":"(HE3,A+P)SEQ/PAR,DA/DA,A/P,REL"
+	,"x4code":{"code":"14-SI-28(HE3,A+P)13-AL-26,SEQ/PAR,DA/DA,P/A,REL"
+	    ,"c4reac":"(HE3,A+P)SEQ/PAR,DA/DA,P/A,REL"
 	    ,"combi":"a"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"14-SI-28(HE3,A+P)13-AL-26-M,SEQ/PAR,DA/DA,A/P,REL"
+	    {"code":"14-SI-28(HE3,A+P)13-AL-26,SEQ/PAR,DA/DA,P/A,REL"
 		,"Reac":"HE3,A+P"
 		,"SF1":"14-SI-28","Targ":{"code":"14-SI-28","nam":"Si-28","ZA":14028}
 		,"SF2":"HE3","Proj":{"code":"HE3","nam":"he3","ZA":2003}
 		,"SF3":"A+P"
-		,"SF4":"13-AL-26-M","Prod":{"code":"13-AL-26-M","nam":"Al-26-m","ZA":13026,"ProdM":"M"}
+		,"SF4":"13-AL-26","Prod":{"code":"13-AL-26","nam":"Al-26","ZA":13026}
 		,"SF5":"SEQ/PAR"
 		,"SF6":"DA/DA"
-		,"SF7":"A/P"
+		,"SF7":"P/A"
 		,"SF8":"REL"
-		,"SF58":"SEQ/PAR,DA/DA,A/P","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"SEQ/PAR,DA/DA,P/A","Quant":"DA","BasicUnits":"ARB-UNITS","QuantHlp":"Partial ang.correl.of spec.part.,spec.reac.seq."
 	    }]}
 	,"x4freetext":[" Author define relative units as counts in resonance"
 		," per steradian."]
 	}
       ]
-     ,"DECAY-DATA":[
+     ,"ANG-SEC":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"13-AL-26-M", "t12":6.3, "t12units":"SEC", "t12sec":6.3
-	, "Radiations":[]}]
+	,"x4code":{"code":"orig::ANG1,A"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG2-CM,P"}
+	,"x4freetext":[" Centroid of proton angular bin"]
 	}
       ]
      ,"STATUS":[
@@ -161,28 +172,42 @@
       ]
      ,"EN-SEC":[
 	{"x4pointer":" "
-	,"x4code":{"code":"orig::E-LVL,14-SI-27"}
+	,"x4code":{"code":"orig::E-LVL1,14-SI-27"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::E-LVL2,13-AL-26"}
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220725A", "date":"20220725", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Particle sequence in REACTION SF7 changed,"
+		," deleted -M from REACTION SF4, deleted DECAY-DATA"]
 	}
       ]
     }
-    ,"COMMON":{"ncols":3, "nrows":1
+    ,"COMMON":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"E-LVL", "units":"MEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
+       {"icol":0, "header":"E-LVL1", "units":"MEV", "pointer":" "
+	,"headerHelp":"1st level energy, defined under EN-SEC", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"ANG1", "units":"ADEG", "pointer":" "
+      ,{"icol":1, "header":"E-LVL2", "units":"KEV", "pointer":" "
+	,"headerHelp":"2nd level energy, defined under EN-SEC", "pFlag":"1000000"
+	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
+      ,{"icol":2, "header":"ANG1", "units":"ADEG", "pointer":" "
 	,"headerHelp":"1st angle, definition given in BIB Section", "pFlag":"1000000"
 	,"unitsHelp":"angular Degrees","familyCode":"A","convFc":1.0,"basicUnits":"ADEG"}
-      ,{"icol":2, "header":"EN", "units":"MEV", "pointer":" "
+      ,{"icol":3, "header":"EN", "units":"MEV", "pointer":" "
 	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["E-LVL"     ,"ANG1"      ,"EN"        ]
-	,["MEV"       ,"ADEG"      ,"MEV"       ]
-	,[" "         ," "         ," "         ]]
+	 ["E-LVL1"    ,"E-LVL2"    ,"ANG1"      ,"EN"        ]
+	,["MEV"       ,"KEV"       ,"ADEG"      ,"MEV"       ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [8.777,3,17.5]]}
+	 [8.777,228,3,17.5]]}
     ,"DATA":{"ncols":3, "nrows":4
       ,"x4headers":[
        {"icol":0, "header":"ANG2-CM", "units":"ADEG", "pointer":" "
@@ -191,12 +216,12 @@
       ,{"icol":1, "header":"DATA-CM", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specif. under REACTION, c.m. sys.", "pFlag":"0001001"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"ERR-T", "units":"ARB-UNITS", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":2, "header":"DATA-ERR", "units":"ARB-UNITS", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ANG2-CM"   ,"DATA-CM"   ,"ERR-T"     ]
+	 ["ANG2-CM"   ,"DATA-CM"   ,"DATA-ERR"  ]
 	,["ADEG"      ,"ARB-UNITS" ,"ARB-UNITS" ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -206,44 +231,119 @@
 	,[165,0.0393,0.00462]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1755002", "Pointer":" "
- ,"Subent":"C1755002", "compiled":20091119
-,"year1":2009, "author1ini":"C.M.", "author1":"Deibel"
-, "zTarg1":14, "targ1":"Si-28", "proj1":"he3", "emis1":"A+P", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"14-SI-28(HE3,A+P)13-AL-26-M,SEQ/PAR,DA/DA,A/P,REL"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"C1755002", "compiled":20220805
+ ,"year1":2009, "author1ini":"C.M.", "author1":"Deibel"
+ ,"zTarg1":14, "targ1":"Si-28", "proj1":"he3", "emis1":"A+P", "MF":600, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
+ ,"ReactionType":"D2P", "quant":"DA", "quantExpan":"Partial ang.correl.of spec.part.,spec.reac.seq."
+ ,"reacode":"14-SI-28(HE3,A+P)13-AL-26,SEQ/PAR,DA/DA,P/A,REL"
+ ,"compNotes":["LVL: SELECT SMALLEST AND LARGEST VALUES"]
+ ,"wx4data":7
+ ,"lx4data":4
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":true
+    ,"header":"DATA-CM", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.0371,0.039,0.0346,0.0393]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.00308,0.00277,0.00308,0.00462]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":17.5
+    ,"com1":1.75e+7}
+  ,{"ivar":3, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
+    ,"header":"E-LVL1", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"52", "rank":2.1
+    ,"expansion":"Secondary energy: level energy"
+    ,"com0":8.777
+    ,"com1":8.777e+6}
+  ,{"ivar":4, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
+    ,"header":"E-LVL2", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"52", "rank":2.1
+    ,"expansion":"Secondary energy: level energy"
+    ,"com0":228
+    ,"com1":2.28e+5}
+  ,{"ivar":5, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG1", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":3
+    ,"com1":3}
+  ,{"ivar":6, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":true
+    ,"header":"ANG2-CM", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"dat0":[135,145,155,165]
+   ,"dat1eq":true}
+  ]
+ ,"wc5data":4
+ ,"lc5data":4
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":true, "units":"ARB-UNITS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.0371,0.039,0.0346,0.0393]
+      ,"dy":[0.00308,0.00277,0.00308,0.00462]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.75e+7,1.75e+7,1.75e+7,1.75e+7]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
+      ,"header":"LVL", "dataType":"52", "rank":2.0
+      ,"expansion":"Secondary energy: level energy"
+      ,"x2":[2.28e+5,2.28e+5,2.28e+5,2.28e+5]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
+      ,"expansion":"Angle: angle"
+      ,"x3":[135,145,155,165]
+   }
+ }
 }
    ]
    }
-  ,{"SUBENT":"C1755003", "isub":3, "compiled":20091119, "TransID":"C098", "TransDate":20100531
+  ,{"SUBENT":"C1755003", "isub":3, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"14-SI-28(HE3,A+P)13-AL-26-M,SEQ/PAR,DA/DA,A/P,REL"
-	    ,"c4reac":"(HE3,A+P)SEQ/PAR,DA/DA,A/P,REL"
+	,"x4code":{"code":"14-SI-28(HE3,A+P)13-AL-26,SEQ/PAR,DA/DA,P/A,REL"
+	    ,"c4reac":"(HE3,A+P)SEQ/PAR,DA/DA,P/A,REL"
 	    ,"combi":"a"
+	    ,"MF":600
+	    ,"Units":"ARB-UNITS"
 	    ,"reacs": [
-	    {"code":"14-SI-28(HE3,A+P)13-AL-26-M,SEQ/PAR,DA/DA,A/P,REL"
+	    {"code":"14-SI-28(HE3,A+P)13-AL-26,SEQ/PAR,DA/DA,P/A,REL"
 		,"Reac":"HE3,A+P"
 		,"SF1":"14-SI-28","Targ":{"code":"14-SI-28","nam":"Si-28","ZA":14028}
 		,"SF2":"HE3","Proj":{"code":"HE3","nam":"he3","ZA":2003}
 		,"SF3":"A+P"
-		,"SF4":"13-AL-26-M","Prod":{"code":"13-AL-26-M","nam":"Al-26-m","ZA":13026,"ProdM":"M"}
+		,"SF4":"13-AL-26","Prod":{"code":"13-AL-26","nam":"Al-26","ZA":13026}
 		,"SF5":"SEQ/PAR"
 		,"SF6":"DA/DA"
-		,"SF7":"A/P"
+		,"SF7":"P/A"
 		,"SF8":"REL"
-		,"SF58":"SEQ/PAR,DA/DA,A/P","Quant":"","BasicUnits":"?","QuantHlp":""
+		,"SF58":"SEQ/PAR,DA/DA,P/A","Quant":"DA","BasicUnits":"ARB-UNITS","QuantHlp":"Partial ang.correl.of spec.part.,spec.reac.seq."
 	    }]}
 	,"x4freetext":[" Author define relative units as counts in resonance"
 		," per steradian"]
 	}
       ]
-     ,"DECAY-DATA":[
+     ,"ANG-SEC":[
 	{"x4pointer":" "
-	,"x4codes":[{"Nucl":"13-AL-26-M", "t12":6.3, "t12units":"SEC", "t12sec":6.3
-	, "Radiations":[]}]
+	,"x4code":{"code":"orig::ANG1,A"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG2-CM,P"}
+	,"x4freetext":[" Centroid of proton angular bin"]
 	}
       ]
      ,"STATUS":[
@@ -258,6 +358,14 @@
      ,"EN-SEC":[
 	{"x4pointer":" "
 	,"x4code":{"code":"orig::E-LVL,14-SI-27"}
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220725A", "date":"20220725", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Particle sequence in REACTION SF7 changed,"
+		," deleted -M from REACTION SF4, deleted DECAY-DATA"]
 	}
       ]
     }
@@ -287,12 +395,12 @@
       ,{"icol":1, "header":"DATA-CM", "units":"ARB-UNITS", "pointer":" "
 	,"headerHelp":"Value of quantity specif. under REACTION, c.m. sys.", "pFlag":"0001001"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":2, "header":"ERR-T", "units":"ARB-UNITS", "pointer":" "
-	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
+      ,{"icol":2, "header":"DATA-ERR", "units":"ARB-UNITS", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"arbitrary Units","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["ANG2-CM"   ,"DATA-CM"   ,"ERR-T"     ]
+	 ["ANG2-CM"   ,"DATA-CM"   ,"DATA-ERR"  ]
 	,["ADEG"      ,"ARB-UNITS" ,"ARB-UNITS" ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -302,13 +410,77 @@
 	,[165,0.0434,0.00408]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1755003", "Pointer":" "
- ,"Subent":"C1755003", "compiled":20091119
-,"year1":2009, "author1ini":"C.M.", "author1":"Deibel"
-, "zTarg1":14, "targ1":"Si-28", "proj1":"he3", "emis1":"A+P", "MF":-1, "MT":-1, "nExpectedArgs":-1
-, "IndepVarFamilyCode":"?", "getYFormulaStr":"y=y(x1)"
-, "ReactionType":"?", "quant":"?"
-, "reacode":"14-SI-28(HE3,A+P)13-AL-26-M,SEQ/PAR,DA/DA,A/P,REL"
-, "compNotes":["Unknown reaction type"]
+ ,"Subent":"C1755003", "compiled":20220805
+ ,"year1":2009, "author1ini":"C.M.", "author1":"Deibel"
+ ,"zTarg1":14, "targ1":"Si-28", "proj1":"he3", "emis1":"A+P", "MF":600, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
+ ,"ReactionType":"D2P", "quant":"DA", "quantExpan":"Partial ang.correl.of spec.part.,spec.reac.seq."
+ ,"reacode":"14-SI-28(HE3,A+P)13-AL-26,SEQ/PAR,DA/DA,P/A,REL"
+ ,"compNotes":[]
+ ,"wx4data":6
+ ,"lx4data":4
+ ,"x4data":[
+   {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":true
+    ,"header":"DATA-CM", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"expansion":"Data: data"
+    ,"dat0":[0.0309,0.0331,0.0358,0.0434]
+   ,"dat1eq":true}
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"ARB-UNITS", "basicUnits":"NO-DIM"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
+    ,"dat0":[0.00191,0.00163,0.00218,0.00408]
+   ,"dat1eq":true}
+  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"expansion":"Incident energy: energy"
+    ,"com0":17.5
+    ,"com1":1.75e+7}
+  ,{"ivar":3, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
+    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"52", "rank":2.1
+    ,"expansion":"Secondary energy: level energy"
+    ,"com0":8.375
+    ,"com1":8.375e+6}
+  ,{"ivar":4, "cvar":"x3", "fam":"ANG", "ifComm":true , "ifCM":false
+    ,"header":"ANG1", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"com0":3
+    ,"com1":3}
+  ,{"ivar":5, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":true
+    ,"header":"ANG2-CM", "units":"ADEG", "basicUnits":"ADEG"
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
+    ,"expansion":"Angle: angle"
+    ,"dat0":[135,145,155,165]
+   ,"dat1eq":true}
+  ]
+ ,"wc5data":4
+ ,"lc5data":4
+ ,"c5data":{
+    "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":true, "units":"ARB-UNITS"
+      ,"header":"DATA", "dataType":"21", "rank":0.0
+      ,"expansion":"Data: data"
+      ,"y":[0.0309,0.0331,0.0358,0.0434]
+      ,"dy":[0.00191,0.00163,0.00218,0.00408]   }
+   ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
+      ,"header":"EN", "dataType":"41", "rank":1.0
+      ,"expansion":"Incident energy: energy"
+      ,"x1":[1.75e+7,1.75e+7,1.75e+7,1.75e+7]
+   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
+      ,"header":"LVL", "dataType":"52", "rank":2.0
+      ,"expansion":"Secondary energy: level energy"
+      ,"x2":[8.375e+6,8.375e+6,8.375e+6,8.375e+6]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
+      ,"expansion":"Angle: angle"
+      ,"x3":[135,145,155,165]
+   }
+ }
 }
    ]
    }
