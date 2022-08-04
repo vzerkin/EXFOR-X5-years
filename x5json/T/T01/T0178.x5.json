@@ -1,9 +1,9 @@
-  {"ENTRY":"T0178", "updated":20020724, "TransID":"0000", "TransDate":20050926, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
+  {"ENTRY":"T0178", "updated":20220805, "TransID":"C216", "TransDate":20230104, "CenterID":"CNPD", "Center":"Center of Nuclear Physics Data, Russian Federal Nuclear Center (VNIIEF), Sarov, Russia"
    ,"y1":1983,"a1":"R.E.Warner+","r1":"J,NP/A,401,521,1983"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.401, p.521 (1983)"
    ,"title":"Multibody final states of the 6Li+6Li reaction at 97 MeV"
    ,"x4subents":[
-   {"SUBENT":"T0178001", "isub":1, "compiled":20020724, "TransID":"0000", "TransDate":20050926
+   {"SUBENT":"T0178001", "isub":1, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -68,6 +68,12 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" VM"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220729A", "date":"20220729", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. ERR-ANALYS modified, REACTION corrected"
+		," in sub.3"]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
@@ -83,7 +89,7 @@
       ,"data":[
 	 [97.5]]}
    }
-  ,{"SUBENT":"T0178002", "isub":2, "compiled":20020724, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"T0178002", "isub":2, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -105,10 +111,18 @@
 	,"x4freetext":["  For angle 1 = angle 2; E1 = E2."]
 	}
       ]
+     ,"ANG-SEC":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG1,A"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG2,A"}
+	}
+      ]
      ,"CORRECTION":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Not corrected for random coiincidence events"
+	,"x4freetext":["Not corrected for random coincidence events"
 		," (typically about 1% of total yield)."]
 	}
       ]
@@ -117,8 +131,17 @@
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Error scanned from figures."
-		,"Digitizing error in incident energy 0.1"
-		,"Digitizing error in data 0.002"]
+		," No information on sources of uncertainties."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"EN-ERR-DIG"
+	     ,"headerHelp":"Digitizing error of incident particle energy"}
+	,"x4freetext":[" Digitizing error in incident energy 0.1"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-DIG"
+	     ,"headerHelp":"Digitizing error (of DATA)"}
+	,"x4freetext":[" Digitizing error in data 0.002"]
 	}
       ]
      ,"STATUS":[
@@ -130,7 +153,29 @@
 		,"        RFNC-VNIIEF."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220729A", "date":"20220729", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-ANALYS updated, COMMON added"]
+	}
+      ]
     }
+    ,"COMMON":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
+	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"ERR-DIG", "units":"MB/SR2/MEV", "pointer":" "
+	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
+	,"unitsHelp":"mb per steradian-squared per MeV","familyCode":"D3A","convFc":1.0E-9,"basicUnits":"MB/SR2/MEV"}
+      ]
+      ,"datacols":[
+	 ["EN-ERR-DIG","ERR-DIG"   ]
+	,["MEV"       ,"MB/SR2/MEV"]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [0.1,0.002]]}
     ,"DATA":{"ncols":5, "nrows":93
       ,"x4headers":[
        {"icol":0, "header":"ANG1", "units":"ADEG", "pointer":" "
@@ -249,14 +294,15 @@
 	,[46.4,46.4,69,0.009607,0.006187]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"T0178002", "Pointer":" "
- ,"Subent":"T0178002", "compiled":20020724
+ ,"Subent":"T0178002", "compiled":20220805
  ,"year1":1983, "author1ini":"R.E.", "author1":"Warner"
  ,"zTarg1":3, "targ1":"Li-6", "proj1":"Li-6", "emis1":"2A", "MF":0, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,E2,ANG)"
  ,"ReactionType":"D3A", "quant":"DAE", "quantExpan":"Triple diff.cross section d3/dA(*)/dA(*)/dE(*)"
  ,"reacode":"3-LI-6(3-LI-6,2A)2-HE-4,,DA/DA/DE,A/A/A"
- ,"compNotes":[]
- ,"wx4data":6
+ ,"compNotes":["Ignored column:ERR-DIG,MB/SR2/MEV (digitizing error)"
+	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
+ ,"wx4data":8
  ,"lx4data":93
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -307,13 +353,25 @@
 	,7.732e-12,5.67e-12,6.185e-12,6.701e-12,1.1853e-11,6.701e-12,9.278e-12,7.218e-12,8.763e-12,1.0824e-11
 	,1.0309e-11,1.2371e-11,6.185e-12,1.0309e-11,9.278e-12,9.278e-12,6.701e-12,5.67e-12,5.152e-12,5.672e-12
 	,6.185e-12,5.668e-12,6.187e-12]}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-DIG", "units":"MB/SR2/MEV", "basicUnits":"MB/SR2/MEV"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.002
+    ,"com1":2.0e-12}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"com0":97.5
     ,"com1":9.75e+7}
-  ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-ERR-DIG", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.pErr+-", "dataType":"41", "rank":1.955
+    ,"expansion":"Incident energy: energy /Error/"
+    ,"com0":0.1
+    ,"com1":1.0e+5}
+  ,{"ivar":5, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"51", "rank":2.1
     ,"expansion":"Secondary energy: particle energy"
@@ -337,7 +395,7 @@
 	,4.8e+7,4.89e+7,5.06e+7,5.24e+7,5.33e+7,5.41e+7,5.5e+7,5.59e+7,5.68e+7,5.77e+7
 	,5.85e+7,5.94e+7,6.03e+7,6.12e+7,6.2e+7,6.29e+7,6.38e+7,6.47e+7,6.55e+7,6.64e+7
 	,6.73e+7,6.82e+7,6.9e+7]}
-  ,{"ivar":4, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
+  ,{"ivar":6, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
     ,"header":"ANG1", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X3.Value", "dataType":"61", "rank":3.1
     ,"expansion":"Angle: angle"
@@ -352,7 +410,7 @@
 	,46.4,46.4,46.4,46.4,46.4,46.4,46.4,46.4,46.4,46.4
 	,46.4,46.4,46.4]
    ,"dat1eq":true}
-  ,{"ivar":5, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
+  ,{"ivar":7, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
     ,"header":"ANG2", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X3.Value", "dataType":"61", "rank":3.1
     ,"expansion":"Angle: angle"
@@ -440,20 +498,20 @@
 }
    ]
    }
-  ,{"SUBENT":"T0178003", "isub":3, "compiled":20020724, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"T0178003", "isub":3, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"3-LI-6(3-LI-6,X+A)2-HE-4,,DA2/DE2,A/A"
-	    ,"c4reac":"(3-LI-6,X+A),DA2/DE2,A/A"
+	,"x4code":{"code":"3-LI-6(3-LI-6,A+X)2-HE-4,,DA2/DE2,A/A"
+	    ,"c4reac":"(3-LI-6,A+X),DA2/DE2,A/A"
 	    ,"combi":"a"
 	    ,"Units":"MB/SR2MEV2"
 	    ,"reacs": [
-	    {"code":"3-LI-6(3-LI-6,X+A)2-HE-4,,DA2/DE2,A/A"
-		,"Reac":"3-LI-6,X+A"
+	    {"code":"3-LI-6(3-LI-6,A+X)2-HE-4,,DA2/DE2,A/A"
+		,"Reac":"3-LI-6,A+X"
 		,"SF1":"3-LI-6","Targ":{"code":"3-LI-6","nam":"Li-6","ZA":3006}
 		,"SF2":"3-LI-6","Proj":{"code":"3-LI-6","nam":"Li-6","ZA":3006}
-		,"SF3":"X+A"
+		,"SF3":"A+X"
 		,"SF4":"2-HE-4","Prod":{"code":"2-HE-4","nam":"He-4","ZA":2004}
 		,"SF6":"DA2/DE2"
 		,"SF7":"A/A"
@@ -462,10 +520,26 @@
 	,"x4freetext":["  For angle 1 = angle 2; E1 = E2."]
 	}
       ]
+     ,"EN-SEC":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::E1,A"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::E2,A"}
+	}
+      ]
+     ,"ANG-SEC":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG1,A"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG2,A"}
+	}
+      ]
      ,"CORRECTION":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Not corrected for random coiincidence events"
+	,"x4freetext":["Not corrected for random coincidence events"
 		," (typically about 1% of total yield)."]
 	}
       ]
@@ -474,8 +548,17 @@
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Error scanned from figures."
-		,"Digitizing error in incident energy 0.05"
-		,"Digitizing error in data 0.001"]
+		," No information on sources of uncertainties."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"EN-ERR-DIG"
+	     ,"headerHelp":"Digitizing error of incident particle energy"}
+	,"x4freetext":[" Digitizing error in incident energy 0.05"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-DIG"
+	     ,"headerHelp":"Digitizing error (of DATA)"}
+	,"x4freetext":[" Digitizing error in data 0.001"]
 	}
       ]
      ,"STATUS":[
@@ -486,7 +569,30 @@
 	,"x4freetext":[" Scanned from Fig.3 in reference at RFNC-VNIIEF."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220729A", "date":"20220729", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION SF3 corrected, ERR-ANALYS updated,"
+		," COMMON added"]
+	}
+      ]
     }
+    ,"COMMON":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
+	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"ERR-DIG", "units":"MB/SR2MEV2", "pointer":" "
+	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
+	,"unitsHelp":"mb per steradian**2 MeV**2","familyCode":"D4A","convFc":1.0E-15,"basicUnits":"MB/SR2MEV2"}
+      ]
+      ,"datacols":[
+	 ["EN-ERR-DIG","ERR-DIG"   ]
+	,["MEV"       ,"MB/SR2MEV2"]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [0.05,0.001]]}
     ,"DATA":{"ncols":6, "nrows":125
       ,"x4headers":[
        {"icol":0, "header":"ANG1", "units":"ADEG", "pointer":" "
@@ -640,14 +746,15 @@
 	,[46.4,46.4,42.6,42.6,0.0013387,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"T0178003", "Pointer":" "
- ,"Subent":"T0178003", "compiled":20020724
+ ,"Subent":"T0178003", "compiled":20220805
  ,"year1":1983, "author1ini":"R.E.", "author1":"Warner"
- ,"zTarg1":3, "targ1":"Li-6", "proj1":"Li-6", "emis1":"X+A", "MF":0, "MT":0, "nExpectedArgs":3
+ ,"zTarg1":3, "targ1":"Li-6", "proj1":"Li-6", "emis1":"A+X", "MF":0, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,E2,ANG)"
  ,"ReactionType":"D4A", "quant":"DAE", "quantExpan":"Quadruple diff.cs d4/dA(*)/dE(*)/dA(*)/dE(*)"
- ,"reacode":"3-LI-6(3-LI-6,X+A)2-HE-4,,DA2/DE2,A/A"
- ,"compNotes":[]
- ,"wx4data":7
+ ,"reacode":"3-LI-6(3-LI-6,A+X)2-HE-4,,DA2/DE2,A/A"
+ ,"compNotes":["Ignored column:ERR-DIG,MB/SR2MEV2 (digitizing error)"
+	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
+ ,"wx4data":9
  ,"lx4data":125
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -710,13 +817,25 @@
 	,6.412e-18,6.415e-18,6.418e-18,6.415e-18,7.547e-18,9.056e-18,9.434e-18,1.0566e-17,8.302e-18,9.437e-18
 	,1.0943e-17,1.1698e-17,1.4719e-17,1.2452e-17,7.927e-18,5.283e-18,4.905e-18,5.286e-18,4.151e-18,4.154e-18
 	,null,2.6414e-18,4.151e-18,4.154e-18,null]}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-DIG", "units":"MB/SR2MEV2", "basicUnits":"MB/SR2MEV2"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.001
+    ,"com1":1.0e-18}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"com0":97.5
     ,"com1":9.75e+7}
-  ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-ERR-DIG", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.pErr+-", "dataType":"41", "rank":1.955
+    ,"expansion":"Incident energy: energy /Error/"
+    ,"com0":0.05
+    ,"com1":5.0e+4}
+  ,{"ivar":5, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E1", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"51", "rank":2.1
     ,"expansion":"Secondary energy: particle energy"
@@ -746,7 +865,7 @@
 	,2.2e+7,2.28e+7,2.37e+7,2.45e+7,2.54e+7,2.62e+7,2.7e+7,2.79e+7,2.88e+7,2.97e+7
 	,3.04e+7,3.13e+7,3.22e+7,3.3e+7,3.39e+7,3.48e+7,3.56e+7,3.64e+7,3.73e+7,3.83e+7
 	,3.91e+7,4.0e+7,4.09e+7,4.17e+7,4.26e+7]}
-  ,{"ivar":4, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":6, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E2", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"51", "rank":2.1
     ,"expansion":"Secondary energy: particle energy"
@@ -776,7 +895,7 @@
 	,2.2e+7,2.28e+7,2.37e+7,2.45e+7,2.54e+7,2.62e+7,2.7e+7,2.79e+7,2.88e+7,2.97e+7
 	,3.04e+7,3.13e+7,3.22e+7,3.3e+7,3.39e+7,3.48e+7,3.56e+7,3.64e+7,3.73e+7,3.83e+7
 	,3.91e+7,4.0e+7,4.09e+7,4.17e+7,4.26e+7]}
-  ,{"ivar":5, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
+  ,{"ivar":7, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
     ,"header":"ANG1", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X3.Value", "dataType":"61", "rank":3.1
     ,"expansion":"Angle: angle"
@@ -794,7 +913,7 @@
 	,46.4,46.4,46.4,46.4,46.4,46.4,46.4,46.4,46.4,46.4
 	,46.4,46.4,46.4,46.4,46.4]
    ,"dat1eq":true}
-  ,{"ivar":6, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
+  ,{"ivar":8, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
     ,"header":"ANG2", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X3.Value", "dataType":"61", "rank":3.1
     ,"expansion":"Angle: angle"
@@ -900,7 +1019,7 @@
 }
    ]
    }
-  ,{"SUBENT":"T0178004", "isub":4, "compiled":20020724, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"T0178004", "isub":4, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -922,13 +1041,38 @@
 	,"x4freetext":["  For angle 1 = angle 2; E1 = E2."]
 	}
       ]
+     ,"EN-SEC":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::E1,D"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::E2,D"}
+	}
+      ]
+     ,"ANG-SEC":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG1,D"}
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"orig::ANG2,D"}
+	}
+      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" Error scanned from figures."
-		,"Digitizing error in incident energy 0.05"
-		,"Digitizing error in data 0.001"]
+		," No information on sources of uncertainties."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"EN-ERR-DIG"
+	     ,"headerHelp":"Digitizing error of incident particle energy"}
+	,"x4freetext":[" Digitizing error in incident energy 0.05"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"header":"ERR-DIG"
+	     ,"headerHelp":"Digitizing error (of DATA)"}
+	,"x4freetext":[" Digitizing error in data 0.001"]
 	}
       ]
      ,"STATUS":[
@@ -939,7 +1083,29 @@
 	,"x4freetext":[" Scanned from Fig.4 in reference at RFNC-VNIIEF."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220729A", "date":"20220729", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-ANALYS updated, COMMON added"]
+	}
+      ]
     }
+    ,"COMMON":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"EN-ERR-DIG", "units":"MEV", "pointer":" "
+	,"headerHelp":"Digitizing error of incident particle energy", "pFlag":"9550000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ,{"icol":1, "header":"ERR-DIG", "units":"MB/SR2MEV2", "pointer":" "
+	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
+	,"unitsHelp":"mb per steradian**2 MeV**2","familyCode":"D4A","convFc":1.0E-15,"basicUnits":"MB/SR2MEV2"}
+      ]
+      ,"datacols":[
+	 ["EN-ERR-DIG","ERR-DIG"   ]
+	,["MEV"       ,"MB/SR2MEV2"]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [0.05,0.001]]}
     ,"DATA":{"ncols":6, "nrows":166
       ,"x4headers":[
        {"icol":0, "header":"ANG1", "units":"ADEG", "pointer":" "
@@ -1134,14 +1300,15 @@
 	,[46.4,46.4,38.7,38.7,8.238E-4,null]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"T0178004", "Pointer":" "
- ,"Subent":"T0178004", "compiled":20020724
+ ,"Subent":"T0178004", "compiled":20220805
  ,"year1":1983, "author1ini":"R.E.", "author1":"Warner"
  ,"zTarg1":3, "targ1":"Li-6", "proj1":"Li-6", "emis1":"X+D", "MF":0, "MT":0, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,E2,ANG)"
  ,"ReactionType":"D4A", "quant":"DAE", "quantExpan":"Quadruple diff.cs d4/dA(*)/dE(*)/dA(*)/dE(*)"
  ,"reacode":"3-LI-6(3-LI-6,X+D)1-H-2,,DA2/DE2,D/D"
- ,"compNotes":[]
- ,"wx4data":7
+ ,"compNotes":["Ignored column:ERR-DIG,MB/SR2MEV2 (digitizing error)"
+	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
+ ,"wx4data":9
  ,"lx4data":166
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1220,13 +1387,25 @@
 	,9.966e-18,8.118e-18,7.749e-18,5.17e-18,3.69e-18,5.166e-18,3.694e-18,3.69e-18,3.69e-18,4.059e-18
 	,4.059e-18,2.5829e-18,2.2177e-18,2.2139e-18,2.5829e-18,null,null,null,null,null
 	,null,null,null,null,null,null]}
-  ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
+  ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
+    ,"header":"ERR-DIG", "units":"MB/SR2MEV2", "basicUnits":"MB/SR2MEV2"
+    ,"what":"Y.pErr+-", "dataType":"21", "rank":0.955
+    ,"expansion":"Data: data /Error/"
+    ,"com0":0.001
+    ,"com1":1.0e-18}
+  ,{"ivar":3, "cvar":"x1", "fam":"EN", "ifComm":true , "ifCM":false
     ,"header":"EN", "units":"MEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"41", "rank":1.1
     ,"expansion":"Incident energy: energy"
     ,"com0":97.5
     ,"com1":9.75e+7}
-  ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"dx1", "fam":"EN", "ifComm":true , "ifCM":false
+    ,"header":"EN-ERR-DIG", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.pErr+-", "dataType":"41", "rank":1.955
+    ,"expansion":"Incident energy: energy /Error/"
+    ,"com0":0.05
+    ,"com1":5.0e+4}
+  ,{"ivar":5, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E1", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"51", "rank":2.1
     ,"expansion":"Secondary energy: particle energy"
@@ -1264,7 +1443,7 @@
 	,1.67e+7,1.75e+7,1.85e+7,1.93e+7,2.02e+7,2.1e+7,2.19e+7,2.28e+7,2.37e+7,2.45e+7
 	,2.54e+7,2.63e+7,2.71e+7,2.8e+7,2.89e+7,3.0e+7,3.08e+7,3.16e+7,3.24e+7,3.33e+7
 	,3.43e+7,3.51e+7,3.59e+7,3.68e+7,3.77e+7,3.87e+7]}
-  ,{"ivar":4, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
+  ,{"ivar":6, "cvar":"x2", "fam":"E2", "ifComm":false, "ifCM":false
     ,"header":"E2", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"51", "rank":2.1
     ,"expansion":"Secondary energy: particle energy"
@@ -1302,7 +1481,7 @@
 	,1.67e+7,1.75e+7,1.85e+7,1.93e+7,2.02e+7,2.1e+7,2.19e+7,2.28e+7,2.37e+7,2.45e+7
 	,2.54e+7,2.63e+7,2.71e+7,2.8e+7,2.89e+7,3.0e+7,3.08e+7,3.16e+7,3.24e+7,3.33e+7
 	,3.43e+7,3.51e+7,3.59e+7,3.68e+7,3.77e+7,3.87e+7]}
-  ,{"ivar":5, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
+  ,{"ivar":7, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
     ,"header":"ANG1", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X3.Value", "dataType":"61", "rank":3.1
     ,"expansion":"Angle: angle"
@@ -1324,7 +1503,7 @@
 	,46.4,46.4,46.4,46.4,46.4,46.4,46.4,46.4,46.4,46.4
 	,46.4,46.4,46.4,46.4,46.4,46.4]
    ,"dat1eq":true}
-  ,{"ivar":6, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
+  ,{"ivar":8, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
     ,"header":"ANG2", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X3.Value", "dataType":"61", "rank":3.1
     ,"expansion":"Angle: angle"
