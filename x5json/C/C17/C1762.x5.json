@@ -1,9 +1,9 @@
-  {"ENTRY":"C1762", "updated":20171129, "TransID":"C172", "TransDate":20180308, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"C1762", "updated":20220805, "TransID":"C216", "TransDate":20230104, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1966,"a1":"M.Hillman+","r1":"J,ARI,17,9,1966","doi1":"10.1016/0020-708X(66)90098-6"
    ,"ref":"Jour: Applied Radiation and Isotopes, Vol.17, p.9 (1966)"
    ,"title":"Production of Y87 and a Sr87m generator"
    ,"x4subents":[
-   {"SUBENT":"C1762001", "isub":1, "compiled":20171129, "TransID":"C172", "TransDate":20180308
+   {"SUBENT":"C1762001", "isub":1, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -76,24 +76,29 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" BP"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220726A", "date":"20220726", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION corrected in sub.2"]
+	}
       ]
     }
    }
-  ,{"SUBENT":"C1762002", "isub":2, "compiled":20171129, "TransID":"C172", "TransDate":20180308
+  ,{"SUBENT":"C1762002", "isub":2, "compiled":20220805, "TransID":"C216", "TransDate":20230104
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"37-RB-CMP(A,X)39-Y-87,M+,TTY,,(PHY)"
+	,"x4code":{"code":"37-RB-CMP(A,X)39-Y-87-G,M+,TTY,,(PHY)"
 	    ,"c4reac":"(A,X)M+,TTY,,(PHY)"
 	    ,"combi":"a"
 	    ,"Units":"PART/MUAHR"
 	    ,"reacs": [
-	    {"code":"37-RB-CMP(A,X)39-Y-87,M+,TTY,,(PHY)"
+	    {"code":"37-RB-CMP(A,X)39-Y-87-G,M+,TTY,,(PHY)"
 		,"Reac":"A,X"
 		,"SF1":"37-RB-CMP","Targ":{"code":"37-RB-CMP","nam":"Rb-cmp","ZA":37000}
 		,"SF2":"A","Proj":{"code":"A","nam":"a","ZA":2004}
 		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"39-Y-87","Prod":{"code":"39-Y-87","nam":"Y-87","ZA":39087}
+		,"SF4":"39-Y-87-G","Prod":{"code":"39-Y-87-G","nam":"Y-87-g","ZA":39087,"ProdM":"G"}
 		,"SF5":"M+"
 		,"SF6":"TTY"
 		,"SF8":"(PHY)"
@@ -117,37 +122,46 @@
 	,"x4freetext":[" page 11."]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220726A", "date":"20220726", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Added -G to REACTION SF4, changed DATA to"
+		," DATA-APRX"]
+	}
+      ]
     }
     ,"DATA":{"ncols":2, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-APRX", "units":"MEV", "pointer":" "
 	,"headerHelp":"Approximate incident projectile energy", "pFlag":"4000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
-      ,{"icol":1, "header":"DATA", "units":"MUCI/MUAHR", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+      ,{"icol":1, "header":"DATA-APRX", "units":"MUCI/MUAHR", "pointer":" "
+	,"headerHelp":"Approximate value of quantity specif. under REACTION", "pFlag":"0004000"
 	,"unitsHelp":"micro-Curie/micro-Ampere-Hour","familyCode":"TTT","convFc":37000.0,"basicUnits":"MUCI/MUAHR"}
       ]
       ,"datacols":[
-	 ["EN-APRX"   ,"DATA"      ]
+	 ["EN-APRX"   ,"DATA-APRX" ]
 	,["MEV"       ,"MUCI/MUAHR"]
 	,[" "         ," "         ]]
       ,"data":[
 	 [35,59]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"C1762002", "Pointer":" "
- ,"Subent":"C1762002", "compiled":20171129
+ ,"Subent":"C1762002", "compiled":20220805
  ,"year1":1966, "author1ini":"M.", "author1":"Hillman"
  ,"zTarg1":37, "targ1":"Rb-cmp", "proj1":"a", "emis1":"X", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"TT", "quant":"TT", "quantExpan":"Thick target yld.,incl.iso.tran.,unc.if physical"
- ,"reacode":"37-RB-CMP(A,X)39-Y-87,M+,TTY,,(PHY)"
- ,"compNotes":["OPERATION...  Value=Aprx  Aprx:EN-APRX"]
+ ,"reacode":"37-RB-CMP(A,X)39-Y-87-G,M+,TTY,,(PHY)"
+ ,"compNotes":["OPERATION...  Value=Aprx  Aprx:DATA-APRX"
+	,"OPERATION...  Value=Aprx  Aprx:EN-APRX"]
  ,"wx4data":2
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"MUCI/MUAHR", "basicUnits":"MUCI/MUAHR"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"header":"DATA-APRX", "units":"MUCI/MUAHR", "basicUnits":"MUCI/MUAHR"
+    ,"what":"Y.Aprx", "dataType":"21", "rank":0.4
     ,"expansion":"Data: data"
     ,"dat0":[59]
     ,"dat1":[2.183e+6]}
