@@ -1,9 +1,9 @@
-  {"ENTRY":"10805", "updated":20101001, "TransID":"1369", "TransDate":20110117, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10805", "updated":20220822, "TransID":"1500", "TransDate":20230110, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1984,"a1":"J.C.Browne+","r1":"J,PR/C,29,2188,1984"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.29, p.2188 (1984)"
-   ,"title":"Fission cross sections for 242Am(m)."
+   ,"title":"242Am(m) fission cross section"
    ,"x4subents":[
-   {"SUBENT":"10805001", "isub":1, "compiled":20101001, "TransID":"1369", "TransDate":20110117
+   {"SUBENT":"10805001", "isub":1, "compiled":20220822, "TransID":"1500", "TransDate":20230110
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,12 +12,12 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,PR/C,29,2188,198406","stdFileName":"J,PR_C,29,2188,1984"
+	,"x4codes":[{"code":"J,PR/C,29,2188,1984","stdFileName":"J,PR_C,29,2188,1984"
 		,"year":1984,"typ":"J","ref":"J,PR/C","vol":"29","p":"2188"
 		,"shortRef":"Jour: Physical Review, Part C, Nuclear Physics, Vol.29, p.2188 (1984)"}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"code":"C,78HARWELL,,887,197809","stdFileName":"C,78HARWELL,,887,1978"
+	,"x4codes":[{"code":"C,78HARWELL,,887,1978","stdFileName":"C,78HARWELL,,887,1978"
 		,"year":1978,"typ":"C","ref":"C,78HARWELL"
 		,"shortRef":"Conf: Int.Conf.on Neutr.Phys.and Nucl.Data,Harwell 1978, p.887 (1978)"}]
 	}
@@ -32,21 +32,20 @@
 	,"x4codes":[{"ini":"J.C.","nam":"Browne"}
 	    ,{"ini":"R.M.","nam":"White"}
 	    ,{"ini":"R.E.","nam":"Howe"}
+	    ,{"ini":"J.H.","nam":"Landrum"}
 	    ,{"ini":"R.J.","nam":"Dougan"}
-	    ,{"ini":"R.J.","nam":"Dupzyk"}
-	    ,{"ini":"J.H.","nam":"Landrum"}]
+	    ,{"ini":"R.J.","nam":"Dupzyk"}]
 	}
       ]
      ,"TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["Fission cross sections for 242Am(m)."]
+	,"x4freetext":["242Am(m) fission cross section"]
 	}
       ]
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"TOF", "dict":"METHOD", "idict":21,"hlp":"Time-of-flight"}]
-	,"x4freetext":[" Time of flight."]
 	}
       ]
      ,"STATUS":[
@@ -78,6 +77,11 @@
 	,"x4freetext":[" VM:Updated to new date formats,lower case."
 		,"            Update to 10805.002,006,007,010."
 		,"            Subentry 005,008 deleted; no data."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220807A", "date":"20220807", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Correction in sub.4"]
 	}
       ]
     }
@@ -2591,37 +2595,39 @@
 }
    ]
    }
-  ,{"SUBENT":"10805004", "isub":4, "compiled":20101001, "TransID":"1369", "TransDate":20110117
+  ,{"SUBENT":"10805004", "isub":4, "compiled":20220822, "TransID":"1500", "TransDate":20230110
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"95-AM-242-M(N,F),,D"
-	    ,"c4reac":"(N,F),D"
+	,"x4code":{"code":"95-AM-242-M(N,0),,D"
+	    ,"c4reac":"(N,0),D"
 	    ,"combi":"a"
-	    ,"MF":2
+	    ,"MF":402
+	    ,"MT":6004
 	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"95-AM-242-M(N,F),,D"
-		,"Reac":"N,F"
+	    {"code":"95-AM-242-M(N,0),,D"
+		,"Reac":"N,0"
 		,"SF1":"95-AM-242-M","Targ":{"code":"95-AM-242-M","nam":"Am-242-m","ZA":95242}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"F","procHlp":"Fission"
+		,"SF3":"0"
 		,"SF6":"D"
 		,"SF58":",D","Quant":"RP","BasicUnits":"EV","QuantHlp":"Average level spacing"
 	    }]}
 	}
 	,{"x4pointer":"2"
-	,"x4code":{"code":"95-AM-242-M(N,F),,STF"
-	    ,"c4reac":"(N,F),STF"
+	,"x4code":{"code":"95-AM-242-M(N,EL),,STF"
+	    ,"c4reac":"(N,EL),STF"
 	    ,"combi":"a"
-	    ,"MF":2
+	    ,"MF":403
+	    ,"MT":6001
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"95-AM-242-M(N,F),,STF"
-		,"Reac":"N,F"
+	    {"code":"95-AM-242-M(N,EL),,STF"
+		,"Reac":"N,EL"
 		,"SF1":"95-AM-242-M","Targ":{"code":"95-AM-242-M","nam":"Am-242-m","ZA":95242}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"F","procHlp":"Fission"
+		,"SF3":"EL","procHlp":"Elastic scattering"
 		,"SF6":"STF"
 		,"SF58":",STF","Quant":"RP","BasicUnits":"NO-DIM","QuantHlp":"Strength function"
 	    }]}
@@ -2645,7 +2651,35 @@
 	,"x4freetext":[" Statistical uncertainty is quoted."]
 	}
       ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"TABLE"
+		,"flag":"TABLE", "help":"Data presented by authors"
+		}]
+	,"x4freetext":[" p.2195, J,PR/C,29,2188,1984"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20220807A", "date":"20220807", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Corrected REACTION SF3, added COMMON,"
+		," STATUS, changed DATA  1  to DATA-MAX 1"]
+	}
+      ]
     }
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"MOMENTUM L", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Angular momentum (L) of resonance", "pFlag":"0000000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ]
+      ,"datacols":[
+	 ["MOMENTUM L"]
+	,["NO-DIM"    ]
+	,[" "         ]]
+      ,"data":[
+	 [0]]}
     ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-RES-MIN", "units":"EV", "pointer":" "
@@ -2654,8 +2688,8 @@
       ,{"icol":1, "header":"EN-RES-MAX", "units":"EV", "pointer":" "
 	,"headerHelp":"Upper limit of resonance energy", "pFlag":"3000000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
-      ,{"icol":2, "header":"DATA", "units":"EV", "pointer":"1"
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+      ,{"icol":2, "header":"DATA-MAX", "units":"EV", "pointer":"1"
+	,"headerHelp":"Upper limit of quantity specified under REACTION", "pFlag":"0003000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
       ,{"icol":3, "header":"DATA", "units":"NO-DIM", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -2665,26 +2699,27 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN-RES-MIN","EN-RES-MAX","DATA"      ,"DATA"      ,"ERR-S"     ]
+	 ["EN-RES-MIN","EN-RES-MAX","DATA-MAX"  ,"DATA"      ,"ERR-S"     ]
 	,["EV"        ,"EV"        ,"EV"        ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ,"1"         ,"2"         ,"2"         ]]
       ,"data":[
 	 [0.01,20,0.4,1.07E-4,2.2E-5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"108050041", "Pointer":"1"
- ,"Subent":"10805004", "compiled":20101001
+ ,"Subent":"10805004", "compiled":20220822
  ,"year1":1984, "author1ini":"J.C.", "author1":"Browne"
- ,"zTarg1":95, "targ1":"Am-242-m", "proj1":"n", "emis1":"F", "MF":2, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":95, "targ1":"Am-242-m", "proj1":"n", "emis1":"0", "MF":402, "MT":6004, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
  ,"ReactionType":"RP", "quant":"RP", "quantExpan":"Average level spacing"
- ,"reacode":"95-AM-242-M(N,F),,D"
- ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:EN-RES-MIN, Max:EN-RES-MAX"]
- ,"wx4data":3
+ ,"reacode":"95-AM-242-M(N,0),,D"
+ ,"compNotes":["OPERATION...  Value=Max  Max:DATA-MAX"
+	,"OPERATION...  Value=(Min+Max)/2  Min:EN-RES-MIN, Max:EN-RES-MAX"]
+ ,"wx4data":4
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"EV", "basicUnits":"EV"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
+    ,"header":"DATA-MAX", "units":"EV", "basicUnits":"EV"
+    ,"what":"Y.Max", "dataType":"21", "rank":0.3
     ,"expansion":"Data: data"
     ,"dat0":[0.4]
    ,"dat1eq":true}
@@ -2700,6 +2735,12 @@
     ,"expansion":"Resonance parameter: energy"
     ,"dat0":[20]
    ,"dat1eq":true}
+  ,{"ivar":3, "cvar":"x1", "fam":"QN", "ifComm":true , "ifCM":false
+    ,"header":"MOMENTUM L", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Param", "dataType":"31", "rank":1.777
+    ,"expansion":"Resonance parameter: quantum number"
+    ,"com0":0
+    ,"com1":0}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -2717,14 +2758,14 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"108050042", "Pointer":"2"
- ,"Subent":"10805004", "compiled":20101001
+ ,"Subent":"10805004", "compiled":20220822
  ,"year1":1984, "author1ini":"J.C.", "author1":"Browne"
- ,"zTarg1":95, "targ1":"Am-242-m", "proj1":"n", "emis1":"F", "MF":2, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":95, "targ1":"Am-242-m", "proj1":"n", "emis1":"EL", "MF":403, "MT":6001, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
  ,"ReactionType":"RP", "quant":"RP", "quantExpan":"Strength function"
- ,"reacode":"95-AM-242-M(N,F),,STF"
+ ,"reacode":"95-AM-242-M(N,EL),,STF"
  ,"compNotes":["OPERATION...  Value=(Min+Max)/2  Min:EN-RES-MIN, Max:EN-RES-MAX"]
- ,"wx4data":4
+ ,"wx4data":5
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -2751,6 +2792,12 @@
     ,"expansion":"Resonance parameter: energy"
     ,"dat0":[20]
    ,"dat1eq":true}
+  ,{"ivar":4, "cvar":"x1", "fam":"QN", "ifComm":true , "ifCM":false
+    ,"header":"MOMENTUM L", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X1.Param", "dataType":"31", "rank":1.777
+    ,"expansion":"Resonance parameter: quantum number"
+    ,"com0":0
+    ,"com1":0}
   ]
  ,"wc5data":2
  ,"lc5data":1
