@@ -1,9 +1,9 @@
-  {"ENTRY":"10765", "updated":20100402, "TransID":"1363", "TransDate":20100627, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10765", "updated":20220822, "TransID":"1500", "TransDate":20230110, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1974,"a1":"H.S.Camarda","r1":"J,PR/C,9,28,1974"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.9, p.28 (1974)"
-   ,"title":"P-wave strength function measurements and the low energy optical potential"
+   ,"title":"P-wave neutron strength-function measurements and the low energy optical potential"
    ,"x4subents":[
-   {"SUBENT":"10765001", "isub":1, "compiled":20100402, "TransID":"1363", "TransDate":20100627
+   {"SUBENT":"10765001", "isub":1, "compiled":20220822, "TransID":"1500", "TransDate":20230110
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -12,7 +12,7 @@
       ]
      ,"REFERENCE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"J,PR/C,9,28,197401","stdFileName":"J,PR_C,9,28,1974"
+	,"x4codes":[{"code":"J,PR/C,9,28,1974","stdFileName":"J,PR_C,9,28,1974"
 		,"year":1974,"typ":"J","ref":"J,PR/C","vol":"9","p":"28"
 		,"shortRef":"Jour: Physical Review, Part C, Nuclear Physics, Vol.9, p.28 (1974)"}]
 	}
@@ -25,8 +25,8 @@
      ,"TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["P-wave strength function measurements and the low"
-		," energy optical potential"]
+	,"x4freetext":["P-wave neutron strength-function measurements and the"
+		,"low energy optical potential"]
 	}
       ]
      ,"FACILITY":[
@@ -85,7 +85,7 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Data taken from tables in reference."]
+	,"x4freetext":[" Table II, Phys.Rev.C9,28,1974"]
 	}
       ]
      ,"HISTORY":[
@@ -99,6 +99,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" VM:Updated to new date formats,lower case."
 		,"            BIB update."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220630A", "date":"20220630", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. Correction in sub.7"]
 	}
       ]
     }
@@ -700,7 +705,7 @@
 }
    ]
    }
-  ,{"SUBENT":"10765007", "isub":7, "compiled":20100402, "TransID":"1363", "TransDate":20100627
+  ,{"SUBENT":"10765007", "isub":7, "compiled":20220822, "TransID":"1500", "TransDate":20230110
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -733,6 +738,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Energy headings updated."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220630A", "date":"20220630", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Heading in field 4 corrected"]
+	}
       ]
     }
     ,"DATA":{"ncols":4, "nrows":1
@@ -746,19 +756,19 @@
       ,{"icol":2, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ,{"icol":3, "header":"DATA", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+      ,{"icol":3, "header":"DATA-ERR", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN-RES-MIN","EN-RES-MAX","DATA"      ,"DATA"      ]
+	 ["EN-RES-MIN","EN-RES-MAX","DATA"      ,"DATA-ERR"  ]
 	,["KEV"       ,"KEV"       ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
 	 [1,600,3.15E-4,6.0E-5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10765007", "Pointer":" "
- ,"Subent":"10765007", "compiled":20100402
+ ,"Subent":"10765007", "compiled":20220822
  ,"year1":1974, "author1ini":"H.S.", "author1":"Camarda"
  ,"zTarg1":49, "targ1":"In-0", "proj1":"n", "emis1":"EL", "MF":403, "MT":6001, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
@@ -774,10 +784,10 @@
     ,"expansion":"Data: data"
     ,"dat0":[3.15e-4]
    ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
     ,"dat0":[6.0e-5]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"ENR", "ifComm":false, "ifCM":false
@@ -805,8 +815,8 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"NO-DIM"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[6.0e-5]
-   }
+      ,"y":[3.15e-4]
+      ,"dy":[6.0e-5]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"ENR", "ifCM":false, "units":"EV"
       ,"header":"ENR", "dataType":"32", "rank":1.0
       ,"expansion":"Resonance parameter: energy"
