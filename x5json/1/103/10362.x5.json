@@ -1,9 +1,9 @@
-  {"ENTRY":"10362", "updated":20220320, "TransID":"1494", "TransDate":20220624, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10362", "updated":20220822, "TransID":"1500", "TransDate":20230110, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1973,"a1":"S.A.Elbakr+","r1":"J,NP/A,211,493,1973","doi1":"10.1016/0375-9474(73)90439-9"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.211, p.493 (1973)"
    ,"title":"The energy level structure of 154Sm from the (n,n`gamma) reaction"
    ,"x4subents":[
-   {"SUBENT":"10362001", "isub":1, "compiled":20220320, "TransID":"1494", "TransDate":20220624
+   {"SUBENT":"10362001", "isub":1, "compiled":20220822, "TransID":"1500", "TransDate":20230110
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -144,6 +144,12 @@
 	,"x4code":{"code":"20220228A", "date":"20220228", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" OS. REACTION corrected in sub.18"]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220802A", "date":"20220802", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION and heading corrected in"
+		," subs. 4,5,13"]
 	}
       ]
     }
@@ -424,18 +430,18 @@
 }
    ]
    }
-  ,{"SUBENT":"10362004", "isub":4, "compiled":20160212, "TransID":"1415", "TransDate":20160524
+  ,{"SUBENT":"10362004", "isub":4, "compiled":20220822, "TransID":"1500", "TransDate":20230110
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"62-SM-154(N,INL)62-SM-154,PAR,SIG"
-	    ,"c4reac":"(N,INL)PAR,SIG"
+	,"x4code":{"code":"62-SM-154(N,INL)62-SM-154,PAR,SIG,G"
+	    ,"c4reac":"(N,INL)PAR,SIG,G"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":51
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"62-SM-154(N,INL)62-SM-154,PAR,SIG"
+	    {"code":"62-SM-154(N,INL)62-SM-154,PAR,SIG,G"
 		,"Reac":"N,INL"
 		,"SF1":"62-SM-154","Targ":{"code":"62-SM-154","nam":"Sm-154","ZA":62154}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -443,7 +449,8 @@
 		,"SF4":"62-SM-154","Prod":{"code":"62-SM-154","nam":"Sm-154","ZA":62154}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
@@ -467,16 +474,21 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" BP"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220802A", "date":"20220802", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":["  Added REACTION SF7, E-LVL -> E"]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"E-LVL", "units":"KEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
+       {"icol":0, "header":"E", "units":"KEV", "pointer":" "
+	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["E-LVL"     ]
+	 ["E"         ]
 	,["KEV"       ]
 	,[" "         ]]
       ,"data":[
@@ -506,12 +518,12 @@
 	,[2.003,40.07,9.046]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10362004", "Pointer":" "
- ,"Subent":"10362004", "compiled":20160212
+ ,"Subent":"10362004", "compiled":20220822
  ,"year1":1973, "author1ini":"S.A.", "author1":"Elbakr"
- ,"zTarg1":62, "targ1":"Sm-154", "proj1":"n", "emis1":"INL", "MF":3, "MT":51, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"62-SM-154(N,INL)62-SM-154,PAR,SIG"
+ ,"zTarg1":62, "targ1":"Sm-154", "proj1":"n", "emis1":"INL", "MF":3, "MT":9000, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"62-SM-154(N,INL)62-SM-154,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":6
@@ -534,10 +546,10 @@
     ,"expansion":"Incident energy: energy"
     ,"dat0":[0.965,1.144,1.341,1.556,1.767,2.003]
     ,"dat1":[9.65e+5,1.144e+6,1.341e+6,1.556e+6,1.767e+6,2.003e+6]}
-  ,{"ivar":3, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
-    ,"header":"E-LVL", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
+  ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":true , "ifCM":false
+    ,"header":"E", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"51", "rank":2.1
+    ,"expansion":"Secondary energy: particle energy"
     ,"com0":1120
     ,"com1":1.12e+6}
   ]
@@ -554,27 +566,27 @@
       ,"expansion":"Incident energy: energy"
       ,"x1":[9.65e+5,1.144e+6,1.341e+6,1.556e+6,1.767e+6,2.003e+6]
    }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
-      ,"header":"LVL", "dataType":"52", "rank":2.0
-      ,"expansion":"Secondary energy: level energy"
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"E2", "ifCM":false, "units":"EV"
+      ,"header":"E2", "dataType":"51", "rank":2.0
+      ,"expansion":"Secondary energy: particle energy"
       ,"x2":[1.12e+6,1.12e+6,1.12e+6,1.12e+6,1.12e+6,1.12e+6]
    }
  }
 }
    ]
    }
-  ,{"SUBENT":"10362005", "isub":5, "compiled":20160212, "TransID":"1415", "TransDate":20160524
+  ,{"SUBENT":"10362005", "isub":5, "compiled":20220822, "TransID":"1500", "TransDate":20230110
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"62-SM-154(N,INL)62-SM-154,PAR,SIG"
-	    ,"c4reac":"(N,INL)PAR,SIG"
+	,"x4code":{"code":"62-SM-154(N,INL)62-SM-154,PAR,SIG,G"
+	    ,"c4reac":"(N,INL)PAR,SIG,G"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":51
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"62-SM-154(N,INL)62-SM-154,PAR,SIG"
+	    {"code":"62-SM-154(N,INL)62-SM-154,PAR,SIG,G"
 		,"Reac":"N,INL"
 		,"SF1":"62-SM-154","Targ":{"code":"62-SM-154","nam":"Sm-154","ZA":62154}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -582,7 +594,8 @@
 		,"SF4":"62-SM-154","Prod":{"code":"62-SM-154","nam":"Sm-154","ZA":62154}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
@@ -606,16 +619,21 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" BP"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220802A", "date":"20220802", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":["  Added REACTION SF7, E-LVL -> E"]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"E-LVL", "units":"KEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
+       {"icol":0, "header":"E", "units":"KEV", "pointer":" "
+	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["E-LVL"     ]
+	 ["E"         ]
 	,["KEV"       ]
 	,[" "         ]]
       ,"data":[
@@ -644,12 +662,12 @@
 	,[2.019,119.648,24.034]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10362005", "Pointer":" "
- ,"Subent":"10362005", "compiled":20160212
+ ,"Subent":"10362005", "compiled":20220822
  ,"year1":1973, "author1ini":"S.A.", "author1":"Elbakr"
- ,"zTarg1":62, "targ1":"Sm-154", "proj1":"n", "emis1":"INL", "MF":3, "MT":51, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"62-SM-154(N,INL)62-SM-154,PAR,SIG"
+ ,"zTarg1":62, "targ1":"Sm-154", "proj1":"n", "emis1":"INL", "MF":3, "MT":9000, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"62-SM-154(N,INL)62-SM-154,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":5
@@ -672,10 +690,10 @@
     ,"expansion":"Incident energy: energy"
     ,"dat0":[1.168,1.352,1.567,1.778,2.019]
     ,"dat1":[1.168e+6,1.352e+6,1.567e+6,1.778e+6,2.019e+6]}
-  ,{"ivar":3, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
-    ,"header":"E-LVL", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
+  ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":true , "ifCM":false
+    ,"header":"E", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"51", "rank":2.1
+    ,"expansion":"Secondary energy: particle energy"
     ,"com0":1204
     ,"com1":1.204e+6}
   ]
@@ -692,9 +710,9 @@
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.168e+6,1.352e+6,1.567e+6,1.778e+6,2.019e+6]
    }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
-      ,"header":"LVL", "dataType":"52", "rank":2.0
-      ,"expansion":"Secondary energy: level energy"
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"E2", "ifCM":false, "units":"EV"
+      ,"header":"E2", "dataType":"51", "rank":2.0
+      ,"expansion":"Secondary energy: particle energy"
       ,"x2":[1.204e+6,1.204e+6,1.204e+6,1.204e+6,1.204e+6]
    }
  }
@@ -1669,18 +1687,18 @@
 }
    ]
    }
-  ,{"SUBENT":"10362013", "isub":13, "compiled":20160212, "TransID":"1415", "TransDate":20160524
+  ,{"SUBENT":"10362013", "isub":13, "compiled":20220822, "TransID":"1500", "TransDate":20230110
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"62-SM-154(N,INL)62-SM-154,PAR,SIG"
-	    ,"c4reac":"(N,INL)PAR,SIG"
+	,"x4code":{"code":"62-SM-154(N,INL)62-SM-154,PAR,SIG,G"
+	    ,"c4reac":"(N,INL)PAR,SIG,G"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":51
+	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"62-SM-154(N,INL)62-SM-154,PAR,SIG"
+	    {"code":"62-SM-154(N,INL)62-SM-154,PAR,SIG,G"
 		,"Reac":"N,INL"
 		,"SF1":"62-SM-154","Targ":{"code":"62-SM-154","nam":"Sm-154","ZA":62154}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
@@ -1688,7 +1706,8 @@
 		,"SF4":"62-SM-154","Prod":{"code":"62-SM-154","nam":"Sm-154","ZA":62154}
 		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
+		,"SF7":"G"
+		,"SF58":"PAR,SIG,G","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section for particle specified"
 	    }]}
 	}
       ]
@@ -1712,16 +1731,21 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" BP"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220802A", "date":"20220802", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":["  Added REACTION SF7, E-LVL -> E"]
+	}
       ]
     }
     ,"COMMON":{"ncols":1, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"E-LVL", "units":"KEV", "pointer":" "
-	,"headerHelp":"Level energy", "pFlag":"1000000"
+       {"icol":0, "header":"E", "units":"KEV", "pointer":" "
+	,"headerHelp":"Energy of outgoing particle, lab. system", "pFlag":"1000000"
 	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
       ]
       ,"datacols":[
-	 ["E-LVL"     ]
+	 ["E"         ]
 	,["KEV"       ]
 	,[" "         ]]
       ,"data":[
@@ -1749,12 +1773,12 @@
 	,[2.109,129.257,29.555]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10362013", "Pointer":" "
- ,"Subent":"10362013", "compiled":20160212
+ ,"Subent":"10362013", "compiled":20220822
  ,"year1":1973, "author1ini":"S.A.", "author1":"Elbakr"
- ,"zTarg1":62, "targ1":"Sm-154", "proj1":"n", "emis1":"INL", "MF":3, "MT":51, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVL)"
- ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
- ,"reacode":"62-SM-154(N,INL)62-SM-154,PAR,SIG"
+ ,"zTarg1":62, "targ1":"Sm-154", "proj1":"n", "emis1":"INL", "MF":3, "MT":9000, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,E2)"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section for particle specified"
+ ,"reacode":"62-SM-154(N,INL)62-SM-154,PAR,SIG,G"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":4
@@ -1777,10 +1801,10 @@
     ,"expansion":"Incident energy: energy"
     ,"dat0":[1.631,1.78,1.932,2.109]
     ,"dat1":[1.631e+6,1.78e+6,1.932e+6,2.109e+6]}
-  ,{"ivar":3, "cvar":"x2", "fam":"LVL", "ifComm":true , "ifCM":false
-    ,"header":"E-LVL", "units":"KEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
+  ,{"ivar":3, "cvar":"x2", "fam":"E2", "ifComm":true , "ifCM":false
+    ,"header":"E", "units":"KEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"51", "rank":2.1
+    ,"expansion":"Secondary energy: particle energy"
     ,"com0":1393
     ,"com1":1.393e+6}
   ]
@@ -1797,9 +1821,9 @@
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.631e+6,1.78e+6,1.932e+6,2.109e+6]
    }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
-      ,"header":"LVL", "dataType":"52", "rank":2.0
-      ,"expansion":"Secondary energy: level energy"
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"E2", "ifCM":false, "units":"EV"
+      ,"header":"E2", "dataType":"51", "rank":2.0
+      ,"expansion":"Secondary energy: particle energy"
       ,"x2":[1.393e+6,1.393e+6,1.393e+6,1.393e+6]
    }
  }
