@@ -1,9 +1,9 @@
-  {"ENTRY":"10214", "updated":20210731, "TransID":"1485", "TransDate":20211207, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
+  {"ENTRY":"10214", "updated":20220822, "TransID":"1500", "TransDate":20230110, "CenterID":"NNDC", "Center":"US National Nuclear Data Center, Brookhaven, USA"
    ,"y1":1970,"a1":"J.K.Temperley+","r1":"R,BRL-R-1491,1970"
    ,"ref":"Rept: Ballistic Research Labs Reports, No.1491 (1970)"
    ,"title":"Neutron Activation Cross Sections for Some Isotopes of Ruthenium, Palladium, Indium, Tin, and Iridium"
    ,"x4subents":[
-   {"SUBENT":"10214001", "isub":1, "compiled":20210731, "TransID":"1485", "TransDate":20211207
+   {"SUBENT":"10214001", "isub":1, "compiled":20220822, "TransID":"1500", "TransDate":20230110
     ,"BIB":{
       "INSTITUTE":[
 	{"x4pointer":" "
@@ -153,6 +153,11 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" OS. Corrected REACTIONs in subentries"
 		,"  7,9,23,30."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220801A", "date":"20220801", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" OS. REACTION corrected in subs. 26, 28"]
 	}
       ]
     }
@@ -3546,51 +3551,44 @@
 }
    ]
    }
-  ,{"SUBENT":"10214026", "isub":26, "compiled":20010305, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10214026", "isub":26, "compiled":20220822, "TransID":"1500", "TransDate":20230110
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(44-RU-102(N,D)43-TC-101,,SIG)+\n(44-RU-102(N,N+P)43-TC-101,,SIG)+\n(44-RU-101(N,P)43-TC-101,,SIG)+\n(44-RU-104(N,A)42-MO-101,,SIG)"
-	    ,"c4reac":"((N,D),SIG)+((N,N+P),SIG)+((N,P),SIG)+((N,A),SIG)"
+	,"x4code":{"code":"(44-RU-102(N,X)43-TC-101,,SIG)+\n(44-RU-101(N,P)43-TC-101,,SIG,,RAB)+\n(44-RU-104(N,A)42-MO-101,,SIG,,RAB)"
+	    ,"c4reac":"((N,X),SIG)+((N,P),SIG,,RAB)+((N,A),SIG,,RAB)"
 	    ,"combi":"a","combiQuant":"Cross section"
 	    ,"MF":503
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"44-RU-102(N,D)43-TC-101,,SIG"
-		,"Reac":"N,D"
+	    {"code":"44-RU-102(N,X)43-TC-101,,SIG"
+		,"Reac":"N,X"
 		,"SF1":"44-RU-102","Targ":{"code":"44-RU-102","nam":"Ru-102","ZA":44102}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"D"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"43-TC-101","Prod":{"code":"43-TC-101","nam":"Tc-101","ZA":43101}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }
-	    ,{"code":"44-RU-102(N,N+P)43-TC-101,,SIG"
-		,"Reac":"N,N+P"
-		,"SF1":"44-RU-102","Targ":{"code":"44-RU-102","nam":"Ru-102","ZA":44102}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"N+P"
-		,"SF4":"43-TC-101","Prod":{"code":"43-TC-101","nam":"Tc-101","ZA":43101}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"44-RU-101(N,P)43-TC-101,,SIG"
+	    ,{"code":"44-RU-101(N,P)43-TC-101,,SIG,,RAB"
 		,"Reac":"N,P"
 		,"SF1":"44-RU-101","Targ":{"code":"44-RU-101","nam":"Ru-101","ZA":44101}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"P"
 		,"SF4":"43-TC-101","Prod":{"code":"43-TC-101","nam":"Tc-101","ZA":43101}
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF8":"RAB"
+		,"SF58":",SIG,,RAB","Quant":"CS","BasicUnits":"B","QuantHlp":"Cs * abund.(nat)/abund.(nuclide of 1st term)"
 	    }
-	    ,{"code":"44-RU-104(N,A)42-MO-101,,SIG"
+	    ,{"code":"44-RU-104(N,A)42-MO-101,,SIG,,RAB"
 		,"Reac":"N,A"
 		,"SF1":"44-RU-104","Targ":{"code":"44-RU-104","nam":"Ru-104","ZA":44104}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"A"
 		,"SF4":"42-MO-101","Prod":{"code":"42-MO-101","nam":"Mo-101","ZA":42101}
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF8":"RAB"
+		,"SF58":",SIG,,RAB","Quant":"CS","BasicUnits":"B","QuantHlp":"Cs * abund.(nat)/abund.(nuclide of 1st term)"
 	    }]}
 	}
       ]
@@ -3611,7 +3609,13 @@
 	{"x4pointer":" "
 	,"x4code":{"code":"19860610A", "date":"19860610", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" REACTION CORRECTED."]
+	,"x4freetext":[" REACTION corrected."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220801A", "date":"20220801", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION corrected: for Ru102, replaced"
+		," sum by (N,X), for Ru101 and Ru104: added SF8=RAB"]
 	}
       ]
     }
@@ -3632,19 +3636,19 @@
 	 [16,2]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10214026", "Pointer":" "
- ,"Subent":"10214026", "compiled":20010305
+ ,"Subent":"10214026", "compiled":20220822
  ,"year1":1970, "author1ini":"J.K.", "author1":"Temperley"
- ,"zTarg1":44, "targ1":"Ru-102", "proj1":"n", "emis1":"D", "MF":503, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":44, "targ1":"Ru-102", "proj1":"n", "emis1":"X", "MF":503, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(44-RU-102(N,D)43-TC-101,,SIG)+(44-RU-102(N,N+P)43-TC-101,,SIG)+(44-RU-101(N,P)43-TC-101,,SIG)+(44-RU-104(N,A)42-MO-101,,SIG)"
+ ,"reacode":"(44-RU-102(N,X)43-TC-101,,SIG)+(44-RU-101(N,P)43-TC-101,,SIG,,RAB)+(44-RU-104(N,A)42-MO-101,,SIG,,RAB)"
  ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=6.6%"]
  ,"DECAY-DATA":{"Nuclide":"43-TC-101","HalfLife":"14.0MIN","HalfLife1":"14.22M"
 	,"RadiationType":"DG","Ene":307.0,"Ene1":306.83,"Abu":0.896,"Abu1":0.89
 	,"FcCorrDECAY_DATA":1.0067416
-	,"reaction":"(44-RU-102(N,D)43-TC-101,,SIG)+(44-RU-102(N,N+P)43-TC-101,,SIG)+(44-RU-101(N,P)43-TC-101,,SIG)+(44-RU-104(N,A)42-MO-101,,SIG)"}
+	,"reaction":"(44-RU-102(N,X)43-TC-101,,SIG)+(44-RU-101(N,P)43-TC-101,,SIG,,RAB)+(44-RU-104(N,A)42-MO-101,,SIG,,RAB)"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
-	," #[0]#Reaction: (44-RU-102(N,D)43-TC-101,,SIG)+(44-RU-102(N,N+P)43-TC-101,,SIG)+(44-RU-101(N,P)43-TC-101,,SIG)+(44-RU-104(N,A)42-MO-101,,SIG)"
+	," #[0]#Reaction: (44-RU-102(N,X)43-TC-101,,SIG)+(44-RU-101(N,P)43-TC-101,,SIG,,RAB)+(44-RU-104(N,A)42-MO-101,,SIG,,RAB)"
 	," #[0]#Monitor:  26-FE-56(N,P)25-MN-56,,SIG"
 	," #[0]#En=1.41E7"
 	," a0=[MONIT];                   #[0]#old monitor point 0.106"
@@ -3652,7 +3656,7 @@
 	," dy=dy/y;                      #to rel. uncertainties"
 	," y=y*a1/a0;                    #[0]#renormalizing CS"
 	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   ((44-RU-102(N,D)43-TC-101,,SIG)+(44-RU-102(N,N+P)43-TC-101,,SIG)+(44-RU-101(N,P)43-TC-101,,SIG)+(44-RU-104(N,A)42-MO-101,,SIG))"
+	,"  #[1]#REACTION   ((44-RU-102(N,X)43-TC-101,,SIG)+(44-RU-101(N,P)43-TC-101,,SIG,,RAB)+(44-RU-104(N,A)42-MO-101,,SIG,,RAB))"
 	,"  #[1]#DECAY-DATA (43-TC-101,14.0MIN,DG,307.,.896) #Ix_old=0.896"
 	,"   a1=0.896/0.89;              #[1]#DECAY-DATA: correction to new 306.83 keV gamma-yield per decay Tc-101 Ix_new=0.89"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0067416"
@@ -3878,51 +3882,44 @@
 }
    ]
    }
-  ,{"SUBENT":"10214028", "isub":28, "compiled":20010305, "TransID":"0000", "TransDate":20050926
+  ,{"SUBENT":"10214028", "isub":28, "compiled":20220822, "TransID":"1500", "TransDate":20230110
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"(46-PD-106(N,D)45-RH-105,,SIG)+\n(46-PD-106(N,N+P)45-RH-105,,SIG)+\n(46-PD-105(N,P)45-RH-105,,SIG)+\n(46-PD-108(N,A)44-RU-105,,SIG)"
-	    ,"c4reac":"((N,D),SIG)+((N,N+P),SIG)+((N,P),SIG)+((N,A),SIG)"
+	,"x4code":{"code":"(46-PD-106(N,X)45-RH-105,,SIG)+\n(46-PD-105(N,P)45-RH-105,,SIG,,RAB)+\n(46-PD-108(N,A)44-RU-105,,SIG,,RAB)"
+	    ,"c4reac":"((N,X),SIG)+((N,P),SIG,,RAB)+((N,A),SIG,,RAB)"
 	    ,"combi":"a","combiQuant":"Cross section"
 	    ,"MF":503
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"46-PD-106(N,D)45-RH-105,,SIG"
-		,"Reac":"N,D"
+	    {"code":"46-PD-106(N,X)45-RH-105,,SIG"
+		,"Reac":"N,X"
 		,"SF1":"46-PD-106","Targ":{"code":"46-PD-106","nam":"Pd-106","ZA":46106}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"D"
+		,"SF3":"X","procHlp":"Process unspecified"
 		,"SF4":"45-RH-105","Prod":{"code":"45-RH-105","nam":"Rh-105","ZA":45105}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }
-	    ,{"code":"46-PD-106(N,N+P)45-RH-105,,SIG"
-		,"Reac":"N,N+P"
-		,"SF1":"46-PD-106","Targ":{"code":"46-PD-106","nam":"Pd-106","ZA":46106}
-		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"N+P"
-		,"SF4":"45-RH-105","Prod":{"code":"45-RH-105","nam":"Rh-105","ZA":45105}
-		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
-	    }
-	    ,{"code":"46-PD-105(N,P)45-RH-105,,SIG"
+	    ,{"code":"46-PD-105(N,P)45-RH-105,,SIG,,RAB"
 		,"Reac":"N,P"
 		,"SF1":"46-PD-105","Targ":{"code":"46-PD-105","nam":"Pd-105","ZA":46105}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"P"
 		,"SF4":"45-RH-105","Prod":{"code":"45-RH-105","nam":"Rh-105","ZA":45105}
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF8":"RAB"
+		,"SF58":",SIG,,RAB","Quant":"CS","BasicUnits":"B","QuantHlp":"Cs * abund.(nat)/abund.(nuclide of 1st term)"
 	    }
-	    ,{"code":"46-PD-108(N,A)44-RU-105,,SIG"
+	    ,{"code":"46-PD-108(N,A)44-RU-105,,SIG,,RAB"
 		,"Reac":"N,A"
 		,"SF1":"46-PD-108","Targ":{"code":"46-PD-108","nam":"Pd-108","ZA":46108}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"A"
 		,"SF4":"44-RU-105","Prod":{"code":"44-RU-105","nam":"Ru-105","ZA":44105}
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF8":"RAB"
+		,"SF58":",SIG,,RAB","Quant":"CS","BasicUnits":"B","QuantHlp":"Cs * abund.(nat)/abund.(nuclide of 1st term)"
 	    }]}
 	}
       ]
@@ -3945,6 +3942,12 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" REACTION corrected."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220801A", "date":"20220801", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" REACTION corrected: for Ru106, replaced"
+		," sum by (N,X), for Ru105 and Ru108: added SF8=RAB"]
+	}
       ]
     }
     ,"DATA":{"ncols":2, "nrows":1
@@ -3964,19 +3967,19 @@
 	 [28,3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"10214028", "Pointer":" "
- ,"Subent":"10214028", "compiled":20010305
+ ,"Subent":"10214028", "compiled":20220822
  ,"year1":1970, "author1ini":"J.K.", "author1":"Temperley"
- ,"zTarg1":46, "targ1":"Pd-106", "proj1":"n", "emis1":"D", "MF":503, "MT":0, "nExpectedArgs":1
+ ,"zTarg1":46, "targ1":"Pd-106", "proj1":"n", "emis1":"X", "MF":503, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"(46-PD-106(N,D)45-RH-105,,SIG)+(46-PD-106(N,N+P)45-RH-105,,SIG)+(46-PD-105(N,P)45-RH-105,,SIG)+(46-PD-108(N,A)44-RU-105,,SIG)"
+ ,"reacode":"(46-PD-106(N,X)45-RH-105,,SIG)+(46-PD-105(N,P)45-RH-105,,SIG,,RAB)+(46-PD-108(N,A)44-RU-105,,SIG,,RAB)"
  ,"compNotes":["RECALCULATED COLUMN:MONIT-ERR,B  TO:PER-CENT=6.6%"]
  ,"DECAY-DATA":{"Nuclide":"45-RH-105-G","HalfLife":"35.4HR","HalfLife1":"35.341HR"
 	,"RadiationType":"DG","Ene":319.3,"Ene1":319.231,"Abu":0.191,"Abu1":0.169
 	,"FcCorrDECAY_DATA":1.1301775
-	,"reaction":"(46-PD-106(N,D)45-RH-105,,SIG)+(46-PD-106(N,N+P)45-RH-105,,SIG)+(46-PD-105(N,P)45-RH-105,,SIG)+(46-PD-108(N,A)44-RU-105,,SIG)"}
+	,"reaction":"(46-PD-106(N,X)45-RH-105,,SIG)+(46-PD-105(N,P)45-RH-105,,SIG,,RAB)+(46-PD-108(N,A)44-RU-105,,SIG,,RAB)"}
  ,"autoCorrNotes":[" #[0]#---Monitor xs-data"
-	," #[0]#Reaction: (46-PD-106(N,D)45-RH-105,,SIG)+(46-PD-106(N,N+P)45-RH-105,,SIG)+(46-PD-105(N,P)45-RH-105,,SIG)+(46-PD-108(N,A)44-RU-105,,SIG)"
+	," #[0]#Reaction: (46-PD-106(N,X)45-RH-105,,SIG)+(46-PD-105(N,P)45-RH-105,,SIG,,RAB)+(46-PD-108(N,A)44-RU-105,,SIG,,RAB)"
 	," #[0]#Monitor:  26-FE-56(N,P)25-MN-56,,SIG"
 	," #[0]#En=1.41E7"
 	," a0=[MONIT];                   #[0]#old monitor point 0.106"
@@ -3984,7 +3987,7 @@
 	," dy=dy/y;                      #to rel. uncertainties"
 	," y=y*a1/a0;                    #[0]#renormalizing CS"
 	,"  #[1]#---Reaction decay-data"
-	,"  #[1]#REACTION   ((46-PD-106(N,D)45-RH-105,,SIG)+(46-PD-106(N,N+P)45-RH-105,,SIG)+(46-PD-105(N,P)45-RH-105,,SIG)+(46-PD-108(N,A)44-RU-105,,SIG))"
+	,"  #[1]#REACTION   ((46-PD-106(N,X)45-RH-105,,SIG)+(46-PD-105(N,P)45-RH-105,,SIG,,RAB)+(46-PD-108(N,A)44-RU-105,,SIG,,RAB))"
 	,"  #[1]#DECAY-DATA (45-RH-105-G,35.4HR,DG,319.3,.191) #Ix_old=0.191"
 	,"   a1=0.191/0.169;             #[1]#DECAY-DATA: correction to new 319.231 keV gamma-yield per decay Rh-105-g Ix_new=0.169"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.1301775"
