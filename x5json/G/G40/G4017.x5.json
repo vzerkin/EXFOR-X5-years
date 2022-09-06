@@ -1,9 +1,9 @@
-  {"ENTRY":"G4017", "updated":20110207, "TransID":"G022", "TransDate":20110621, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
+  {"ENTRY":"G4017", "updated":20220907, "TransID":"G049", "TransDate":20230116, "CenterID":"UkrNDC", "Center":"Ukrainian Nuclear Data Center, Institute for Nuclear Research, Kyiv, Ukraine"
    ,"y1":2008,"a1":"I.M.Vyshnevskyi+","r1":"J,YFE,9,37,2008"
    ,"ref":"Jour: Yaderna Fizika ta Energetika, Vol.9, Issue.1/23, p.37 (2008)"
    ,"title":"Investigation of excitation of high spins isomers in 190-Ir, 196-Au in (gamma,n)-reaction"
    ,"x4subents":[
-   {"SUBENT":"G4017001", "isub":1, "compiled":20110207, "TransID":"G022", "TransDate":20110621
+   {"SUBENT":"G4017001", "isub":1, "compiled":20220907, "TransID":"G049", "TransDate":20230116
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -47,11 +47,6 @@
 	,"x4freetext":[" English transl."]
 	}
       ]
-     ,"INC-SOURCE":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"BRST", "dict":"INC-SOURCE", "idict":19,"hlp":"Bremsstrahlung"}]
-	}
-      ]
      ,"FACILITY":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"MICRT", "dict":"FACILITY", "idict":18,"hlp":"Microtron"}
@@ -64,6 +59,11 @@
 	,"x4freetext":[" Electron energies: 12, 12.5, 16, 22 MeV"]
 	}
       ]
+     ,"INC-SOURCE":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"BRST", "dict":"INC-SOURCE", "idict":19,"hlp":"Bremsstrahlung"}]
+	}
+      ]
      ,"SAMPLE":[
 	{"x4pointer":" "
 	,"x4code":null
@@ -72,16 +72,23 @@
 		," of isotopes."]
 	}
       ]
+     ,"DETECTOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"GELI", "dict":"DETECTOR", "idict":22,"hlp":"Germanium-Lithium detector"}]
+	,"x4freetext":[" Resolution of 2 keV for Co-60 lines."]
+	}
+      ]
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"ACTIV", "dict":"METHOD", "idict":21,"hlp":"Activation"}]
 	,"x4freetext":[" Induced gamma-activity was measured."]
 	}
       ]
-     ,"DETECTOR":[
+     ,"ERR-ANALYS":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"GELI", "dict":"DETECTOR", "idict":22,"hlp":"Germanium-Lithium detector"}]
-	,"x4freetext":[" Resolution of 2 keV for Co-60 lines."]
+	,"x4code":{"header":"DATA-ERR"
+	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
+	,"x4freetext":[" No information about source of uncertainty."]
 	}
       ]
      ,"STATUS":[
@@ -108,26 +115,31 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. REFERENCE (YFE) corrected"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20220907A", "date":"20220907", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VT. Revision in 002-003."]
+	}
       ]
     }
    }
-  ,{"SUBENT":"G4017002", "isub":2, "compiled":20080827, "TransID":"D063", "TransDate":20081023
+  ,{"SUBENT":"G4017002", "isub":2, "compiled":20220907, "TransID":"G049", "TransDate":20230116
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"77-IR-191(G,N)77-IR-190-M/G,,SIG/RAT,,BRS"
-	    ,"c4reac":"(G,N),SIG/RAT,,BRS"
+	,"x4code":{"code":"77-IR-191(G,N)77-IR-190-M2/G+M1,,SIG/RAT,,BRA"
+	    ,"c4reac":"(G,N),SIG/RAT,,BRA"
 	    ,"combi":"a"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"77-IR-191(G,N)77-IR-190-M/G,,SIG/RAT,,BRS"
+	    {"code":"77-IR-191(G,N)77-IR-190-M2/G+M1,,SIG/RAT,,BRA"
 		,"Reac":"G,N"
 		,"SF1":"77-IR-191","Targ":{"code":"77-IR-191","nam":"Ir-191","ZA":77191}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"N"
-		,"SF4":"77-IR-190-M/G","Prod":{"code":"77-IR-190-M/G","nam":"Ir-190-m/g","ZA":77190,"ProdM":"/"}
+		,"SF4":"77-IR-190-M2/G+M1","Prod":{"code":"77-IR-190-M2/G+M1","nam":"Ir-190-m2/g+m1","ZA":77190,"ProdM":"+"}
 		,"SF6":"SIG/RAT"
-		,"SF8":"BRS"
+		,"SF8":"BRA"
 		,"SF58":",SIG/RAT","Quant":"CS","BasicUnits":"NO-DIM","QuantHlp":"Cross section ratio"
 	    }]}
 	}
@@ -135,35 +147,27 @@
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"77-IR-190-G", "t12":11.8, "t12units":"D", "t12sec":1019520.0
-	, "Radiations":[]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[371.0]}]}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"Nucl":"77-IR-190-M", "t12":3.25, "t12units":"HR", "t12sec":11700.0
-	, "Radiations":[]}]
-	,"x4freetext":["The isomeric  yield ratio d = Ym/Yg"]
+	,"x4codes":[{"Nucl":"77-IR-190-M2", "t12":3.25, "t12units":"HR", "t12sec":11700.0
+	, "Radiations":[ {"Type":"DG", "Energy":[502.0]}
+			,{"Type":"DG", "Energy":[616.0]}]}]
 	}
       ]
-     ,"ANALYSIS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"AREA", "dict":"ANALYSIS", "idict":23,"hlp":"Area analysis"}]
-	,"x4freetext":[" For definition of populating yields for Ir-190"
-		,"the areas of gamma-line photopeaks were measured:"
-		,"for ground state Yg(J=4+) 371 keV gamma-line,"
-		,"for isomeric state Ym(J=11-) - 502 keV and 616 keV;"]
-	}
-      ]
-     ,"ERR-ANALYS":[
-	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
-	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":["   No information"]
+	,"x4code":{"code":"20220907A", "date":"20220907", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VT. REACTION:SF4: M/G-> M2/G+M1 and"
+		,"DECAY-DATA: M-> M2 replaced."]
 	}
       ]
     }
     ,"DATA":{"ncols":3, "nrows":3
       ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
+       {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
+	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -173,7 +177,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN-MAX"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -182,13 +186,13 @@
 	,[16,6.1E-4,5.0E-5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"G4017002", "Pointer":" "
- ,"Subent":"G4017002", "compiled":20080827
+ ,"Subent":"G4017002", "compiled":20220907
  ,"year1":2008, "author1ini":"I.M.", "author1":"Vyshnevskyi"
  ,"zTarg1":77, "targ1":"Ir-191", "proj1":"g", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section ratio"
- ,"reacode":"77-IR-191(G,N)77-IR-190-M/G,,SIG/RAT,,BRS"
- ,"compNotes":[]
+ ,"reacode":"77-IR-191(G,N)77-IR-190-M2/G+M1,,SIG/RAT,,BRA"
+ ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":3
  ,"lx4data":3
  ,"x4data":[
@@ -205,8 +209,8 @@
     ,"dat0":[1.0e-5,4.0e-6,5.0e-5]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Max", "dataType":"41", "rank":1.3
     ,"expansion":"Incident energy: energy"
     ,"dat0":[12,12.5,16]
     ,"dat1":[1.2e+7,1.25e+7,1.6e+7]}
@@ -228,61 +232,50 @@
 }
    ]
    }
-  ,{"SUBENT":"G4017003", "isub":3, "compiled":20080827, "TransID":"D063", "TransDate":20081023
+  ,{"SUBENT":"G4017003", "isub":3, "compiled":20220907, "TransID":"G049", "TransDate":20230116
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(G,N)79-AU-196-M/G,,SIG/RAT,,BRS"
-	    ,"c4reac":"(G,N),SIG/RAT,,BRS"
+	,"x4code":{"code":"79-AU-197(G,N)79-AU-196-M2/G+M1,,SIG/RAT,,BRA"
+	    ,"c4reac":"(G,N),SIG/RAT,,BRA"
 	    ,"combi":"a"
 	    ,"Units":"NO-DIM"
 	    ,"reacs": [
-	    {"code":"79-AU-197(G,N)79-AU-196-M/G,,SIG/RAT,,BRS"
+	    {"code":"79-AU-197(G,N)79-AU-196-M2/G+M1,,SIG/RAT,,BRA"
 		,"Reac":"G,N"
 		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
 		,"SF2":"G","Proj":{"code":"G","nam":"g","ZA":0}
 		,"SF3":"N"
-		,"SF4":"79-AU-196-M/G","Prod":{"code":"79-AU-196-M/G","nam":"Au-196-m/g","ZA":79196,"ProdM":"/"}
+		,"SF4":"79-AU-196-M2/G+M1","Prod":{"code":"79-AU-196-M2/G+M1","nam":"Au-196-m2/g+m1","ZA":79196,"ProdM":"+"}
 		,"SF6":"SIG/RAT"
-		,"SF8":"BRS"
+		,"SF8":"BRA"
 		,"SF58":",SIG/RAT","Quant":"CS","BasicUnits":"NO-DIM","QuantHlp":"Cross section ratio"
 	    }]}
-	,"x4freetext":["The isomeric  yield ratio d = Ym/Yg"]
 	}
       ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"79-AU-196-G", "t12":6.2, "t12units":"D", "t12sec":535680.0
-	, "Radiations":[]}]
+	, "Radiations":[ {"Type":"DG", "Energy":[356.0]}]}]
 	}
 	,{"x4pointer":" "
-	,"x4codes":[{"Nucl":"79-AU-196-M", "t12":9.7, "t12units":"HR", "t12sec":34920.0
-	, "Radiations":[]}]
+	,"x4codes":[{"Nucl":"79-AU-196-M2", "t12":9.7, "t12units":"HR", "t12sec":34920.0
+	, "Radiations":[ {"Type":"DG", "Energy":[188.0]}]}]
 	}
       ]
-     ,"ANALYSIS":[
+     ,"HISTORY":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"AREA", "dict":"ANALYSIS", "idict":23,"hlp":"Area analysis"}]
-	,"x4freetext":[" Yield of populating of ground state Yg(J=2-) and"
-		,"isomeric state Ym(J=12+) defined by the areas of gamma-"
-		,"line photopeaks 356 and 188 keV accordingly."
-		,"Measurements were carried out just after irradiation"
-		,"and in two days after irradiation to take into account"
-		,"isomeric part for 356 keV line."]
-	}
-      ]
-     ,"ERR-ANALYS":[
-	{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
-	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":["   No information"]
+	,"x4code":{"code":"20220907A", "date":"20220907", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" VT. REACTION:SF4: M/G-> M2/G+M1 and"
+		,"DECAY-DATA: M-> M2 replaced."]
 	}
       ]
     }
     ,"DATA":{"ncols":3, "nrows":3
       ,"x4headers":[
-       {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
-	,"headerHelp":"Energy of incident projectile, laboratory system", "pFlag":"1000000"
+       {"icol":0, "header":"EN-MAX", "units":"MEV", "pointer":" "
+	,"headerHelp":"Upper limit of incident projectile energy range", "pFlag":"3000000"
 	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"NO-DIM", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -292,7 +285,7 @@
 	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN-MAX"    ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"NO-DIM"    ,"NO-DIM"    ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
@@ -301,13 +294,13 @@
 	,[22,5.9E-4,2.0E-5]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"G4017003", "Pointer":" "
- ,"Subent":"G4017003", "compiled":20080827
+ ,"Subent":"G4017003", "compiled":20220907
  ,"year1":2008, "author1ini":"I.M.", "author1":"Vyshnevskyi"
  ,"zTarg1":79, "targ1":"Au-197", "proj1":"g", "emis1":"N", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section ratio"
- ,"reacode":"79-AU-197(G,N)79-AU-196-M/G,,SIG/RAT,,BRS"
- ,"compNotes":[]
+ ,"reacode":"79-AU-197(G,N)79-AU-196-M2/G+M1,,SIG/RAT,,BRA"
+ ,"compNotes":["OPERATION...  Value=Max  Max:EN-MAX"]
  ,"wx4data":3
  ,"lx4data":3
  ,"x4data":[
@@ -324,8 +317,8 @@
     ,"dat0":[4.0e-6,6.0e-6,2.0e-5]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"EN", "ifComm":false, "ifCM":false
-    ,"header":"EN", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X1.Value", "dataType":"41", "rank":1.1
+    ,"header":"EN-MAX", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X1.Max", "dataType":"41", "rank":1.3
     ,"expansion":"Incident energy: energy"
     ,"dat0":[12,12.5,22]
     ,"dat1":[1.2e+7,1.25e+7,2.2e+7]}
