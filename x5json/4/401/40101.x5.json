@@ -1,13 +1,21 @@
-  {"ENTRY":"40101", "updated":20210729, "TransID":"4200", "TransDate":20211112, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
+  {"ENTRY":"40101", "updated":20221026, "TransID":"4210", "TransDate":20230227, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
    ,"y1":1971,"a1":"V.I.Popov+","r1":"C,71KIEV,1,223,1971"
    ,"ref":"Conf: Neutron Physics Conf., Kiev 1971, Vol.1, p.223 (1971)"
    ,"title":"Elastic and inelastic scattering of neutrons with initial energy 4.37 MeV"
    ,"x4subents":[
-   {"SUBENT":"40101001", "isub":1, "compiled":20210729, "TransID":"4200", "TransDate":20211112
+   {"SUBENT":"40101001", "isub":1, "compiled":20221026, "TransID":"4210", "TransDate":20230227
     ,"BIB":{
-      "INSTITUTE":[
+      "TITLE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"4RUSFEI", "dict":"INSTITUTE", "idict":3,"hlp":"Fiziko-Energeticheskii Inst., Obninsk, Russia"}]
+	,"x4code":null
+	,"x4freetext":["Elastic and inelastic scattering of neutrons with"
+		,"initial energy 4.37 MeV"]
+	}
+      ]
+     ,"AUTHOR":[
+	{"x4pointer":" "
+	,"x4codes":[{"ini":"V.I.","nam":"Popov"}
+	    ,{"ini":"V.I.","nam":"Trykova"}]
 	}
       ]
      ,"REFERENCE":[
@@ -20,17 +28,9 @@
 		,"shortRef":"Rept: USSR report to the I.N.D.C., No.456, Vol.(1), p.223 (1972)"}]
 	}
       ]
-     ,"AUTHOR":[
+     ,"INSTITUTE":[
 	{"x4pointer":" "
-	,"x4codes":[{"ini":"V.I.","nam":"Popov"}
-	    ,{"ini":"V.I.","nam":"Trykova"}]
-	}
-      ]
-     ,"TITLE":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["Elastic and inelastic scattering of neutrons with"
-		,"initial energy 4.37 MeV"]
+	,"x4codes":[{"code":"4RUSFEI", "dict":"INSTITUTE", "idict":3,"hlp":"Fiziko-Energeticheskii Inst., Obninsk, Russia"}]
 	}
       ]
      ,"FACILITY":[
@@ -54,8 +54,8 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":[" Cylindrical samples with diameter 4.5 cm and"
-		,"hight 4.5 cm and hollow cylinder with internal diameter"
-		,"3.0 cm for samples Cr,Ni,Sr,Nb"]
+		,"height 4.5 cm and hollow cylinder with internal"
+		,"diameter 3.0 cm for samples Cr,Ni,Sr,Nb"]
 	}
       ]
      ,"METHOD":[
@@ -120,6 +120,11 @@
 	,"x4freetext":[" Update for current rules and dictionaries."
 		," Subents 011-013 were merged into Subent 011,"
 		,"         014-015 into 014, 016-017 into 016."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20221026A", "date":"20221026", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Subent 009 was corrected."]
 	}
       ]
     }
@@ -1018,26 +1023,36 @@
 }
    ]
    }
-  ,{"SUBENT":"40101009", "isub":9, "compiled":20210729, "TransID":"4200", "TransDate":20211112
+  ,{"SUBENT":"40101009", "isub":9, "compiled":20221026, "TransID":"4210", "TransDate":20230227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"41-NB-93(N,EL)41-NB-93,,DA"
-	    ,"c4reac":"(N,EL),DA"
+	,"x4code":{"code":"41-NB-93(N,SCT)41-NB-93,PAR,DA"
+	    ,"c4reac":"(N,SCT)PAR,DA"
 	    ,"combi":"a"
 	    ,"MF":4
-	    ,"MT":2
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"41-NB-93(N,EL)41-NB-93,,DA"
-		,"Reac":"N,EL"
+	    {"code":"41-NB-93(N,SCT)41-NB-93,PAR,DA"
+		,"Reac":"N,SCT"
 		,"SF1":"41-NB-93","Targ":{"code":"41-NB-93","nam":"Nb-93","ZA":41093}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"EL","procHlp":"Elastic scattering"
+		,"SF3":"SCT","procHlp":"Total scattering (elastic + inelastic)"
 		,"SF4":"41-NB-93","Prod":{"code":"41-NB-93","nam":"Nb-93","ZA":41093}
+		,"SF5":"PAR"
 		,"SF6":"DA"
-		,"SF58":",DA","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Differential c/s with respect to angle"
+		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
 	    }]}
+	}
+      ]
+     ,"REL-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"C,,S.Simakov+,S,INDC(NDS)-0857,91,2022"
+		,"flag":{"code":"C", "help":" Reference to related data compiled in another entry"}
+		,"author1":"S.Simakov+","stdFileName":"R,INDC(NDS)-0857,91,2022"
+		,"year":2022,"typ":"S","ref":"R,INDC(NDS)-","no":"0857","p":"91"
+		,"shortRef":"Conf: IAEA Nucl.Data Section report to the I.N.D.C., No.0857, p.91 (2022)"}]
+	,"x4freetext":[" Comment on page 134."]
 	}
       ]
      ,"STATUS":[
@@ -1048,7 +1063,28 @@
 	,"x4freetext":[" Table 1 of INDC(CCP)-456,vol.1,p.223,1972"]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20221026A", "date":"20221026", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Subent was corrected according to a"
+		,"comment of S.Simakov: El -> SCT, PAR added in SF5,"
+		," E-EXC-MX-A = 0.280 MeV."]
+	}
+      ]
     }
+    ,"COMMON":{"ncols":1, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"E-EXC-MX-A", "units":"MEV", "pointer":" "
+	,"headerHelp":"Approximate upper limit of excitation energy range", "pFlag":"3000000"
+	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+      ]
+      ,"datacols":[
+	 ["E-EXC-MX-A"]
+	,["MEV"       ]
+	,[" "         ]]
+      ,"data":[
+	 [0.28]]}
     ,"DATA":{"ncols":3, "nrows":15
       ,"x4headers":[
        {"icol":0, "header":"ANG", "units":"ADEG", "pointer":" "
@@ -1083,14 +1119,14 @@
 	,[160,0.112,0.006]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40101009", "Pointer":" "
- ,"Subent":"40101009", "compiled":20210729
+ ,"Subent":"40101009", "compiled":20221026
  ,"year1":1971, "author1ini":"V.I.", "author1":"Popov"
- ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"EL", "MF":4, "MT":2, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
- ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
- ,"reacode":"41-NB-93(N,EL)41-NB-93,,DA"
- ,"compNotes":[]
- ,"wx4data":5
+ ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"SCT", "MF":4, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,EXC,ANG)"
+ ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
+ ,"reacode":"41-NB-93(N,SCT)41-NB-93,PAR,DA"
+ ,"compNotes":["OPERATION...  Value=Max  Max:E-EXC-MX-A"]
+ ,"wx4data":6
  ,"lx4data":15
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -1119,15 +1155,21 @@
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.18
     ,"com1":1.8e+5}
-  ,{"ivar":4, "cvar":"x2", "fam":"ANG", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"x2", "fam":"EXC", "ifComm":true , "ifCM":false
+    ,"header":"E-EXC-MX-A", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Max", "dataType":"53", "rank":2.3
+    ,"expansion":"Secondary energy: excitation energy"
+    ,"com0":0.28
+    ,"com1":2.8e+5}
+  ,{"ivar":5, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
     ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
-    ,"what":"X2.Value", "dataType":"61", "rank":2.1
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
     ,"expansion":"Angle: angle"
     ,"dat0":[20,30,40,50,60,70,80,90,100,110
 	,120,130,140,150,160]
    ,"dat1eq":true}
   ]
- ,"wc5data":3
+ ,"wc5data":4
  ,"lc5data":15
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
@@ -1144,10 +1186,16 @@
 	,4.37e+6,4.37e+6,4.37e+6,4.37e+6,4.37e+6]
       ,"dx1":[3.6e+5,3.6e+5,3.6e+5,3.6e+5,3.6e+5,3.6e+5,3.6e+5,3.6e+5,3.6e+5,3.6e+5
 	,3.6e+5,3.6e+5,3.6e+5,3.6e+5,3.6e+5]   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
-      ,"header":"ANG", "dataType":"61", "rank":2.0
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"EXC", "ifCM":false, "units":"EV"
+      ,"header":"EXC", "dataType":"53", "rank":2.0
+      ,"expansion":"Secondary energy: excitation energy"
+      ,"x2":[2.8e+5,2.8e+5,2.8e+5,2.8e+5,2.8e+5,2.8e+5,2.8e+5,2.8e+5,2.8e+5,2.8e+5
+	,2.8e+5,2.8e+5,2.8e+5,2.8e+5,2.8e+5]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
       ,"expansion":"Angle: angle"
-      ,"x2":[20,30,40,50,60,70,80,90,100,110
+      ,"x3":[20,30,40,50,60,70,80,90,100,110
 	,120,130,140,150,160]
    }
  }
