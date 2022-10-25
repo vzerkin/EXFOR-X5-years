@@ -1,9 +1,9 @@
-  {"ENTRY":"40179", "updated":20151103, "TransID":"4172", "TransDate":20160216, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
+  {"ENTRY":"40179", "updated":20221026, "TransID":"4210", "TransDate":20230227, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
    ,"y1":1972,"a1":"I.A.Korzh+","r1":"J,BAS,35,757,1972"
    ,"ref":"Jour: Bull.Russian Academy of Sciences - Physics, Vol.35, p.757 (1972)"
    ,"title":"Analyzing powers of medium-mass nuclei for 1.5 MeV neutrons"
    ,"x4subents":[
-   {"SUBENT":"40179001", "isub":1, "compiled":20151103, "TransID":"4172", "TransDate":20160216
+   {"SUBENT":"40179001", "isub":1, "compiled":20221026, "TransID":"4210", "TransDate":20230227
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -19,11 +19,6 @@
 	    ,{"ini":"V.A.","nam":"Mishchenko"}
 	    ,{"ini":"N.M.","nam":"Pravdivii"}
 	    ,{"ini":"I.E.","nam":"Sanzhur"}]
-	}
-      ]
-     ,"INSTITUTE":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"4UKRIFU", "dict":"INSTITUTE", "idict":3,"hlp":"Inst. Fiziki Ukrainskoi A.N., Kiev, Ukraine"}]
 	}
       ]
      ,"REFERENCE":[
@@ -54,6 +49,11 @@
 	,"x4freetext":["Engl.translation of YFI-10,50,1970"]
 	}
       ]
+     ,"INSTITUTE":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"4UKRIFU", "dict":"INSTITUTE", "idict":3,"hlp":"Inst. Fiziki Ukrainskoi A.N., Kiev, Ukraine"}]
+	}
+      ]
      ,"MONITOR":[
 	{"x4pointer":" "
 	,"x4code":{"code":""}
@@ -69,9 +69,9 @@
 	{"x4pointer":" "
 	,"x4code":null
 	,"x4freetext":["Differential elastic scattering cross sections were"
-		,"measured  using the cylindrical geometry. The"
-		,"polarization due to scattering was measured by the"
-		,"right-left asymmetry measurements."]
+		,"measured using the cylindrical geometry."
+		,"The polarization due to scattering was measured by"
+		,"the right-left asymmetry measurements."]
 	}
       ]
      ,"FACILITY":[
@@ -84,7 +84,7 @@
      ,"DETECTOR":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"SCIN", "dict":"DETECTOR", "idict":22,"hlp":"Scintillation detector"}]
-	,"x4freetext":[" Two scintillation counters placed  at angles 0"
+	,"x4freetext":[" Two scintillation counters placed at angles 0"
 		,"and 180 deg consisted of stilbene crystal and FEU-35"
 		,"photomultiplier ."]
 	}
@@ -159,6 +159,11 @@
 		,"ANA code was added in reaction SF8 in Subents 002,003,"
 		,"006,009,012,015,018,021,024,027 according to comment of"
 		,"N.Otsuka ( NDS,IAEA)."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20221026A", "date":"20221026", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Subents 022, 023 were corrected."]
 	}
       ]
     }
@@ -2977,29 +2982,28 @@
 }
    ]
    }
-  ,{"SUBENT":"40179022", "isub":22, "compiled":20151103, "TransID":"4172", "TransDate":20160216
+  ,{"SUBENT":"40179022", "isub":22, "compiled":20221026, "TransID":"4210", "TransDate":20230227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"41-NB-93(N,EL)41-NB-93,,DA,,LEG"
-	    ,"c4reac":"(N,EL),DA,,LEG"
+	,"x4code":{"code":"41-NB-93(N,EL)41-NB-93,EXL,DA,,LEG"
+	    ,"c4reac":"(N,EL)EXL,DA,,LEG"
 	    ,"combi":"a"
 	    ,"MF":154
 	    ,"MT":2
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"41-NB-93(N,EL)41-NB-93,,DA,,LEG"
+	    {"code":"41-NB-93(N,EL)41-NB-93,EXL,DA,,LEG"
 		,"Reac":"N,EL"
 		,"SF1":"41-NB-93","Targ":{"code":"41-NB-93","nam":"Nb-93","ZA":41093}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"EL","procHlp":"Elastic scattering"
 		,"SF4":"41-NB-93","Prod":{"code":"41-NB-93","nam":"Nb-93","ZA":41093}
+		,"SF5":"EXL"
 		,"SF6":"DA"
 		,"SF8":"LEG"
-		,"SF58":",DA,,LEG","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Legendre coef. d/dA=a(0)+Sum(a(L)*P(L))"
+		,"SF58":"EXL,DA,,LEG","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Leg.coef. d/dA=a(0)+Sum(a(L)*P(L)) incl. exciati"
 	    }]}
-	,"x4freetext":[" Diff.elastic"
-		,"           scattering Legendre coef."]
 	}
       ]
      ,"ANALYSIS":[
@@ -3010,6 +3014,23 @@
 		,"C-S-left. After corrections, C-S was fitted by"
 		,"Legendre polynomials as"
 		,"SUM(Ai*Pi(cos(ANGLE))), I=0-:-N"]
+	}
+      ]
+     ,"REL-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"C,,S.Simakov+,S,INDC(NDS)-0857,91,2022"
+		,"flag":{"code":"C", "help":" Reference to related data compiled in another entry"}
+		,"author1":"S.Simakov+","stdFileName":"R,INDC(NDS)-0857,91,2022"
+		,"year":2022,"typ":"S","ref":"R,INDC(NDS)-","no":"0857","p":"91"
+		,"shortRef":"Conf: IAEA Nucl.Data Section report to the I.N.D.C., No.0857, p.91 (2022)"}]
+	,"x4freetext":[" Comment on page 135."]
+	}
+      ]
+     ,"CRITIQUE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["S.Simakov: possible inclusion of inelastic scattering"
+		,"below Ex~0.18 MeV . See also REL-REF."]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -3026,6 +3047,14 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table I of YFI-10,50,1970"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20221026A", "date":"20221026", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Subent was corrected according to a"
+		,"comment of S.Simakov: EXL was added in SF5."]
 	}
       ]
     }
@@ -3051,12 +3080,12 @@
 	,[5,0.018]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40179022", "Pointer":" "
- ,"Subent":"40179022", "compiled":20151103
+ ,"Subent":"40179022", "compiled":20221026
  ,"year1":1972, "author1ini":"I.A.", "author1":"Korzh"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"EL", "MF":154, "MT":2, "nExpectedArgs":2
  ,"IndepVarFamilyCode":"0 2  5     ", "getYFormulaStr":"y=DATA(EN,nCoef)"
- ,"ReactionType":"FL", "quant":"DA", "quantExpan":"Legendre coef. d/dA=a(0)+Sum(a(L)*P(L))"
- ,"reacode":"41-NB-93(N,EL)41-NB-93,,DA,,LEG"
+ ,"ReactionType":"FL", "quant":"DA", "quantExpan":"Leg.coef. d/dA=a(0)+Sum(a(L)*P(L)) incl. exciati"
+ ,"reacode":"41-NB-93(N,EL)41-NB-93,EXL,DA,,LEG"
  ,"compNotes":["ERR-ANALYS:(ERR-S,0.7,2.)     ADDED AS COMMON:ERR-S,PER-CENT=0.7%"]
  ,"wx4data":7
  ,"lx4data":6
@@ -3127,27 +3156,44 @@
 }
    ]
    }
-  ,{"SUBENT":"40179023", "isub":23, "compiled":20151103, "TransID":"4172", "TransDate":20160216
+  ,{"SUBENT":"40179023", "isub":23, "compiled":20221026, "TransID":"4210", "TransDate":20230227
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"41-NB-93(N,EL)41-NB-93,,SIG"
-	    ,"c4reac":"(N,EL),SIG"
+	,"x4code":{"code":"41-NB-93(N,EL)41-NB-93,EXL,SIG"
+	    ,"c4reac":"(N,EL)EXL,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":2
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"41-NB-93(N,EL)41-NB-93,,SIG"
+	    {"code":"41-NB-93(N,EL)41-NB-93,EXL,SIG"
 		,"Reac":"N,EL"
 		,"SF1":"41-NB-93","Targ":{"code":"41-NB-93","nam":"Nb-93","ZA":41093}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
 		,"SF3":"EL","procHlp":"Elastic scattering"
 		,"SF4":"41-NB-93","Prod":{"code":"41-NB-93","nam":"Nb-93","ZA":41093}
+		,"SF5":"EXL"
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"EXL,SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section including excitation to low-lying"
 	    }]}
-	,"x4freetext":["           Elas. scat. cs"]
+	}
+      ]
+     ,"REL-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"C,,S.Simakov+,S,INDC(NDS)-0857,91,2022"
+		,"flag":{"code":"C", "help":" Reference to related data compiled in another entry"}
+		,"author1":"S.Simakov+","stdFileName":"R,INDC(NDS)-0857,91,2022"
+		,"year":2022,"typ":"S","ref":"R,INDC(NDS)-","no":"0857","p":"91"
+		,"shortRef":"Conf: IAEA Nucl.Data Section report to the I.N.D.C., No.0857, p.91 (2022)"}]
+	,"x4freetext":[" Comment on page 135."]
+	}
+      ]
+     ,"CRITIQUE":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":["S.Simakov: possible inclusion of inelastic scattering"
+		,"below Ex~0.18 MeV . See also REL-REF."]
 	}
       ]
      ,"STATUS":[
@@ -3171,6 +3217,14 @@
 	,"x4codes":[{"code":"INTAD", "dict":"ANALYSIS", "idict":23,"hlp":"Integration of angular distribution"}]
 	}
       ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20221026A", "date":"20221026", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Subent was corrected according to a"
+		,"comment of S.Simakov: EXL was added in SF5."]
+	}
+      ]
     }
     ,"DATA":{"ncols":1, "nrows":1
       ,"x4headers":[
@@ -3186,12 +3240,12 @@
 	 [4.17]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"40179023", "Pointer":" "
- ,"Subent":"40179023", "compiled":20151103
+ ,"Subent":"40179023", "compiled":20221026
  ,"year1":1972, "author1ini":"I.A.", "author1":"Korzh"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"EL", "MF":3, "MT":2, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"41-NB-93(N,EL)41-NB-93,,SIG"
+ ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section including excitation to low-lying"
+ ,"reacode":"41-NB-93(N,EL)41-NB-93,EXL,SIG"
  ,"compNotes":[]
  ,"wx4data":5
  ,"lx4data":1
