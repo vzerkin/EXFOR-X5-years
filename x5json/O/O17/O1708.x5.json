@@ -1,9 +1,9 @@
-  {"ENTRY":"O1708", "updated":20180630, "TransID":"O066", "TransDate":20190201, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O1708", "updated":20221216, "TransID":"O092", "TransDate":20230331, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":2008,"a1":"S.Isaev+","r1":"J,NP/A,809,1,2008"
    ,"ref":"Jour: Nuclear Physics, Section A, Vol.809, p.1 (2008)"
    ,"title":"Proton-induced fission on actinide nuclei at energies 27 and 63 MeV."
    ,"x4subents":[
-   {"SUBENT":"O1708001", "isub":1, "compiled":20180630, "TransID":"O066", "TransDate":20190201
+   {"SUBENT":"O1708001", "isub":1, "compiled":20221216, "TransID":"O092", "TransDate":20230331
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -37,10 +37,8 @@
       ]
      ,"INSTITUTE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"2BLGLVN", "dict":"INSTITUTE", "idict":3,"hlp":"Catholic Univ. of Louvain, Louvain-la-Neuve, Belgium"}]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"2GRCATH", "dict":"INSTITUTE", "idict":3,"hlp":"NCSR Demokritos, Aghia Paraskevi, Athens, Greece"}]
+	,"x4codes":[{"code":"2BLGLVN", "dict":"INSTITUTE", "idict":3,"hlp":"Catholic Univ. of Louvain, Louvain-la-Neuve, Belgium"}
+	    ,{"code":"2GRCATH", "dict":"INSTITUTE", "idict":3,"hlp":"NCSR Demokritos, Aghia Paraskevi, Athens, Greece"}]
 	}
       ]
      ,"FACILITY":[
@@ -130,6 +128,11 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" SD: Ref. 2007CORSEN,,55 added. Small"
 		,"corrections in all Subents. STATUS moved to Subents."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20221216A", "date":"20221216", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Corrections in Subents 007-011."]
 	}
       ]
     }
@@ -741,25 +744,24 @@
 }
    ]
    }
-  ,{"SUBENT":"O1708007", "isub":7, "compiled":20180630, "TransID":"O066", "TransDate":20190201
+  ,{"SUBENT":"O1708007", "isub":7, "compiled":20221216, "TransID":"O092", "TransDate":20230331
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"90-TH-232(P,F),,AKE,FF"
-	    ,"c4reac":"(P,F),AKE,FF"
+	,"x4code":{"code":"90-TH-232(P,F),PRE,KE,LF+HF"
+	    ,"c4reac":"(P,F)PRE,KE,LF+HF"
 	    ,"combi":"a"
-	    ,"MF":1
-	    ,"MT":458
 	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"90-TH-232(P,F),,AKE,FF"
+	    {"code":"90-TH-232(P,F),PRE,KE,LF+HF"
 		,"Reac":"P,F"
 		,"SF1":"90-TH-232","Targ":{"code":"90-TH-232","nam":"Th-232","ZA":90232}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF6":"AKE"
-		,"SF7":"FF"
-		,"SF58":",AKE,FF","Quant":"E","BasicUnits":"EV","QuantHlp":"Average kinetic energy of specified particle"
+		,"SF5":"PRE"
+		,"SF6":"KE"
+		,"SF7":"LF+HF"
+		,"SF58":"PRE,KE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Tot.kin.energy of primary fission fragments spec"
 	    }]}
 	}
 	,{"x4pointer":"2"
@@ -843,6 +845,14 @@
 		,"of the other source contribution."]
 	}
       ]
+     ,"CORRECTION":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":[" Corrected for neutron emissions based on the measured"
+		," neutron angular and multiplicity distributions"
+		," measured by the DEMON scintillator"]
+	}
+      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
@@ -865,6 +875,12 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" SD: ERR-ANALYS was updated."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20221216A", "date":"20221216", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF5=PRE; SF6=AKE -> KE; SF7=FF -> LF+HF"
+		,"in REACTION (1). Col.DATA -> DATA-ERR for REACTION (2)."]
+	}
       ]
     }
     ,"DATA":{"ncols":9, "nrows":2
@@ -881,8 +897,8 @@
       ,{"icol":3, "header":"DATA", "units":"PRT/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
-      ,{"icol":4, "header":"DATA", "units":"PRT/FIS", "pointer":"2"
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+      ,{"icol":4, "header":"DATA-ERR", "units":"PRT/FIS", "pointer":"2"
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ,{"icol":5, "header":"DATA", "units":"PRT/FIS", "pointer":"3"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -898,7 +914,7 @@
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA"      ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MEV"       ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ]
 	,[" "         ,"1"         ,"1"         ,"2"         ,"2"         ,"3"         ,"3"         ,"4"         ,"4"         ]]
       ,"data":[
@@ -906,12 +922,12 @@
 	,[62.9,173.6,21.8,0.18,0.05,3.47,0.35,1.52,0.32]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O17080071", "Pointer":"1"
- ,"Subent":"O1708007", "compiled":20180630
+ ,"Subent":"O1708007", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
- ,"zTarg1":90, "targ1":"Th-232", "proj1":"p", "emis1":"F", "MF":1, "MT":458, "nExpectedArgs":1
+ ,"zTarg1":90, "targ1":"Th-232", "proj1":"p", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"E", "quant":"E", "quantExpan":"Average kinetic energy of specified particle"
- ,"reacode":"90-TH-232(P,F),,AKE,FF"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Tot.kin.energy of primary fission fragments spec"
+ ,"reacode":"90-TH-232(P,F),PRE,KE,LF+HF"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":2
@@ -958,7 +974,7 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"O17080072", "Pointer":"2"
- ,"Subent":"O1708007", "compiled":20180630
+ ,"Subent":"O1708007", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":90, "targ1":"Th-232", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -974,10 +990,10 @@
     ,"expansion":"Data: data"
     ,"dat0":[0.18]
    ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"PRT/FIS", "basicUnits":"PART/FIS"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRT/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
     ,"dat0":[0.05]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
@@ -999,9 +1015,9 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[0.05]
-      ,"dy":[0.0025]
-      ,"dysys":[0.0025]   }
+      ,"y":[0.18]
+      ,"dy":[0.05]
+      ,"dysys":[0.009]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1010,7 +1026,7 @@
  }
 }
 ,{"iDataset":2, "DatasetID":"O17080073", "Pointer":"3"
- ,"Subent":"O1708007", "compiled":20180630
+ ,"Subent":"O1708007", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":90, "targ1":"Th-232", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1062,7 +1078,7 @@
  }
 }
 ,{"iDataset":3, "DatasetID":"O17080074", "Pointer":"4"
- ,"Subent":"O1708007", "compiled":20180630
+ ,"Subent":"O1708007", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":90, "targ1":"Th-232", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1115,25 +1131,24 @@
 }
    ]
    }
-  ,{"SUBENT":"O1708008", "isub":8, "compiled":20180630, "TransID":"O066", "TransDate":20190201
+  ,{"SUBENT":"O1708008", "isub":8, "compiled":20221216, "TransID":"O092", "TransDate":20230331
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"92-U-238(P,F),,AKE,FF"
-	    ,"c4reac":"(P,F),AKE,FF"
+	,"x4code":{"code":"92-U-238(P,F),PRE,KE,LF+HF"
+	    ,"c4reac":"(P,F)PRE,KE,LF+HF"
 	    ,"combi":"a"
-	    ,"MF":1
-	    ,"MT":458
 	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"92-U-238(P,F),,AKE,FF"
+	    {"code":"92-U-238(P,F),PRE,KE,LF+HF"
 		,"Reac":"P,F"
 		,"SF1":"92-U-238","Targ":{"code":"92-U-238","nam":"U-238","ZA":92238}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF6":"AKE"
-		,"SF7":"FF"
-		,"SF58":",AKE,FF","Quant":"E","BasicUnits":"EV","QuantHlp":"Average kinetic energy of specified particle"
+		,"SF5":"PRE"
+		,"SF6":"KE"
+		,"SF7":"LF+HF"
+		,"SF58":"PRE,KE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Tot.kin.energy of primary fission fragments spec"
 	    }]}
 	}
 	,{"x4pointer":"2"
@@ -1216,6 +1231,14 @@
 		,"of the other source contribution."]
 	}
       ]
+     ,"CORRECTION":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":[" Corrected for neutron emissions based on the measured"
+		," neutron angular and multiplicity distributions"
+		," measured by the DEMON scintillator"]
+	}
+      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
@@ -1238,6 +1261,12 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" SD: ERR-ANALYS was updated."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20221216A", "date":"20221216", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF5=PRE; SF6=AKE -> KE; SF7=FF -> LF+HF"
+		,"in REACTION (1). Col.DATA -> DATA-ERR for REACTION (2)."]
+	}
       ]
     }
     ,"DATA":{"ncols":9, "nrows":2
@@ -1254,8 +1283,8 @@
       ,{"icol":3, "header":"DATA", "units":"PRT/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
-      ,{"icol":4, "header":"DATA", "units":"PRT/FIS", "pointer":"2"
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+      ,{"icol":4, "header":"DATA-ERR", "units":"PRT/FIS", "pointer":"2"
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ,{"icol":5, "header":"DATA", "units":"PRT/FIS", "pointer":"3"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -1271,7 +1300,7 @@
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA"      ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MEV"       ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ]
 	,[" "         ,"1"         ,"1"         ,"2"         ,"2"         ,"3"         ,"3"         ,"4"         ,"4"         ]]
       ,"data":[
@@ -1279,12 +1308,12 @@
 	,[62.9,172.3,24.1,0.14,0.07,3.01,0.26,1.66,0.17]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O17080081", "Pointer":"1"
- ,"Subent":"O1708008", "compiled":20180630
+ ,"Subent":"O1708008", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
- ,"zTarg1":92, "targ1":"U-238", "proj1":"p", "emis1":"F", "MF":1, "MT":458, "nExpectedArgs":1
+ ,"zTarg1":92, "targ1":"U-238", "proj1":"p", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"E", "quant":"E", "quantExpan":"Average kinetic energy of specified particle"
- ,"reacode":"92-U-238(P,F),,AKE,FF"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Tot.kin.energy of primary fission fragments spec"
+ ,"reacode":"92-U-238(P,F),PRE,KE,LF+HF"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":2
@@ -1331,7 +1360,7 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"O17080082", "Pointer":"2"
- ,"Subent":"O1708008", "compiled":20180630
+ ,"Subent":"O1708008", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":92, "targ1":"U-238", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1347,10 +1376,10 @@
     ,"expansion":"Data: data"
     ,"dat0":[0.14]
    ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"PRT/FIS", "basicUnits":"PART/FIS"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRT/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
     ,"dat0":[0.07]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
@@ -1372,9 +1401,9 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[0.07]
-      ,"dy":[0.0035]
-      ,"dysys":[0.0035]   }
+      ,"y":[0.14]
+      ,"dy":[0.07]
+      ,"dysys":[0.007]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1383,7 +1412,7 @@
  }
 }
 ,{"iDataset":2, "DatasetID":"O17080083", "Pointer":"3"
- ,"Subent":"O1708008", "compiled":20180630
+ ,"Subent":"O1708008", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":92, "targ1":"U-238", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1435,7 +1464,7 @@
  }
 }
 ,{"iDataset":3, "DatasetID":"O17080084", "Pointer":"4"
- ,"Subent":"O1708008", "compiled":20180630
+ ,"Subent":"O1708008", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":92, "targ1":"U-238", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1488,25 +1517,24 @@
 }
    ]
    }
-  ,{"SUBENT":"O1708009", "isub":9, "compiled":20180630, "TransID":"O066", "TransDate":20190201
+  ,{"SUBENT":"O1708009", "isub":9, "compiled":20221216, "TransID":"O092", "TransDate":20230331
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"93-NP-237(P,F),,AKE,FF"
-	    ,"c4reac":"(P,F),AKE,FF"
+	,"x4code":{"code":"93-NP-237(P,F),PRE,KE,LF+HF"
+	    ,"c4reac":"(P,F)PRE,KE,LF+HF"
 	    ,"combi":"a"
-	    ,"MF":1
-	    ,"MT":458
 	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"93-NP-237(P,F),,AKE,FF"
+	    {"code":"93-NP-237(P,F),PRE,KE,LF+HF"
 		,"Reac":"P,F"
 		,"SF1":"93-NP-237","Targ":{"code":"93-NP-237","nam":"Np-237","ZA":93237}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF6":"AKE"
-		,"SF7":"FF"
-		,"SF58":",AKE,FF","Quant":"E","BasicUnits":"EV","QuantHlp":"Average kinetic energy of specified particle"
+		,"SF5":"PRE"
+		,"SF6":"KE"
+		,"SF7":"LF+HF"
+		,"SF58":"PRE,KE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Tot.kin.energy of primary fission fragments spec"
 	    }]}
 	}
 	,{"x4pointer":"2"
@@ -1589,6 +1617,14 @@
 		,"of the other source contribution."]
 	}
       ]
+     ,"CORRECTION":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":[" Corrected for neutron emissions based on the measured"
+		," neutron angular and multiplicity distributions"
+		," measured by the DEMON scintillator"]
+	}
+      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
@@ -1611,6 +1647,12 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" SD: ERR-ANALYS was updated."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20221216A", "date":"20221216", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF5=PRE; SF6=AKE -> KE; SF7=FF -> LF+HF"
+		,"in REACTION (1). Col.DATA -> DATA-ERR for REACTION (2)."]
+	}
       ]
     }
     ,"DATA":{"ncols":9, "nrows":2
@@ -1627,8 +1669,8 @@
       ,{"icol":3, "header":"DATA", "units":"PRT/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
-      ,{"icol":4, "header":"DATA", "units":"PRT/FIS", "pointer":"2"
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+      ,{"icol":4, "header":"DATA-ERR", "units":"PRT/FIS", "pointer":"2"
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ,{"icol":5, "header":"DATA", "units":"PRT/FIS", "pointer":"3"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -1644,7 +1686,7 @@
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA"      ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MEV"       ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ]
 	,[" "         ,"1"         ,"1"         ,"2"         ,"2"         ,"3"         ,"3"         ,"4"         ,"4"         ]]
       ,"data":[
@@ -1652,12 +1694,12 @@
 	,[62.9,179.1,29.3,0.15,0.07,2.64,0.58,1.79,0.44]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O17080091", "Pointer":"1"
- ,"Subent":"O1708009", "compiled":20180630
+ ,"Subent":"O1708009", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
- ,"zTarg1":93, "targ1":"Np-237", "proj1":"p", "emis1":"F", "MF":1, "MT":458, "nExpectedArgs":1
+ ,"zTarg1":93, "targ1":"Np-237", "proj1":"p", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"E", "quant":"E", "quantExpan":"Average kinetic energy of specified particle"
- ,"reacode":"93-NP-237(P,F),,AKE,FF"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Tot.kin.energy of primary fission fragments spec"
+ ,"reacode":"93-NP-237(P,F),PRE,KE,LF+HF"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":2
@@ -1704,7 +1746,7 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"O17080092", "Pointer":"2"
- ,"Subent":"O1708009", "compiled":20180630
+ ,"Subent":"O1708009", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":93, "targ1":"Np-237", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1720,10 +1762,10 @@
     ,"expansion":"Data: data"
     ,"dat0":[0.15]
    ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"PRT/FIS", "basicUnits":"PART/FIS"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRT/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
     ,"dat0":[0.07]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
@@ -1745,9 +1787,9 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[0.07]
-      ,"dy":[0.0035]
-      ,"dysys":[0.0035]   }
+      ,"y":[0.15]
+      ,"dy":[0.07]
+      ,"dysys":[0.0075]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1756,7 +1798,7 @@
  }
 }
 ,{"iDataset":2, "DatasetID":"O17080093", "Pointer":"3"
- ,"Subent":"O1708009", "compiled":20180630
+ ,"Subent":"O1708009", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":93, "targ1":"Np-237", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1808,7 +1850,7 @@
  }
 }
 ,{"iDataset":3, "DatasetID":"O17080094", "Pointer":"4"
- ,"Subent":"O1708009", "compiled":20180630
+ ,"Subent":"O1708009", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":93, "targ1":"Np-237", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -1861,25 +1903,24 @@
 }
    ]
    }
-  ,{"SUBENT":"O1708010", "isub":10, "compiled":20180630, "TransID":"O066", "TransDate":20190201
+  ,{"SUBENT":"O1708010", "isub":10, "compiled":20221216, "TransID":"O092", "TransDate":20230331
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"94-PU-239(P,F),,AKE,FF"
-	    ,"c4reac":"(P,F),AKE,FF"
+	,"x4code":{"code":"94-PU-239(P,F),PRE,KE,LF+HF"
+	    ,"c4reac":"(P,F)PRE,KE,LF+HF"
 	    ,"combi":"a"
-	    ,"MF":1
-	    ,"MT":458
 	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"94-PU-239(P,F),,AKE,FF"
+	    {"code":"94-PU-239(P,F),PRE,KE,LF+HF"
 		,"Reac":"P,F"
 		,"SF1":"94-PU-239","Targ":{"code":"94-PU-239","nam":"Pu-239","ZA":94239}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF6":"AKE"
-		,"SF7":"FF"
-		,"SF58":",AKE,FF","Quant":"E","BasicUnits":"EV","QuantHlp":"Average kinetic energy of specified particle"
+		,"SF5":"PRE"
+		,"SF6":"KE"
+		,"SF7":"LF+HF"
+		,"SF58":"PRE,KE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Tot.kin.energy of primary fission fragments spec"
 	    }]}
 	}
 	,{"x4pointer":"2"
@@ -1962,6 +2003,14 @@
 		,"of the other source contribution."]
 	}
       ]
+     ,"CORRECTION":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":[" Corrected for neutron emissions based on the measured"
+		," neutron angular and multiplicity distributions"
+		," measured by the DEMON scintillator"]
+	}
+      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
@@ -1984,6 +2033,12 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" SD: ERR-ANALYS was updated."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20221216A", "date":"20221216", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF5=PRE; SF6=AKE -> KE; SF7=FF -> LF+HF"
+		,"in REACTION (1). Col.DATA -> DATA-ERR for REACTION (2)."]
+	}
       ]
     }
     ,"DATA":{"ncols":9, "nrows":2
@@ -2000,8 +2055,8 @@
       ,{"icol":3, "header":"DATA", "units":"PRT/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
-      ,{"icol":4, "header":"DATA", "units":"PRT/FIS", "pointer":"2"
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+      ,{"icol":4, "header":"DATA-ERR", "units":"PRT/FIS", "pointer":"2"
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ,{"icol":5, "header":"DATA", "units":"PRT/FIS", "pointer":"3"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -2017,7 +2072,7 @@
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA"      ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MEV"       ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ]
 	,[" "         ,"1"         ,"1"         ,"2"         ,"2"         ,"3"         ,"3"         ,"4"         ,"4"         ]]
       ,"data":[
@@ -2025,12 +2080,12 @@
 	,[62.9,175,21.2,0.16,0.09,2.51,0.09,2.07,0.41]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O17080101", "Pointer":"1"
- ,"Subent":"O1708010", "compiled":20180630
+ ,"Subent":"O1708010", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
- ,"zTarg1":94, "targ1":"Pu-239", "proj1":"p", "emis1":"F", "MF":1, "MT":458, "nExpectedArgs":1
+ ,"zTarg1":94, "targ1":"Pu-239", "proj1":"p", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"E", "quant":"E", "quantExpan":"Average kinetic energy of specified particle"
- ,"reacode":"94-PU-239(P,F),,AKE,FF"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Tot.kin.energy of primary fission fragments spec"
+ ,"reacode":"94-PU-239(P,F),PRE,KE,LF+HF"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":2
@@ -2077,7 +2132,7 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"O17080102", "Pointer":"2"
- ,"Subent":"O1708010", "compiled":20180630
+ ,"Subent":"O1708010", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":94, "targ1":"Pu-239", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -2093,10 +2148,10 @@
     ,"expansion":"Data: data"
     ,"dat0":[0.16]
    ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"PRT/FIS", "basicUnits":"PART/FIS"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRT/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
     ,"dat0":[0.09]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
@@ -2118,9 +2173,9 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[0.09]
-      ,"dy":[0.0045]
-      ,"dysys":[0.0045]   }
+      ,"y":[0.16]
+      ,"dy":[0.09]
+      ,"dysys":[0.008]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -2129,7 +2184,7 @@
  }
 }
 ,{"iDataset":2, "DatasetID":"O17080103", "Pointer":"3"
- ,"Subent":"O1708010", "compiled":20180630
+ ,"Subent":"O1708010", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":94, "targ1":"Pu-239", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -2181,7 +2236,7 @@
  }
 }
 ,{"iDataset":3, "DatasetID":"O17080104", "Pointer":"4"
- ,"Subent":"O1708010", "compiled":20180630
+ ,"Subent":"O1708010", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":94, "targ1":"Pu-239", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -2234,25 +2289,24 @@
 }
    ]
    }
-  ,{"SUBENT":"O1708011", "isub":11, "compiled":20180630, "TransID":"O066", "TransDate":20190201
+  ,{"SUBENT":"O1708011", "isub":11, "compiled":20221216, "TransID":"O092", "TransDate":20230331
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":"1"
-	,"x4code":{"code":"95-AM-241(P,F),,AKE,FF"
-	    ,"c4reac":"(P,F),AKE,FF"
+	,"x4code":{"code":"95-AM-241(P,F),PRE,KE,LF+HF"
+	    ,"c4reac":"(P,F)PRE,KE,LF+HF"
 	    ,"combi":"a"
-	    ,"MF":1
-	    ,"MT":458
 	    ,"Units":"EV"
 	    ,"reacs": [
-	    {"code":"95-AM-241(P,F),,AKE,FF"
+	    {"code":"95-AM-241(P,F),PRE,KE,LF+HF"
 		,"Reac":"P,F"
 		,"SF1":"95-AM-241","Targ":{"code":"95-AM-241","nam":"Am-241","ZA":95241}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"F","procHlp":"Fission"
-		,"SF6":"AKE"
-		,"SF7":"FF"
-		,"SF58":",AKE,FF","Quant":"E","BasicUnits":"EV","QuantHlp":"Average kinetic energy of specified particle"
+		,"SF5":"PRE"
+		,"SF6":"KE"
+		,"SF7":"LF+HF"
+		,"SF58":"PRE,KE,LF+HF","Quant":"E","BasicUnits":"EV","QuantHlp":"Tot.kin.energy of primary fission fragments spec"
 	    }]}
 	}
 	,{"x4pointer":"2"
@@ -2335,6 +2389,14 @@
 		,"of the other source contribution."]
 	}
       ]
+     ,"CORRECTION":[
+	{"x4pointer":" "
+	,"x4code":null
+	,"x4freetext":[" Corrected for neutron emissions based on the measured"
+		," neutron angular and multiplicity distributions"
+		," measured by the DEMON scintillator"]
+	}
+      ]
      ,"ERR-ANALYS":[
 	{"x4pointer":" "
 	,"x4code":{"header":"DATA-ERR"
@@ -2357,6 +2419,12 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" SD: ERR-ANALYS was updated."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20221216A", "date":"20221216", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF5=PRE; SF6=AKE -> KE; SF7=FF -> LF+HF"
+		,"in REACTION (1). Col.DATA -> DATA-ERR for REACTION (2)."]
+	}
       ]
     }
     ,"DATA":{"ncols":9, "nrows":2
@@ -2373,8 +2441,8 @@
       ,{"icol":3, "header":"DATA", "units":"PRT/FIS", "pointer":"2"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
-      ,{"icol":4, "header":"DATA", "units":"PRT/FIS", "pointer":"2"
-	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
+      ,{"icol":4, "header":"DATA-ERR", "units":"PRT/FIS", "pointer":"2"
+	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ,{"icol":5, "header":"DATA", "units":"PRT/FIS", "pointer":"3"
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
@@ -2390,7 +2458,7 @@
 	,"unitsHelp":"particles per fission","familyCode":"FY","convFc":1.0,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
-	 ["EN"        ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA"      ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
+	 ["EN"        ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ,"DATA"      ,"DATA-ERR"  ]
 	,["MEV"       ,"MEV"       ,"MEV"       ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ,"PRT/FIS"   ]
 	,[" "         ,"1"         ,"1"         ,"2"         ,"2"         ,"3"         ,"3"         ,"4"         ,"4"         ]]
       ,"data":[
@@ -2398,12 +2466,12 @@
 	,[62.9,186.4,25.5,0.16,0.06,2.53,0.03,2.09,0.15]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O17080111", "Pointer":"1"
- ,"Subent":"O1708011", "compiled":20180630
+ ,"Subent":"O1708011", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
- ,"zTarg1":95, "targ1":"Am-241", "proj1":"p", "emis1":"F", "MF":1, "MT":458, "nExpectedArgs":1
+ ,"zTarg1":95, "targ1":"Am-241", "proj1":"p", "emis1":"F", "MF":0, "MT":0, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"E", "quant":"E", "quantExpan":"Average kinetic energy of specified particle"
- ,"reacode":"95-AM-241(P,F),,AKE,FF"
+ ,"ReactionType":"E", "quant":"E", "quantExpan":"Tot.kin.energy of primary fission fragments spec"
+ ,"reacode":"95-AM-241(P,F),PRE,KE,LF+HF"
  ,"compNotes":[]
  ,"wx4data":4
  ,"lx4data":2
@@ -2450,7 +2518,7 @@
  }
 }
 ,{"iDataset":1, "DatasetID":"O17080112", "Pointer":"2"
- ,"Subent":"O1708011", "compiled":20180630
+ ,"Subent":"O1708011", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":95, "targ1":"Am-241", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -2466,10 +2534,10 @@
     ,"expansion":"Data: data"
     ,"dat0":[0.16]
    ,"dat1eq":true}
-  ,{"ivar":1, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA", "units":"PRT/FIS", "basicUnits":"PART/FIS"
-    ,"what":"Y.Value", "dataType":"21", "rank":0.1
-    ,"expansion":"Data: data"
+  ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
+    ,"header":"DATA-ERR", "units":"PRT/FIS", "basicUnits":"PART/FIS"
+    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"expansion":"Data: data /Error/"
     ,"dat0":[0.06]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
@@ -2491,9 +2559,9 @@
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"PART/FIS"
       ,"header":"DATA", "dataType":"21", "rank":0.0
       ,"expansion":"Data: data"
-      ,"y":[0.06]
-      ,"dy":[0.003]
-      ,"dysys":[0.003]   }
+      ,"y":[0.16]
+      ,"dy":[0.06]
+      ,"dysys":[0.008]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -2502,7 +2570,7 @@
  }
 }
 ,{"iDataset":2, "DatasetID":"O17080113", "Pointer":"3"
- ,"Subent":"O1708011", "compiled":20180630
+ ,"Subent":"O1708011", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":95, "targ1":"Am-241", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -2554,7 +2622,7 @@
  }
 }
 ,{"iDataset":3, "DatasetID":"O17080114", "Pointer":"4"
- ,"Subent":"O1708011", "compiled":20180630
+ ,"Subent":"O1708011", "compiled":20221216
  ,"year1":2008, "author1ini":"S.", "author1":"Isaev"
  ,"zTarg1":95, "targ1":"Am-241", "proj1":"p", "emis1":"F", "MF":1, "MT":452, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
