@@ -1,9 +1,9 @@
-  {"ENTRY":"O0345", "updated":20151202, "TransID":"O056", "TransDate":20160516, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O0345", "updated":20221220, "TransID":"O092", "TransDate":20230331, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1960,"a1":"M.Gusakow+","r1":"J,CR,251,70,1960"
    ,"ref":"Jour: Comptes Rendus, Vol.251, p.70 (1960)"
    ,"title":"Spallation reaction (p,n+p),(p,2n+p) and (p,3n) on gold. Production effective cross section at variation proton energy."
    ,"x4subents":[
-   {"SUBENT":"O0345001", "isub":1, "compiled":20151202, "TransID":"O056", "TransDate":20160516
+   {"SUBENT":"O0345001", "isub":1, "compiled":20221220, "TransID":"O092", "TransDate":20230331
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -93,14 +93,6 @@
 	,"x4freetext":[" Gold+Monitor Foil."]
 	}
       ]
-     ,"STATUS":[
-	{"x4pointer":" "
-	,"x4codes":[{"code":"CURVE"
-		,"flag":"CURVE", "help":"Data read from a curve"
-		}]
-	,"x4freetext":[".By CAJAD."]
-	}
-      ]
      ,"ANALYSIS":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"DECAY", "dict":"ANALYSIS", "idict":23,"hlp":"Decay curve analysis"}]
@@ -110,6 +102,14 @@
 		,"Mercury fraction had one half-life = 9.5 hours only."
 		,"The authors did not discuss a reason of invisible 41"
 		,"hours isomer of 195-Hg and 9.7 hours isomer of 196-Au."]
+	}
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" By CAJAD."]
 	}
       ]
      ,"HISTORY":[
@@ -128,6 +128,11 @@
 	,"x4freetext":[" SD: Cosmetic changes in all Subents (four"
 		,"digits year; SF9=EXP deleted from all REACTION codes,"
 		,"etc). DECAY-DATA corrected in Subent 003."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20221220A", "date":"20221220", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Corrections in Subent 004."]
 	}
       ]
     }
@@ -450,38 +455,33 @@
 }
    ]
    }
-  ,{"SUBENT":"O0345004", "isub":4, "compiled":20151202, "TransID":"O056", "TransDate":20160516
+  ,{"SUBENT":"O0345004", "isub":4, "compiled":20221220, "TransID":"O092", "TransDate":20230331
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"79-AU-197(P,X)79-AU-195-G,,SIG"
+	,"x4code":{"code":"79-AU-197(P,X)79-AU-195,,SIG"
 	    ,"c4reac":"(P,X),SIG"
 	    ,"combi":"a"
 	    ,"MF":3
 	    ,"MT":9000
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"79-AU-197(P,X)79-AU-195-G,,SIG"
+	    {"code":"79-AU-197(P,X)79-AU-195,,SIG"
 		,"Reac":"P,X"
 		,"SF1":"79-AU-197","Targ":{"code":"79-AU-197","nam":"Au-197","ZA":79197}
 		,"SF2":"P","Proj":{"code":"P","nam":"p","ZA":1001}
 		,"SF3":"X","procHlp":"Process unspecified"
-		,"SF4":"79-AU-195-G","Prod":{"code":"79-AU-195-G","nam":"Au-195-g","ZA":79195,"ProdM":"G"}
+		,"SF4":"79-AU-195","Prod":{"code":"79-AU-195","nam":"Au-195","ZA":79195}
 		,"SF6":"SIG"
 		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
 	    }]}
 	}
       ]
-     ,"RAD-DET":[
-	{"x4pointer":" "
-	,"x4code":{"code":"orig::79-AU-195-G,XR"}
-	}
-      ]
      ,"DECAY-DATA":[
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"79-AU-195-G", "t12":180.0, "t12units":"D", "t12sec":1.5552E7
-	, "Radiations":[]}]
-	,"x4freetext":[" Half-live is reported by authors."]
+	, "Radiations":[ {"Type":"XR"}]}]
+	,"x4freetext":[" Half-live is reported by authors"]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -490,22 +490,17 @@
 	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
 	,"x4freetext":[" No information on source of uncertainties"]
 	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"EN-ERR-DIG"
-	     ,"headerHelp":"Digitizing error of incident particle energy"}
-	,"x4freetext":[" Digitizing uncertainty of energy"]
-	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ERR-DIG"
-	     ,"headerHelp":"Digitizing error (of DATA)"}
-	,"x4freetext":[" Digitizing uncertainty of data"]
-	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20151202A", "date":"20151202", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" SD: SF3=2N+P -> X in REACTION code."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20221220A", "date":"20221220", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF4=Au-195g -> Au-195 in REACTION code."]
 	}
       ]
     }
@@ -552,12 +547,12 @@
 	,[154.8,56,3]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O0345004", "Pointer":" "
- ,"Subent":"O0345004", "compiled":20151202
+ ,"Subent":"O0345004", "compiled":20221220
  ,"year1":1960, "author1ini":"M.", "author1":"Gusakow"
  ,"zTarg1":79, "targ1":"Au-197", "proj1":"p", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
  ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"79-AU-197(P,X)79-AU-195-G,,SIG"
+ ,"reacode":"79-AU-197(P,X)79-AU-195,,SIG"
  ,"compNotes":["Ignored column:ERR-DIG,B (digitizing error)"
 	,"Ignored column:EN-ERR-DIG,EV (digitizing error)"]
  ,"wx4data":5
