@@ -1,15 +1,15 @@
-  {"ENTRY":"20792", "updated":20211220, "TransID":"2306", "TransDate":20220317, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"20792", "updated":20230202, "TransID":"2313", "TransDate":20230523, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1977,"a1":"K.Kobayashi","r1":"J,ANE,4,177,1977"
    ,"ref":"Jour: Annals of Nuclear Energy, Vol.4, p.177 (1977)"
-   ,"title":"Fission spectrum averaged cross sections for the Th-232(n,F) reaction"
+   ,"title":"Fission spectrum averaged cross section for the Th-232(n,f) reaction"
    ,"x4subents":[
-   {"SUBENT":"20792001", "isub":1, "compiled":20211220, "TransID":"2306", "TransDate":20220317
+   {"SUBENT":"20792001", "isub":1, "compiled":20230202, "TransID":"2313", "TransDate":20230523
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[" Fission spectrum averaged cross sections for the"
-		," Th-232(n,F) reaction"]
+	,"x4freetext":[" Fission spectrum averaged cross section for the"
+		," Th-232(n,f) reaction"]
 	}
       ]
      ,"AUTHOR":[
@@ -65,7 +65,7 @@
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-1", "max":"3."
 	     ,"headerHelp":"1st partial uncertainty, defined under ERR-ANALYS"}
-	,"x4freetext":[" Uncertainty in flux normalisation"]
+	,"x4freetext":[" Uncertainty in flux normalization"]
 	}
 	,{"x4pointer":" "
 	,"x4code":{"header":"ERR-3", "max":"3.5"
@@ -98,6 +98,11 @@
 	,"x4freetext":[" SD:Updated to new date formats,lower case."
 		,"MONITOR reaction updated (-G+M from SF4 and /SUM from"
 		,"SF6 deleted)."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20230202U", "date":"20230202", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: Corrections in Subent 003."]
 	}
       ]
     }
@@ -334,7 +339,7 @@
 }
    ]
    }
-  ,{"SUBENT":"20792003", "isub":3, "compiled":20211220, "TransID":"2306", "TransDate":20220317
+  ,{"SUBENT":"20792003", "isub":3, "compiled":20230202, "TransID":"2313", "TransDate":20230523
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -382,6 +387,20 @@
 		," Activities of 140-La and 140-Ba were measured."]
 	}
       ]
+     ,"ASSUMED":[
+	{"x4pointer":" "
+	,"x4code":{"code":"orig::ASSUM,90-TH-232(N,F)56-BA-140,CUM,FY"}
+	}
+      ]
+     ,"REL-REF":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"R,,M.E.Meek+,R,NEDO-12154,46,1972"
+		,"flag":{"code":"R", "help":" Reference to related data compiled in another entry"}
+		,"author1":"M.E.Meek+","stdFileName":"R,NEDO-12154,46,1972"
+		,"year":1972,"typ":"R","ref":"R,NEDO-","no":"12154","p":"46"
+		,"shortRef":"Rept: General Electric, At.Power Equipm. Dept., No.12154, p.46 (1972)"}]
+	}
+      ]
      ,"ANALYSIS":[
 	{"x4pointer":" "
 	,"x4code":null
@@ -418,9 +437,14 @@
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" SD: BIB updated."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20230202U", "date":"20230202", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: ASSUMED and REL-REF added."]
+	}
       ]
     }
-    ,"DATA":{"ncols":4, "nrows":1
+    ,"DATA":{"ncols":5, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN-DUMMY", "units":"MEV", "pointer":" "
 	,"headerHelp":"Dummy incident proj. energy, for broad spectrum", "pFlag":"1000000"
@@ -434,16 +458,19 @@
       ,{"icol":3, "header":"ERR-S", "units":"PER-CENT", "pointer":" "
 	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
+      ,{"icol":4, "header":"ASSUM", "units":"PC/FIS", "pointer":" "
+	,"headerHelp":"Assumed value, defined under ASSUMED.", "pFlag":"0000000"
+	,"unitsHelp":"particles per 100 fissions","familyCode":"FY","convFc":0.01,"basicUnits":"PART/FIS"}
       ]
       ,"datacols":[
-	 ["EN-DUMMY"  ,"DATA"      ,"ERR-T"     ,"ERR-S"     ]
-	,["MEV"       ,"MB"        ,"MB"        ,"PER-CENT"  ]
-	,[" "         ," "         ," "         ," "         ]]
+	 ["EN-DUMMY"  ,"DATA"      ,"ERR-T"     ,"ERR-S"     ,"ASSUM"     ]
+	,["MEV"       ,"MB"        ,"MB"        ,"PER-CENT"  ,"PC/FIS"    ]
+	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [1.5,78.1,3.9,2]]}
+	 [1.5,78.1,3.9,2,7.91]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"20792003", "Pointer":" "
- ,"Subent":"20792003", "compiled":20211220
+ ,"Subent":"20792003", "compiled":20230202
  ,"year1":1977, "author1ini":"K.", "author1":"Kobayashi"
  ,"zTarg1":90, "targ1":"Th-232", "proj1":"n", "emis1":"F", "MF":3, "MT":18, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(SpE)"
@@ -451,7 +478,7 @@
  ,"reacode":"90-TH-232(N,F),,SIG,,FIS"
  ,"compNotes":["ERR-ANALYS:(ERR-1,,3.)        ADDED AS COMMON:ERR-1,PER-CENT=1.5%"
 	,"ERR-ANALYS:(ERR-3,,3.5)       ADDED AS COMMON:ERR-3,PER-CENT=1.75%"]
- ,"wx4data":7
+ ,"wx4data":8
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -496,6 +523,12 @@
     ,"expansion":"Assumed values: monitor"
     ,"com0":102
     ,"com1":0.102}
+  ,{"ivar":7, "cvar":"zzz", "fam":"", "ifComm":false, "ifCM":false
+    ,"header":"ASSUM", "units":"PC/FIS", "basicUnits":"PART/FIS"
+    ,"what":"ZZZ", "dataType":"15", "rank":777.1
+    ,"expansion":"Assumed values: assumed"
+    ,"dat0":[7.91]
+    ,"dat1":[0.0791]}
   ]
  ,"wc5data":2
  ,"lc5data":1
