@@ -1,9 +1,9 @@
-  {"ENTRY":"22155", "updated":20170819, "TransID":"2265", "TransDate":20180126, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"22155", "updated":20230211, "TransID":"2314", "TransDate":20230504, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1992,"a1":"A.Takahashi+","r1":"R,OKTAV-A-92-01,1992"
    ,"ref":"Rept: Osaka Univ., OKTAVIAN Reports, No.92-01 (1992)"
    ,"title":"Measurement of double, single differential and integral neutron emission cross sections at 14.1 MeV for Ca-nat, Mn-55, Co-59 and W-nat."
    ,"x4subents":[
-   {"SUBENT":"22155001", "isub":1, "compiled":20170819, "TransID":"2265", "TransDate":20180126
+   {"SUBENT":"22155001", "isub":1, "compiled":20230211, "TransID":"2314", "TransDate":20230504
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -92,7 +92,7 @@
      ,"CORRECTION":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[".Corrections are made for"
+	,"x4freetext":[" Corrections are made for"
 		,"  - multiple scattering;"
 		,"  - attenuation;"
 		,"  - neutron source contamination."
@@ -102,7 +102,7 @@
 		," drastic disagreement with the measured one, the"
 		," correction can be skipped and the adoption of raw,"
 		," i.e. experimental, data is recommended by authors."
-		,".This correction amounted to about 10%, except for"
+		," This correction amounted to about 10%, except for"
 		," backward elastic scattering where it could be"
 		," up to 30%."]
 	}
@@ -110,9 +110,9 @@
      ,"COMMENT":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[".Correction factor are calculated using evaluated data,"
+	,"x4freetext":[" Correction factor are calculated using evaluated data,"
 		," however, they are still primitive. Calculation of cor-"
-		," rection factors should be carried out again after new"
+		," reaction factors should be carried out again after new"
 		," version of evaluation would be published. *By authors*"]
 	}
       ]
@@ -161,6 +161,11 @@
 		,"were superseded. Subents 019,037,055,073,075,081,085,"
 		,"091 were deleted (duplication with data presented in"
 		,"other Subents in Lab.system)."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20230211A", "date":"20230211", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Correction in Subents 082, 099."]
 	}
       ]
     }
@@ -45103,25 +45108,25 @@
    }
   ,{"SUBENT":"22155081", "isub":81, "compiled":20170819, "TransID":"2265", "TransDate":20180126, "nosubent":true 
    }
-  ,{"SUBENT":"22155082", "isub":82, "compiled":20101117, "TransID":"2224", "TransDate":20110208
+  ,{"SUBENT":"22155082", "isub":82, "compiled":20230211, "TransID":"2314", "TransDate":20230504
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"25-MN-55(N,EL)25-MN-55,,DA"
-	    ,"c4reac":"(N,EL),DA"
+	,"x4code":{"code":"25-MN-55(N,SCT)25-MN-55,PAR,DA"
+	    ,"c4reac":"(N,SCT)PAR,DA"
 	    ,"combi":"a"
 	    ,"MF":4
-	    ,"MT":2
 	    ,"Units":"B/SR"
 	    ,"reacs": [
-	    {"code":"25-MN-55(N,EL)25-MN-55,,DA"
-		,"Reac":"N,EL"
+	    {"code":"25-MN-55(N,SCT)25-MN-55,PAR,DA"
+		,"Reac":"N,SCT"
 		,"SF1":"25-MN-55","Targ":{"code":"25-MN-55","nam":"Mn-55","ZA":25055}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"EL","procHlp":"Elastic scattering"
+		,"SF3":"SCT","procHlp":"Total scattering (elastic + inelastic)"
 		,"SF4":"25-MN-55","Prod":{"code":"25-MN-55","nam":"Mn-55","ZA":25055}
+		,"SF5":"PAR"
 		,"SF6":"DA"
-		,"SF58":",DA","Quant":"DA","BasicUnits":"B/SR","QuantHlp":"Differential c/s with respect to angle"
+		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
 	    }]}
 	}
       ]
@@ -45176,8 +45181,29 @@
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" On. Tabulated data replaced digitized data."]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20230211A", "date":"20230211", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF3=EL -> SCT; SF5=PAR added to"
+		,"REACTION code. LVL-NUMB=0,1 added."]
+	}
       ]
     }
+    ,"COMMON":{"ncols":2, "nrows":1
+      ,"x4headers":[
+       {"icol":0, "header":"LVL-NUMB", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Level number", "pFlag":"1000000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"LVL-NUMB", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Level number", "pFlag":"1000000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ]
+      ,"datacols":[
+	 ["LVL-NUMB"  ,"LVL-NUMB"  ]
+	,["NO-DIM"    ,"NO-DIM"    ]
+	,[" "         ," "         ]]
+      ,"data":[
+	 [0,1]]}
     ,"DATA":{"ncols":3, "nrows":16
       ,"x4headers":[
        {"icol":0, "header":"ANG", "units":"ADEG", "pointer":" "
@@ -45213,14 +45239,14 @@
 	,[160,0.0138,5.4E-4]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22155082", "Pointer":" "
- ,"Subent":"22155082", "compiled":20101117
+ ,"Subent":"22155082", "compiled":20230211
  ,"year1":1992, "author1ini":"A.", "author1":"Takahashi"
- ,"zTarg1":25, "targ1":"Mn-55", "proj1":"n", "emis1":"EL", "MF":4, "MT":2, "nExpectedArgs":2
- ,"IndepVarFamilyCode":"0 2 4      ", "getYFormulaStr":"y=DATA(EN,ANG)"
- ,"ReactionType":"DA", "quant":"DA", "quantExpan":"Differential c/s with respect to angle"
- ,"reacode":"25-MN-55(N,EL)25-MN-55,,DA"
+ ,"zTarg1":25, "targ1":"Mn-55", "proj1":"n", "emis1":"SCT", "MF":4, "MT":0, "nExpectedArgs":3
+ ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVN,ANG)"
+ ,"ReactionType":"DAP", "quant":"DAP", "quantExpan":"Partial differential cross section d/dA"
+ ,"reacode":"25-MN-55(N,SCT)25-MN-55,PAR,DA"
  ,"compNotes":[]
- ,"wx4data":5
+ ,"wx4data":7
  ,"lx4data":16
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -45249,15 +45275,27 @@
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.2
     ,"com1":2.0e+5}
-  ,{"ivar":4, "cvar":"x2", "fam":"ANG", "ifComm":false, "ifCM":false
+  ,{"ivar":4, "cvar":"x2", "fam":"LVN", "ifComm":true , "ifCM":false
+    ,"header":"LVL-NUMB", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"57", "rank":2.1
+    ,"expansion":"Secondary energy: level number"
+    ,"com0":0
+    ,"com1":0}
+  ,{"ivar":5, "cvar":"x2", "fam":"LVN", "ifComm":true , "ifCM":false
+    ,"header":"LVL-NUMB", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"57", "rank":2.1
+    ,"expansion":"Secondary energy: level number"
+    ,"com0":1
+    ,"com1":1}
+  ,{"ivar":6, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
     ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
-    ,"what":"X2.Value", "dataType":"61", "rank":2.1
+    ,"what":"X3.Value", "dataType":"61", "rank":3.1
     ,"expansion":"Angle: angle"
     ,"dat0":[15,20,30,40,50,60,70,80,90,100
 	,110,120,130,140,150,160]
    ,"dat1eq":true}
   ]
- ,"wc5data":3
+ ,"wc5data":4
  ,"lc5data":16
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B/SR"
@@ -45274,10 +45312,16 @@
 	,1.41e+7,1.41e+7,1.41e+7,1.41e+7,1.41e+7,1.41e+7]
       ,"dx1":[2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5
 	,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5,2.0e+5]   }
-   ,"x2":{"icvar":2, "cvar":"x2", "fam":"ANG", "ifCM":false, "units":"ADEG"
-      ,"header":"ANG", "dataType":"61", "rank":2.0
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVN", "ifCM":false, "units":"NO-DIM"
+      ,"header":"LVN", "dataType":"57", "rank":2.0
+      ,"expansion":"Secondary energy: level number"
+      ,"x2":[1,1,1,1,1,1,1,1,1,1
+	,1,1,1,1,1,1]
+   }
+   ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
+      ,"header":"ANG", "dataType":"61", "rank":3.0
       ,"expansion":"Angle: angle"
-      ,"x2":[15,20,30,40,50,60,70,80,90,100
+      ,"x3":[15,20,30,40,50,60,70,80,90,100
 	,110,120,130,140,150,160]
    }
  }
@@ -48612,25 +48656,25 @@
 }
    ]
    }
-  ,{"SUBENT":"22155099", "isub":99, "compiled":20101117, "TransID":"2224", "TransDate":20110208
+  ,{"SUBENT":"22155099", "isub":99, "compiled":20230211, "TransID":"2314", "TransDate":20230504
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
-	,"x4code":{"code":"25-MN-55(N,EL)25-MN-55,,SIG"
-	    ,"c4reac":"(N,EL),SIG"
+	,"x4code":{"code":"25-MN-55(N,SCT)25-MN-55,PAR,SIG"
+	    ,"c4reac":"(N,SCT)PAR,SIG"
 	    ,"combi":"a"
 	    ,"MF":3
-	    ,"MT":2
 	    ,"Units":"B"
 	    ,"reacs": [
-	    {"code":"25-MN-55(N,EL)25-MN-55,,SIG"
-		,"Reac":"N,EL"
+	    {"code":"25-MN-55(N,SCT)25-MN-55,PAR,SIG"
+		,"Reac":"N,SCT"
 		,"SF1":"25-MN-55","Targ":{"code":"25-MN-55","nam":"Mn-55","ZA":25055}
 		,"SF2":"N","Proj":{"code":"N","nam":"n","ZA":1}
-		,"SF3":"EL","procHlp":"Elastic scattering"
+		,"SF3":"SCT","procHlp":"Total scattering (elastic + inelastic)"
 		,"SF4":"25-MN-55","Prod":{"code":"25-MN-55","nam":"Mn-55","ZA":25055}
+		,"SF5":"PAR"
 		,"SF6":"SIG"
-		,"SF58":",SIG","Quant":"CS","BasicUnits":"B","QuantHlp":"Cross section"
+		,"SF58":"PAR,SIG","Quant":"CSP","BasicUnits":"B","QuantHlp":"Partial cross section"
 	    }]}
 	}
       ]
@@ -48642,7 +48686,7 @@
      ,"CORRECTION":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":[".Details  see in SAN 001"]
+	,"x4freetext":[" Details see in SAN 001"]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -48673,33 +48717,45 @@
 	     ,"actHelp":"Compiled at the data center"}
 	,"x4freetext":[" On"]
 	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20230211A", "date":"20230211", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: SF3=EL -> SCT; SF5=PAR added to"
+		,"REACTION code. LVL-NUMB=0,1 added."]
+	}
       ]
     }
-    ,"DATA":{"ncols":2, "nrows":1
+    ,"DATA":{"ncols":4, "nrows":1
       ,"x4headers":[
-       {"icol":0, "header":"DATA", "units":"B", "pointer":" "
+       {"icol":0, "header":"LVL-NUMB", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Level number", "pFlag":"1000000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":1, "header":"LVL-NUMB", "units":"NO-DIM", "pointer":" "
+	,"headerHelp":"Level number", "pFlag":"1000000"
+	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
+      ,{"icol":2, "header":"DATA", "units":"B", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
-      ,{"icol":1, "header":"DATA-ERR", "units":"B", "pointer":" "
+      ,{"icol":3, "header":"DATA-ERR", "units":"B", "pointer":" "
 	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
 	,"unitsHelp":"barns","familyCode":"B","convFc":1.0,"basicUnits":"B"}
       ]
       ,"datacols":[
-	 ["DATA"      ,"DATA-ERR"  ]
-	,["B"         ,"B"         ]
-	,[" "         ," "         ]]
+	 ["LVL-NUMB"  ,"LVL-NUMB"  ,"DATA"      ,"DATA-ERR"  ]
+	,["NO-DIM"    ,"NO-DIM"    ,"B"         ,"B"         ]
+	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
-	 [1.38,0.21]]}
+	 [0,1,1.38,0.21]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22155099", "Pointer":" "
- ,"Subent":"22155099", "compiled":20101117
+ ,"Subent":"22155099", "compiled":20230211
  ,"year1":1992, "author1ini":"A.", "author1":"Takahashi"
- ,"zTarg1":25, "targ1":"Mn-55", "proj1":"n", "emis1":"EL", "MF":3, "MT":2, "nExpectedArgs":1
- ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
- ,"ReactionType":"CS", "quant":"CS", "quantExpan":"Cross section"
- ,"reacode":"25-MN-55(N,EL)25-MN-55,,SIG"
+ ,"zTarg1":25, "targ1":"Mn-55", "proj1":"n", "emis1":"SCT", "MF":3, "MT":0, "nExpectedArgs":2
+ ,"IndepVarFamilyCode":"0 23       ", "getYFormulaStr":"y=DATA(EN,LVN)"
+ ,"ReactionType":"CSP", "quant":"CSP", "quantExpan":"Partial cross section"
+ ,"reacode":"25-MN-55(N,SCT)25-MN-55,PAR,SIG"
  ,"compNotes":[]
- ,"wx4data":4
+ ,"wx4data":6
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -48726,8 +48782,20 @@
     ,"expansion":"Incident energy: energy /Error/"
     ,"com0":0.2
     ,"com1":2.0e+5}
+  ,{"ivar":4, "cvar":"x2", "fam":"LVN", "ifComm":false, "ifCM":false
+    ,"header":"LVL-NUMB", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"57", "rank":2.1
+    ,"expansion":"Secondary energy: level number"
+    ,"dat0":[0]
+   ,"dat1eq":true}
+  ,{"ivar":5, "cvar":"x2", "fam":"LVN", "ifComm":false, "ifCM":false
+    ,"header":"LVL-NUMB", "units":"NO-DIM", "basicUnits":"NO-DIM"
+    ,"what":"X2.Value", "dataType":"57", "rank":2.1
+    ,"expansion":"Secondary energy: level number"
+    ,"dat0":[1]
+   ,"dat1eq":true}
   ]
- ,"wc5data":2
+ ,"wc5data":3
  ,"lc5data":1
  ,"c5data":{
     "y":{"icvar":0, "cvar":"y", "fam":"Data", "ifCM":false, "units":"B"
@@ -48740,6 +48808,11 @@
       ,"expansion":"Incident energy: energy"
       ,"x1":[1.41e+7]
       ,"dx1":[2.0e+5]   }
+   ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVN", "ifCM":false, "units":"NO-DIM"
+      ,"header":"LVN", "dataType":"57", "rank":2.0
+      ,"expansion":"Secondary energy: level number"
+      ,"x2":[1]
+   }
  }
 }
    ]
