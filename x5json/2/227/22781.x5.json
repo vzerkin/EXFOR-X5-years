@@ -1,9 +1,9 @@
-  {"ENTRY":"22781", "updated":20200809, "TransID":"2290", "TransDate":20201008, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"22781", "updated":20230213, "TransID":"2314", "TransDate":20230504, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1996,"a1":"J.Meissner+","r1":"J,PR/C,53,459,1996"
    ,"ref":"Jour: Physical Review, Part C, Nuclear Physics, Vol.53, p.459 (1996)"
    ,"title":"Neutron capture cross section of 18O and its astrophysical implications"
    ,"x4subents":[
-   {"SUBENT":"22781001", "isub":1, "compiled":20200809, "TransID":"2290", "TransDate":20201008
+   {"SUBENT":"22781001", "isub":1, "compiled":20230213, "TransID":"2314", "TransDate":20230504
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -113,7 +113,6 @@
      ,"METHOD":[
 	{"x4pointer":" "
 	,"x4codes":[{"code":"ACTIV", "dict":"METHOD", "idict":21,"hlp":"Activation"}]
-	,"x4freetext":["  Activation"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"code":"STTA", "dict":"METHOD", "idict":21,"hlp":"Stacked target irradiation"}]
@@ -160,6 +159,11 @@
 	,"x4code":{"code":"20200809U", "date":"20200809", "act":"U", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Unimportant alterations"}
 	,"x4freetext":[" SD: Small correction in DECAY-DATA."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20230213A", "date":"20230213", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Correction in Subent 005."]
 	}
       ]
     }
@@ -708,7 +712,7 @@
 }
    ]
    }
-  ,{"SUBENT":"22781005", "isub":5, "compiled":20080603, "TransID":"2199", "TransDate":20080828
+  ,{"SUBENT":"22781005", "isub":5, "compiled":20230213, "TransID":"2314", "TransDate":20230504
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -727,14 +731,6 @@
 		,"SF6":"WID"
 		,"SF58":",WID","Quant":"RP","BasicUnits":"EV","QuantHlp":"Resonance width"
 	    }]}
-	,"x4freetext":["  Gamma width"]
-	}
-      ]
-     ,"EN-SEC":[
-	{"x4pointer":" "
-	,"x4code":null
-	,"x4freetext":["<E-EXC,8-O-19> Excitation energy of neutron supposed"
-		,"               as EN-RES by compiler"]
 	}
       ]
      ,"ERR-ANALYS":[
@@ -749,15 +745,23 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table V of main reference"]
+	,"x4freetext":[" Tables IV (Er), V of Phys.Rev.,C53(1996)459"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230213A", "date":"20230213", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Ex values were replaced with Er values"
+		," in Table IV. EN-SEC deleted."]
 	}
       ]
     }
     ,"DATA":{"ncols":3, "nrows":4
       ,"x4headers":[
-       {"icol":0, "header":"EN-RES", "units":"MEV", "pointer":" "
+       {"icol":0, "header":"EN-RES", "units":"KEV", "pointer":" "
 	,"headerHelp":"Resonance energy", "pFlag":"1000000"
-	,"unitsHelp":"MeV","familyCode":"E","convFc":1000000.0,"basicUnits":"EV"}
+	,"unitsHelp":"keV","familyCode":"E","convFc":1000.0,"basicUnits":"EV"}
       ,{"icol":1, "header":"DATA", "units":"EV", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"electron-Volts","familyCode":"E","convFc":1.0,"basicUnits":"EV"}
@@ -767,16 +771,16 @@
       ]
       ,"datacols":[
 	 ["EN-RES"    ,"DATA"      ,"DATA-ERR"  ]
-	,["MEV"       ,"EV"        ,"EV"        ]
+	,["KEV"       ,"EV"        ,"EV"        ]
 	,[" "         ," "         ," "         ]]
       ,"data":[
-	 [4.109,0.014,0.004]
-	,[4.328,0.6,0.1]
-	,[4.582,1.9,0.4]
-	,[4.703,0.5,0.1]]}
+	 [152,0.014,0.004]
+	,[371,0.6,0.1]
+	,[625,1.9,0.4]
+	,[746,0.5,0.1]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"22781005", "Pointer":" "
- ,"Subent":"22781005", "compiled":20080603
+ ,"Subent":"22781005", "compiled":20230213
  ,"year1":1996, "author1ini":"J.", "author1":"Meissner"
  ,"zTarg1":8, "targ1":"O-19", "proj1":"n", "emis1":"G", "MF":402, "MT":6031, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"01         ", "getYFormulaStr":"y=DATA(ENR)"
@@ -799,11 +803,11 @@
     ,"dat0":[0.004,0.1,0.4,0.1]
    ,"dat1eq":true}
   ,{"ivar":2, "cvar":"x1", "fam":"ENR", "ifComm":false, "ifCM":false
-    ,"header":"EN-RES", "units":"MEV", "basicUnits":"EV"
+    ,"header":"EN-RES", "units":"KEV", "basicUnits":"EV"
     ,"what":"X1.Value", "dataType":"32", "rank":1.1
     ,"expansion":"Resonance parameter: energy"
-    ,"dat0":[4.109,4.328,4.582,4.703]
-    ,"dat1":[4.109e+6,4.328e+6,4.582e+6,4.703e+6]}
+    ,"dat0":[152,371,625,746]
+    ,"dat1":[1.52e+5,3.71e+5,6.25e+5,7.46e+5]}
   ]
  ,"wc5data":2
  ,"lc5data":4
@@ -816,7 +820,7 @@
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"ENR", "ifCM":false, "units":"EV"
       ,"header":"ENR", "dataType":"32", "rank":1.0
       ,"expansion":"Resonance parameter: energy"
-      ,"x1":[4.109e+6,4.328e+6,4.582e+6,4.703e+6]
+      ,"x1":[1.52e+5,3.71e+5,6.25e+5,7.46e+5]
    }
  }
 }
