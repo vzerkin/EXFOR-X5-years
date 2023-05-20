@@ -1,9 +1,9 @@
-  {"ENTRY":"O1033", "updated":20110314, "TransID":"O045", "TransDate":20110913, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
+  {"ENTRY":"O1033", "updated":20230521, "TransID":"O096", "TransDate":20231025, "CenterID":"NEA-DB", "Center":"OECD/NEA Nuclear Data Bank, Boulogne-Billancourt, France"
    ,"y1":1972,"a1":"C.S.Lin+","r1":"J,CHP,10,84,1972"
    ,"ref":"Jour: Chinese Journal of Physics (Taiwan), Vol.10, p.84 (1972)"
    ,"title":"Studies of the Al-27(He3,He3)Al-27 and Al-27(He3,alpha) reactions."
    ,"x4subents":[
-   {"SUBENT":"O1033001", "isub":1, "compiled":20110314, "TransID":"O045", "TransDate":20110913
+   {"SUBENT":"O1033001", "isub":1, "compiled":20230521, "TransID":"O096", "TransDate":20231025
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -25,10 +25,8 @@
       ]
      ,"INSTITUTE":[
 	{"x4pointer":" "
-	,"x4codes":[{"code":"3CHFTHU", "dict":"INSTITUTE", "idict":3,"hlp":"National Tsing Hua Univ., Hsin-Chu, China, Taiwan"}]
-	}
-	,{"x4pointer":" "
-	,"x4codes":[{"code":"3CHFSHI", "dict":"INSTITUTE", "idict":3,"hlp":"Institute of Nuclear Energy Research, Lung-Tan, China, Taiwan"}]
+	,"x4codes":[{"code":"3CHFTHU", "dict":"INSTITUTE", "idict":3,"hlp":"National Tsing Hua Univ., Hsin-Chu, China, Taiwan"}
+	    ,{"code":"3CHFSHI", "dict":"INSTITUTE", "idict":3,"hlp":"Institute of Nuclear Energy Research, Lung-Tan, China, Taiwan"}]
 	}
       ]
      ,"REFERENCE":[
@@ -110,8 +108,13 @@
 	,{"x4pointer":" "
 	,"x4code":{"code":"20110314A", "date":"20110314", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" SD: Data in Subent 003 were redigitized."
+	,"x4freetext":[" SD: Data in Subent 003 were re-digitized."
 		,"                Subent 003 split on two."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20230521A", "date":"20230521", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" SD: Correction in Subent 004."]
 	}
       ]
     }
@@ -794,7 +797,7 @@
 }
    ]
    }
-  ,{"SUBENT":"O1033004", "isub":4, "compiled":20110314, "TransID":"O045", "TransDate":20110913
+  ,{"SUBENT":"O1033004", "isub":4, "compiled":20230521, "TransID":"O096", "TransDate":20231025
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -815,7 +818,6 @@
 		,"SF6":"DA"
 		,"SF58":"PAR,DA","Quant":"DAP","BasicUnits":"B/SR","QuantHlp":"Partial differential cross section d/dA"
 	    }]}
-	,"x4freetext":[" Fig. 7-8."]
 	}
       ]
      ,"PART-DET":[
@@ -831,8 +833,8 @@
      ,"COMMENT":[
 	{"x4pointer":" "
 	,"x4code":null
-	,"x4freetext":["- By authors. Excited state which is marked as 1760"
-		,"KeV is 1760+1852 KeV doublet."
+	,"x4freetext":["- By authors. Excited state which is marked as 1760 keV"
+		,"is 1760+1852 keV doublet."
 		,"Excited state which is marked as 2.072-MeV is 2.072+"
 		,"2.080 MeV doublet."]
 	}
@@ -841,26 +843,33 @@
 	{"x4pointer":" "
 	,"x4code":{"header":"ERR-S"
 	     ,"headerHelp":"Statistical uncertainty (1-Sigma)"}
-	,"x4freetext":[" The error bars are indicated on figures."]
+	,"x4freetext":[" Statistical error"]
 	}
 	,{"x4pointer":" "
-	,"x4code":{"header":"DATA-ERR"
-	     ,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS"}
-	,"x4freetext":[" The absolute errors of the measured"
-		,"differential cross sections were estimated to be"
-		,"within 10%."]
+	,"x4code":{"header":"ERR-T"
+	     ,"headerHelp":"Total uncertainty (1-Sigma)"}
+	,"x4freetext":[" The absolute errors"]
 	}
-	,{"x4pointer":" "
-	,"x4code":{"header":"ANG-ERR-D"
-	     ,"headerHelp":"Digitizing error of angle"}
-	,"x4freetext":[".Data-point reader uncertainty."]
+      ]
+     ,"STATUS":[
+	{"x4pointer":" "
+	,"x4codes":[{"code":"CURVE"
+		,"flag":"CURVE", "help":"Data read from a curve"
+		}]
+	,"x4freetext":[" Figs 7-8 from Chinese J. of Physics,10(1972)84"]
 	}
       ]
      ,"HISTORY":[
 	{"x4pointer":" "
 	,"x4code":{"code":"20110314A", "date":"20110314", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
-	,"x4freetext":[" SD: Data were redigitized."]
+	,"x4freetext":[" SD: Data were re-digitized."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20230521U", "date":"20230521", "act":"U", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Unimportant alterations"}
+	,"x4freetext":[" SD: STATUS added. Col.DATA-ERR in DATA"
+		,"section renamed (ERR-S)."]
 	}
       ]
     }
@@ -875,12 +884,12 @@
       ,{"icol":2, "header":"ERR-DIG", "units":"MB/SR", "pointer":" "
 	,"headerHelp":"Digitizing error (of DATA)", "pFlag":"0009550"
 	,"unitsHelp":"millibarns per steradian","familyCode":"DA","convFc":0.001,"basicUnits":"B/SR"}
-      ,{"icol":3, "header":"DATA-ERR", "units":"PER-CENT", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":3, "header":"ERR-T", "units":"PER-CENT", "pointer":" "
+	,"headerHelp":"Total uncertainty (1-Sigma)", "pFlag":"0009110"
 	,"unitsHelp":"per-cent","familyCode":"PC","convFc":1.0,"basicUnits":"PER-CENT"}
       ]
       ,"datacols":[
-	 ["EN"        ,"ANG-ERR-D" ,"ERR-DIG"   ,"DATA-ERR"  ]
+	 ["EN"        ,"ANG-ERR-D" ,"ERR-DIG"   ,"ERR-T"     ]
 	,["MEV"       ,"ADEG"      ,"MB/SR"     ,"PER-CENT"  ]
 	,[" "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -899,12 +908,12 @@
       ,{"icol":3, "header":"DATA", "units":"MB/SR", "pointer":" "
 	,"headerHelp":"Value of quantity specified under REACTION", "pFlag":"0001000"
 	,"unitsHelp":"millibarns per steradian","familyCode":"DA","convFc":0.001,"basicUnits":"B/SR"}
-      ,{"icol":4, "header":"DATA-ERR", "units":"MB/SR", "pointer":" "
-	,"headerHelp":"Error in value of quantity, defined under ERR-ANALYS", "pFlag":"0009110"
+      ,{"icol":4, "header":"ERR-S", "units":"MB/SR", "pointer":" "
+	,"headerHelp":"Statistical uncertainty (1-Sigma)", "pFlag":"0009440"
 	,"unitsHelp":"millibarns per steradian","familyCode":"DA","convFc":0.001,"basicUnits":"B/SR"}
       ]
       ,"datacols":[
-	 ["E-LVL"     ,"E-LVL"     ,"ANG"       ,"DATA"      ,"DATA-ERR"  ]
+	 ["E-LVL"     ,"E-LVL"     ,"ANG"       ,"DATA"      ,"ERR-S"     ]
 	,["MEV"       ,"MEV"       ,"ADEG"      ,"MB/SR"     ,"MB/SR"     ]
 	,[" "         ," "         ," "         ," "         ," "         ]]
       ,"data":[
@@ -934,7 +943,7 @@
 	,[2.072,2.08,159.5,0.25295,0.00561]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"O1033004", "Pointer":" "
- ,"Subent":"O1033004", "compiled":20110314
+ ,"Subent":"O1033004", "compiled":20230521
  ,"year1":1972, "author1ini":"C.S.", "author1":"Lin"
  ,"zTarg1":13, "targ1":"Al-27", "proj1":"he3", "emis1":"A", "MF":4, "MT":801, "nExpectedArgs":3
  ,"IndepVarFamilyCode":"0 234      ", "getYFormulaStr":"y=DATA(EN,LVL,ANG)"
@@ -956,14 +965,14 @@
 	,3.77e-5,5.017e-5,2.1531e-4,2.2329e-4,2.039e-4,2.2968e-4,1.8721e-4,1.8892e-4,1.8932e-4,1.5673e-4
 	,2.0725e-4,2.0171e-4,1.7605e-4,2.5295e-4]}
   ,{"ivar":1, "cvar":"dy", "fam":"Data", "ifComm":true , "ifCM":false
-    ,"header":"DATA-ERR", "units":"PER-CENT", "basicUnits":"PER-CENT"
+    ,"header":"ERR-T", "units":"PER-CENT", "basicUnits":"PER-CENT"
     ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
     ,"expansion":"Data: data /Error/"
     ,"com0":10
     ,"com1":10}
   ,{"ivar":2, "cvar":"dy", "fam":"Data", "ifComm":false, "ifCM":false
-    ,"header":"DATA-ERR", "units":"MB/SR", "basicUnits":"B/SR"
-    ,"what":"Y.Err+-", "dataType":"21", "rank":0.911
+    ,"header":"ERR-S", "units":"MB/SR", "basicUnits":"B/SR"
+    ,"what":"Y.sErr+-", "dataType":"21", "rank":0.944
     ,"expansion":"Data: data /Error/"
     ,"dat0":[0.00359,0.00326,0.0031,0.00359,0.0031,0.00326,0.00261,0.00261,0.00277,0.00228
 	,0.0031,0.00277,0.00693,0.00692,0.0066,0.00693,0.0066,0.00528,0.0066,0.0066
@@ -993,22 +1002,22 @@
     ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
     ,"what":"X2.Value", "dataType":"52", "rank":2.1
     ,"expansion":"Secondary energy: level energy"
-    ,"dat0":[1.76,1.76,1.76,1.76,1.76,1.76,1.76,1.76,1.76,1.76
-	,1.76,1.76,2.072,2.072,2.072,2.072,2.072,2.072,2.072,2.072
-	,2.072,2.072,2.072,2.072]
-    ,"dat1":[1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6
-	,1.76e+6,1.76e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6
-	,2.072e+6,2.072e+6,2.072e+6,2.072e+6]}
-  ,{"ivar":7, "cvar":"x2", "fam":"LVL", "ifComm":false, "ifCM":false
-    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
-    ,"what":"X2.Value", "dataType":"52", "rank":2.1
-    ,"expansion":"Secondary energy: level energy"
     ,"dat0":[1.852,1.852,1.852,1.852,1.852,1.852,1.852,1.852,1.852,1.852
 	,1.852,1.852,2.08,2.08,2.08,2.08,2.08,2.08,2.08,2.08
 	,2.08,2.08,2.08,2.08]
     ,"dat1":[1.852e+6,1.852e+6,1.852e+6,1.852e+6,1.852e+6,1.852e+6,1.852e+6,1.852e+6,1.852e+6,1.852e+6
 	,1.852e+6,1.852e+6,2.08e+6,2.08e+6,2.08e+6,2.08e+6,2.08e+6,2.08e+6,2.08e+6,2.08e+6
 	,2.08e+6,2.08e+6,2.08e+6,2.08e+6]}
+  ,{"ivar":7, "cvar":"x2", "fam":"LVL", "ifComm":false, "ifCM":false
+    ,"header":"E-LVL", "units":"MEV", "basicUnits":"EV"
+    ,"what":"X2.Value", "dataType":"52", "rank":2.1
+    ,"expansion":"Secondary energy: level energy"
+    ,"dat0":[1.76,1.76,1.76,1.76,1.76,1.76,1.76,1.76,1.76,1.76
+	,1.76,1.76,2.072,2.072,2.072,2.072,2.072,2.072,2.072,2.072
+	,2.072,2.072,2.072,2.072]
+    ,"dat1":[1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6
+	,1.76e+6,1.76e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6
+	,2.072e+6,2.072e+6,2.072e+6,2.072e+6]}
   ,{"ivar":8, "cvar":"x3", "fam":"ANG", "ifComm":false, "ifCM":false
     ,"header":"ANG", "units":"ADEG", "basicUnits":"ADEG"
     ,"what":"X3.Value", "dataType":"61", "rank":3.1
@@ -1035,7 +1044,10 @@
 	,2.0725e-4,2.0171e-4,1.7605e-4,2.5295e-4]
       ,"dy":[1.7203e-5,5.909e-6,4.888e-6,8.32e-6,6.402e-6,7.714e-6,7.134e-6,4.842e-6,5.974e-6,5.019e-6
 	,3.77e-6,5.017e-6,2.1531e-5,2.2329e-5,2.039e-5,2.2968e-5,1.8721e-5,1.8892e-5,1.8932e-5,1.5673e-5
-	,2.0725e-5,2.0171e-5,1.7605e-5,2.5295e-5]   }
+	,2.0725e-5,2.0171e-5,1.7605e-5,2.5295e-5]
+      ,"dystat":[3.59e-6,3.26e-6,3.1e-6,3.59e-6,3.1e-6,3.26e-6,2.61e-6,2.61e-6,2.77e-6,2.28e-6
+	,3.1e-6,2.77e-6,6.93e-6,6.92e-6,6.6e-6,6.93e-6,6.6e-6,5.28e-6,6.6e-6,6.6e-6
+	,6.93e-6,5.94e-6,5.93e-6,5.61e-6]   }
    ,"x1":{"icvar":1, "cvar":"x1", "fam":"EN", "ifCM":false, "units":"EV"
       ,"header":"EN", "dataType":"41", "rank":1.0
       ,"expansion":"Incident energy: energy"
@@ -1048,9 +1060,9 @@
    ,"x2":{"icvar":2, "cvar":"x2", "fam":"LVL", "ifCM":false, "units":"EV"
       ,"header":"LVL", "dataType":"52", "rank":2.0
       ,"expansion":"Secondary energy: level energy"
-      ,"x2":[1.852e+6,1.852e+6,1.852e+6,1.852e+6,1.852e+6,1.852e+6,1.852e+6,1.852e+6,1.852e+6,1.852e+6
-	,1.852e+6,1.852e+6,2.08e+6,2.08e+6,2.08e+6,2.08e+6,2.08e+6,2.08e+6,2.08e+6,2.08e+6
-	,2.08e+6,2.08e+6,2.08e+6,2.08e+6]
+      ,"x2":[1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6,1.76e+6
+	,1.76e+6,1.76e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6,2.072e+6
+	,2.072e+6,2.072e+6,2.072e+6,2.072e+6]
    }
    ,"x3":{"icvar":3, "cvar":"x3", "fam":"ANG", "ifCM":false, "units":"ADEG"
       ,"header":"ANG", "dataType":"61", "rank":3.0
