@@ -1,9 +1,9 @@
-  {"ENTRY":"41614", "updated":20210317, "TransID":"4195", "TransDate":20210810, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
+  {"ENTRY":"41614", "updated":20230717, "TransID":"4213", "TransDate":20230908, "CenterID":"CJD", "Center":"Nuclear Data Centre, Obninsk, Russia"
    ,"y1":2016,"a1":"A.A.Filatenkov","r1":"R,INDC(CCP)-0460,2016"
    ,"ref":"Rept: USSR report to the I.N.D.C., No.0460 (2016)"
    ,"title":"Neutron activation cross sections measured at KRI in neutron energy region 13.4 - 14.9 MeV"
    ,"x4subents":[
-   {"SUBENT":"41614001", "isub":1, "compiled":20210317, "TransID":"4195", "TransDate":20210810
+   {"SUBENT":"41614001", "isub":1, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "TITLE":[
 	{"x4pointer":" "
@@ -188,6 +188,11 @@
 	,"x4code":{"code":"20210317A", "date":"20210317", "act":"A", "dict":"HISTORY", "idict":15
 	     ,"actHelp":"Important alterations"}
 	,"x4freetext":[" Subent 004 was corrected."]
+	}
+	,{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" Many Subents were corrected."]
 	}
       ]
     }
@@ -5221,7 +5226,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614023", "isub":23, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614023", "isub":23, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -5253,6 +5258,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"27-CO-58-G", "t12":70.86, "t12units":"D", "t12sec":6122304.0
 	, "Radiations":[ {"Type":"DG", "Energy":[810.8], "Intensity":0.9945}]}]
+	,"x4freetext":[" HL=70.86+-0.06 d, IDD=99.450+-0.010 %"]
 	}
       ]
      ,"MONITOR":[
@@ -5282,25 +5288,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 53 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.013 data"]
+		,"                 This Subent supersedes 41240.013 data"
+		,". This Subent .023 and Subent .024 supersede 41240.121"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"D", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"days","familyCode":"TIME","convFc":86400.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["D"         ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.06,1.0E-4]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -5336,7 +5338,7 @@
 	,[14.78,740,3.4,0.574,460.19,0.565]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614023", "Pointer":" "
- ,"Subent":"41614023", "compiled":20160512
+ ,"Subent":"41614023", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":27, "targ1":"Co-59", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -5355,7 +5357,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":7
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -5418,18 +5420,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[454.03,456.68,458.83,459.95,460.12,460.15,460.19]
     ,"dat1":[0.45403,0.45668,0.45883,0.45995,0.46012,0.46015,0.46019]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"D", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.06
-    ,"com1":5184}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":1.0e-4
-    ,"com1":1.0e-4}
   ]
  ,"wc5data":2
  ,"lc5data":7
@@ -5456,7 +5446,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614024", "isub":24, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614024", "isub":24, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -5488,7 +5478,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"27-CO-58-G", "t12":70.86, "t12units":"D", "t12sec":6122304.0
 	, "Radiations":[ {"Type":"DG", "Energy":[810.8], "Intensity":0.9945}]}]
-	,"x4freetext":["  70.86+-0.06 d"]
+	,"x4freetext":["70.86+-0.06 d, IDD=99.450+-0.010 %"]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"Nucl":"27-CO-58-M", "t12":9.1, "t12units":"HR", "t12sec":32760.0
@@ -5539,22 +5529,21 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"41614023"
 		}]
-	,"x4freetext":[" CS for ground state,see ANALYSIS"]
+	,"x4freetext":[" CS for ground state,see ANALYSIS"
+		,". This Subent .024 and Subent .023 supersede 41240.121"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-IDD was moved from COMMON block"
+		,"into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-IDD"   ]
-	,["NO-DIM"    ]
-	,[" "         ]]
-      ,"data":[
-	 [1.0E-4]]}
     ,"DATA":{"ncols":5, "nrows":7
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -5587,7 +5576,7 @@
 	,[14.78,481,3.98,460.19,0.565]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614024", "Pointer":" "
- ,"Subent":"41614024", "compiled":20160512
+ ,"Subent":"41614024", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":27, "targ1":"Co-59", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -5606,7 +5595,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":10
+ ,"wx4data":9
  ,"lx4data":7
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -5663,12 +5652,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[454.03,456.68,458.83,459.95,460.12,460.15,460.19]
     ,"dat1":[0.45403,0.45668,0.45883,0.45995,0.46012,0.46015,0.46019]}
-  ,{"ivar":9, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":1.0e-4
-    ,"com1":1.0e-4}
   ]
  ,"wc5data":2
  ,"lc5data":7
@@ -5964,7 +5947,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614026", "isub":26, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614026", "isub":26, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -5999,6 +5982,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"27-CO-58-G", "t12":70.86, "t12units":"D", "t12sec":6122304.0
 	, "Radiations":[ {"Type":"DG", "Energy":[810.8], "Intensity":0.9945}]}]
+	,"x4freetext":[" HL=70.86+-0.06 d, IDD=99.450+-0.010 %"]
 	}
       ]
      ,"MONITOR":[
@@ -6028,25 +6012,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 56 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.020 data"]
+		,"                 This Subent supersedes 41240.020 data"
+		,". This Subent .026 and Subent .027 supersede 41240.122"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"D", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"days","familyCode":"TIME","convFc":86400.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["D"         ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.06,1.0E-4]]}
     ,"DATA":{"ncols":6, "nrows":15
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -6090,7 +6070,7 @@
 	,[14.86,278,6.11,0.598,460.24,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614026", "Pointer":" "
- ,"Subent":"41614026", "compiled":20160512
+ ,"Subent":"41614026", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":28, "targ1":"Ni-58", "proj1":"n", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -6109,7 +6089,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":15
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -6181,18 +6161,6 @@
 	,460.13,460.15,460.17,460.19,460.24]
     ,"dat1":[0.4524,0.45403,0.45531,0.45668,0.45818,0.45883,0.45939,0.45995,0.46009,0.46012
 	,0.46013,0.46015,0.46017,0.46019,0.46024]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"D", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.06
-    ,"com1":5184}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":1.0e-4
-    ,"com1":1.0e-4}
   ]
  ,"wc5data":2
  ,"lc5data":15
@@ -6229,7 +6197,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614027", "isub":27, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614027", "isub":27, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -6264,7 +6232,6 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"27-CO-58-G", "t12":70.86, "t12units":"D", "t12sec":6122304.0
 	, "Radiations":[ {"Type":"DG", "Energy":[810.8]}]}]
-	,"x4freetext":[" 70.86+-0.06 d ."]
 	}
 	,{"x4pointer":" "
 	,"x4codes":[{"Nucl":"27-CO-58-M", "t12":9.1, "t12units":"HR", "t12sec":32760.0
@@ -6317,7 +6284,9 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"41614026"
 		}]
-	,"x4freetext":[" Total n,p CS, see ANALYSIS"]
+	,"x4freetext":[" Total n,p CS, see ANALYSIS"
+		,". This Subent .027 and Subent .026 supersede 41240.122"
+		," - cross sections ratio."]
 	}
       ]
     }
@@ -6361,7 +6330,7 @@
 	,[14.86,157,6.19,460.24,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614027", "Pointer":" "
- ,"Subent":"41614027", "compiled":20160512
+ ,"Subent":"41614027", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":28, "targ1":"Ni-58", "proj1":"n", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -8677,7 +8646,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614037", "isub":37, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614037", "isub":37, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -8714,7 +8683,8 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[253.7], "Intensity":0.0236}
 			,{"Type":"DG", "Energy":[84.0], "Intensity":0.0203}
 			,{"Type":"DG", "Energy":[393.4], "Intensity":0.0163}]}]
-	,"x4freetext":[" 84.0keV - 2.03+-0.19 ; 253.7keV - 2.36+-0.19 % ,"
+	,"x4freetext":[" HL=39.8+-1.3 min; IDD :"
+		," 84.0keV - 2.03+-0.19 , 253.7keV - 2.36+-0.19 % ,"
 		," 393.4keV - 1.63+-0.13 % ."]
 	}
       ]
@@ -8756,22 +8726,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 67 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41424.010"]
+		,"                 This Subent supersedes 41424.010"
+		,". This Subent .037 and Subent .038 supersede 41240.057"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON block into"
+		,"free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"MIN", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"minutes","familyCode":"TIME","convFc":60.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["MIN"       ]
-	,[" "         ]]
-      ,"data":[
-	 [1.3]]}
     ,"DATA":{"ncols":6, "nrows":6
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -8806,7 +8775,7 @@
 	,[14.81,212,13.9,10,110.94,0.437]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614037", "Pointer":" "
- ,"Subent":"41614037", "compiled":20160512
+ ,"Subent":"41614037", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":34, "targ1":"Se-74", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -8825,7 +8794,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":6
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -8888,12 +8857,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[125.46,123.34,121.59,118.88,116.35,110.94]
     ,"dat1":[0.12546,0.12334,0.12159,0.11888,0.11635,0.11094]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"MIN", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":1.3
-    ,"com1":78}
   ]
  ,"wc5data":2
  ,"lc5data":6
@@ -8920,7 +8883,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614038", "isub":38, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614038", "isub":38, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -8955,6 +8918,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"34-SE-73-G", "t12":7.15, "t12units":"HR", "t12sec":25740.0
 	, "Radiations":[ {"Type":"DG", "Energy":[361.2], "Intensity":0.97}]}]
+	,"x4freetext":[" HL=7.15+-0.08 hr, IDD=97.0+-1.0 %"]
 	}
       ]
      ,"MONITOR":[
@@ -8985,25 +8949,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 68 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41424.011"]
+		,"                 This Subent supersedes 41424.011"
+		,". This Subent .038 and Subent .037 supersede 41240.057"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"HR", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["HR"        ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.08,0.01]]}
     ,"DATA":{"ncols":6, "nrows":6
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -9038,7 +8998,7 @@
 	,[14.81,230,13,4.82,110.94,0.437]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614038", "Pointer":" "
- ,"Subent":"41614038", "compiled":20160512
+ ,"Subent":"41614038", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":34, "targ1":"Se-74", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -9057,7 +9017,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":6
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -9120,18 +9080,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[125.46,123.34,121.59,118.88,116.35,110.94]
     ,"dat1":[0.12546,0.12334,0.12159,0.11888,0.11635,0.11094]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"HR", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.08
-    ,"com1":288}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.01
-    ,"com1":0.01}
   ]
  ,"wc5data":2
  ,"lc5data":6
@@ -11335,7 +11283,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614048", "isub":48, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614048", "isub":48, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -11361,6 +11309,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"34-SE-81-M", "t12":57.28, "t12units":"MIN", "t12sec":3436.8
 	, "Radiations":[ {"Type":"DG", "Energy":[103.0], "Intensity":0.133}]}]
+	,"x4freetext":["HL=57.28+-0.02 min, IDD=13.3+-0.3 %"]
 	}
       ]
      ,"SAMPLE":[
@@ -11400,25 +11349,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 78 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41424.018"]
+		,"                 This Subent supersedes 41424.018"
+		,". This Subent .048 and Subent .049 supersede 41240.058"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"MIN", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"minutes","familyCode":"TIME","convFc":60.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["MIN"       ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.02,0.003]]}
     ,"DATA":{"ncols":6, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -11455,7 +11400,7 @@
 	,[14.84,1119,23.3,3.47,110.49,0.437]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614048", "Pointer":" "
- ,"Subent":"41614048", "compiled":20160512
+ ,"Subent":"41614048", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":34, "targ1":"Se-82", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -11483,7 +11428,7 @@
 	,"   a1=0.133/0.128;             #[1]#DECAY-DATA: correction to new 103.01 keV gamma-yield per decay Se-81-m Ix_new=0.128"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=1.0390625"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -11546,18 +11491,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[125.46,123.34,121.59,118.88,116.35,113.44,110.94,110.49]
     ,"dat1":[0.12546,0.12334,0.12159,0.11888,0.11635,0.11344,0.11094,0.11049]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"MIN", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.02
-    ,"com1":1.2}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.003
-    ,"com1":0.003}
   ]
  ,"wc5data":2
  ,"lc5data":8
@@ -11584,7 +11517,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614049", "isub":49, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614049", "isub":49, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -11610,6 +11543,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"34-SE-81-G", "t12":18.45, "t12units":"MIN", "t12sec":1107.0
 	, "Radiations":[ {"Type":"DG", "Energy":[290.0], "Intensity":0.0056}]}]
+	,"x4freetext":[" Hl=18.45+-0.12 min, IDD=0.56+-0.06 %"]
 	}
       ]
      ,"SAMPLE":[
@@ -11649,25 +11583,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 79 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41424.019"]
+		,"                 This Subent supersedes 41424.019"
+		,". This Subent .049 and Subent .048 supersede 41240.058"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"MIN", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"minutes","familyCode":"TIME","convFc":60.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["MIN"       ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.12,6.0E-4]]}
     ,"DATA":{"ncols":6, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -11704,7 +11634,7 @@
 	,[14.84,372,26.3,11.1,110.49,0.437]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614049", "Pointer":" "
- ,"Subent":"41614049", "compiled":20160512
+ ,"Subent":"41614049", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":34, "targ1":"Se-82", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -11723,7 +11653,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -11786,18 +11716,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[125.46,123.34,121.59,118.88,116.35,113.44,110.94,110.49]
     ,"dat1":[0.12546,0.12334,0.12159,0.11888,0.11635,0.11344,0.11094,0.11049]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"MIN", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.12
-    ,"com1":7.2}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":6.0e-4
-    ,"com1":6.0e-4}
   ]
  ,"wc5data":2
  ,"lc5data":8
@@ -12522,7 +12440,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614053", "isub":53, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614053", "isub":53, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -12554,6 +12472,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"37-RB-86-M", "t12":1.017, "t12units":"MIN", "t12sec":61.02
 	, "Radiations":[ {"Type":"DG", "Energy":[556.1], "Intensity":0.982}]}]
+	,"x4freetext":[" HL=1.017+-0.003 min, IDD=98.20+-0.06 %"]
 	}
       ]
      ,"MONITOR":[
@@ -12584,25 +12503,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 83 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.027"]
+		,"                 This Subent supersedes 41240.027"
+		,". This Subent .053 and Subent .054 supersede 41240.123"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"MIN", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"minutes","familyCode":"TIME","convFc":60.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["MIN"       ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.003,6.0E-4]]}
     ,"DATA":{"ncols":6, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -12639,7 +12554,7 @@
 	,[14.78,2,9.49,0.59,111.38,0.385]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614053", "Pointer":" "
- ,"Subent":"41614053", "compiled":20160512
+ ,"Subent":"41614053", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":39, "targ1":"Y-89", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -12658,7 +12573,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -12721,18 +12636,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[125.46,125.03,123.43,121.71,118.88,116.49,113.73,111.38]
     ,"dat1":[0.12546,0.12503,0.12343,0.12171,0.11888,0.11649,0.11373,0.11138]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"MIN", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.003
-    ,"com1":0.18}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":6.0e-4
-    ,"com1":6.0e-4}
   ]
  ,"wc5data":2
  ,"lc5data":8
@@ -12759,7 +12662,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614054", "isub":54, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614054", "isub":54, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -12791,6 +12694,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"37-RB-86-G", "t12":18.642, "t12units":"D", "t12sec":1610668.8
 	, "Radiations":[ {"Type":"DG", "Energy":[1077.0], "Intensity":0.0864}]}]
+	,"x4freetext":[" HL=18.642+-0.018 d, IDD=8.64+-0.04 %"]
 	}
       ]
      ,"MONITOR":[
@@ -12820,25 +12724,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 84 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.028 data"]
+		,"                 This Subent supersedes 41240.028 data"
+		,". This Subent .054 and Subent .053 supersede 41240.123"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"D", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"days","familyCode":"TIME","convFc":86400.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["D"         ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.018,4.0E-4]]}
     ,"DATA":{"ncols":6, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -12875,7 +12775,7 @@
 	,[14.86,7.43,16.3,0.758,460.24,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614054", "Pointer":" "
- ,"Subent":"41614054", "compiled":20160512
+ ,"Subent":"41614054", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":39, "targ1":"Y-89", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -12894,7 +12794,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -12957,18 +12857,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[452.4,455.46,458.18,459.34,460.09,460.13,460.17,460.24]
     ,"dat1":[0.4524,0.45546,0.45818,0.45934,0.46009,0.46013,0.46017,0.46024]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"D", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.018
-    ,"com1":1555.2}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":4.0e-4
-    ,"com1":4.0e-4}
   ]
  ,"wc5data":2
  ,"lc5data":8
@@ -13960,7 +13848,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614059", "isub":59, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614059", "isub":59, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -13996,7 +13884,8 @@
 	,"x4codes":[{"Nucl":"40-ZR-89-M", "t12":4.161, "t12units":"MIN", "t12sec":249.66
 	, "Radiations":[ {"Type":"DG", "Energy":[587.8], "Intensity":0.8962}
 			,{"Type":"DG", "Energy":[1507.4], "Intensity":0.0606}]}]
-	,"x4freetext":[" 587.8keV - 89.62+-0.17 % , 1507.4keV - 6.06+-0.18 % ."]
+	,"x4freetext":[" HL=4.161+-0.010 MIN, IDD:"
+		," 587.8keV - 89.62+-0.17 % , 1507.4keV - 6.06+-0.18 % ."]
 	}
       ]
      ,"COMMENT":[
@@ -14037,22 +13926,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 89 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.032 data"]
+		,"                 This Subent supersedes 41240.032 data"
+		,". This Subent .059 and Subent .060 supersede 41240.124"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON block into"
+		,"free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"MIN", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"minutes","familyCode":"TIME","convFc":60.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["MIN"       ]
-	,[" "         ]]
-      ,"data":[
-	 [0.01]]}
     ,"DATA":{"ncols":6, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -14089,7 +13977,7 @@
 	,[14.81,141.1,2.42,0.979,110.94,0.437]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614059", "Pointer":" "
- ,"Subent":"41614059", "compiled":20160512
+ ,"Subent":"41614059", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":40, "targ1":"Zr-90", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -14108,7 +13996,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -14171,12 +14059,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[125.46,124.98,123.43,121.71,118.88,116.35,113.59,110.94]
     ,"dat1":[0.12546,0.12498,0.12343,0.12171,0.11888,0.11635,0.11359,0.11094]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"MIN", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.01
-    ,"com1":0.6}
   ]
  ,"wc5data":2
  ,"lc5data":8
@@ -14203,7 +14085,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614060", "isub":60, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614060", "isub":60, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -14267,7 +14149,9 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 90 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.033 data"]
+		,"                 This Subent supersedes 41240.033 data"
+		,". This Subent .060 and Subent .059 supersede 41240.124"
+		," - cross sections ratio."]
 	}
       ]
     }
@@ -14306,7 +14190,7 @@
 	,[14.78,785,1.94,0.976,460.19,0.565]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614060", "Pointer":" "
- ,"Subent":"41614060", "compiled":20160512
+ ,"Subent":"41614060", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":40, "targ1":"Zr-90", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -15138,7 +15022,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614064", "isub":64, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614064", "isub":64, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -15171,7 +15055,8 @@
 	,"x4codes":[{"Nucl":"39-Y-90-M", "t12":3.19, "t12units":"HR", "t12sec":11484.0
 	, "Radiations":[ {"Type":"DG", "Energy":[472.5], "Intensity":0.9074}
 			,{"Type":"DG", "Energy":[202.5], "Intensity":0.973}]}]
-	,"x4freetext":[" 202.5keV - 97.3+-0.4 % , 472.5keV - 90.74+-0.05 % ."]
+	,"x4freetext":[" HL=3.19+-0.06 hr, IDD:"
+		," 202.5keV - 97.3+-0.4 % , 472.5keV - 90.74+-0.05 % ."]
 	}
       ]
      ,"COMMENT":[
@@ -15212,22 +15097,22 @@
 		}]
 	,"x4freetext":[" Table on page 94 in R,INDC(CCP)-0460,2016"
 		,"                 This Subent supersedes 41240.037 data"
-		,"                 This Subent supersedes 41424.020 data"]
+		,"                 This Subent supersedes 41424.020 data"
+		,". This Subent .064 and Subent .065 supersede 41424.021"
+		,". This Subent .064 and Subent .065 supersede 41424.059"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON block into"
+		,"free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"HR", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["HR"        ]
-	,[" "         ]]
-      ,"data":[
-	 [0.06]]}
     ,"DATA":{"ncols":6, "nrows":15
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -15271,7 +15156,7 @@
 	,[14.86,5.84,4.12,2.7,460.24,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614064", "Pointer":" "
- ,"Subent":"41614064", "compiled":20160512
+ ,"Subent":"41614064", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -15290,7 +15175,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":15
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -15362,12 +15247,6 @@
 	,460.13,460.15,460.17,460.19,460.24]
     ,"dat1":[0.4524,0.45403,0.4556,0.45668,0.45818,0.45883,0.45939,0.45995,0.46007,0.46012
 	,0.46013,0.46015,0.46017,0.46019,0.46024]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"HR", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.06
-    ,"com1":216}
   ]
  ,"wc5data":2
  ,"lc5data":15
@@ -15404,7 +15283,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614065", "isub":65, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614065", "isub":65, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -15491,7 +15370,10 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"41614064"
 		}]
-	,"x4freetext":[" CS for metastable state."]
+	,"x4freetext":[" CS for metastable state."
+		,". This Subent .065 and Subent .064 supersede 41424.021"
+		,". This Subent .065 and Subent .064 supersede 41424.059"
+		," - cross sections ratio."]
 	}
       ]
     }
@@ -15535,7 +15417,7 @@
 	,[14.86,13.5,7.79,460.24,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614065", "Pointer":" "
- ,"Subent":"41614065", "compiled":20160512
+ ,"Subent":"41614065", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":41, "targ1":"Nb-93", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -15655,7 +15537,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614066", "isub":66, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614066", "isub":66, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -15691,7 +15573,8 @@
 	,"x4codes":[{"Nucl":"40-ZR-89-M", "t12":4.161, "t12units":"MIN", "t12sec":249.66
 	, "Radiations":[ {"Type":"DG", "Energy":[587.8], "Intensity":0.8962}
 			,{"Type":"DG", "Energy":[1507.4], "Intensity":0.0606}]}]
-	,"x4freetext":[" 587.8keV - 89.62+-0.17 % , 1507.4keV - 6.06+-0.18 % ."]
+	,"x4freetext":[" HL=4.161+-0.010 min, IDD:"
+		," 587.8keV - 89.62+-0.17 % , 1507.4keV - 6.06+-0.18 % ."]
 	}
       ]
      ,"COMMENT":[
@@ -15733,22 +15616,21 @@
 		}]
 	,"x4freetext":[" Table on page 96 in R,INDC(CCP)-0460,2016"
 		,"                 This Subent supersedes 41240.042 data"
-		,"                 This Subent supersedes 41456.006 data"]
+		,"                 This Subent supersedes 41456.006 data"
+		,". This Subent .066 and Subent .067 supersede 41240.125"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON block into"
+		,"free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"MIN", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"minutes","familyCode":"TIME","convFc":60.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["MIN"       ]
-	,[" "         ]]
-      ,"data":[
-	 [0.01]]}
     ,"DATA":{"ncols":6, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -15785,7 +15667,7 @@
 	,[14.81,6.72,8.54,2.33,110.94,0.437]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614066", "Pointer":" "
- ,"Subent":"41614066", "compiled":20160512
+ ,"Subent":"41614066", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":42, "targ1":"Mo-92", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -15804,7 +15686,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -15867,12 +15749,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[125.46,124.98,123.43,121.71,118.88,116.35,113.59,110.94]
     ,"dat1":[0.12546,0.12498,0.12343,0.12171,0.11888,0.11635,0.11359,0.11094]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"MIN", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.01
-    ,"com1":0.6}
   ]
  ,"wc5data":2
  ,"lc5data":8
@@ -15899,7 +15775,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614067", "isub":67, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614067", "isub":67, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -15934,6 +15810,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"40-ZR-89-G", "t12":78.41, "t12units":"HR", "t12sec":282276.0
 	, "Radiations":[ {"Type":"DG", "Energy":[909.1], "Intensity":0.9904}]}]
+	,"x4freetext":[" HL=78.41+-0.12 hr, IDD=99.04+-0.03 %"]
 	}
       ]
      ,"MONITOR":[
@@ -15965,25 +15842,21 @@
 	,"x4freetext":[" Table on page 97 in R,INDC(CCP)-0460,2016"
 		,"                 This Subent supersedes 41240.043 data"
 		,"                 This Subent supersedes 41424.022 data"
-		,"                 This Subent supersedes 41456.007 data"]
+		,"                 This Subent supersedes 41456.007 data"
+		,". This Subent .067 and Subent .066 supersede 41240.125"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"HR", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["HR"        ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.12,3.0E-4]]}
     ,"DATA":{"ncols":6, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -16020,7 +15893,7 @@
 	,[14.82,27,5.61,2.32,460.21,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614067", "Pointer":" "
- ,"Subent":"41614067", "compiled":20160512
+ ,"Subent":"41614067", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":42, "targ1":"Mo-92", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -16039,7 +15912,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -16102,18 +15975,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[452.4,455.46,458.09,459.39,460.09,460.12,460.16,460.21]
     ,"dat1":[0.4524,0.45546,0.45809,0.45939,0.46009,0.46012,0.46016,0.46021]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"HR", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.12
-    ,"com1":432}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":3.0e-4
-    ,"com1":3.0e-4}
   ]
  ,"wc5data":2
  ,"lc5data":8
@@ -17125,7 +16986,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614072", "isub":72, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614072", "isub":72, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -17151,6 +17012,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"41-NB-95-G", "t12":34.991, "t12units":"D", "t12sec":3023222.5
 	, "Radiations":[ {"Type":"DG", "Energy":[765.8], "Intensity":0.99808}]}]
+	,"x4freetext":[" HL=34.991+-0.006 d, IDD=99.808+-0.007 %"]
 	}
       ]
      ,"SAMPLE":[
@@ -17192,25 +17054,21 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table on page 102 in R,INDC(CCP)-0460,2016"]
+	,"x4freetext":[" Table on page 102 in R,INDC(CCP)-0460,2016"
+		,". This Subent .072 supersedes 41424.025 - c-s for"
+		," MO-95(N,P)NB-95-G,(M)"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"D", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"days","familyCode":"TIME","convFc":86400.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["D"         ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.006,7.0E-5]]}
     ,"DATA":{"ncols":6, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -17247,7 +17105,7 @@
 	,[14.82,6.81,3.8,0.59,460.21,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614072", "Pointer":" "
- ,"Subent":"41614072", "compiled":20160512
+ ,"Subent":"41614072", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":42, "targ1":"Mo-0", "proj1":"n", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -17266,7 +17124,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -17329,18 +17187,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[452.6,455.31,458.09,459.39,460.09,460.13,460.16,460.21]
     ,"dat1":[0.4526,0.45531,0.45809,0.45939,0.46009,0.46013,0.46016,0.46021]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"D", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.006
-    ,"com1":518.4}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":7.0e-5
-    ,"com1":7.0e-5}
   ]
  ,"wc5data":2
  ,"lc5data":8
@@ -17618,7 +17464,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614074", "isub":74, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614074", "isub":74, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -17658,7 +17504,8 @@
 	,"x4codes":[{"Nucl":"41-NB-96", "t12":23.35, "t12units":"HR", "t12sec":84060.0
 	, "Radiations":[ {"Type":"DG", "Energy":[1200.2], "Intensity":0.1997}
 			,{"Type":"DG", "Energy":[568.9], "Intensity":0.58}]}]
-	,"x4freetext":[" 568.9keV - 58.0+-0.3 % , 1200.2keV - 19.97+-0.10 % ."]
+	,"x4freetext":[" HL=23.35+-0.05 hr, IDD:"
+		," 568.9keV - 58.0+-0.3 % , 1200.2keV - 19.97+-0.10 % ."]
 	}
       ]
      ,"COMMENT":[
@@ -17697,22 +17544,21 @@
 	,"x4codes":[{"code":"TABLE"
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
-	,"x4freetext":[" Table on page 104 in R,INDC(CCP)-0460,2016"]
+	,"x4freetext":[" Table on page 104 in R,INDC(CCP)-0460,2016"
+		,". This Subent .074 supersedes 41424.026 - c-s for"
+		," MO-95(N,P)NB-96"]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON block into"
+		,"free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"HR", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["HR"        ]
-	,[" "         ]]
-      ,"data":[
-	 [0.05]]}
     ,"DATA":{"ncols":6, "nrows":6
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -17747,7 +17593,7 @@
 	,[14.64,3.79,4.32,0.78,460.16,0.565]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614074", "Pointer":" "
- ,"Subent":"41614074", "compiled":20160512
+ ,"Subent":"41614074", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":42, "targ1":"Mo-0", "proj1":"n", "emis1":"X", "MF":3, "MT":9000, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -17766,7 +17612,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":6
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -17829,12 +17675,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[455.31,458.09,459.39,460.09,460.12,460.16]
     ,"dat1":[0.45531,0.45809,0.45939,0.46009,0.46012,0.46016]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"HR", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.05
-    ,"com1":180}
   ]
  ,"wc5data":2
  ,"lc5data":6
@@ -18831,7 +18671,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614079", "isub":79, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614079", "isub":79, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -18867,7 +18707,8 @@
 	,"x4codes":[{"Nucl":"42-MO-99", "t12":65.976, "t12units":"HR", "t12sec":237513.6
 	, "Radiations":[ {"Type":"DG", "Energy":[739.5], "Intensity":0.1226}
 			,{"Type":"DG", "Energy":[181.1], "Intensity":0.0614}]}]
-	,"x4freetext":[" 181.1keV - 6.14+-0.12 % , 739.5keV - 12.26+-0.22 % ."]
+	,"x4freetext":[" HL=65.976+-0.024 hr, IDD:"
+		," 181.1keV - 6.14+-0.12 % , 739.5keV - 12.26+-0.22 % ."]
 	}
       ]
      ,"COMMENT":[
@@ -18915,22 +18756,21 @@
 	,"x4freetext":[" Table on page 109 in R,INDC(CCP)-0460,2016"
 		,"                 This Subent supersedes 41240.082 data"
 		,"                 This Subent supersedes 41424.028 data"
-		,"                 This Subent supersedes 41456.015 data"]
+		,"                 This Subent supersedes 41456.015 data"
+		,". This Subent .079 and Subent .080 supersede 41240.126"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"HR", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["HR"        ]
-	,[" "         ]]
-      ,"data":[
-	 [0.024]]}
     ,"DATA":{"ncols":6, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -18967,7 +18807,7 @@
 	,[14.86,1454,3.19,2.8,460.24,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614079", "Pointer":" "
- ,"Subent":"41614079", "compiled":20160512
+ ,"Subent":"41614079", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":42, "targ1":"Mo-100", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -18986,7 +18826,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -19049,12 +18889,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[452.4,455.31,458.09,459.39,460.09,460.12,460.16,460.24]
     ,"dat1":[0.4524,0.45531,0.45809,0.45939,0.46009,0.46012,0.46016,0.46024]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"HR", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.024
-    ,"com1":86.4}
   ]
  ,"wc5data":2
  ,"lc5data":8
@@ -19081,7 +18915,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614080", "isub":80, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614080", "isub":80, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -19107,6 +18941,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"41-NB-95-G", "t12":34.991, "t12units":"D", "t12sec":3023222.5
 	, "Radiations":[ {"Type":"DG", "Energy":[765.8], "Intensity":0.99808}]}]
+	,"x4freetext":[" HL=34.991+-0.006 d, IDD=99.808+-0.007 %"]
 	}
       ]
      ,"SAMPLE":[
@@ -19164,25 +18999,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 110 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41424.029 data"]
+		,"                 This Subent supersedes 41424.029 data"
+		,". This Subent .080 and Subent .079 supersede 41240.126"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"D", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"days","familyCode":"TIME","convFc":86400.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["D"         ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.006,7.0E-5]]}
     ,"DATA":{"ncols":6, "nrows":4
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -19215,7 +19046,7 @@
 	,[14.8,1.22,9.85,0.566,460.2,0.565]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614080", "Pointer":" "
- ,"Subent":"41614080", "compiled":20160512
+ ,"Subent":"41614080", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":43, "targ1":"Tc-99", "proj1":"n", "emis1":"N+A", "MF":3, "MT":22, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -19234,7 +19065,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":4
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -19297,18 +19128,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[458.18,460.13,460.17,460.2]
     ,"dat1":[0.45818,0.46013,0.46017,0.4602]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"D", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.006
-    ,"com1":518.4}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":7.0e-5
-    ,"com1":7.0e-5}
   ]
  ,"wc5data":2
  ,"lc5data":4
@@ -20513,7 +20332,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614086", "isub":86, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614086", "isub":86, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -20547,7 +20366,8 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[697.5], "Intensity":0.44}
 			,{"Type":"DG", "Energy":[766.8], "Intensity":0.34}
 			,{"Type":"DG", "Energy":[1112.8], "Intensity":0.19}]}]
-	,"x4freetext":["  697.5keV - 44.0+-2.0 %, 766.8keV - 34.0+-2.0 %,"
+	,"x4freetext":[" HL=3.742+-0.010 yr, IDD:"
+		,"  697.5keV - 44.0+-2.0 %, 766.8keV - 34.0+-2.0 %,"
 		,"  1112.8keV - 19.0+-1.0 % ."]
 	}
       ]
@@ -20588,22 +20408,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 116 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41424.035 data"]
+		,"                 This Subent supersedes 41424.035 data"
+		,". This Subent .086 and Subent .088 supersede 41424.060"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON block into"
+		,"free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"YR", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"years (=365.2422 Days)","familyCode":"TIME","convFc":3.155693E7,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["YR"        ]
-	,[" "         ]]
-      ,"data":[
-	 [0.01]]}
     ,"DATA":{"ncols":6, "nrows":5
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -20637,7 +20456,7 @@
 	,[14.86,652,4.79,4.59,460.24,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614086", "Pointer":" "
- ,"Subent":"41614086", "compiled":20160512
+ ,"Subent":"41614086", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":45, "targ1":"Rh-103", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -20656,7 +20475,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":5
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -20719,12 +20538,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[455.9,458.18,459.39,460.13,460.24]
     ,"dat1":[0.4559,0.45818,0.45939,0.46013,0.46024]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"YR", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.01
-    ,"com1":3.15569e+5}
   ]
  ,"wc5data":2
  ,"lc5data":5
@@ -20984,7 +20797,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614088", "isub":88, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614088", "isub":88, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -21058,25 +20871,20 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"41614087"
 		}]
-	,"x4freetext":["  CS for metastable state"]
+	,"x4freetext":["  CS for metastable state"
+		,". This Subent .088 and Subent .086 supersede 41424.060"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were deleted -"
+		," deacay data are in Subents 086, 087."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"D", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"days","familyCode":"TIME","convFc":86400.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["D"         ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [1.7,0.002]]}
     ,"DATA":{"ncols":5, "nrows":5
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -21107,7 +20915,7 @@
 	,[14.86,1386,5.91,460.24,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614088", "Pointer":" "
- ,"Subent":"41614088", "compiled":20160512
+ ,"Subent":"41614088", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":45, "targ1":"Rh-103", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -21126,7 +20934,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":9
  ,"lx4data":5
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -21183,18 +20991,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[455.9,458.18,459.39,460.13,460.24]
     ,"dat1":[0.4559,0.45818,0.45939,0.46013,0.46024]}
-  ,{"ivar":9, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"D", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":1.7
-    ,"com1":1.4688e+5}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.002
-    ,"com1":0.002}
   ]
  ,"wc5data":2
  ,"lc5data":5
@@ -27227,7 +27023,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614114", "isub":114, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614114", "isub":114, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -27264,7 +27060,8 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[933.8], "Intensity":0.02}
 			,{"Type":"DG", "Energy":[484.5], "Intensity":0.0029}
 			,{"Type":"DG", "Energy":[1290.6], "Intensity":0.009}]}]
-	,"x4freetext":[" 484.5keV - 0.29+-0.10 %, 933.8keV - 2.0+-0.7 % ,"
+	,"x4freetext":[" HL=44.56+-0.24 d, IDD:"
+		," 484.5keV - 0.29+-0.10 %, 933.8keV - 2.0+-0.7 % ,"
 		," 1290.6keV - 0.9+-0.3 % ."]
 	}
       ]
@@ -27305,22 +27102,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 144 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41424.050 data"]
+		,"                 This Subent supersedes 41424.050 data"
+		,". This Subent .114 and Subent .115 supersede 41424.061"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"D", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"days","familyCode":"TIME","convFc":86400.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["D"         ]
-	,[" "         ]]
-      ,"data":[
-	 [0.24]]}
     ,"DATA":{"ncols":6, "nrows":9
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -27358,7 +27154,7 @@
 	,[14.88,526,37.5,35.1,460.26,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614114", "Pointer":" "
- ,"Subent":"41614114", "compiled":20160512
+ ,"Subent":"41614114", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":48, "targ1":"Cd-116", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -27377,7 +27173,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":9
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -27440,12 +27236,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[452,454.03,456.68,458.18,458.83,459.95,460.12,460.16,460.26]
     ,"dat1":[0.452,0.45403,0.45668,0.45818,0.45883,0.45995,0.46012,0.46016,0.46026]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"D", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.24
-    ,"com1":20736}
   ]
  ,"wc5data":2
  ,"lc5data":9
@@ -27472,7 +27262,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614115", "isub":115, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614115", "isub":115, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -27550,7 +27340,9 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"41614114"
 		}]
-	,"x4freetext":[" CS into M state"]
+	,"x4freetext":[" CS into M state"
+		,". This Subent .115 and Subent .114 supersede 41424.061"
+		," - cross sections ratio."]
 	}
       ]
     }
@@ -27588,7 +27380,7 @@
 	,[14.88,1320,15.2,460.26,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614115", "Pointer":" "
- ,"Subent":"41614115", "compiled":20160512
+ ,"Subent":"41614115", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":48, "targ1":"Cd-116", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -28166,7 +27958,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614118", "isub":118, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614118", "isub":118, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -28201,6 +27993,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"48-CD-115-M", "t12":44.56, "t12units":"D", "t12sec":3849984.0
 	, "Radiations":[ {"Type":"DG", "Energy":[933.8], "Intensity":0.02}]}]
+	,"x4freetext":[" HL=44.56+-0.24 d, IDD=2.0+-0.7 %"]
 	}
       ]
      ,"MONITOR":[
@@ -28230,25 +28023,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 148 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.054 data"]
+		,"                 This Subent supersedes 41240.054 data"
+		,". This Subent .118 and Subent .120 supersede 41240.127"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"D", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"days","familyCode":"TIME","convFc":86400.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["D"         ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.24,0.007]]}
     ,"DATA":{"ncols":6, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -28285,7 +28074,7 @@
 	,[14.86,6.13,38.4,35,460.24,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614118", "Pointer":" "
- ,"Subent":"41614118", "compiled":20160512
+ ,"Subent":"41614118", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":49, "targ1":"In-115", "proj1":"n", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -28304,7 +28093,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -28367,18 +28156,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[452.4,455.31,458.18,459.39,460.09,460.13,460.17,460.24]
     ,"dat1":[0.4524,0.45531,0.45818,0.45939,0.46009,0.46013,0.46017,0.46024]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"D", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.24
-    ,"com1":20736}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.007
-    ,"com1":0.007}
   ]
  ,"wc5data":2
  ,"lc5data":8
@@ -28647,7 +28424,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614120", "isub":120, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614120", "isub":120, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -28725,7 +28502,9 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"41614119"
 		}]
-	,"x4freetext":[" CS into ground state"]
+	,"x4freetext":[" CS into ground state"
+		,". This Subent .120 and Subent .118 supersede 41240.127"
+		," - cross sections ratio."]
 	}
       ]
     }
@@ -28762,7 +28541,7 @@
 	,[14.86,11.3,22.2,460.24,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614120", "Pointer":" "
- ,"Subent":"41614120", "compiled":20160512
+ ,"Subent":"41614120", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":49, "targ1":"In-115", "proj1":"n", "emis1":"P", "MF":3, "MT":103, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -34141,7 +33920,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614143", "isub":143, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614143", "isub":143, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -34167,6 +33946,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"52-TE-121-M", "t12":164.2, "t12units":"D", "t12sec":1.418688E7
 	, "Radiations":[ {"Type":"DG", "Energy":[212.2], "Intensity":0.815}]}]
+	,"x4freetext":[" HL=164.2+-0.8 d, IDD=81.5+-1.0 %"]
 	}
       ]
      ,"SAMPLE":[
@@ -34205,25 +33985,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 173 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.087 data"]
+		,"                 This Subent supersedes 41240.087 data"
+		,". This Subent .143 and Subent .145 supersede 41240.129"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"D", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"days","familyCode":"TIME","convFc":86400.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["D"         ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.8,0.01]]}
     ,"DATA":{"ncols":6, "nrows":6
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -34258,7 +34034,7 @@
 	,[14.83,825,8.45,1.49,460.22,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614143", "Pointer":" "
- ,"Subent":"41614143", "compiled":20160512
+ ,"Subent":"41614143", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":52, "targ1":"Te-122", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -34277,7 +34053,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":6
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -34340,18 +34116,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[455.75,459.45,460.09,460.13,460.16,460.22]
     ,"dat1":[0.45575,0.45945,0.46009,0.46013,0.46016,0.46022]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"D", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.8
-    ,"com1":69120}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.01
-    ,"com1":0.01}
   ]
  ,"wc5data":2
  ,"lc5data":6
@@ -34618,7 +34382,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614145", "isub":145, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614145", "isub":145, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -34696,7 +34460,9 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"41614144"
 		}]
-	,"x4freetext":[" CS into ground state"]
+	,"x4freetext":[" CS into ground state"
+		,". This Subent .145 and Subent .143 supersede 41240.129"
+		," - cross sections ratio."]
 	}
       ]
     }
@@ -34731,7 +34497,7 @@
 	,[14.83,1503,6.05,460.22,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614145", "Pointer":" "
- ,"Subent":"41614145", "compiled":20160512
+ ,"Subent":"41614145", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":52, "targ1":"Te-122", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -35801,7 +35567,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614150", "isub":150, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614150", "isub":150, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -35827,6 +35593,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"52-TE-129-M", "t12":33.6, "t12units":"D", "t12sec":2903040.0
 	, "Radiations":[ {"Type":"DG", "Energy":[729.6], "Intensity":0.007}]}]
+	,"x4freetext":["  HL=33.6+-0.1 d, IDD=0.70+-0.14 %"]
 	}
       ]
      ,"SAMPLE":[
@@ -35865,25 +35632,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 180 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.093 data"]
+		,"                 This Subent supersedes 41240.093 data"
+		,". This Subent .150 and Subent .152 supersede 41240.130"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"D", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"days","familyCode":"TIME","convFc":86400.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["D"         ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.1,0.0014]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -35919,7 +35682,7 @@
 	,[14.83,1132,4.55,3.89,460.22,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614150", "Pointer":" "
- ,"Subent":"41614150", "compiled":20160512
+ ,"Subent":"41614150", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":52, "targ1":"Te-130", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -35938,7 +35701,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":7
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -36001,18 +35764,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[452.6,455.75,459.45,460.09,460.13,460.16,460.22]
     ,"dat1":[0.4526,0.45575,0.45945,0.46009,0.46013,0.46016,0.46022]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"D", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.1
-    ,"com1":8640}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.0014
-    ,"com1":0.0014}
   ]
  ,"wc5data":2
  ,"lc5data":7
@@ -36280,7 +36031,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614152", "isub":152, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614152", "isub":152, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -36358,7 +36109,9 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"41614151"
 		}]
-	,"x4freetext":[" CS into ground state"]
+	,"x4freetext":[" CS into ground state"
+		,". This Subent .152 and Subent .150 supersede 41240.130"
+		," - cross sections ratio."]
 	}
       ]
     }
@@ -36394,7 +36147,7 @@
 	,[14.83,1809,4.73,460.22,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614152", "Pointer":" "
- ,"Subent":"41614152", "compiled":20160512
+ ,"Subent":"41614152", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":52, "targ1":"Te-130", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -36496,7 +36249,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614153", "isub":153, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614153", "isub":153, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -36522,6 +36275,7 @@
 	{"x4pointer":" "
 	,"x4codes":[{"Nucl":"54-XE-135-M", "t12":15.29, "t12units":"MIN", "t12sec":917.4
 	, "Radiations":[ {"Type":"DG", "Energy":[526.6], "Intensity":0.804}]}]
+	,"x4freetext":[" HL=15.29+-0.05 min, IDD=80.4+-0.3 %"]
 	}
       ]
      ,"SAMPLE":[
@@ -36561,25 +36315,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 183 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.058 data"]
+		,"                 This Subent supersedes 41240.058 data"
+		,". This Subent .153 and Subent .154 supersede 41240.131"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL and ERR-IDD were moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":2, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"MIN", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"minutes","familyCode":"TIME","convFc":60.0,"basicUnits":"SEC"}
-      ,{"icol":1, "header":"ERR-IDD", "units":"NO-DIM", "pointer":" "
-	,"headerHelp":"Error of intensity value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"no Dimensions","familyCode":"NO","convFc":1.0,"basicUnits":"NO-DIM"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ,"ERR-IDD"   ]
-	,["MIN"       ,"NO-DIM"    ]
-	,[" "         ," "         ]]
-      ,"data":[
-	 [0.05,0.003]]}
     ,"DATA":{"ncols":6, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -36616,7 +36366,7 @@
 	,[14.81,1.11,5.3,0.85,110.94,0.437]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614153", "Pointer":" "
- ,"Subent":"41614153", "compiled":20160512
+ ,"Subent":"41614153", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":56, "targ1":"Ba-138", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -36644,7 +36394,7 @@
 	,"   a1=0.804/0.806;             #[1]#DECAY-DATA: correction to new 526.561 keV gamma-yield per decay Xe-135-m Ix_new=0.806"
 	,"   y=y*a1;                     #[1]#Renorm.factor: a1=0.99751866"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":12
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -36707,18 +36457,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[125.46,124.98,123.43,121.71,118.88,116.35,113.59,110.94]
     ,"dat1":[0.12546,0.12498,0.12343,0.12171,0.11888,0.11635,0.11359,0.11094]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"MIN", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.05
-    ,"com1":3}
-  ,{"ivar":11, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-IDD", "units":"NO-DIM", "basicUnits":"NO-DIM"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.2
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.003
-    ,"com1":0.003}
   ]
  ,"wc5data":2
  ,"lc5data":8
@@ -36745,7 +36483,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614154", "isub":154, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614154", "isub":154, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -36781,7 +36519,8 @@
 	,"x4codes":[{"Nucl":"54-XE-135-G", "t12":9.14, "t12units":"HR", "t12sec":32904.0
 	, "Radiations":[ {"Type":"DG", "Energy":[249.8], "Intensity":0.9}
 			,{"Type":"DG", "Energy":[608.2], "Intensity":0.029}]}]
-	,"x4freetext":["  249.8keV - 90.+-3. % , 608.2keV - 2.90+-0.13 % ."]
+	,"x4freetext":["  HL=9.14+-0.02 hr, IDD:"
+		,"  249.8keV - 90.+-3. % , 608.2keV - 2.90+-0.13 % ."]
 	}
       ]
      ,"COMMENT":[
@@ -36822,22 +36561,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 184 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.059 data"]
+		,"                 This Subent supersedes 41240.059 data"
+		,". This Subent .154 and Subent .153 supersede 41240.131"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON block into"
+		,"free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"HR", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["HR"        ]
-	,[" "         ]]
-      ,"data":[
-	 [0.02]]}
     ,"DATA":{"ncols":6, "nrows":8
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -36874,7 +36612,7 @@
 	,[14.81,2.71,6.18,3.38,110.94,0.437]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614154", "Pointer":" "
- ,"Subent":"41614154", "compiled":20160512
+ ,"Subent":"41614154", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":56, "targ1":"Ba-138", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -36893,7 +36631,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":8
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -36956,12 +36694,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[125.46,124.98,123.43,121.71,118.88,116.35,113.59,110.94]
     ,"dat1":[0.12546,0.12498,0.12343,0.12171,0.11888,0.11635,0.11359,0.11094]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"HR", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.02
-    ,"com1":72}
   ]
  ,"wc5data":2
  ,"lc5data":8
@@ -38917,7 +38649,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614163", "isub":163, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614163", "isub":163, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -38957,7 +38689,8 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[630.0], "Intensity":0.89}
 			,{"Type":"DG", "Energy":[550.3], "Intensity":0.949}
 			,{"Type":"DG", "Energy":[725.7], "Intensity":0.328}]}]
-	,"x4freetext":[" 550.3keV - 94.9+-1.2 % , 630.0keV - 89.0+-0.9 % ,"
+	,"x4freetext":[" HL=41.29+-0.11 d, IDD:"
+		," 550.3keV - 94.9+-1.2 % , 630.0keV - 89.0+-0.9 % ,"
 		," 725.7keV - 32.8+-0.4 % ."]
 	}
       ]
@@ -38998,22 +38731,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 193 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.063 data"]
+		,"                 This Subent supersedes 41240.063 data"
+		,". This Subent .163 and Subent .165 supersede 41240.132"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON block into"
+		,"free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"D", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"days","familyCode":"TIME","convFc":86400.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["D"         ]
-	,[" "         ]]
-      ,"data":[
-	 [0.11]]}
     ,"DATA":{"ncols":6, "nrows":15
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -39057,7 +38789,7 @@
 	,[14.86,2.19,12.3,1.21,460.24,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614163", "Pointer":" "
- ,"Subent":"41614163", "compiled":20160512
+ ,"Subent":"41614163", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":63, "targ1":"Eu-151", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -39076,7 +38808,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":15
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -39148,12 +38880,6 @@
 	,460.13,460.15,460.17,460.19,460.24]
     ,"dat1":[0.4524,0.45403,0.4559,0.45668,0.45818,0.45883,0.45939,0.45995,0.46006,0.46012
 	,0.46013,0.46015,0.46017,0.46019,0.46024]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"D", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.11
-    ,"com1":9504}
   ]
  ,"wc5data":2
  ,"lc5data":15
@@ -39432,7 +39158,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614165", "isub":165, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614165", "isub":165, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -39513,7 +39239,9 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"41614164"
 		}]
-	,"x4freetext":[" CS into ground state"]
+	,"x4freetext":[" CS into ground state"
+		,". This Subent .165 and Subent .163 supersede 41240.132"
+		," - cross sections ratio."]
 	}
       ]
     }
@@ -39550,7 +39278,7 @@
 	,[14.86,4.03,8.02,460.24,0.588]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614165", "Pointer":" "
- ,"Subent":"41614165", "compiled":20160512
+ ,"Subent":"41614165", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":63, "targ1":"Eu-151", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -39888,7 +39616,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614167", "isub":167, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614167", "isub":167, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -39927,7 +39655,8 @@
 	,"x4codes":[{"Nucl":"63-EU-150-M", "t12":12.8, "t12units":"HR", "t12sec":46080.0
 	, "Radiations":[ {"Type":"DG", "Energy":[333.9], "Intensity":0.04}
 			,{"Type":"DG", "Energy":[406.5], "Intensity":0.028}]}]
-	,"x4freetext":[" 333.9keV - 4.0+-0.8 % , 406.5keV - 2.8+-0.6 % ."]
+	,"x4freetext":["  HL=12.8+-0.1 hr, IDD:"
+		," 333.9keV - 4.0+-0.8 % , 406.5keV - 2.8+-0.6 % ."]
 	}
       ]
      ,"COMMENT":[
@@ -39967,22 +39696,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 197 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.065 data"]
+		,"                 This Subent supersedes 41240.065 data"
+		,". This Subent .167 and Subent .169 supersede 41240.133"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON block into"
+		,"free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"HR", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["HR"        ]
-	,[" "         ]]
-      ,"data":[
-	 [0.1]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -40018,7 +39746,7 @@
 	,[14.78,507,20.7,20,460.19,0.565]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614167", "Pointer":" "
- ,"Subent":"41614167", "compiled":20160512
+ ,"Subent":"41614167", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":63, "targ1":"Eu-151", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -40037,7 +39765,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":7
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -40100,12 +39828,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[454.03,456.68,458.83,459.95,460.12,460.15,460.19]
     ,"dat1":[0.45403,0.45668,0.45883,0.45995,0.46012,0.46015,0.46019]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"HR", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.1
-    ,"com1":360}
   ]
  ,"wc5data":2
  ,"lc5data":7
@@ -40379,7 +40101,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614169", "isub":169, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614169", "isub":169, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -40460,7 +40182,9 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"41614168"
 		}]
-	,"x4freetext":[" CS into ground state"]
+	,"x4freetext":[" CS into ground state"
+		,". This Subent .169 and Subent .167 supersede 41240.133"
+		," - cross sections ratio."]
 	}
       ]
     }
@@ -40496,7 +40220,7 @@
 	,[14.78,1728,6.74,460.19,0.565]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614169", "Pointer":" "
- ,"Subent":"41614169", "compiled":20160512
+ ,"Subent":"41614169", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":63, "targ1":"Eu-151", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -40843,7 +40567,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614171", "isub":171, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614171", "isub":171, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -40884,7 +40608,8 @@
 			,{"Type":"DG", "Energy":[121.8], "Intensity":0.07}
 			,{"Type":"DG", "Energy":[344.3], "Intensity":0.024}
 			,{"Type":"DG", "Energy":[963.4], "Intensity":0.116}]}]
-	,"x4freetext":["121.8 keV - 7.0+-0.8 %, 344.3 keV - 2.4+-0.4 %,"
+	,"x4freetext":[" HL=9.3116+-0.0013 hr, IDD:"
+		,"121.8 keV - 7.0+-0.8 %, 344.3 keV - 2.4+-0.4 %,"
 		,"841.6 keV - 14.2+-1.6 %, 963.4 keV - 11.6+-1.3 % ."]
 	}
       ]
@@ -40925,22 +40650,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 201 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.067 data"]
+		,"                 This Subent supersedes 41240.067 data"
+		,". This Subent .171 and Subent .173 supersede 41240.134"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON block into"
+		,"free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"HR", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"hours","familyCode":"TIME","convFc":3600.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["HR"        ]
-	,[" "         ]]
-      ,"data":[
-	 [0.0013]]}
     ,"DATA":{"ncols":6, "nrows":7
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -40976,7 +40700,7 @@
 	,[14.78,267,14.6,11.3,460.19,0.565]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614171", "Pointer":" "
- ,"Subent":"41614171", "compiled":20160512
+ ,"Subent":"41614171", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":63, "targ1":"Eu-153", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -40995,7 +40719,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":7
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -41058,12 +40782,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[454.03,456.68,458.83,459.95,460.12,460.15,460.19]
     ,"dat1":[0.45403,0.45668,0.45883,0.45995,0.46012,0.46015,0.46019]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"HR", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.0013
-    ,"com1":4.68}
   ]
  ,"wc5data":2
  ,"lc5data":7
@@ -41326,7 +41044,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614173", "isub":173, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614173", "isub":173, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -41407,7 +41125,9 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"41614172"
 		}]
-	,"x4freetext":[" CS into ground + M2 states"]
+	,"x4freetext":[" CS into ground + M2 states"
+		,". This Subent .173 and Subent .171 supersede 41240.134"
+		," - cross sections ratio."]
 	}
       ]
     }
@@ -41443,7 +41163,7 @@
 	,[14.78,1730,3.91,460.19,0.565]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614173", "Pointer":" "
- ,"Subent":"41614173", "compiled":20160512
+ ,"Subent":"41614173", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":63, "targ1":"Eu-153", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -41545,7 +41265,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614174", "isub":174, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614174", "isub":174, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -41582,7 +41302,8 @@
 	, "Radiations":[ {"Type":"DG", "Energy":[325.6], "Intensity":0.941}
 			,{"Type":"DG", "Energy":[213.4], "Intensity":0.814}
 			,{"Type":"DG", "Energy":[426.4], "Intensity":0.97}]}]
-	,"x4freetext":["  213.4 keV - 81.4+-1.5 %, 325.6 keV - 94.1+-1.6 %,"
+	,"x4freetext":[" HL=23.1+-0.3 min, IDD:"
+		,"  213.4 keV - 81.4+-1.5 %, 325.6 keV - 94.1+-1.6 %,"
 		,"  426.4 keV - 97.0+-1.8 % ."]
 	}
       ]
@@ -41626,7 +41347,7 @@
 		,"-  no isomeric transition from the metastable state 9-"
 		,"to the ground state 1+;"
 		,"- gamma-transitions between the high spin states were"
-		,"chosen for 178m-Lu decay, and those between the low spi"
+		,"chosen for 178m-Lu decay,and those between the low spin"
 		,"states - for 178g-Lu."]
 	}
       ]
@@ -41636,22 +41357,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 204 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41424.052 data"]
+		,"                 This Subent supersedes 41424.052 data"
+		,". This Subent .174 and Subent .175 supersede 41424.062"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON"
+		,"block into free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"MIN", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"minutes","familyCode":"TIME","convFc":60.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["MIN"       ]
-	,[" "         ]]
-      ,"data":[
-	 [0.3]]}
     ,"DATA":{"ncols":6, "nrows":6
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -41686,7 +41406,7 @@
 	,[14.71,0.209,9.56,2.92,112.41,0.385]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614174", "Pointer":" "
- ,"Subent":"41614174", "compiled":20160512
+ ,"Subent":"41614174", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":73, "targ1":"Ta-181", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -41705,7 +41425,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":6
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -41768,12 +41488,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[124.89,123.43,118.88,116.35,113.44,112.41]
     ,"dat1":[0.12489,0.12343,0.11888,0.11635,0.11344,0.11241]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"MIN", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.3
-    ,"com1":18}
   ]
  ,"wc5data":2
  ,"lc5data":6
@@ -41800,7 +41514,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614175", "isub":175, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614175", "isub":175, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -41836,7 +41550,8 @@
 	,"x4codes":[{"Nucl":"71-LU-178-G", "t12":28.4, "t12units":"MIN", "t12sec":1704.0
 	, "Radiations":[ {"Type":"DG", "Energy":[1340.8], "Intensity":0.034}
 			,{"Type":"DG", "Energy":[1309.5], "Intensity":0.011}]}]
-	,"x4freetext":["1309.5 keV - 1.1+-0.6 %, 1340.8 keV - 3.4+-1.7 % ."]
+	,"x4freetext":[" HL=28.4+-0.2 min, IDD:"
+		,"1309.5 keV - 1.1+-0.6 %, 1340.8 keV - 3.4+-1.7 % ."]
 	}
       ]
      ,"COMMENT":[
@@ -41889,22 +41604,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 205 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41424.053 data"]
+		,"                 This Subent supersedes 41424.053 data"
+		,". This Subent .175 and Subent .174 supersede 41424.062"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON block into"
+		,"free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"MIN", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"minutes","familyCode":"TIME","convFc":60.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["MIN"       ]
-	,[" "         ]]
-      ,"data":[
-	 [0.2]]}
     ,"DATA":{"ncols":6, "nrows":5
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -41938,7 +41652,7 @@
 	,[14.71,0.524,52.9,50,112.41,0.385]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614175", "Pointer":" "
- ,"Subent":"41614175", "compiled":20160512
+ ,"Subent":"41614175", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":73, "targ1":"Ta-181", "proj1":"n", "emis1":"A", "MF":3, "MT":107, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -41957,7 +41671,7 @@
 	," y=y/m0*m1;                    #[0]#renormalizing CS"
 	," dy=(dy**2-dm0**2+dm1**2)**0.5; #[0]#replace monitor uncertainties"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":5
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -42020,12 +41734,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[124.89,123.43,118.88,116.35,112.41]
     ,"dat1":[0.12489,0.12343,0.11888,0.11635,0.11241]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"MIN", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":0.2
-    ,"com1":12}
   ]
  ,"wc5data":2
  ,"lc5data":5
@@ -46875,7 +46583,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614196", "isub":196, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614196", "isub":196, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -46913,7 +46621,8 @@
 			,{"Type":"DG", "Energy":[161.3], "Intensity":0.0656}
 			,{"Type":"DG", "Energy":[536.7], "Intensity":0.0333}
 			,{"Type":"DG", "Energy":[920.9], "Intensity":0.082}]}]
-	,"x4freetext":["104.7keV - 13.6+-0.4 %, 161.3keV - 6.56+-0.23 %,"
+	,"x4freetext":[" HL=169.+-8. d, IDD:"
+		,"104.7keV - 13.6+-0.4 %, 161.3keV - 6.56+-0.23 %,"
 		,"536.7keV - 3.33+-0.11 %, 920.9keV - 8.2+-0.3 % ."]
 	}
       ]
@@ -46954,22 +46663,21 @@
 		,"flag":"TABLE", "help":"Data presented by authors"
 		}]
 	,"x4freetext":[" Table on page 226 in R,INDC(CCP)-0460,2016"
-		,"                 This Subent supersedes 41240.108 data"]
+		,"                 This Subent supersedes 41240.108 data"
+		,". This Subent .196 and Subent .198 supersede 41240.135"
+		," - cross sections ratio."]
+	}
+      ]
+     ,"HISTORY":[
+	{"x4pointer":" "
+	,"x4code":{"code":"20230717A", "date":"20230717", "act":"A", "dict":"HISTORY", "idict":15
+	     ,"actHelp":"Important alterations"}
+	,"x4freetext":[" ERR-HL was moved from COMMON block into"
+		,"free text of DECAY-DATA according to"
+		,"NRDC2023 conclusion C21 and comment of NDS,IAEA."]
 	}
       ]
     }
-    ,"COMMON":{"ncols":1, "nrows":1
-      ,"x4headers":[
-       {"icol":0, "header":"ERR-HL", "units":"D", "pointer":" "
-	,"headerHelp":"Error of half-life value given under DECAY-DATA", "pFlag":"0000000"
-	,"unitsHelp":"days","familyCode":"TIME","convFc":86400.0,"basicUnits":"SEC"}
-      ]
-      ,"datacols":[
-	 ["ERR-HL"    ]
-	,["D"         ]
-	,[" "         ]]
-      ,"data":[
-	 [8]]}
     ,"DATA":{"ncols":6, "nrows":1
       ,"x4headers":[
        {"icol":0, "header":"EN", "units":"MEV", "pointer":" "
@@ -46999,7 +46707,7 @@
 	 [14.74,357,9.19,6.01,460.18,0.565]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614196", "Pointer":" "
- ,"Subent":"41614196", "compiled":20160512
+ ,"Subent":"41614196", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":75, "targ1":"Re-185", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
@@ -47018,7 +46726,7 @@
 	," dy=dy/y;                      #to rel. uncertainties"
 	," y=y*a1/a0;                    #[0]#renormalizing CS"
 	," dy=dy*y;                      #to abs. uncertainties"]
- ,"wx4data":11
+ ,"wx4data":10
  ,"lx4data":1
  ,"x4data":[
    {"ivar":0, "cvar":"y", "fam":"Data", "ifComm":false, "ifCM":false
@@ -47081,12 +46789,6 @@
     ,"expansion":"Assumed values: monitor"
     ,"dat0":[460.18]
     ,"dat1":[0.46018]}
-  ,{"ivar":10, "cvar":"zzz", "fam":"DCON", "ifComm":true , "ifCM":false
-    ,"header":"ERR-HL", "units":"D", "basicUnits":"SEC"
-    ,"what":"ZZZ", "dataType":"87", "rank":777.1
-    ,"expansion":"Other variable: decay constant"
-    ,"com0":8
-    ,"com1":6.912e+5}
   ]
  ,"wc5data":2
  ,"lc5data":1
@@ -47356,7 +47058,7 @@
 }
    ]
    }
-  ,{"SUBENT":"41614198", "isub":198, "compiled":20160512, "TransID":"4174", "TransDate":20170119
+  ,{"SUBENT":"41614198", "isub":198, "compiled":20230717, "TransID":"4213", "TransDate":20230908
     ,"BIB":{
       "REACTION":[
 	{"x4pointer":" "
@@ -47434,7 +47136,9 @@
 		,"flag":"DEP", "help":"Dependent data"
 		,"subent":"41614197"
 		}]
-	,"x4freetext":[" CS into ground state"]
+	,"x4freetext":[" CS into ground state"
+		,". This Subent .198 and Subent .196 supersede 41240.135"
+		," - cross sections ratio."]
 	}
       ]
     }
@@ -47464,7 +47168,7 @@
 	 [14.74,1845,5.07,460.18,0.565]]}
   ,"datasets":[
 {"iDataset":0, "DatasetID":"41614198", "Pointer":" "
- ,"Subent":"41614198", "compiled":20160512
+ ,"Subent":"41614198", "compiled":20230717
  ,"year1":2016, "author1ini":"A.A.", "author1":"Filatenkov"
  ,"zTarg1":75, "targ1":"Re-185", "proj1":"n", "emis1":"2N", "MF":3, "MT":16, "nExpectedArgs":1
  ,"IndepVarFamilyCode":"0 2        ", "getYFormulaStr":"y=DATA(EN)"
